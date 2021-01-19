@@ -1,0 +1,22 @@
+# .directory is added by KDE file browser
+.directory
+
+# I have no idea where this one came from
+.DS_Store
+
+# Not all of these references are open source or public domain.
+# Directory is excluded to protect copyrighted material.
+references/
+
+# Ignore class handouts (at least for now)
+ClassHandouts/
+
+# Ignore temporary and emergency files produced by LyX
+*~
+*#
+
+# Ignore other garbage
+*DEFUNCT*
+
+# Ignore gh-pages branch
+webpage/

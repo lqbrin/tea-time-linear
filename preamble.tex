@@ -7,10 +7,16 @@
 \fancyfoot{}
 \definecolor{shadecolor}{RGB}{204,204,255}
 
+%%%%%%%%%%%%%%%%%%
+% Redefine \cdot %
+%%%%%%%%%%%%%%%%%%
+\let\oldcdot\cdot
+\renewcommand{\cdot}{\boldsymbol\oldcdot}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sage and GeoGebra Logo definitions %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\graphicspath{{$HOME/Documents/Book-Linear/figures/}}
+\graphicspath{{$HOME/Documents/scsu/Book-Linear/figures/}}
 \newcommand{\sage}{\includegraphics[height=12pt]{sageLogo}}
 \newcommand{\geogebra}{\includegraphics[height=12pt]{geogebraLogo}}
 
