@@ -124,32 +124,6 @@ status open
 
 
 \backslash
-newcommand{
-\backslash
-dictacc}{
-\backslash
-raisebox{2pt}{$
-\backslash
-,
-\backslash
-prime
-\backslash
-,$}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
 begin{digression}{Dictionary Definition}
 \end_layout
 
@@ -545,15 +519,20 @@ Though we will not make frequent use of it, the
 \begin_layout Standard
 While the rows and columns of a matrix are not labeled, they will almost
  always have meaning based on the context whence the matrix came.
- A table or spreadsheet of common grocery items at various stores
+ A table or spreadsheet of common grocery items at various stores such as
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="5">
+<lyxtabular version="3" rows="6" columns="10">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -601,6 +580,57 @@ Price Comparison ($)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-what-is-priceComparison.png
+	scale 85
+
+\end_inset
+
 
 \end_layout
 
@@ -655,6 +685,51 @@ Item
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -666,7 +741,7 @@ Item
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -702,6 +777,51 @@ bananas
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+or
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell multirow="3" alignment="center" valignment="top" rightline="true" rotate="90" usebox="none">
@@ -715,7 +835,7 @@ Store
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -751,6 +871,51 @@ Food Plus
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
@@ -762,7 +927,7 @@ Food Plus
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -798,6 +963,51 @@ Grocer Girl
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell multirow="4" alignment="center" valignment="top" usebox="none">
@@ -809,7 +1019,7 @@ Grocer Girl
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -845,8 +1055,522 @@ Eddie's Eats
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+would be summarized in a matrix as
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2.89 & 4.69 & 2.07\\
+3.69 & 4.99 & 2.37\\
+2.79 & 4.29 & 2.57
+\end{array}\right].
+\]
+
+\end_inset
+
+All the descriptive words are stripped, and the meaning of the entries must
+ be implied, stated explicitly, or simply understood through context.
+ Typically the point of putting quantities in a matrix is to subsequently
+ perform some mathematical operations, which we will discuss soon enough,
+ and the labels would only get in the way! View 
+\begin_inset CommandInset href
+LatexCommand href
+name "this short video"
+target "https://youtu.be/BZWFkUQ3tco?t=71"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://youtu.be/BZWFkUQ3tco?t=71
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ (3:13) for more examples of situations where a matrix might be used.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+matrix A rectangular array of algebraic quantities usually delimited by
+ parentheses or square brackets.
+ Upper case letters are used for variables representing matrices.
+\end_layout
+
+\begin_layout Description
+(matrix)
+\begin_inset space ~
+\end_inset
+
+entry One of the individual quantities in a matrix.
+ Subscripted lower case letters are used to represent entries of a matrix.
+ 
+\end_layout
+
+\begin_layout Description
+(matrix)
+\begin_inset space ~
+\end_inset
+
+size Stated as the number of rows 
+\begin_inset Quotes eld
+\end_inset
+
+by
+\begin_inset Quotes erd
+\end_inset
+
+ the number of columns.
+\end_layout
+
+\begin_layout Description
+submatrix The matrix resulting from deleting some number of rows (less than
+ the total number of rows) and some number of columns (less than the total
+ number of columns) from a matrix.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A,B,\ldots,M,\ldots$
+\end_inset
+
+ Upper case letters are used for variables representing matrices.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+ The entry in row 
+\begin_inset Formula $i$
+\end_inset
+
+ and column 
+\begin_inset Formula $j$
+\end_inset
+
+ of matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A_{m,:}$
+\end_inset
+
+ Row 
+\begin_inset Formula $m$
+\end_inset
+
+ of matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A_{:,n}$
+\end_inset
+
+ Column 
+\begin_inset Formula $n$
+\end_inset
+
+ of matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A_{\backslash m,n}$
+\end_inset
+
+ The submatrix of 
+\begin_inset Formula $A$
+\end_inset
+
+ consisting of all entries except those in row 
+\begin_inset Formula $m$
+\end_inset
+
+ or in column 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A_{i:j,k:l}$
+\end_inset
+
+ The submatrix of 
+\begin_inset Formula $A$
+\end_inset
+
+ consisting of rows 
+\begin_inset Formula $i$
+\end_inset
+
+ through 
+\begin_inset Formula $j$
+\end_inset
+
+ of columns 
+\begin_inset Formula $k$
+\end_inset
+
+ through 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $m\times n$
+\end_inset
+
+ The size of a matrix with 
+\begin_inset Formula $m$
+\end_inset
+
+ rows and 
+\begin_inset Formula $n$
+\end_inset
+
+ columns.
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+How many rows does a matrix with the given size have?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $15\times6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $6\times8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1\times11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $17\times2$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+How many columns does a matrix with the given size have?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $5\times10$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $12\times5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $6\times12$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $18\times19$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+How many entries does a 
+\begin_inset Formula $3\times8$
+\end_inset
+
+ matrix have?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $3\times13$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $9\times8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $4\times14$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $7\times6$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Identify the requested entry of the given matrix.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a_{2,4};$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A=\left[\begin{array}{ccccc}
+23 & 31 & 44 & -9 & 45\\
+27 & -6 & 14 & 33 & -33\\
+-22 & 48 & -17 & -48 & 41
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b_{1,2};$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+-3 & 39 & -1\\
+3 & -30 & 7\\
+-27 & -48 & 32
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{3,4};$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $C=\left[\begin{array}{ccccc}
+47 & 14 & -10 & 10 & -11\\
+21 & -29 & -39 & 49 & -26\\
+-22 & 20 & 12 & 37 & 44\\
+-18 & -37 & -30 & -42 & -17
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $m_{3,1};$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+21 & -14 & 43 & 34\\
+8 & -32 & -3 & -20\\
+-2 & 50 & -24 & 20
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Identify the submatrix of 
+\begin_inset Formula $A=$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the size of the matrix (include submatrices)?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+This is a sage exercise.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
 
 \end_inset
 

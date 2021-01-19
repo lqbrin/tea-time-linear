@@ -10,8 +10,14 @@
 %%%%%%%%%%%%%%%%%%
 % Redefine \cdot %
 %%%%%%%%%%%%%%%%%%
-\let\oldcdot\cdot
-\renewcommand{\cdot}{\boldsymbol\oldcdot}
+%\let\oldcdot\cdot
+%\renewcommand{\cdot}{\boldsymbol\oldcdot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define dictionary style accent mark %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dictacc}{\raisebox{2pt}{$ \,\prime\, $}}
+\renewcommand{\dictacc}{''}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sage and GeoGebra Logo definitions %
@@ -30,6 +36,7 @@
 % Digression definition %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \newlength\myRightmargin
+\newlength\myLeftmargin
 \newcounter{thecrumpet}
 \newenvironment{digression}[1]
   {%\bigskip%

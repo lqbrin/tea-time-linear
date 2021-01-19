@@ -421,6 +421,14 @@ filename "mechanics-addition.lyx"
 
 \end_layout
 
+\begin_layout Part
+Concepts
+\end_layout
+
+\begin_layout Chapter
+Linear Independence
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
