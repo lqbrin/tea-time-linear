@@ -626,7 +626,7 @@ Price Comparison ($)
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figures/mechanics-what-is-priceComparison.png
+	filename figures/mechanics-whatis-priceComparison.png
 	scale 85
 
 \end_inset
@@ -1322,6 +1322,660 @@ SageMath
 \end_layout
 
 \begin_layout Standard
+The matrices and operations of this section (and the entire text) can all
+ be handled by SageMath.
+ All you need is the syntax.
+ That is, the proper combinations of symbols.
+\end_layout
+
+\begin_layout Standard
+To define a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ in SageMath, we will most often use the syntax
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+M = matrix(rows,cols,[list of entries])
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
+\family typewriter
+rows
+\family default
+ and 
+\family typewriter
+cols
+\family default
+ stand for the number of rows and number of columns in the matrix, respectively.
+ The 
+\family typewriter
+list of entries
+\family default
+ must be comma-separated as in 
+\family typewriter
+1,2,3
+\family default
+.
+ Entered into SageMath properly, this line defines 
+\family typewriter
+M
+\family default
+ as a matrix from which we can extract entries or submatrices, or simply
+ print out.
+ Just as we can on paper, we can name the matrix using any letter.
+ It does not have to be 
+\family typewriter
+M
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Submatrices can be extracted using 
+\begin_inset Formula $:$
+\end_inset
+
+ notation just as we have been doing on paper.
+ In SageMath, though, we don't use subscripts.
+ We use square brackets.
+ So 
+\begin_inset Formula $M_{3,:}$
+\end_inset
+
+ would be written 
+\family typewriter
+M[2,:]
+\family default
+ in SageMath.
+ Yes, that looks like a typo! It is not.
+ On paper, and in mathematics generally, we index the rows and columns of
+ matrices in a way that seems most natural.
+ The first row is row 1, the second row is row 2, and so on.
+ However, SageMath uses the very common computer programming convention
+ of 0-indexing.
+ That is, counting starts with 0 instead of 1 in SageMath.
+ So the first row of a matrix 
+\family typewriter
+M
+\family default
+ (in SageMath and many other programming languages) is row 0, the second
+ row is row 1, and so on.
+ There is another small difference between the way we write on paper and
+ the way we write in SageMath.
+ In SageMath the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entry of a matrix 
+\family typewriter
+M
+\family default
+ is indicated by 
+\family typewriter
+M[i,j]
+\family default
+.
+ We must use the name of the matrix, not the lower case version as we do
+ on paper.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:sageMatrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hrule 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:sageMatrices"
+
+\end_inset
+
+Matrices, entries, and submatrices in SageMath.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mathematics
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SageMath
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+matrix
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M=\left[\begin{array}{cc}
+1 & 2\\
+3 & 4\\
+5 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+M = matrix(3,2,[1,2,3,4,5,6])
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+row
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{r,:}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+M[r,:]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+column
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{:,c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+M[:,c]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+submatrix
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{i:j,k:l}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+M[i:j,k:l]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+submatrix
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{\backslash r,c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+M.delete_rows([r-1]).delete_columns([c-1])
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+entry
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m_{r,c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+M[r,c]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hrule 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ summarizes the extraction of entries and submatrices using SageMath.
+\end_layout
+
+\begin_layout Standard
+In SageMath, the lines 
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(3,2,[1,2,3,4,5,6])
+\end_layout
+
+\begin_layout LyX-Code
+S = M[2,:]
+\end_layout
+
+\begin_layout Standard
+define a matrix 
+\family typewriter
+M
+\family default
+ and a submatrix 
+\family typewriter
+S
+\family default
+, but do not create any output! You can
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "try it at \\tt{sagecell.sagemath.org}"
+target "https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdKJNgQSxjomOqY6ZrGavFzBQGnfaCMdq1gA2d0Juw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+It seems as though nothing has happened.
+ However, if we add a couple lines requesting that SageMath print out our
+ matrices, we will see the results of our work.
+ To produce output in SageMath, use the 
+\family typewriter
+print(object)
+\family default
+ statement.
+ In this case, we want to print out two matrices with some space between
+ them.
+ Printing 
+\begin_inset Quotes eld
+\end_inset
+
+nothing
+\begin_inset Quotes erd
+\end_inset
+
+, using 
+\family typewriter
+print()
+\family default
+, actually prints a blank line.
+ The following SageMath code creates a matrix 
+\family typewriter
+M
+\family default
+, a submatrix 
+\family typewriter
+S
+\family default
+, and prints them both out with a blank line between.
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(3,2,[1,2,3,4,5,6])
+\end_layout
+
+\begin_layout LyX-Code
+S = M[2,:]
+\end_layout
+
+\begin_layout LyX-Code
+print(M)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print(S)
+\end_layout
+
+\begin_layout Standard
+Here is a screenshot of this code being processed at 
+\family typewriter
+SageCell.SageMath.org
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-whatis-sagecell.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Try it at \\tt{sagecell.sagemath.org}"
+target "https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdKJNgQSxjomOqY6ZrGavFzBQGnfaCMdq1heroKizLwSDV9NGAvOCNYEAG8rEho=&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Nested Statements in SageMath}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+SageMath statements may be nested.
+ That is, one statement may appear as the argument (inside) of another.
+ For example, the code
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(3,2,[1,2,3,4,5,6])
+\end_layout
+
+\begin_layout LyX-Code
+S = M[2,:]
+\end_layout
+
+\begin_layout LyX-Code
+print(M)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print(S)
+\end_layout
+
+\begin_layout Standard
+might also be written as follows.
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(3,2,[1,2,3,4,5,6])
+\end_layout
+
+\begin_layout LyX-Code
+print(M)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print(M[2,:])
+\end_layout
+
+\begin_layout Standard
+Notice the extraction of the third row of 
+\family typewriter
+M
+\family default
+ happens inside the 
+\family typewriter
+print
+\family default
+ statement.
+ There is no need to produce a variable named 
+\family typewriter
+S
+\family default
+ since it is not used for any further purpose.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 \begin_inset ERT
 status open
@@ -1411,11 +2065,7 @@ How many columns does a matrix with the given size have?
 
 \end_deeper
 \begin_layout Enumerate
-How many entries does a 
-\begin_inset Formula $3\times8$
-\end_inset
-
- matrix have?
+How many entries does a matrix with the given size have?
 \end_layout
 
 \begin_deeper
@@ -1532,17 +2182,175 @@ Identify the requested entry of the given matrix.
 
 \end_deeper
 \begin_layout Enumerate
-Identify the submatrix of 
-\begin_inset Formula $A=$
+Let
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $N=\left[\begin{array}{cccccc}
+-11 & -2 & -6 & -4 & -3 & 5\\
+-5 & 12 & 3 & -2 & -4 & -7\\
+-8 & -12 & 11 & -12 & 4 & -3\\
+3 & 10 & 9 & 0 & -7 & -10\\
+-2 & 12 & -9 & 3 & -5 & 8
+\end{array}\right]$
+\end_inset
+
+.
+ What is the size of the submatrix?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $N_{5,:}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{:,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{1:5,2:4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{\backslash3,5}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{ccccc}
+-7 & 2 & 1 & 8 & -1\\
+-8 & -11 & 10 & -6 & 1\\
+1 & -10 & 12 & -12 & 0\\
+9 & -1 & 3 & -6 & -8\\
+6 & -9 & 3 & 4 & -5\\
+2 & -4 & 10 & -7 & -3
+\end{array}\right]$
+\end_inset
+
+.
+ Identify the submatrix of 
+\begin_inset Formula $A$
 \end_inset
 
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-What is the size of the matrix (include submatrices)?
+\begin_inset Formula $A_{3,:}$
+\end_inset
+
+
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $A_{:,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A_{2:3,3:5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A_{\backslash4,2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+11 & 7 & 4\\
+-8 & -6 & 1\\
+-2 & -1 & 5\\
+8 & 3 & 12
+\end{array}\right]$
+\end_inset
+
+.
+ Supply notation for the entry or submatrix.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+11 & 4\\
+-8 & 1\\
+-2 & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-8 & -6 & 1\\
+-2 & -1 & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+8\  & 3\  & 12\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+11\\
+-8\\
+-2\\
+8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -1558,9 +2366,147 @@ sage
 
 \end_inset
 
-This is a sage exercise.
+Let 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+6 & -7 & 1\\
+11 & -11 & -2\\
+11 & 12 & 12\\
+-7 & 9 & 10
+\end{array}\right]$
+\end_inset
+
+.
+ Write SageMath code that will accomplish the following.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+Create the matrix 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Print 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Extract 
+\begin_inset Formula $b_{2,3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Print 
+\begin_inset Formula $b_{2,3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:mechanics-whatis"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Add code that will print out the third row and the first column of 
+\family typewriter
+D
+\family default
+.
+\begin_inset VSpace -12pt
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+D = matrix(3,4,[-2,10,-7,8,-2,7,
+\end_layout
+
+\begin_layout LyX-Code
+                11,-7,-4,5,6,10])
+\end_layout
+
+\begin_layout Standard
+What is the output of your code?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+If you swap the 3 and the 4 in the code in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:mechanics-whatis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, as shown below, what is the new output of your code (third row and first
+ column of 
+\family typewriter
+D
+\family default
+)?
+\begin_inset VSpace -12pt
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+D = matrix(4,3,[-2,10,-7,8,-2,7,
+\end_layout
+
+\begin_layout LyX-Code
+                11,-7,-4,5,6,10])
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
