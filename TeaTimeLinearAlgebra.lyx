@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass book
+\textclass extbook
 \begin_preamble
 \input $HOME/Documents/scsu/Book-Linear/preamble
 \end_preamble
@@ -19,9 +19,9 @@ figs-within-sections
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "lmodern" "default"
-\font_sans "lmss" "default"
-\font_typewriter "lmtt" "default"
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -68,7 +68,7 @@ figs-within-sections
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \use_minted 0
 \index Index
 \shortcut idx
@@ -101,33 +101,6 @@ figs-within-sections
 \begin_layout Standard
 \begin_inset ERT
 status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-thispagestyle{empty}
-\backslash
-titleHGP
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-thispagestyle{empty}
-\backslash
-titleGM
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-thispagestyle{empty}
-\backslash
-titleTMB
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -379,12 +352,28 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Part
-Mechanics
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Preface 
 \end_layout
 
-\begin_layout Chapter
-Some Calculations
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "preface.lyx"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -393,7 +382,37 @@ status open
 
 \begin_layout Plain Layout
 
-% Matrix Addition, Subtraction, and Scalar Multiplication
+
+\backslash
+mainmatter 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Part I: Mechanics 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Chapter 1: Some Calculations 
 \end_layout
 
 \end_inset
@@ -421,12 +440,14 @@ filename "mechanics-addition.lyx"
 
 \end_layout
 
-\begin_layout Part
-Concepts
-\end_layout
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-multiplication.lyx"
 
-\begin_layout Chapter
-Linear Independence
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

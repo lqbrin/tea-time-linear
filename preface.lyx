@@ -1,0 +1,496 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+Preface
+\end_layout
+
+\begin_layout Section*
+About Tea Time Linear Algebra
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Preface}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{About Tea Time Numerical Analysis}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+fancyhead[RE]{Preface}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+fancyhead[LO]{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Greetings! And thanks for giving 
+\shape italic
+Tea Time Linear Algebra
+\shape default
+ a read.
+ The phrase 
+\begin_inset Quotes eld
+\end_inset
+
+tea time
+\begin_inset Quotes erd
+\end_inset
+
+ is meant to do more than give the book a catchy title.
+ It is meant to describe the general nature of the discourse within.
+ Much of the material will be presented as if it were being told to a student
+ during tea time at University, but with the benefit of careful planning.
+ There will be no big blue boxes highlighting the main points, no stream
+ of examples after a short introduction to a topic, and no theorem\SpecialChar ldots
+proof\SpecialChar ldots
+theorem\SpecialChar ldots
+pr
+oof structure.
+ Instead, the necessary terms and definitions and theorems and examples
+ will be woven into a more conversational style.
+ My hope is that this blend of formal and informal mathematics will be easier
+ to digest, and dare I say, students will be more invited to do their reading
+ in this format.
+ 
+\end_layout
+
+\begin_layout Standard
+Those who enjoy a more typical presentation might still find this textbook
+ suits their preference to a large extent.
+ There will be a summary of the key concepts at the end of each conversation
+ and a number of the exercises will be solved in complete detail in the
+ appendix.
+ So, one can get a closer-to-typical presentation by scanning for theorems
+ in the conversations, reading the key concepts, and then skipping to the
+ exercises with solutions.
+ I hope most readers won't choose to do so, but it is an option.
+ In any case, the exercises with solutions will be critical reading for
+ most.
+ Learning by example is often the most effective means.
+ After reading a section, or at least scanning it, readers are strongly
+ encouraged to skip to the statements of the exercises with solutions (marked
+ by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+hasasolution 
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+), contemplate their solutions, solve them if they can, and then turn to
+ the back of the book for full disclosure.
+ The hope is that, with their placement in the appendix, readers will be
+ more apt to consider solving the exercises on their own before looking
+ at the solutions.
+\end_layout
+
+\begin_layout Standard
+The topical coverage in 
+\shape italic
+Tea Time Numerical Analysis
+\shape default
+ is fairly typical.
+ The book starts with an introductory chapter, followed by root finding
+ methods, interpolation (part 1), numerical calculus, interpolation (part
+ 2), and the second edition introduces a chapter on differential equations.
+ The first five chapters cover what, at SCSU, constitutes a first semester
+ course in numerical analysis.
+ As this book is intended for use as a free download or an inexpensive print-on-
+demand volume, no effort has been made to keep the page count low or to
+ spare copious diagrams and colors.
+ In fact, I have taken the inexpensive mode of delivery as liberty to do
+ quite the opposite.
+ I have added many passages and diagrams that are not strictly necessary
+ for the study of numerical analysis, but are at least peripherally related,
+ and may be of interest to some readers.
+ Most of these passages will be presented as digressions, so they will be
+ easy to identify.
+ For example, Taylor's theorem plays such a central role in the subject
+ that not only its statement is presented.
+ Its proof and a bit of history are added as 
+\begin_inset Quotes eld
+\end_inset
+
+crumpets
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Of course they can be skipped, but are included to provide a more complete
+ understanding of this fundamental theorem of numerical analysis.
+ For another example, as a fan of dynamical systems, I found it impossible
+ to refrain from including a section on visualizing Newton's method.
+ The powerful and beautiful pictures of Newton's method as a dynamical system
+ should be eyebrow-raising and question-provoking even if only tangentially
+ important.
+ There are, of course, other examples of somewhat less critical content,
+ but each is there to enhance the reader's understanding or appreciation
+ of the subject, even if the material is not strictly necessary for an introduct
+ory study of numerical analysis.
+ While version 2.5 does not introduce any new sections, it contains many
+ corrections, new exercises and modified discourse.
+ As a result, page and exercise numbering has changed.
+\end_layout
+
+\begin_layout Standard
+Implementation of the numerical methods in the form of computer code will
+ also be discussed.
+ While one could simply ignore the programming sections and exercises and
+ still get something out of this text, it is my firm belief that full appreciati
+on for the content can not be achieved without getting one's hands 
+\begin_inset Quotes eld
+\end_inset
+
+dirty
+\begin_inset Quotes erd
+\end_inset
+
+ by doing some programming.
+ It would be nice if readers have had at least some minimal exposure to
+ programming whether it be Python, Java, C, web programming, or just about
+ anything, but I have made every effort to give enough detail so that even
+ those who have never written a single line of code will be able to participate
+ in this part of the study.
+ In keeping with the desire to produce a completely free learning experience,
+ GNU Octave was chosen as the programming language for this book.
+ GNU Octave (Octave for short) is offered freely to anyone and everyone!
+ It is free to download and use.
+ Its source code is free to download and study.
+ And anyone is welcome to modify or add to the code if so inclined.
+ As an added bonus, users of the much better-known MATLAB will not be burdened
+ by learning a new language.
+ Octave is a MATLAB clone.
+ By design, nearly any program written in MATLAB will run in Octave without
+ modification.
+ So, if you have access to MATLAB and would prefer to use it, you may do
+ so without worry.
+ I have made considerable effort to ensure that every line of Octave in
+ this book will run verbatim under MATLAB.
+ Even with this earnest effort, though, it is possible that some of the
+ code will not run under MATLAB.
+ It has only been tested in Octave! If you find any code that does not run
+ in MATLAB, please let me know.
+ Version 2.5 includes substantial rewriting of details related to Octave
+ from installation to coding, and even includes information about computing
+ in the cloud.
+\end_layout
+
+\begin_layout Standard
+I hope you enjoy your reading of 
+\shape italic
+Tea Time Numerical Analysis
+\shape default
+.
+ It was my pleasure to write it.
+ Feedback is always welcome.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Leon Q.
+ Brin
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+brinl1@southernct.edu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section*
+How to Get Sage
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{How to Get Octave}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Just use sagecell.sagemath.com
+\end_layout
+
+\begin_layout Section*
+How to Get the Code
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{How to Get the Code}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the code appearing in the textbook can be downloaded from this textbook's
+ companion website,
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://lqbrin.github.io/tea-time-numerical/ancillaries.html
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+The code printed within and accompanying Tea Time Numerical Analysis electronica
+lly is distributed under the GNU Public License (GPL).
+ Details are available at the website.
+\end_layout
+
+\begin_layout Section*
+Acknowledgments
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Acknowledgments}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I gratefully acknowledge the generous support I received during the writing
+ of this textbook, from the patience my immediate family, Amy, Cecelia,
+ and Victorija exercised while I was absorbed by my laptop's screen, to
+ the willingness of my Spring 2013 Seminar class, Elizabeth Field, Rachael
+ Ivison, Amanda Reyher, and Steven Warner to read and criticize an early
+ version of the first chapter.
+ The Woodbridge Public Library staff, especially Pamela Wilonski, helped
+ provide a peaceful and inspirational environment for writing the bulk of
+ the first edition text.
+ Many thanks to Dick Pelosi for his extensive review and many kind words
+ and encouragements throughout the endeavor to create the first edition.
+ I also owe a hearty thanks to the folks at CollegeOpenTextbooks.org, who
+ provided unpaid copy editing.
+ Finally, many thanks to the users who have provided corrections and suggestions
+ for improvements.
+ A number of them have found their way into the third edition.
+\end_layout
+
+\end_body
+\end_document

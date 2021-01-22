@@ -4,25 +4,19 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass book
+\textclass extbook
 \begin_preamble
 \input $HOME/Documents/scsu/Book-Linear/preamble
 \end_preamble
 \use_default_options true
-\master TeaTimeLinearAlgebra.lyx
-\begin_modules
-theorems-ams
-eqs-within-sections
-figs-within-sections
-\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "lmodern" "default"
-\font_sans "lmss" "default"
-\font_typewriter "lmtt" "default"
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -39,16 +33,7 @@ figs-within-sections
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref true
-\pdf_bookmarks true
-\pdf_bookmarksnumbered false
-\pdf_bookmarksopen false
-\pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
-\pdf_pdfborder false
-\pdf_colorlinks true
-\pdf_backref false
-\pdf_pdfusetitle true
+\use_hyperref false
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -69,7 +54,7 @@ figs-within-sections
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \use_minted 0
 \index Index
 \shortcut idx
@@ -79,8 +64,8 @@ figs-within-sections
 \topmargin 1.9cm
 \rightmargin 1.5cm
 \bottommargin 1.9cm
-\secnumdepth 1
-\tocdepth 2
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -100,11 +85,1500 @@ figs-within-sections
 \begin_body
 
 \begin_layout Section
-Matrix Addition
+Component-wise Matrix Operations
 \end_layout
 
 \begin_layout Standard
+While a sudoku board is not a matrix, if we strip away the color and the
+ lines, it certainly is a rectangular array of numbers, the essence of a
+ matrix.
+ Soon we will do just that, but for now let's have a look at the sudoku
+ board without thinking about matrices.
+ Notice it consists of nine 
+\begin_inset Formula $3\times3$
+\end_inset
 
+ blocks.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-addition-sudoku2.png
+	lyxscale 25
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Pick your favorite two 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ blocks and think about how you might add them to one another.
+ Don't just read on.
+ Stop and think about this briefly.
+ [PAUSE HERE AND THINK.] If you are like most students, you probably came
+ up with one of two ways to add the blocks.
+ The first one is to add all the numbers in each block giving a sum of 90.
+ Sum a different pair of blocks, and you will notice you get 90 again.
+ In fact, take any pair of blocks and the sum done this way will give you
+ 90.
+ Can you see why? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:SudokuSum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This way of adding is legitimate, but maybe a little unsatisfying since
+ the sum is always 90.
+ A second way of adding supplies some variation in the sums.
+\end_layout
+
+\begin_layout Standard
+What if the sum of the two blocks were another 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ block? This way of thinking has a lot of precedent in mathematics.
+ The sum of two integers is an integer.
+ The sum of two rational numbers is a rational number.
+ The sum of two functions is a function.
+ The sum of two areas is an area.
+ The operation of addition always seems to preserve the type of object being
+ added.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Operators}
+\end_layout
+
+\end_inset
+
+In mathematics a 
+\series bold
+binary operator
+\series default
+, such as 
+\begin_inset Formula $+$
+\end_inset
+
+, takes two objects (inputs or addends) from a set and produces a third
+ object (output or sum) from the same set.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+With this idea in hand, perhaps the most organized way to proceed is to
+ add the number in the upper-left corner of the first matrix to the number
+ in the upper-left corner of the second matrix to produce the number in
+ the upper-left corner of the sum.
+ Similarly, the other 8 numbers of the sum can be produced by adding the
+ corresponding numbers (by location) of the two blocks being added.
+ Here is an illustration of that process.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-addition-addend1.png
+	height 0.75in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.3in}{$+$}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-addition-addend2.png
+	height 0.75in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.3in}{$=$}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-addition-intermediateSum.png
+	height 0.75in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.3in}{$=$}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-addition-sum.png
+	height 0.75in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+This is exactly the path taken in adding matrices, component-wise (entry-by-entr
+y) addition.
+ In the notation of matrices,
+\begin_inset Formula 
+\[
+\text{If }A,B,\text{ and }C\text{ are matrices and }A+B=C\text{, then }c_{i,j}=a_{i,j}+b_{i,j}
+\]
+
+\end_inset
+
+for all entries 
+\begin_inset Formula $c_{i,j}$
+\end_inset
+
+ of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $C$
+\end_inset
+
+ is the sum of the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entries of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ This requires 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ to have at least as many rows and columns as 
+\begin_inset Formula $C$
+\end_inset
+
+, but in fact, adding matrices requires that both addends and the sum have
+ the exact same size.
+ The sum of matrices of differing size is undefined.
+ Subtraction of matrices is defined analogously.
+\begin_inset Formula 
+\[
+\text{If }A,B,\text{ and }C\text{ are matrices and }A-B=C\text{, then }c_{i,j}=a_{i,j}-b_{i,j}
+\]
+
+\end_inset
+
+for all entries 
+\begin_inset Formula $c_{i,j}$
+\end_inset
+
+ of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ The difference of matrices of differing size is undefined.
+\end_layout
+
+\begin_layout Standard
+Now let's do the same exercise using matrices.
+ Transferring the numbers of a sudoku board to a matrix is good practice
+ in creating matrices where there are none, extracting them from their context
+ for mathematical work.
+ Let's start by looking at each 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ block of the sudoku board as a matrix.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell multirow="3" mroffset="16pt" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-addition-sudoku2.png
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 4 & 7\\
+2 & 6 & 3\\
+8 & 5 & 9
+\end{array}\right]\ \left[\begin{array}{ccc}
+8 & 6 & 5\\
+1 & 9 & 4\\
+3 & 7 & 2
+\end{array}\right]\ \left[\begin{array}{ccc}
+2 & 3 & 9\\
+5 & 7 & 8\\
+1 & 6 & 4
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad\Rightarrow\quad$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+3 & 2 & 1\\
+9 & 7 & 5\\
+4 & 8 & 6
+\end{array}\right]\ \left[\begin{array}{ccc}
+7 & 4 & 6\\
+2 & 8 & 3\\
+9 & 5 & 1
+\end{array}\right]\ \left[\begin{array}{ccc}
+8 & 9 & 5\\
+4 & 1 & 6\\
+3 & 2 & 7
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+6 & 3 & 4\\
+5 & 9 & 2\\
+7 & 1 & 8
+\end{array}\right]\ \left[\begin{array}{ccc}
+5 & 2 & 7\\
+6 & 1 & 8\\
+4 & 3 & 9
+\end{array}\right]\ \left[\begin{array}{ccc}
+9 & 8 & 1\\
+7 & 4 & 3\\
+6 & 5 & 2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Above, we added the upper-left block and the middle block.
+ Now let's add the upper-left matrix and the middle matrix:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 4 & 7\\
+2 & 6 & 3\\
+8 & 5 & 9
+\end{array}\right]+\left[\begin{array}{ccc}
+7 & 4 & 6\\
+2 & 8 & 3\\
+9 & 5 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+1+7 & 4+4 & 7+6\\
+2+2 & 6+8 & 3+3\\
+8+9 & 5+5 & 9+1
+\end{array}\right]=\left[\begin{array}{ccc}
+8 & 8 & 13\\
+4 & 14 & 6\\
+17 & 10 & 10
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multiplying a matrix by a number is also done component-wise.
+ Multiplying the bottom-left 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix extracted from our sudoku board by 5 is done as follows.
+\begin_inset Formula 
+\[
+5\left[\begin{array}{ccc}
+6 & 3 & 4\\
+5 & 9 & 2\\
+7 & 1 & 8
+\end{array}\right]=\left[\begin{array}{ccc}
+5\cdot6 & 5\cdot3 & 5\cdot4\\
+5\cdot5 & 5\cdot9 & 5\cdot2\\
+5\cdot7 & 5\cdot1 & 5\cdot8
+\end{array}\right]=\left[\begin{array}{ccc}
+30 & 15 & 20\\
+25 & 45 & 10\\
+35 & 5 & 40
+\end{array}\right]
+\]
+
+\end_inset
+
+This is often referred to as scalar multiplication to differentiate it from
+ matrix multiplication, the subject of the next section.
+ In symbols,
+\begin_inset Formula 
+\[
+\text{If }A\text{ and }B\text{ are matrices, }c\text{ is a scalar, and }B=cA\text{, then }b_{i,j}=ca_{i,j}
+\]
+
+\end_inset
+
+for all entries 
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $B$
+\end_inset
+
+ has the same size as 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+binary
+\begin_inset space ~
+\end_inset
+
+operator A function with two inputs and one output, all three from the same
+ set.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+addition 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+For any matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ of the same size, the sum 
+\begin_inset Formula $C=A+B$
+\end_inset
+
+ is defined, has the same size as 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $c_{i,j}=a_{i,j}+b_{i,j}$
+\end_inset
+
+ for all entries 
+\begin_inset Formula $c_{i,j}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have differing size, then 
+\begin_inset Formula $A+B$
+\end_inset
+
+ is undefined.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+subtraction 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+For any matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ of the same size, the difference 
+\begin_inset Formula $C=A-B$
+\end_inset
+
+ is defined, has the same size as 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $c_{i,j}=a_{i,j}-b_{i,j}$
+\end_inset
+
+ for all entries 
+\begin_inset Formula $c_{i,j}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have differing size, then 
+\begin_inset Formula $A-B$
+\end_inset
+
+ is undefined.
+\end_layout
+
+\begin_layout Description
+scalar A quantity completely specified by a number on an appropriate scale.
+\end_layout
+
+\begin_layout Description
+scalar
+\begin_inset space ~
+\end_inset
+
+multiplication 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+For any matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ and scalar 
+\begin_inset Formula $c$
+\end_inset
+
+, the scalar product 
+\begin_inset Formula $B=cA$
+\end_inset
+
+ is defined, has the same size as 
+\begin_inset Formula $A$
+\end_inset
+
+, and 
+\begin_inset Formula $b_{i,j}=ca_{i,j}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ for all entries 
+\begin_inset Formula $b_{i,j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+The syntax for scalar multiplication, matrix addition, and matrix subtraction
+ in SageMath is much like calculator syntax.
+ The plus sign is used for addtion, the minus sign for subtraction, and
+ the asterisk for multiplication.
+ The asterisk is not optional.
+ Typing two quantities with no operator between produces an error.
+ Multiplication is not implied by lack of a symbol.
+ SageMath code that reproduces the calculations of this section follows.
+\end_layout
+
+\begin_layout LyX-Code
+A=matrix(3,3,[1,4,7,2,6,3,8,5,9])
+\end_layout
+
+\begin_layout LyX-Code
+B=matrix(3,3,[7,4,6,2,8,3,9,5,1])
+\end_layout
+
+\begin_layout LyX-Code
+print(A+B)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+C=matrix(3,3,[6,3,4,5,9,2,7,1,8])
+\end_layout
+
+\begin_layout LyX-Code
+print(5*C)
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Try it at \\tt{sagecell.sagemath.org}"
+target "https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNAw1jHWiTbUMdEx1zHSMQNyLHRMdSxjNXm5nFCUmAOVmAGVWAA5lkAlhiAlBUWZeSUajtpOcDaQ4YyiD2SkCchIoF5zHUMdC4Q-Uy1nTQALOyGG&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "true"
+
+\end_inset
+
+.
+ The output is as follows.
+\end_layout
+
+\begin_layout LyX-Code
+[ 8  8 13]
+\end_layout
+
+\begin_layout LyX-Code
+[ 4 14  6]
+\end_layout
+
+\begin_layout LyX-Code
+[17 10 10]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+[30 15 20]
+\end_layout
+
+\begin_layout LyX-Code
+[25 45 10]
+\end_layout
+
+\begin_layout LyX-Code
+[35  5 40]
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Perform the operation if possible.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-1 & -6 & 0\\
+-6 & -5 & 10
+\end{array}\right]+\left[\begin{array}{ccc}
+1 & -10 & 3\\
+9 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+1.6 & 8.4\\
+8.16 & -0.33
+\end{array}\right]+\left[\begin{array}{cc}
+4.01 & 1.75\\
+9.35 & 1.49\\
+-0.24 & 0.58
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+-5 & -8 & 7 & 5\\
+-9 & -3 & 1 & 0
+\end{array}\right]+\left[\begin{array}{cccc}
+3 & -4 & 7 & -8\\
+1 & -2 & 2 & -5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+4 & 1\\
+3 & 2
+\end{array}\right]-\left[\begin{array}{cc}
+-10 & -3\\
+1 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+-6\\
+0\\
+-6
+\end{array}\right]+\left[\begin{array}{c}
+9\\
+10\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2\left[\begin{array}{ccc}
+5 & -11 & -2\\
+14 & 1 & -8\\
+13 & -1 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3.43 & 6.59\\
+-0.96 & 0.16
+\end{array}\right]+\left[\begin{array}{cc}
+-0.78 & 8.68\\
+2.14 & 8.79
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-9 & 1 & 5\\
+10 & 1 & -10\\
+2 & -3 & -7
+\end{array}\right]+\left[\begin{array}{ccc}
+-2 & 7 & 8\\
+9 & -4 & 9\\
+2 & -10 & -10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2\left[\begin{array}{cc}
+-1 & 6\\
+8 & 15
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+4.65 & 1.33 & 8.86\\
+6.03 & 4.56 & 4.8
+\end{array}\right]-\left[\begin{array}{ccc}
+1.85 & 6.4 & 7.33\\
+4.58 & 8.39 & 1.89
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 6 & -8 & -2\\
+8 & 10 & 7 & -3
+\end{array}\right]+\left[\begin{array}{cc}
+9 & 2\\
+6 & -3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+4.83 & 7.65\\
+-0.48 & 7.82\\
+0.25 & 2.53
+\end{array}\right]-\left[\begin{array}{cc}
+4.44 & 6.57\\
+4.22 & 7.17
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & -9 & 6 & 10\end{array}\right]-\left[\begin{array}{cccc}
+-2 & -1 & 2 & -7\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+9 & -10 & 4\\
+10 & 10 & 1\\
+0 & -8 & 3
+\end{array}\right]-\left[\begin{array}{ccc}
+10 & -4 & -4\\
+8 & 9 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+7\\
+9\\
+3
+\end{array}\right]+\left[\begin{array}{cc}
+-7 & 8\\
+3 & 9\\
+-4 & 2\\
+2 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+10\\
+4\\
+10
+\end{array}\right]-\left[\begin{array}{ccc}
+-1 & 10 & -2\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $3.19\left[\begin{array}{c}
+-12.96\\
+-0.96\\
+-7.99\\
+11.05
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-6 & -4\\
+7 & -2\\
+-1 & 0
+\end{array}\right]-\left[\begin{array}{cc}
+-4 & -6\\
+10 & 5\\
+-3 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is a 
+\begin_inset Formula $5\times5$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $M+N$
+\end_inset
+
+ is defined (the sum can be computed).
+ How many entries does 
+\begin_inset Formula $N$
+\end_inset
+
+ have?
+\end_layout
+
+\begin_layout Enumerate
+In your own words, describe how to add or subtract two matrices, and explain
+ how to determine whether the addition or subtraction can be done.
+\end_layout
+
+\begin_layout Enumerate
+Can a matrix with 29 nonzero entries be added to a matrix with 25 nonzero
+ entries?
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ are matrices such that their sum is defined (
+\begin_inset Formula $M+N$
+\end_inset
+
+ can be computed).
+ Is the following true or false?
+\begin_inset Formula 
+\[
+M+N=N+M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ are matrices such that their difference is defined (
+\begin_inset Formula $M-N$
+\end_inset
+
+ can be computed).
+ Is the following true or false? 
+\begin_inset Formula 
+\[
+M−N=N−M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is a matrix of size 
+\begin_inset Formula $3\times7$
+\end_inset
+
+, 
+\begin_inset Formula $c$
+\end_inset
+
+ is a scalar, and the matrix computation 
+\begin_inset Formula $cM$
+\end_inset
+
+ is defined.
+ What is the size of matrix 
+\begin_inset Formula $cM$
+\end_inset
+
+?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{enumigrab}{
+\backslash
+value{enumi}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+For the remaining exercises, let
+\begin_inset Formula 
+\[
+\begin{gathered}A=\left[\begin{array}{cccccc}
+42 & 0 & -47 & -34 & -10 & -48\\
+8 & 26 & 43 & -18 & -20 & -30\\
+-41 & -40 & -29 & -36 & -44 & 12\\
+-42 & 47 & 28 & 4 & 38 & -22\\
+18 & -15 & -1 & 29 & 37 & 9
+\end{array}\right]\ N=\left[\begin{array}{cccccc}
+-21 & -33 & 28 & -15 & 34 & 45\\
+27 & 40 & -13 & -23 & -10 & 15\\
+43 & -6 & 46 & 17 & 13 & 21\\
+-40 & -46 & 2 & 16 & 22 & -14\\
+10 & -12 & 29 & 35 & 48 & -31
+\end{array}\right]\\
+Q=\left[\begin{array}{cccccc}
+-17 & -37 & -34 & 20 & -14 & 10\\
+-23 & 44 & 47 & 18 & 19 & 49\\
+11 & 33 & 35 & -50 & 2 & 9\\
+-36 & -18 & 7 & 17 & -49 & 31\\
+-8 & 16 & 28 & -32 & -2 & 5
+\end{array}\right]\ T=\left[\begin{array}{cccccc}
+40 & 47 & 13 & -2 & -22 & 3\\
+-45 & 4 & -16 & 6 & -18 & 8\\
+18 & -26 & -27 & -19 & -48 & -35\\
+33 & 35 & 9 & 25 & 2 & 7\\
+-8 & 10 & -12 & -34 & 11 & 38
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate} 
+\backslash
+setcounter{enumi}{
+\backslash
+value{enumigrab}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute 
+\begin_inset Formula $A+Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute 
+\begin_inset Formula $N-5T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute 
+\begin_inset Formula $3.17(1.11Q+.22N)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+You may 
+\begin_inset CommandInset href
+LatexCommand href
+name "follow this link"
+target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQFAoF0xxVXpkgTUuTxM7N2ZWxYe3ctaT6N3pbX5fv5-_P191JQcc-BFZYbLGWYa9_RERU58dxhwbuke-fiNwbPFdfLcngsZ3gwKMB60ZGRlB9QGS9cYHJqGHjcrpf3A4oFFVJSpqLJkwuiQaJOmEgTkL-ERsAKbyccjI2dlSFU54tYTjpVignBIpRJPkk-jiQuPzZP1P6eSgC2yN7Yjw_kAXcQmMWsrCckgc0r-dgEa8yhpvUJJQCCBcqk-DyOZp1a6ny6yA0N0ZQqtpp9OstZGW0yIp0NRSplxxwIWkoWEWxmqEe10cnwD7w-ZzY=&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+ or copy and paste the following code into a SageCell to get started.
+\end_layout
+
+\begin_layout LyX-Code
+A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
+\end_layout
+
+\begin_layout LyX-Code
+                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
+\end_layout
+
+\begin_layout LyX-Code
+N = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
+\end_layout
+
+\begin_layout LyX-Code
+                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
+\end_layout
+
+\begin_layout LyX-Code
+Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
+\end_layout
+
+\begin_layout LyX-Code
+                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
+\end_layout
+
+\begin_layout LyX-Code
+T = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
+\end_layout
+
+\begin_layout LyX-Code
+                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+Sudoku
+\begin_inset space ~
+\end_inset
+
+sum: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:SudokuSum"
+
+\end_inset
+
+Since each block of a sudoku board is required to contain the numbers from
+ 1 through 9 exactly once each, the sum of a single block is 
+\begin_inset Formula $1+2+3+\cdots+9=\frac{9\cdot10}{2}=45$
+\end_inset
+
+ making the sum of any pair of blocks 90.
 \end_layout
 
 \end_body

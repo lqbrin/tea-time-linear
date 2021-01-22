@@ -1,0 +1,1152 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Matrix Multiplication
+\end_layout
+
+\begin_layout Standard
+In the previous section an appeal to your sense of organization was made
+ in the discussion of matrix addition, matrix subtraction and scalar multiplicat
+ion.
+ Each operation was done component-wise, something people find rather natural.
+ Devoid of context, however, there is nothing natural or intuitive about
+ matrix multiplication.
+ It's not difficult.
+ It just takes some getting used to.
+\end_layout
+
+\begin_layout Standard
+If you can master the product of a 
+\series bold
+row matrix
+\series default
+ (a 
+\begin_inset Formula $1\times n$
+\end_inset
+
+ matrix) with a 
+\series bold
+column matrix
+\series default
+ (an 
+\begin_inset Formula $m\times1$
+\end_inset
+
+ matrix), you can master the product of any two matrices.
+ The following example illustrates the process.
+ 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 2 & 3\end{array}\right]\left[\begin{array}{c}
+4\\
+5\\
+6
+\end{array}\right]=\left[\begin{array}{c}
+1\cdot4+2\cdot5+3\cdot6\end{array}\right]=\left[\begin{array}{c}
+32\end{array}\right]
+\]
+
+\end_inset
+
+Given a row matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ and a column matrix 
+\begin_inset Formula $C$
+\end_inset
+
+ with the same number of entries, say 
+\begin_inset Formula $n$
+\end_inset
+
+, their product is the sum of the products of corresponding entries.
+ That is, 
+\begin_inset Formula 
+\[
+RC=\left[\begin{array}{c}
+r_{1,1}c_{1,1}+r_{1,2}c_{2,1}+\cdots+r_{1,n}c_{n,1}\end{array}\right].
+\]
+
+\end_inset
+
+The first entry of 
+\begin_inset Formula $R$
+\end_inset
+
+ (reading from left to right) corresponds with the first entry of 
+\begin_inset Formula $C$
+\end_inset
+
+ (reading from top to bottom).
+ The second entry of 
+\begin_inset Formula $R$
+\end_inset
+
+ corresponds with the second entry of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ And so on.
+ As with addition, multiplication is an operator, so the product of two
+ matrices is a matrix.
+ In this case, a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix.
+ If 
+\begin_inset Formula $R$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ have differing length the product 
+\begin_inset Formula $RC$
+\end_inset
+
+ is undefined.
+\end_layout
+
+\begin_layout Standard
+For matrices with multiple rows and columns, this row-matrix-column-matrix
+ calculation is repeated for each entry of the product.
+ The 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $P$
+\end_inset
+
+ is the single entry of the product of the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row of 
+\begin_inset Formula $A$
+\end_inset
+
+ by the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ column of 
+\begin_inset Formula $B$
+\end_inset
+
+ (where this makes sense).
+ That is, if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are matrices, then the product 
+\begin_inset Formula $P=AB$
+\end_inset
+
+ is calculated by setting 
+\begin_inset Formula $p_{i,j}$
+\end_inset
+
+ equal to the lone entry of 
+\begin_inset Formula $A_{i,:}B_{:,j}$
+\end_inset
+
+ (where this makes sense).
+ Several conclusions can be drawn from this description.
+\end_layout
+
+\begin_layout Itemize
+The rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ and the columns of 
+\begin_inset Formula $B$
+\end_inset
+
+ must all have the same length (number of entries).
+ Otherwise 
+\begin_inset Formula $A_{i,:}B_{:,j}$
+\end_inset
+
+, is undefined.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P$
+\end_inset
+
+ has the same number of rows as 
+\begin_inset Formula $A$
+\end_inset
+
+ (
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ have the same height).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P$
+\end_inset
+
+ has the same number of columns as 
+\begin_inset Formula $B$
+\end_inset
+
+ (
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same width).
+\end_layout
+
+\begin_layout Standard
+These last two observations suggest an organizational technique for multiplicati
+on.
+ Writing 
+\begin_inset Formula $B$
+\end_inset
+
+ to the right of 
+\begin_inset Formula $A$
+\end_inset
+
+ and just below leaves a space above 
+\begin_inset Formula $B$
+\end_inset
+
+ and to the right of 
+\begin_inset Formula $A$
+\end_inset
+
+ that's exactly the right size for the product 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+ Plus, the row needed for calculating 
+\begin_inset Formula $p_{i,j}$
+\end_inset
+
+ is directly left of it and the column needed for calculating 
+\begin_inset Formula $p_{i,j}$
+\end_inset
+
+ is directly below it.
+ See figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:multiplication_visual"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:multiplication_visual"
+
+\end_inset
+
+
+\begin_inset Formula $p_{2,4}=a_{2,1}b_{1,4}+a_{2,2}b_{2,4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-multiplication-visual.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Transposition and the Dot Product
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ is a matrix, then its transpose is the matrix resulting from turning the
+ rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ into columns.
+ The first row of the matrix becomes the first column of the transpose.
+ The second row of the matrix becomes the second column of the transpose,
+ and so on.
+ Equivalently, the transpose of a matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ is the matrix resulting from turning the columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ into rows.
+ The first column of the matrix becomes the first row of the transpose.
+ The second column of the matrix becomes the second row of the transpose,
+ and so on.
+ Can you see why these manipulations are equivalent?
+\end_layout
+
+\begin_layout Standard
+If a matrix has only one row (is a row matrix) then its transpose has one
+ column (is a column matrix), and vice versa.
+ Using a superscript 
+\begin_inset Formula $T$
+\end_inset
+
+ for transpose the row-matrix-column-matrix product from the beginning of
+ this section can be written
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{ccc}
+1 & 2 & 3\end{array}\right]\left[\begin{array}{c}
+4\\
+5\\
+6
+\end{array}\right]=\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]^{T}\left[\begin{array}{c}
+4\\
+5\\
+6
+\end{array}\right]=\left[\begin{array}{c}
+1\cdot4+2\cdot5+3\cdot6\end{array}\right]=\left[\begin{array}{c}
+32\end{array}\right]\label{eq:matrix_dot_product}
+\end{equation}
+
+\end_inset
+
+Writing this way may help you keep track of which numbers should be multiplied
+ by which.
+ Combining this observation with the organizational technique of figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:multiplication_visual"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ might look like the following on paper (at least to start).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-multiplication-onpaper.jpg
+	lyxscale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+It looks like a lot of work, and it is! Not to worry, though.
+ With some practice, you will become proficient and not have to write down
+ all the individual row-matrix-column-matrix products in such detail.
+ In fact, it will be very important that you acquire such proficiency.
+ This row-matrix-column-matrix calculation sits at the core of linear algebra
+ and its connection to various sciences.
+ If you have seen a very similar calculation called the dot product in physics
+ or calculus, think of the row-matrix-column-matrix product as the matrix
+ representation of the dot product.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+In physics or calculus:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\langle5,3,6\rangle\cdot\langle0,14,-1\rangle=5\cdot0+3\cdot14+6\cdot-1=36$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+In linear algebra:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+5\\
+3\\
+6
+\end{array}\right]^{T}\left[\begin{array}{c}
+0\\
+14\\
+-1
+\end{array}\right]=5\cdot0+3\cdot14+6\cdot-1=36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+It's the same calculation! In fact, the treatment of vectors (such as 
+\begin_inset Formula $\langle5,3,6\rangle$
+\end_inset
+
+) in linear algebra is so common, we often refer to a column matrix as a
+ 
+\series bold
+column vector
+\series default
+, or just 
+\series bold
+vector
+\series default
+,
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Row Vector}
+\end_layout
+
+\end_inset
+
+A row matrix is sometimes referred to as a 
+\series bold
+row vector
+\series default
+, and interpreted as a 
+\series bold
+vector
+\series default
+ just like those in physics or calculus.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+at the risk of blurring the distinction between the two objects.
+ Make no mistake, a column matrix is a matrix, and a vector is a vector.
+ They are not the same thing.
+ It is a convenience in linear algebra to represent vectors as column matrices,
+ giving the column matrix two meanings, (1) a matrix, and (2) a vector.
+ Though we try not to do this type of thing in mathematics often, it happens
+ sometimes, much like the numerous words in English with multiple meanings.
+ What you can do with a ring depends entirely on what type of ring.
+ A wedding ring might be worn on your ring finger, and a circus ring might
+ contain a tiny car with two dozen clowns in it.
+ Certainly not the other way around, though.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Ring}
+\end_layout
+
+\end_inset
+
+In mathematics, a ring is a set together with two binary operators that
+ satisfy a number of properties.
+ This is something you will study in abstract algebra.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Analogously, what you can do with a column matrix depends entirely on what
+ it represents.
+ If it represents a matrix, it might be multiplied by another matrix.
+ If it represents a vector it might be used in the dot product with another
+ vector.
+\end_layout
+
+\begin_layout Standard
+Notice the product in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix_dot_product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is written as a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix, but the same type of matrix product is written as a scalar in the
+ pencil-and-paper calculation of a matrix product.
+ This is all about context.
+ There is none for equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix_dot_product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), so it is rightfully a matrix, but in the calculation of a matrix product,
+ the result of the dot product will become an entry, so a scalar, not a
+ matrix.
+ 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices are often interpreted and treated as if they were scalars.
+ Again, make no mistake, a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix is a matrix, and a scalar is not a matrix at all.
+ They are different things.
+ It is a convenience to let 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices have multiple meanings (as matrices and as scalars).
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+If 
+\family typewriter
+M
+\family default
+ is a matrix in SageMath, then 
+\family typewriter
+M.transpose()
+\family default
+ is its transpose.
+ The following code defines the matrix 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{array}\right]$
+\end_inset
+
+, extracts columns 2 and 3 as column matrices, and finds the (matrix) product
+ 
+\begin_inset Formula $A_{:,2}^{T}A_{:,3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout LyX-Code
+A=matrix(2,3,[1,2,3,4,5,6])
+\end_layout
+
+\begin_layout LyX-Code
+print("Matrix A:")
+\end_layout
+
+\begin_layout LyX-Code
+print(A)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print("Treating columns 2 and 3 as matrices:")
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+c2 = matrix(2,1,A.column(1))
+\end_layout
+
+\begin_layout LyX-Code
+c3 = matrix(2,1,A.column(2))
+\end_layout
+
+\begin_layout LyX-Code
+print("column 2:")
+\end_layout
+
+\begin_layout LyX-Code
+print(c2)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print("column 3:")
+\end_layout
+
+\begin_layout LyX-Code
+print(c3)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print("column 2 transpose times column 3:")
+\end_layout
+
+\begin_layout LyX-Code
+print(c2.transpose()*c3)
+\end_layout
+
+\begin_layout Standard
+The output of this code is
+\end_layout
+
+\begin_layout LyX-Code
+Matrix A:
+\end_layout
+
+\begin_layout LyX-Code
+[1 2 3]
+\end_layout
+
+\begin_layout LyX-Code
+[4 5 6]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+Treating columns 2 and 3 as matrices:
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+column 2:
+\end_layout
+
+\begin_layout LyX-Code
+[2]
+\end_layout
+
+\begin_layout LyX-Code
+[5]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+column 3:
+\end_layout
+
+\begin_layout LyX-Code
+[3]
+\end_layout
+
+\begin_layout LyX-Code
+[6]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+column 2 transpose times column 3:
+\end_layout
+
+\begin_layout LyX-Code
+[36]
+\end_layout
+
+\begin_layout Standard
+Notice the columns are displayed as column matrices, and the product is
+ also displayed as a matrix, using the square brackets.
+ The 
+\family typewriter
+.column()
+\family default
+ method extracts a column of a matrix as a vector, which is why the definitions
+ of 
+\family typewriter
+c2
+\family default
+ and 
+\family typewriter
+c3
+\family default
+ explicitly take each column and define a matrix.
+\end_layout
+
+\begin_layout Standard
+On the other hand, SageMath is perfectly capable of treating the columns
+ as vectors, as seen in the following code.
+ The 
+\family typewriter
+.dot_product()
+\family default
+ method is used to compute the dot product of two vectors.
+\end_layout
+
+\begin_layout LyX-Code
+A=matrix(2,3,[1,2,3,4,5,6])
+\end_layout
+
+\begin_layout LyX-Code
+print("Matrix A:")
+\end_layout
+
+\begin_layout LyX-Code
+print(A)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print("Treating columns 2 and 3 as vectors:")
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+c2 = A.column(1)
+\end_layout
+
+\begin_layout LyX-Code
+c3 = A.column(2)
+\end_layout
+
+\begin_layout LyX-Code
+print("column 2:")
+\end_layout
+
+\begin_layout LyX-Code
+print(c2)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print("column 3:")
+\end_layout
+
+\begin_layout LyX-Code
+print(c3)
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout LyX-Code
+print("Dot product of columns 2 and 3:")
+\end_layout
+
+\begin_layout LyX-Code
+print(c2.dot_product(c3)) 
+\end_layout
+
+\begin_layout Standard
+The output of this code is
+\end_layout
+
+\begin_layout LyX-Code
+Treating columns 2 and 3 as vectors:
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+column 2:
+\end_layout
+
+\begin_layout LyX-Code
+(2, 5)
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+column 3:
+\end_layout
+
+\begin_layout LyX-Code
+(3, 6)
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+Dot product of columns 2 and 3:
+\end_layout
+
+\begin_layout LyX-Code
+36
+\end_layout
+
+\begin_layout Standard
+Notice the notation for a vector (parentheses around a comma-separated list
+ of entries), making it clear SageMath is interpreting the columns as vectors,
+ not matrices.
+ Also notice the dot product is displayed (and indeed interpreted) as a
+ scalar, not a matrix.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+column
+\begin_inset space ~
+\end_inset
+
+vector A vector represented as a column matrix.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+multiplication 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+For any matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, if the rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ and the columns of 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same number of entries, then the product 
+\begin_inset Formula $C=AB$
+\end_inset
+
+ is defined.
+ Moreover, 
+\begin_inset Formula $C$
+\end_inset
+
+ has the same number of rows (height) as 
+\begin_inset Formula $A$
+\end_inset
+
+ and the same number of columns (width) as 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $c_{i,j}$
+\end_inset
+
+ equals the lone entry of 
+\begin_inset Formula $A_{i,:}B_{:,j}$
+\end_inset
+
+ for all entries 
+\begin_inset Formula $c_{i,j}$
+\end_inset
+
+ of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ If the rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ and columns of 
+\begin_inset Formula $B$
+\end_inset
+
+ do not have the same number of entries, then 
+\begin_inset Formula $AB$
+\end_inset
+
+ is undefined.
+\end_layout
+
+\begin_layout Description
+vector A quantity with both magnitude and direction.
+\end_layout
+
+\end_body
+\end_document

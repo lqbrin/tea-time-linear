@@ -7,17 +7,20 @@
 \fancyfoot{}
 \definecolor{shadecolor}{RGB}{204,204,255}
 
-%%%%%%%%%%%%%%%%%%
-% Redefine \cdot %
-%%%%%%%%%%%%%%%%%%
-%\let\oldcdot\cdot
-%\renewcommand{\cdot}{\boldsymbol\oldcdot}
+%%%%%%%%%%%%%%%%%%%%%
+% Define Bold \cdot %
+%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bcdot}{\boldsymbol\cdot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create new counter to save enumi for later %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{enumigrab}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Define dictionary style accent mark %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\dictacc}{\raisebox{2pt}{$ \,\prime\, $}}
-\renewcommand{\dictacc}{''}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sage and GeoGebra Logo definitions %

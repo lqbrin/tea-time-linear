@@ -4,12 +4,11 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass book
+\textclass extbook
 \begin_preamble
 \input $HOME/Documents/scsu/Book-Linear/preamble
 \end_preamble
 \use_default_options true
-\master TeaTimeLinearAlgebra.lyx
 \begin_modules
 theorems-ams
 eqs-within-sections
@@ -20,9 +19,9 @@ figs-within-sections
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "lmodern" "default"
-\font_sans "lmss" "default"
-\font_typewriter "lmtt" "default"
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -39,16 +38,7 @@ figs-within-sections
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref true
-\pdf_bookmarks true
-\pdf_bookmarksnumbered false
-\pdf_bookmarksopen false
-\pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
-\pdf_pdfborder false
-\pdf_colorlinks true
-\pdf_backref false
-\pdf_pdfusetitle true
+\use_hyperref false
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -69,7 +59,7 @@ figs-within-sections
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \use_minted 0
 \index Index
 \shortcut idx
@@ -79,8 +69,8 @@ figs-within-sections
 \topmargin 1.9cm
 \rightmargin 1.5cm
 \bottommargin 1.9cm
-\secnumdepth 1
-\tocdepth 2
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -99,11 +89,16 @@ figs-within-sections
 
 \begin_body
 
+\begin_layout Chapter
+Some Calculations
+\end_layout
+
 \begin_layout Section
 Matrices
 \end_layout
 
 \begin_layout Standard
+\noindent
 The fundamental object of linear algebra is the 
 \series bold
 matrix
@@ -111,8 +106,9 @@ matrix
 .
  A matrix is very much like a table or a spreadsheet, but without headings,
  labels, or lines.
- The entries in a matrix are separated by space, and the whole matrix is
- enclosed by large parentheses or square brackets.
+ The data in a matrix are separated by space.
+ The whole matrix is enclosed by large parentheses or square brackets, but
+ is otherwise unadorned.
 \end_layout
 
 \begin_layout Standard
@@ -252,7 +248,7 @@ by
 \begin_inset Formula $2\times3$
 \end_inset
 
-, which is read 
+, read 
 \begin_inset Quotes eld
 \end_inset
 
@@ -266,6 +262,7 @@ two by three
 \end_inset
 
  matrix has seven rows and 5 columns.
+ The number of rows is always listed first.
  The rows are indexed from top to bottom, and the columns are indexed from
  left to right.
  The first column is the leftmost column, and the first row is the topmost
@@ -275,7 +272,7 @@ two by three
 \end_layout
 
 \begin_layout Standard
-The individual quantities of a matrix are called
+The individual quantities in a matrix are called
 \series bold
  entries
 \series default
@@ -517,9 +514,16 @@ Though we will not make frequent use of it, the
 \end_layout
 
 \begin_layout Standard
-While the rows and columns of a matrix are not labeled, they will almost
- always have meaning based on the context whence the matrix came.
- A table or spreadsheet of common grocery items at various stores such as
+Typically the entries of a matrix will have underlying meaning, but the
+ point of putting quantities in a matrix is to perform some mathematical
+ operation.
+ Labels would only get in the way, so the rows and columns of a matrix are
+ not labeled directly.
+ Their meaning must be gathered some other way.
+\end_layout
+
+\begin_layout Standard
+A table or spreadsheet of common grocery items at various stores such as
 \end_layout
 
 \begin_layout Standard
@@ -1122,14 +1126,14 @@ would be summarized in a matrix as
 
 \end_inset
 
-All the descriptive words are stripped, and the meaning of the entries must
- be implied, stated explicitly, or simply understood through context.
- Typically the point of putting quantities in a matrix is to subsequently
- perform some mathematical operations, which we will discuss soon enough,
- and the labels would only get in the way! View 
+All the descriptive words are stripped.
+ While the meaning of the entries in this case is stated explicitly elsewhere,
+ there are times when meaning will be simply implied or understood from
+ context.
+ View 
 \begin_inset CommandInset href
 LatexCommand href
-name "this short video"
+name "this video"
 target "https://youtu.be/BZWFkUQ3tco?t=71"
 literal "false"
 
@@ -1155,7 +1159,7 @@ https://youtu.be/BZWFkUQ3tco?t=71
 
 \end_inset
 
- (3:13) for more examples of situations where a matrix might be used.
+ (3:13) for more examples where a matrix might be useful.
 \end_layout
 
 \begin_layout Subsection
@@ -1200,6 +1204,11 @@ submatrix The matrix resulting from deleting some number of rows (less than
  number of columns) from a matrix.
 \end_layout
 
+\begin_layout Description
+Notation
+\end_layout
+
+\begin_deeper
 \begin_layout Description
 \begin_inset Formula $A,B,\ldots,M,\ldots$
 \end_inset
@@ -1317,23 +1326,18 @@ submatrix The matrix resulting from deleting some number of rows (less than
  columns.
 \end_layout
 
+\end_deeper
 \begin_layout Subsection
 SageMath
 \end_layout
 
 \begin_layout Standard
-The matrices and operations of this section (and the entire text) can all
- be handled by SageMath.
- All you need is the syntax.
- That is, the proper combinations of symbols.
-\end_layout
-
-\begin_layout Standard
-To define a matrix 
-\begin_inset Formula $M$
-\end_inset
-
- in SageMath, we will most often use the syntax
+The matrices and operations of this section (and the entire text) can be
+ handled electronically by SageMath.
+ All you need is the syntax, the proper combinations of words and symbols.
+ Before any operations can be performed, a matrix must be defined.
+ In SageMath, there are several ways to define a matrix, but we will most
+ often use the syntax
 \end_layout
 
 \begin_layout Standard
@@ -1363,11 +1367,51 @@ list of entries
 1,2,3
 \family default
 .
- Entered into SageMath properly, this line defines 
+ Entered into SageMath properly, this line creates the variable 
 \family typewriter
 M
 \family default
- as a matrix from which we can extract entries or submatrices, or simply
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Instantiation}
+\end_layout
+
+\end_inset
+
+In computer science, the creation or definition of a variable is called
+ 
+\shape italic
+instantiation
+\shape default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+as a matrix from which we can extract entries or submatrices, or simply
  print out.
  Just as we can on paper, we can name the matrix using any letter.
  It does not have to be 
@@ -1383,8 +1427,8 @@ Submatrices can be extracted using
 \end_inset
 
  notation just as we have been doing on paper.
- In SageMath, though, we don't use subscripts.
- We use square brackets.
+ In SageMath, though, subscripts aren't used.
+ Square brackets are.
  So 
 \begin_inset Formula $M_{3,:}$
 \end_inset
@@ -1394,9 +1438,9 @@ Submatrices can be extracted using
 M[2,:]
 \family default
  in SageMath.
- Yes, that looks like a typo! It is not.
- On paper, and in mathematics generally, we index the rows and columns of
- matrices in a way that seems most natural.
+ Yes, that looks like a typo.
+ It is not! On paper, and in mathematics generally, we index the rows and
+ columns of matrices in a way that seems most natural.
  The first row is row 1, the second row is row 2, and so on.
  However, SageMath uses the very common computer programming convention
  of 0-indexing.
@@ -1407,7 +1451,10 @@ M
 \family default
  (in SageMath and many other programming languages) is row 0, the second
  row is row 1, and so on.
- There is another small difference between the way we write on paper and
+\end_layout
+
+\begin_layout Standard
+There is another small difference between the way we write on paper and
  the way we write in SageMath.
  In SageMath the 
 \begin_inset Formula $i,j$
@@ -1422,8 +1469,8 @@ M
 M[i,j]
 \family default
 .
- We must use the name of the matrix, not the lower case version as we do
- on paper.
+ We must use the exact name of the matrix, not the lower case version as
+ we do on paper.
  Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1442,15 +1489,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hrule 
-\end_layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
 
 \end_inset
 
@@ -1510,7 +1553,7 @@ Mathematics
 \begin_inset Text
 
 \begin_layout Plain Layout
-SageMath
+SageMath (0-indexed)
 \end_layout
 
 \end_inset
@@ -1530,11 +1573,11 @@ matrix
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $M=\left[\begin{array}{cc}
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{cc}
 1 & 2\\
 3 & 4\\
 5 & 6
-\end{array}\right]$
+\end{array}\right]}$
 \end_inset
 
 
@@ -1684,7 +1727,7 @@ submatrix
 \begin_layout Plain Layout
 
 \family typewriter
-M.delete_rows([r-1]).delete_columns([c-1])
+M.delete_rows([r]).delete_columns([c])
 \end_layout
 
 \end_inset
@@ -1729,19 +1772,21 @@ M[r,c]
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset VSpace medskip
 \end_inset
 
 
-\begin_inset ERT
-status open
+\end_layout
 
 \begin_layout Plain Layout
-
-
-\backslash
-hrule 
-\end_layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
 
 \end_inset
 
@@ -1774,11 +1819,9 @@ M
 \family typewriter
 S
 \family default
-, but do not create any output! You can
-\end_layout
-
-\begin_layout Standard
-\align center
+, but do not create any output.
+ When the code is run (evaluated), it seems nothing has happened! (You can
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "try it at \\tt{sagecell.sagemath.org}"
@@ -1787,21 +1830,18 @@ literal "true"
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-\noindent
-It seems as though nothing has happened.
- However, if we add a couple lines requesting that SageMath print out our
- matrices, we will see the results of our work.
- To produce output in SageMath, use the 
+).
+ Rest assured, though, these lines cause SageMath to do things internally.
+ We just aren't seeing the results yet.
+ If we add a couple lines requesting the display of our matrices, we will
+ see the results.
+ In SageMath, this can be done with the 
 \family typewriter
 print(object)
 \family default
  statement.
- In this case, we want to print out two matrices with some space between
- them.
+ In this case, we want to print out two matrices.
+ A little space between them would be good too.
  Printing 
 \begin_inset Quotes eld
 \end_inset
@@ -1956,7 +1996,7 @@ print
 \family typewriter
 S
 \family default
- since it is not used for any further purpose.
+ since it is not used for any other purpose.
 \end_layout
 
 \begin_layout Standard
@@ -1984,7 +2024,7 @@ status open
 
 
 \backslash
-startexercises
+startexercises 
 \end_layout
 
 \end_inset
@@ -2435,7 +2475,8 @@ sage
 
 \end_inset
 
-Add code that will print out the third row and the first column of 
+Add code that will print out (i) the third row and (ii) the first column
+ of 
 \family typewriter
 D
 \family default
@@ -2475,7 +2516,7 @@ sage
 
 \end_inset
 
-If you swap the 3 and the 4 in the code in exercise 
+If you swap the 3 and the 4 in the code of exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:mechanics-whatis"
