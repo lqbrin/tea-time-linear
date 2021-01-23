@@ -98,14 +98,19 @@ Matrix Multiplication
 \end_layout
 
 \begin_layout Standard
-In the previous section an appeal to your sense of organization was made
- in the discussion of matrix addition, matrix subtraction and scalar multiplicat
-ion.
- Each operation was done component-wise, something people find rather natural.
+Matrix addition, matrix subtraction and scalar multiplication are each done
+ component-wise, something many people find natural.
+ Even those for whom it does not come naturally rarely question why the
+ operations are done the way they are.
+ After explanation, they are acceptable.
  Devoid of context, however, there is nothing natural or intuitive about
  matrix multiplication.
  It's not difficult.
  It just takes some getting used to.
+ The purpose of the current section is to start the process of familiarization.
+ The reason multiplication is done the way it is will not come up for a
+ little while yet.
+ In the meantime, a little patience and concentration will be enough.
 \end_layout
 
 \begin_layout Standard
@@ -129,7 +134,7 @@ column matrix
  The following example illustrates the process.
  
 \begin_inset Formula 
-\[
+\begin{equation}
 \left[\begin{array}{ccc}
 1 & 2 & 3\end{array}\right]\left[\begin{array}{c}
 4\\
@@ -137,8 +142,8 @@ column matrix
 6
 \end{array}\right]=\left[\begin{array}{c}
 1\cdot4+2\cdot5+3\cdot6\end{array}\right]=\left[\begin{array}{c}
-32\end{array}\right]
-\]
+32\end{array}\right]\label{eq:matrix_product_illustration}
+\end{equation}
 
 \end_inset
 
@@ -181,15 +186,25 @@ The first entry of
 \begin_inset Formula $C$
 \end_inset
 
-.
- And so on.
+, and so on.
+ The product of the two matrices is the sum of these entry products.
  As with addition, multiplication is an operator, so the product of two
  matrices is a matrix.
  In this case, a 
 \begin_inset Formula $1\times1$
 \end_inset
 
- matrix.
+ matrix, as shown in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix_product_illustration"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  If 
 \begin_inset Formula $R$
 \end_inset
@@ -198,7 +213,7 @@ The first entry of
 \begin_inset Formula $C$
 \end_inset
 
- have differing length the product 
+ differ in length the product 
 \begin_inset Formula $RC$
 \end_inset
 
@@ -207,13 +222,13 @@ The first entry of
 
 \begin_layout Standard
 For matrices with multiple rows and columns, this row-matrix-column-matrix
- calculation is repeated for each entry of the product.
+ calculation is repeated for each entry of their product.
  The 
 \begin_inset Formula $i,j$
 \end_inset
 
 -entry of 
-\begin_inset Formula $P$
+\begin_inset Formula $AB$
 \end_inset
 
  is the single entry of the product of the 
@@ -224,7 +239,7 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \begin_inset Formula $A$
 \end_inset
 
- by the 
+ with the 
 \begin_inset Formula $j^{th}$
 \end_inset
 
@@ -242,11 +257,11 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \end_inset
 
  are matrices, then the product 
-\begin_inset Formula $P=AB$
+\begin_inset Formula $AB$
 \end_inset
 
  is calculated by setting 
-\begin_inset Formula $p_{i,j}$
+\begin_inset Formula $(AB)_{i,j}$
 \end_inset
 
  equal to the lone entry of 
@@ -337,11 +352,11 @@ on.
 
 .
  Plus, the row needed for calculating 
-\begin_inset Formula $p_{i,j}$
+\begin_inset Formula $(AB)_{i,j}$
 \end_inset
 
  is directly left of it and the column needed for calculating 
-\begin_inset Formula $p_{i,j}$
+\begin_inset Formula $(AB)_{i,j}$
 \end_inset
 
  is directly below it.
@@ -372,7 +387,7 @@ name "fig:multiplication_visual"
 \end_inset
 
 
-\begin_inset Formula $p_{2,4}=a_{2,1}b_{1,4}+a_{2,2}b_{2,4}$
+\begin_inset Formula $(AB)_{2,4}=P_{2,4}=A_{2,1}B_{1,4}+A_{2,2}B_{2,4}$
 \end_inset
 
 
@@ -436,7 +451,8 @@ If
  The first column of the matrix becomes the first row of the transpose.
  The second column of the matrix becomes the second row of the transpose,
  and so on.
- Can you see why these manipulations are equivalent?
+ Can you see why turning rows into columns and turning columns into rows
+ are equivalent?
 \end_layout
 
 \begin_layout Standard
@@ -474,7 +490,7 @@ If a matrix has only one row (is a row matrix) then its transpose has one
 \end_inset
 
 Writing this way may help you keep track of which numbers should be multiplied
- by which.
+ by which since they are side by side in the expression using the transpose.
  Combining this observation with the organizational technique of figure
  
 \begin_inset CommandInset ref
@@ -483,6 +499,21 @@ reference "fig:multiplication_visual"
 plural "false"
 caps "false"
 noprefix "false"
+
+\end_inset
+
+, computing the product 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & -2 & 4\\
+5 & 3 & 6
+\end{array}\right]\left[\begin{array}{cccc}
+-2 & 0 & 9 & 3\\
+8 & 14 & 2 & 8\\
+1 & -1 & 7 & 5
+\end{array}\right]
+\]
 
 \end_inset
 
@@ -502,13 +533,37 @@ noprefix "false"
 
 \begin_layout Standard
 \noindent
-It looks like a lot of work, and it is! Not to worry, though.
+For example, the 
+\begin_inset Formula $-32$
+\end_inset
+
+, 
+\begin_inset Formula $P_{1,2}$
+\end_inset
+
+, is calculated by taking the row directly to its left, 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & -2 & 4\end{array}\right]$
+\end_inset
+
+, and multiplying by the column directly below it, 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+14\\
+-1
+\end{array}\right]$
+\end_inset
+
+.
+ This product is calculated to the right of the matrices and is just one
+ of the 8 entries of the product.
+ It looks like a lot of work, and it is! Not to worry, though.
  With some practice, you will become proficient and not have to write down
  all the individual row-matrix-column-matrix products in such detail.
  In fact, it will be very important that you acquire such proficiency.
  This row-matrix-column-matrix calculation sits at the core of linear algebra
  and its connection to various sciences.
- If you have seen a very similar calculation called the dot product in physics
+ If you have seen the dot product, a very similar calculation, in physics
  or calculus, think of the row-matrix-column-matrix product as the matrix
  representation of the dot product.
  
@@ -640,17 +695,18 @@ end{digression}
 
 \begin_layout Standard
 \noindent
-at the risk of blurring the distinction between the two objects.
+putting the distinction between the two objects in jeopardy.
  Make no mistake, a column matrix is a matrix, and a vector is a vector.
  They are not the same thing.
  It is a convenience in linear algebra to represent vectors as column matrices,
- giving the column matrix two meanings, (1) a matrix, and (2) a vector.
+ giving the column matrix notation two meanings, (1) a matrix, and (2) a
+ vector.
  Though we try not to do this type of thing in mathematics often, it happens
  sometimes, much like the numerous words in English with multiple meanings.
  What you can do with a ring depends entirely on what type of ring.
  A wedding ring might be worn on your ring finger, and a circus ring might
  contain a tiny car with two dozen clowns in it.
- Certainly not the other way around, though.
+ Certainly not the other way around, though!
 \end_layout
 
 \begin_layout Standard
@@ -687,11 +743,12 @@ end{digression}
 
 \begin_layout Standard
 \noindent
-Analogously, what you can do with a column matrix depends entirely on what
- it represents.
- If it represents a matrix, it might be multiplied by another matrix.
+Analogously, what you can do with a one-column array of numbers depends
+ entirely on what it represents.
+ If it represents a matrix, it might be transposed or used in the solution
+ of a sytem of linear equations.
  If it represents a vector it might be used in the dot product with another
- vector.
+ vector or plotted in the Cartesian coordinate system.
 \end_layout
 
 \begin_layout Standard
@@ -711,8 +768,9 @@ noprefix "false"
 
  matrix, but the same type of matrix product is written as a scalar in the
  pencil-and-paper calculation of a matrix product.
- This is all about context.
- There is none for equation (
+ This is another example of a single notation having multiple meanings,
+ and is resolved through context.
+ There is no context for equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:matrix_dot_product"
@@ -722,14 +780,21 @@ noprefix "false"
 
 \end_inset
 
-), so it is rightfully a matrix, but in the calculation of a matrix product,
- the result of the dot product will become an entry, so a scalar, not a
- matrix.
+), so the product is rightfully a matrix.
+ In the calculation of a matrix product, the result of each individual dot
+ product will become an entry—a scalar—not a matrix.
+ The square brackets are dropped.
+ The 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix is treated as if it were a scalar.
  
 \begin_inset Formula $1\times1$
 \end_inset
 
- matrices are often interpreted and treated as if they were scalars.
+ matrices and scalars are often used interchangeably, jeopardizing the distincti
+on between these two objects.
  Again, make no mistake, a 
 \begin_inset Formula $1\times1$
 \end_inset
@@ -740,7 +805,8 @@ noprefix "false"
 \begin_inset Formula $1\times1$
 \end_inset
 
- matrices have multiple meanings (as matrices and as scalars).
+ matrix notation (square brackets) and scalar notation (lack of delimiters)
+ each represent both objects.
 \end_layout
 
 \begin_layout Subsection
@@ -911,8 +977,8 @@ Notice the columns are displayed as column matrices, and the product is
 \family typewriter
 .column()
 \family default
- method extracts a column of a matrix as a vector, which is why the definitions
- of 
+ method extracts a column of a matrix as a vector, however, which is why
+ the definitions of 
 \family typewriter
 c2
 \family default
@@ -920,7 +986,11 @@ c2
 \family typewriter
 c3
 \family default
- explicitly take each column and define a matrix.
+ explicitly take each column and feed them to the 
+\family typewriter
+matrix()
+\family default
+ function.
 \end_layout
 
 \begin_layout Standard
@@ -1096,12 +1166,12 @@ For any matrices
 \end_inset
 
  have the same number of entries, then the product 
-\begin_inset Formula $C=AB$
+\begin_inset Formula $AB$
 \end_inset
 
  is defined.
  Moreover, 
-\begin_inset Formula $C$
+\begin_inset Formula $AB$
 \end_inset
 
  has the same number of rows (height) as 
@@ -1113,7 +1183,7 @@ For any matrices
 \end_inset
 
 , and 
-\begin_inset Formula $c_{i,j}$
+\begin_inset Formula $(AB)_{i,j}$
 \end_inset
 
  equals the lone entry of 
@@ -1121,11 +1191,11 @@ For any matrices
 \end_inset
 
  for all entries 
-\begin_inset Formula $c_{i,j}$
+\begin_inset Formula $(AB)_{i,j}$
 \end_inset
 
  of 
-\begin_inset Formula $C$
+\begin_inset Formula $AB$
 \end_inset
 
 .
@@ -1142,6 +1212,42 @@ For any matrices
 \end_inset
 
  is undefined.
+\end_layout
+
+\begin_layout Description
+transpose For any 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, the transpose of 
+\begin_inset Formula $A$
+\end_inset
+
+, denoted 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+, is defined as the 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $(A^{T})_{i,j}=a_{j,i}$
+\end_inset
+
+ for each entry 
+\begin_inset Formula $a_{j,i}$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description

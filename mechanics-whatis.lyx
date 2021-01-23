@@ -269,10 +269,7 @@ two by three
  row.
  There are no restrictions on the numbers of rows or columns other than
  each must be a positive integer.
-\end_layout
-
-\begin_layout Standard
-The individual quantities in a matrix are called
+ The individual quantities in a matrix are called
 \series bold
  entries
 \series default
@@ -291,7 +288,10 @@ The individual quantities in a matrix are called
 
 -entry.
  The row number always precedes the column number.
- Matrices are often labeled by capital letter variables such as 
+\end_layout
+
+\begin_layout Standard
+Matrices are most often labeled by capital letter variables such as 
 \begin_inset Formula $A$
 \end_inset
 
@@ -299,29 +299,87 @@ The individual quantities in a matrix are called
 \begin_inset Formula $B$
 \end_inset
 
-, 
+, or 
 \begin_inset Formula $M$
 \end_inset
 
-, or 
-\begin_inset Formula $T$
+.
+ This helps distinguish them from numerical variables such as 
+\begin_inset Formula $x,y,z,s,$
 \end_inset
 
- and their entries by the corresponding lower case letter.
- If 
-\begin_inset Formula $A$
-\end_inset
-
- is a matrix, its 
-\begin_inset Formula $i,j$
-\end_inset
-
--entry can be denoted by 
-\begin_inset Formula $a_{i,j}$
+ or 
+\begin_inset Formula $t$
 \end_inset
 
 .
- The 
+ In this text, the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entry of a matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $A_{i,j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}
+\end_layout
+
+\end_inset
+
+The subscripted lower case counterpart to a matrix variable is often used
+ to represent the entries of a matrix.
+ You will often see 
+\begin_inset Formula $b_{1,2}$
+\end_inset
+
+ or even 
+\begin_inset Formula $b_{12}$
+\end_inset
+
+ represent the 
+\begin_inset Formula $1,2$
+\end_inset
+
+-entry of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Don't be surprised when you run into it!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
 \begin_inset Formula $5,1$
 \end_inset
 
@@ -330,14 +388,12 @@ The individual quantities in a matrix are called
 \end_inset
 
  is denoted by 
-\begin_inset Formula $m_{5,1}$
+\begin_inset Formula $M_{5,1}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-The 
+ Taking our cue from computer science and the currently very popular Python
+ programming language, the 
 \begin_inset Formula $i^{th}$
 \end_inset
 
@@ -520,10 +576,7 @@ Typically the entries of a matrix will have underlying meaning, but the
  Labels would only get in the way, so the rows and columns of a matrix are
  not labeled directly.
  Their meaning must be gathered some other way.
-\end_layout
-
-\begin_layout Standard
-A table or spreadsheet of common grocery items at various stores such as
+ A table or spreadsheet of common grocery items at various stores such as
 \end_layout
 
 \begin_layout Standard
@@ -1130,6 +1183,8 @@ All the descriptive words are stripped.
  While the meaning of the entries in this case is stated explicitly elsewhere,
  there are times when meaning will be simply implied or understood from
  context.
+ In any case, If the numbers in a matrix are to retain their contextual
+ meaning, that information must be supplied separately.
  View 
 \begin_inset CommandInset href
 LatexCommand href
@@ -1217,7 +1272,7 @@ Notation
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $a_{i,j}$
+\begin_inset Formula $A_{i,j}$
 \end_inset
 
  The entry in row 
@@ -1449,13 +1504,9 @@ M[2,:]
 \family typewriter
 M
 \family default
- (in SageMath and many other programming languages) is row 0, the second
- row is row 1, and so on.
-\end_layout
-
-\begin_layout Standard
-There is another small difference between the way we write on paper and
- the way we write in SageMath.
+ (in SageMath, Python, and many other programming languages) is row 0, the
+ second row is row 1, and so on.
+ The square bracket notation is used to extract entries of a matrix, too.
  In SageMath the 
 \begin_inset Formula $i,j$
 \end_inset
@@ -1466,11 +1517,9 @@ M
 \family default
  is indicated by 
 \family typewriter
-M[i,j]
+M[i-1,j-1]
 \family default
 .
- We must use the exact name of the matrix, not the lower case version as
- we do on paper.
  Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1625,7 +1674,7 @@ row
 \begin_layout Plain Layout
 
 \family typewriter
-M[r,:]
+M[r-1,:]
 \end_layout
 
 \end_inset
@@ -1659,7 +1708,7 @@ column
 \begin_layout Plain Layout
 
 \family typewriter
-M[:,c]
+M[:,c-1]
 \end_layout
 
 \end_inset
@@ -1693,7 +1742,7 @@ submatrix
 \begin_layout Plain Layout
 
 \family typewriter
-M[i:j,k:l]
+M[i-1:j,k-1:l]
 \end_layout
 
 \end_inset
@@ -1727,7 +1776,7 @@ submatrix
 \begin_layout Plain Layout
 
 \family typewriter
-M.delete_rows([r]).delete_columns([c])
+M.delete_rows([r-1]).delete_columns([c-1])
 \end_layout
 
 \end_inset
@@ -1747,7 +1796,7 @@ entry
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $m_{r,c}$
+\begin_inset Formula $M_{r,c}$
 \end_inset
 
 
@@ -1761,7 +1810,7 @@ entry
 \begin_layout Plain Layout
 
 \family typewriter
-M[r,c]
+M[r-1,c-1]
 \end_layout
 
 \end_inset
@@ -1863,7 +1912,7 @@ M
 \family typewriter
 S
 \family default
-, and prints them both out with a blank line between.
+, and prints them both with a blank line between.
 \end_layout
 
 \begin_layout LyX-Code
@@ -2144,7 +2193,7 @@ Identify the requested entry of the given matrix.
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Formula $a_{2,4};$
+\begin_inset Formula $A_{2,4};$
 \end_inset
 
 
@@ -2163,7 +2212,7 @@ Identify the requested entry of the given matrix.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $b_{1,2};$
+\begin_inset Formula $B_{1,2};$
 \end_inset
 
 
@@ -2182,7 +2231,7 @@ Identify the requested entry of the given matrix.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $c_{3,4};$
+\begin_inset Formula $P_{3,4};$
 \end_inset
 
 
@@ -2190,7 +2239,7 @@ Identify the requested entry of the given matrix.
 \end_inset
 
 
-\begin_inset Formula $C=\left[\begin{array}{ccccc}
+\begin_inset Formula $P=\left[\begin{array}{ccccc}
 47 & 14 & -10 & 10 & -11\\
 21 & -29 & -39 & 49 & -26\\
 -22 & 20 & 12 & 37 & 44\\
@@ -2202,7 +2251,7 @@ Identify the requested entry of the given matrix.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $m_{3,1};$
+\begin_inset Formula $M_{3,1};$
 \end_inset
 
 
@@ -2438,7 +2487,7 @@ Print
 
 \begin_layout Enumerate
 Extract 
-\begin_inset Formula $b_{2,3}$
+\begin_inset Formula $B_{2,3}$
 \end_inset
 
 .
@@ -2446,7 +2495,7 @@ Extract
 
 \begin_layout Enumerate
 Print 
-\begin_inset Formula $b_{2,3}$
+\begin_inset Formula $B_{2,3}$
 \end_inset
 
 .
