@@ -564,8 +564,8 @@ For example, the
  This row-matrix-column-matrix calculation sits at the core of linear algebra
  and its connection to various sciences.
  If you have seen the dot product, a very similar calculation, in physics
- or calculus, think of the row-matrix-column-matrix product as the matrix
- representation of the dot product.
+ or calculus, think of the row-matrix-column-matrix product as the linear
+ algebra equivalent of the dot product.
  
 \end_layout
 
@@ -574,14 +574,18 @@ For example, the
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
-<column alignment="right" valignment="top">
+<column alignment="right" valignment="top" width="5cm">
 <column alignment="left" valignment="top">
 <row>
 <cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-In physics or calculus:
+In physics or calculus (
+\series bold
+vectors
+\series default
+):
 \end_layout
 
 \end_inset
@@ -604,7 +608,7 @@ In physics or calculus:
 \begin_inset Text
 
 \begin_layout Plain Layout
-In linear algebra:
+In linear algebra (matrices):
 \end_layout
 
 \end_inset
@@ -639,20 +643,13 @@ In linear algebra:
 
 \begin_layout Standard
 \noindent
-It's the same calculation! In fact, the treatment of vectors (such as 
-\begin_inset Formula $\langle5,3,6\rangle$
-\end_inset
-
-) in linear algebra is so common, we often refer to a column matrix as a
- 
+It's the same calculation! There are enough similarities between column
+ matrices and vectors that we often use column matrix notation to represent
+ vectors and call them 
 \series bold
-column vector
+column vectors
 \series default
-, or just 
-\series bold
-vector
-\series default
-,
+ or just vectors.
 \end_layout
 
 \begin_layout Standard
@@ -673,7 +670,7 @@ A row matrix is sometimes referred to as a
 \series bold
 row vector
 \series default
-, and interpreted as a 
+, in which case it represents a 
 \series bold
 vector
 \series default
@@ -695,8 +692,8 @@ end{digression}
 
 \begin_layout Standard
 \noindent
-putting the distinction between the two objects in jeopardy.
- Make no mistake, a column matrix is a matrix, and a vector is a vector.
+Thus the distinction between the two objects is blurred, but make no mistake,
+ a column matrix is a matrix, and a vector is a vector.
  They are not the same thing.
  It is a convenience in linear algebra to represent vectors as column matrices,
  giving the column matrix notation two meanings, (1) a matrix, and (2) a
@@ -706,7 +703,7 @@ putting the distinction between the two objects in jeopardy.
  What you can do with a ring depends entirely on what type of ring.
  A wedding ring might be worn on your ring finger, and a circus ring might
  contain a tiny car with two dozen clowns in it.
- Certainly not the other way around, though!
+ Certainly not the other way around!
 \end_layout
 
 \begin_layout Standard
@@ -768,8 +765,8 @@ noprefix "false"
 
  matrix, but the same type of matrix product is written as a scalar in the
  pencil-and-paper calculation of a matrix product.
- This is another example of a single notation having multiple meanings,
- and is resolved through context.
+ This is another example of a single notation having multiple interpretations,
+ indicated through context.
  There is no context for equation (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -782,14 +779,14 @@ noprefix "false"
 
 ), so the product is rightfully a matrix.
  In the calculation of a matrix product, the result of each individual dot
- product will become an entry—a scalar—not a matrix.
+ product will become an entry—a scalar—not a matrix in the resulting matrix.
  The square brackets are dropped.
  The 
 \begin_inset Formula $1\times1$
 \end_inset
 
  matrix is treated as if it were a scalar.
- 
+ In fact, 
 \begin_inset Formula $1\times1$
 \end_inset
 
@@ -806,7 +803,7 @@ on between these two objects.
 \end_inset
 
  matrix notation (square brackets) and scalar notation (lack of delimiters)
- each represent both objects.
+ each represent both objects, whichever is appropriate for the situation.
 \end_layout
 
 \begin_layout Subsection
@@ -1252,6 +1249,744 @@ transpose For any
 
 \begin_layout Description
 vector A quantity with both magnitude and direction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Multiply if possible.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+3 & 1 & 0\end{array}\right]\left[\begin{array}{c}
+2\\
+5\\
+7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & 6\end{array}\right]\left[\begin{array}{c}
+4\\
+-5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-1 & 0 & -3\end{array}\right]\left[\begin{array}{c}
+6\\
+-2\\
+5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+-2\\
+2
+\end{array}\right]\left[\begin{array}{c}
+4\\
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-3 & 2\end{array}\right]\left[\begin{array}{c}
+7\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+6.3\\
+4.1\\
+3.4
+\end{array}\right]\left[\begin{array}{cc}
+2.3 & 4.5\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+5.8 & 0.2\end{array}\right]\left[\begin{array}{c}
+2.5\\
+3.8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-3 & 3 & 4\end{array}\right]\left[\begin{array}{c}
+-1\\
+5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+7\\
+-2
+\end{array}\right]\left[\begin{array}{cc}
+-2 & 0\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+7 & 0 & 4 & 6\end{array}\right]\left[\begin{array}{c}
+-2\\
+7\\
+1\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1.35 & 4.58 & 7.36\end{array}\right]\left[\begin{array}{ccc}
+3.36 & -0.25 & 1.6\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+4\\
+-1
+\end{array}\right]\left[\begin{array}{cccc}
+5 & 1 & 4 & 6\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Multiply if possible.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & 0\\
+-2 & 2
+\end{array}\right]\left[\begin{array}{cc}
+2 & 7\\
+6 & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+0.03 & -0.6\\
+4.25 & 5.09
+\end{array}\right]\left[\begin{array}{c}
+-0.3\\
+4.6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 9 & 10\\
+3 & 0 & 8\\
+3 & 8 & 10
+\end{array}\right]\left[\begin{array}{cc}
+8 & 4\\
+10 & 10\\
+9 & 5\\
+3 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-3 & 0 & 1\\
+2 & 5 & 7
+\end{array}\right]\left[\begin{array}{c}
+1\\
+3\\
+4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+2 & 3\\
+2 & 3
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+3 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & 7 & 4\\
+-3 & 0 & 7
+\end{array}\right]\left[\begin{array}{cc}
+3 & 4\\
+-2 & 1\\
+-1 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+7.94\\
+1.15\\
+2.88\\
+8.95
+\end{array}\right]\left[\begin{array}{cc}
+9.98 & 2.91\\
+1.48 & 8.05\\
+6.41 & 9.67\\
+5.16 & 8.88
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & 0\\
+5 & -4
+\end{array}\right]\left[\begin{array}{ccc}
+6 & 3 & 1\\
+6 & 1 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+2 & 5\\
+-1 & 0\\
+-3 & 4
+\end{array}\right]\left[\begin{array}{cc}
+4 & 2\\
+6 & -3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+8\\
+0\\
+9
+\end{array}\right]\left[\begin{array}{cccc}
+2 & 4 & -1 & 1\\
+9 & 6 & 10 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 0 & 3 & 6\\
+-3 & 0 & 7 & -3\\
+1 & -1 & 4 & 4
+\end{array}\right]\left[\begin{array}{c}
+4\\
+7\\
+4\\
+5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & 4\end{array}\right]\left[\begin{array}{cc}
+-1 & 2\\
+6 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3.47 & -2.73\end{array}\right]\left[\begin{array}{cc}
+5.53 & 5.89\\
+5.24 & 0.82
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & -1 & 6 & 3\\
+10 & 4 & 8 & 3
+\end{array}\right]\left[\begin{array}{cccc}
+8 & 3 & 7 & 10\\
+8 & 1 & 4 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $A$
+\end_inset
+
+ is a matrix of size 
+\begin_inset Formula $2×7$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+ is a matrix of size 
+\begin_inset Formula $5×7$
+\end_inset
+
+, and the matrix computation 
+\begin_inset Formula $A+BC$
+\end_inset
+
+ is defined.
+ What is the size of matrix 
+\begin_inset Formula $B$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Matrices 
+\begin_inset Formula $A,B,C,D$
+\end_inset
+
+ are such that 
+\begin_inset Formula $(A+B)(CD)$
+\end_inset
+
+ is defined (all of the operations are possible).
+ If 
+\begin_inset Formula $B$
+\end_inset
+
+ is a 
+\begin_inset Formula $3\times4$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $D$
+\end_inset
+
+ is a 
+\begin_inset Formula $5\times8$
+\end_inset
+
+ matrix, what are the dimensions of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Describe how to multiply two matrices, and explain how to determine whether
+ the multiplication can be done.
+\end_layout
+
+\begin_layout Enumerate
+Suppose matrices 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ are the proper sizes so both products 
+\begin_inset Formula $MN$
+\end_inset
+
+ and 
+\begin_inset Formula $NM$
+\end_inset
+
+ are defined.
+ Is the following true or false?
+\begin_inset Formula 
+\[
+MN=NM
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Suppose the matrix product 
+\begin_inset Formula $MN$
+\end_inset
+
+ is defined (the multiplication can be done).
+ Which of the following is true?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+M and N must have the same number of rows.
+\end_layout
+
+\begin_layout Enumerate
+M and N must have the same number of columns.
+\end_layout
+
+\begin_layout Enumerate
+The number of rows of M must equal the number of columns of N .
+\end_layout
+
+\begin_layout Enumerate
+The number of columns of M must equal the number of rows of N .
+\end_layout
+
+\begin_layout Enumerate
+None of the above.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{enumigrab}{
+\backslash
+value{enumi}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+For the remaining exercises, let
+\begin_inset Formula 
+\[
+\begin{gathered}A=\left[\begin{array}{cccccc}
+42 & 0 & -47 & -34 & -10 & -48\\
+8 & 26 & 43 & -18 & -20 & -30\\
+-41 & -40 & -29 & -36 & -44 & 12\\
+-42 & 47 & 28 & 4 & 38 & -22\\
+18 & -15 & -1 & 29 & 37 & 9
+\end{array}\right]\ U=\left[\begin{array}{cccccc}
+-21 & -33 & 28 & -15 & 34 & 45\\
+27 & 40 & -13 & -23 & -10 & 15\\
+43 & -6 & 46 & 17 & 13 & 21\\
+-40 & -46 & 2 & 16 & 22 & -14\\
+10 & -12 & 29 & 35 & 48 & -31
+\end{array}\right]\\
+Q=\left[\begin{array}{cccccc}
+-17 & -37 & -34 & 20 & -14 & 10\\
+-23 & 44 & 47 & 18 & 19 & 49\\
+11 & 33 & 35 & -50 & 2 & 9\\
+-36 & -18 & 7 & 17 & -49 & 31\\
+-8 & 16 & 28 & -32 & -2 & 5
+\end{array}\right]\ R=\left[\begin{array}{cccccc}
+40 & 47 & 13 & -2 & -22 & 3\\
+-45 & 4 & -16 & 6 & -18 & 8\\
+18 & -26 & -27 & -19 & -48 & -35\\
+33 & 35 & 9 & 25 & 2 & 7\\
+-8 & 10 & -12 & -34 & 11 & 38
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate} 
+\backslash
+setcounter{enumi}{
+\backslash
+value{enumigrab}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute 
+\begin_inset Formula $(A^{T})(U)$
+\end_inset
+
+ and 
+\begin_inset Formula $(U)(A^{T})$
+\end_inset
+
+.
+ Are they the same?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute 
+\begin_inset Formula $\left(3Q^{T}-2R^{T}\right)^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $3Q-2R$
+\end_inset
+
+.
+ What do you notice? Why?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Can you determine which of the following computations are defined? Ask SageMath
+ to compute them all.
+ The ones that are undefined will produce long error messages.
+\begin_inset Formula 
+\[
+\begin{gathered}(QR)^{T}\qquad AU^{T}R\qquad QUAR^{T}\qquad A^{T}QU^{T}A\\
+A+R^{T}\qquad AR^{T}\qquad(R-A)^{T}
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+You may 
+\begin_inset CommandInset href
+LatexCommand href
+name "follow this link"
+target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQREkh1XHFlijQhRR4_M2tXxoa1d9eS5tPobXldvp-_P19_LwUV9xxYYbnBUoa59h0dUZETzx0WvEu6dy5-Y_Bccb0sh8dyhgeDAqwXHRlJ-QGV8cIFJqeGgcftevk8oFhQISVlKpo8uSAaJOqEiTQB-UtoBKzwdsLB2NhZGUJ1vojlpFOlmBAsQpnkk-T9SOLyY_NE7e-pBGCL7I39-EAecAeBWczKekIS2LySj02wxhxqWp9QAiBYoEyKj-No1qmlzqeL3NAQTaliq9mns5yV0SYj0tlQpFJ2zIGgpWQRwWaGelQbnQz_xjhnOw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+ or copy and paste the following code into a SageCell to get started.
+\end_layout
+
+\begin_layout LyX-Code
+A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
+\end_layout
+
+\begin_layout LyX-Code
+                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
+\end_layout
+
+\begin_layout LyX-Code
+U = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
+\end_layout
+
+\begin_layout LyX-Code
+                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
+\end_layout
+
+\begin_layout LyX-Code
+Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
+\end_layout
+
+\begin_layout LyX-Code
+                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
+\end_layout
+
+\begin_layout LyX-Code
+R = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
+\end_layout
+
+\begin_layout LyX-Code
+                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
 \end_layout
 
 \end_body

@@ -1,0 +1,572 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Matrix Division
+\end_layout
+
+\begin_layout Standard
+You may have once heard the claim 
+\begin_inset Quotes eld
+\end_inset
+
+there's no such thing as subtraction.
+ It's just adding the opposite
+\begin_inset Quotes erd
+\end_inset
+
+ or something to that effect.
+ There is a vital concept buried in this addage.
+ Addition, subtraction, opposites (and zero) are intimately linked in a
+ very real way.
+ For any real numbers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a+0=0+a=a$
+\end_inset
+
+ (adding zero to real number 
+\begin_inset Quotes eld
+\end_inset
+
+has no effect
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are opposites if and only if 
+\begin_inset Formula $a+b=b+a=0$
+\end_inset
+
+ (adding opposites yields zero)
+\end_layout
+
+\begin_layout Standard
+Zero is that special number that can be added to any number without changing
+ its value, and there is none other like it! This property is so special
+ it has a name.
+ Zero is the 
+\series bold
+additive identity
+\series default
+ for real numbers—the word 
+\shape italic
+identity
+\shape default
+ to signal this special property and the word 
+\shape italic
+additive
+\shape default
+ to document the operation.
+ Zero is not the multiplicative identity for real numbers since it is not
+ true that 
+\begin_inset Formula $a\cdot0=0\cdot a=a$
+\end_inset
+
+ for just any real number 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Multiplication by zero has a tendency to change the value of the real number
+ by which it is multiplied.
+ Of course there is a different, very special, number that can be multiplied
+ by any number without changing its value—one.
+ As such, one is the 
+\series bold
+multiplicative identity
+\series default
+ for real numbers.
+ For any real numbers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\cdot1=1\cdot a=a$
+\end_inset
+
+ (multiplying a real number by zero 
+\begin_inset Quotes eld
+\end_inset
+
+has no effect
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are reciprocals if and only if 
+\begin_inset Formula ${\displaystyle a\cdot b=b\cdot a=1}$
+\end_inset
+
+ (multiplying reciprocals yields one)
+\end_layout
+
+\begin_layout Standard
+The additive inverse (opposite) of a real number 
+\series bold
+\shape italic
+is defined
+\series default
+\shape default
+ by the fact that adding the two yields the (additive) identity.
+ Two numbers are opposites (additive inverses) if and only if their sum
+ is zero.
+ The multiplicative inverse (reciprocal) 
+\series bold
+\shape italic
+is defined
+\series default
+\shape default
+ by the fact that multiplying the two yields the (multiplicative) identity.
+ Two numbers are reciprocals (multiplicative inverses) if and only if their
+ product is one.
+\end_layout
+
+\begin_layout Standard
+The same relationship holds among addition, opposites, and zero as holds
+ among multiplication, reciprocals, and one.
+ Addition and multiplication are operations, opposites and reciprocals are
+ inverses, and zero and one are identities.
+ Now imagine being given these constructs before having experience with
+ negatives and fractions, and using these properties to define opposites
+ and reciprocals.
+ It is probably hard to imagine how to make the leap from understanding
+ the numbers 
+\begin_inset Formula $1,2,3,\ldots$
+\end_inset
+
+ to also understanding the number 
+\begin_inset Formula $0,-1,-2,-3,\ldots$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{2},\frac{1}{3},\frac{1}{4},\ldots$
+\end_inset
+
+, a challenge faced by all elementary school math teachers.
+ Imagine being told as a youngster that for each whole number there were
+ two very special numbers, one whose sum with the whole number is zero and
+ one whose product with the whole number is one, without having any way
+ to write down what those numbers were! They just had to exist in your imaginati
+on (at least to begin).
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+identity
+\begin_inset space ~
+\end_inset
+
+matrix A matrix with a bunch of ones.
+\end_layout
+
+\begin_layout Description
+main
+\begin_inset space ~
+\end_inset
+
+diagonal The one from upperleft to lowerright.
+\end_layout
+
+\begin_layout Description
+opposite The additive inverse of a real number.
+\end_layout
+
+\begin_layout Description
+reciprocal The multiplicative inverse of a real number.
+\end_layout
+
+\begin_layout Description
+0 The additive identity of real numbers.
+\end_layout
+
+\begin_layout Description
+1 The multiplicative identity for real numbers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Compute the inverse.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+For the remaining exercises, let
+\begin_inset Formula 
+\[
+\begin{gathered}A=\left[\begin{array}{cccccc}
+42 & 0 & -47 & -34 & -10 & -48\\
+8 & 26 & 43 & -18 & -20 & -30\\
+-41 & -40 & -29 & -36 & -44 & 12\\
+-42 & 47 & 28 & 4 & 38 & -22\\
+18 & -15 & -1 & 29 & 37 & 9
+\end{array}\right]\ U=\left[\begin{array}{cccccc}
+-21 & -33 & 28 & -15 & 34 & 45\\
+27 & 40 & -13 & -23 & -10 & 15\\
+43 & -6 & 46 & 17 & 13 & 21\\
+-40 & -46 & 2 & 16 & 22 & -14\\
+10 & -12 & 29 & 35 & 48 & -31
+\end{array}\right]\\
+Q=\left[\begin{array}{cccccc}
+-17 & -37 & -34 & 20 & -14 & 10\\
+-23 & 44 & 47 & 18 & 19 & 49\\
+11 & 33 & 35 & -50 & 2 & 9\\
+-36 & -18 & 7 & 17 & -49 & 31\\
+-8 & 16 & 28 & -32 & -2 & 5
+\end{array}\right]\ R=\left[\begin{array}{cccccc}
+40 & 47 & 13 & -2 & -22 & 3\\
+-45 & 4 & -16 & 6 & -18 & 8\\
+18 & -26 & -27 & -19 & -48 & -35\\
+33 & 35 & 9 & 25 & 2 & 7\\
+-8 & 10 & -12 & -34 & 11 & 38
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate} 
+\backslash
+setcounter{enumi}{
+\backslash
+value{enumigrab}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute 
+\begin_inset Formula $(A^{T})(U)$
+\end_inset
+
+ and 
+\begin_inset Formula $(U)(A^{T})$
+\end_inset
+
+.
+ Are they the same?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute 
+\begin_inset Formula $\left(3Q^{T}-2R^{T}\right)^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $3Q-2R$
+\end_inset
+
+.
+ What do you notice? Why?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Can you determine which of the following computations are defined? Ask SageMath
+ to compute them all.
+ The ones that are undefined will produce long error messages.
+\begin_inset Formula 
+\[
+\begin{gathered}(QR)^{T}\qquad AU^{T}R\qquad QUAR^{T}\qquad A^{T}QU^{T}A\\
+A+R^{T}\qquad AR^{T}\qquad(R-A)^{T}
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+You may 
+\begin_inset CommandInset href
+LatexCommand href
+name "follow this link"
+target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQREkh1XHFlijQhRR4_M2tXxoa1d9eS5tPobXldvp-_P19_LwUV9xxYYbnBUoa59h0dUZETzx0WvEu6dy5-Y_Bccb0sh8dyhgeDAqwXHRlJ-QGV8cIFJqeGgcftevk8oFhQISVlKpo8uSAaJOqEiTQB-UtoBKzwdsLB2NhZGUJ1vojlpFOlmBAsQpnkk-T9SOLyY_NE7e-pBGCL7I39-EAecAeBWczKekIS2LySj02wxhxqWp9QAiBYoEyKj-No1qmlzqeL3NAQTaliq9mns5yV0SYj0tlQpFJ2zIGgpWQRwWaGelQbnQz_xjhnOw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+ or copy and paste the following code into a SageCell to get started.
+\end_layout
+
+\begin_layout LyX-Code
+A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
+\end_layout
+
+\begin_layout LyX-Code
+                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
+\end_layout
+
+\begin_layout LyX-Code
+U = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
+\end_layout
+
+\begin_layout LyX-Code
+                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
+\end_layout
+
+\begin_layout LyX-Code
+Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
+\end_layout
+
+\begin_layout LyX-Code
+                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
+\end_layout
+
+\begin_layout LyX-Code
+R = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
+\end_layout
+
+\begin_layout LyX-Code
+                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
+\end_layout
+
+\end_body
+\end_document

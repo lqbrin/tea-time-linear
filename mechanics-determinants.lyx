@@ -1,0 +1,2070 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+The Determinant
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b^{2}-4ac$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+the discriminant
+\begin_inset Quotes erd
+\end_inset
+
+, but why? Each quadratic function, 
+\begin_inset Formula $p(x)=ax^{2}+bx+c$
+\end_inset
+
+, has two real roots, one (repeated) real root, or two complex roots.
+ The discriminant discriminates between which quadratics are which.
+ If the coefficients 
+\begin_inset Formula $a,b,c,$
+\end_inset
+
+ of a quadratic function are such that 
+\begin_inset Formula $b^{2}-4ac>0$
+\end_inset
+
+, then the quadratic has two real roots (and no others).
+ If the coefficients are such that 
+\begin_inset Formula $b^{2}-4ac=0$
+\end_inset
+
+, then the quadratic has one real root (and no others).
+ If the coefficients are such that 
+\begin_inset Formula $b^{2}-4ac<0$
+\end_inset
+
+, then the quadratic has two complex roots (and no others).
+ In this way, the quantity 
+\begin_inset Formula $b^{2}-4ac$
+\end_inset
+
+ associated with the quadratic function 
+\begin_inset Formula $p(x)=ax^{2}+bx+c$
+\end_inset
+
+ determines what type of roots 
+\begin_inset Formula $p$
+\end_inset
+
+ has.
+ It is determinative of the types of roots, and in this light might just
+ as well be known as a determinant (which, in English, means determinative).
+ In mathematics, though, that term is reserved for linear algebra.
+ The determinant is a determinative calculation that can be made for any
+ matrix much the same way the discriminant is a determinative calculation
+ that can be made for any quadratic function.
+ Exactly what the determinants determines will have to wait a short while.
+\end_layout
+
+\begin_layout Standard
+The determinant of an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix is undefined if 
+\begin_inset Formula $m\neq n$
+\end_inset
+
+, so determinants are calculated only for 
+\series bold
+square matrices
+\series default
+, those with the same number of columns as rows.
+ The determinant of a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix is its lone entry.
+ That is, the determinant of 
+\begin_inset Formula $\left[\begin{array}{c}
+a\end{array}\right]$
+\end_inset
+
+ is 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ As such, the determinant is a scalar.
+ The notations 
+\begin_inset Formula $\det A$
+\end_inset
+
+ or 
+\begin_inset Formula $|A|$
+\end_inset
+
+ are used to denote the determinant of the matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The determinant of a square matrix with more than one row, and therefore
+ more than one column, is defined recursively.
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, then
+\begin_inset Formula 
+\begin{equation}
+\det A=(-1)^{1+1}A_{1,1}\det A_{\backslash1,1}+(-1)^{1+2}A_{1,2}\det A_{\backslash1,2}+\cdots+(-1)^{1+n}A_{1,n}\det A_{\backslash1,n}.\label{eq:determinant_row_1_expansion}
+\end{equation}
+
+\end_inset
+
+For example, if 
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+-12 & 49 & -45 & -10\\
+28 & 45 & -46 & 23\\
+-15 & -28 & 4 & -48\\
+-1 & 34 & -38 & -18
+\end{array}\right]$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align}
+\det A=\left|\begin{array}{cccc}
+-12 & 49 & -45 & -10\\
+28 & 45 & -46 & 23\\
+-15 & -28 & 4 & -48\\
+-1 & 34 & -38 & -18
+\end{array}\right|= & -12\left|\begin{array}{ccc}
+45 & -46 & 23\\
+-28 & 4 & -48\\
+34 & -38 & -18
+\end{array}\right|-49\left|\begin{array}{ccc}
+28 & -46 & 23\\
+-15 & 4 & -48\\
+-1 & -38 & -18
+\end{array}\right|\label{eq:determinant_example}\\
+ & -45\left|\begin{array}{ccc}
+28 & 45 & 23\\
+-15 & -28 & -48\\
+-1 & 34 & -18
+\end{array}\right|+10\left|\begin{array}{ccc}
+28 & 45 & -46\\
+-15 & -28 & 4\\
+-1 & 34 & -38
+\end{array}\right|\nonumber 
+\end{align}
+
+\end_inset
+
+The determinant of the 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ matrix is written in terms of the determinants of four 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices, one application of recursive formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ To this point, the computation is not so bad.
+ It would take a minute to write down this quantity by hand.
+ However, you might feel no closer to the final result, which is 
+\begin_inset Formula $-393,294$
+\end_inset
+
+ by the way, than before.
+ Now there are four separate determinants to determine.
+ To continue the computation, the determinant of each 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix would be written in terms of the determinants of three 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices, a second application of formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Thus the determinant of 
+\begin_inset Formula $A$
+\end_inset
+
+ would be written in terms of twelve 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ determinants.
+ A final application of formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) would yield the determinant of 
+\begin_inset Formula $A$
+\end_inset
+
+ in terms of twenty-four 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ determinants (scalars), at which point the arithmetic could be done and
+ the determinant determined.
+ If nothing else, hopefully you are convinced that completing this calculation
+ by hand would take a while and be prone to error.
+ The real point of this example is to familiarize yourself with the recursive
+ definition.
+ Making sure you get the right signs on the coefficients and extract the
+ right submatrices at each step takes some practice.
+ Can you use formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) to find 
+\begin_inset Formula $\det\left(\begin{array}{cc}
+2 & 4\\
+-1 & 3
+\end{array}\right)$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The quantities 
+\begin_inset Formula $(-1)^{1+j}\det A_{\backslash1,j}$
+\end_inset
+
+ of formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are called 
+\series bold
+cofactors
+\series default
+.
+ More generally, the quantity 
+\begin_inset Formula $(-1)^{i+j}\det A_{\backslash i,j}$
+\end_inset
+
+ is called the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-cofactor of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Cofactors can be computed for any row-column combination.
+ Using the notation 
+\begin_inset Formula $C_{i,j}$
+\end_inset
+
+ for the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-cofactor, recursion (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) can be rewritten 
+\begin_inset Formula 
+\[
+\det A=A_{1,1}C_{1,1}+A_{1,2}C_{1,2}+\cdots+A_{1,n}C_{1,n}.
+\]
+
+\end_inset
+
+While more succinct, this presentation hides the details of the calculation.
+\end_layout
+
+\begin_layout Standard
+The expression 
+\begin_inset Formula $-12\left|\begin{array}{ccc}
+45 & -46 & 23\\
+-28 & 4 & -48\\
+34 & -38 & -18
+\end{array}\right|-49\left|\begin{array}{ccc}
+28 & -46 & 23\\
+-15 & 4 & -48\\
+-1 & -38 & -18
+\end{array}\right|-45\left|\begin{array}{ccc}
+28 & 45 & 23\\
+-15 & -28 & -48\\
+-1 & 34 & -18
+\end{array}\right|+10\left|\begin{array}{ccc}
+28 & 45 & -46\\
+-15 & -28 & 4\\
+-1 & 34 & -38
+\end{array}\right|$
+\end_inset
+
+ from calculation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_example"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is an example of a 
+\series bold
+linear combination
+\series default
+.
+ More generally, let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a set of objects for which addition and scalar mutliplication are defined.
+ Sound familiar? For scalars 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ and objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ of 
+\begin_inset Formula $S$
+\end_inset
+
+, the expression 
+\begin_inset Formula 
+\[
+x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}
+\]
+
+\end_inset
+
+is called a linear combination of the objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ are called the 
+\series bold
+coefficients
+\series default
+ of the linear combination.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Linear Combinations} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Linear combinations appear in many contexts.
+\end_layout
+
+\begin_layout Itemize
+A polynomial in 
+\begin_inset Formula $t$
+\end_inset
+
+ is a linear combination of the monomials 
+\begin_inset Formula $1,t,t^{2},t^{3},\ldots,t^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A Riemann sum is a linear combination of certain values of a function.
+\end_layout
+
+\begin_layout Itemize
+The solutions of the differential equation 
+\begin_inset Formula $y''-4y'+3y=0$
+\end_inset
+
+ are linear combinations of the functions 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $e^{3x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Numerical approximations of derivatives, such as 
+\begin_inset Formula $-\frac{3}{2h}f(x_{0})+\frac{2}{h}f(x_{0}+h)-\frac{1}{2h}f(x_{0}+2h)$
+\end_inset
+
+, are linear combinations of certain values of a function.
+\end_layout
+
+\begin_layout Itemize
+The left-hand side of the equation 
+\begin_inset Formula $3x-2y=7$
+\end_inset
+
+ is a linear combination of the variables 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Addition and scalar multiplication are defined for objects such as functions,
+ variables, numbers, integrals, vectors, and matrices.
+ Each of the following is a linear combination.
+\begin_inset Formula 
+\[
+\begin{gathered}3\sin(x)-2\sin(2x)+\sin(3x)\qquad7x+2y-\frac{4}{5}z\\
+6\sqrt{2}-2\sqrt{7}\qquad\int_{0}^{1}f(x)dx+\int_{1}^{2}f(x)dx+\int_{2}^{3}f(x)dx+\int_{3}^{4}f(x)dx\\
+\frac{1}{\sqrt{5}}\langle-2,1\rangle-\frac{1}{\sqrt{13}}\langle3,-2\rangle\qquad2\left[\begin{array}{cc}
+2 & -6\\
+0 & 3
+\end{array}\right]-\frac{1}{2}\left[\begin{array}{cc}
+2 & 0\\
+4 & -3
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+Can you think of other places where you've seen linear combinations?
+\end_layout
+
+\begin_layout Subsection
+Sudoku Row Linear Combinations
+\end_layout
+
+\begin_layout Standard
+If you enjoy solving sudoku puzzles, give this one a shot before reading
+ on.
+ Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:sudoku"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokuStart.png
+	lyxscale 25
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Treating each row of each block of the sudoku board as a 
+\begin_inset Formula $1\times3$
+\end_inset
+
+ (row) matrix, the operations of addition and scalar multiplication are
+ inherited by the sudoku rows.
+ This means to add two rows of a sudoku block, the inherited operation of
+ addition comes from writing each row as a row matrix, adding the matrices
+ and writing the resulting matrix as a sudoku row.
+ For example,
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokurow1.png
+	height 20pt
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{6pt}{$
+\backslash
+ +
+\backslash
+ $}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokurow2.png
+	height 20pt
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Downarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 4 & 7\end{array}\right]+\left[\begin{array}{ccc}
+2 & 6 & 3\end{array}\right]=\left[\begin{array}{ccc}
+3 & 10 & 10\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Downarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokurowsum.png
+	height 20pt
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Scalar multiplication on sudoku rows is defined analogously.
+ With addition and scalar multiplication defined, linear combinations are
+ defined.
+ Can the third row of the 
+\begin_inset Formula $2,1$
+\end_inset
+
+-block of the completed sudoku board (on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:sudoku"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) be written as a linear combination of the first two rows? In other words,
+ does the following equation have a solution?
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{6pt}{$a
+\backslash
+ $}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokurow3.png
+	height 20pt
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{6pt}{$
+\backslash
+ +
+\backslash
+ b
+\backslash
+ $}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokurow4.png
+	height 20pt
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{6pt}{$
+\backslash
+ =
+\backslash
+ $}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokurow5.png
+	height 20pt
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+To answer the question, write the equation in terms of matrices and solve:
+\begin_inset Formula 
+\begin{align*}
+a\left[\begin{array}{ccc}
+3 & 7 & 1\end{array}\right]+b\left[\begin{array}{ccc}
+9 & 6 & 2\end{array}\right] & =\left[\begin{array}{ccc}
+8 & 4 & 5\end{array}\right]\\
+\left[\begin{array}{ccc}
+3a+9b\  & 7a+6b\  & a+2b\end{array}\right] & =\left[\begin{array}{ccc}
+8 & 4 & 5\end{array}\right]
+\end{align*}
+
+\end_inset
+
+For these two row matrices to be equal corresponding entries must be equal.
+ In other words, the simultaneous equations
+\begin_inset Formula 
+\begin{align*}
+3a+9b & =8\\
+7a+6b & =4\\
+a+2b & =5
+\end{align*}
+
+\end_inset
+
+must be true.
+ The second and third equations can be solved (as a system) by elimination,
+ for example.
+ The second equation minus 3 times the third equation yields 
+\begin_inset Formula $4a=-11$
+\end_inset
+
+, so 
+\begin_inset Formula $a=\frac{-11}{4}$
+\end_inset
+
+.
+ Substituting into the third equation yields 
+\begin_inset Formula $\frac{-11}{4}+2b=5$
+\end_inset
+
+ which means 
+\begin_inset Formula $b=\frac{31}{8}$
+\end_inset
+
+.
+ These values of 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ (and only these values of 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+) satisfy the second and third equations.
+ Substituting into the first equation yields 
+\begin_inset Formula $3\left(\frac{-11}{4}\right)+9\left(\frac{31}{8}\right)=8$
+\end_inset
+
+ which can be confirmed FALSE! Therefore there is no solution.
+ There is no way to write the third row of the 
+\begin_inset Formula $2,1$
+\end_inset
+
+-block as a linear combination of the first two rows.
+\end_layout
+
+\begin_layout Standard
+By contrast the third row of the 
+\begin_inset Formula $1,3$
+\end_inset
+
+-block can be written as 
+\begin_inset Formula $-1$
+\end_inset
+
+ times the first row plus 
+\begin_inset Formula $2$
+\end_inset
+
+ times the second row.
+ The third row is the linear combination of the first two rows with coefficients
+ 
+\begin_inset Formula $-1$
+\end_inset
+
+ and 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ Can you verify this? The 
+\begin_inset Formula $1,3$
+\end_inset
+
+-block is
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudoku31block.png
+	height 0.75in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linearcombination"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Through inheritance the determinant of any 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ sudoku block can also be calculated.
+ For example, the determinant of the 
+\begin_inset Formula $2,1$
+\end_inset
+
+-block is 
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{array}{ccc}
+3 & 7 & 1\\
+9 & 6 & 2\\
+8 & 4 & 5
+\end{array}\right| & =3\left|\begin{array}{cc}
+6 & 2\\
+4 & 5
+\end{array}\right|-7\left|\begin{array}{cc}
+9 & 2\\
+8 & 5
+\end{array}\right|+1\left|\begin{array}{cc}
+9 & 6\\
+8 & 4
+\end{array}\right|\\
+ & =3(6\cdot5-2\cdot4)-7(9\cdot5-2\cdot8)+1(9\cdot4-6\cdot8)\\
+ & =3(22)-7(29)+1(-12)\\
+ & =66-203-12\\
+ & =-149
+\end{align*}
+
+\end_inset
+
+What is the determinant of the 
+\begin_inset Formula $1,3$
+\end_inset
+
+-block? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:sudokudeterminant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So, for the block with determinant 
+\begin_inset Formula $-149$
+\end_inset
+
+ there was no way to write the third row as a linear combination of the
+ first two, and for the block with determinant 
+\begin_inset Formula $0$
+\end_inset
+
+ there was a way to write the third row as a linear combination of the first
+ two.
+ This bears further investigation, requested in the exercises.
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+If 
+\family typewriter
+M
+\family default
+ is a matrix in SageMath, then 
+\family typewriter
+M.determinant()
+\family default
+ is its determinant.
+ The following code computes the determinant of 
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+-12 & 49 & -45 & -10\\
+28 & 45 & -46 & 23\\
+-15 & -28 & 4 & -48\\
+-1 & 34 & -38 & -18
+\end{array}\right]$
+\end_inset
+
+, the matrix behind calculation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_example"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(4,4,[-12,49,-45,-10,28,45,-46,23,-15,-28,4,-48,-1,34,-38,-18])
+\end_layout
+
+\begin_layout LyX-Code
+print(M.determinant())
+\end_layout
+
+\begin_layout Standard
+The output of this code is
+\end_layout
+
+\begin_layout LyX-Code
+-393294
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+coefficients The scalar quantities of a linear combination.
+\end_layout
+
+\begin_layout Description
+determinant 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The determinant of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\det A$
+\end_inset
+
+ or 
+\begin_inset Formula $|A|$
+\end_inset
+
+, is defined by
+\begin_inset Formula 
+\[
+\det A=(-1)^{1+1}A_{1,1}\det A_{\backslash1,1}+(-1)^{1+2}A_{1,2}\det A_{\backslash1,2}+\cdots+(-1)^{1+n}A_{1,n}\det A_{\backslash1,n}
+\]
+
+\end_inset
+
+for 
+\begin_inset Formula $n>1$
+\end_inset
+
+ and 
+\begin_inset Formula $\det A=A_{1,1}$
+\end_inset
+
+ for 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ The determinant of an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix is undefined if 
+\begin_inset Formula $m\neq n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+combination An expression of the form 
+\begin_inset Formula 
+\[
+x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=\sum_{i=1}^{n}x_{i}b_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ are scalars and 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ are objects from a set on which addition and scalar multiplication are
+ defined.
+\end_layout
+
+\begin_layout Description
+square
+\begin_inset space ~
+\end_inset
+
+matrix A matrix with the same number or columns as rows.
+ An 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate-Resume
+Calculate the cofactor.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{1,1}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{cc}
+-9 & 3\\
+0 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{1,2}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{cc}
+9 & -6\\
+-11 & -9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{2,1}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{cc}
+-4 & -6\\
+9 & -11
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{2,2}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{cc}
+8 & 13\\
+6 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{1,3}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-2 & -1 & 6\\
+-5 & -10 & 11\\
+-9 & 8 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{2,1}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-3 & 0 & 1\\
+3 & -5 & 7\\
+4 & 11 & -7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{2,2}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-12 & -2 & -10\\
+5 & 0 & 3\\
+2 & -9 & -4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $C_{3,2}$
+\end_inset
+
+ of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+7 & -6 & -7\\
+-2 & -4 & -11\\
+2 & 0 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Calculate the determinant if possible.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\det A$
+\end_inset
+
+ where 
+\begin_inset Formula $A=\left[\begin{array}{c}
+30\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|A|$
+\end_inset
+
+ where 
+\begin_inset Formula $A=\left[\begin{array}{c}
+-6\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det A$
+\end_inset
+
+ where 
+\begin_inset Formula $A=\left[\begin{array}{c}
+-45\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det A$
+\end_inset
+
+ where 
+\begin_inset Formula $A=\left[\begin{array}{c}
+44\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det\left(\begin{array}{cc}
+5 & -2\\
+7 & 2
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{cc}
+-18 & 19\\
+6 & -3
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{cc}
+18 & 5\\
+14 & -16
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{ccc}
+-5 & 2 & -4\\
+9 & 0 & -2\\
+-6 & 8 & 4
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{ccc}
+0 & 9 & 7\\
+-1 & -6 & -2\\
+6 & -9 & -5
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det\left(\begin{array}{ccc}
+-3 & -1 & -9\\
+1 & -4 & -8\\
+2 & 9 & 6
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det\left(\begin{array}{cccc}
+2 & 8 & -2 & 0\\
+3 & 8 & 1 & 2\\
+0 & 0 & 1 & 6\\
+2 & 0 & -1 & 6
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{cccc}
+4 & 5 & -2 & 0\\
+2 & 0 & 4 & 7\\
+8 & 4 & 5 & -2\\
+2 & -2 & 0 & 0
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det\left(\begin{array}{cccc}
+5 & 0 & 2 & 8\\
+4 & 8 & 6 & -2\\
+0 & -1 & 6 & 0\\
+0 & 3 & -1 & 3
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) reduces the calculation of the determinant of a 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ matrix into a linear combination of the determinants of twenty-four 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices, as in calculation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_example"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) reduces the calculation of the determinant of a 
+\begin_inset Formula $5\times5$
+\end_inset
+
+ matrix into a linear combination of the determinants of how many 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices?
+\end_layout
+
+\begin_layout Enumerate
+Formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) reduces the calculation of the determinant of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix into a linear combination of the determinants of how many 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+True or false?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The determinant of a matrix is a scalar.
+\end_layout
+
+\begin_layout Enumerate
+The determinant of a matrix is always positive since it is the absolute
+ value of a number.
+\end_layout
+
+\begin_layout Enumerate
+The determinant of a 
+\begin_inset Formula $5\times6$
+\end_inset
+
+ matrix can be written as a linear combination of the determinants of thirty
+ 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices, then 
+\begin_inset Formula $\det A+\det B=\det(A+B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices, then 
+\begin_inset Formula $\det A+\det B=\det(A+B)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Compare and contrast (i) scalar, (ii) 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix, and (iii) the determinant of a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:upper_triangular"
+
+\end_inset
+
+Calculate the determinant.
+ 
+\series bold
+HINT
+\series default
+: Despite the large sizes of some of the matrices, this does not require
+ a lot of work.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{cc}
+7 & 0\\
+6 & -8
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{ccc}
+-2 & 0 & 0\\
+-7 & 4 & 0\\
+2 & -9 & 7
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{cccc}
+-4 & 0 & 0 & 0\\
+-8 & -9 & 0 & 0\\
+2 & 7 & 6 & 0\\
+-5 & -7 & 3 & 9
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|\begin{array}{cccccc}
+-1 & 0 & 0 & 0 & 0 & 0\\
+-7 & -3 & 0 & 0 & 0 & 0\\
+-6 & -4 & 3 & 0 & 0 & 0\\
+-1 & 5 & 1 & -2 & 0 & 0\\
+4 & -5 & 8 & 3 & 4 & 0\\
+8 & 9 & 7 & -9 & 0 & 9
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+In your own words, draw a conjecture based on the calculations of question
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:upper_triangular"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+The remaining exercises refer to the completed sudoku board of this section
+ (page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:sudoku"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+You may 
+\begin_inset CommandInset href
+LatexCommand href
+name "follow this link"
+target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQREkh1XHFlijQhRR4_M2tXxoa1d9eS5tPobXldvp-_P19_LwUV9xxYYbnBUoa59h0dUZETzx0WvEu6dy5-Y_Bccb0sh8dyhgeDAqwXHRlJ-QGV8cIFJqeGgcftevk8oFhQISVlKpo8uSAaJOqEiTQB-UtoBKzwdsLB2NhZGUJ1vojlpFOlmBAsQpnkk-T9SOLyY_NE7e-pBGCL7I39-EAecAeBWczKekIS2LySj02wxhxqWp9QAiBYoEyKj-No1qmlzqeL3NAQTaliq9mns5yV0SYj0tlQpFJ2zIGgpWQRwWaGelQbnQz_xjhnOw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+ or copy and paste the following code into a SageCell to get started.
+\end_layout
+
+\begin_layout LyX-Code
+A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
+\end_layout
+
+\begin_layout LyX-Code
+                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
+\end_layout
+
+\begin_layout LyX-Code
+U = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
+\end_layout
+
+\begin_layout LyX-Code
+                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
+\end_layout
+
+\begin_layout LyX-Code
+Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
+\end_layout
+
+\begin_layout LyX-Code
+                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
+\end_layout
+
+\begin_layout LyX-Code
+R = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
+\end_layout
+
+\begin_layout LyX-Code
+                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+determinant: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\det\left(\begin{array}{cc}
+2 & 4\\
+-1 & 3
+\end{array}\right) & =(-1)^{1+1}(2)\det(3)+(-1)^{1+2}(4)\det(-1)\\
+ & =2(3)-4(-1)\\
+ & =10
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+sudoku: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:sudoku"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-determinants-sudokuFinish.png
+	lyxscale 25
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+combination: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linearcombination"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+(-1)\left[\begin{array}{ccc}
+1 & 9 & 8\end{array}\right]+2\left[\begin{array}{ccc}
+4 & 6 & 5\end{array}\right] & =\left[\begin{array}{ccc}
+-1+8\  & -9+12\  & -8+10\end{array}\right]\\
+ & =\left[\begin{array}{ccc}
+7 & 3 & 2\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+sudoku
+\begin_inset space ~
+\end_inset
+
+determinant: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:sudokudeterminant"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{array}{ccc}
+1 & 9 & 8\\
+4 & 6 & 5\\
+7 & 3 & 2
+\end{array}\right| & =1\left|\begin{array}{cc}
+6 & 5\\
+3 & 2
+\end{array}\right|-9\left|\begin{array}{cc}
+4 & 5\\
+7 & 2
+\end{array}\right|+8\left|\begin{array}{cc}
+4 & 6\\
+7 & 3
+\end{array}\right|\\
+ & =1(6\cdot2-5\cdot3)-9(4\cdot2-5\cdot7)+8(4\cdot3-6\cdot7)\\
+ & =1(-3)-9(-27)+8(-30)\\
+ & =-3+243-240\\
+ & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
