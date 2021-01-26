@@ -283,7 +283,7 @@ two by three
 \end_inset
 
  column (from the left) of a matrix is called the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry.
@@ -314,7 +314,7 @@ Matrices are most often labeled by capital letter variables such as
 
 .
  In this text, the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of a matrix 
@@ -337,7 +337,7 @@ status open
 
 
 \backslash
-begin{digression}
+begin{digression}{Other Notations for Entries}
 \end_layout
 
 \end_inset
@@ -353,7 +353,7 @@ The subscripted lower case counterpart to a matrix variable is often used
 \end_inset
 
  represent the 
-\begin_inset Formula $1,2$
+\begin_inset Formula $1,\!2$
 \end_inset
 
 -entry of 
@@ -380,7 +380,7 @@ end{digression}
 \begin_layout Standard
 \noindent
 The 
-\begin_inset Formula $5,1$
+\begin_inset Formula $5,\!1$
 \end_inset
 
 -entry of a matrix 

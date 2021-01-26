@@ -9,6 +9,9 @@
 \input $HOME/Documents/scsu/Book-Linear/preamble
 \end_preamble
 \use_default_options true
+\begin_modules
+enumitem
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -94,23 +97,29 @@
 \begin_body
 
 \begin_layout Section
-Matrix Division
-\end_layout
-
-\begin_layout Standard
-You may have once heard the claim 
 \begin_inset Quotes eld
 \end_inset
 
-there's no such thing as subtraction.
- It's just adding the opposite
+Matrix Division
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You may have heard the claim 
+\begin_inset Quotes eld
+\end_inset
+
+there's no such thing as subtraction—it's just adding the opposite
 \begin_inset Quotes erd
 \end_inset
 
  or something to that effect.
- There is a vital concept buried in this addage.
- Addition, subtraction, opposites (and zero) are intimately linked in a
- very real way.
+ There is a vital concept of linear algebra buried in this addage.
+ The link between addition, opposites, and zero that makes subtraction optional
+ this way is as follows.
  For any real numbers 
 \begin_inset Formula $a$
 \end_inset
@@ -122,22 +131,8 @@ there's no such thing as subtraction.
 ,
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $a+0=0+a=a$
-\end_inset
-
- (adding zero to real number 
-\begin_inset Quotes eld
-\end_inset
-
-has no effect
-\begin_inset Quotes erd
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Enumerate
+\begin_layout Standard
+\align center
 \begin_inset Formula $a$
 \end_inset
 
@@ -149,13 +144,19 @@ has no effect
 \begin_inset Formula $a+b=b+a=0$
 \end_inset
 
- (adding opposites yields zero)
+.
 \end_layout
 
 \begin_layout Standard
-Zero is that special number that can be added to any number without changing
- its value, and there is none other like it! This property is so special
- it has a name.
+\noindent
+Why zero, and not some other number here? Zero is that special number that
+ can be added to any number without changing its value, and there is none
+ other like it! In symbols, 
+\begin_inset Formula $a+0=0+a=a$
+\end_inset
+
+.
+ This property is so special it has a name.
  Zero is the 
 \series bold
 additive identity
@@ -169,25 +170,41 @@ identity
 additive
 \shape default
  to document the operation.
- Zero is not the multiplicative identity for real numbers since it is not
- true that 
-\begin_inset Formula $a\cdot0=0\cdot a=a$
-\end_inset
+ The additive inverse, or opposite, of a real number 
+\series bold
+\shape italic
+is defined
+\series default
+\shape default
+ by the fact that adding the two yields the additive identity.
+ Two numbers are opposites (additive inverses) if and only if their sum
+ is zero.
+\end_layout
 
- for just any real number 
-\begin_inset Formula $a$
-\end_inset
-
-.
- Multiplication by zero has a tendency to change the value of the real number
- by which it is multiplied.
- Of course there is a different, very special, number that can be multiplied
- by any number without changing its value—one.
- As such, one is the 
+\begin_layout Standard
+Likewise, one is that special number that can be multiplied by any number
+ without changing its value.
+ Consequently, one is the 
 \series bold
 multiplicative identity
 \series default
  for real numbers.
+ In symbols, 
+\begin_inset Formula $a\cdot1=1\cdot a=a$
+\end_inset
+
+.
+ The multiplicative inverse, or reciprocal, of a real number 
+\series bold
+\shape italic
+is defined
+\series default
+\shape default
+ by the fact that multiplying the two yields the multiplicative identity.
+ Two numbers are reciprocals (multiplicative inverses) if and only if their
+ product is one.
+ This leads us to a link between multiplication, reciprocals, and one that
+ is analogous to the link between addition, opposites, and zero.
  For any real numbers 
 \begin_inset Formula $a$
 \end_inset
@@ -199,22 +216,8 @@ multiplicative identity
 ,
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $a\cdot1=1\cdot a=a$
-\end_inset
-
- (multiplying a real number by zero 
-\begin_inset Quotes eld
-\end_inset
-
-has no effect
-\begin_inset Quotes erd
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Enumerate
+\begin_layout Standard
+\align center
 \begin_inset Formula $a$
 \end_inset
 
@@ -226,57 +229,463 @@ has no effect
 \begin_inset Formula ${\displaystyle a\cdot b=b\cdot a=1}$
 \end_inset
 
- (multiplying reciprocals yields one)
+.
 \end_layout
 
 \begin_layout Standard
-The additive inverse (opposite) of a real number 
-\series bold
-\shape italic
-is defined
-\series default
-\shape default
- by the fact that adding the two yields the (additive) identity.
- Two numbers are opposites (additive inverses) if and only if their sum
- is zero.
- The multiplicative inverse (reciprocal) 
-\series bold
-\shape italic
-is defined
-\series default
-\shape default
- by the fact that multiplying the two yields the (multiplicative) identity.
- Two numbers are reciprocals (multiplicative inverses) if and only if their
- product is one.
-\end_layout
-
-\begin_layout Standard
+\noindent
 The same relationship holds among addition, opposites, and zero as holds
  among multiplication, reciprocals, and one.
  Addition and multiplication are operations, opposites and reciprocals are
  inverses, and zero and one are identities.
- Now imagine being given these constructs before having experience with
- negatives and fractions, and using these properties to define opposites
- and reciprocals.
- It is probably hard to imagine how to make the leap from understanding
- the numbers 
-\begin_inset Formula $1,2,3,\ldots$
+\end_layout
+
+\begin_layout Standard
+There is an important analogy for matrices.
+ Compute the following products.
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{c}
+3\\
+-8
+\end{array}\right]\qquad\left[\begin{array}{ccc}
+3 & 4 & -1\\
+17 & -21 & 55
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\\
+\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+\sqrt{5} & -\pi & 18 & \frac{2}{3}\\
+\frac{17}{8} & 34 & \sqrt[5]{19} & \ln9\\
+\frac{\pi}{4} & 0.34 & e^{7} & \sin(1)\\
+2^{2^{2}} & \tan^{-1}(1) & 12 & 10^{1000}
+\end{array}\right]
+\end{gathered}
+\]
+
 \end_inset
 
- to also understanding the number 
-\begin_inset Formula $0,-1,-2,-3,\ldots$
+Answers on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrixproducts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Hopefully these exercises have led you to the conclusion that multiplying
+ by matrices such as
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\quad\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\quad\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+leaves the multiplicand (the matrix being multiplied by it) unchanged.
+ Multiplication by matrices such as these acts very much like multiplying
+ numbers by 1, or adding 0.
+ This is like the properties that made 1 the multiplicative identity and
+ 0 the additive identity for real numbers, and this is the property that
+ makes these matrices identity matrices.
+ They can each be multiplied with any other, as long as the product is defined,
+ without changing the other's value.
+ The 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 
+\series bold
+identity matrix
+\series default
+ is denoted by 
+\begin_inset Formula $I_{n\times n}$
+\end_inset
+
+ or just 
+\begin_inset Formula $I$
+\end_inset
+
+ when the size of the matrix is determined by context.
+ Identity matrices have ones on the main diagonal, the diagonal of entries
+ running from the 
+\begin_inset Formula $1,\!1$
+\end_inset
+
+-entry through the 
+\begin_inset Formula $n,\!n$
+\end_inset
+
+-entry, and zeros everywhere else.
+ In symbols, 
+\begin_inset Formula $I_{1,1}=I_{2,2}=\cdots=I_{n,n}=1$
 \end_inset
 
  and 
-\begin_inset Formula $\frac{1}{2},\frac{1}{3},\frac{1}{4},\ldots$
+\begin_inset Formula $I_{j,k}=0$
 \end_inset
 
-, a challenge faced by all elementary school math teachers.
- Imagine being told as a youngster that for each whole number there were
- two very special numbers, one whose sum with the whole number is zero and
- one whose product with the whole number is one, without having any way
- to write down what those numbers were! They just had to exist in your imaginati
-on (at least to begin).
+ whenever 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+.
+ Matrices denoted by 
+\begin_inset Formula $I$
+\end_inset
+
+ are those special matrices such that 
+\begin_inset Formula $A\cdot I_{n\times n}=I_{m\times m}\cdot A=A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+With an identity, or really set of identities, for multiplication, we are
+ only one element shy of the operation, inverse, identity triumvirate for
+ matrices.
+ Compute the following products.
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cc}
+7 & 4\\
+5 & 3
+\end{array}\right]\left[\begin{array}{cc}
+3 & -4\\
+-5 & 7
+\end{array}\right]\qquad\left[\begin{array}{ccc}
+-4 & 5 & 3\\
+8 & -1 & -2\\
+-3 & 1 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+1 & -2 & -7\\
+-2 & 5 & 16\\
+5 & -11 & -36
+\end{array}\right]\\
+\left[\begin{array}{cccc}
+1 & 0 & -3 & -2\\
+1 & 1 & -6 & -3\\
+-2 & -3 & 10 & 5\\
+0 & 0 & 3 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+4 & -9 & -3 & -4\\
+-1 & 1 & 0 & 1\\
+-1 & 3 & 1 & 2\\
+3 & -9 & -3 & -5
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+Answers on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrixproductspart2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ These exercises demonstrate that there are pairs of matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ such that 
+\begin_inset Formula $AB=I$
+\end_inset
+
+.
+ But what about 
+\begin_inset Formula $BA$
+\end_inset
+
+? In our formulations for real number inverses we had 
+\begin_inset Formula $a+b=b+a=0$
+\end_inset
+
+ and 
+\begin_inset Formula $a\cdot b=b\cdot a=1$
+\end_inset
+
+, but we observed in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that matrix multiplication was not commutative.
+ Compute the following products (the same as above only in the opposite
+ order).
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cc}
+3 & -4\\
+-5 & 7
+\end{array}\right]\left[\begin{array}{cc}
+7 & 4\\
+5 & 3
+\end{array}\right]\quad\left[\begin{array}{ccc}
+1 & -2 & -7\\
+-2 & 5 & 16\\
+5 & -11 & -36
+\end{array}\right]\left[\begin{array}{ccc}
+-4 & 5 & 3\\
+8 & -1 & -2\\
+-3 & 1 & 1
+\end{array}\right]\\
+\left[\begin{array}{cccc}
+4 & -9 & -3 & -4\\
+-1 & 1 & 0 & 1\\
+-1 & 3 & 1 & 2\\
+3 & -9 & -3 & -5
+\end{array}\right]\left[\begin{array}{cccc}
+1 & 0 & -3 & -2\\
+1 & 1 & -6 & -3\\
+-2 & -3 & 10 & 5\\
+0 & 0 & 3 & 1
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+As you were hopefully able to verify, all of these products are the (appropriate
+ size) identity too! It seems that multiplicative inverse pairs commute.
+ That is, if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are multiplicative inverses, then 
+\begin_inset Formula $AB=BA$
+\end_inset
+
+.
+ We finally have evidence that a matrix analogy for linking multiplication,
+ inverses, and identity matrices exists.
+ For any matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Come back to this in the matrix algebra section, like Lay page 105.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are inverses if and only if 
+\begin_inset Formula ${\displaystyle A\cdot B=B\cdot A=I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+This is enough that we could define 
+\begin_inset Formula ${\displaystyle \frac{I}{A}}$
+\end_inset
+
+ as the multiplicative inverse (or reciprocal) of 
+\begin_inset Formula $A$
+\end_inset
+
+ and have the understanding that 
+\begin_inset Formula $A\div B$
+\end_inset
+
+ means 
+\begin_inset Formula ${\displaystyle A\cdot\frac{I}{B}}$
+\end_inset
+
+ much like we have for real numbers, but by convention we do not! For one
+ thing, we would need a second division symbol to mean 
+\begin_inset Formula ${\displaystyle \frac{I}{B}\cdot A}$
+\end_inset
+
+ since matrix multiplication is not commutative.
+ In general, 
+\begin_inset Formula ${\displaystyle \frac{I}{B}\cdot A}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle A\cdot\frac{I}{B}}$
+\end_inset
+
+ could be unequal.
+ Instead, we stick with the addage that 
+\begin_inset Quotes eld
+\end_inset
+
+there's no such thing as matrix division—it's just multiplying by the inverse
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The notation we use for the inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+, borrowing from the algebra of real numbers but not using division bars
+ or division symbols.
+\end_layout
+
+\begin_layout Subsection
+A Formula for the Inverse
+\end_layout
+
+\begin_layout Standard
+For any matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+A^{-1}=\frac{1}{\det A}\left[\begin{array}{cccc}
+C_{1,1} & C_{2,1} & \cdots & C_{m,1}\\
+C_{1,2} & C_{2,2} & \cdots & C_{m,2}\\
+\vdots & \vdots & \ddots & \vdots\\
+C_{1,n} & C_{2,n} & \cdots & C_{m,n}
+\end{array}\right]\label{eq:inverse_by_adjugate}
+\end{equation}
+
+\end_inset
+
+where the 
+\begin_inset Formula $C_{i,j}$
+\end_inset
+
+ are the cofactors of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ This implies that for 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ to exist
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ must be square since 
+\begin_inset Formula $\det A$
+\end_inset
+
+ and the 
+\begin_inset Formula $C_{i,j}$
+\end_inset
+
+ are undefined if 
+\begin_inset Formula $A$
+\end_inset
+
+ is not square, and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det A$
+\end_inset
+
+ must be nonzero since division by 0 is undefined.
+ 
+\end_layout
+
+\begin_layout Standard
+The matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+C_{1,1} & C_{2,1} & \cdots & C_{n,1}\\
+C_{1,2} & C_{2,2} & \cdots & C_{n,2}\\
+\vdots & \vdots & \ddots & \vdots\\
+C_{1,n} & C_{2,n} & \cdots & C_{n,n}
+\end{array}\right]
+\]
+
+\end_inset
+
+is called the 
+\series bold
+adjugate
+\series default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $\text{adj}A$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -288,7 +697,36 @@ identity
 \begin_inset space ~
 \end_inset
 
-matrix A matrix with a bunch of ones.
+matrix A matrix with ones on the main diagonal and zeros elsewhere.
+\end_layout
+
+\begin_layout Description
+(matrix)
+\begin_inset space ~
+\end_inset
+
+inverse Matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are inverses of one another if and only if 
+\begin_inset Formula $AB=BA=I$
+\end_inset
+
+.
+ The inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -296,7 +734,11 @@ main
 \begin_inset space ~
 \end_inset
 
-diagonal The one from upperleft to lowerright.
+diagonal The 
+\begin_inset Formula $i,\!i$
+\end_inset
+
+-entries of a matrix.
 \end_layout
 
 \begin_layout Description
@@ -308,7 +750,7 @@ reciprocal The multiplicative inverse of a real number.
 \end_layout
 
 \begin_layout Description
-0 The additive identity of real numbers.
+0 The additive identity for real numbers.
 \end_layout
 
 \begin_layout Description
@@ -336,7 +778,307 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Compute the inverse.
+Compute the inverse if possible.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+-3\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+0\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+\frac{2}{\sqrt{3}}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+4\pi\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & -2\\
+11 & -7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+\sqrt{12} & 3\\
+2 & \sqrt{3}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & \sqrt{18}\\
+\sqrt{8} & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & -3\\
+-5 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+2 & -3 & \sqrt{7}\\
+12 & \sqrt{28} & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & 4\\
+-7 & 8\\
+-1 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+2 & 0 & -2\\
+0 & 2 & 0\\
+7 & 8 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & -3 & 2\\
+5 & 1 & 2\\
+5 & -8 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & 3 & 0\\
+-1 & -1 & 6\\
+0 & 0 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+3 & -2 & -6\\
+-1 & 1 & 3\\
+-4 & 3 & 10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+9 & -7 & -2 & -11\\
+0 & 12 & 2 & -12\\
+-1 & -9 & 6 & 10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-4 & -9 & 0\\
+1 & -8 & -1\\
+-10 & 11 & 9\\
+-3 & 8 & 10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+2 & 1 & -6 & 2\\
+1 & 1 & -3 & 0\\
+-4 & -1 & 13 & -7\\
+3 & 0 & -11 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+2 & 0 & 0 & -1\\
+0 & 1 & -2 & 3\\
+1 & 0 & 2 & 0\\
+3 & 1 & 7 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+4 & 7 & 0 & 8\\
+0 & 8 & 0 & -1\\
+0 & 2 & 1 & -1\\
+0 & 0 & 2 & -2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Compare and contrast the inverse of a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix with the multiplicative inverse of a real number.
+\end_layout
+
+\begin_layout Enumerate
+True or false? If all the entries in a square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ are integers and 
+\begin_inset Formula $\det M=1$
+\end_inset
+
+, then all the entries in 
+\begin_inset Formula $M^{-1}$
+\end_inset
+
+ are integers.
+\end_layout
+
+\begin_layout Enumerate
+When the determinant of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix is zero, (select all that apply)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+exactly one row is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+every row is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+each row after the first one is a linear combination of the rows above it.
+\end_layout
+
+\begin_layout Enumerate
+any linear combination of the 
+\begin_inset Formula $n$
+\end_inset
+
+ rows sums to zero.
+\end_layout
+
+\begin_layout Enumerate
+at least one row is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+its inverse is the zero matrix.
+\end_layout
+
+\begin_layout Enumerate
+it has no inverse.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $A$
+\end_inset
+
+ is an invertible 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix and
+\begin_inset Formula 
+\[
+A\cdot\left[\begin{array}{cc}
+1.4 & -70\\
+-29 & 95\\
+-12 & -43
+\end{array}\right]=\left[\begin{array}{cc}
+80 & 4.9\\
+-62 & -52\\
+-32 & 52
+\end{array}\right].
+\]
+
+\end_inset
+
+Find 
+\begin_inset Formula $A^{-1}\cdot\left[\begin{array}{cc}
+80 & 4.9\\
+-62 & -52\\
+-32 & 52
+\end{array}\right]$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -566,6 +1308,169 @@ R = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
 
 \begin_layout LyX-Code
                 -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+products
+\begin_inset space ~
+\end_inset
+
+part
+\begin_inset space ~
+\end_inset
+
+1: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrixproducts"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{c}
+3\\
+-8
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+-8
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+3 & 4 & -1\\
+17 & -21 & 55
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+3 & 4 & -1\\
+17 & -21 & 55
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+\sqrt{5} & -\pi & 18 & \frac{2}{3}\\
+\frac{17}{8} & 34 & \sqrt[5]{19} & \ln9\\
+\frac{\pi}{4} & 0.34 & e^{7} & \sin(1)\\
+2^{2^{2}} & \tan^{-1}(1) & 12 & 10^{1000}
+\end{array}\right]=\left[\begin{array}{cccc}
+\sqrt{5} & -\pi & 18 & \frac{2}{3}\\
+\frac{17}{8} & 34 & \sqrt[5]{19} & \ln9\\
+\frac{\pi}{4} & 0.34 & e^{7} & \sin(1)\\
+2^{2^{2}} & \tan^{-1}(1) & 12 & 10^{1000}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+products
+\begin_inset space ~
+\end_inset
+
+part
+\begin_inset space ~
+\end_inset
+
+2: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrixproductspart2"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cc}
+7 & 4\\
+5 & 3
+\end{array}\right]\left[\begin{array}{cc}
+3 & -4\\
+-5 & 7
+\end{array}\right]=\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+-4 & 5 & 3\\
+8 & -1 & -2\\
+-3 & 1 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+1 & -2 & -7\\
+-2 & 5 & 16\\
+5 & -11 & -36
+\end{array}\right]=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\\
+\left[\begin{array}{cccc}
+1 & 0 & -3 & -2\\
+1 & 1 & -6 & -3\\
+-2 & -3 & 10 & 5\\
+0 & 0 & 3 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+4 & -9 & -3 & -4\\
+-1 & 1 & 0 & 1\\
+-1 & 3 & 1 & 2\\
+3 & -9 & -3 & -5
+\end{array}\right]=\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body

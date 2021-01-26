@@ -215,7 +215,29 @@ The determinant of a square matrix with more than one row, and therefore
 \begin_inset Formula $n\times n$
 \end_inset
 
- matrix, then
+ matrix
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+For this formula to work for 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices, we define 
+\begin_inset Formula $\det A_{\backslash1,1}$
+\end_inset
+
+ to be 1 for a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix.
+\end_layout
+
+\end_inset
+
+, then
 \begin_inset Formula 
 \begin{equation}
 \det A=(-1)^{1+1}A_{1,1}\det A_{\backslash1,1}+(-1)^{1+2}A_{1,2}\det A_{\backslash1,2}+\cdots+(-1)^{1+n}A_{1,n}\det A_{\backslash1,n}.\label{eq:determinant_row_1_expansion}
@@ -398,7 +420,7 @@ cofactors
 \end_inset
 
  is called the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -cofactor of 
@@ -412,7 +434,7 @@ cofactors
 \end_inset
 
  for the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -cofactor, recursion (
@@ -798,7 +820,7 @@ Scalar multiplication on sudoku rows is defined analogously.
  With addition and scalar multiplication defined, linear combinations are
  defined.
  Can the third row of the 
-\begin_inset Formula $2,1$
+\begin_inset Formula $2,\!1$
 \end_inset
 
 -block of the completed sudoku board (on page 
@@ -813,6 +835,13 @@ noprefix "false"
 
 ) be written as a linear combination of the first two rows? In other words,
  does the following equation have a solution?
+\begin_inset CommandInset label
+LatexCommand label
+name "sudoku_calculations"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -981,7 +1010,7 @@ must be true.
 
  which can be confirmed FALSE! Therefore there is no solution.
  There is no way to write the third row of the 
-\begin_inset Formula $2,1$
+\begin_inset Formula $2,\!1$
 \end_inset
 
 -block as a linear combination of the first two rows.
@@ -989,7 +1018,7 @@ must be true.
 
 \begin_layout Standard
 By contrast the third row of the 
-\begin_inset Formula $1,3$
+\begin_inset Formula $1,\!3$
 \end_inset
 
 -block can be written as 
@@ -1012,7 +1041,7 @@ By contrast the third row of the
 
 .
  Can you verify this? The 
-\begin_inset Formula $1,3$
+\begin_inset Formula $1,\!3$
 \end_inset
 
 -block is
@@ -1051,7 +1080,7 @@ Through inheritance the determinant of any
 
  sudoku block can also be calculated.
  For example, the determinant of the 
-\begin_inset Formula $2,1$
+\begin_inset Formula $2,\!1$
 \end_inset
 
 -block is 
@@ -1080,7 +1109,7 @@ Through inheritance the determinant of any
 \end_inset
 
 What is the determinant of the 
-\begin_inset Formula $1,3$
+\begin_inset Formula $1,\!3$
 \end_inset
 
 -block? Answer on page 
@@ -1109,6 +1138,16 @@ So, for the block with determinant
  there was a way to write the third row as a linear combination of the first
  two.
  This bears further investigation, requested in the exercises.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Refer back to this when we revisit determinants.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1836,7 +1875,24 @@ sage
 
 \end_inset
 
+The determinants of the 
+\begin_inset Formula $1,\!3$
+\end_inset
 
+-block and the 
+\begin_inset Formula $2,\!1$
+\end_inset
+
+-block are 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $-149$
+\end_inset
+
+ respectively.
+ Find the determinants of the remaining 7 blocks.
 \end_layout
 
 \begin_layout Enumerate-Resume
@@ -1854,7 +1910,33 @@ sage
 
 \end_inset
 
+For the 
+\begin_inset Formula $1,\!3$
+\end_inset
 
+-block, the third row can be written as a linear combination of the first
+ two (
+\begin_inset Formula $-1$
+\end_inset
+
+ times the first row plus 
+\begin_inset Formula $2$
+\end_inset
+
+ times the second row).
+ For the 
+\begin_inset Formula $2,\!1$
+\end_inset
+
+-block, the third row cannot be written as a linear combination of the first
+ two.
+ For the remaning 7 blocks, explore whether there is any row that can be
+ written as a linear combination of the other two.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Make a conjecture about the connection between determinant and the possibility
+ of writing one of the rows of a block as a linear combination of the others.
 \end_layout
 
 \begin_layout Enumerate-Resume
@@ -1872,7 +1954,8 @@ sage
 
 \end_inset
 
-
+Can any of the 9 rows of the sudoku board be written as a linear combination
+ of the other 8?
 \end_layout
 
 \begin_layout Standard
@@ -1898,7 +1981,7 @@ You may
 \begin_inset CommandInset href
 LatexCommand href
 name "follow this link"
-target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQREkh1XHFlijQhRR4_M2tXxoa1d9eS5tPobXldvp-_P19_LwUV9xxYYbnBUoa59h0dUZETzx0WvEu6dy5-Y_Bccb0sh8dyhgeDAqwXHRlJ-QGV8cIFJqeGgcftevk8oFhQISVlKpo8uSAaJOqEiTQB-UtoBKzwdsLB2NhZGUJ1vojlpFOlmBAsQpnkk-T9SOLyY_NE7e-pBGCL7I39-EAecAeBWczKekIS2LySj02wxhxqWp9QAiBYoEyKj-No1qmlzqeL3NAQTaliq9mns5yV0SYj0tlQpFJ2zIGgpWQRwWaGelQbnQz_xjhnOw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+target "https://sagecell.sagemath.org/?z=eJzFzr0OwiAUBeC9Sd-BdAH02gjYqk3cXDs5GgeoHYgUDMXq44s_sYPubicn5958g_QESwxYYZomaXL22gaSKeOaE2IgqizWNdqgTgavb0SAgD2DNaxgASUUsIwFP9DP5bYNre-0lTZUGaA6P44FoeNu58wlaGfjqHdmaInRfSByUufeXcmcTtU7Mjp7BU4pSFDjj28wB_YTLCLzgS6BP-HFn8B33Slo5w==&lang=sage&interacts=eJyLjgUAARUAuQ=="
 literal "false"
 
 \end_inset
@@ -1907,35 +1990,149 @@ literal "false"
 \end_layout
 
 \begin_layout LyX-Code
-A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
+var('a','b')
 \end_layout
 
 \begin_layout LyX-Code
-                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
+ 
 \end_layout
 
 \begin_layout LyX-Code
-U = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
+print("block 1,3:")
 \end_layout
 
 \begin_layout LyX-Code
-                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
+M = matrix(3,3,[1,9,8,4,6,5,7,3,2])
 \end_layout
 
 \begin_layout LyX-Code
-Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
+print("Determinant:", M.determinant())
 \end_layout
 
 \begin_layout LyX-Code
-                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
+print("Solution:",solve(list(a*M.row(0)+b*M.row(1)-M.row(2)),a,b))
 \end_layout
 
 \begin_layout LyX-Code
-R = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
+print()
 \end_layout
 
 \begin_layout LyX-Code
-                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
+ 
+\end_layout
+
+\begin_layout LyX-Code
+print("block 2,1:")
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(3,3,[3,7,1,9,6,2,8,4,5])
+\end_layout
+
+\begin_layout LyX-Code
+print("Determinant:", M.determinant())
+\end_layout
+
+\begin_layout LyX-Code
+print("Solution:",solve(list(a*M.row(0)+b*M.row(1)-M.row(2)),a,b))
+\end_layout
+
+\begin_layout LyX-Code
+print()
+\end_layout
+
+\begin_layout Standard
+The output of this code is
+\end_layout
+
+\begin_layout LyX-Code
+block 1,3:
+\end_layout
+
+\begin_layout LyX-Code
+Determinant: 0
+\end_layout
+
+\begin_layout LyX-Code
+Solution: [
+\end_layout
+
+\begin_layout LyX-Code
+[a == -1, b == 2]
+\end_layout
+
+\begin_layout LyX-Code
+]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+block 2,1:
+\end_layout
+
+\begin_layout LyX-Code
+Determinant:
+\end_layout
+
+\begin_layout LyX-Code
+-149
+\end_layout
+
+\begin_layout LyX-Code
+Solution: [
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+]
+\end_layout
+
+\begin_layout Standard
+It shows the determinants of the 
+\begin_inset Formula $1,\!3$
+\end_inset
+
+-block and the 
+\begin_inset Formula $2,\!1$
+\end_inset
+
+-block: 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $-149$
+\end_inset
+
+, respectively.
+ Also, for each block the output shows an attempt to find a linear combination
+ of the first two rows that equals the third.
+ Just as in the calculations of the text (see page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sudoku_calculations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) it shows a solution for the 
+\begin_inset Formula $1,\!3$
+\end_inset
+
+-block but not for the 
+\begin_inset Formula $2,\!1$
+\end_inset
+
+-block.
+ The empty square brackets indicate no solution was found.
 \end_layout
 
 \begin_layout Subsection

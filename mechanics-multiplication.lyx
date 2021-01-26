@@ -94,6 +94,12 @@
 \begin_body
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Matrix-Multiplication"
+
+\end_inset
+
 Matrix Multiplication
 \end_layout
 
@@ -224,7 +230,7 @@ noprefix "false"
 For matrices with multiple rows and columns, this row-matrix-column-matrix
  calculation is repeated for each entry of their product.
  The 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of 
@@ -804,6 +810,73 @@ on between these two objects.
 
  matrix notation (square brackets) and scalar notation (lack of delimiters)
  each represent both objects, whichever is appropriate for the situation.
+\end_layout
+
+\begin_layout Standard
+Compute the products.
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & -2\\
+3 & 7
+\end{array}\right]\left[\begin{array}{cc}
+2 & 3\\
+-1 & 0
+\end{array}\right]\qquad\left[\begin{array}{cc}
+2 & 3\\
+-1 & 0
+\end{array}\right]\left[\begin{array}{cc}
+1 & -2\\
+3 & 7
+\end{array}\right]
+\]
+
+\end_inset
+
+Besides good practice in multiplying matrices, this example shows that 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & -2\\
+3 & 7
+\end{array}\right]\left[\begin{array}{cc}
+2 & 3\\
+-1 & 0
+\end{array}\right]\neq\left[\begin{array}{cc}
+2 & 3\\
+-1 & 0
+\end{array}\right]\left[\begin{array}{cc}
+1 & -2\\
+3 & 7
+\end{array}\right],
+\]
+
+\end_inset
+
+and more importantly, therefore 
+\series bold
+\shape italic
+matrix multiplication is not commutative
+\series default
+\shape default
+.
+ Given matrices 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+, we cannot expect 
+\begin_inset Formula $MN$
+\end_inset
+
+ and 
+\begin_inset Formula $NM$
+\end_inset
+
+ to be equal even when both products are defined.
 \end_layout
 
 \begin_layout Subsection
@@ -1686,7 +1759,7 @@ Describe how to multiply two matrices, and explain how to determine whether
 \end_layout
 
 \begin_layout Enumerate
-Suppose matrices 
+Find a pair of matrices 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1694,7 +1767,31 @@ Suppose matrices
 \begin_inset Formula $N$
 \end_inset
 
- are the proper sizes so both products 
+ so that 
+\begin_inset Formula $MN$
+\end_inset
+
+ is defined, but 
+\begin_inset Formula $NM$
+\end_inset
+
+ is not, and therefore 
+\begin_inset Formula $MN\neq NM$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find a pair of matrices 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
 \begin_inset Formula $MN$
 \end_inset
 
@@ -1702,16 +1799,51 @@ Suppose matrices
 \begin_inset Formula $NM$
 \end_inset
 
- are defined.
- Is the following true or false?
-\begin_inset Formula 
-\[
-MN=NM
-\]
-
+ are both defined but are different sizes, and therefore 
+\begin_inset Formula $MN\neq NM$
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Enumerate
+Find a pair of 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
+\begin_inset Formula $MN\neq NM$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Can you find a pair of 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ such that 
+\begin_inset Formula $MN=NM$
+\end_inset
+
+?
 \end_layout
 
 \begin_layout Enumerate

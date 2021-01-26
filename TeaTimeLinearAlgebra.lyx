@@ -13,6 +13,7 @@
 theorems-ams
 eqs-within-sections
 figs-within-sections
+enumitem
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -444,6 +445,26 @@ filename "mechanics-addition.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "mechanics-multiplication.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-determinants.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-division.lyx"
 
 \end_inset
 

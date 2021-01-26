@@ -388,7 +388,7 @@ for all entries
 
 .
  The 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of 
@@ -396,7 +396,7 @@ for all entries
 \end_inset
 
  is the sum of the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entries of 
@@ -713,7 +713,7 @@ for all entries
 \end_inset
 
  times the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of 
