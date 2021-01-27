@@ -97,10 +97,11 @@ enumitem
 \begin_body
 
 \begin_layout Section
+Matrix 
 \begin_inset Quotes eld
 \end_inset
 
-Matrix Division
+Division
 \begin_inset Quotes erd
 \end_inset
 
@@ -592,6 +593,7 @@ there's no such thing as matrix division—it's just multiplying by the inverse
 
 , borrowing from the algebra of real numbers but not using division bars
  or division symbols.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -660,7 +662,20 @@ where the
 \end_layout
 
 \begin_layout Standard
-The matrix
+When 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ is defined, we say that 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\series bold
+invertible
+\series default
+.
+ The matrix
 \begin_inset Formula 
 \[
 \left[\begin{array}{cccc}
@@ -686,10 +701,568 @@ adjugate
 \end_inset
 
 .
+ With this definition, the formula for the inverse can be summarized as
+\begin_inset Formula 
+\[
+A^{-1}=\frac{1}{\det A}\text{adj}A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+One Property of the Inverse
+\end_layout
+
+\begin_layout Standard
+\noindent
+Multiplication by a matrix's inverse 
+\begin_inset Quotes eld
+\end_inset
+
+undoes
+\begin_inset Quotes erd
+\end_inset
+
+ multiplication by the matrix just as dividing by a number undoes multiplication
+ by that same number.
+ In symbols, if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are matrices and 
+\begin_inset Formula $B$
+\end_inset
+
+ is invertible (has an inverse)
+\begin_inset Formula 
+\[
+(AB)B^{-1}=A
+\]
+
+\end_inset
+
+for matrices much like 
+\begin_inset Formula $(a\cdot b)\div b=a$
+\end_inset
+
+ for real numbers.
+ If we used division in linear algebra, the equation 
+\begin_inset Formula $(AB)B^{-1}=A$
+\end_inset
+
+ might be written 
+\begin_inset Formula $(A\cdot B)\div B=A$
+\end_inset
+
+, making the comparison clearer.
+ The only potential harm in thinking with division is that 
+\begin_inset Formula $(BA)B^{-1}$
+\end_inset
+
+ is generally not 
+\begin_inset Formula $A$
+\end_inset
+
+, so 
+\begin_inset Formula $(B\cdot A)\div B\neq A$
+\end_inset
+
+ for matrices even though 
+\begin_inset Formula $(b\cdot a)\div b=a$
+\end_inset
+
+ for real numbers.
+ Since multiplication of matrices is not commutative, right-multiplication
+ by 
+\begin_inset Formula $B^{-1}$
+\end_inset
+
+ does not undo left-multiplication by 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Using the notation 
+\begin_inset Formula $B^{-1}$
+\end_inset
+
+ and paying close attention to right-multiplication versus left-multiplication
+ will help keep this straight.
+\end_layout
+
+\begin_layout Standard
+To illustrate, let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & 2\\
+3 & 4
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+3 & -4\\
+-5 & 7
+\end{array}\right]$
+\end_inset
+
+, making
+\begin_inset Formula 
+\[
+AB=\left[\begin{array}{cc}
+-7 & 10\\
+-11 & 16
+\end{array}\right].
+\]
+
+\end_inset
+
+Can you verify this? As seen earlier, 
+\begin_inset Formula $B^{-1}=\left[\begin{array}{cc}
+7 & 4\\
+5 & 3
+\end{array}\right]$
+\end_inset
+
+.
+ Compute 
+\begin_inset Formula $(AB)B^{-1}$
+\end_inset
+
+ to see that it equals 
+\begin_inset Formula $A$
+\end_inset
+
+, and compute 
+\begin_inset Formula $B^{-1}(AB)$
+\end_inset
+
+ to see that it does not equal 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inverseundoes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Inverses
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+Cryptography
+\end_layout
+
+\begin_layout Standard
+\align center
+-97 -40 17 -207 -185 -68 -416 -303 -97 -312 -178 -28 -143
+\begin_inset Newline newline
+\end_inset
+
+-68 10 -190 -93 2 -305 -149 -7 102 134 83 -257 -194 -65
+\end_layout
+
+\begin_layout Standard
+\noindent
+The ability to undo multiplication by an invertible matrix makes it possible
+ to use matrices and their inverses for encrypting and decrypting messages.
+ 
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ASCII"
+
+\end_inset
+
+ASCII (American Standard Code for Information Interchange) characters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/ASCII.pdf
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ Given a messge, a system for converting letters to numbers turns the message
+ into a list of numbers.
+ These numbers are grouped into column vectors and multiplied by an encoding
+ matrix, producing a new set of numbers, the encoded message.
+ The list of numbers opening this subsection was created this way! Decoding
+ the message then amounts to grouping the code into column vectors and multiplyi
+ng by the decoding matrix.
+ As long as the parties on either end of the message transmission each have
+ one of a given pair of inverse matrices, they can each encode and decode
+ with their matrix, send their message securely, and decode received messages.
+ The greatest weakness of this scheme is security of the coding/decoding
+ matrix pair.
+ If either matrix gets out, messages are no longer secure.
+ Without knowledge of the coding or decoding matrix, the message above would
+ be very difficult to decode!
+\end_layout
+
+\begin_layout Standard
+While a basic conversion from letters to numbers would have each letter
+ of the alphabet assigned a number from 1-26 or 0-25, this leaves punctuation,
+ symbols like spaces and hashtags, capitalization, and numbers out.
+ Since the early 1960's the American National Standards Institute has maintained
+ a coding system for the electronic transmission of documents in English
+ called ASCII (pronounced ass-kee) or US-ASCII.
+ Part of that system, largely developed by Bob Bemer 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BBC-ASCII"
+literal "false"
+
+\end_inset
+
+, is a numeric representation of all the symbols you are likely to find
+ on an English language keyboard.
+ See Table 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "tab:ASCII"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For example, the capital letter 
+\begin_inset Quotes eld
+\end_inset
+
+A
+\begin_inset Quotes erd
+\end_inset
+
+ has numeric code 65, the lower case letter 
+\begin_inset Quotes eld
+\end_inset
+
+a
+\begin_inset Quotes erd
+\end_inset
+
+ has numeric code 97, and the space has numeric code 32.
+\end_layout
+
+\begin_layout Standard
+Using the coding matrix 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-7 & 3 & 2\\
+-4 & 1 & 2\\
+-1 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+, the message 
+\begin_inset Quotes eld
+\end_inset
+
+Hello World!
+\begin_inset Quotes erd
+\end_inset
+
+ would be encrypted as follows.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Hello World!
+\begin_inset Quotes erd
+\end_inset
+
+ is converted to the numeric sequence 72 101 108 108 111 32 87 111 114 108
+ 100 33 using ASCII.
+\end_layout
+
+\begin_layout Enumerate
+Since we are using a 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ coding matrix, the numeric sequence is grouped three at a time into the
+ 3-row matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+72 & 108 & 87 & 108\\
+101 & 111 & 111 & 100\\
+108 & 32 & 114 & 33
+\end{array}\right]
+\]
+
+\end_inset
+
+If the message did not have a multiple of three characters, 0's (null characters
+) could be added to the end.
+\end_layout
+
+\begin_layout Enumerate
+The message matrix is multiplied by the coding matrix.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-7 & 3 & 2\\
+-4 & 1 & 2\\
+-1 & 0 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+72 & 108 & 87 & 108\\
+101 & 111 & 111 & 100\\
+108 & 32 & 114 & 33
+\end{array}\right]=\left[\begin{array}{cccc}
+57 & -395 & -295 & -357\\
+51 & -156 & -145 & -255\\
+42 & 7 & -8 & -75
+\end{array}\right]
+\]
+
+\end_inset
+
+This is a good place to use a calculator or SageMath!
+\end_layout
+
+\begin_layout Enumerate
+The coded message is extracted from the product:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+57 51 42 -395 -156 7 -295 -145 -8 -357 -255 -75
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The message at the beginning of this section was encoded with the same matrix.
+ Can you decode it (using a calculator or SageMath to assist)? Answer on
+ page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:decoding"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Lester S.
+ Hill}
+\end_layout
+
+\end_inset
+
+ The first documented multiple-letter cipher is attributed to Lester S.
+ Hill.
+ His 
+\shape italic
+Mathematical Monthly
+\shape default
+ article of 1929 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hill"
+literal "false"
+
+\end_inset
+
+ outlines a procedure very similar to the one presented here except modular
+ arithmetic is used to make sure all numbers in the encoded message are
+ valid character codes.
+ Thus the encoded message is transmitted as a sequence of letters and symbols,
+ not numbers.
+ His work far predates electronic computing devices so, to be practical,
+ he needed a way to limit the difficulty of doing the computations, a second
+ impetus for using modular arithmetic.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+If 
+\family typewriter
+M
+\family default
+ is a matrix in SageMath, then 
+\family typewriter
+M.inverse()
+\family default
+ is its inverse.
+ The following code computes the inverses of 
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+4 & -9 & -3 & -4\\
+-1 & 1 & 0 & 1\\
+-1 & 3 & 1 & 2\\
+3 & -9 & -3 & -5
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+\sqrt{5} & -\pi & 18\\
+\frac{17}{8} & 34 & \sqrt[5]{19}\\
+\frac{\pi}{4} & 0.34 & e^{7}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout LyX-Code
+A = matrix(4,4,[4,-9,-3,-4,-1,1,0,1,-1,3,1,2,3,-9,-3,-5])
+\end_layout
+
+\begin_layout LyX-Code
+print(A.inverse()); print()
+\end_layout
+
+\begin_layout LyX-Code
+B=matrix(3,3,[sqrt(5),-pi,18,17/8,34,19^(1/5),pi/4,0.34,e^7])
+\end_layout
+
+\begin_layout LyX-Code
+print(B.inverse())
+\end_layout
+
+\begin_layout Standard
+The output of 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout LyX-Code
+[ 1  0 -3 -2]
+\end_layout
+
+\begin_layout LyX-Code
+[ 1  1 -6 -3]
+\end_layout
+
+\begin_layout LyX-Code
+[-2 -3 10  5]
+\end_layout
+
+\begin_layout LyX-Code
+[ 0  0  3  1]
+\end_layout
+
+\begin_layout Standard
+but the output of 
+\begin_inset Formula $B^{-1}$
+\end_inset
+
+ is far too long to fit on the page.
+ Just the 
+\begin_inset Formula $1,\!1$
+\end_inset
+
+-entry is 
+\begin_inset Formula $1/5(\sqrt{5}\pi-\sqrt{5}(\sqrt{5}\pi^{2}+6.8)/(\sqrt{5}\pi+80))(\sqrt{5}\pi(153\sqrt{5}-20\cdot19^{1/5}))/(\sqrt{5}\pi+80)-153\sqrt{5})/(153\sqrt{5}\pi-(\sqrt{5}\pi^{2}+6.8)(153\sqrt{5}-20\cdot19^{1/5})/(\sqrt{5}\pi+80)-170e^{7})+1/5\sqrt{5}-\pi/(\sqrt{5}\pi+80)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
 Key Concepts
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ The inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+adjugate For a square matrix, the transpose of its matrix of cofactors.
 \end_layout
 
 \begin_layout Description
@@ -701,7 +1274,7 @@ matrix A matrix with ones on the main diagonal and zeros elsewhere.
 \end_layout
 
 \begin_layout Description
-(matrix)
+matrix
 \begin_inset space ~
 \end_inset
 
@@ -718,15 +1291,14 @@ inverse Matrices
 \end_inset
 
 .
- The inverse of 
-\begin_inset Formula $A$
+\end_layout
+
+\begin_layout Description
+invertible
+\begin_inset space ~
 \end_inset
 
- is denoted by 
-\begin_inset Formula $A^{-1}$
-\end_inset
-
-.
+matrix A matrix whose inverse is defined.
 \end_layout
 
 \begin_layout Description
@@ -739,22 +1311,6 @@ diagonal The
 \end_inset
 
 -entries of a matrix.
-\end_layout
-
-\begin_layout Description
-opposite The additive inverse of a real number.
-\end_layout
-
-\begin_layout Description
-reciprocal The multiplicative inverse of a real number.
-\end_layout
-
-\begin_layout Description
-0 The additive identity for real numbers.
-\end_layout
-
-\begin_layout Description
-1 The multiplicative identity for real numbers.
 \end_layout
 
 \begin_layout Standard
@@ -1081,6 +1637,339 @@ Find
 .
 \end_layout
 
+\begin_layout Enumerate
+Which matrix is the inverse of 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+0 & 0 & 4 & 0 & -1\\
+-2 & 4 & 4 & -1 & 1\\
+-4 & 7 & 10 & -2 & 2\\
+-1 & 2 & 0 & 0 & 1\\
+0 & 0 & 1 & 0 & 0
+\end{array}\right]?
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+-1 & 4 & -2 & -1 & 8\\
+0 & 2 & -1 & 0 & 2\\
+0 & 0 & 0 & 0 & 1\\
+1 & -1 & 0 & 2 & 0\\
+-1 & 0 & 0 & 0 & 4
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+-1 & 4 & -2 & -1\\
+0 & 2 & -1 & 0\\
+0 & 0 & 2 & 0\\
+1 & -1 & 0 & 2\\
+-1 & 0 & 0 & 4
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+4 & -1 & -2 & -1 & 8\\
+2 & 0 & -1 & 0 & 2\\
+0 & 0 & 0 & 0 & 1\\
+1 & -1 & 0 & 2 & 0\\
+-1 & 0 & 4 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+0 & -2 & -4 & -1 & 0\\
+0 & 4 & 7 & 2 & 0\\
+4 & 4 & 10 & 0 & 1\\
+0 & -1 & -2 & 0 & 0\\
+-1 & 1 & 2 & 1 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ so that 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are inverses.
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+1 & 1 & -5\\
+-3 & 1 & 4\\
+2 & -3 & 4
+\end{array}\right]\quad B=\left[\begin{array}{ccc}
+16 & 11 & 9\\
+20 & 14 & y\\
+x & 5 & 4
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the remaining exercises, let 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+7 & -5 & -2\\
+-3 & 3 & 1\\
+-3 & 2 & 1
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+1 & 2 & 2\\
+2 & 8 & 7\\
+-3 & -5 & -5
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A^{-1}(AB)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(AB)A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B^{-1}(BA)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(BA)B^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Did you get what you expected?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Compute
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(AB)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A^{-1}B^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B^{-1}A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What do you notice?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Calculate
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\det A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det(AB)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det(3A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det(3B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What do you notice?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Decode the message -423 606 256 -353 463 232 -127 47 122 -478 774 255 -446
+ 635 273.
+ It was encoded using 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & -4 & -2\\
+-3 & 7 & 3\\
+0 & 2 & 1
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -1095,219 +1984,6 @@ finishexercises
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\noindent
-For the remaining exercises, let
-\begin_inset Formula 
-\[
-\begin{gathered}A=\left[\begin{array}{cccccc}
-42 & 0 & -47 & -34 & -10 & -48\\
-8 & 26 & 43 & -18 & -20 & -30\\
--41 & -40 & -29 & -36 & -44 & 12\\
--42 & 47 & 28 & 4 & 38 & -22\\
-18 & -15 & -1 & 29 & 37 & 9
-\end{array}\right]\ U=\left[\begin{array}{cccccc}
--21 & -33 & 28 & -15 & 34 & 45\\
-27 & 40 & -13 & -23 & -10 & 15\\
-43 & -6 & 46 & 17 & 13 & 21\\
--40 & -46 & 2 & 16 & 22 & -14\\
-10 & -12 & 29 & 35 & 48 & -31
-\end{array}\right]\\
-Q=\left[\begin{array}{cccccc}
--17 & -37 & -34 & 20 & -14 & 10\\
--23 & 44 & 47 & 18 & 19 & 49\\
-11 & 33 & 35 & -50 & 2 & 9\\
--36 & -18 & 7 & 17 & -49 & 31\\
--8 & 16 & 28 & -32 & -2 & 5
-\end{array}\right]\ R=\left[\begin{array}{cccccc}
-40 & 47 & 13 & -2 & -22 & 3\\
--45 & 4 & -16 & 6 & -18 & 8\\
-18 & -26 & -27 & -19 & -48 & -35\\
-33 & 35 & 9 & 25 & 2 & 7\\
--8 & 10 & -12 & -34 & 11 & 38
-\end{array}\right]
-\end{gathered}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{enumerate} 
-\backslash
-setcounter{enumi}{
-\backslash
-value{enumigrab}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\backslash
-sage
-\backslash
- 
-\end_layout
-
-\end_inset
-
-Compute 
-\begin_inset Formula $(A^{T})(U)$
-\end_inset
-
- and 
-\begin_inset Formula $(U)(A^{T})$
-\end_inset
-
-.
- Are they the same?
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\backslash
-sage
-\backslash
- 
-\end_layout
-
-\end_inset
-
-Compute 
-\begin_inset Formula $\left(3Q^{T}-2R^{T}\right)^{T}$
-\end_inset
-
- and 
-\begin_inset Formula $3Q-2R$
-\end_inset
-
-.
- What do you notice? Why?
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\backslash
-sage
-\backslash
- 
-\end_layout
-
-\end_inset
-
-Can you determine which of the following computations are defined? Ask SageMath
- to compute them all.
- The ones that are undefined will produce long error messages.
-\begin_inset Formula 
-\[
-\begin{gathered}(QR)^{T}\qquad AU^{T}R\qquad QUAR^{T}\qquad A^{T}QU^{T}A\\
-A+R^{T}\qquad AR^{T}\qquad(R-A)^{T}
-\end{gathered}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{enumerate}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-You may 
-\begin_inset CommandInset href
-LatexCommand href
-name "follow this link"
-target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQREkh1XHFlijQhRR4_M2tXxoa1d9eS5tPobXldvp-_P19_LwUV9xxYYbnBUoa59h0dUZETzx0WvEu6dy5-Y_Bccb0sh8dyhgeDAqwXHRlJ-QGV8cIFJqeGgcftevk8oFhQISVlKpo8uSAaJOqEiTQB-UtoBKzwdsLB2NhZGUJ1vojlpFOlmBAsQpnkk-T9SOLyY_NE7e-pBGCL7I39-EAecAeBWczKekIS2LySj02wxhxqWp9QAiBYoEyKj-No1qmlzqeL3NAQTaliq9mns5yV0SYj0tlQpFJ2zIGgpWQRwWaGelQbnQz_xjhnOw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "false"
-
-\end_inset
-
- or copy and paste the following code into a SageCell to get started.
-\end_layout
-
-\begin_layout LyX-Code
-A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
-\end_layout
-
-\begin_layout LyX-Code
-                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
-\end_layout
-
-\begin_layout LyX-Code
-U = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
-\end_layout
-
-\begin_layout LyX-Code
-                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
-\end_layout
-
-\begin_layout LyX-Code
-Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
-\end_layout
-
-\begin_layout LyX-Code
-                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
-\end_layout
-
-\begin_layout LyX-Code
-R = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
-\end_layout
-
-\begin_layout LyX-Code
-                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
 \end_layout
 
 \begin_layout Subsection
@@ -1471,6 +2147,195 @@ name "ans:matrixproductspart2"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+inverse
+\begin_inset space ~
+\end_inset
+
+undoes
+\begin_inset space ~
+\end_inset
+
+multiplication: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverseundoes"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(i)
+\begin_inset Formula 
+\[
+\begin{gathered}(AB)B^{-1}=\left[\begin{array}{cc}
+-7 & 10\\
+-11 & 16
+\end{array}\right]\left[\begin{array}{cc}
+7 & 4\\
+5 & 3
+\end{array}\right]=\left[\begin{array}{cc}
+1 & 2\\
+3 & 4
+\end{array}\right]=A\\
+((AB)B^{-1})_{1,1}=(-7)(7)+(10)(5)=-49+50=1\\
+((AB)B^{-1})_{1,2}=(-7)(4)+(10)(3)=-28+30=2\\
+((AB)B^{-1})_{2,1}=(-11)(7)+(16)(5)=-77+80=3\\
+((AB)B^{-1})_{2,2}=(-11)(4)+(16)(3)=-44+48=4
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii)
+\begin_inset Formula 
+\[
+\begin{gathered}B^{-1}(AB)=\left[\begin{array}{cc}
+7 & 4\\
+5 & 3
+\end{array}\right]\left[\begin{array}{cc}
+-7 & 10\\
+-11 & 16
+\end{array}\right]=\left[\begin{array}{cc}
+-93 & 134\\
+-68 & 98
+\end{array}\right]\neq A\\
+(B^{-1}(AB))_{1,1}=(7)(-7)+(4)(-11)=-49-44=-93\\
+(B^{-1}(AB))_{1,2}=(7)(10)+(4)(16)=70+64=134\\
+(B^{-1}(AB))_{2,1}=(5)(-7)+(3)(-11)=-35-33=-68\\
+(B^{-1}(AB))_{2,2}=(5)(10)+(3)(16)=50+48=98
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+decoding: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:decoding"
+
+\end_inset
+
+The coding matrix 
+\begin_inset Formula $C=\left[\begin{array}{ccc}
+-7 & 3 & 2\\
+-4 & 1 & 2\\
+-1 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+ has determinant one:
+\begin_inset Formula 
+\begin{align*}
+\det C & =-7\left|\begin{array}{cc}
+1 & 2\\
+0 & 1
+\end{array}\right|-3\left|\begin{array}{cc}
+-4 & 2\\
+-1 & 1
+\end{array}\right|+2\left|\begin{array}{cc}
+-4 & 1\\
+-1 & 0
+\end{array}\right|\\
+ & =-7(1)-3(-4+2)+2(0+1)\\
+ & =-7+6+2\\
+ & =1
+\end{align*}
+
+\end_inset
+
+The following are cofactors, not entries:
+\begin_inset Formula 
+\[
+\begin{gathered}C_{1,1}=\left|\begin{array}{cc}
+1 & 2\\
+0 & 1
+\end{array}\right|=1\qquad C_{1,2}=-1\left|\begin{array}{cc}
+-4 & 2\\
+-1 & 1
+\end{array}\right|=2\qquad C_{1,3}=\left|\begin{array}{cc}
+-4 & 1\\
+-1 & 0
+\end{array}\right|=1\\
+C_{2,1}=-1\left|\begin{array}{cc}
+3 & 2\\
+0 & 1
+\end{array}\right|=-3\qquad C_{2,2}=\left|\begin{array}{cc}
+-7 & 2\\
+-1 & 1
+\end{array}\right|=-5\qquad C_{2,3}=-1\left|\begin{array}{cc}
+-7 & 3\\
+-1 & 0
+\end{array}\right|=-3\\
+C_{3,1}=\left|\begin{array}{cc}
+3 & 2\\
+1 & 2
+\end{array}\right|=4\qquad C_{3,2}=-1\left|\begin{array}{cc}
+-7 & 2\\
+-4 & 2
+\end{array}\right|=6\qquad C_{3,3}=\left|\begin{array}{cc}
+-7 & 3\\
+-4 & 1
+\end{array}\right|=5
+\end{gathered}
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\[
+C^{-1}=\frac{1}{1}\text{adj}C=\left[\begin{array}{ccc}
+1 & -3 & 4\\
+2 & -5 & 6\\
+1 & -3 & 5
+\end{array}\right].
+\]
+
+\end_inset
+
+Decoding is therefore done by multiplying
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{ccc}
+1 & -3 & 4\\
+2 & -5 & 6\\
+1 & -3 & 5
+\end{array}\right] & \left[\begin{array}{ccccccccc}
+-97 & -207 & -416 & -312 & -143 & -190 & -305 & 102 & -257\\
+-40 & -185 & -303 & -178 & -68 & -93 & -149 & 134 & -194\\
+17 & -68 & -97 & -28 & 10 & 2 & -7 & 83 & -65
+\end{array}\right]\\
+= & \left[\begin{array}{ccccccccc}
+91 & 110 & 114 & 108 & 98 & 93 & 108 & 82 & 107\\
+76 & 101 & 32 & 103 & 114 & 32 & 8 & 111 & 115\\
+105 & 97 & 65 & 101 & 97 & 66 & 8 & 99 & 0
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+and the numeric message is 91 76 105 110 101 97 114 32 65 108 103 101 98
+ 114 97 93 32 66 108 8 8 82 111 99 107 115 0.
+ The last step is to look these numbers up in the ASCII table.
 \end_layout
 
 \end_body

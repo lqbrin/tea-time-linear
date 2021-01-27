@@ -462,6 +462,16 @@ filename "mechanics-determinants.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-division.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -494,6 +504,18 @@ LatexCommand printindex
 type "idx"
 name "Index"
 literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "TeaTimeLinearAlgebra"
+options "bibtotoc,amsplain"
 
 \end_inset
 

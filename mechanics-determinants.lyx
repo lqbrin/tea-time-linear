@@ -1330,7 +1330,7 @@ startexercises
 Exercises
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calculate the cofactor.
 \end_layout
 
@@ -1452,7 +1452,7 @@ Calculate the cofactor.
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calculate the determinant if possible.
 \end_layout
 
@@ -1605,7 +1605,7 @@ Calculate the determinant if possible.
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Formula (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1684,7 +1684,7 @@ noprefix "false"
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 True or false?
 \end_layout
 
@@ -1752,7 +1752,7 @@ If
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Compare and contrast (i) scalar, (ii) 
 \begin_inset Formula $1\times1$
 \end_inset
@@ -1764,7 +1764,7 @@ Compare and contrast (i) scalar, (ii)
  matrix.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "enu:upper_triangular"
@@ -1829,7 +1829,7 @@ HINT
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 In your own words, draw a conjecture based on the calculations of question
  
 \begin_inset CommandInset ref
