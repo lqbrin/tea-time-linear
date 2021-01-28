@@ -94,7 +94,7 @@ Eigenpairs
 \end_layout
 
 \begin_layout Standard
-Suppose 
+Let 
 \begin_inset Formula $A=\left[\begin{array}{cc}
 -2 & 4\\
 1 & 1
@@ -224,7 +224,750 @@ A\left[\begin{array}{c}
 
 \end_inset
 
+Letting 
+\begin_inset Formula $\mathbf{v}_{1}=\left[\begin{array}{c}
+4\\
+-1
+\end{array}\right]$
+\end_inset
 
+ and 
+\begin_inset Formula $\mathbf{v}_{2}=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+, these products can be rewritten as
+\begin_inset Formula 
+\[
+\begin{gathered}A\mathbf{v}_{1}=-3\mathbf{v}_{1}\qquad A\left(-\frac{2}{3}\mathbf{v}_{1}\right)=-3\left(-\frac{2}{3}\mathbf{v}_{1}\right)\\
+A\mathbf{v}_{2}=2\mathbf{v}_{2}\qquad A\left(-\frac{1}{2}\mathbf{v}_{2}\right)=2\left(-\frac{1}{2}\mathbf{v}_{2}\right)
+\end{gathered}
+\]
+
+\end_inset
+
+making the relationship between the matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ and the vectors more apparent.
+ The product of 
+\begin_inset Formula $A$
+\end_inset
+
+ with each of these vectors gives a scalar multiple of the vector.
+ That's unusual.
+ Previous experience would suggest this does not always happen.
+\end_layout
+
+\begin_layout Standard
+There is nothing magical about the matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, however.
+ For example, 
+\begin_inset Formula 
+\[
+A\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]=\left[\begin{array}{cc}
+-2 & 4\\
+1 & 1
+\end{array}\right]\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]=\left[\begin{array}{c}
+10\\
+1
+\end{array}\right]
+\]
+
+\end_inset
+
+ but 
+\begin_inset Formula $\left[\begin{array}{c}
+10\\
+1
+\end{array}\right]$
+\end_inset
+
+ is no scalar multiple of 
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]$
+\end_inset
+
+.
+ There is no number 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]=\lambda\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]$
+\end_inset
+
+.
+ There is also nothing magical about the vectors 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+.
+ For example, letting 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+3 & 0\\
+-1 & -2
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $B\mathbf{v}_{1}=\left[\begin{array}{cc}
+3 & 0\\
+-1 & -2
+\end{array}\right]\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]=\left[\begin{array}{c}
+-3\\
+-3
+\end{array}\right]$
+\end_inset
+
+ but 
+\begin_inset Formula $\left[\begin{array}{c}
+-3\\
+-3
+\end{array}\right]\neq\lambda\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]$
+\end_inset
+
+ for any value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ Similarly 
+\begin_inset Formula $B\mathbf{v}_{2}\neq\lambda\mathbf{v}_{2}$
+\end_inset
+
+ for any 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $A$
+\end_inset
+
+ is not special on its own, nor are 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+ special on their own.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ are only special together just as 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+ are only special together.
+ To indicate the special relationship between 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ (
+\begin_inset Formula $A\mathbf{v}_{1}=\lambda\mathbf{v}_{1}$
+\end_inset
+
+ for some 
+\begin_inset Formula $\lambda$
+\end_inset
+
+), we call 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ an 
+\series bold
+eigenvector
+\series default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+ is an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ But that doesn't tell the whole story.
+ 
+\begin_inset Formula $A\mathbf{v}_{1}=\lambda\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $A\mathbf{v}_{2}=\lambda\mathbf{v}_{2}$
+\end_inset
+
+ for different values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ The value 
+\begin_inset Formula $-3$
+\end_inset
+
+ is associated with the eigenvector 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ and the value 
+\begin_inset Formula $2$
+\end_inset
+
+ is associated with the eigenvector 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+.
+ To mark this relationship, we call 
+\begin_inset Formula $-3$
+\end_inset
+
+ an 
+\series bold
+eigenvalue
+\series default
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ associated with eigenvector 
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]$
+\end_inset
+
+ and we call 
+\begin_inset Formula $2$
+\end_inset
+
+ an eigenvalue of 
+\begin_inset Formula $A$
+\end_inset
+
+ associated with the eigenvector 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+.
+ Any eigenvalue together with an associated eigenvector is called an 
+\series bold
+eigenpair
+\series default
+.
+ For each eigenvector there is an eigenvalue, and for each eigenvalue there
+ is an eigenvector (at least, that would be nice!).
+\end_layout
+
+\begin_layout Standard
+It is true, for any matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ and any scalar 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, that 
+\begin_inset Formula $A\mathbf{0}=\lambda\mathbf{0}$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is any vector with a zero for each entry, a so-called 
+\series bold
+zero vector
+\series default
+.
+ Given the truth of this statement for all matrices, it does not tell us
+ anything useful about any given matrix.
+ Moreover, if we allow 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ to be an eigenvector, the eigenvalue associated with 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ would be ill-defined.
+ It could be any number! Therefore we disallow 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ from the definition of eigenvector.
+ With this restriction, every eigenvector has a unique associated eigenvalue.
+\end_layout
+
+\begin_layout Standard
+Given an eigenvector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, it is easy to calculate the associated eigenvalue.
+ Given an eigenvalue of a matrix, finding an associated eigenvector takes
+ some work.
+ Suppose 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an eigenvalue of the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ By definition, the associated eigenvector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $M\mathbf{v}=\lambda\mathbf{v}$
+\end_inset
+
+.
+ Equivalently,
+\begin_inset Formula 
+\begin{equation}
+(M-\lambda I)\mathbf{v}=\mathbf{0}.\label{eq:eigenvector}
+\end{equation}
+
+\end_inset
+
+We will see why these equations are equivalent later on.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Show this equivalence in the matrix algebra section.
+\end_layout
+
+\end_inset
+
+ The equivalent form gives us a way to find eigenvectors.
+ Each side of the equation expresses a vector, and for two vectors to be
+ equal, their corresponding entries must be equal.
+ For a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with 
+\begin_inset Formula $n$
+\end_inset
+
+ entries, this observation yields 
+\begin_inset Formula $n$
+\end_inset
+
+ linear equations in the 
+\begin_inset Formula $n$
+\end_inset
+
+ unknown entries of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ Recalling how to solve linear systems of equations gives a solution for
+ 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ To illustrate, we find an eigenvector of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-31 & 14 & 10\\
+-76 & 35 & 26\\
+18 & -9 & -8
+\end{array}\right]$
+\end_inset
+
+ associated with the eigenvalue 
+\begin_inset Formula $-2$
+\end_inset
+
+.
+ Starting with (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we have
+\begin_inset Formula 
+\[
+\left(\left[\begin{array}{ccc}
+-31 & 14 & 10\\
+-76 & 35 & 26\\
+18 & -9 & -8
+\end{array}\right]-\left[\begin{array}{ccc}
+-2 & 0 & 0\\
+0 & -2 & 0\\
+0 & 0 & -2
+\end{array}\right]\right)\mathbf{v}=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-29 & 14 & 10\\
+-76 & 37 & 26\\
+18 & -9 & -6
+\end{array}\right]\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right].
+\]
+
+\end_inset
+
+Multiplying yields
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+-29v_{1}+14v_{2}+10v_{3}\\
+-76v_{1}+37v_{2}+26v_{3}\\
+18v_{1}-9v_{2}-6v_{3}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+so we must have
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+-29v_{1} & + & 14v_{2} & + & 10v_{3} & = & 0\\
+-76v_{1} & + & 37v_{2} & + & 26v_{3} & = & 0\\
+18v_{1} & - & 9v_{2} & - & 6v_{3} & = & 0
+\end{array}
+\]
+
+\end_inset
+
+Can you solve this system of equations? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:systemsolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ One solution is 
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=\left[\begin{array}{c}
+2\\
+2\\
+3
+\end{array}\right],
+\]
+
+\end_inset
+
+and we can verify that this is correct simply by multiplying:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-31 & 14 & 10\\
+-76 & 35 & 26\\
+18 & -9 & -8
+\end{array}\right]\left[\begin{array}{c}
+2\\
+2\\
+3
+\end{array}\right]=\left[\begin{array}{c}
+-4\\
+-4\\
+-6
+\end{array}\right]=-2\left[\begin{array}{c}
+2\\
+2\\
+3
+\end{array}\right].
+\]
+
+\end_inset
+
+Solving for an eigenvector will always yield an infinite number of solutions.
+ If 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+ associated with value 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, so is 
+\begin_inset Formula $c\mathbf{v}$
+\end_inset
+
+.
+ We will prove this fact later.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Prove this in the matrix algebra section.
+\end_layout
+
+\end_inset
+
+ There is no unique eigenvector associated with a given eigenvalue.
+ In fact, there will always be infinitely many eigenvectors associated with
+ each eigenvalue.
+\end_layout
+
+\begin_layout Standard
+Now we can find an eigenvector of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ given an eigenvalue, and we can find an eigenvalue of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ given an eigenvector, but what if we have neither an eigenvalue nor eigenvector
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+? Returning to (
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "eq:eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we know 
+\begin_inset Formula $(M-\lambda I)\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ Perhaps this reminds you of solving quadratic equations by factoring.
+ In algebra, if you know that 
+\begin_inset Formula $(x-2)(x+5)=0,$
+\end_inset
+
+then you know that either 
+\begin_inset Formula $x-2=0$
+\end_inset
+
+ or 
+\begin_inset Formula $x+5=0$
+\end_inset
+
+ giving two solutions, 
+\begin_inset Formula $x=2$
+\end_inset
+
+ and 
+\begin_inset Formula $x=-5$
+\end_inset
+
+.
+ Something similar can be said of the equation 
+\begin_inset Formula $(M-\lambda I)\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ Certainly if 
+\begin_inset Formula $\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, the equation is true.
+ But we have decided that 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is excluded from being an eigenvector, so we seek solutions where 
+\begin_inset Formula $\mathbf{v}\neq\mathbf{0}$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $\det(M-\lambda I)\neq0$
+\end_inset
+
+, meaning 
+\begin_inset Formula $(M-\lambda I)$
+\end_inset
+
+ is invertible.
+ Then left-multiplying both sides of (
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "eq:eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) yields
+\begin_inset Formula 
+\begin{align*}
+(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right) & =(M-\lambda I)^{-1}\mathbf{0}\\
+ & =\mathbf{0}
+\end{align*}
+
+\end_inset
+
+On the other hand, we know that multiplication by a matrix's inverse undoes
+ multiplication by that matrix, so 
+\begin_inset Formula $(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right)=\mathbf{v}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right)=\mathbf{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right)=\mathbf{v}$
+\end_inset
+
+, we conclude 
+\begin_inset Formula $\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, which is disallowed as an eigenvector.
+ No solutions come from letting 
+\begin_inset Formula $\det(M-\lambda I)\neq0$
+\end_inset
+
+, so it must be that 
+\begin_inset Formula $\det(M-\lambda I)=0$
+\end_inset
+
+.
+ Since the determinant of a matrix is a scalar, this equation is a scalar
+ equation (like those you have seen in algebra) in the single variable 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ Solving that equation for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ gives eigenvalues and knowing eigenvalues gives eigenvectors.
+ Given that the equation 
+\begin_inset Formula 
+\begin{equation}
+\det(M-\lambda I)=0\label{eq:eigenvalues}
+\end{equation}
+
+\end_inset
+
+is the linchpin in finding eigenvalues and eigenvectors of a matrix, it
+ has a name—the 
+\series bold
+characteristic equation
+\series default
+ (of 
+\begin_inset Formula $M$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -232,7 +975,84 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-matrix A 
+characteristic
+\begin_inset space ~
+\end_inset
+
+equation 
+\begin_inset Formula $\det(M-\lambda I)=0$
+\end_inset
+
+ for any matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+eigenpair An eigenvalue together with an associated eigenvector.
+ 
+\begin_inset Formula $(\lambda,\mathbf{v})$
+\end_inset
+
+ is an eigenpair for matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ if 
+\begin_inset Formula $M\mathbf{v}=\lambda\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+eigenvalue A value 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an eigenvalue of the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ if there is a nonzero vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{v}=\lambda\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+eigenvector A nonzero vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an eigenvector of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ if there is a value 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{v}=\lambda\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+zero
+\begin_inset space ~
+\end_inset
+
+vector Any vector with a zero for each entry.
 \end_layout
 
 \begin_layout Subsection
@@ -265,7 +1085,566 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-H
+Use the fact that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+ to find an eigenvalue of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+8 & 6\\
+-9 & -7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-5 & -4\\
+2 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+-4 & 1 & 1\\
+2 & 0 & -2\\
+-4 & -1 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+1\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+24 & -8 & 10\\
+0 & 6 & 0\\
+-45 & 18 & -21
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+0\\
+-3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+-28 & 0 & 48 & -48\\
+80 & 6 & -186 & 182\\
+-4 & -1 & -3 & 9\\
+4 & -1 & -15 & 21
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+3\\
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+-24 & -8 & 11 & 27\\
+216 & 52 & -130 & -258\\
+-52 & -8 & 29 & 57\\
+52 & 8 & -33 & -61
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-1\\
+2\\
+1\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find the characteristic equation.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & -10\\
+-11 & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-2 & -4\\
+7 & 12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-12 & 12\\
+9 & -9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-8 & -3\\
+3 & -2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 2\\
+4 & 5 & 1\\
+-6 & -6 & -4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-12 & 9 & 6\\
+-15 & 12 & 6\\
+-5 & 3 & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+9 & -15 & 4\\
+39 & -33 & 28\\
+33 & -15 & 28
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find the eigenvalues.
+ They may be complex.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & -5\\
+2 & -4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+8 & -10\\
+5 & -7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-9 & 4\\
+-36 & 15
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-7 & 25\\
+-1 & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+2 & -1\\
+-4 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+9 & 6\\
+-15 & -10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & -2\\
+6 & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-2 & 2\\
+-1 & -2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-1 & 10 & 6\\
+2 & 3 & 2\\
+-2 & -2 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+2 & -3 & -2\\
+12 & -17 & -12\\
+-15 & 21 & 15
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-3 & 0 & 0\\
+4 & 13 & -12\\
+4 & 16 & -15
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+-4 & 3 & 3 & 0\\
+-16 & 1 & -13 & -24\\
+-4 & 2 & 4 & 0\\
+6 & -3 & -3 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find an eigenvector associated with the given eigenvalue.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+3 & -10\\
+8 & -15
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-6 & 20\\
+-1 & 3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-4 & 2\\
+-16 & 8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & 6\\
+3 & -5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-2+3\sqrt{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+2 & 4\\
+-3 & -4
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-1-i\sqrt{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+-5 & 6 & -12\\
+7 & -8 & 16\\
+5 & -6 & 12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+9 & 1 & -5\\
+33 & 17 & -25\\
+36 & 12 & -24
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+-18 & 6 & 6\\
+-19 & 5 & 9\\
+-11 & 5 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describe a connection between eigenvalues and determinants.
+\end_layout
+
+\begin_layout Enumerate
+True or false?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The only eigenvector corresponding to a zero eigenvalue is the zero vector.
+\end_layout
+
+\begin_layout Enumerate
+An eigenvalue may be any complex number except zero.
+\end_layout
+
+\begin_layout Enumerate
+An eigenvector cannot be the zero vector.
+\end_layout
+
+\begin_layout Enumerate
+All 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices have two different eigenvalues.
+\end_layout
+
+\begin_layout Enumerate
+Each eigenvalue has exactly one corresponding eigenvector.
+\end_layout
+
+\begin_layout Enumerate
+An eigenvalue may be any number, including zero and complex numbers.
+\end_layout
+
+\begin_layout Enumerate
+An 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix can have 
+\begin_inset Formula $n+1$
+\end_inset
+
+ eigenvalues.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+True or false? If all the entries in a square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ are integers but one of its eigenvalues is 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+, then the entries of the corresponding eigenvector cannot all be integers.
+\end_layout
+
+\begin_layout Enumerate
+Suppose matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ is a 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix such that 
+\begin_inset Formula $A\cdot\left[\begin{array}{c}
+20\\
+-16\\
+8
+\end{array}\right]=\left[\begin{array}{c}
+5\\
+-4\\
+2
+\end{array}\right]$
+\end_inset
+
+.
+ Find an eigenvalue of 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -282,6 +1661,137 @@ finishexercises
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+system
+\begin_inset space ~
+\end_inset
+
+solution: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:systemsolution"
+
+\end_inset
+
+One possible solution of the system follows.
+ Start by dividing the third equation by 3, which yields
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+-29v_{1} & + & 14v_{2} & + & 10v_{3} & = & 0\\
+-76v_{1} & + & 37v_{2} & + & 26v_{3} & = & 0\\
+6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
+\end{array}
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ variable can be eliminated from the first two equations by adding 5 times
+ the third equation to the first and 13 times the third equation to the
+ second:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+v_{1} & - & v_{2} &  &  & = & 0\\
+2v_{1} & - & 2v_{2} &  &  & = & 0\\
+6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
+\end{array}
+\]
+
+\end_inset
+
+Dividing the second equation by 2, we see it is just a repeat of the first
+ equation, 
+\begin_inset Formula $v_{1}-v_{2}=0$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $v_{1}=v_{2}$
+\end_inset
+
+.
+ Substituting into the third equation, we find 
+\begin_inset Formula 
+\[
+6v_{2}-3v_{2}-2v_{3}=0
+\]
+
+\end_inset
+
+or 
+\begin_inset Formula $3v_{2}-2v_{3}=0$
+\end_inset
+
+, which means 
+\begin_inset Formula $v_{3}=\frac{3}{2}v_{2}$
+\end_inset
+
+.
+ This system has infinitely many solutions! They take the form 
+\begin_inset Formula $v_{1}=v_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{3}=\frac{3}{2}v_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ is anything except 0.
+ In other words,
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+v_{2}\\
+v_{2}\\
+\frac{3}{2}v_{2}
+\end{array}\right]=v_{2}\left[\begin{array}{c}
+1\\
+1\\
+\frac{3}{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ is arbitrary.
+ In other words 
+\shape italic
+every nonzero scalar multiple
+\shape default
+ of 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+1\\
+\frac{3}{2}
+\end{array}\right]$
+\end_inset
+
+ is an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+ associated with the eigenvalue 
+\begin_inset Formula $-2$
+\end_inset
+
+.
 \end_layout
 
 \end_body
