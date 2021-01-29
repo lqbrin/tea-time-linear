@@ -1,0 +1,870 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Row Operations
+\end_layout
+
+\begin_layout Section
+Systems of Linear Equations
+\end_layout
+
+\begin_layout Standard
+\noindent
+People have been solving systems of linear equations for millenia! Recorded
+ history dates back to about 150 BCE in China.
+ Even the modern process of elimination, often learned in high school algebra
+ and precalculus classes, and demonstrated on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:systemsolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, dates back in geometric form to at least the second century CE (circa
+ 100), appearing as a narrative in the Chinese treatise 
+\shape italic
+Nine Chapters on the Mathematical Arts
+\shape default
+.
+ Roger Hart proposes that a geometric version of the modern day procedure
+ of using determinants to solve systems is also evident in 
+\shape italic
+Nine Chapters
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hart"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Yanghui Triangle} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In China, the triangular arrangement of binomial coefficients, the first
+ five rows of which are
+\begin_inset Formula 
+\[
+\begin{gathered}1\\
+1\ 1\\
+1\ 2\ 1\\
+1\ 3\ 3\ 1\\
+1\ 4\ 6\ 4\ 1
+\end{gathered}
+\]
+
+\end_inset
+
+is often called the Yanghui triangle.
+ It was devised in the 
+\begin_inset Formula $11^{th}$
+\end_inset
+
+ century CE by Jia Xian and popularized in the 
+\begin_inset Formula $13^{th}$
+\end_inset
+
+ century by Yang Hui.
+ Omar Khayyam, an 
+\begin_inset Formula $11^{th}$
+\end_inset
+
+ century Persian figure also studied the triangle.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yanghui"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculations like the one on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:systemsolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ easily submit to the conciseness of matrices.
+ If you are familiar with synthetic division, you are already familiar with
+ this idea.
+ Only coefficients and constants are retained.
+ All variables and other 
+\begin_inset Quotes eld
+\end_inset
+
+extraneous
+\begin_inset Quotes erd
+\end_inset
+
+ symbols are unused.
+ On the left is the original calculation from page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:systemsolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ On the right is an accounting of the coefficients and constants of each
+ equation during each step of the process, maintained in a 
+\begin_inset Formula $3\times4$
+\end_inset
+
+ matrix (the first column holds the 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ coefficients, the second column holds the 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ coefficients, the third column holds the 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ coefficients, and the fourth column holds the constants from the righthand
+ sides of the equations).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="3in">
+<column alignment="left" valignment="top" width="3in">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The given system:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+-29v_{1} & + & 14v_{2} & + & 10v_{3} & = & 0\\
+-76v_{1} & + & 37v_{2} & + & 26v_{3} & = & 0\\
+6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+As a matrix (of coefficients and constants):
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+-29 & 14 & 10 & 0\\
+-76 & 37 & 26 & 0\\
+6 & -3 & -2 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adding 5 times the third equation to the first and 13 times the third equation
+ to the second:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+v_{1} & - & v_{2} &  &  & = & 0\\
+2v_{1} & - & 2v_{2} &  &  & = & 0\\
+6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adding 5 times the third row to the first and 13 times the third row to
+ the second:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & -1 & 0 & 0\\
+2 & -2 & 0 & 0\\
+6 & -3 & -2 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dividing the second equation by 2, we see it is just a repeat of the first
+ equation, 
+\begin_inset Formula $v_{1}-v_{2}=0$
+\end_inset
+
+, so we can scrap it:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+v_{1} & - & v_{2} &  &  & = & 0\\
+6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dividing the second row by 2, we see it is just a repeat of the first row,
+ 
+\begin_inset Formula $1\ -1\ 0\ 0$
+\end_inset
+
+, so we can zero it out and swap it with the third row:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & -1 & 0 & 0\\
+6 & -3 & -2 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Substituting 
+\begin_inset Formula $v_{1}=v_{2}$
+\end_inset
+
+ into the equation 
+\begin_inset Formula $6v_{1}-3v_{2}-2v_{3}=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+3v_{2}-2v_{3}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Subtracting 6 times the first row from the second:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & -1 & 0 & 0\\
+0 & 3 & -2 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In either case, we have reduced the system to the two equations 
+\begin_inset Formula $v_{1}-v_{2}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $3v_{2}-2v_{3}=0$
+\end_inset
+
+, from which the solution follows.
+ Just as synthetic division would be useful even if its only purpose were
+ to help people quickly divide polynomials by degree one binomials, this
+ matrix approach to solving systems would be useful even if its only purpose
+ were to help organize people's thoughts as they solved linear systems.
+ As will be shown in the coming chapters, the ideas laid out here will have
+ profound consequences.
+\end_layout
+
+\begin_layout Standard
+What should be taken from the matrix solution of the system
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+-29v_{1} & + & 14v_{2} & + & 10v_{3} & = & 0\\
+-76v_{1} & + & 37v_{2} & + & 26v_{3} & = & 0\\
+6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
+\end{array}
+\]
+
+\end_inset
+
+shown above is the fact that three row operations is enough to mirror the
+ process of elimination using matrices.
+ On the matrix side, we swapped rows, multiplied rows by a nonzero constant,
+ and most of all added multiples of one row to another.
+ Everything done in solving a linear system can be modeled by one of these
+ operations on the corresponding matrix.
+\end_layout
+
+\begin_layout Standard
+An amazing array of deep results in linear algebra stem from the careful
+ understanding of row operations and their consequences.
+ As such, these three operations are called 
+\series bold
+elementary row operations
+\series default
+.
+ To summarize and to name them, the elementary row operations are
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Swap
+\series default
+: swap two rows.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Scale
+\series default
+: multiply each entry in a row by a scalar.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Replace
+\series default
+: add a multiple of one row to another.
+\end_layout
+
+\begin_layout Standard
+Any system of linear equations can be translated into a matrix and solved
+ using these three operations.
+ Even systems with no solution reveal themselves as unsolvable under the
+ direction of these three operations.
+\end_layout
+
+\begin_layout Subsection
+An Algorithm
+\end_layout
+
+\begin_layout Standard
+Solving a large system of linear equations, say 5 equations in 5 variables,
+ without matrices can be chaotic and confusing.
+ Even with matrices solving a system of 5 equations in 5 unknows can be
+ chaotic and confusing.
+ A systematic approach will allay the chaos.
+ The following algorithm describes one approach for solving a system of
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ equations in 
+\begin_inset Formula $n$
+\end_inset
+
+ unknowns.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+1: Translate the system into a matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+2: Let 
+\begin_inset Formula $i=k=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+3: If 
+\begin_inset Formula $A_{i,k}=0$
+\end_inset
+
+ 
+\series bold
+swap
+\series default
+ row 
+\begin_inset Formula $i$
+\end_inset
+
+ with a row below it, say row 
+\begin_inset Formula $j$
+\end_inset
+
+, where 
+\begin_inset Formula $A_{j,k}\neq0$
+\end_inset
+
+.
+ If no such row exists, increment 
+\begin_inset Formula $k$
+\end_inset
+
+ by one and try again as long as 
+\begin_inset Formula $k\leq n$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $k$
+\end_inset
+
+ reaches 
+\begin_inset Formula $n+1$
+\end_inset
+
+, stop.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+4: 
+\series bold
+Scale
+\series default
+ row 
+\begin_inset Formula $i$
+\end_inset
+
+ by 
+\begin_inset Formula $\frac{1}{A_{i,k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+5: For each 
+\begin_inset Formula $j$
+\end_inset
+
+ from 
+\begin_inset Formula $i+1$
+\end_inset
+
+ through 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\series bold
+replace
+\series default
+ row 
+\begin_inset Formula $j$
+\end_inset
+
+ by 
+\begin_inset Formula $-\frac{A_{j,k}}{Ai,k}$
+\end_inset
+
+ times row 
+\begin_inset Formula $i$
+\end_inset
+
+ plus row 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+6: Increment 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ each by one and return to step 3 as long as 
+\begin_inset Formula $k\leq n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Translate the resulting matrix into a system and use back-substitution to
+ complete the solution.
+ For a computer programmer this description of the algorithm is probably
+ good enough.
+ The 6 steps outlined form what is essentially pseudo-code for the algorithm.
+ For most people, less computerese would be best.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+1: Select the leftmost column with at least one nonzero entry.
+ This is a 
+\series bold
+pivot column
+\series default
+.
+ The topmost position in this column is a 
+\series bold
+pivot position
+\series default
+.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+2: If the entry in the pivot position is 0, 
+\series bold
+swap
+\series default
+ rows so the entry in the pivot position is nonzero.
+ This nonzero entry is a 
+\series bold
+pivot
+\series default
+.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+3: 
+\series bold
+Replace
+\series default
+ rows below the pivot so that all entries below the pivot are 0.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+4: Repeat steps 1 through 3 on the submatrix consisting of all rows below
+ the pivot.
+\end_layout
+
+\begin_layout Standard
+The algorithm concludes as soon as one of these steps cannot be accomplished.
+ 
+\end_layout
+
+\begin_layout Standard
+Besides helping humans solve linear systems in an organized fashion, matrices
+ and elementary row operations form the basis for computer algorithms to
+ solve linear systems.
+ All modern computer algebra systems, including SageMath, use an algorithm
+ similar 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Add fangsheng image?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+matrix A
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+T
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+H
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

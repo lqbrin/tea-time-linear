@@ -472,6 +472,16 @@ filename "mechanics-division.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-eigenpairs.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -515,7 +525,7 @@ literal "true"
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "TeaTimeLinearAlgebra"
-options "bibtotoc,amsplain"
+options "bibtotoc,plain"
 
 \end_inset
 

@@ -880,6 +880,141 @@ matrix multiplication is not commutative
 \end_layout
 
 \begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+column
+\begin_inset space ~
+\end_inset
+
+vector A vector represented as a column matrix.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+multiplication 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+For any matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, if the rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ and the columns of 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same number of entries, then the product 
+\begin_inset Formula $AB$
+\end_inset
+
+ is defined.
+ Moreover, 
+\begin_inset Formula $AB$
+\end_inset
+
+ has the same number of rows (height) as 
+\begin_inset Formula $A$
+\end_inset
+
+ and the same number of columns (width) as 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $(AB)_{i,j}$
+\end_inset
+
+ equals the lone entry of 
+\begin_inset Formula $A_{i,:}B_{:,j}$
+\end_inset
+
+ for all entries 
+\begin_inset Formula $(AB)_{i,j}$
+\end_inset
+
+ of 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+ If the rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ and columns of 
+\begin_inset Formula $B$
+\end_inset
+
+ do not have the same number of entries, then 
+\begin_inset Formula $AB$
+\end_inset
+
+ is undefined.
+\end_layout
+
+\begin_layout Description
+transpose For any 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, the transpose of 
+\begin_inset Formula $A$
+\end_inset
+
+, denoted 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+, is defined as the 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $(A^{T})_{i,j}=a_{j,i}$
+\end_inset
+
+ for each entry 
+\begin_inset Formula $a_{j,i}$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+vector A quantity with both magnitude and direction.
+\end_layout
+
+\begin_layout Subsection
 SageMath
 \end_layout
 
@@ -1189,142 +1324,8 @@ Notice the notation for a vector (parentheses around a comma-separated list
  scalar, not a matrix.
 \end_layout
 
-\begin_layout Subsection
-Key Concepts
-\end_layout
-
-\begin_layout Description
-column
-\begin_inset space ~
-\end_inset
-
-vector A vector represented as a column matrix.
-\end_layout
-
-\begin_layout Description
-matrix
-\begin_inset space ~
-\end_inset
-
-multiplication 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-For any matrices 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $B$
-\end_inset
-
-, if the rows of 
-\begin_inset Formula $A$
-\end_inset
-
- and the columns of 
-\begin_inset Formula $B$
-\end_inset
-
- have the same number of entries, then the product 
-\begin_inset Formula $AB$
-\end_inset
-
- is defined.
- Moreover, 
-\begin_inset Formula $AB$
-\end_inset
-
- has the same number of rows (height) as 
-\begin_inset Formula $A$
-\end_inset
-
- and the same number of columns (width) as 
-\begin_inset Formula $B$
-\end_inset
-
-, and 
-\begin_inset Formula $(AB)_{i,j}$
-\end_inset
-
- equals the lone entry of 
-\begin_inset Formula $A_{i,:}B_{:,j}$
-\end_inset
-
- for all entries 
-\begin_inset Formula $(AB)_{i,j}$
-\end_inset
-
- of 
-\begin_inset Formula $AB$
-\end_inset
-
-.
- If the rows of 
-\begin_inset Formula $A$
-\end_inset
-
- and columns of 
-\begin_inset Formula $B$
-\end_inset
-
- do not have the same number of entries, then 
-\begin_inset Formula $AB$
-\end_inset
-
- is undefined.
-\end_layout
-
-\begin_layout Description
-transpose For any 
-\begin_inset Formula $m\times n$
-\end_inset
-
- matrix 
-\begin_inset Formula $A$
-\end_inset
-
-, the transpose of 
-\begin_inset Formula $A$
-\end_inset
-
-, denoted 
-\begin_inset Formula $A^{T}$
-\end_inset
-
-, is defined as the 
-\begin_inset Formula $n\times m$
-\end_inset
-
- matrix with 
-\begin_inset Formula $(A^{T})_{i,j}=a_{j,i}$
-\end_inset
-
- for each entry 
-\begin_inset Formula $a_{j,i}$
-\end_inset
-
- of 
-\begin_inset Formula $A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-vector A quantity with both magnitude and direction.
-\end_layout
-
 \begin_layout Standard
+\noindent
 \begin_inset ERT
 status open
 

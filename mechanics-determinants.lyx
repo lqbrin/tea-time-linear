@@ -1151,58 +1151,6 @@ TODO: Refer back to this when we revisit determinants.
 \end_layout
 
 \begin_layout Subsection
-SageMath
-\end_layout
-
-\begin_layout Standard
-If 
-\family typewriter
-M
-\family default
- is a matrix in SageMath, then 
-\family typewriter
-M.determinant()
-\family default
- is its determinant.
- The following code computes the determinant of 
-\begin_inset Formula $A=\left[\begin{array}{cccc}
--12 & 49 & -45 & -10\\
-28 & 45 & -46 & 23\\
--15 & -28 & 4 & -48\\
--1 & 34 & -38 & -18
-\end{array}\right]$
-\end_inset
-
-, the matrix behind calculation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:determinant_example"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout LyX-Code
-M = matrix(4,4,[-12,49,-45,-10,28,45,-46,23,-15,-28,4,-48,-1,34,-38,-18])
-\end_layout
-
-\begin_layout LyX-Code
-print(M.determinant())
-\end_layout
-
-\begin_layout Standard
-The output of this code is
-\end_layout
-
-\begin_layout LyX-Code
--393294
-\end_layout
-
-\begin_layout Subsection
 Key Concepts
 \end_layout
 
@@ -1308,6 +1256,58 @@ matrix A matrix with the same number or columns as rows.
 \end_inset
 
  matrix.
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+If 
+\family typewriter
+M
+\family default
+ is a matrix in SageMath, then 
+\family typewriter
+M.determinant()
+\family default
+ is its determinant.
+ The following code computes the determinant of 
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+-12 & 49 & -45 & -10\\
+28 & 45 & -46 & 23\\
+-15 & -28 & 4 & -48\\
+-1 & 34 & -38 & -18
+\end{array}\right]$
+\end_inset
+
+, the matrix behind calculation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_example"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(4,4,[-12,49,-45,-10,28,45,-46,23,-15,-28,4,-48,-1,34,-38,-18])
+\end_layout
+
+\begin_layout LyX-Code
+print(M.determinant())
+\end_layout
+
+\begin_layout Standard
+The output of this code is
+\end_layout
+
+\begin_layout LyX-Code
+-393294
 \end_layout
 
 \begin_layout Standard

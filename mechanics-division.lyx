@@ -1156,6 +1156,73 @@ end{digression}
 \end_layout
 
 \begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ The inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+adjugate For a square matrix, the transpose of its matrix of cofactors.
+\end_layout
+
+\begin_layout Description
+identity
+\begin_inset space ~
+\end_inset
+
+matrix A matrix with ones on the main diagonal and zeros elsewhere.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+inverse Matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are inverses of one another if and only if 
+\begin_inset Formula $AB=BA=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+invertible
+\begin_inset space ~
+\end_inset
+
+matrix A matrix whose inverse is defined.
+\end_layout
+
+\begin_layout Description
+main
+\begin_inset space ~
+\end_inset
+
+diagonal The 
+\begin_inset Formula $i,\!i$
+\end_inset
+
+-entries of a matrix.
+\end_layout
+
+\begin_layout Subsection
 SageMath
 \end_layout
 
@@ -1246,74 +1313,8 @@ but the output of
 .
 \end_layout
 
-\begin_layout Subsection
-Key Concepts
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $A^{-1}$
-\end_inset
-
- The inverse of 
-\begin_inset Formula $A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-adjugate For a square matrix, the transpose of its matrix of cofactors.
-\end_layout
-
-\begin_layout Description
-identity
-\begin_inset space ~
-\end_inset
-
-matrix A matrix with ones on the main diagonal and zeros elsewhere.
-\end_layout
-
-\begin_layout Description
-matrix
-\begin_inset space ~
-\end_inset
-
-inverse Matrices 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $B$
-\end_inset
-
- are inverses of one another if and only if 
-\begin_inset Formula $AB=BA=I$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-invertible
-\begin_inset space ~
-\end_inset
-
-matrix A matrix whose inverse is defined.
-\end_layout
-
-\begin_layout Description
-main
-\begin_inset space ~
-\end_inset
-
-diagonal The 
-\begin_inset Formula $i,\!i$
-\end_inset
-
--entries of a matrix.
-\end_layout
-
 \begin_layout Standard
+\noindent
 \begin_inset ERT
 status open
 

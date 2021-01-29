@@ -267,7 +267,15 @@ There is nothing magical about the matrix
 \begin_inset Formula $A$
 \end_inset
 
-, however.
+ nor the vectors 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+.
  For example, 
 \begin_inset Formula 
 \[
@@ -318,16 +326,12 @@ A\left[\begin{array}{c}
 \end_inset
 
 .
- There is also nothing magical about the vectors 
-\begin_inset Formula $\mathbf{v}_{1}$
+ Multiplying a vector by 
+\begin_inset Formula $A$
 \end_inset
 
- and 
-\begin_inset Formula $\mathbf{v}_{2}$
-\end_inset
-
-.
- For example, letting 
+ does not always produce a multiple of the vector.
+ Letting 
 \begin_inset Formula $B=\left[\begin{array}{cc}
 3 & 0\\
 -1 & -2
@@ -368,6 +372,23 @@ A\left[\begin{array}{c}
 
  for any 
 \begin_inset Formula $\lambda$
+\end_inset
+
+.
+ It is not always the case that the product of a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ is a multiple of 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+, and similarly for 
+\begin_inset Formula $\mathbf{v}_{2}$
 \end_inset
 
 .
@@ -607,7 +628,17 @@ TODO: Show this equivalence in the matrix algebra section.
 
 \end_inset
 
- The equivalent form gives us a way to find eigenvectors.
+ The equivalent form (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gives us a way to find eigenvectors.
  Each side of the equation expresses a vector, and for two vectors to be
  equal, their corresponding entries must be equal.
  For a vector 
@@ -755,7 +786,11 @@ v_{3}
 
 \end_inset
 
-and we can verify that this is correct simply by multiplying:
+and we can verify that this is correct (
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an eigenvector) simply by multiplying:
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
@@ -809,8 +844,7 @@ TODO: Prove this in the matrix algebra section.
 \end_inset
 
  There is no unique eigenvector associated with a given eigenvalue.
- In fact, there will always be infinitely many eigenvectors associated with
- each eigenvalue.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -829,7 +863,7 @@ Now we can find an eigenvector of a matrix
 
 ? Returning to (
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand ref
 reference "eq:eigenvector"
 plural "false"
 caps "false"
@@ -844,10 +878,10 @@ noprefix "false"
 .
  Perhaps this reminds you of solving quadratic equations by factoring.
  In algebra, if you know that 
-\begin_inset Formula $(x-2)(x+5)=0,$
+\begin_inset Formula $(x-2)(x+5)=0$
 \end_inset
 
-then you know that either 
+, then you know that either 
 \begin_inset Formula $x-2=0$
 \end_inset
 
@@ -894,7 +928,7 @@ then you know that either
  is invertible.
  Then left-multiplying both sides of (
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand ref
 reference "eq:eigenvector"
 plural "false"
 caps "false"
@@ -968,6 +1002,27 @@ characteristic equation
 \end_inset
 
 ).
+ The expression 
+\begin_inset Formula $\det(M-\lambda I)$
+\end_inset
+
+ is an 
+\begin_inset Formula $n^{th}$
+\end_inset
+
+ degree polynomial in 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and is called the 
+\series bold
+characteristic polynomial
+\series default
+ (of 
+\begin_inset Formula $M$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -981,6 +1036,22 @@ characteristic
 
 equation 
 \begin_inset Formula $\det(M-\lambda I)=0$
+\end_inset
+
+ for any matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+characteristic
+\begin_inset space ~
+\end_inset
+
+polynomial 
+\begin_inset Formula $\det(M-\lambda I)$
 \end_inset
 
  for any matrix 
@@ -1060,7 +1131,196 @@ SageMath
 \end_layout
 
 \begin_layout Standard
-T
+If 
+\family typewriter
+M
+\family default
+ is a matrix in SageMath, then 
+\family typewriter
+M.eigenvectors_right()
+\family default
+ lists its eigenvalues and eigenvectors, 
+\family typewriter
+M.eigenvalues()
+\family default
+ lists only its eigenvalues, and 
+\family typewriter
+M.charpoly()
+\family default
+ gives its characteristic polynomial.
+ The following code computes the eigenvalues, eigenvectors, and characteristic
+ polynomial of 
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{cccc}
+-112 & -21 & -15 & -372\\
+-84 & -13 & -19 & -292\\
+-36 & -13 & -3 & -116\\
+36 & 7 & 5 & 120
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(4,4,[-112,-21,-15,-372,-84,-13,-19,-292,
+\end_layout
+
+\begin_layout LyX-Code
+                -36,-13,-3,-116,36,7,5,120])
+\end_layout
+
+\begin_layout LyX-Code
+print(M); print()
+\end_layout
+
+\begin_layout LyX-Code
+print(M.eigenvalues()); print()
+\end_layout
+
+\begin_layout LyX-Code
+print(M.eigenvectors_right()); print()
+\end_layout
+
+\begin_layout LyX-Code
+print(M.charpoly())
+\end_layout
+
+\begin_layout Standard
+The output of the code is
+\end_layout
+
+\begin_layout LyX-Code
+[-112  -21  -15 -372]
+\end_layout
+
+\begin_layout LyX-Code
+[ -84  -13  -19 -292]
+\end_layout
+
+\begin_layout LyX-Code
+[ -36  -13   -3 -116]
+\end_layout
+
+\begin_layout LyX-Code
+[  36    7    5  120]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+[-4, -12, 4, 4]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+[(-4, [
+\end_layout
+
+\begin_layout LyX-Code
+(1, -3, -3, 0)
+\end_layout
+
+\begin_layout LyX-Code
+], 1), (-12, [
+\end_layout
+
+\begin_layout LyX-Code
+(1, 2/3, 2/3, -1/3)
+\end_layout
+
+\begin_layout LyX-Code
+], 1), (4, [
+\end_layout
+
+\begin_layout LyX-Code
+(1, -1/3, 1, -1/3)
+\end_layout
+
+\begin_layout LyX-Code
+], 2)]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+x^4 + 8*x^3 - 64*x^2 - 128*x + 768
+\end_layout
+
+\begin_layout Standard
+Since the characteristic polynomial of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix has degree 
+\begin_inset Formula $n$
+\end_inset
+
+ it has 
+\begin_inset Formula $n$
+\end_inset
+
+ eigenvalues counting multiplicities and complex eigenvalues.
+ The output of the 
+\family typewriter
+eigenvalues()
+\family default
+ method above shows that 4 has multiplicity 2.
+ It is listed twice in the list of eigenvalues (
+\family typewriter
+[-4, -12, 4, 4]
+\family default
+).
+ The 
+\family typewriter
+eigenvectors_right()
+\family default
+ gives the same information and more.
+ It prints out each eigenvalue, all associated eigenvectors, and finally
+ the multiplicity of the eigenvalue.
+ In the output above, the 
+\family typewriter
+eigenvectors_right()
+\family default
+ method shows the multiplicity of the eigenvalue 
+\begin_inset Formula $4$
+\end_inset
+
+ (and more) by listing the eigenvalue 
+\begin_inset Formula $4$
+\end_inset
+
+ followed by its associated eigenvector 
+\begin_inset Formula $\langle1,-1/3,1,-1/3\rangle$
+\end_inset
+
+ and finally its multiplicity 
+\begin_inset Formula $2$
+\end_inset
+
+ (the last 3 lines of output before the characteristic polynomial):
+\end_layout
+
+\begin_layout LyX-Code
+], 1), (4, [
+\end_layout
+
+\begin_layout LyX-Code
+(1, -1/3, 1, -1/3)
+\end_layout
+
+\begin_layout LyX-Code
+], 2)]
 \end_layout
 
 \begin_layout Standard
@@ -1225,7 +1485,13 @@ Use the fact that
 
 \end_deeper
 \begin_layout Enumerate
-Find the characteristic equation.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:mechanics-eigenpairs-1"
+
+\end_inset
+
+Find the characteristic polynomial.
 \end_layout
 
 \begin_deeper
@@ -1645,6 +1911,206 @@ Suppose matrix
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:mechanics-eigenpairs"
+
+\end_inset
+
+Let 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+99 & -135 & -199 & 417\\
+30 & -36 & -61 & 123\\
+90 & -135 & -174 & 369\\
+30 & -45 & -57 & 120
+\end{array}\right]
+\]
+
+\end_inset
+
+and use SageMath to determine which of the following vectors is an eigenvector
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Also determine its associated eigenvalue.
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+4\\
+3\\
+0\\
+0
+\end{array}\right],\ \left[\begin{array}{c}
+2\\
+1\\
+-6\\
+-3
+\end{array}\right],\ \left[\begin{array}{c}
+-1\\
+-1\\
+-6\\
+5
+\end{array}\right],\ \left[\begin{array}{c}
+-1\\
+2\\
+-6\\
+-2
+\end{array}\right],\ \left[\begin{array}{c}
+4\\
+2\\
+1\\
+-1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Click here"
+target "https://sagecell.sagemath.org/?z=eJxlzT0KwzAMBeA9kDt4TOAJrB_beOgRcoKQoWOHLqWUHr9CpZCkHoTN56e3pEu6X5-P23syGNbeQazFh9-MGzSDtIIqg0UxDul0ev4lmkFrj4T5uzRP5G0ehxfvShir_0PGl-RI4oO8TgP1iOQWXELtTyWyElrOnbGat_kDGVQ2zg==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+ or copy and paste the following code into a SageCell to get started.
+\begin_inset VSpace -12pt
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+M = matrix(4,4,[99,-135,-199,417,
+\end_layout
+
+\begin_layout LyX-Code
+                30,-36,-61,123,
+\end_layout
+
+\begin_layout LyX-Code
+                90,-135,-174,369,
+\end_layout
+
+\begin_layout LyX-Code
+                30,-45,-57,120])
+\end_layout
+
+\begin_layout LyX-Code
+v1= matrix(4,1,[4,3,0,0])
+\end_layout
+
+\begin_layout LyX-Code
+v2= matrix(4,1,[2,1,-6,-3])
+\end_layout
+
+\begin_layout LyX-Code
+v3= matrix(4,1,[-1,-1,-6,5])
+\end_layout
+
+\begin_layout LyX-Code
+v4= matrix(4,1,[-1,2,-6,-2])
+\end_layout
+
+\begin_layout LyX-Code
+v5= matrix(4,1,[4,2,1,-1])
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Use SageMath's 
+\family typewriter
+M.eigenvectors_right()
+\family default
+ method to compute the eigenvectors of 
+\begin_inset Formula $M$
+\end_inset
+
+ from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:mechanics-eigenpairs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Notice that none of the eigenvectors from that question is listed as an
+ eigenvector by SageMath, yet one of them is.
+ Can you resolve this conundrum? Is it possible that linear combinations
+ of eigenvectors are also eigenvectors?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Check your work on question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:mechanics-eigenpairs-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ using SageMath's 
+\family typewriter
+charpoly()
+\family default
+ method.
 \end_layout
 
 \begin_layout Standard

@@ -90,7 +90,7 @@ figs-within-sections
 \begin_body
 
 \begin_layout Chapter
-Some Calculations
+Matrix Calculations
 \end_layout
 
 \begin_layout Section
@@ -103,6 +103,16 @@ The fundamental object of linear algebra is the
 \series bold
 matrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix
+\end_layout
+
+\end_inset
+
 .
  A matrix is very much like a table or a spreadsheet, but without headings,
  labels, or lines.

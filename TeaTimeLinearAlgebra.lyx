@@ -413,7 +413,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 1: Some Calculations 
+% Chapter 1: Matrix Calculations 
 \end_layout
 
 \end_inset
@@ -465,6 +465,40 @@ filename "mechanics-determinants.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "mechanics-division.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-eigenpairs.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Chapter 2: Row Operations 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-rowoperations.lyx"
 
 \end_inset
 
