@@ -749,17 +749,21 @@ Multiplying yields
 
 so we must have
 \begin_inset Formula 
-\[
+\begin{equation}
 \begin{array}{ccccccc}
 -29v_{1} & + & 14v_{2} & + & 10v_{3} & = & 0\\
 -76v_{1} & + & 37v_{2} & + & 26v_{3} & = & 0\\
 18v_{1} & - & 9v_{2} & - & 6v_{3} & = & 0
-\end{array}
-\]
+\end{array}\label{eq:linear-system}
+\end{equation}
 
 \end_inset
 
-Can you solve this system of equations? Answer on page 
+Can you find a single set of values for the variables 
+\begin_inset Formula $v_{1},v_{2},v_{3}$
+\end_inset
+
+ that solves all three equations? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:systemsolution"
@@ -771,6 +775,15 @@ noprefix "false"
 
 .
  One solution is 
+\begin_inset Formula $v_{1}=v_{2}=2$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{3}=3$
+\end_inset
+
+.
+ We can verify that 
 \begin_inset Formula 
 \[
 \mathbf{v}=\left[\begin{array}{c}
@@ -781,16 +794,12 @@ v_{3}
 2\\
 2\\
 3
-\end{array}\right],
+\end{array}\right]\text{ is indeed an eigenvector}
 \]
 
 \end_inset
 
-and we can verify that this is correct (
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- is an eigenvector) simply by multiplying:
+by multiplying:
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
@@ -814,8 +823,7 @@ and we can verify that this is correct (
 
 \end_inset
 
-Solving for an eigenvector will always yield an infinite number of solutions.
- If 
+Note that if 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -832,7 +840,10 @@ Solving for an eigenvector will always yield an infinite number of solutions.
 \end_inset
 
 .
- We will prove this fact later.
+ Therefore, solving for an eigenvector will always yield an infinite number
+ of solutions.
+ There is no unique eigenvector associated with a given eigenvalue.
+ We will prove these facts later.
  
 \begin_inset Note Note
 status open
@@ -843,8 +854,7 @@ TODO: Prove this in the matrix algebra section.
 
 \end_inset
 
- There is no unique eigenvector associated with a given eigenvalue.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2145,7 +2155,17 @@ name "ans:systemsolution"
 
 \end_inset
 
-One possible solution of the system follows.
+One possible solution of equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) follows.
  Start by dividing the third equation by 3, which yields
 \begin_inset Formula 
 \[
@@ -2203,7 +2223,8 @@ or
 \end_inset
 
 .
- This system has infinitely many solutions! They take the form 
+ This set of equations has infinitely many solutions! They take the form
+ 
 \begin_inset Formula $v_{1}=v_{2}$
 \end_inset
 
@@ -2215,8 +2236,8 @@ or
 \begin_inset Formula $v_{2}$
 \end_inset
 
- is anything except 0.
- In other words,
+ is any number.
+ In terms of the eigenvector, this observation means
 \begin_inset Formula 
 \[
 \mathbf{v}=\left[\begin{array}{c}
@@ -2232,12 +2253,21 @@ v_{2}\\
 
 \end_inset
 
-where 
+for some value 
 \begin_inset Formula $v_{2}$
 \end_inset
 
- is arbitrary.
- In other words 
+.
+ If 
+\begin_inset Formula $v_{2}=0$
+\end_inset
+
+, however, then 
+\begin_inset Formula $\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, which is disallowed as an eigenvector.
+ Therefore 
 \shape italic
 every nonzero scalar multiple
 \shape default

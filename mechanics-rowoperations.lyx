@@ -98,9 +98,9 @@ Systems of Linear Equations
 \end_layout
 
 \begin_layout Standard
-\noindent
-People have been solving systems of linear equations for millenia! Recorded
- history dates back to about 150 BCE in China.
+People have been solving systems of linear equations for millenia, since
+ long before the advent of what we know today as algebra.
+ Recorded history of linear systems dates back to about 150 BCE in China!
  Even the modern process of elimination, often learned in high school algebra
  and precalculus classes, and demonstrated on page 
 \begin_inset CommandInset ref
@@ -148,11 +148,6 @@ begin{digression}{Yanghui Triangle}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\noindent
 In China, the triangular arrangement of binomial coefficients, the first
  five rows of which are
 \begin_inset Formula 
@@ -207,6 +202,94 @@ end{digression}
 \end_layout
 
 \begin_layout Standard
+In our modern treatment of systems of linear equations, a 
+\series bold
+linear equation
+\series default
+ is an equation that takes the form 
+\begin_inset Formula 
+\begin{equation}
+c_{1}v_{1}+c_{2}v_{2}+\cdots+c_{n}v_{n}=b\label{eq:linear}
+\end{equation}
+
+\end_inset
+
+for coefficients 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
+\end_inset
+
+, variables 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
+\end_inset
+
+ and constant 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ The (ordered) list 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
+\end_inset
+
+ is a 
+\series bold
+solution of the equation
+\series default
+ if and only if substitution of the values 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
+\end_inset
+
+ for the variables 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
+\end_inset
+
+, respectively, make the equation true.
+ A set of linear equations is called a 
+\series bold
+linear system
+\series default
+ or 
+\series bold
+system of linear equations
+\series default
+.
+ The (ordered) list 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
+\end_inset
+
+ is a 
+\series bold
+solution of a linear system
+\series default
+ if and only if it is a solution of every equation in the system.
+ The set of equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is an example of a system of linear equations, and the lists 
+\begin_inset Formula $1,1,\frac{3}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $2,2,3$
+\end_inset
+
+ are solutions of the system (given that these lists specify values of the
+ variables 
+\begin_inset Formula $v_{1},v_{2},v_{3}$
+\end_inset
+
+ in that order).
+ 
+\end_layout
+
+\begin_layout Standard
 Calculations like the one on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
@@ -246,7 +329,8 @@ noprefix "false"
 \begin_inset Formula $3\times4$
 \end_inset
 
- matrix (the first column holds the 
+ matrix.
+ The first column holds the 
 \begin_inset Formula $v_{1}$
 \end_inset
 
@@ -259,7 +343,7 @@ noprefix "false"
 \end_inset
 
  coefficients, and the fourth column holds the constants from the righthand
- sides of the equations).
+ sides of the equations.
 \end_layout
 
 \begin_layout Standard
@@ -276,13 +360,13 @@ noprefix "false"
 \begin_layout Plain Layout
 The given system:
 \begin_inset Formula 
-\[
+\begin{equation}
 \begin{array}{ccccccc}
 -29v_{1} & + & 14v_{2} & + & 10v_{3} & = & 0\\
 -76v_{1} & + & 37v_{2} & + & 26v_{3} & = & 0\\
 6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
-\end{array}
-\]
+\end{array}\label{eq:system}
+\end{equation}
 
 \end_inset
 
@@ -295,7 +379,7 @@ The given system:
 \begin_inset Text
 
 \begin_layout Plain Layout
-As a matrix (of coefficients and constants):
+As a matrix:
 \begin_inset Formula 
 \[
 \left[\begin{array}{cccc}
@@ -478,44 +562,151 @@ In either case, we have reduced the system to the two equations
 \end_inset
 
 , from which the solution follows.
- Just as synthetic division would be useful even if its only purpose were
- to help people quickly divide polynomials by degree one binomials, this
- matrix approach to solving systems would be useful even if its only purpose
- were to help organize people's thoughts as they solved linear systems.
- As will be shown in the coming chapters, the ideas laid out here will have
- profound consequences.
 \end_layout
 
 \begin_layout Standard
-What should be taken from the matrix solution of the system
+Much like successful synthetic division is dependent on strict ordering
+ of the coefficients of the polynomial, it should be noted that the success
+ of the matrix process is dependent on strict ordering of the entries of
+ the matrix.
+ Each row of the matrix represents one equation.
+ The rightmost column of the matrix represents the constants from the righthand
+ sides of the equations.
+ Each of the remaining columns represents the coefficients of a single variable
+ from the lefthand sides of the equations.
+ It can easily be verified that the systems 
 \begin_inset Formula 
 \[
 \begin{array}{ccccccc}
 -29v_{1} & + & 14v_{2} & + & 10v_{3} & = & 0\\
 -76v_{1} & + & 37v_{2} & + & 26v_{3} & = & 0\\
 6v_{1} & - & 3v_{2} & - & 2v_{3} & = & 0
+\end{array}\ \text{ and }\ \begin{array}{rcl}
+14v_{2}+10v_{3} & = & 29v_{1}\\
+26v_{3}+37v_{2} & = & 76v_{1}\\
+6v_{1} & = & 2v_{3}+3v_{2}
 \end{array}
 \]
 
 \end_inset
 
-shown above is the fact that three row operations is enough to mirror the
- process of elimination using matrices.
- On the matrix side, we swapped rows, multiplied rows by a nonzero constant,
- and most of all added multiples of one row to another.
- Everything done in solving a linear system can be modeled by one of these
- operations on the corresponding matrix.
+are equivalent.
+ Each equation of the system on the left has simply been rewritten using
+ positive coefficients in the system on the right.
+ However, the matrix representation of the system on the right, which might
+ be written as
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+14 & 10 & 29 & 0\\
+26 & 37 & 76 & 0\\
+0 & 6 & 2 & 3
+\end{array}\right]
+\]
+
+\end_inset
+
+is not helpful in solving the system using row operations.
+ Certainly we can subtract 38 times the third row from the second row:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+26 & 37 & 76 & 0\end{array}\right]-38\left[\begin{array}{cccc}
+0 & 6 & 2 & 3\end{array}\right]=\left[\begin{array}{cccc}
+26 & -191 & 0 & -114\end{array}\right]
+\]
+
+\end_inset
+
+to obtain the matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+14 & 10 & 29 & 0\\
+26 & -191 & 0 & -114\\
+0 & 6 & 2 & 3
+\end{array}\right]
+\]
+
+\end_inset
+
+creating a zero in the 
+\begin_inset Formula $2,\!3$
+\end_inset
+
+-entry just as before.
+ The problem is the 
+\begin_inset Formula $-191$
+\end_inset
+
+ and 
+\begin_inset Formula $0$
+\end_inset
+
+ of the resultant matrix have no meaning in terms of the original system.
+ Those parts of the calculation represent 
+\begin_inset Formula $37v_{2}-38(6v_{1})$
+\end_inset
+
+, which simplifies to 
+\begin_inset Formula $37v_{2}-228v_{1}$
+\end_inset
+
+ and not necessarily 
+\begin_inset Formula $-191$
+\end_inset
+
+ times anything; and 
+\begin_inset Formula $76v_{1}-38(2v_{3})$
+\end_inset
+
+, which simplifies to 
+\begin_inset Formula $76v_{1}-76v_{3}$
+\end_inset
+
+ or 
+\begin_inset Formula $76(v_{1}-v_{3})$
+\end_inset
+
+ and not necessarily 
+\begin_inset Formula $0$
+\end_inset
+
+ times anything.
+ For row operations to make sense in the context of solving systems of equations
+, the entries in a single column must all be coefficients of the same variable
+ or constants from the equations of the system.
+ By convention, the rightmost column always holds the constants from the
+ righthand sides of the equations and the remainder of the columns represent
+ the coefficients of one variable each.
+ The order of the columns of coefficients is flexible as long as the order
+ is known.
 \end_layout
 
 \begin_layout Standard
-An amazing array of deep results in linear algebra stem from the careful
- understanding of row operations and their consequences.
+Besides noting that the order of the entries in the matrix is critical,
+ what should be taken from the matrix solution of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is the fact that three row operations are enough to mirror the process
+ of elimination using matrices.
+ On the matrix side, we swapped rows, multiplied rows by a nonzero constant,
+ and added multiples of one row to another.
+ Everything done in solving a linear system can be modeled by one of these
+ operations on the corresponding matrix.
  As such, these three operations are called 
 \series bold
 elementary row operations
 \series default
 .
- To summarize and to name them, the elementary row operations are
+ To summarize and name them, the elementary row operations are
 \end_layout
 
 \begin_layout Enumerate
@@ -547,266 +738,270 @@ Any system of linear equations can be translated into a matrix and solved
  using these three operations.
  Even systems with no solution reveal themselves as unsolvable under the
  direction of these three operations.
+ If that were the only purpose of row operations, they would be useful,
+ but as the concepts of linear algebra unfold, the ideas laid out here will
+ have much further reaching consequences.
 \end_layout
 
 \begin_layout Subsection
-An Algorithm
+Elementary Matrices
 \end_layout
 
 \begin_layout Standard
-Solving a large system of linear equations, say 5 equations in 5 variables,
- without matrices can be chaotic and confusing.
- Even with matrices solving a system of 5 equations in 5 unknows can be
- chaotic and confusing.
- A systematic approach will allay the chaos.
- The following algorithm describes one approach for solving a system of
- 
-\begin_inset Formula $n$
+Any matrix resulting from performing an elementary row operation on an identity
+ matrix is called an 
+\series bold
+elementary matrix
+\series default
+.
+ For example
+\begin_inset Formula 
+\[
+E=\left[\begin{array}{cccc}
+0 & 1 & 0 & 0\\
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]
+\]
+
 \end_inset
 
- equations in 
-\begin_inset Formula $n$
+is an elementary matrix since it is just 
+\begin_inset Formula $I_{4\times4}$
 \end_inset
 
- unknowns.
+ with the first two rows swapped.
+ The feature of interest is that left-multiplying any other matrix by this
+ elementary matrix has the effect of performing the corresponding row operation
+ (swapping the first two rows) on that arbitrary matrix so long as the product
+ is defined.
+ For example, if we let 
+\begin_inset Formula $A=\left[\begin{array}{ccccc}
+0 & -12 & 4 & -10 & 10\\
+6 & 2 & -8 & -2 & 5\\
+-5 & -4 & -6 & 9 & 7\\
+1 & -1 & 8 & -9 & 3
+\end{array}\right]$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{equation}
+EA=\left[\begin{array}{cccc}
+0 & 1 & 0 & 0\\
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccccc}
+0 & -12 & 4 & -10 & 10\\
+6 & 2 & -8 & -2 & 5\\
+-5 & -4 & -6 & 9 & 7\\
+1 & -1 & 8 & -9 & 3
+\end{array}\right]=\left[\begin{array}{ccccc}
+6 & 2 & -8 & -2 & 5\\
+0 & -12 & 4 & -10 & 10\\
+-5 & -4 & -6 & 9 & 7\\
+1 & -1 & 8 & -9 & 3
+\end{array}\right].\label{eq:elementary-matrix-product}
+\end{equation}
+
+\end_inset
+
+Take a short break to verify at least one of the entries in each row.
+ This exercise will help you see why the product works out as shown and
+ will help illuminate the following computations.
 \end_layout
 
-\begin_layout Description
-Step
-\begin_inset space ~
+\begin_layout Standard
+The 
+\begin_inset Formula $1,\!j$
 \end_inset
 
-1: Translate the system into a matrix 
+-entry of 
+\begin_inset Formula $EA$
+\end_inset
+
+ is a linear combination of the entries in the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ column of 
 \begin_inset Formula $A$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-2: Let 
-\begin_inset Formula $i=k=1$
+ To be precise, 
+\begin_inset Formula $(EA)_{1,j}=0A_{1,j}+1A_{2,j}+0A_{3,j}+0A_{4,j}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
+ The entries from the first row of 
+\begin_inset Formula $E$
 \end_inset
 
-3: If 
-\begin_inset Formula $A_{i,k}=0$
-\end_inset
-
- 
-\series bold
-swap
-\series default
- row 
-\begin_inset Formula $i$
-\end_inset
-
- with a row below it, say row 
-\begin_inset Formula $j$
-\end_inset
-
-, where 
-\begin_inset Formula $A_{j,k}\neq0$
+ are used as the coefficients of the linear combination needed to compute
+ each entry of the first row of 
+\begin_inset Formula $EA$
 \end_inset
 
 .
- If no such row exists, increment 
-\begin_inset Formula $k$
+ It follows that the first row of 
+\begin_inset Formula $EA$
 \end_inset
 
- by one and try again as long as 
-\begin_inset Formula $k\leq n$
+ is a linear combination of the rows of 
+\begin_inset Formula $A$
 \end_inset
 
-.
- If 
-\begin_inset Formula $k$
-\end_inset
-
- reaches 
-\begin_inset Formula $n+1$
-\end_inset
-
-, stop.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-4: 
-\series bold
-Scale
-\series default
- row 
-\begin_inset Formula $i$
-\end_inset
-
- by 
-\begin_inset Formula $\frac{1}{A_{i,k}}$
+ using these same coefficients.
+ Symbolically, 
+\begin_inset Formula $(EA)_{1,:}=0A_{1,:}+1A_{2,:}+0A_{3,:}+0A_{4,:}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
+ In summary, each row of 
+\begin_inset Formula $EA$
 \end_inset
 
-5: For each 
-\begin_inset Formula $j$
+ is the linear combination of the rows of 
+\begin_inset Formula $A$
 \end_inset
 
- from 
-\begin_inset Formula $i+1$
+ with coefficients from the corresponding row of 
+\begin_inset Formula $E$
 \end_inset
 
- through 
-\begin_inset Formula $n$
+.
+ To compute the third row of 
+\begin_inset Formula $EA$
+\end_inset
+
+, for example, we use the entries from the third row of 
+\begin_inset Formula $E$
+\end_inset
+
+ as coefficients of a linear combination of the rows of 
+\begin_inset Formula $A$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+(EA)_{3,:}= & 0\left[\begin{array}{ccccc}
+0 & -12 & 4 & -10 & 10\end{array}\right]+\\
+ & 0\left[\begin{array}{ccccc}
+6 & 2 & -8 & -2 & 5\end{array}\right]+\\
+ & 1\left[\begin{array}{ccccc}
+-5 & -4 & -6 & 9 & 7\end{array}\right]+\\
+ & 0\left[\begin{array}{ccccc}
+1 & -1 & 8 & -9 & 3\end{array}\right]\\
+= & \left[\begin{array}{ccccc}
+-5 & -4 & -6 & 9 & 7\end{array}\right].
+\end{align*}
+
+\end_inset
+
+All the rows of 
+\begin_inset Formula $EA$
+\end_inset
+
+ can be computed quickly from this perspective.
+ The first row of 
+\begin_inset Formula $E$
 \end_inset
 
 , 
-\series bold
-replace
-\series default
- row 
-\begin_inset Formula $j$
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 1 & 0 & 0\end{array}\right]$
+\end_inset
+
+, suggests that the first row of 
+\begin_inset Formula $EA$
+\end_inset
+
+ is 
+\begin_inset Formula $0$
+\end_inset
+
+ times row one of 
+\begin_inset Formula $A$
+\end_inset
+
+ plus 
+\begin_inset Formula $1$
+\end_inset
+
+ times row 2 of 
+\begin_inset Formula $A$
+\end_inset
+
+ plus 
+\begin_inset Formula $0$
+\end_inset
+
+ times row 3 of 
+\begin_inset Formula $A$
+\end_inset
+
+ plus 
+\begin_inset Formula $0$
+\end_inset
+
+ times row 4 of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Looking at it this way makes it clear that the first row of 
+\begin_inset Formula $EA$
+\end_inset
+
+ is simply the second row of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Similarly, the second row of 
+\begin_inset Formula $EA$
+\end_inset
+
+ is just the first row of 
+\begin_inset Formula $A$
+\end_inset
+
+, the third row of 
+\begin_inset Formula $EA$
+\end_inset
+
+ is the third row of 
+\begin_inset Formula $A$
+\end_inset
+
+, and the fourth row of 
+\begin_inset Formula $EA$
+\end_inset
+
+ is the fourth row of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In other words, multiplying 
+\begin_inset Formula $A$
 \end_inset
 
  by 
-\begin_inset Formula $-\frac{A_{j,k}}{Ai,k}$
+\begin_inset Formula $E$
 \end_inset
 
- times row 
-\begin_inset Formula $i$
+ has the effect of swapping the first two rows of 
+\begin_inset Formula $A$
 \end_inset
 
- plus row 
-\begin_inset Formula $j$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-6: Increment 
-\begin_inset Formula $i$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
- each by one and return to step 3 as long as 
-\begin_inset Formula $k\leq n$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Translate the resulting matrix into a system and use back-substitution to
- complete the solution.
- For a computer programmer this description of the algorithm is probably
- good enough.
- The 6 steps outlined form what is essentially pseudo-code for the algorithm.
- For most people, less computerese would be best.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-1: Select the leftmost column with at least one nonzero entry.
- This is a 
-\series bold
-pivot column
-\series default
-.
- The topmost position in this column is a 
-\series bold
-pivot position
-\series default
-.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-2: If the entry in the pivot position is 0, 
-\series bold
-swap
-\series default
- rows so the entry in the pivot position is nonzero.
- This nonzero entry is a 
-\series bold
-pivot
-\series default
-.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-3: 
-\series bold
-Replace
-\series default
- rows below the pivot so that all entries below the pivot are 0.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-4: Repeat steps 1 through 3 on the submatrix consisting of all rows below
- the pivot.
-\end_layout
-
-\begin_layout Standard
-The algorithm concludes as soon as one of these steps cannot be accomplished.
- 
-\end_layout
-
-\begin_layout Standard
-Besides helping humans solve linear systems in an organized fashion, matrices
- and elementary row operations form the basis for computer algorithms to
- solve linear systems.
- All modern computer algebra systems, including SageMath, use an algorithm
- similar 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Add fangsheng image?
-\end_layout
-
-\end_inset
-
-
+ as claimed.
+ The effect of multiplying by other elementary matrices can be verified
+ similarly.
 \end_layout
 
 \begin_layout Subsection
@@ -814,15 +1009,153 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-matrix A
+elementary
+\begin_inset space ~
+\end_inset
+
+row
+\begin_inset space ~
+\end_inset
+
+matrix The matrix resulting from performing a single row operation on an
+ identity matrix.
 \end_layout
 
-\begin_layout Subsection
-SageMath
+\begin_layout Description
+elementary
+\begin_inset space ~
+\end_inset
+
+row
+\begin_inset space ~
+\end_inset
+
+operation One of swap, scale, or replace.
 \end_layout
 
-\begin_layout Standard
-T
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+equation An equation of the form 
+\begin_inset Formula $c_{1}v_{1}+c_{2}v_{2}+\cdots+c_{n}v_{n}=b$
+\end_inset
+
+ where 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
+\end_inset
+
+ are coefficients, 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
+\end_inset
+
+ are variables, and 
+\begin_inset Formula $b$
+\end_inset
+
+ is a constant.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+system Another name for a system of linear equations.
+\end_layout
+
+\begin_layout Description
+(row)
+\begin_inset space ~
+\end_inset
+
+swap Swapping two rows of a matrix.
+\end_layout
+
+\begin_layout Description
+(row)
+\begin_inset space ~
+\end_inset
+
+scale Multiplying each entry of a single row of a matrix by a nonzero scalar.
+\end_layout
+
+\begin_layout Description
+(row)
+\begin_inset space ~
+\end_inset
+
+replace Replacing a row of a matrix with the sum of it plus some multiple
+ of another row.
+\end_layout
+
+\begin_layout Description
+system
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+equations A set of linear equations.
+\end_layout
+
+\begin_layout Description
+solution
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+system An (ordered) list of values 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
+\end_inset
+
+ that is a solution of every equation in the system.
+\end_layout
+
+\begin_layout Description
+solution
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+equation An (ordered) list of values 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
+\end_inset
+
+ such that substitution for the variables 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
+\end_inset
+
+, respectively, in the equation make the equation true.
 \end_layout
 
 \begin_layout Standard
