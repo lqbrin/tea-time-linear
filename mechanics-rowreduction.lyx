@@ -89,31 +89,7 @@ Row Reduction
 \end_layout
 
 \begin_layout Standard
-A matrix containing the coefficients of a linear system, one row for each
- equation and one column for the coefficients of each variable, is called
- a 
-\series bold
-coefficient matrix
-\series default
-.
- A matrix containing the coefficients and constants of a linear system,
- one row for each equation, one column for the coefficients of each variable,
- and the rightmost column for the constants, is called an 
-\series bold
-augmented matrix
-\series default
-.
- The coefficient matrix for any linear system is a submatrix of the correspondin
-g augmented matrix.
- The augmented matrix simply has one more column—the column of constants
- for each equation.
-\end_layout
-
-\begin_layout Standard
-The process of row reduction is used to solve a linear system by transforming
- the augmented matrix, and in special cases the coefficient matrix, representing
- the system into a form from which it is easy to extract solutions.
- For example, the system associated with the augmented matrix
+The system associated with an augmented matrix of the form
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
@@ -128,9 +104,9 @@ has only one solution:
 \begin_inset Formula $4,5$
 \end_inset
 
-, and we can see that without doing any work.
+, and we can see that without doing any computation.
  The system associated with this matrix, something you can probably visualize
- mentally, might look like
+ mentally, looks like
 \begin_inset Formula 
 \begin{align*}
 x & =4\\
@@ -139,57 +115,23 @@ y & =5
 
 \end_inset
 
-This system has already been solved! Lacking information on the original
- variables of the system, any set of variables is as good as another.
- You may have chosen to imagine 
-\begin_inset Formula $x_{1}$
+(though you may have imagined different variables).
+ The system is solved! The system corresponding to the augmented matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+3 & -2 & 2\\
+5 & -3 & 5
+\end{array}\right]
+\]
+
 \end_inset
 
- and 
-\begin_inset Formula $x_{2}$
-\end_inset
-
- or 
-\begin_inset Formula $v_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $v_{2}$
-\end_inset
-
- just as well.
-\end_layout
-
-\begin_layout Standard
-When the constants of the system are all zero, it is not important to represent
- the system as an augmented matrix.
- A coefficient matrix will do.
- The column of constants contains all zeros, and row operations do not change
- the entries of a column of zeros.
- After swapping two rows with zeros in their 
-\begin_inset Formula $j^{th}$
-\end_inset
-
- columns, for example, the 
-\begin_inset Formula $j^{th}$
-\end_inset
-
- column still has zeros in those rows.
- All that happened in column 
-\begin_inset Formula $j$
-\end_inset
-
- was two zeros swapped places.
- The rest of the rows are not involved in the swap, so if their 
-\begin_inset Formula $j^{th}$
-\end_inset
-
- columns held zeros before, they hold zeros after as well.
- Can you explain similarly why row replacement and row scaling also leave
- a column of zeros unchanged? Answer on page 
+corresponds to a system that is not solved.
+ Can you write down the associated system to verify? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
-reference "ans:column-of-zeros"
+reference "ans:associatedsystem"
 plural "false"
 caps "false"
 noprefix "false"
@@ -197,19 +139,13 @@ noprefix "false"
 \end_inset
 
 .
- Because a column of zeros remains a column of zeros throughout all row
- operations, it is common not to write the column of constants when they
- are all zero.
- A linear system whose constants are all zero is called a 
+ 
 \series bold
-homogeneous system
+Row reduction
 \series default
-.
- Otherwise it is a 
-\series bold
-nonhomogeneous system
-\series default
-.
+ is the process of using elementary row operations to transform a matrix
+ whose associated linear system is not solved into one whose associated
+ linear system is solved, thus solving the system.
 \end_layout
 
 \begin_layout Standard
@@ -222,7 +158,166 @@ The following algorithm describes the process of row reduction for solving
 \begin_inset Formula $n$
 \end_inset
 
- unknowns.
+ unknowns, starting with a matrix representation of the system.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+1: Select the leftmost column with at least one nonzero entry.
+ This is a 
+\series bold
+pivot column
+\series default
+.
+ The topmost position in this column is a 
+\series bold
+pivot position
+\series default
+.
+ If no such column exists or there are no rows below the pivot position,
+ continue to step 5.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+2: If the entry in the pivot position is 0, 
+\series bold
+swap
+\series default
+ rows so the entry in the pivot position is nonzero.
+ This nonzero entry is a 
+\series bold
+pivot
+\series default
+.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+3: 
+\series bold
+Replace
+\series default
+ rows until all entries in the pivot column below the pivot are 0.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+4: Take the submatrix consisting of all rows below the pivot and return
+ to step 1.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+5: Select the column of the rightmost pivot position and 
+\series bold
+replace
+\series default
+ rows until all entries in that column other than the pivot are 0.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+6: Scale the row with the pivot so the pivot in that row is 1.
+\end_layout
+
+\begin_layout Description
+Step
+\begin_inset space ~
+\end_inset
+
+7: If there are no rows above the pivot, stop.
+ Otherwise, take the submatrix consisting of all rows above the pivot and
+ return to step 5.
+\end_layout
+
+\begin_layout Standard
+Translating the resulting matrix back into a system of equations reveals
+ the solution.
+ Any matrix produced by the completion of steps 1 through 4 is said to be
+ in 
+\series bold
+row echelon form
+\series default
+.
+ The system corresponding to a matrix in row echelon form can be solved
+ by back-substitution, so these steps of the algorithm are often sufficient.
+ Any matrix produced by the completion of the entire algorithm is said to
+ be in 
+\series bold
+reduced row echelon form
+\series default
+.
+ The system corresponding to a matrix in reduced row echelon form is solved.
+\end_layout
+
+\begin_layout Standard
+Even though the algorithm may sound rather rigid, there are choices to be
+ made along the way.
+ All choices will lead to the same solution, but different choices may lead
+ to drastically different-looking routes.
+ In the end, all choices in row reduction by hand are a matter of preference.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Automated Row Reduction}
+\end_layout
+
+\end_inset
+
+A computer programmed to perform row reduction will have to make choices
+ just as a human working by hand would.
+ However, the objectives of a computer are slightly different from the objective
+s of a human.
+ A human is looking to make the computation as easy as possible while a
+ computer should be programmed to make the computation as 
+\shape italic
+accurate
+\shape default
+ as possible.
+ For a computer, working with fractions or decimal values is just as easy
+ as working with integers, and doing a couple 
+\begin_inset Quotes eld
+\end_inset
+
+extra
+\begin_inset Quotes erd
+\end_inset
+
+ row operations is usually preferable to doing a lengthy analysis of how
+ to avoid them.
+ But computer computations are subject to round-off error, something that
+ should be minimized whenever possible.
+ Swapping rows so the pivot is the entry of greatest magnitude in the column
+ helps reduce round-off error.
+ The following is essentially computer pseudo-code that reduces a matrix
+ to row echelon form.
 \end_layout
 
 \begin_layout Description
@@ -234,7 +329,7 @@ Step
 \begin_inset Formula $A$
 \end_inset
 
- (must be augmented for a homogeneous system).
+.
 \end_layout
 
 \begin_layout Description
@@ -254,24 +349,28 @@ Step
 \begin_inset space ~
 \end_inset
 
-3: If 
-\begin_inset Formula $A_{i,k}=0$
-\end_inset
-
- 
+3: 
 \series bold
-swap
+Swap
 \series default
  row 
 \begin_inset Formula $i$
 \end_inset
 
- with a row below it, say row 
+ with row 
 \begin_inset Formula $j$
 \end_inset
 
-, where 
-\begin_inset Formula $A_{j,k}\neq0$
+ where 
+\begin_inset Formula $j>i$
+\end_inset
+
+ and 
+\begin_inset Formula $|A_{j,k}|>|A_{m,k}|$
+\end_inset
+
+ for all 
+\begin_inset Formula $m\geq i$
 \end_inset
 
 .
@@ -376,173 +475,8 @@ Step
 \end_layout
 
 \begin_layout Standard
-Translate the resulting matrix into a system and use back-substitution to
- complete the solution.
- For a computer programmer this description of the algorithm is probably
- good enough.
- The 6 steps outlined form what is essentially pseudo-code for the algorithm.
- For most people, less computerese would be best, and it would be nice if
- the algorithm included the process of back-substitution.
- The following algorithm is a more accessible description of 
-\series bold
-row reduction
-\series default
-, starting with a coefficient matrix for homogeneous systems or an augmented
- matrix for nonhomogeneous systems.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-1: Select the leftmost column with at least one nonzero entry.
- This is a 
-\series bold
-pivot column
-\series default
-.
- The topmost position in this column is a 
-\series bold
-pivot position
-\series default
-.
- If no such column exists or there are no rows below the pivot, continue
- to step 5.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-2: If the entry in the pivot position is 0, 
-\series bold
-swap
-\series default
- rows so the entry in the pivot position is nonzero.
- This nonzero entry is a 
-\series bold
-pivot
-\series default
-.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-3: 
-\series bold
-Replace
-\series default
- rows until all entries in the pivot column below the pivot are 0.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-4: Take the submatrix consisting of all rows below the pivot and return
- to step 1.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-5: Select the column of the rightmost pivot position and 
-\series bold
-replace
-\series default
- rows until all entries in that column other than the pivot are 0.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-6: Scale the row with the pivot so the pivot in that row is 1.
-\end_layout
-
-\begin_layout Description
-Step
-\begin_inset space ~
-\end_inset
-
-7: If there are no rows above the pivot, stop.
- Otherwise, take the submatrix consisting of all rows above the pivot and
- return to step 5.
-\end_layout
-
-\begin_layout Standard
-Translate the resulting matrix into a system to see the solution.
- Any matrix produced by the completion of steps 1 through 4 is said to be
- in 
-\series bold
-row echelon form.
-
-\series default
- Any matrix produced by the completion of the entire algorithm is said to
- be in 
-\series bold
-reduced row echelon
-\series default
-.
- 
-\end_layout
-
-\begin_layout Standard
-Even though the algorithm may sound rather rigid, there are choices to be
- made along the way.
- All choices will lead to the same solution, but different choices may lead
- to drastically different-looking routes.
- In the end, all choices in row reduction by hand are a matter of preference.
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{digression}{Automated Row Reduction} 
-\end_layout
-
-\end_inset
-
-A computer programmed to perform row reduction will have to make choices
- just as a human working by hand would.
- However, the objectives of a computer are slightly different from the objective
-s of a human.
- A human is looking to make the computation as easy as possible while a
- computer should be programmed to make the computation as 
-\shape italic
-accurate
-\shape default
- as possible.
- For a computer, working with fractions or decimal values is just as easy
- as working with integers, and doing a couple 
-\begin_inset Quotes eld
-\end_inset
-
-extra
-\begin_inset Quotes erd
-\end_inset
-
- row operations is usually preferable to doing a lengthy analysis of how
- to avoid them.
- But computer computations are subject to round-off error, something that
- should be minimized whenever possible.
- Swapping rows so the pivot is the entry of greatest magnitude in the column
- helps reduce round-off error.
+The resulting matrix must be returned to the form of a linear system and
+ solved by back-substitution to complete the solution.
 \begin_inset ERT
 status open
 
@@ -2414,6 +2348,142 @@ The original system has this one solution.
 \end_layout
 
 \begin_layout Standard
+A matrix containing the coefficients and constants of a linear system (one
+ row for each equation, one column for the coefficients of each variable,
+ and the rightmost column for the constants, as usual) is called an 
+\series bold
+augmented matrix
+\series default
+.
+ A matrix containing the coefficients of a linear system (one row for each
+ equation and one column for the coefficients of each variable, as usual)
+ but not the constants is called a 
+\series bold
+coefficient matrix
+\series default
+.
+ The coefficient matrix for any linear system is a submatrix of the correspondin
+g augmented matrix.
+ The augmented matrix simply has one more column—the column of constants
+ for each equation.
+ 
+\end_layout
+
+\begin_layout Standard
+The system 
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+3x & - & 2y & = & 0\\
+5x & - & 3y & = & 0
+\end{array}
+\]
+
+\end_inset
+
+has augmented matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+3 & -2 & 0\\
+5 & -3 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+and coefficient matrix 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+3 & -2\\
+5 & -3
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When the constants of a linear system are all zero, it is not necessary
+ to represent the system as an augmented matrix.
+ The coefficient matrix will do.
+ After all, a column of zeros at the beginning of the row reduction process
+ will be a column of zeros at the end of the process.
+ Row operations do not change the entries of a column of zeros.
+ For example, after swapping two rows with zeros in their 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ columns, the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ column still has zeros in those rows.
+ All that happened in column 
+\begin_inset Formula $j$
+\end_inset
+
+ was two zeros swapped places.
+ The rest of the rows are not involved in the swap, so if their 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ columns held zeros before, they hold zeros after as well.
+ Can you explain similarly why row replacement and row scaling also leave
+ a column of zeros unchanged? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:column-of-zeros"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ A linear system whose constants are all zero is called a 
+\series bold
+homogeneous system
+\series default
+.
+ Otherwise it is called a 
+\series bold
+nonhomogeneous system
+\series default
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Homogeneous Linear Differential Equations}
+\end_layout
+
+\end_inset
+
+A linear differential equation is homogeneous if its constant term is zero
+ and nonhomogeneous otherwise.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -2431,7 +2501,77 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-b
+augmented
+\begin_inset space ~
+\end_inset
+
+matrix A matrix holding a particular arrangement of all the coefficients
+ and constants of a linear system.
+\end_layout
+
+\begin_layout Description
+coefficient
+\begin_inset space ~
+\end_inset
+
+matrix A matrix holding a particular arrangement of all the coefficients
+ but none of the constants of a linear system.
+\end_layout
+
+\begin_layout Description
+homogeneous
+\begin_inset space ~
+\end_inset
+
+system A linear system with constants all equal to zero.
+\end_layout
+
+\begin_layout Description
+nonhomogeneous
+\begin_inset space ~
+\end_inset
+
+system A linear system with at least one nonzero constant.
+\end_layout
+
+\begin_layout Description
+row
+\begin_inset space ~
+\end_inset
+
+reduction The process of using elementary row operations to transform a
+ matrix whose associated linear system is not solved into one whose associated
+ linear system is either solved or could be solved by back-substitution.
+\end_layout
+
+\begin_layout Description
+row
+\begin_inset space ~
+\end_inset
+
+echelon
+\begin_inset space ~
+\end_inset
+
+form An arrangement of zero and nonzero entries in a matrix such that the
+ first four steps of the row reduction algorithm do not force any changes.
+\end_layout
+
+\begin_layout Description
+reduced
+\begin_inset space ~
+\end_inset
+
+row
+\begin_inset space ~
+\end_inset
+
+echelon
+\begin_inset space ~
+\end_inset
+
+form An arrangement of zero, one, and nonzero entries in a matrix such that
+ the row reduction algorithm does not force any changes.
 \end_layout
 
 \begin_layout Standard
@@ -2456,96 +2596,20 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Perform the operation if possible.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction"
+
+\end_inset
+
+Reduce the matrix to row echelon form.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\left[\begin{array}{ccc}
--1 & -6 & 0\\
--6 & -5 & 10
-\end{array}\right]+\left[\begin{array}{ccc}
-1 & -10 & 3\\
-9 & 0 & 2
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cc}
-1.6 & 8.4\\
-8.16 & -0.33
-\end{array}\right]+\left[\begin{array}{cc}
-4.01 & 1.75\\
-9.35 & 1.49\\
--0.24 & 0.58
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cccc}
--5 & -8 & 7 & 5\\
--9 & -3 & 1 & 0
-\end{array}\right]+\left[\begin{array}{cccc}
-3 & -4 & 7 & -8\\
-1 & -2 & 2 & -5
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cc}
-4 & 1\\
-3 & 2
-\end{array}\right]-\left[\begin{array}{cc}
--10 & -3\\
-1 & 8
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{c}
--6\\
-0\\
--6
-\end{array}\right]+\left[\begin{array}{c}
-9\\
-10\\
-0
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $2\left[\begin{array}{ccc}
-5 & -11 & -2\\
-14 & 1 & -8\\
-13 & -1 & 6
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cc}
-3.43 & 6.59\\
--0.96 & 0.16
-\end{array}\right]+\left[\begin{array}{cc}
--0.78 & 8.68\\
-2.14 & 8.79
+-2 & -4 & -10\\
+-5 & 2 & -1
 \end{array}\right]$
 \end_inset
 
@@ -2554,23 +2618,8 @@ Perform the operation if possible.
 
 \begin_layout Enumerate
 \begin_inset Formula $\left[\begin{array}{ccc}
--9 & 1 & 5\\
-10 & 1 & -10\\
-2 & -3 & -7
-\end{array}\right]+\left[\begin{array}{ccc}
--2 & 7 & 8\\
-9 & -4 & 9\\
-2 & -10 & -10
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $2\left[\begin{array}{cc}
--1 & 6\\
-8 & 15
+1 & -4 & 0\\
+3 & 5 & 4
 \end{array}\right]$
 \end_inset
 
@@ -2579,48 +2628,10 @@ Perform the operation if possible.
 
 \begin_layout Enumerate
 \begin_inset Formula $\left[\begin{array}{ccc}
-4.65 & 1.33 & 8.86\\
-6.03 & 4.56 & 4.8
-\end{array}\right]-\left[\begin{array}{ccc}
-1.85 & 6.4 & 7.33\\
-4.58 & 8.39 & 1.89
+6 & -1 & -4\\
+4 & -3 & 1\\
+2 & -5 & -1
 \end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cccc}
-0 & 6 & -8 & -2\\
-8 & 10 & 7 & -3
-\end{array}\right]+\left[\begin{array}{cc}
-9 & 2\\
-6 & -3
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cc}
-4.83 & 7.65\\
--0.48 & 7.82\\
-0.25 & 2.53
-\end{array}\right]-\left[\begin{array}{cc}
-4.44 & 6.57\\
-4.22 & 7.17
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cccc}
-1 & -9 & 6 & 10\end{array}\right]-\left[\begin{array}{cccc}
--2 & -1 & 2 & -7\end{array}\right]$
 \end_inset
 
 
@@ -2628,68 +2639,9 @@ Perform the operation if possible.
 
 \begin_layout Enumerate
 \begin_inset Formula $\left[\begin{array}{ccc}
-9 & -10 & 4\\
-10 & 10 & 1\\
-0 & -8 & 3
-\end{array}\right]-\left[\begin{array}{ccc}
-10 & -4 & -4\\
-8 & 9 & 4
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{c}
-2\\
-7\\
-9\\
-3
-\end{array}\right]+\left[\begin{array}{cc}
--7 & 8\\
-3 & 9\\
--4 & 2\\
-2 & 9
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{c}
-10\\
-4\\
-10
-\end{array}\right]-\left[\begin{array}{ccc}
--1 & 10 & -2\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $3.19\left[\begin{array}{c}
--12.96\\
--0.96\\
--7.99\\
-11.05
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{cc}
--6 & -4\\
-7 & -2\\
--1 & 0
-\end{array}\right]-\left[\begin{array}{cc}
--4 & -6\\
-10 & 5\\
--3 & 8
+-1 & 0 & 2\\
+4 & 1 & -3\\
+1 & 1 & 3
 \end{array}\right]$
 \end_inset
 
@@ -2698,126 +2650,372 @@ Perform the operation if possible.
 
 \end_deeper
 \begin_layout Enumerate
-Suppose 
-\begin_inset Formula $M$
+Reduce the matrix in question 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "exc:row-reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- is a 
-\begin_inset Formula $5\times5$
-\end_inset
-
- matrix and 
-\begin_inset Formula $M+N$
-\end_inset
-
- is defined (the sum can be computed).
- How many entries does 
-\begin_inset Formula $N$
-\end_inset
-
- have?
+ to reduced row echelon form.
 \end_layout
 
 \begin_layout Enumerate
-In your own words, describe how to add or subtract two matrices, and explain
- how to determine whether the addition or subtraction can be done.
+The coefficient matrix for a homogeneous linear system is given.
+ Find one nontrivial solution (not all variables equal to zero) of the associate
+d system if possible.
+ Assume the variables of the system are 
+\begin_inset Formula $x_{1},x_{2},\ldots x_{n}$
+\end_inset
+
+ and their coefficients appear in that order in the matrix.
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-Can a matrix with 29 nonzero entries be added to a matrix with 25 nonzero
- entries?
-\end_layout
-
-\begin_layout Enumerate
-Suppose 
-\begin_inset Formula $M$
-\end_inset
-
- and 
-\begin_inset Formula $N$
-\end_inset
-
- are matrices such that their sum is defined (
-\begin_inset Formula $M+N$
-\end_inset
-
- can be computed).
- Is the following true or false?
-\begin_inset Formula 
-\[
-M+N=N+M
-\]
-
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & -1\\
+0 & 5
+\end{array}\right]$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-Suppose 
-\begin_inset Formula $M$
-\end_inset
-
- and 
-\begin_inset Formula $N$
-\end_inset
-
- are matrices such that their difference is defined (
-\begin_inset Formula $M-N$
-\end_inset
-
- can be computed).
- Is the following true or false? 
-\begin_inset Formula 
-\[
-M−N=N−M
-\]
-
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & 0\\
+0 & 2
+\end{array}\right]$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-Suppose 
-\begin_inset Formula $M$
-\end_inset
-
- is a matrix of size 
-\begin_inset Formula $3\times7$
-\end_inset
-
-, 
-\begin_inset Formula $c$
-\end_inset
-
- is a scalar, and the matrix computation 
-\begin_inset Formula $cM$
-\end_inset
-
- is defined.
- What is the size of matrix 
-\begin_inset Formula $cM$
-\end_inset
-
-?
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{enumigrab}{
-\backslash
-value{enumi}}
-\end_layout
-
+\begin_inset Formula $\left[\begin{array}{cc}
+-1 & 3\\
+0 & 0
+\end{array}\right]$
 \end_inset
 
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+2 & -2 & 5\\
+0 & 7 & -1\\
+0 & 0 & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & -5 & 0\\
+0 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+5 & 0 & -3\\
+0 & -4 & 1\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+5 & 3 & 0 & 0\\
+0 & 0 & 3 & -4\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Solve the nonhomogeneous system by row reduction.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccc}
+-7x_{1} & - & 2x_{2} & = & -6\\
+4x_{1} & + & x_{2} & = & -1
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccc}
+v_{1} & + & 4v_{2} & = & -4\\
+-3v_{1} & - & 11v_{2} & = & -5
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccc}
+2x & + & 15y & = & 6\\
+-8x & - & 65y & = & 4
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccc}
+-3x & + & 5y & = & -3\\
+-15x & + & 20y & = & 6
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccc}
+x_{1} & - & x_{2} & = & 3\\
+-4x_{1} & + & 5x_{2} & = & -3
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccc}
+-45x & - & 8y & = & -6\\
+-10x & - & 2y & = & 4
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccccc}
+x & + & 3y & - & z & = & -3\\
+x & + & y & + & 2z & = & -5\\
+-3x & - & 10y & + & 4z & = & 6
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccccc}
+-3v_{1} & - & 35v_{2} & + & 10v_{3} & = & 2\\
+9v_{1} & + & 130v_{2} & - & 40v_{3} & = & 2\\
+9v_{1} & + & 120v_{2} & - & 35v_{3} & = & -4
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccccc}
+-v_{1} & + & 2v_{2} & + & 8v_{3} & = & -6\\
+-v_{1} & + & v_{2} & + & 5v_{3} & = & -6\\
+-2v_{1} & + & 2v_{2} & + & 11v_{3} & = & -1
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccccc}
+12x_{1} & - & 9x_{2} & - & 14x_{3} & = & 3\\
+24x_{1} & - & 15x_{2} & - & 21x_{3} & = & -3\\
+-9x_{1} & + & 6x_{2} & + & 7x_{3} & = & 2
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccccccc}
+2w & - & x & + & y & + & 4z & = & -3\\
+-w & + & x &  &  & - & 3z & = & 5\\
+-w & + & x & + & y & - & 2z & = & -2\\
+ &  &  & - & y & - & z & = & -6
+\end{array}}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \begin{array}{ccccccccc}
+x_{1} & - & x_{2} & + & 4v_{3} & - & v_{4} & = & 1\\
+-2x_{1} & + & 6x_{2} & - & 10x_{3} & + & 5x_{4} & = & -3\\
+-x_{1} &  &  & + & 2x_{3} & - & 2x_{4} & = & 2\\
+3x_{1} & - & 2x_{2} & + & 11x_{3} & - & 2x_{4} & = & 6
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-2 & 0 & 0\\
+0 & -3 & 0\\
+0 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+ be the coefficient matrix for a linear system.
+ What can you say about the solution(s) of the system if augmented by the
+ given column?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+3\\
+2\\
+0
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+a\\
+b\\
+c
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+3 & 0 & 0\\
+0 & 2 & 0\\
+0 & 0 & -4
+\end{array}\right]$
+\end_inset
+
+.
+ What can you say about the solutions of the associated system if
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+the system is homogeneous and 
+\begin_inset Formula $A$
+\end_inset
+
+ is the coefficient matrix?
+\end_layout
+
+\begin_layout Enumerate
+the system is nonhomogeneous and 
+\begin_inset Formula $A$
+\end_inset
+
+ is the coefficient matrix?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ is the augmented matrix?
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -2834,38 +3032,33 @@ finishexercises
 
 \end_layout
 
-\begin_layout Standard
-\noindent
-For the remaining exercises, let
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+associated
+\begin_inset space ~
+\end_inset
+
+system: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:associatedsystem"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Formula 
 \[
-\begin{gathered}A=\left[\begin{array}{cccccc}
-42 & 0 & -47 & -34 & -10 & -48\\
-8 & 26 & 43 & -18 & -20 & -30\\
--41 & -40 & -29 & -36 & -44 & 12\\
--42 & 47 & 28 & 4 & 38 & -22\\
-18 & -15 & -1 & 29 & 37 & 9
-\end{array}\right]\ N=\left[\begin{array}{cccccc}
--21 & -33 & 28 & -15 & 34 & 45\\
-27 & 40 & -13 & -23 & -10 & 15\\
-43 & -6 & 46 & 17 & 13 & 21\\
--40 & -46 & 2 & 16 & 22 & -14\\
-10 & -12 & 29 & 35 & 48 & -31
-\end{array}\right]\\
-Q=\left[\begin{array}{cccccc}
--17 & -37 & -34 & 20 & -14 & 10\\
--23 & 44 & 47 & 18 & 19 & 49\\
-11 & 33 & 35 & -50 & 2 & 9\\
--36 & -18 & 7 & 17 & -49 & 31\\
--8 & 16 & 28 & -32 & -2 & 5
-\end{array}\right]\ T=\left[\begin{array}{cccccc}
-40 & 47 & 13 & -2 & -22 & 3\\
--45 & 4 & -16 & 6 & -18 & 8\\
-18 & -26 & -27 & -19 & -48 & -35\\
-33 & 35 & 9 & 25 & 2 & 7\\
--8 & 10 & -12 & -34 & 11 & 38
-\end{array}\right]
-\end{gathered}
+\begin{array}{ccccc}
+3x & - & 2y & = & 2\\
+5x & - & 3y & = & 5
+\end{array}
 \]
 
 \end_inset
@@ -2873,168 +3066,8 @@ Q=\left[\begin{array}{cccccc}
 
 \end_layout
 
-\begin_layout Standard
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{enumerate} 
-\backslash
-setcounter{enumi}{
-\backslash
-value{enumigrab}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\backslash
-sage
-\backslash
- 
-\end_layout
-
-\end_inset
-
-Compute 
-\begin_inset Formula $A+Q$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\backslash
-sage
-\backslash
- 
-\end_layout
-
-\end_inset
-
-Compute 
-\begin_inset Formula $N-5T$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-item
-\backslash
-sage
-\backslash
- 
-\end_layout
-
-\end_inset
-
-Compute 
-\begin_inset Formula $3.17(1.11Q+.22N)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{enumerate}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-You may 
-\begin_inset CommandInset href
-LatexCommand href
-name "follow this link"
-target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQFAoF0xxVXpkgTUuTxM7N2ZWxYe3ctaT6N3pbX5fv5-_P191JQcc-BFZYbLGWYa9_RERU58dxhwbuke-fiNwbPFdfLcngsZ3gwKMB60ZGRlB9QGS9cYHJqGHjcrpf3A4oFFVJSpqLJkwuiQaJOmEgTkL-ERsAKbyccjI2dlSFU54tYTjpVignBIpRJPkk-jiQuPzZP1P6eSgC2yN7Yjw_kAXcQmMWsrCckgc0r-dgEa8yhpvUJJQCCBcqk-DyOZp1a6ny6yA0N0ZQqtpp9OstZGW0yIp0NRSplxxwIWkoWEWxmqEe10cnwD7w-ZzY=&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "false"
-
-\end_inset
-
- or copy and paste the following code into a SageCell to get started.
-\end_layout
-
-\begin_layout LyX-Code
-A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
-\end_layout
-
-\begin_layout LyX-Code
-                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
-\end_layout
-
-\begin_layout LyX-Code
-N = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
-\end_layout
-
-\begin_layout LyX-Code
-                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
-\end_layout
-
-\begin_layout LyX-Code
-Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
-\end_layout
-
-\begin_layout LyX-Code
-                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
-\end_layout
-
-\begin_layout LyX-Code
-T = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
-\end_layout
-
-\begin_layout LyX-Code
-                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
-\end_layout
-
-\begin_layout Subsection
-Answers
-\end_layout
-
 \begin_layout Description
-Column
+column
 \begin_inset space ~
 \end_inset
 
