@@ -9,6 +9,9 @@
 \input $HOME/Documents/scsu/Book-Linear/preamble
 \end_preamble
 \use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -89,7 +92,1120 @@ Existence, Uniqueness, and Echelon Forms
 \end_layout
 
 \begin_layout Standard
-T
+As augmented matrices,
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 2 & 3
+\end{array}\right],\quad\left[\begin{array}{ccc}
+1 & 2 & 3\\
+0 & 0 & 0
+\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+1 & 2 & 0\\
+0 & 0 & 3
+\end{array}\right]
+\]
+
+\end_inset
+
+represent fundamentally different linear systems.
+ The first matrix represents the system
+\begin_inset Formula 
+\begin{align*}
+x & =0\\
+2y & =3
+\end{align*}
+
+\end_inset
+
+which has exactly one solution: 
+\begin_inset Formula $x=0$
+\end_inset
+
+, 
+\begin_inset Formula $y=\frac{3}{2}$
+\end_inset
+
+.
+ The second matrix represents the system
+\begin_inset Formula 
+\begin{align*}
+x+2y & =3\\
+0 & =0
+\end{align*}
+
+\end_inset
+
+which has infinitely many solutions, 
+\begin_inset Formula $x=3-2y$
+\end_inset
+
+ with 
+\begin_inset Formula $y$
+\end_inset
+
+ arbitrary.
+ One example is 
+\begin_inset Formula $y=1$
+\end_inset
+
+, 
+\begin_inset Formula $x=1$
+\end_inset
+
+.
+ The third matrix represents the system
+\begin_inset Formula 
+\begin{align*}
+x+2y & =0\\
+0 & =3
+\end{align*}
+
+\end_inset
+
+which has no solution.
+ Even though the first equation has many solutons, the second equation will
+ not be true for any values of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ since 
+\begin_inset Formula $0$
+\end_inset
+
+ simply does not equal 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The three associated linear systems have different types of solution sets.
+ The first set of solutions contains exactly one element.
+ The second set of solutions contains infinitely many elements.
+ The third set of solutions is empty.
+ 
+\end_layout
+
+\begin_layout Standard
+The three matrices 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+7 & 0 & 0\\
+0 & 10 & -3
+\end{array}\right],\quad\left[\begin{array}{ccc}
+7 & 10 & -3\\
+0 & 0 & 0
+\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+7 & 10 & 0\\
+0 & 0 & -3
+\end{array}\right]
+\]
+
+\end_inset
+
+are similar to the first three in this way.
+ One of them has an associated linear system with no solution, one with
+ infinitely many solutions, and one with exactly one solution.
+ Can you tell which is which? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whichiswhich"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Comparing the first set of three matrices to the second set of three matrices,
+ you may notice that all six matrices have three 0 entries and three nonzero
+ entries, one per column.
+ Further, there are only three arrangements of the zeros.
+ Using 
+\begin_inset Formula $\#$
+\end_inset
+
+ to represent the nonzero numbers, the arrangements are 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+\# & \# & \#\\
+0 & 0 & 0
+\end{array}\right],\quad,\left[\begin{array}{ccc}
+\# & 0 & 0\\
+0 & \# & \#
+\end{array}\right]\quad\text{and }\left[\begin{array}{ccc}
+\# & \# & 0\\
+0 & 0 & \#
+\end{array}\right]
+\]
+
+\end_inset
+
+in order from most to fewest solutions.
+ You can verify that each one is in row echelon form by applying the first
+ 4 steps of the row reduction algorithm.
+ The nonzero numbers may change, but the form (arrangement of zeros and
+ nonzeros) will not! Additionally, no matter what nonzero numbers take the
+ place of the 
+\begin_inset Formula $\#$
+\end_inset
+
+s, the number of solutions of the associated systems will not change.
+ This is the real power of row echelon form matrices.
+ 
+\end_layout
+
+\begin_layout Standard
+More generally, some of the entries of these forms could be replaced by
+ other symbols without disrupting row echelon form.
+ Using 
+\begin_inset Formula $\star$
+\end_inset
+
+ to represent 
+\shape italic
+any number
+\shape default
+ (including zero), matrices with the following arrangements of entries are
+ all in row echelon form
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{ccc}
+\# & \star & \star\\
+0 & 0 & 0
+\end{array}\right],\quad\left[\begin{array}{ccc}
+\# & \star & \star\\
+0 & \# & \star
+\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+\# & \star & \star\\
+0 & 0 & \#
+\end{array}\right].\label{eq:2by3echelonforms}
+\end{equation}
+
+\end_inset
+
+These more general forms also have infinitely many, one, and zero solutions,
+ respectively.
+ Imagining the associated linear systems will help you verify the number
+ of solutions, but how can you tell they are in row echelon form?
+\end_layout
+
+\begin_layout Standard
+Step 1 of the row reduction algorithm is applied to the entire matrix and
+ then to each submatrix containing all the rows below the last identified
+ pivot.
+ As such, this step simply identifies the pivot positions.
+ In each of the given matrices, the leftmost column has a nonzero entry,
+ so it is a pivot column.
+ The topmost (row one) position in this column is a pivot position.
+ Returning to step 1 with the submatrix containg 
+\begin_inset Quotes eld
+\end_inset
+
+all rows beneath the pivot
+\begin_inset Quotes erd
+\end_inset
+
+ (as required in step 4) in this case just means the second row:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+0 & 0 & 0\end{array}\right],\quad\left[\begin{array}{ccc}
+0 & \# & \star\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+0 & 0 & \#\end{array}\right]
+\]
+
+\end_inset
+
+The leftmost nonzero entry in the second row is therefore a pivot position.
+ The pivot positions of matrices (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2by3echelonforms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are boxed below.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+\boxed{\#} & \star & \star\\
+0 & 0 & 0
+\end{array}\right],\quad\left[\begin{array}{ccc}
+\boxed{\#} & \star & \star\\
+0 & \boxed{\#} & \star
+\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+\boxed{\#} & \star & \star\\
+0 & 0 & \boxed{\#}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Step 2 of the row reduction algorithm requires that each pivot is nonzero.
+ This is already the case so no action is required.
+\end_layout
+
+\begin_layout Standard
+Step 3 of the row reduction algorithm requires all entries below a pivot
+ (and in the same column as the pivot) be zero.
+ In all three matrices, the only pivot with entries directly below it are
+ those in the 
+\begin_inset Formula $1,\!1$
+\end_inset
+
+-entry, and there are zeros beneath them in each case, so no action is required.
+\end_layout
+
+\begin_layout Standard
+Step 4 of the row reduction algorithm sends the algorithm back to the first
+ step.
+ It does not, by itself, provide for any changes to the matrix.
+\end_layout
+
+\begin_layout Standard
+What we can glean from analysis of the algorithm is that in row echelon
+ form,
+\end_layout
+
+\begin_layout Enumerate
+every pivot is to the right of the pivots in rows above it, and
+\end_layout
+
+\begin_layout Enumerate
+all rows of zeros are below all rows with nonzero entries.
+\end_layout
+
+\begin_layout Standard
+Both of these facts are immediate consequences of the algorithm.
+ When a pivot is identified, all entries below it in that column are made
+ zero, so when returning to step 1 with the submatrix containing all rows
+ beneath the pivot, the column with the previously identified pivot contains
+ only zeros.
+ The leftmost nonzero column remaining must be to the right! Requiring that
+ the pivot be nonzero ensures that no row of zeros can appear above a row
+ with nonzeros.
+ As long as these two requirements are satisfied, steps 2 and 3 (the only
+ ones of the first 4 that cause any change to a matrix) are satisfied, so
+ the matrix is in row echelon form.
+\end_layout
+
+\begin_layout Standard
+Noticing that a pivot will always be the leftmost nonzero entry in a row
+ makes determining whether a matrix is in row echelon form a simple matter.
+ Identify the leftmost nonzero entry of each row.
+ These are the pivots.
+ Make sure they are all to the right of the ones above them.
+ Then check to make sure any rows of zeros are at the bottom.
+\end_layout
+
+\begin_layout Standard
+Given this description of row echelon form matrices, there are four row
+ echelon forms for 
+\begin_inset Formula $2\times3$
+\end_inset
+
+ matrices besides those in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2by3echelonforms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Can you find them? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:otherrowechelonforms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Try any other arrangement of 
+\begin_inset Formula $0$
+\end_inset
+
+s, 
+\begin_inset Formula $\star$
+\end_inset
+
+s, and 
+\begin_inset Formula $\#$
+\end_inset
+
+s such as 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+\# & \# & \star\\
+0 & \# & 0
+\end{array}\right]\ \text{ or }\ \left[\begin{array}{ccc}
+\star & \star & \star\\
+0 & \# & \star
+\end{array}\right]
+\]
+
+\end_inset
+
+and you will see that it is either a special case of one these seven forms
+ or there is a substitution of numbers for which the matrix is not in row
+ echelon form.
+ Can you show this is true for these two matrices? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:substitution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A linear system with at least one solution is called 
+\series bold
+consistent
+\series default
+, perhaps deriving from the fact that the equations do not contradict one
+ another.
+ A linear system with no solution is called 
+\series bold
+inconsistent
+\series default
+.
+ The corresponding augmented matrix in row echelon form makes telling the
+ difference between the two straightforward.
+ If the row echelon form matrix has a pivot in the last column, the linear
+ system is inconsistent.
+ Otherwise it is consistent.
+ Indeed, a row containing a pivot in the last column has the form 
+\begin_inset Formula $\left[\begin{array}{ccccc}
+0 & 0 & \cdots & 0 & \#\end{array}\right]$
+\end_inset
+
+, which translates to the equation 
+\begin_inset Formula $0=\#$
+\end_inset
+
+ (zero equals a nonzero number), which of course is nonsense.
+ If a row echelon form matrix does not have a pivot in the rightmost column,
+ the corresponding system can be solved by back-substitution.
+\end_layout
+
+\begin_layout Standard
+The pivots can also be used to determine the number of solutions of a consistent
+ system.
+ If the row echelon form matrix has a pivot in each column (beside the rightmost
+), the linear system has exactly one solution.
+ Otherwise it has infinitely many solutions.
+ The second case is worth taking a closer look at.
+ All of the following augmented matrices are in row echelon form and are
+ pivot-free in the rightmost column plus at least one other column.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 3 & 5\end{array}\right]\quad\left[\begin{array}{cccc}
+-3 & 5 & -2 & -1\\
+0 & 5 & -4 & 0
+\end{array}\right]\quad\left[\begin{array}{ccccc}
+-4 & 1 & 5 & -7 & 3\\
+0 & 0 & 5 & 1 & -1
+\end{array}\right]
+\]
+
+\end_inset
+
+This is enough to know they all have infinitely many solutions, but writing
+ down those solutions still takes a little work.
+ The linear system represented by the first matrix is
+\begin_inset Formula 
+\[
+x_{1}+3x_{2}=5,
+\]
+
+\end_inset
+
+a single equation in two variables.
+ Solving for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, this system has solutions of the form 
+\begin_inset Formula $x_{1}=5-3x_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ arbitrary.
+ This implies that we are free to choose any value for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ and use the relation 
+\begin_inset Formula $x_{1}=5-3x_{2}$
+\end_inset
+
+ to determine 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+ For example, we may let 
+\begin_inset Formula $x_{2}=7$
+\end_inset
+
+, forcing 
+\begin_inset Formula $x_{1}=5-3(7)=-16$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $7,-16$
+\end_inset
+
+ is a solution.
+ In this way, the equation 
+\begin_inset Formula $x_{1}=5-3x_{2}$
+\end_inset
+
+ (or equivalently the equation 
+\begin_inset Formula $x_{1}+3x_{2}=5)$
+\end_inset
+
+ identifies all the solutions of the system, so we could write 
+\begin_inset Formula $\{x_{1}=5-3x_{2}\}$
+\end_inset
+
+ as the solution set.
+ 
+\end_layout
+
+\begin_layout Standard
+Looking back, it would have been just as well to solve for 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, yielding 
+\begin_inset Formula $x_{2}=\frac{5-x_{1}}{3}$
+\end_inset
+
+.
+ This formulation would suggest we are free to choose the value of 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and use the formula to determine 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+ Doing so makes the solution set 
+\begin_inset Formula $\left\{ x_{2}=\frac{5-x_{1}}{3}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Either variable may be treated as arbitrary, giving what appear to be two
+ different solutions.
+ If this makes you feel a little uneasy, you are not alone.
+ Even if we were never to have seen the second solution, the first one may
+ seem a little unsatisfying.
+ We have a formula for one variable and an implicit understanding that the
+ other is free to take on any value.
+ Perhaps a more satisfying way to write down the set of all solutions is
+ to return to the variable 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, for which we are free to assign any arbitrary value and let it be 
+\begin_inset Formula $r$
+\end_inset
+
+ (for 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+-bitrary).
+ Doing this, we have 
+\begin_inset Formula $x_{2}=r$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=5-3r$
+\end_inset
+
+ for a solution set.
+ In the spirit of linear algebra, this solution can be expressed in matrix
+ notation as 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+5-3r\\
+r
+\end{array}\right]
+\]
+
+\end_inset
+
+or better still as 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]+r\left[\begin{array}{c}
+-3\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+Take a moment to verify that these matrix representations are equivalent
+ to 
+\begin_inset Formula $x_{2}=r$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=5-3r$
+\end_inset
+
+.
+ The last presentation of the solution might feel more satisfying.
+ It does not favor one variable over the other and gives an explicit formula
+ for the value of each variable.
+ This form of the solution is called 
+\series bold
+parametric vector form
+\series default
+.
+ Returning to the variable 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and setting it equal to 
+\begin_inset Formula $r$
+\end_inset
+
+ leads to a similar parametric vector form of the solution.
+ Can you find it? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:parametricvectorform"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Particular and Homogeneous Solutions}
+\end_layout
+
+\end_inset
+
+The solution of the linear system
+\begin_inset Formula 
+\[
+x_{1}+3x_{2}=5
+\]
+
+\end_inset
+
+can be written as 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]_{p}+\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]_{h}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]_{p}$
+\end_inset
+
+, called the particular solution, is any one (particular) solution of the
+ system and 
+\begin_inset Formula $\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]_{h}$
+\end_inset
+
+, called the homogeneous solution, is the solution of the corresponding
+ homogeneous system, 
+\begin_inset Formula $x_{1}+3x_{2}=0$
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+\frac{5}{3}
+\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+ are valid particular solutions.
+ The homogeneous system has solution 
+\begin_inset Formula $x_{1}=-3x_{2}$
+\end_inset
+
+, so any solution that includes all instances where the first variable is
+ 
+\begin_inset Formula $-3$
+\end_inset
+
+ times the second, as in 
+\begin_inset Formula $r\left[\begin{array}{c}
+-3\\
+1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $r\left[\begin{array}{c}
+1\\
+-\frac{1}{3}
+\end{array}\right]$
+\end_inset
+
+, or 
+\begin_inset Formula $r\left[\begin{array}{c}
+-3\sqrt{2}\\
+\sqrt{2}
+\end{array}\right]$
+\end_inset
+
+, is a valid homogeneous solution.
+ Any combination of one particular solution and one homogeneous solution
+ is an equivalent 
+\series bold
+general solution
+\series default
+ of the linear system.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Putting the second matrix,
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+-3 & 5 & -2 & -1\\
+0 & 5 & -4 & 0
+\end{array}\right],
+\]
+
+\end_inset
+
+into reduced row echelon form will facilitate writing the solution of the
+ corresponding linear system.
+ Subtracting row 2 from row 1 and scaling each row appropriately yields
+ reduced row echelon form
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & -2/3 & 1/3\\
+0 & 1 & -4/5 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+(you should verify this) suggesting that the simplest way to write the solution
+ is
+\begin_inset Formula 
+\begin{align*}
+x_{1} & =\frac{1}{3}+\frac{2}{3}x_{3}\\
+x_{2} & =\frac{4}{5}x_{3}
+\end{align*}
+
+\end_inset
+
+This solution further suggests that we let 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ be 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+-bitrary and write the solution as
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]=\left[\begin{array}{c}
+1/3\\
+0\\
+0
+\end{array}\right]+r\left[\begin{array}{c}
+2/3\\
+4/5\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+For a solution without fractions, we can let 
+\begin_inset Formula $r=10+15s$
+\end_inset
+
+ (after all, 
+\begin_inset Formula $r$
+\end_inset
+
+ is arbitrary!), which gives
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right] & =\left[\begin{array}{c}
+1/3\\
+0\\
+0
+\end{array}\right]+(10+15s)\left[\begin{array}{c}
+2/3\\
+4/5\\
+1
+\end{array}\right]\\
+ & =\left[\begin{array}{c}
+1/3\\
+0\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+20/3+10s\\
+8+12s\\
+10+15s
+\end{array}\right]\\
+ & =\left[\begin{array}{c}
+7\\
+8\\
+10
+\end{array}\right]+s\left[\begin{array}{c}
+10\\
+12\\
+15
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $s$
+\end_inset
+
+ is the arbitrary variable.
+ There will always be various ways to write the parametric form of the solution
+ of a system with infinitely many solutions.
+\end_layout
+
+\begin_layout Standard
+Putting the third matrix into reduced row echelon form will facilitate writing
+ down its solution as well.
+ 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+-4 & 1 & 5 & -7 & 3\\
+0 & 0 & 5 & 1 & -1
+\end{array}\right]
+\]
+
+\end_inset
+
+is reduced by subtracting the second row from the first and then scaling
+ the rows appropriately.
+ The resulting reduced row echelon form is
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+1 & -\frac{1}{4} & 0 & 2 & -1\\
+0 & 0 & 1 & \frac{1}{5} & -\frac{1}{5}
+\end{array}\right]
+\]
+
+\end_inset
+
+from which we conclude that 
+\begin_inset Formula $x_{1}=-1+\frac{1}{4}x_{2}-2x_{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{3}=-\frac{1}{5}-\frac{1}{5}x_{4}$
+\end_inset
+
+.
+ Variables 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ are easily written in terms of 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{4}$
+\end_inset
+
+, suggesting we allow 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{4}$
+\end_inset
+
+ to be arbitrary.
+ Letting 
+\begin_inset Formula $x_{2}=r$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{4}=s$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $x_{1}=-1+\frac{1}{4}r-2s$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{3}=-\frac{1}{5}-\frac{1}{5}s$
+\end_inset
+
+, so
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}
+\end{array}\right]=\left[\begin{array}{c}
+-1\\
+0\\
+-\frac{1}{5}\\
+0
+\end{array}\right]+r\left[\begin{array}{c}
+\frac{1}{4}\\
+1\\
+0\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+0\\
+0\\
+-\frac{1}{5}\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+Two variables may be set arbitrarily this time, a consequence of the fact
+ that we have four variables and only two pivots.
+ Each variable column without a pivot gives a variable that may be set arbitrari
+ly, what are known as 
+\series bold
+free variables
+\series default
+.
+ Variables represented by columns with pivots are called 
+\series bold
+basic variables
+\series default
+.
+ Other forms of the solution may be obtained by letting different pairs
+ of variables be the arbitrary ones or by making substitutions for the arbitrary
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ in the above solution, such as 
+\begin_inset Formula $r=4t$
+\end_inset
+
+ and 
+\begin_inset Formula $s=4+5u$
+\end_inset
+
+.
+ Can you write the solution that results from this substitution? Answer
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:substitution2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The observations that free variables lead to infinitely many solutions and
+ a pivot in the rightmost column of an augmented matrix leads to no solution
+ justify the existence and uniqueness theorem for linear systems.
+\end_layout
+
+\begin_layout Theorem
+A linear system is consistent if and only if the rightmost column of its
+ augmented matrix representation is not a pivot column.
+ Furthermore, a consistent system will have (a) exactly one solution if
+ it admits no free variables; and (b) infinitely many solutions if it admits
+ at least one free variable.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Thus the nature of the solution set for any linear system can be determined
+ from a row echelon form of its associated augmented matrix.
+ In problems where this is the entire question at hand, the row echelon
+ form suffices, and can save a bit of time compared to using the reduced
+ row echelon form.
+ The reduced row echelon form, being a row echelon form itself, can be used
+ for this purpose, but better serves as a place from which to write down
+ the solutions of the system.
+ Thus in problems where the solution set for a linear system is needed,
+ it is usually worth the time and effort to find the reduced row echelon
+ form.
+\end_layout
+
+\begin_layout Standard
+Reduced row echelon form requires that the entries above pivots are zero
+ (step 5) and that each pivot is 1 (step 6), so reduced row echelon form
+ matrices are row echelon form matrices with these extra two properties.
+ The reduced row echelon form of a 
+\begin_inset Formula $2\times3$
+\end_inset
+
+ matrix will take one of the following seven forms, for example.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & \star & \star\\
+0 & 0 & 0
+\end{array}\right],\ \left[\begin{array}{ccc}
+1 & 0 & \star\\
+0 & 1 & \star
+\end{array}\right],\ \left[\begin{array}{ccc}
+1 & \star & 0\\
+0 & 0 & 1
+\end{array}\right],\ \left[\begin{array}{ccc}
+0 & 1 & \star\\
+0 & 0 & 0
+\end{array}\right],\ \left[\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right],\ \left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0
+\end{array}\right],\ \left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -97,11 +1213,41 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-augmented
+basic
 \begin_inset space ~
 \end_inset
 
-matrix A
+variable a variable corresponding to the column of an augmented matrix with
+ a pivot.
+\end_layout
+
+\begin_layout Description
+free
+\begin_inset space ~
+\end_inset
+
+variable a variable corresponding to the column of an augmented matrix with
+ no pivot.
+\end_layout
+
+\begin_layout Description
+consistent having at least one solution.
+\end_layout
+
+\begin_layout Description
+inconsistent having no solution.
+\end_layout
+
+\begin_layout Description
+parametric
+\begin_inset space ~
+\end_inset
+
+vector
+\begin_inset space ~
+\end_inset
+
+form a linear combination of vectors.
 \end_layout
 
 \begin_layout Standard
@@ -153,6 +1299,291 @@ finishexercises
 
 \begin_layout Subsection
 Answers
+\end_layout
+
+\begin_layout Description
+which
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+which? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:whichiswhich"
+
+\end_inset
+
+The three matrices 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+7 & 0 & 0\\
+0 & 10 & -3\\
+0 & 0 & 0
+\end{array}\right],\quad,\left[\begin{array}{ccc}
+7 & 0 & 0\\
+0 & 10 & 0\\
+0 & 0 & -3
+\end{array}\right]\quad\text{and }\left[\begin{array}{ccc}
+7 & 10 & -3\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+have associated linear systems with one solution, no solution, and infinitely
+ many solutions, respectively.
+\end_layout
+
+\begin_layout Description
+other
+\begin_inset space ~
+\end_inset
+
+row
+\begin_inset space ~
+\end_inset
+
+echelon
+\begin_inset space ~
+\end_inset
+
+forms 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:otherrowechelonforms"
+
+\end_inset
+
+The other four possible row echelon forms for 
+\begin_inset Formula $2\times3$
+\end_inset
+
+ matrices are
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+0 & \# & \star\\
+0 & 0 & 0
+\end{array}\right],\ \left[\begin{array}{ccc}
+0 & \# & \star\\
+0 & 0 & \#
+\end{array}\right],\ \left[\begin{array}{ccc}
+0 & 0 & \#\\
+0 & 0 & 0
+\end{array}\right],\text{ and }\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right],
+\]
+
+\end_inset
+
+cases where the first variable does not appear in either of the equations.
+ The last two forms, where neither variable appears in either equation,
+ have arguable applicability.
+\end_layout
+
+\begin_layout Description
+substitution 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:substitution"
+
+\end_inset
+
+The matrix 
+\begin_inset Formula $\left[\begin{array}{ccc}
+\# & \# & \star\\
+0 & \# & 0
+\end{array}\right]$
+\end_inset
+
+ is in row echelon form for any substitution of numbers, but is a special
+ case of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+\# & \star & \star\\
+0 & \# & \star
+\end{array}\right]$
+\end_inset
+
+.
+ The matrix 
+\begin_inset Formula $\left[\begin{array}{ccc}
+\star & \star & \star\\
+0 & \# & \star
+\end{array}\right]$
+\end_inset
+
+ is not in row echelon form for the substitution 
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 0 & \star\\
+0 & \# & \star
+\end{array}\right]$
+\end_inset
+
+.
+ The pivot in the second column cannot be zero.
+\end_layout
+
+\begin_layout Description
+parametric
+\begin_inset space ~
+\end_inset
+
+vector
+\begin_inset space ~
+\end_inset
+
+form 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:parametricvectorform"
+
+\end_inset
+
+Setting 
+\begin_inset Formula $x_{1}=r$
+\end_inset
+
+ yields 
+\begin_inset Formula $x_{2}=\frac{5-r}{3}$
+\end_inset
+
+, which is equivalent to
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+r\\
+\frac{5-r}{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+\frac{5}{3}
+\end{array}\right]+r\left[\begin{array}{c}
+1\\
+-\frac{1}{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+To make it look a little more like the previous solution, let 
+\begin_inset Formula $r=-3s$
+\end_inset
+
+, which gives 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+\frac{5}{3}
+\end{array}\right]+s\left[\begin{array}{c}
+-3\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+substitution
+\begin_inset space ~
+\end_inset
+
+2 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:substitution2"
+
+\end_inset
+
+The solution with substitution is
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}
+\end{array}\right] & =\left[\begin{array}{c}
+-1\\
+0\\
+-\frac{1}{5}\\
+0
+\end{array}\right]+4t\left[\begin{array}{c}
+\frac{1}{4}\\
+1\\
+0\\
+0
+\end{array}\right]+(4+5u)\left[\begin{array}{c}
+0\\
+0\\
+-\frac{1}{5}\\
+1
+\end{array}\right]\\
+ & =\left[\begin{array}{c}
+-1\\
+0\\
+-\frac{1}{5}\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+t\\
+4t\\
+0\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+0\\
+0\\
+-\frac{4}{5}-u\\
+4+5u
+\end{array}\right]\\
+ & =\left[\begin{array}{c}
+-1\\
+0\\
+-1\\
+4
+\end{array}\right]+t\left[\begin{array}{c}
+1\\
+4\\
+0\\
+0
+\end{array}\right]+u\left[\begin{array}{c}
+0\\
+0\\
+-1\\
+5
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body

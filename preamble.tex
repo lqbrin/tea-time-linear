@@ -7,6 +7,12 @@
 \fancyfoot{}
 \definecolor{shadecolor}{RGB}{204,204,255}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Redefine \boxed                                       %
+% will put a green box around a mathematical expression %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\boxed}[1]{\text{\fboxsep=.2em{\color{green}\fbox{\color{black}\m@th$\displaystyle#1$}}}}
+
 %%%%%%%%%%%%%%%%%%%%%
 % Define Bold \cdot %
 %%%%%%%%%%%%%%%%%%%%%
