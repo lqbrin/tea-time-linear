@@ -89,6 +89,10 @@ figs-within-sections
 
 \begin_body
 
+\begin_layout Part
+Mechanics
+\end_layout
+
 \begin_layout Chapter
 Matrix Calculations
 \end_layout

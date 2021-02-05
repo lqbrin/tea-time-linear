@@ -1161,8 +1161,8 @@ Thus the nature of the solution set for any linear system can be determined
  form suffices, and can save a bit of time compared to using the reduced
  row echelon form.
  The reduced row echelon form, being a row echelon form itself, can be used
- for this purpose, but better serves as a place from which to write down
- the solutions of the system.
+ for this purpose too, but better serves as a place from which to write
+ down the solutions of the system.
  Thus in problems where the solution set for a linear system is needed,
  it is usually worth the time and effort to find the reduced row echelon
  form.
@@ -1206,6 +1206,134 @@ Reduced row echelon form requires that the entries above pivots are zero
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+If 
+\family typewriter
+M
+\family default
+ is a matrix in SageMath, then 
+\family typewriter
+M.echelon_form()
+\family default
+ returns a row echelon from and 
+\family typewriter
+M.rref()
+\family default
+ returns the reduced row echelon form.
+ The following code computes a row echelon form and the reduced echelon
+ form of 
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccccc}
+364 & -238 & 364 & -560 & -1414\\
+-1144 & 1537 & -1786 & 2966 & 7759\\
+-1040 & 1277 & -1490 & 2662 & 7067\\
+-1000 & 1114 & -1528 & 2684 & 6502\\
+344 & -377 & 530 & -886 & -2087
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+M = matrix(5,5,[-480,-340,-110,-110,100,242,146,54,54,-60,-721,-673,-277,
+\end_layout
+
+\begin_layout LyX-Code
+                -152,155,968,809,316,191,-215,-1039,-882,-268,-268,170])
+\end_layout
+
+\begin_layout LyX-Code
+print(M); print()
+\end_layout
+
+\begin_layout LyX-Code
+print(M.echelon_form()); print()
+\end_layout
+
+\begin_layout LyX-Code
+print(M.rref()) 
+\end_layout
+
+\begin_layout Standard
+The output of the code is
+\end_layout
+
+\begin_layout LyX-Code
+[ -480  -340  -110  -110   100]
+\end_layout
+
+\begin_layout LyX-Code
+[  242   146    54    54   -60]
+\end_layout
+
+\begin_layout LyX-Code
+[ -721  -673  -277  -152   155]
+\end_layout
+
+\begin_layout LyX-Code
+[  968   809   316   191  -215]
+\end_layout
+
+\begin_layout LyX-Code
+[-1039  -882  -268  -268   170]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+[  1  13  87 462  45]
+\end_layout
+
+\begin_layout LyX-Code
+[  0  25  25 150  25]
+\end_layout
+
+\begin_layout LyX-Code
+[  0   0 125 625  50]
+\end_layout
+
+\begin_layout LyX-Code
+[  0   0   0 750 150]
+\end_layout
+
+\begin_layout LyX-Code
+[  0   0   0   0   0]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+[   1    0    0    0 -2/5]
+\end_layout
+
+\begin_layout LyX-Code
+[   0    1    0    0  2/5]
+\end_layout
+
+\begin_layout LyX-Code
+[   0    0    1    0 -3/5]
+\end_layout
+
+\begin_layout LyX-Code
+[   0    0    0    1  1/5]
+\end_layout
+
+\begin_layout LyX-Code
+[   0    0    0    0    0]
 \end_layout
 
 \begin_layout Subsection
@@ -1272,13 +1400,464 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:row-reduction"
+The augmented matrix for a linear system is given.
+ Determine whether it is in row echelon form.
+ If it is, (i) state whether the associated linear system is consistent
+ or inconsistent, and (ii) how many solutions it has.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccccc}
+1 & 4 & 0 & 0 & 3 & -1\\
+0 & 0 & 3 & 0 & 5 & -6\\
+0 & 0 & 0 & -1 & 2 & 3
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & -8\\
+0 & 1 & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccccc}
+2 & 4 & 4 & 1 & 1 & 3\\
+0 & 0 & -4 & 4 & -2 & -4\\
+0 & -5 & 0 & 3 & 5 & 3\\
+0 & 0 & 0 & 0 & -5 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+3 & 0 & 2 & -8\\
+0 & 1 & 1 & 9\\
+0 & 0 & 0 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & 0 & -5\\
+5 & -3 & 0 & -1\\
+-3 & 4 & -1 & -5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccccc}
+3 & -2 & 5 & 6 & 7\\
+0 & -2 & 0 & 7 & -4\\
+0 & 0 & 1 & 1 & 0\\
+0 & 0 & 0 & 18 & 37
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The augmented matrix for a linear system is given.
+ Determine whether it is in reduced row echelon form.
+ If it is, find the solution set.
+ If the solution set is infinite give your answer in parametric vector form.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 7 & 4\\
+0 & 1 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & 0 & \frac{1}{2}\\
+0 & 1 & 0 & -2\\
+0 & 0 & 1 & \text{-\ensuremath{\frac{3}{2}}}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccccc}
+1 & 6 & 0 & -2 & 0 & 5\\
+0 & 0 & 1 & 3 & 0 & 1\\
+0 & 0 & 0 & 0 & 1 & -2\\
+0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & 0 & 6\\
+0 & 0 & 1 & -2\\
+0 & 1 & 0 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccccc}
+0 & 1 & 0 & 6 & 0\\
+0 & 0 & 1 & -8 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccccc}
+1 & 0 & -9 & 0 & 4\\
+0 & 1 & 1 & 0 & 3\\
+0 & 0 & 0 & 1 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The augmented matrix for a linear system is given.
+ Is the system homogeneous? If yes, find the solution set.
+ If the solution set is infinite give your answer in parametric vector form.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & 6 & 0\\
+0 & 1 & -8 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 1 & 0 & 0\\
+0 & 3 & 1 & 0\\
+0 & 0 & 4 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+2 & 0 & -2 & 0\\
+0 & 3 & 1 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The coefficient matrix for a homogeneous linear system is given.
+ Find the solution set.
+ If the solution set is infinite give your answer in parametric vector form.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & 7 & -3\\
+0 & 4 & 2\\
+0 & 0 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+2 & 4 & 5\\
+0 & 2 & -7\\
+0 & -2 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+2 & 1 & -6\\
+-4 & -2 & 12\\
+1 & \frac{1}{2} & -3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use row reduction and a reduced row echelon form matrix to find all the
+ eigenvectors.
+ All eigenvalues for the matrix are given.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+12 & -8\\
+15 & -10
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=0,2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+40 & 66\\
+-22 & -37
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=7,-4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & -4 & 16\\
+3 & -7 & 4\\
+-6 & 2 & -14
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-6,-3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-7 & -2 & -1\\
+20 & 6 & 4\\
+-5 & -2 & -3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-2,0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Using 
+\begin_inset Formula $0,\#,\star$
+\end_inset
+
+ notation, list all the posible row echelon forms for a 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix.
+\end_layout
+
+\begin_layout Enumerate
+Suppose a 
+\begin_inset Formula $4\times7$
+\end_inset
+
+ coefficient matrix has 4 pivots.
+ What can you say about the existence and uniqueness of solutions for this
+ system?
+\end_layout
+
+\begin_layout Enumerate
+What conditions on the pivots of an augmented matrix would ensure the associated
+ system had a unique solution?
+\end_layout
+
+\begin_layout Enumerate
+What conditions on the pivots of a coefficient matrix would ensure the associate
+d system had a unique solution?
+\end_layout
+
+\begin_layout Enumerate
+A system of linear equations with fewer equations than unknowns is sometimes
+ called underdetermined.
+ Suppose such a system were consistent.
+ Explain why the system must have an infinite number of solutions.
+\end_layout
+
+\begin_layout Enumerate
+A system of linear equations with more equations than unknowns is sometimes
+ called overdetermined.
+ Can such a system be consistent? Illustrate your answer with an example
+ (if yes) or an argument as to why not (if no).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
 
 \end_inset
 
-R
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelonforms"
+
+\end_inset
+
+Use SageMath to find (i) a row echelon form (but not reduced row echelon
+ form) and (ii) a reduced row echelon form of
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+2049 & -4548 & -511 & -5177 & 6023\\
+-4526 & 10252 & 916 & 11438 & -13292\\
+-6947 & 15538 & 1740 & 17601 & -20614\\
+-1388 & 2866 & 263 & 3166 & -3697\\
+-5781 & 12812 & 1211 & 14321 & -16671
+\end{array}\right]
+\]
+
+\end_inset
+
+Code to help you get started can be found at the end of the exercises.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelonforms-1"
+
+\end_inset
+
+Use SageMath to find the reduced row echelon form of the augmented matrix,
+ and write down the solution of the corresponding linear system.
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+27 & -36 & -4 & 2 & 4 & 58\\
+12 & -16 & -2 & 1 & 2 & 27\\
+15 & -20 & -4 & 2 & 4 & 42\\
+-3 & 4 & -2 & 1 & 2 & 7
+\end{array}\right]
+\]
+
+\end_inset
+
+Code to help you get started can be found at the end of the exercises.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelonforms-2"
+
+\end_inset
+
+Suppose the matrix in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelonforms-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the coefficient matrix of a homogeneous linear system and repeat the
+ exercise.
 \end_layout
 
 \begin_layout Standard
@@ -1295,6 +1874,73 @@ finishexercises
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+SageMath code for exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelonforms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout LyX-Code
+M=matrix(5,5,[2049,-4548,-511,-5177,6023,-4526,10252,916,11438,
+\end_layout
+
+\begin_layout LyX-Code
+              -13292,-6947,15538,1740,17601,-20614,-1388,2866,
+\end_layout
+
+\begin_layout LyX-Code
+              263,3166,-3697,-5781,12812,1211,14321,-16671])
+\end_layout
+
+\begin_layout LyX-Code
+M.echelon_form()
+\end_layout
+
+\begin_layout Standard
+SageMath code for exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelonforms-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelonforms-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout LyX-Code
+M=matrix(4,6,[27,-36,-4,2,4,58,12,-16,-2,1,2,27,
+\end_layout
+
+\begin_layout LyX-Code
+              15,-20,-4,2,4,42,-3,4,-2,1,2,7])
+\end_layout
+
+\begin_layout LyX-Code
+M.rref()
 \end_layout
 
 \begin_layout Subsection

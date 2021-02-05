@@ -97,7 +97,7 @@ enumitem
 \begin_body
 
 \begin_layout Section
-The Determinant
+The Determinantl
 \end_layout
 
 \begin_layout Standard
@@ -479,7 +479,7 @@ The expression
 \end{array}\right|$
 \end_inset
 
- from calculation (
+from calculation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:determinant_example"
@@ -498,7 +498,7 @@ linear combination
 \begin_inset Formula $S$
 \end_inset
 
- be a set of objects for which addition and scalar mutliplication are defined.
+ be a set of objects on which addition and scalar mutliplication are defined.
  Sound familiar? For scalars 
 \begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
 \end_inset
@@ -610,6 +610,11 @@ The left-hand side of the equation
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Itemize
+The expected value of a random variable with finitely many possible values
+ is a linear combination.
 \end_layout
 
 \begin_layout Standard
