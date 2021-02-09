@@ -721,6 +721,15 @@ for all entries
 \end_inset
 
 .
+ To be complete 
+\begin_inset Formula $Ac$
+\end_inset
+
+ is defined to equal 
+\begin_inset Formula $cA$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -925,6 +934,15 @@ For any matrix
 \color inherit
  for all entries 
 \begin_inset Formula $A_{i,j}$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula $Ac$
+\end_inset
+
+ is defined to equal 
+\begin_inset Formula $cA$
 \end_inset
 
 .
