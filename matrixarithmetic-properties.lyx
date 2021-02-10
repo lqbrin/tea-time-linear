@@ -93,7 +93,7 @@ Theory
 \end_layout
 
 \begin_layout Chapter
-Matrix Arithmetic
+Matrix Algebra
 \end_layout
 
 \begin_layout Section
@@ -103,7 +103,11 @@ name "sec:operation-properties"
 
 \end_inset
 
-Properties of matrix operations
+Properties of Matrix Operations
+\end_layout
+
+\begin_layout Subsection
+Background
 \end_layout
 
 \begin_layout Standard
@@ -1113,6 +1117,10 @@ end{digression}
 
 \end_layout
 
+\begin_layout Subsection
+Some Properties
+\end_layout
+
 \begin_layout Standard
 Table 
 \begin_inset Float table
@@ -1339,12 +1347,25 @@ noprefix "false"
 \end_inset
 
  summarizes the properties of real numbers of interest to our study of linear
- algebra.
- Each one has a matrix analog as shown in the following theorem, where 
+ algebra, each of which has a matrix analog as shown in the following theorem.
+ An 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix whose entries are all zero is called a 
+\series bold
+zero matrix
+\series default
+ and is denoted by 
+\begin_inset Formula $0_{m\times n}$
+\end_inset
+
+ or just 
 \begin_inset Formula $0$
 \end_inset
 
- represents a matrix whose entries are all zero.
+ when its size is discernible through context.
+ 
 \end_layout
 
 \begin_layout Theorem
@@ -1377,6 +1398,13 @@ name "thm:commutativityforaddition"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:associativity-addition"
+
+\end_inset
+
+
 \begin_inset Formula $(A+B)+C=A+(B+C)$
 \end_inset
 
@@ -1384,6 +1412,13 @@ name "thm:commutativityforaddition"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:additive-identity"
+
+\end_inset
+
+
 \begin_inset Formula $A+0=A=0+A$
 \end_inset
 
@@ -1391,6 +1426,13 @@ name "thm:commutativityforaddition"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:associativity-multiplication"
+
+\end_inset
+
+
 \begin_inset Formula $A(BC)=(AB)C$
 \end_inset
 
@@ -1437,7 +1479,7 @@ noprefix "false"
  can be proven by noting that
 \begin_inset Formula 
 \[
-(A+B)_{i:j}=A_{i:j}+B_{i:j}
+(A+B)_{i,j}=A_{i,j}+B_{i,j}
 \]
 
 \end_inset
@@ -1445,27 +1487,27 @@ noprefix "false"
 and 
 \begin_inset Formula 
 \[
-(B+A)_{i:j}=B_{i:j}+A_{i:j}
+(B+A)_{i,j}=B_{i,j}+A_{i,j}
 \]
 
 \end_inset
 
 by definition of matrix addition.
  Since 
-\begin_inset Formula $A_{i:j}$
+\begin_inset Formula $A_{i,j}$
 \end_inset
 
  and 
-\begin_inset Formula $B_{i:j}$
+\begin_inset Formula $B_{i,j}$
 \end_inset
 
  are numbers, the commutative property for addition of real numbers allows
  us to use the fact that 
-\begin_inset Formula $A_{i:j}+B_{i:j}=B_{i:j}+A_{i:j}$
+\begin_inset Formula $A_{i,j}+B_{i,j}=B_{i,j}+A_{i,j}$
 \end_inset
 
  to deduce that 
-\begin_inset Formula $(A+B)_{i:j}=(B+A)_{i:j}$
+\begin_inset Formula $(A+B)_{i,j}=(B+A)_{i,j}$
 \end_inset
 
 .
@@ -1598,7 +1640,42 @@ In more words than symbols, the argument goes thus.
 \end_layout
 
 \begin_layout Standard
-In yet a third way to see that theorem 
+Using still fewer symbols, we might argue as follows.
+ The 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entries of 
+\begin_inset Formula $A+B$
+\end_inset
+
+ and 
+\begin_inset Formula $B+A$
+\end_inset
+
+ are calculated by adding the same two entries of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ only in different orders.
+ Since addition of real numbers (entries) is commutative, the 
+\begin_inset Formula $i,\negmedspace j$
+\end_inset
+
+-entries are equal.
+ Hence 
+\begin_inset Formula $A+B=B+A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In yet a fourth way to see that theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:matrixproperties-part1"
@@ -1622,27 +1699,27 @@ noprefix "false"
 \begin_inset Formula 
 \begin{align*}
 A+B & =\left[\begin{array}{cccc}
-A_{1:1} & A_{1:2} & \cdots & A_{1:n}\\
-A_{2:1} & A_{2:2} & \cdots & A_{2:n}\\
+A_{1,1} & A_{1,2} & \cdots & A_{1,n}\\
+A_{2,1} & A_{2,2} & \cdots & A_{2,n}\\
 \vdots & \vdots & \ddots & \vdots\\
-A_{m:1} & A_{m:2} & \cdots & A_{m:n}
+A_{m,1} & A_{m,2} & \cdots & A_{m,n}
 \end{array}\right]+\left[\begin{array}{cccc}
-B_{1:1} & B_{1:2} & \cdots & B_{1:n}\\
-B_{2:1} & B_{2:2} & \cdots & B_{2:n}\\
+B_{1,1} & B_{1,2} & \cdots & B_{1,n}\\
+B_{2,1} & B_{2,2} & \cdots & B_{2,n}\\
 \vdots & \vdots & \ddots & \vdots\\
-B_{m:1} & B_{m:2} & \cdots & B_{m:n}
+B_{m,1} & B_{m,2} & \cdots & B_{m,n}
 \end{array}\right]\\
  & =\left[\begin{array}{cccc}
-A_{1:1}+B_{1:1} & A_{1:2}+B_{1:2} & \cdots & A_{1:n}+B_{1:n}\\
-A_{2:1}+B_{2:1} & A_{2:2}+B_{2:2} & \cdots & A_{2:n}+B_{2:n}\\
+A_{1,1}+B_{1,1} & A_{1,2}+B_{1,2} & \cdots & A_{1,n}+B_{1,n}\\
+A_{2,1}+B_{2,1} & A_{2,2}+B_{2,2} & \cdots & A_{2,n}+B_{2,n}\\
 \vdots & \vdots & \ddots & \vdots\\
-A_{m:1}+B_{m:1} & A_{m:2}+B_{m:2} & \cdots & A_{m:n}+B_{m:n}
+A_{m,1}+B_{m,1} & A_{m,2}+B_{m,2} & \cdots & A_{m,n}+B_{m,n}
 \end{array}\right]\\
  & =\left[\begin{array}{cccc}
-B_{1:1}+A_{1:1} & B_{1:2}+A_{1:2} & \cdots & B_{1:n}+A_{1:n}\\
-B_{2:1}+A_{2:1} & B_{2:2}+A_{2:2} & \cdots & B_{2:n}+A_{2:n}\\
+B_{1,1}+A_{1,1} & B_{1,2}+A_{1,2} & \cdots & B_{1,n}+A_{1,n}\\
+B_{2,1}+A_{2,1} & B_{2,2}+A_{2,2} & \cdots & B_{2,n}+A_{2,n}\\
 \vdots & \vdots & \ddots & \vdots\\
-B_{m:1}+A_{m:1} & B_{m:2}+A_{m:2} & \cdots & B_{m:n}+A_{m:n}
+B_{m,1}+A_{m,1} & B_{m,2}+A_{m,2} & \cdots & B_{m,n}+A_{m,n}
 \end{array}\right]\\
  & =B+A
 \end{align*}
@@ -1734,6 +1811,13 @@ For all matrices
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:distribute-scalar-over-matrices"
+
+\end_inset
+
+
 \begin_inset Formula $r(A+B)=rA+rB$
 \end_inset
 
@@ -1741,6 +1825,13 @@ For all matrices
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:distributivity-matrix-over-scalars"
+
+\end_inset
+
+
 \begin_inset Formula $(r+s)A=rA+sA$
 \end_inset
 
@@ -1832,6 +1923,13 @@ For all matrices
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transpose-of-transpose"
+
+\end_inset
+
+
 \begin_inset Formula $(A^{T})^{T}=A$
 \end_inset
 
@@ -1839,6 +1937,13 @@ For all matrices
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transpose-of-scalar-multiple"
+
+\end_inset
+
+
 \begin_inset Formula $(rA)^{T}=rA^{T}$
 \end_inset
 
@@ -1846,6 +1951,13 @@ For all matrices
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transpose-of-sum"
+
+\end_inset
+
+
 \begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
 \end_inset
 
@@ -1895,6 +2007,13 @@ name "thm:inverse-of-a-product"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:inverse-of-transpose"
+
+\end_inset
+
+
 \begin_inset Formula $(A^{T})^{-1}=(A^{-1})^{T}$
 \end_inset
 
@@ -2071,7 +2190,7 @@ noprefix "false"
 
 ) the inverse of a product is the product of the inverses in the opposite
  order.
- Can you justify this? Answer on page 
+ Can you justify this claim? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:inverse-of-a-product"
@@ -2082,6 +2201,10 @@ noprefix "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection
+Applications to eigenpairs
 \end_layout
 
 \begin_layout Standard
@@ -2233,7 +2356,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-definition of eigenvector/eigenvalue pair
+definition of eigenpair
 \end_layout
 
 \end_inset
@@ -2742,6 +2865,27 @@ whenever the indicated operations are defined.
 \end_layout
 
 \end_deeper
+\begin_layout Description
+zero
+\begin_inset space ~
+\end_inset
+
+matrix an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix whose entries are all zero, denoted by 
+\begin_inset Formula $0_{m\times n}$
+\end_inset
+
+ or just 
+\begin_inset Formula $0$
+\end_inset
+
+ when its size is discernible through context.
+ 
+\end_layout
+
 \begin_layout Standard
 \noindent
 \begin_inset ERT
@@ -2764,9 +2908,816 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-P
+Illustrate the rule by example.
+ Then explain in your own words why the rule is true.
+ 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(A+B)+C=A+(B+C)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:associativity-addition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A+0=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:additive-identity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r(A+B)=rA+rB$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:distribute-scalar-over-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(r+s)A=rA+sA$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:distributivity-matrix-over-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rs)A=r(sA)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rA)B=A(rB)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A^{T})^{T}=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rA)^{T}=rA^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-scalar-multiple"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the rule by showing that the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of the lefthand side of the equation equals the 
+\begin_inset Formula $i\!j$
+\end_inset
+
+-entry of the righthand side.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A+0=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:additive-identity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A(BC)=(AB)C$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A(B+C)=AB+AC$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:left-distributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(r+s)A=rA+sA$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:distributivity-matrix-over-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rA)B=A(rB)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(B+C)A=BA+CA$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:rightdistributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A^{T})^{T}=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(AB)^{T}=B^{T}A^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the claim by a string of equalities where each equality is supported
+ by a definition or theorem or claim you justify separately.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(AB)^{-1}=B^{-1}A^{-1}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:inverse-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A^{T})^{-1}=(A^{-1})^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:inverse-of-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & 0\\
+-3 & 2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+4 & -2\\
+1 & 5
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $AB^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Without any further computation, find 
+\begin_inset Formula $BA^{T}$
+\end_inset
+
+ and explain how you got it.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+4 & 7\\
+3 & 5
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Without any further computation, find 
+\begin_inset Formula $(A^{T})^{-1}$
+\end_inset
+
+ and explain how you got it.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the claim 
+\begin_inset Formula 
+\[
+(A+B)(C+D)=AC+AD+BC+BD
+\]
+
+\end_inset
+
+using a series of equalities, each one supported by a theorem.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:definition-of-equality"
+
+\end_inset
+
+Justify the claim by arguing that the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the lefthand side of the conclusion equals the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the righthand side of the conclusion.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A=B$
+\end_inset
+
+ then 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ (The conclusion is 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ Use the assumption that 
+\begin_inset Formula $A=B$
+\end_inset
+
+ in your argument.)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+ then 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ (The conclusion is 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ Use the assumption that 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+ in your argument.)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:zero-products"
+
+\end_inset
+
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix.
+ Justify the claim by arguing that the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the lefthand side equals the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the righthand side.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A0_{n\times\ell}=0_{m\times\ell}$
+\end_inset
+
+ for any positive integer 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0_{\ell\times m}A=0_{\ell\times n}$
+\end_inset
+
+ for any positive integer 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:additive-inverse"
+
+\end_inset
+
+Show that, for any matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $-A$
+\end_inset
+
+ is the additive inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ That is,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $-A+A=0$
+\end_inset
+
+; and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A+(-A)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-A$
+\end_inset
+
+ has the common meaning 
+\begin_inset Formula $-1\cdot A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -2814,7 +3765,7 @@ name "ans:inverse-of-a-product"
  using the associative property multiple times, the definition of inverse
  multiple times, and the definition of the multiplicative identity once.
  The second half of the justification, that 
-\begin_inset Formula $(AB)(B^{-}1A^{-}1)=I$
+\begin_inset Formula $(AB)(B^{-1}A^{-1})=I$
 \end_inset
 
 , can be made by a similar string of equalities.
@@ -2857,21 +3808,16 @@ The general statement that if
 \begin_inset Formula $A-A=0$
 \end_inset
 
- (where 
-\begin_inset Formula $0$
-\end_inset
-
- represents a matrix whose entries are all zero) can be proven by noting
- that
+ can be proven by noting that
 \begin_inset Formula 
 \[
-(A-A)_{i:j}=A_{i:j}-A_{i:j}=0
+(A-A)_{i,j}=A_{i,j}-A_{i,j}=0
 \]
 
 \end_inset
 
 for all entries 
-\begin_inset Formula $(A-A)_{i:j}$
+\begin_inset Formula $(A-A)_{i,j}$
 \end_inset
 
 .

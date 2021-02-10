@@ -1,0 +1,998 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Matrix-Equations"
+
+\end_inset
+
+Matrix Equations
+\end_layout
+
+\begin_layout Standard
+The algebraic equation
+\begin_inset Formula 
+\[
+x-7=5
+\]
+
+\end_inset
+
+is commonly solved by adding 
+\begin_inset Formula $7$
+\end_inset
+
+ to both sides of the equation.
+ The reason this works is because 
+\begin_inset Formula $-7+7=0$
+\end_inset
+
+ (
+\begin_inset Formula $7$
+\end_inset
+
+ is the additive inverse of 
+\begin_inset Formula $-7$
+\end_inset
+
+) and 
+\begin_inset Formula $x+0=x$
+\end_inset
+
+ (
+\begin_inset Formula $0$
+\end_inset
+
+ is the additive identity).
+ In linear algebra there is an additive identity matrix (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:additive-identity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and there are additive inverses (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:additive-inverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), so analogous equations ought to be solvable similarly.
+ Indeed they are! The matrix equation
+\begin_inset Formula 
+\begin{equation}
+X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]=\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]\label{eq:first-matrix-equation}
+\end{equation}
+
+\end_inset
+
+can be solved by the same process.
+ Adding 
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]$
+\end_inset
+
+ to both sides of the equation gives
+\begin_inset Formula 
+\begin{align*}
+X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right] & =\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]\\
+X+\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right] & =\left[\begin{array}{cc}
+5+7 & -3+1\\
+2-3 & 4+8
+\end{array}\right]\\
+X & =\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+Substituting 
+\begin_inset Formula $\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]$
+\end_inset
+
+ for 
+\begin_inset Formula $X$
+\end_inset
+
+ in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:first-matrix-equation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) yields a true statement, so 
+\begin_inset Formula $\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]$
+\end_inset
+
+ is a solution.
+ 
+\end_layout
+
+\begin_layout Standard
+The slightly more advanced equation 
+\begin_inset Formula 
+\[
+8x-7=5
+\]
+
+\end_inset
+
+is commonly solved by first adding 
+\begin_inset Formula $7$
+\end_inset
+
+ to both sides and then dividing both sides by 
+\begin_inset Formula $8$
+\end_inset
+
+ (or equivalently multiplying both sides by 
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+, the multiplicative inverse of 
+\begin_inset Formula $8$
+\end_inset
+
+).
+ This might be demonstrated as follows.
+\begin_inset Formula 
+\begin{align*}
+8x-7 & =5\\
+8x-7+7 & =5+7\\
+8x & =12\\
+\frac{8x}{8} & =\frac{12}{8}\\
+x & =\frac{3}{2}
+\end{align*}
+
+\end_inset
+
+This method works because, in addtion to the facts that 
+\begin_inset Formula $-7$
+\end_inset
+
+ and 
+\begin_inset Formula $7$
+\end_inset
+
+ are additive inverses and 
+\begin_inset Formula $0$
+\end_inset
+
+ is the additive identity, 
+\begin_inset Formula $\frac{8}{8}=1$
+\end_inset
+
+ (
+\begin_inset Formula $8$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+ are multiplicative inverses) and 
+\begin_inset Formula $1x=x$
+\end_inset
+
+ (
+\begin_inset Formula $1$
+\end_inset
+
+ is the multiplicative identity).
+ In linear algebra, there are multiplicative identity matrices and there
+ are multiplicative inverses (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Division"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), so analogous equations ought to be solvable similarly.
+ Indeed they are! The matrix equation 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]=\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]
+\]
+
+\end_inset
+
+can be solved by the same process.
+ Adding 
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]$
+\end_inset
+
+ to both sides of the equation and then (left) multiplying both sides by
+ 
+\begin_inset Formula $\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]^{-1}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right] & =\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]\\
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X & =\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]\\
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X & =\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]\\
+\left[\begin{array}{cc}
+1 & -2\\
+-2 & \frac{9}{2}
+\end{array}\right]\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X & =\left[\begin{array}{cc}
+1 & -2\\
+-2 & \frac{9}{2}
+\end{array}\right]\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]\\
+\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]X & =\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]\\
+X & =\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+Substituting 
+\begin_inset Formula $\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]$
+\end_inset
+
+ for 
+\begin_inset Formula $X$
+\end_inset
+
+ in the original equation yields a true statement, so 
+\begin_inset Formula $\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]$
+\end_inset
+
+ is a solution.
+ 
+\end_layout
+
+\begin_layout Standard
+It seems as though the familiar ideas of adding, subtracting, multiplying,
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+dividing
+\begin_inset Quotes erd
+\end_inset
+
+ both sides of an equation are valid steps in solving matrix equations,
+ but better not to take it for granted on the back of a pair of examples
+ where it works.
+ In adding a matrix to both sides of an equation (or subtracting a matrix
+ from both sides of an equation) in an attempt to solve it, we are using
+ the principle that for matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\text{if }A=B\text{ then }A+C=B+C\label{eq:addition-property-of-equality}
+\end{equation}
+
+\end_inset
+
+whenever the indicated operations are defined.
+ Since the veracity of this proposition is critical to the logical validity
+ of the solutions above, solid proof is warranted.
+\end_layout
+
+\begin_layout Standard
+The principle of equality suggested in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:definition-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is useful.
+ It says that 
+\begin_inset Formula $A=B$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ That is, if we know that 
+\begin_inset Formula $A=B$
+\end_inset
+
+, we can safely say that 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ And on the other hand, if we know that 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+, we can safely say that 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ Hopefully that sounds logical whether you have completed exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:definition-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or not.
+ Because proposition (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) begins with the assumption that 
+\begin_inset Formula $A=B$
+\end_inset
+
+, we can immediately deduce that 
+\begin_inset Formula $0=A-B$
+\end_inset
+
+.
+ Now because 
+\begin_inset Formula $C-C=0$
+\end_inset
+
+ for any matrix 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $0$
+\end_inset
+
+ is the additive identity, we can proceed as follows.
+\begin_inset Formula 
+\begin{align*}
+0 & =A-B\\
+ & =(A-B)+0\\
+ & =(A-B)+(C-C)\\
+ & =((A-B)+C)-C\\
+ & =(A+(-B+C))-C\\
+ & =(A+(C-B))-C\\
+ & =((A+C)-B)-C\\
+ & =(A+C)+(-B-C)\\
+ & =(A+C)-(B+C)
+\end{align*}
+
+\end_inset
+
+We have used associativity and commutativity for addition of matrices as
+ well as the distributive property.
+ Now that we have 
+\begin_inset Formula $0=(A+C)-(B+C)$
+\end_inset
+
+ we conclude that 
+\begin_inset Formula $A+C=B+C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Equally critical to the second solution above is the principle that for
+ matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\text{if }A=B\text{ then }CA=CB\label{eq:multiplication-property-of-equality-part-1}
+\end{equation}
+
+\end_inset
+
+whenever the indicated operations are defined.
+ The proof is very similar to the proof of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Starting with 
+\begin_inset Formula $A=B$
+\end_inset
+
+ allows us to proceed with 
+\begin_inset Formula $0=A-B$
+\end_inset
+
+, but this time we employ the fact that 
+\begin_inset Formula $C0=0$
+\end_inset
+
+ for any matrix 
+\begin_inset Formula $C$
+\end_inset
+
+ (exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:zero-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{align*}
+0 & =A-B\\
+ & =C(A-B)\\
+ & =CA-CB
+\end{align*}
+
+\end_inset
+
+and therefore 
+\begin_inset Formula $CA=CB$
+\end_inset
+
+.
+ It is also true that 
+\begin_inset Formula 
+\begin{equation}
+\text{if }A=B\text{ then }AC=BC\label{eq:multiplication-property-of-equality-part-2}
+\end{equation}
+
+\end_inset
+
+whenever the indicated operations are defined.
+ Why is this claim needed? Can you justify this claim? Answers on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:mult-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The need to solve a wholly symbolic equation often arises in the study of
+ mathematics, so principles (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are often used to solve equations such as 
+\begin_inset Formula $XA-I=B$
+\end_inset
+
+ for 
+\begin_inset Formula $X$
+\end_inset
+
+, for example.
+ The process is the same.
+ We isolate the 
+\begin_inset Formula $X$
+\end_inset
+
+ by adding to or multiplying both sides of the equation by appropriate matrices:
+\begin_inset Formula 
+\begin{align*}
+XA-I+I & =B+I\\
+XA & =B+I\\
+XAA^{-1} & =(B+I)A^{-1}\\
+X & =(B+I)A^{-1}
+\end{align*}
+
+\end_inset
+
+Notice the careful right multiplication of both sides in the third line.
+ It is not valid to left multiply one side of the equation while right multiplyi
+ng the other.
+\end_layout
+
+\begin_layout Subsection
+The most important equation in linear algebra
+\end_layout
+
+\begin_layout Standard
+For essentialy the entire rest of this textbook, we wil be concerned with
+ solving equations of the form 
+\begin_inset Formula 
+\begin{equation}
+M\mathbf{v}=\mathbf{b}\label{eq:Mv-equals-b}
+\end{equation}
+
+\end_inset
+
+for 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ Symbolically the solution is straightforward:
+\begin_inset Formula 
+\begin{align*}
+M^{-1}(M\mathbf{v}) & =M^{-1}\mathbf{b}\\
+(M^{-1}M)\mathbf{v} & =M^{-1}\mathbf{b}\\
+I\mathbf{v} & =M^{-1}\mathbf{b}\\
+\mathbf{v} & =M^{-1}\mathbf{b}
+\end{align*}
+
+\end_inset
+
+but it has far reaching consequences and bears careful study.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+p
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Prove that the converse of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is true.
+ That is, for all matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+, if 
+\begin_inset Formula $A+C=B+C$
+\end_inset
+
+ then 
+\begin_inset Formula $A=B$
+\end_inset
+
+ whenever the indicated operations are defined.
+\end_layout
+
+\begin_layout Enumerate
+Prove that the converse of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is false.
+ by supplying matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ such that 
+\begin_inset Formula $CA=CB$
+\end_inset
+
+ but 
+\begin_inset Formula $A\neq B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+multiplication
+\begin_inset space ~
+\end_inset
+
+property
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+equality
+\begin_inset space ~
+\end_inset
+
+part
+\begin_inset space ~
+\end_inset
+
+2 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:mult-property-of-equality"
+
+\end_inset
+
+Claims (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are distinct, and therefore both needed, because matrix multiplication
+ is not commutative.
+ Claim (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) can be proven as follows.
+ Since 
+\begin_inset Formula $A=B$
+\end_inset
+
+, 
+\begin_inset Formula $0=A-B$
+\end_inset
+
+.
+ Hence, if 
+\begin_inset Formula $A=B$
+\end_inset
+
+ then
+\begin_inset Formula 
+\begin{align*}
+0 & =A-B\\
+ & =(A-B)C\\
+ & =AC-BC
+\end{align*}
+
+\end_inset
+
+and therefore 
+\begin_inset Formula $AC=BC$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

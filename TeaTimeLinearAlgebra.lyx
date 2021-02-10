@@ -545,7 +545,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 3: Matrix Arithmetic 
+% Chapter 3: Matrix Algebra 
 \end_layout
 
 \end_inset
@@ -557,6 +557,16 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "matrixarithmetic-properties.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "matrixarithmetic-equations.lyx"
 
 \end_inset
 

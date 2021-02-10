@@ -97,6 +97,12 @@ enumitem
 \begin_body
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Matrix-Division"
+
+\end_inset
+
 Matrix 
 \begin_inset Quotes eld
 \end_inset
@@ -512,17 +518,7 @@ As you were hopefully able to verify, all of these products are the (appropriate
 \begin_inset Formula $B$
 \end_inset
 
-, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Come back to this in the matrix algebra section, like Lay page 105.
-\end_layout
-
-\end_inset
-
-
+,
 \end_layout
 
 \begin_layout Standard
@@ -543,6 +539,164 @@ TODO: Come back to this in the matrix algebra section, like Lay page 105.
 
 \begin_layout Standard
 \noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Inverses of non-square matrices?}
+\end_layout
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $A$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix and there are matrices 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $R$
+\end_inset
+
+ such that 
+\begin_inset Formula $LA=I$
+\end_inset
+
+ and 
+\begin_inset Formula $AR=I$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $A$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ columns and 
+\begin_inset Formula $LA=I$
+\end_inset
+
+, the identity matrix in this equation must also have 
+\begin_inset Formula $n$
+\end_inset
+
+ columns.
+ To be precise then, we have 
+\begin_inset Formula $LA=I_{n\times n}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $A$
+\end_inset
+
+ has 
+\begin_inset Formula $m$
+\end_inset
+
+ rows and 
+\begin_inset Formula $AR=I$
+\end_inset
+
+, the identity matrix in this equation must also have 
+\begin_inset Formula $m$
+\end_inset
+
+ rows.
+ To be precise then, we must have 
+\begin_inset Formula $AR=I_{m\times m}$
+\end_inset
+
+.
+ Furthermore, for the proucts 
+\begin_inset Formula $LA$
+\end_inset
+
+ and 
+\begin_inset Formula $AR$
+\end_inset
+
+ to be defined, it must be that 
+\begin_inset Formula $L$
+\end_inset
+
+ has 
+\begin_inset Formula $m$
+\end_inset
+
+ columns and 
+\begin_inset Formula $R$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ rows.
+ It follows that both products 
+\begin_inset Formula $L(AR)$
+\end_inset
+
+ and 
+\begin_inset Formula $(LA)R$
+\end_inset
+
+ are defined and
+\begin_inset Formula 
+\[
+L(AR)=LI_{m\times m}=L\quad\text{and}\quad(LA)R=I_{n\times n}R=R
+\]
+
+\end_inset
+
+By the associative property for matrix multiplication (which we will encounter
+ later), 
+\begin_inset Formula $L(AR)=(LA)R$
+\end_inset
+
+, so we have 
+\begin_inset Formula $L=R$
+\end_inset
+
+.
+ Because they are equal, 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $R$
+\end_inset
+
+ must be the same size and therefore 
+\begin_inset Formula $A$
+\end_inset
+
+ must be square.
+ Invertibility only makes sense for square matrices.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
 This is enough that we could define 
 \begin_inset Formula ${\displaystyle \frac{I}{A}}$
 \end_inset
