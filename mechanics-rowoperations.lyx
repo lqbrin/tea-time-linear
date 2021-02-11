@@ -91,9 +91,22 @@ figs-within-sections
 
 \begin_layout Chapter
 Row Operations
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Row-Operations"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Systems-of-Linear"
+
+\end_inset
+
 Systems of Linear Equations
 \end_layout
 
@@ -814,6 +827,12 @@ Take a short break to verify at least one of the entries in each row.
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "par:multiplication-as-linear-comb-of-rows"
+
+\end_inset
+
 The 
 \begin_inset Formula $1,\!j$
 \end_inset
