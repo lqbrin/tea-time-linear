@@ -1,0 +1,2760 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Matrix-Equations"
+
+\end_inset
+
+Matrix Equations
+\end_layout
+
+\begin_layout Standard
+The algebraic equation
+\begin_inset Formula 
+\[
+x-7=5
+\]
+
+\end_inset
+
+is commonly solved by adding 
+\begin_inset Formula $7$
+\end_inset
+
+ to both sides of the equation.
+ The reason this works is because 
+\begin_inset Formula $-7+7=0$
+\end_inset
+
+ (
+\begin_inset Formula $7$
+\end_inset
+
+ is the additive inverse of 
+\begin_inset Formula $-7$
+\end_inset
+
+) and 
+\begin_inset Formula $x+0=x$
+\end_inset
+
+ (
+\begin_inset Formula $0$
+\end_inset
+
+ is the additive identity).
+ In linear algebra there is an additive identity matrix (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:additive-identity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and there are additive inverses (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:additive-inverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), so analogous equations ought to be solvable similarly.
+ Indeed they are! The matrix equation
+\begin_inset Formula 
+\begin{equation}
+X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]=\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]\label{eq:first-matrix-equation}
+\end{equation}
+
+\end_inset
+
+can be solved by the same process.
+ Adding 
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]$
+\end_inset
+
+ to both sides of the equation gives
+\begin_inset Formula 
+\begin{align*}
+X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right] & =\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]\\
+X+\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right] & =\left[\begin{array}{cc}
+5+7 & -3+1\\
+2-3 & 4+8
+\end{array}\right]\\
+X & =\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+Substituting 
+\begin_inset Formula $\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]$
+\end_inset
+
+ for 
+\begin_inset Formula $X$
+\end_inset
+
+ in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:first-matrix-equation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) yields a true statement, so 
+\begin_inset Formula $\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]$
+\end_inset
+
+ is a solution.
+ 
+\end_layout
+
+\begin_layout Standard
+The slightly more advanced equation 
+\begin_inset Formula 
+\[
+8x-7=5
+\]
+
+\end_inset
+
+is commonly solved by first adding 
+\begin_inset Formula $7$
+\end_inset
+
+ to both sides and then dividing both sides by 
+\begin_inset Formula $8$
+\end_inset
+
+ (or equivalently multiplying both sides by 
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+, the multiplicative inverse of 
+\begin_inset Formula $8$
+\end_inset
+
+).
+ This might be demonstrated as follows.
+\begin_inset Formula 
+\begin{align*}
+8x-7 & =5\\
+8x-7+7 & =5+7\\
+8x & =12\\
+\frac{8x}{8} & =\frac{12}{8}\\
+x & =\frac{3}{2}
+\end{align*}
+
+\end_inset
+
+This method works because, in addtion to the facts that 
+\begin_inset Formula $-7$
+\end_inset
+
+ and 
+\begin_inset Formula $7$
+\end_inset
+
+ are additive inverses and 
+\begin_inset Formula $0$
+\end_inset
+
+ is the additive identity, 
+\begin_inset Formula $\frac{8}{8}=1$
+\end_inset
+
+ (
+\begin_inset Formula $8$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+ are multiplicative inverses) and 
+\begin_inset Formula $1x=x$
+\end_inset
+
+ (
+\begin_inset Formula $1$
+\end_inset
+
+ is the multiplicative identity).
+ In linear algebra, there are multiplicative identity matrices and there
+ are multiplicative inverses (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Division"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), so analogous equations ought to be solvable similarly.
+ Indeed they are! The matrix equation 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]=\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]
+\]
+
+\end_inset
+
+can be solved by the same process.
+ Adding 
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]$
+\end_inset
+
+ to both sides of the equation and then (left) multiplying both sides by
+ 
+\begin_inset Formula $\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]^{-1}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X-\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right] & =\left[\begin{array}{cc}
+5 & -3\\
+2 & 4
+\end{array}\right]+\left[\begin{array}{cc}
+7 & 1\\
+-3 & 8
+\end{array}\right]\\
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X & =\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]\\
+\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X & =\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]\\
+\left[\begin{array}{cc}
+1 & -2\\
+-2 & \frac{9}{2}
+\end{array}\right]\left[\begin{array}{cc}
+9 & 4\\
+4 & 2
+\end{array}\right]X & =\left[\begin{array}{cc}
+1 & -2\\
+-2 & \frac{9}{2}
+\end{array}\right]\left[\begin{array}{cc}
+12 & -2\\
+-1 & 12
+\end{array}\right]\\
+\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]X & =\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]\\
+X & =\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+Substituting 
+\begin_inset Formula $\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]$
+\end_inset
+
+ for 
+\begin_inset Formula $X$
+\end_inset
+
+ in the original equation yields a true statement, so 
+\begin_inset Formula $\left[\begin{array}{cc}
+14 & -26\\
+\frac{-57}{2} & 58
+\end{array}\right]$
+\end_inset
+
+ is a solution.
+ 
+\end_layout
+
+\begin_layout Standard
+It seems as though the familiar ideas of adding, subtracting, multiplying,
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+dividing
+\begin_inset Quotes erd
+\end_inset
+
+ both sides of an equation are valid steps in solving matrix equations,
+ but better not to take it for granted on the back of a pair of examples
+ where it works.
+ In adding a matrix to both sides of an equation (or subtracting a matrix
+ from both sides of an equation) in an attempt to solve it, we are using
+ the principle that for matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\text{if }A=B\text{ then }A+C=B+C\label{eq:addition-property-of-equality}
+\end{equation}
+
+\end_inset
+
+whenever the indicated operations are defined.
+ Since the veracity of this proposition is critical to the logical validity
+ of the solutions above, solid proof is warranted.
+\end_layout
+
+\begin_layout Standard
+The principle of equality suggested in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:definition-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is useful.
+ It says that 
+\begin_inset Formula $A=B$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ That is, if we know that 
+\begin_inset Formula $A=B$
+\end_inset
+
+, we can safely say that 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ And if we know that 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+, we can safely say that 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ Hopefully that sounds logical whether you have completed exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:definition-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or not.
+ 
+\end_layout
+
+\begin_layout Standard
+Getting back to proposition (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), note that it begins with the assumption that 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ By the principle of equality we can immediately deduce that 
+\begin_inset Formula $0=A-B$
+\end_inset
+
+.
+ Now because 
+\begin_inset Formula $C-C=0$
+\end_inset
+
+ for any matrix 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $0$
+\end_inset
+
+ is the additive identity, we can proceed as follows.
+\begin_inset Formula 
+\begin{align*}
+0 & =A-B\\
+ & =(A-B)+0\\
+ & =(A-B)+(C-C)\\
+ & =((A-B)+C)-C\\
+ & =(A+(-B+C))-C\\
+ & =(A+(C-B))-C\\
+ & =((A+C)-B)-C\\
+ & =(A+C)+(-B-C)\\
+ & =(A+C)-(B+C)
+\end{align*}
+
+\end_inset
+
+We have used associativity and commutativity for addition of matrices as
+ well as the distributive property as well.
+ Now that we have 
+\begin_inset Formula $0=(A+C)-(B+C)$
+\end_inset
+
+ we conclude that 
+\begin_inset Formula $A+C=B+C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Equally critical to the second solution above is the principle that for
+ matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\text{if }A=B\text{ then }CA=CB\label{eq:multiplication-property-of-equality-part-1}
+\end{equation}
+
+\end_inset
+
+whenever the indicated operations are defined.
+ The proof is very similar to the proof of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Starting with 
+\begin_inset Formula $A=B$
+\end_inset
+
+ allows us to proceed with 
+\begin_inset Formula $0=A-B$
+\end_inset
+
+, but this time we employ the fact that 
+\begin_inset Formula $C0=0$
+\end_inset
+
+ for any matrix 
+\begin_inset Formula $C$
+\end_inset
+
+ (exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:zero-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{align*}
+0 & =A-B\\
+ & =C(A-B)\\
+ & =CA-CB
+\end{align*}
+
+\end_inset
+
+and therefore 
+\begin_inset Formula $CA=CB$
+\end_inset
+
+.
+ It is also true that 
+\begin_inset Formula 
+\begin{equation}
+\text{if }A=B\text{ then }AC=BC\label{eq:multiplication-property-of-equality-part-2}
+\end{equation}
+
+\end_inset
+
+whenever the indicated operations are defined.
+ Why is this claim needed? Can you justify this claim? Answers on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:mult-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Stmbolic equations
+\end_layout
+
+\begin_layout Standard
+The need to solve a wholly symbolic equation often arises in the study of
+ mathematics.
+ Principles (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are often used to solve such equations.
+ Suppose 
+\begin_inset Formula $XA-I=B$
+\end_inset
+
+ and we are interested in solving for 
+\begin_inset Formula $X$
+\end_inset
+
+, for example.
+ The process is the same as we would use if all the symbols represented
+ numbers.
+ We isolate the 
+\begin_inset Formula $X$
+\end_inset
+
+ by adding to or multiplying both sides of the equation by appropriate matrices:
+\begin_inset Formula 
+\begin{align*}
+XA-I+I & =B+I\\
+XA & =B+I\\
+XAA^{-1} & =(B+I)A^{-1}\\
+X & =(B+I)A^{-1}
+\end{align*}
+
+\end_inset
+
+Notice the careful right multiplication of both sides in the third line.
+ It is not valid to left multiply one side of the equation while right multiplyi
+ng the other.
+ Also, we should note that this solution is only good as long as 
+\begin_inset Formula $A$
+\end_inset
+
+ is invertible!
+\end_layout
+
+\begin_layout Subsection
+The most important equation in linear algebra
+\end_layout
+
+\begin_layout Standard
+For essentialy the entire rest of this textbook, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Come back to decide whether this is true.
+\end_layout
+
+\end_inset
+
+ we wil be concerned with solving equations of the form 
+\begin_inset Formula 
+\begin{equation}
+M\mathbf{v}=\mathbf{b}\label{eq:Mv-equals-b}
+\end{equation}
+
+\end_inset
+
+for 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ Symbolically the solution is straightforward when 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible.
+ Using associativity of multiplication, principle (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), and the definitions of inverse and identity matrices:
+\begin_inset Formula 
+\begin{align}
+M^{-1}(M\mathbf{v}) & =M^{-1}\mathbf{b}\nonumber \\
+(M^{-1}M)\mathbf{v} & =M^{-1}\mathbf{b}\nonumber \\
+I\mathbf{v} & =M^{-1}\mathbf{b}\nonumber \\
+\mathbf{v} & =M^{-1}\mathbf{b}\label{eq:Mv-equals-b-solved}
+\end{align}
+
+\end_inset
+
+but understanding it and its ramifications is not.
+ Plus, what if 
+\begin_inset Formula $M$
+\end_inset
+
+ is not invertible?
+\end_layout
+
+\begin_layout Standard
+On page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:multiplication-as-linear-comb-of-rows"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ it was discovered that the product of a matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ left multiplied by an elementary matrix 
+\begin_inset Formula $E$
+\end_inset
+
+ could be calculated one row at a time by noting that each row of 
+\begin_inset Formula $EA$
+\end_inset
+
+ is the linear combination of the rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ with coefficients from the corresponding row of 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ In symbols, row 
+\begin_inset Formula $r$
+\end_inset
+
+ of 
+\begin_inset Formula $EA$
+\end_inset
+
+ can be computed as 
+\begin_inset Formula $(EA)_{r,:}=E_{r,1}A_{1,:}+E_{r,2}A_{2,:}+\cdots+E_{r,n}A_{n,:}$
+\end_inset
+
+.
+ But this computation holds for any matrix product.
+ Given any matrices 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ where 
+\begin_inset Formula $BA$
+\end_inset
+
+ is defined—that is, 
+\begin_inset Formula $B$
+\end_inset
+
+ has the same number of columns as 
+\begin_inset Formula $A$
+\end_inset
+
+ has rows, say 
+\begin_inset Formula $n$
+\end_inset
+
+—row 
+\begin_inset Formula $r$
+\end_inset
+
+ of 
+\begin_inset Formula $BA$
+\end_inset
+
+ can be computed as
+\begin_inset Formula 
+\begin{equation}
+(BA)_{r,:}=B_{r,1}A_{1,:}+B_{r,2}A_{2,:}+\cdots+B_{r,n}A_{n,:}.\label{eq:matrix-prod-as-lin-comb-of-rows}
+\end{equation}
+
+\end_inset
+
+This fact is helpful in understanding matrix products such as the one in
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Mv-equals-b"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ For example, suppose the third row of 
+\begin_inset Formula $M$
+\end_inset
+
+ is twice the first row of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Then the third row of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ must be twice the first row of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ From (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:matrix-prod-as-lin-comb-of-rows"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{align*}
+\mathbf{b}_{1,:} & =M_{1,1}\mathbf{v}_{1,:}+M_{1,2}\mathbf{v}_{2,:}+\cdots+M_{1,n}\mathbf{v}_{n,:}\\
+\mathbf{b}_{3,:} & =M_{3,1}\mathbf{v}_{1,:}+M_{3,2}\mathbf{v}_{2,:}+\cdots+M_{3,n}\mathbf{v}_{n,:}
+\end{align*}
+
+\end_inset
+
+but 
+\begin_inset Formula $M_{3,:}=2M_{1,:}$
+\end_inset
+
+, which means 
+\begin_inset Formula $M_{3,1}=2M_{1,1},\ M_{3,2}=2M_{1,2},\ldots,M_{3,n}=2M_{1,n}$
+\end_inset
+
+, so
+\begin_inset Formula 
+\begin{align*}
+\mathbf{b}_{3,:} & =2M_{1,1}\mathbf{v}_{1,:}+2M_{1,2}\mathbf{v}_{2,:}+\cdots+2M_{1,n}\mathbf{v}_{n,:}\\
+ & =2(M_{1,1}\mathbf{v}_{1,:}+M_{1,2}\mathbf{v}_{2,:}+\cdots+M_{1,n}\mathbf{v}_{n,:})\\
+ & =2\mathbf{b}_{1,:}
+\end{align*}
+
+\end_inset
+
+As a consequence, for such a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Mv-equals-b"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) can only have solutions if the third row of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ happens to be twice the first row of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ There are choices of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ for which the equation has no solution!
+\end_layout
+
+\begin_layout Standard
+Exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:begin-row-lin-comb-det-connection"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ through 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:end-row-lin-comb-det-connection"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ provide evidence that any matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ in which some row is a linear combination of the others (this is certainly
+ the case for a matrix where the third row is twice the first) will have
+ determinant zero.
+ Formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse_by_adjugate"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) suggests that matrices with zero determinant are not invertible.
+ Stringing all this together, it seems the following concepts are interconnected.
+\end_layout
+
+\begin_layout Itemize
+Some row of 
+\begin_inset Formula $M$
+\end_inset
+
+ is a linear combination of the others.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M$
+\end_inset
+
+ has determinant zero.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M$
+\end_inset
+
+ is not invertible.
+\end_layout
+
+\begin_layout Itemize
+The equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has no solution for certain choices of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We are not quite ready to completely clarify the connection, but the pieces
+ of the puzzle are falling into place, and taking a slightly different perspecti
+ve on matrix multiplication will add one more item to the list.
+\end_layout
+
+\begin_layout Standard
+Just as we can imagine the product of two matrices as a collection of linear
+ combinations of the rows of the righthand matrix, we can also imagine the
+ product as a collection of linear combinations of the columns of the lefthand
+ matrix.
+ Thinking generally again, suppose we are given an arbitrary pair of matrices
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ where 
+\begin_inset Formula $BA$
+\end_inset
+
+ is defined—that is, 
+\begin_inset Formula $B$
+\end_inset
+
+ has the same number of columns as 
+\begin_inset Formula $A$
+\end_inset
+
+ has rows, say 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ By definition the 
+\begin_inset Formula $i,\!c$
+\end_inset
+
+-entry of 
+\begin_inset Formula $BA$
+\end_inset
+
+ is 
+\begin_inset Formula $B_{i,1}A_{1,c}+B_{i,2}A_{2,c}+\cdots+B_{i,n}A_{n,c}$
+\end_inset
+
+.
+ Swapping the order of each product, 
+\begin_inset Formula $(BA)_{i,c}=A_{1,c}B_{i,1}+A_{2,c}B_{i,2}+\cdots+A_{n,c}B_{i,n}$
+\end_inset
+
+.
+ In particular,
+\begin_inset Formula 
+\begin{align}
+(BA)_{1,c} & =A_{1,c}B_{1,1}+A_{2,c}B_{1,2}+\cdots+A_{n,c}B_{1,n}\nonumber \\
+(BA)_{2,c} & =A_{1,c}B_{2,1}+A_{2,c}B_{2,2}+\cdots+A_{n,c}B_{2,n}\nonumber \\
+ & \vdots\nonumber \\
+(BA)_{m,c} & =A_{1,c}B_{m,1}+A_{2,c}B_{m,2}+\cdots+A_{n,c}B_{m,n}\label{eq:intermediary-step-mult-as-lin-comb-of-cols}
+\end{align}
+
+\end_inset
+
+Reading these equations together (as columns of numbers) from left to right,
+ they imply that column 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $BA$
+\end_inset
+
+ (the lefthand sides of the equations) equals 
+\begin_inset Formula $A_{1,c}$
+\end_inset
+
+ times column 1 of 
+\begin_inset Formula $B$
+\end_inset
+
+ (the first terms of the righthand sides) plus 
+\begin_inset Formula $A_{2,c}$
+\end_inset
+
+ times column 2 of 
+\begin_inset Formula $B$
+\end_inset
+
+ (the second terms of the righthand sides) plus 
+\begin_inset Formula $A_{3,c}$
+\end_inset
+
+ times column 3 of 
+\begin_inset Formula $B$
+\end_inset
+
+ (the third terms of the righthand sides), and so on.
+ In symbols,
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+(BA)_{1,c}\\
+(BA)_{2,c}\\
+\vdots\\
+(BA)_{m,c}
+\end{array}\right]=A_{1,c}\left[\begin{array}{c}
+B_{1,1}\\
+B_{2,1}\\
+\vdots\\
+B_{m,1}
+\end{array}\right]+A_{2,c}\left[\begin{array}{c}
+B_{1,2}\\
+B_{2,2}\\
+\vdots\\
+B_{m,2}
+\end{array}\right]+\cdots+A_{n,c}\left[\begin{array}{c}
+B_{1,n}\\
+B_{2,n}\\
+\vdots\\
+B_{m,n}
+\end{array}\right]
+\]
+
+\end_inset
+
+In other words, column 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $BA$
+\end_inset
+
+ is a linear combination of the columns of 
+\begin_inset Formula $B$
+\end_inset
+
+ where the coefficients for the linear combination come from column 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In short,
+\begin_inset Formula 
+\begin{equation}
+(BA)_{:,c}=A_{1,c}B_{:,1}+A_{2,c}B_{:,2}+\cdots+A_{n,c}B_{:,n}.\label{eq:matrix-prod-as-lin-comb-of-cols}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the special case of equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Mv-equals-b"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
+\begin_inset Formula 
+\[
+(M\mathbf{v})_{:,c}=\mathbf{v}_{1,c}M_{:,1}+\mathbf{v}_{2,c}M_{:,2}+\cdots+\mathbf{v}_{n,c}M_{:,n}
+\]
+
+\end_inset
+
+but 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is a vector (column matrix) so it has only one column.
+ Accordingly, 
+\begin_inset Formula $M\mathbf{v}$
+\end_inset
+
+ has only one column and we can write
+\begin_inset Formula 
+\begin{equation}
+M\mathbf{v}=\mathbf{v}_{1,1}M_{:,1}+\mathbf{v}_{2,1}M_{:,2}+\cdots+\mathbf{v}_{n,1}M_{:,n}.\label{eq:Mv-as-lin-comb-of-cols}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Revisiting the case where the third row of 
+\begin_inset Formula $M$
+\end_inset
+
+ is twice the first, this means
+\begin_inset Formula 
+\begin{align*}
+\mathbf{b}=M\mathbf{v} & =\mathbf{v}_{1,1}M_{:,1}+\mathbf{v}_{2,1}M_{:,2}+\mathbf{v}_{3,1}(2M_{:,1})+\cdots+\mathbf{v}_{n,1}M_{:,n}\\
+ & =(\mathbf{v}_{1,1}+2\mathbf{v}_{3,1})M_{:,1}+\mathbf{v}_{2,1}M_{:,2}+\cdots+\mathbf{v}_{n,1}M_{:,n}
+\end{align*}
+
+\end_inset
+
+Letting 
+\begin_inset Formula $\mathbf{v}_{1,1}=-2$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{3,1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{j,1}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $j$
+\end_inset
+
+ not equal to 1 or 3, it turns out 
+\begin_inset Formula $\mathbf{b}=\mathbf{0}$
+\end_inset
+
+.
+ In other words, the associated homogeneous equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ has a solution where 
+\begin_inset Formula $\mathbf{v}\neq\mathbf{0}$
+\end_inset
+
+, a 
+\series bold
+nontrivial solution
+\series default
+.
+ Finally, we add 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ has a nontrivial solution.
+\end_layout
+
+\begin_layout Standard
+to the list of related concepts.
+ But wait, there's more!
+\end_layout
+
+\begin_layout Standard
+Equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:intermediary-step-mult-as-lin-comb-of-cols"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) has exactly the same form as a system of linear equations with variables
+ 
+\begin_inset Formula $A_{1,c},\ A_{2,c},\ldots,A_{n,c}$
+\end_inset
+
+.
+ Can you show that the equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is equivalent to a linear system of equations whose augmented matrix is
+ 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+ and variables are 
+\begin_inset Formula $\mathbf{v}_{1,1},\mathbf{v}_{2,1},\ldots,\mathbf{v}_{n,1}$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:mv-equals-b-as-a-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ That makes the last item in our list of related concepts
+\end_layout
+
+\begin_layout Itemize
+The linear system represented by the augmented matrix 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+ has no solution for certain choices of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Wow.
+ That seems to make six ways of understanding the same phenomenon.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+addition
+\begin_inset space ~
+\end_inset
+
+property
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+equality for all matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ if 
+\begin_inset Formula $A=B$
+\end_inset
+
+ then 
+\begin_inset Formula $A+C=B+C$
+\end_inset
+
+ whenever the sums are defined.
+\end_layout
+
+\begin_layout Description
+left
+\begin_inset space ~
+\end_inset
+
+multiplication
+\begin_inset space ~
+\end_inset
+
+property
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+equality for all matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ if 
+\begin_inset Formula $A=B$
+\end_inset
+
+ then 
+\begin_inset Formula $CA=CB$
+\end_inset
+
+ whenever the products are defined.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+form
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+system if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is a (variable) vector with 
+\begin_inset Formula $n$
+\end_inset
+
+ entries, the matrix equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is equivalent to the linear system with augmented matrix 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+ and variables 
+\begin_inset Formula $\mathbf{v}_{1,1},\ \mathbf{v}_{2,1},\ldots,\mathbf{v}_{n,1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+product
+\begin_inset space ~
+\end_inset
+
+as
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+combination
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+rows given matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, if 
+\begin_inset Formula $BA$
+\end_inset
+
+ is defined then row 
+\begin_inset Formula $r$
+\end_inset
+
+ of 
+\begin_inset Formula $BA$
+\end_inset
+
+ can be computed as a linear combination of the rows of 
+\begin_inset Formula $A$
+\end_inset
+
+ using row 
+\begin_inset Formula $r$
+\end_inset
+
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+ as coefficients:
+\begin_inset Formula 
+\[
+(BA)_{r,:}=B_{r,1}A_{1,:}+B_{r,2}A_{2,:}+\cdots+B_{r,n}A_{n,:}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+product
+\begin_inset space ~
+\end_inset
+
+as
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+combination
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+columns given matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, if 
+\begin_inset Formula $BA$
+\end_inset
+
+ is defined then column 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $BA$
+\end_inset
+
+ can be computed as a linear combination of the columns of 
+\begin_inset Formula $B$
+\end_inset
+
+ using column 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ as coefficients:
+\begin_inset Formula 
+\[
+(BA)_{:,c}=A_{1,c}B_{:,1}+A_{2,c}B_{:,2}+\cdots+A_{n,c}B_{:,n}.
+\]
+
+\end_inset
+
+In the special case of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ times a vector 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cccc}
+v_{1} & v_{2} & \cdots & v_{n}\end{array}\right]^{T}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+M\mathbf{v}=v_{1}M_{:,1}+v_{2}M_{:,2}+\cdots+v_{n}M_{:,n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+nontrivial
+\begin_inset space ~
+\end_inset
+
+solution a solution 
+\begin_inset Formula $\mathbf{v}\neq\mathbf{0}$
+\end_inset
+
+ of the equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+right
+\begin_inset space ~
+\end_inset
+
+multiplication
+\begin_inset space ~
+\end_inset
+
+property
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+equality for all matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ if 
+\begin_inset Formula $A=B$
+\end_inset
+
+ then 
+\begin_inset Formula $AC=BC$
+\end_inset
+
+ whenever the products are defined.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Solve
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X+\left[\begin{array}{cc}
+-8 & -4\\
+19 & 6
+\end{array}\right]=\left[\begin{array}{cc}
+10 & 11\\
+16 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-4 & -7\\
+-14 & 3
+\end{array}\right]+X=\left[\begin{array}{cc}
+12 & -20\\
+-16 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & -19\\
+-1 & 8
+\end{array}\right]-X=\left[\begin{array}{cc}
+-2 & 19\\
+-14 & 20
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $5X+\left[\begin{array}{cc}
+1 & 0\\
+-13 & 11
+\end{array}\right]=\left[\begin{array}{cc}
+-20 & -17\\
+2 & -5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Solve
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+2 & 1
+\end{array}\right]X=\left[\begin{array}{cc}
+-18 & 2\\
+-2 & -8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & 2\\
+6 & 3
+\end{array}\right]X=\left[\begin{array}{cc}
+13 & -13\\
+-19 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & 2\\
+3 & 1
+\end{array}\right]X+\left[\begin{array}{cc}
+-13 & 18\\
+-11 & 10
+\end{array}\right]=\left[\begin{array}{cc}
+-20 & 14\\
+15 & -2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-13 & 1\\
+19 & 4
+\end{array}\right]-\left[\begin{array}{cc}
+-5 & 9\\
+-3 & 5
+\end{array}\right]X=\left[\begin{array}{cc}
+-16 & 4\\
+1 & -6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Solve for the specified variable.
+ Assume all indicated operations are defined.
+ Make a note whenever you assume a matrix is invertible.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $XYZ=B$
+\end_inset
+
+ for 
+\begin_inset Formula $Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $XYZ=B$
+\end_inset
+
+ for 
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A(3B+I)=C$
+\end_inset
+
+ for 
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $PDP^{-1}=A$
+\end_inset
+
+ for 
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2A(B^{-1}+C^{T})=D$
+\end_inset
+
+ for 
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(3C)^{T}+2B^{-1}=A$
+\end_inset
+
+ for 
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Write the matrix equation as an equivalent linear system.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\mathbf{x}=\mathbf{c}$
+\end_inset
+
+; 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+-6 & 2 & 19\\
+-14 & 1 & -10
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{x}=\left[\begin{array}{ccc}
+x_{1} & x_{2} & x_{3}\end{array}\right]^{T}$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{c}=\left[\begin{array}{cc}
+7 & 3\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\mathbf{x}=\mathbf{0}$
+\end_inset
+
+; 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+-34 & -3 & 37\\
+-118 & 9 & 109\\
+26 & -3 & -23
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{x}=\left[\begin{array}{ccc}
+x & y & z\end{array}\right]^{T}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\mathbf{r}_{1}=\mathbf{\mathbf{r}}_{2}$
+\end_inset
+
+; 
+\begin_inset Formula $T=\left[\begin{array}{cc}
+10 & 14\\
+-6 & -3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{r}_{1}=\left[\begin{array}{c}
+r\\
+s
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{r}_{2}=\left[\begin{array}{c}
+-8\\
+9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+; 
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-4 & -14\\
+-17 & 6\\
+-16 & -12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+4\\
+-3\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Specify the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, and vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ so that the matrix equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is equivalent to the linear system.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccccccc}
+-12x & - & 6y & - & 7z & = & 16\\
+ & - & 5y & + & 18z & = & 2\\
+-15x & + & 10y & + & 8z & = & -11
+\end{array}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccccccc}
+-15x_{1} & + & 4x_{2} &  &  & = & -14\\
+-4x_{1} & - & 17x_{2} & - & 7x_{3} & = & 3
+\end{array}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccccc}
+15r & - & 11s & = & 0\\
+3r & + & 10s & = & 0
+\end{array}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccccc}
+14v_{1} & - & 17v_{2} & = & -11\\
+2v_{1} &  &  & = & -4\\
+9v_{1} & - & 2v_{2} & = & -8
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Compute the third row of the product without computing the rest of the product.
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+2 & 2 & 1 & 5\\
+0 & 1 & -5 & -4\\
+5 & 0 & 3 & -3\\
+3 & -2 & -4 & 4\\
+4 & -1 & -1 & -3
+\end{array}\right]\left[\begin{array}{cc}
+-3 & 3\\
+2 & -4\\
+-5 & 5\\
+0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the second row of the product by summing an appropriate linear combinati
+on of row vectors.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-3 & 2 & 3\\
+0 & -1 & 4
+\end{array}\right]\left[\begin{array}{ccc}
+0 & 4 & -3\\
+1 & -4 & 5\\
+3 & 2 & -1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the second column of the product without computing the first.
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+-4 & 5 & -3 & -4\\
+0 & -3 & 3 & 2\\
+4 & 1 & 4 & -5
+\end{array}\right]\left[\begin{array}{cc}
+-3 & 3\\
+2 & -4\\
+-5 & 5\\
+0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the third column of the product by summing an appropriate linear
+ combination of column vectors.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-3 & 2 & 3\\
+0 & -1 & 4
+\end{array}\right]\left[\begin{array}{ccc}
+0 & 4 & -3\\
+1 & -4 & 5\\
+3 & 2 & -1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Suppose the third column of 
+\begin_inset Formula $A$
+\end_inset
+
+ contains all zeros.
+ What can you say about the third column of 
+\begin_inset Formula $BA$
+\end_inset
+
+? Why? Assume 
+\begin_inset Formula $BA$
+\end_inset
+
+ is defined.
+\end_layout
+
+\begin_layout Enumerate
+Suppose the second row of 
+\begin_inset Formula $B$
+\end_inset
+
+ contains all ones.
+ What can you say about the second row of 
+\begin_inset Formula $BA$
+\end_inset
+
+? Why? Assume 
+\begin_inset Formula $BA$
+\end_inset
+
+ is defined.
+\end_layout
+
+\begin_layout Enumerate
+Suppose the fifth column of 
+\begin_inset Formula $A$
+\end_inset
+
+ is three times the second column of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ What can you say about the second column of 
+\begin_inset Formula $BA$
+\end_inset
+
+? Why? Assume 
+\begin_inset Formula $BA$
+\end_inset
+
+ is defined.
+\end_layout
+
+\begin_layout Enumerate
+Demonstrate that the zero product rule for real numbers does not hold for
+ matrices.
+ That is, show that the claim 
+\begin_inset Quotes eld
+\end_inset
+
+if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are matrices such that 
+\begin_inset Formula $AB=0$
+\end_inset
+
+, then 
+\begin_inset Formula $A=0$
+\end_inset
+
+ or 
+\begin_inset Formula $B=0$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ is false by finding matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $B\neq0$
+\end_inset
+
+ yet 
+\begin_inset Formula $AB=0$
+\end_inset
+
+ where
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are nonsquare matrices.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ is square but 
+\begin_inset Formula $B$
+\end_inset
+
+ is not square.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+ is square but 
+\begin_inset Formula $A$
+\end_inset
+
+ is not square.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are both square.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Argue that if 
+\begin_inset Formula $AB=0$
+\end_inset
+
+ then one of the following must be true.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\det A=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\det B=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ is not square
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+ is not square
+\end_layout
+
+\begin_layout Standard
+Use the fact that for a square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\det M=0$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ is noninvertible.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Show that the converse of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is true.
+ That is, justify the claim that for all matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+, if 
+\begin_inset Formula $A+C=B+C$
+\end_inset
+
+ then 
+\begin_inset Formula $A=B$
+\end_inset
+
+ whenever the sums are defined.
+\end_layout
+
+\begin_layout Enumerate
+Show that the converse of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:addition-property-of-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is false by supplying matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ such that 
+\begin_inset Formula $CA=CB$
+\end_inset
+
+ but 
+\begin_inset Formula $A\neq B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+multiplication
+\begin_inset space ~
+\end_inset
+
+property
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+equality
+\begin_inset space ~
+\end_inset
+
+part
+\begin_inset space ~
+\end_inset
+
+2 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:mult-property-of-equality"
+
+\end_inset
+
+Claims (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are distinct, and therefore both needed, because matrix multiplication
+ is not commutative.
+ Claim (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:multiplication-property-of-equality-part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) can be proven as follows.
+ Since 
+\begin_inset Formula $A=B$
+\end_inset
+
+, 
+\begin_inset Formula $0=A-B$
+\end_inset
+
+.
+ Hence, if 
+\begin_inset Formula $A=B$
+\end_inset
+
+ then
+\begin_inset Formula 
+\begin{align*}
+0 & =A-B\\
+ & =(A-B)C\\
+ & =AC-BC
+\end{align*}
+
+\end_inset
+
+and therefore 
+\begin_inset Formula $AC=BC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+as
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+system 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:mv-equals-b-as-a-linear-system"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix and suppose 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ (making 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ a vector with 
+\begin_inset Formula $n$
+\end_inset
+
+ entries and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ a vector with 
+\begin_inset Formula $m$
+\end_inset
+
+ entries).
+ Then
+\begin_inset Formula 
+\begin{align*}
+M\mathbf{v} & =\left[\begin{array}{cccc}
+M_{1,1} & M_{1,2} & \cdots & M_{1,n}\\
+M_{2,1} & M_{2,2} & \cdots & M_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
+M_{m,1} & M_{m,2} & \cdots & M_{m,n}
+\end{array}\right]\left[\begin{array}{c}
+\mathbf{v}_{1,1}\\
+\mathbf{v}_{2,1}\\
+\vdots\\
+\mathbf{v}_{n,1}
+\end{array}\right]\\
+ & =\left[\begin{array}{c}
+M_{1,1}\mathbf{v}_{1,1}+M_{1,2}\mathbf{v}_{2,1}+\cdots+M_{1,n}\mathbf{v}_{n,1}\\
+M_{2,1}\mathbf{v}_{1,1}+M_{2,2}\mathbf{v}_{2,1}+\cdots+M_{2,n}\mathbf{v}_{n,1}\\
+\vdots\\
+M_{m,1}\mathbf{v}_{1,1}+M_{m,2}\mathbf{v}_{2,1}+\cdots+M_{m,n}\mathbf{v}_{n,1}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+setting this vector equal to 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+M_{1,1}\mathbf{v}_{1,1}+M_{1,2}\mathbf{v}_{2,1}+\cdots+M_{1,n}\mathbf{v}_{n,1}\\
+M_{2,1}\mathbf{v}_{1,1}+M_{2,2}\mathbf{v}_{2,1}+\cdots+M_{2,n}\mathbf{v}_{n,1}\\
+\vdots\\
+M_{m,1}\mathbf{v}_{1,1}+M_{m,2}\mathbf{v}_{2,1}+\cdots+M_{m,n}\mathbf{v}_{n,1}
+\end{array}\right]=\left[\begin{array}{c}
+\mathbf{b}_{1,1}\\
+\mathbf{b}_{2,1}\\
+\vdots\\
+\mathbf{b}_{m,1}
+\end{array}\right]
+\]
+
+\end_inset
+
+which can only be true if corresponding entries are equal.
+ In other words,
+\begin_inset Formula 
+\begin{align*}
+M_{1,1}\mathbf{v}_{1,1}+M_{1,2}\mathbf{v}_{2,1}+\cdots+M_{1,n}\mathbf{v}_{n,1} & =\mathbf{b}_{1,1}\\
+M_{2,1}\mathbf{v}_{1,1}+M_{2,2}\mathbf{v}_{2,1}+\cdots+M_{2,n}\mathbf{v}_{n,1} & =\mathbf{b}_{2,1}\\
+ & \vdots\\
+M_{m,1}\mathbf{v}_{1,1}+M_{m,2}\mathbf{v}_{2,1}+\cdots+M_{m,n}\mathbf{v}_{n,1} & =\mathbf{b}_{m,1}
+\end{align*}
+
+\end_inset
+
+Therefore, the equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is equivalent to the system with augmented matrix 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+ and variables 
+\begin_inset Formula $\mathbf{v}_{1,1},\mathbf{v}_{2,1},\ldots,\mathbf{v}_{n,1}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

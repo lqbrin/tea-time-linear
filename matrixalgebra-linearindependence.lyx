@@ -1,0 +1,1347 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Linear-Independence"
+
+\end_inset
+
+Linear Independence
+\end_layout
+
+\begin_layout Standard
+The matrices
+\begin_inset Formula 
+\[
+\begin{gathered}A=\left[\begin{array}{cc}
+2 & -4\\
+3 & -6
+\end{array}\right],\ B=\left[\begin{array}{ccc}
+4 & 2 & 6\\
+-1 & -9 & 7
+\end{array}\right],\ C=\left[\begin{array}{ccc}
+3 & 3 & -5\\
+-8 & 2 & 0\\
+5 & -4 & 7
+\end{array}\right],\\
+D=\left[\begin{array}{cccccc}
+-11 & 10 & -5 & 3 & 7 & -1\\
+-8 & -1 & 6 & 6 & 0 & 1\\
+-2 & 8 & 7 & -9 & -15 & -3\\
+8 & 5 & -10 & -7 & 5 & 2
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+have something in common.
+ Each matrix has a column that can be written as a linear combination of
+ the other columns in the matrix.
+ Not all matrices have this property, and there is an important distinction
+ between those that do and those that do not.
+ 
+\end_layout
+
+\begin_layout Standard
+Compare 
+\begin_inset Formula $E=\left[\begin{array}{cc}
+2 & -8\\
+1 & 5
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $A$
+\end_inset
+
+, for example.
+ In 
+\begin_inset Formula $E$
+\end_inset
+
+, neither column is a multiple of the other so neither column can be written
+ as a linear combination of the other.
+ However, the second column of 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $-2$
+\end_inset
+
+ times the first:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{:,2}=-2A_{:,1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You may be struggling a little bit to see this as a linear combination,
+ but nothing in the definition of linear combination requires more than
+ one term.
+ So if an object is a multiple of another it is a linear combination of
+ it.
+\end_layout
+
+\begin_layout Standard
+Notice that 
+\begin_inset Formula $\det A=0$
+\end_inset
+
+ while 
+\begin_inset Formula $\det E\neq0$
+\end_inset
+
+.
+ The matrix with one column that can be written as a linear combination
+ of the others has 0 determinant while the matrix whose columns can not
+ be written as linear combinations of the others has nonzero determinant.
+ We made a similar observation about linear combinations of the rows of
+ a matrix and its determinant in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For matrices 
+\begin_inset Formula $B,C,D$
+\end_inset
+
+ it is less clear that one column is a linear combination of the others,
+ but you can check that
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{:,3}=2B_{:,1}-B_{:,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C_{:,1}=-4C_{:,2}+3C_{:,3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{:,5}=2D_{:,1}+2D_{:,2}+0D_{:,3}+3D_{:,4}+0D_{:,6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Don't be misled by the suggestion that 
+\begin_inset Quotes eld
+\end_inset
+
+one column
+\begin_inset Quotes erd
+\end_inset
+
+ is a linear combination of the others, however.
+ It is true, but does not tell the whole story.
+ In no case is the column written in terms of the others special.
+ For matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, for example, we could have easily pointed out that the first column is
+ 
+\begin_inset Formula $-\frac{1}{2}$
+\end_inset
+
+ the second.
+ The first column is a linear combination of the second, and the second
+ column is a linear combination of the first.
+ Neither one should take priority.
+\end_layout
+
+\begin_layout Standard
+A little algebra will show that all the following equations are also true.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{:,2}=2B_{:,1}-B_{:,3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{:,1}=\frac{1}{2}B_{:,2}+\frac{1}{2}B_{:,3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C_{:,3}=\frac{1}{3}C_{:,1}+\frac{4}{3}C_{:,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C_{:,2}=-\frac{1}{4}C_{:,1}+\frac{3}{4}C_{:,3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{:,1}=-D_{:,2}-\frac{3}{2}D_{:,4}+\frac{1}{2}D_{:,5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{:,2}=-D_{:,1}-\frac{3}{2}D_{:,4}+\frac{1}{2}D_{:,5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{:,4}=-\frac{2}{3}D_{:,1}-\frac{2}{3}D_{:,2}+\frac{1}{3}D_{:,5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The entire set of columns involved (with nonzero coefficient) in the linear
+ combination is special.
+ Any such column can be written as a linear combination of the others.
+\end_layout
+
+\begin_layout Standard
+In an atempt to emphasize that the 
+\shape italic
+set of columns
+\shape default
+ is special, not that one particular column within the matrix is special,
+ each of the equations above can be rearranged so one side of the equation
+ becomes 0.
+ As a result, instead of having the 11 equations above, where in each case
+ one column is spotlighted as the 
+\begin_inset Quotes eld
+\end_inset
+
+special
+\begin_inset Quotes erd
+\end_inset
+
+ column being writen in terms of the others, we have
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $2A_{:,1}+A_{:,2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $2B_{:,1}-B_{:,2}-B_{:,3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C_{:,1}+4C_{:,2}-3C_{:,3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $2D_{:,1}+2D_{:,2}+0D_{:,3}+3D_{:,4}-D_{:,5}+0D_{:,6}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The fact that columns within the matrix can be written as linear combinations
+ of the others is captured, but no particular column is prominent, motivating
+ the following definition.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a set of objects on which addition and scalar mutliplication are defined
+ and which contains an additive identity, called 0.
+ For scalars 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ and objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ of 
+\begin_inset Formula $S$
+\end_inset
+
+, we say that 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ are 
+\series bold
+linearly independent
+\series default
+ or that 
+\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
+\end_inset
+
+ is a linearly independent set if the only solution of 
+\begin_inset Formula 
+\begin{equation}
+x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=0\label{eq:linear-independence-definition}
+\end{equation}
+
+\end_inset
+
+is the trivial solution 
+\begin_inset Formula $x_{1}=x_{2}=\cdots=x_{n}=0$
+\end_inset
+
+.
+ Otherwise the objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ are 
+\series bold
+linearly dependent
+\series default
+ and 
+\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
+\end_inset
+
+ is a linearly dependent set.
+ Note that the 
+\begin_inset Formula $0$
+\end_inset
+
+ in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linear-independence-definition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is the object 
+\begin_inset Formula $0$
+\end_inset
+
+, not necessarily the number 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In addition to being a statement about the set of objects rather than one
+ special member of the set, this definition handles the case when one of
+ the objects in the set is the 
+\begin_inset Formula $0$
+\end_inset
+
+ object (additive identity) itself.
+ In this case, that particular object is special.
+ It can be written as a linear combination of the others (with all coefficients
+ equal to zero) but it is not necessarily the case that any of the other
+ objects can be written as a linear combination of the remaining ones.
+ As a simple example, suppose 
+\begin_inset Formula 
+\[
+E=\left[\begin{array}{ccc}
+1 & -4 & 0\\
+2 & 5 & 0\\
+3 & -1 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+The third column is a zero vector.
+ Accordingly,
+\begin_inset Formula 
+\[
+E_{:,3}=0E_{:,1}+0E_{:,2}
+\]
+
+\end_inset
+
+so the third column is a linear combination of the first two.
+ However, neither of the first two columns is a linear combination of the
+ others.
+ This is clear since the first two columns are not multiples of one another.
+ In the context of the definition, we have
+\begin_inset Formula 
+\[
+0E_{:,1}+0E_{:,2}+E_{:,3}=0,
+\]
+
+\end_inset
+
+a nontrivial linear combination of the columns that sums to 0.
+ No fanfare.
+ No notes of special cases.
+\end_layout
+
+\begin_layout Standard
+Free variables, solution sets of linear systems, and pivot positions of
+ matrices are all directly connected to the concept of linear independence.
+ 
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+[Characterization of Matrices Part 1]
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Matrix-Characterization-1"
+
+\end_inset
+
+
+\series default
+\shape default
+ Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ entries, and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ has 
+\begin_inset Formula $m$
+\end_inset
+
+ entries.
+ Then the following are equivalent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=(
+\backslash
+roman{enumi})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Enumerate
+No column of 
+\begin_inset Formula $M$
+\end_inset
+
+ is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ has only the trivial solution
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every column.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has no free variables
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
+\end_inset
+
+ has at most one solution for every 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+The following list of arguments will show that if one of the statements
+ is true, so is another...and if that one is true so is a third...and if that
+ one is true so is the next...and so on until all the statements have been
+ justified.
+ such a series of justifications means that if the first statement is true,
+ they are all true since they all followed logically from the first.
+ Proving they are equivalent requires one more step.
+ The last statement will be shown to imply the first, completing a logical
+ path from any one of the statements to any other.
+ Closing the loop this way means that if 
+\shape italic
+any one
+\shape default
+ of the statements is true, they are all true, the very meaning of 
+\series bold
+equivalent
+\series default
+! 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Proof by Contraposition}
+\end_layout
+
+\end_inset
+
+Suppose you are trying to prove that if some statement, call it 
+\begin_inset Formula $p$
+\end_inset
+
+, is true, then some other statement, call it 
+\begin_inset Formula $q$
+\end_inset
+
+ is true.
+ In short, you are trying to prove that if 
+\begin_inset Formula $p$
+\end_inset
+
+ is true then 
+\begin_inset Formula $q$
+\end_inset
+
+ is true.
+ Then it is just as good to prove the contrapositive claim, if 
+\begin_inset Formula $q$
+\end_inset
+
+ is false then 
+\begin_inset Formula $p$
+\end_inset
+
+ is false, because if the contrapositive is true then it is impossible to
+ have both 
+\begin_inset Formula $q$
+\end_inset
+
+ false and 
+\begin_inset Formula $p$
+\end_inset
+
+ true.
+ In other words, if 
+\begin_inset Formula $p$
+\end_inset
+
+ is true so is 
+\begin_inset Formula $q$
+\end_inset
+
+ because 
+\begin_inset Formula $q$
+\end_inset
+
+ cannot be false at the same time 
+\begin_inset Formula $p$
+\end_inset
+
+ is true (and that means if 
+\begin_inset Formula $p$
+\end_inset
+
+ is true then 
+\begin_inset Formula $q$
+\end_inset
+
+ is true).
+ By similar logic, if any statement in a list of equivalent statements is
+ false, they are all false.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following arguments demonstrate that (i) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (ii), (ii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (iii), (iii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (iv), (iv) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (v), (v) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (vi), (vi) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (iii), and (iii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (i).
+ More succinctly, (i) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (ii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (iii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (iv) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (v) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (vi) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (iii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (i), and diagrammatically,
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+\text{(i)} &  &  &  & \text{(iv)}\\
+\Downarrow & \Nwarrow &  & \Nearrow &  & \Searrow\\
+\text{(ii)} & \Leftarrow & \text{(iii)} & \Leftarrow & \text{(vi)} & \Leftarrow & \text{(v)}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The diagram illustrates a logical path from any one of the statements to
+ any other.
+ Therefore, justifying each statement as claimed shows that the statements
+ are equivalent.
+\end_layout
+
+\begin_layout Description
+(i)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(ii) Requested in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:lin-ind-implies-no-lin-combo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+(ii)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iii) Suppose 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ has a nontrivial solution, 
+\begin_inset Formula $\mathbf{x}=\left[\begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n}\end{array}\right]^{T}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $M\mathbf{x}=x_{1}M_{:,1}+x_{2}M_{:,2}+\cdots+x_{n}M_{:,n}=\mathbf{0}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is a nontrivial solution, one of the entries of 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is nonzero, say 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $x_{i}M_{:,i}=-x_{1}M_{:,1}-\ldots-x_{i-1}M_{:,i-1}-x_{i+1}M_{:,i+1}-\ldots-x_{n}M_{:,n}$
+\end_inset
+
+ and more to the point,
+\begin_inset Formula 
+\[
+M_{:,i}=-\frac{x_{1}}{x_{i}}M_{:,1}-\ldots-\frac{x_{i-1}}{x_{i}}M_{:,i-1}-\frac{x_{i+1}}{x_{i}}M_{:,i+1}-\ldots-\frac{x_{n}}{x_{i}}M_{:,n}
+\]
+
+\end_inset
+
+ making column 
+\begin_inset Formula $i$
+\end_inset
+
+ a linear combination of the other columns.
+\end_layout
+
+\begin_layout Description
+(iii)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iv) Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ does not have a pivot position in every column.
+ Then 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, a consistent system with solution 
+\begin_inset Formula $\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, has free variables.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:linear-system-existence-uniqueness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ has more than one solution.
+\end_layout
+
+\begin_layout Description
+(iv)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(v) By definition, a free variable comes from a variable column without
+ a pivot.
+ Since all columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ have pivot postions, 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ cannot have free variables.
+\end_layout
+
+\begin_layout Description
+(v)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(vi) By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:linear-system-existence-uniqueness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ a linear system with no free variables is either inconsistent or has exactly
+ one solution.
+ Therefore 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has zero or one (in other words, at most one) solution.
+\end_layout
+
+\begin_layout Description
+(vi)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iii) 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ is a special case of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+, so if 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ has a solution it is unique.
+ The trivial solution, 
+\begin_inset Formula $\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, being a solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ is therefore the only one.
+\end_layout
+
+\begin_layout Description
+(iii)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(i) Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cccc}
+v_{1} & v_{2} & \cdots & v_{n}\end{array}\right]^{T}$
+\end_inset
+
+.
+ By assumption, 
+\begin_inset Formula $M\mathbf{v}=v_{1}M_{:,1}+v_{2}M_{:,2}+\cdots+v_{n}M_{:,n}=\mathbf{0}$
+\end_inset
+
+ has only the trivial solution.
+ By definition of linear indpendence, 
+\begin_inset Formula $M_{:,1},M_{:,2},\cdots,M_{:,n}$
+\end_inset
+
+ (the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+) are linearly independent.
+\end_layout
+
+\begin_layout Standard
+Later, we will see that the determinant, row equivalence, invertibility,
+ and function concepts are also directly connected to these statements.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+characterization
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+matrices see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+equivalent
+\begin_inset space ~
+\end_inset
+
+statements a list of statements such that if one of them is true they are
+ all true.
+\end_layout
+
+\begin_layout Description
+linearly
+\begin_inset space ~
+\end_inset
+
+dependent not linearly independent.
+\end_layout
+
+\begin_layout Description
+linearly
+\begin_inset space ~
+\end_inset
+
+independent objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ are linearly independent whenever the trivial solution is the only solution
+ of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linear-independence-definition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+linearly
+\begin_inset space ~
+\end_inset
+
+independent
+\begin_inset space ~
+\end_inset
+
+set the set 
+\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
+\end_inset
+
+ is a linearly independent set whenever the objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Description
+linearly
+\begin_inset space ~
+\end_inset
+
+dependent
+\begin_inset space ~
+\end_inset
+
+set the set 
+\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
+\end_inset
+
+ is a linearly dependent set whenever the objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ are linearly dependent.
+\end_layout
+
+\begin_layout Description
+trivial
+\begin_inset space ~
+\end_inset
+
+solution the solution 
+\begin_inset Formula $x_{1}=x_{2}=\cdots=x_{n}=0$
+\end_inset
+
+ of the equation 
+\begin_inset Formula $x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=0$
+\end_inset
+
+ is called the trivial solution.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Show that the vectors are linearly independent.
+\end_layout
+
+\begin_layout Enumerate
+Show that the functions are linearly indpendent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $1+t$
+\end_inset
+
+, 
+\begin_inset Formula $t+t^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $1+t^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sin^{2}t$
+\end_inset
+
+ and 
+\begin_inset Formula $\cos^{2}t$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Show that the functions are linearly dependent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $1+3t-2t^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $-9-23t+21t^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $1+7t+t^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $\sin^{2}t$
+\end_inset
+
+, and 
+\begin_inset Formula $\cos^{2}t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sin^{2}t$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^{2}t$
+\end_inset
+
+, and 
+\begin_inset Formula $\cos(2t)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix with linearly independent columns, what can you say about the relationsh
+ip between 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+? HINT: Can a matrix with linearly independent columns have more columns
+ than rows?
+\end_layout
+
+\begin_layout Standard
+For exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:lin-ind-implies-no-lin-combo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:no-lin-combo-implies-lin-ind"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ assume that addition and scalar multiplication are defined on the set and
+ that there is a zero object in the set.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:lin-ind-implies-no-lin-combo"
+
+\end_inset
+
+Argue that if a set of objects is linearly independent then none of the
+ objects is a linear combination of the others.
+ HINT: Try proof by contraposition with multiple cases.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:no-lin-combo-implies-lin-ind"
+
+\end_inset
+
+Argue that if none of the objects of a set is a linear combination of the
+ others, then the set is linearly indpendent.
+ HINT: Try proof by contraposition.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

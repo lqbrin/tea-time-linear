@@ -551,6 +551,13 @@ begin{digression}{Inverses of non-square matrices?}
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "dig:nonsquare-inverses"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $A$
 \end_inset
@@ -671,20 +678,29 @@ By the associative property for matrix multiplication (which we will encounter
 \end_inset
 
 .
- Because they are equal, 
-\begin_inset Formula $L$
+ That 
+\begin_inset Formula $m$
 \end_inset
 
- and 
-\begin_inset Formula $R$
+ must equal 
+\begin_inset Formula $n$
 \end_inset
 
- must be the same size and therefore 
+ is proven on page 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: insert refernce to proof (which should be in linear independence section)
+\end_layout
+
+\end_inset
+
+, showing that 
 \begin_inset Formula $A$
 \end_inset
 
- must be square.
- Invertibility only makes sense for square matrices.
+ is square and invertibility only makes sense for square matrices.
 \begin_inset ERT
 status open
 

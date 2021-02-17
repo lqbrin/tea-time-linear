@@ -1,0 +1,3771 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{gobble}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Matrix Algebra
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:operation-properties"
+
+\end_inset
+
+Properties of Matrix Operations
+\end_layout
+
+\begin_layout Subsection
+Background
+\end_layout
+
+\begin_layout Standard
+If you ever thought that algebra should be renamed 
+\begin_inset Quotes eld
+\end_inset
+
+find 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+how to solve equations
+\begin_inset Quotes erd
+\end_inset
+
+, you are not alone.
+ The study of algebra is largely concerned with solving equations.
+ Linear algebra is considerably less concerned with solving equations, but
+ it is still an important feature of the subject.
+ There are many similarities between the rules that govern the manipulation
+ of algebraic expressions involving real numbers and those governing the
+ manipulation of expressions involving matrices, but there are significant
+ differences, all worthy of recording.
+ But first, a few words about the arithmetic of real numbers.
+\end_layout
+
+\begin_layout Standard
+During the late 
+\begin_inset Formula $19^{th}$
+\end_inset
+
+ century, the European mathematics community set to the task of answering
+ foundational questions about arithmetic.
+ They debated the questions of how to define the natural numbers and the
+ real numbers; how to define the operations of addition and multiplication;
+ and just as importantly to what extent such definitions were useful.
+ The German mathematician Hermann G
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+u}
+\end_layout
+
+\end_inset
+
+nther Grassmann (Gra
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+ss}
+\end_layout
+
+\end_inset
+
+mann) is generally credited with sparking the debate by showing that properties
+ of the natural numbers that to that point had simply been taken for granted
+ (such as the fact that 
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+) could be proved from simpler principles.
+ After a number of developments, the Italian mathematician Giuseppe Peano
+ published his 
+\shape italic
+Arithmetices Principia
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "peano"
+literal "false"
+
+\end_inset
+
+ (Principles of Arithmetic, 1889) summarizing work to that point and adding
+ his stamp in the form of his five axioms defining the natural numbers.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Foundations of Analysis}
+\end_layout
+
+\end_inset
+
+In 1951 Edmund Landau published the first edition of his 
+\shape italic
+Grundlagen der Analysis
+\shape default
+ (Foundations of Analysis 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "landau"
+literal "false"
+
+\end_inset
+
+, available at 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://b-ok.cc/book/2863641/855790"
+
+\end_inset
+
+, accessed Feb 9, 2021) where, based on the work of Peano, Dedekind, Cauchy
+ and others, he develops the arithmetic of whole, rational, irrational and
+ complex numbers in a single volume.
+ Peano's five axioms defining the natural numbers appear on page 2 as follows.
+\end_layout
+
+\begin_layout Quote
+
+\series bold
+Axiom 1
+\series default
+: 1 
+\shape italic
+is a natural number.
+\end_layout
+
+\begin_layout Quote
+That is, our set is not empty; it contains an object called 1 (read 
+\begin_inset Quotes eld
+\end_inset
+
+one
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Quote
+
+\series bold
+Axiom 2
+\series default
+: 
+\shape italic
+For each 
+\begin_inset Formula $x$
+\end_inset
+
+ there exists exactly one natural number, called the successor of 
+\begin_inset Formula $x$
+\end_inset
+
+, which will be denoted by 
+\begin_inset Formula $x'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Quote
+In the case of complicated natural numbers 
+\begin_inset Formula $x$
+\end_inset
+
+, we will enclose in parentheses the number whose successor is to be written
+ down, since otherwise ambiguities might arise.
+ We will do the same, throughout this book, in the case of 
+\begin_inset Formula $x+y$
+\end_inset
+
+, 
+\begin_inset Formula $xy$
+\end_inset
+
+, 
+\begin_inset Formula $x-y$
+\end_inset
+
+, 
+\begin_inset Formula $-x$
+\end_inset
+
+, 
+\begin_inset Formula $x^{y},$
+\end_inset
+
+etc.
+\end_layout
+
+\begin_layout Quote
+Thus, if 
+\begin_inset Formula 
+\[
+x=y
+\]
+
+\end_inset
+
+then
+\begin_inset Formula 
+\[
+x'=y'.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+
+\series bold
+Axiom 3
+\series default
+: 
+\shape italic
+We always have
+\shape default
+
+\begin_inset Formula 
+\[
+x'\neq1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+That is, there exists no number whose successor is 1.
+\end_layout
+
+\begin_layout Quote
+
+\series bold
+Axiom 4
+\series default
+: 
+\shape italic
+If
+\shape default
+
+\begin_inset Formula 
+\[
+x'=y'
+\]
+
+\end_inset
+
+
+\shape italic
+then 
+\shape default
+
+\begin_inset Formula 
+\[
+x=y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+That is, for any given number there exists either no number or exactly one
+ number whose successor is the given number.
+\end_layout
+
+\begin_layout Quote
+
+\series bold
+Axiom 5
+\series default
+ (Axiom of Induction): 
+\shape italic
+Let there be given a set 
+\begin_inset Formula $\frak{R}$
+\end_inset
+
+ of natural numbers, with the following properties:
+\end_layout
+
+\begin_layout Quote
+I) 1
+\shape italic
+ belongs to 
+\begin_inset Formula $\frak{R}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\shape default
+II) 
+\shape italic
+If 
+\begin_inset Formula $x$
+\end_inset
+
+ belongs to 
+\begin_inset Formula $\frak{R}$
+\end_inset
+
+ then so does 
+\begin_inset Formula $x'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Quote
+
+\shape italic
+Then 
+\begin_inset Formula $\frak{R}$
+\end_inset
+
+ contains all the natural numbers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Kurt Friedrich G
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+o}
+\end_layout
+
+\end_inset
+
+del's incompleteness theorems, published in 1931 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "godel"
+literal "false"
+
+\end_inset
+
+, essentially concluded the debate.
+ He proved that any consistent axiomatic system sufficient to describe arithmeti
+c on the natural numbers (including Peano's five axioms) will admit statements
+ that cannot be proven nor disproven from within the system.
+ Despite this deficiency, Peano's axioms are sufficient to define natural
+ numbers and prove the familiar properties of the operations of addition
+ and multiplication.
+ With the comfort of knowing these facts rest on solid foundation, we will
+ assume their veracity.
+ That is not to say we will simply take them for granted, however.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1+3$
+\end_inset
+
+ equals 
+\begin_inset Formula $4$
+\end_inset
+
+, and 
+\begin_inset Formula $3+1$
+\end_inset
+
+ equals 
+\begin_inset Formula $4$
+\end_inset
+
+.
+ 
+\begin_inset Formula $7+9$
+\end_inset
+
+ equals 
+\begin_inset Formula $16$
+\end_inset
+
+, and 
+\begin_inset Formula $9+7$
+\end_inset
+
+ equals 
+\begin_inset Formula $16$
+\end_inset
+
+.
+ The more general statement that 
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+ for any numbers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ is called the commutative property for addition of real numbers.
+ Though this property is one of the basic principles that can be proven
+ based on even more basic principles, we will take the viewpoint that it
+ had to turn out this way! The counting numbers, 
+\begin_inset Formula $1,2,3,\ldots$
+\end_inset
+
+, represent how many of a thing we have (quantity).
+ This is a fact engrained in our minds as we learn to count—at a very young
+ age.
+ Addition models what happens when two quantities are merged—another concept
+ engrained in our minds early on in our mental development.
+ If you add three apples to a basket initially holding one apple, afterward
+ it will contain four apples.
+ This merger is modeled by the statement 
+\begin_inset Formula $1+3=4$
+\end_inset
+
+ (one apple plus three more apples gives you four apples).
+ Similarly if you add one apple to a basket initially holding three apples,
+ afterward it will contain four apples.
+ This merger is modeled by the statement 
+\begin_inset Formula $3+1=4$
+\end_inset
+
+.
+ The fact that a pair of natural numbers can be added in either order with
+ the same result is simply the way natural numbers work.
+ Any mathematical axiom, theorem, or proof suggesting otherwise is simply
+ not the number system we were taught as youngsters.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{An Interesting Addition Table}
+\end_layout
+
+\end_inset
+
+If we completely abandon the usual notions of natural numbers (that there
+ are infinitely many of them and that they represent quantities, for example),
+ addition might be defined as follows.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+This sytem of addition retains some of the familiar notions of arithmetic
+ such as associativity and the existence of an identity (can you tell which
+ symbol acts as the identity?), but not commutativity.
+ According to this table, 
+\begin_inset Formula $1+3=4$
+\end_inset
+
+ but 
+\begin_inset Formula $3+1=5$
+\end_inset
+
+! Addition in this system is not commutative, but that does not make this
+ number system 
+\begin_inset Quotes eld
+\end_inset
+
+wrong
+\begin_inset Quotes erd
+\end_inset
+
+.
+ It simply means this system, an example of a finite group, does not represent
+ the numbers as we commonly understand them.
+ It makes a poor model for the measurement of quantity.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Some Properties
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:properties-of-reals"
+
+\end_inset
+
+Some Properties of Real Numbers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+For all real numbers 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a.
+ 
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Commutative property for addition
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b.
+ 
+\begin_inset Formula $(a+b)+c=a+(b+c)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Associative property for addition
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c.
+ 
+\begin_inset Formula $a+0=a=0+a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Additive identity
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d.
+ 
+\begin_inset Formula $a(bc)=(ab)c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Associative property for multiplication
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+e.
+ 
+\begin_inset Formula $a(b+c)=ab+ac$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distributive property
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f.
+ 
+\begin_inset Formula $1\cdot a=a=a\cdot1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multiplicative identity
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:properties-of-reals"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ summarizes the properties of real numbers of interest to our study of linear
+ algebra, each of which has a matrix analog as shown in the following theorem.
+ An 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix whose entries are all zero is called a 
+\series bold
+zero matrix
+\series default
+ and is denoted by 
+\begin_inset Formula $0_{m\times n}$
+\end_inset
+
+ or just 
+\begin_inset Formula $0$
+\end_inset
+
+ when its size is discernible through context.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:matrixproperties-part1"
+
+\end_inset
+
+
+\series bold
+\shape up
+[Matrix Properties Part 1]
+\series default
+\shape default
+ For all matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:commutativityforaddition"
+
+\end_inset
+
+
+\begin_inset Formula $A+B=B+A$
+\end_inset
+
+ (commutative property for addition)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:associativity-addition"
+
+\end_inset
+
+
+\begin_inset Formula $(A+B)+C=A+(B+C)$
+\end_inset
+
+ (associative property for addition)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:additive-identity"
+
+\end_inset
+
+
+\begin_inset Formula $A+0=A=0+A$
+\end_inset
+
+ (additive identity)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:associativity-multiplication"
+
+\end_inset
+
+
+\begin_inset Formula $A(BC)=(AB)C$
+\end_inset
+
+ (associative property for multiplication)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:left-distributive"
+
+\end_inset
+
+
+\begin_inset Formula $A(B+C)=AB+AC$
+\end_inset
+
+ (left distributive property)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $IA=A=AI$
+\end_inset
+
+ (multiplicative identity)
+\end_layout
+
+\begin_layout Standard
+whenever the indicated operations are defined.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:commutativityforaddition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be proven by noting that
+\begin_inset Formula 
+\[
+(A+B)_{i,j}=A_{i,j}+B_{i,j}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+(B+A)_{i,j}=B_{i,j}+A_{i,j}
+\]
+
+\end_inset
+
+by definition of matrix addition.
+ Since 
+\begin_inset Formula $A_{i,j}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{i,j}$
+\end_inset
+
+ are numbers, the commutative property for addition of real numbers allows
+ us to use the fact that 
+\begin_inset Formula $A_{i,j}+B_{i,j}=B_{i,j}+A_{i,j}$
+\end_inset
+
+ to deduce that 
+\begin_inset Formula $(A+B)_{i,j}=(B+A)_{i,j}$
+\end_inset
+
+.
+ Since the entries of 
+\begin_inset Formula $A+B$
+\end_inset
+
+ and 
+\begin_inset Formula $B+A$
+\end_inset
+
+ are equal, the matrices are equal.
+\end_layout
+
+\begin_layout Standard
+In more words than symbols, the argument goes thus.
+ The 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $A+B$
+\end_inset
+
+ is the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $A$
+\end_inset
+
+ plus the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $B+A$
+\end_inset
+
+ is the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $B$
+\end_inset
+
+ plus the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ But since the entries of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are numbers, the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $A$
+\end_inset
+
+ plus the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $B$
+\end_inset
+
+ is the same as the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $B$
+\end_inset
+
+ plus the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Therefore the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $A+B$
+\end_inset
+
+ is the same as the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $B+A$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $A+B=B+A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Using still fewer symbols, we might argue as follows.
+ The 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entries of 
+\begin_inset Formula $A+B$
+\end_inset
+
+ and 
+\begin_inset Formula $B+A$
+\end_inset
+
+ are calculated by adding the same two entries of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ only in different orders.
+ Since addition of real numbers (entries) is commutative, the 
+\begin_inset Formula $i,\negmedspace j$
+\end_inset
+
+-entries are equal.
+ Hence 
+\begin_inset Formula $A+B=B+A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In yet a fourth way to see that theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:commutativityforaddition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is true, consider the following computation without words.
+\begin_inset Formula 
+\begin{align*}
+A+B & =\left[\begin{array}{cccc}
+A_{1,1} & A_{1,2} & \cdots & A_{1,n}\\
+A_{2,1} & A_{2,2} & \cdots & A_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
+A_{m,1} & A_{m,2} & \cdots & A_{m,n}
+\end{array}\right]+\left[\begin{array}{cccc}
+B_{1,1} & B_{1,2} & \cdots & B_{1,n}\\
+B_{2,1} & B_{2,2} & \cdots & B_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
+B_{m,1} & B_{m,2} & \cdots & B_{m,n}
+\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+A_{1,1}+B_{1,1} & A_{1,2}+B_{1,2} & \cdots & A_{1,n}+B_{1,n}\\
+A_{2,1}+B_{2,1} & A_{2,2}+B_{2,2} & \cdots & A_{2,n}+B_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
+A_{m,1}+B_{m,1} & A_{m,2}+B_{m,2} & \cdots & A_{m,n}+B_{m,n}
+\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+B_{1,1}+A_{1,1} & B_{1,2}+A_{1,2} & \cdots & B_{1,n}+A_{1,n}\\
+B_{2,1}+A_{2,1} & B_{2,2}+A_{2,2} & \cdots & B_{2,n}+A_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
+B_{m,1}+A_{m,1} & B_{m,2}+A_{m,2} & \cdots & B_{m,n}+A_{m,n}
+\end{array}\right]\\
+ & =B+A
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In essence, the fact that matrices obey the rule 
+\begin_inset Formula $A+B=B+A$
+\end_inset
+
+ follows directly from the commutative property for addition of real numbers
+ and the fact that addition of matrices is computed component-wise.
+ The rest of the claims in theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can also be justified by use of the corresponding property for real numbers
+ and careful application of the definitions of matrix addition and multiplicatio
+n.
+\end_layout
+
+\begin_layout Standard
+As noted in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ matrix multiplication is not commutative.
+ The familiar commutative property for multiplication of real numbers, 
+\begin_inset Formula $ab=ba$
+\end_inset
+
+, does not have a matrix analog.
+ Thus it is important to point out, for example, that the distributive property
+ for matrices holds for both left (as in theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:left-distributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and right multiplication.
+ Additionally, the interplay between scalar multiplication and both matrix
+ addition and matrix multiplication must be documented, as seen in the following
+ theorem.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:matrixproperties-part2"
+
+\end_inset
+
+
+\series bold
+\shape up
+[Matrix Properties Part 2]
+\series default
+\shape default
+ For all matrices 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:distribute-scalar-over-matrices"
+
+\end_inset
+
+
+\begin_inset Formula $r(A+B)=rA+rB$
+\end_inset
+
+ (distributivity of a scalar over matrices)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:distributivity-matrix-over-scalars"
+
+\end_inset
+
+
+\begin_inset Formula $(r+s)A=rA+sA$
+\end_inset
+
+ (distributivity of a matrix over scalars)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:ass-scalar-mult-2-scalars"
+
+\end_inset
+
+
+\begin_inset Formula $(rs)A=r(sA)$
+\end_inset
+
+ (associativity of multiplication between two scalars and one matrix)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:ass-scalar-mult-2-matrices"
+
+\end_inset
+
+
+\begin_inset Formula $r(AB)=(rA)B=A(rB)$
+\end_inset
+
+ (associativity of multiplication between a scalar and two matrices)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:rightdistributive"
+
+\end_inset
+
+
+\begin_inset Formula $(B+C)A=BA+CA$
+\end_inset
+
+ (right distributive property)
+\end_layout
+
+\begin_layout Standard
+whenever the indicated operations are defined.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+Again these claims can be justified by use of the corresponding property
+ for real numbers and careful application of the definitions of matrix addition
+ and multiplication.
+\end_layout
+
+\begin_layout Standard
+One final theorem for this section contains a list of identities concerning
+ the matrix transpose and inverse.
+ Claims concerning only the transpose can be proven by comparing 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entries as before while those concerning the inverse are most easily proven
+ without reference to individual entries.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:matrixproperties-part3"
+
+\end_inset
+
+
+\series bold
+\shape up
+[Matrix Properties Part 3]
+\series default
+\shape default
+ For all matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transpose-of-transpose"
+
+\end_inset
+
+
+\begin_inset Formula $(A^{T})^{T}=A$
+\end_inset
+
+ (transpose of the transpose)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transpose-of-scalar-multiple"
+
+\end_inset
+
+
+\begin_inset Formula $(rA)^{T}=rA^{T}$
+\end_inset
+
+ (transpose of a scalar multiple)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transpose-of-sum"
+
+\end_inset
+
+
+\begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
+\end_inset
+
+ (transpose of a sum)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transpose-of-a-product"
+
+\end_inset
+
+
+\begin_inset Formula $(AB)^{T}=B^{T}A^{T}$
+\end_inset
+
+ (transpose of a product)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:inverse-of-the-inverse"
+
+\end_inset
+
+
+\begin_inset Formula $(A^{-1})^{-1}=A$
+\end_inset
+
+ (inverse of the inverse)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:inverse-of-a-product"
+
+\end_inset
+
+
+\begin_inset Formula $(AB)^{-1}=B^{-1}A^{-1}$
+\end_inset
+
+ (inverse of a product)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:inverse-of-transpose"
+
+\end_inset
+
+
+\begin_inset Formula $(A^{T})^{-1}=(A^{-1})^{T}$
+\end_inset
+
+ (inverse of the transpose)
+\end_layout
+
+\begin_layout Standard
+whenever the indicated operations are defined.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+To make the point that the claims involving inverses can be proven without
+ reference to entries, consider theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:inverse-of-the-inverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In words it says the inverse of the inverse of a matrix is the matrix itself.
+ Or in other words, if you find the inverse of a matrix, then find the inverse
+ of that matrix you get the original matrix.
+ More in the words of the definition of inverse (matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are inverses if and only if 
+\begin_inset Formula $AB=BA=I$
+\end_inset
+
+), any statement about inverses can be rephrased as a statement about a
+ product.
+ To show that two matrices are inverses, it is often best to show that their
+ products, in both orders, each equal the identity.
+ As for claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:inverse-of-the-inverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, it suffices to show 
+\begin_inset Formula $AA^{-1}=A^{-1}A=I$
+\end_inset
+
+ (the inverse of 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ is the matrix 
+\begin_inset Formula $B$
+\end_inset
+
+ such that 
+\begin_inset Formula $BA^{-1}=A^{-1}B=I$
+\end_inset
+
+), but that equality is true due to the definition of inverse—end of proof.
+ The claim is more a matter of perspective than a claim of something new.
+\end_layout
+
+\begin_layout Standard
+While a list of 18 claims over 3 theorems may seem a bit overwhelming to
+ digest, there are only a small few that require great attention.
+ The claims of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are replicas of properties of real numbers with which you are hopefully
+ familiar.
+ As such, it is the differences between the algebra of numbers and the algebra
+ of matrices that should gain your focus.
+ Primarily there is no commutative property for multiplication of matrices!
+ This has consequences such as the appearance of claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:rightdistributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The right distributive property is not necessary to enumerate separately
+ for real numbers because it follows from the combination of commutativity
+ for multiplication and distributivity of real numbers.
+ The rest of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is documentation of what you would probably expect to be true about scalar
+ multiplication.
+ 
+\end_layout
+
+\begin_layout Standard
+Besides the right distributive property, theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is worth careful scrutiny.
+ It contains facts about the relatively new concepts of inverses and transposes.
+ In particular, notice that (claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) the transpose of a product is the product of the transposes in the opposite
+ order! Similarly, (claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:inverse-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) the inverse of a product is the product of the inverses in the opposite
+ order.
+ Can you justify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inverse-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Applications to eigenpairs
+\end_layout
+
+\begin_layout Standard
+As an example of the utility of the properties of theorems 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ through 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the claim 
+\shape italic
+if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+ associated with value 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, so is 
+\begin_inset Formula $c\mathbf{v}$
+\end_inset
+
+
+\shape default
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Eigenpairs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "clm:scalar-multiple-of-eigenvector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, can now be justified.
+ Assuming 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+, we know that 
+\begin_inset Formula $A\mathbf{v}=\lambda\mathbf{v}$
+\end_inset
+
+ (by definition).
+ To justify the claim, we need to demonstrate that 
+\begin_inset Formula $A(c\mathbf{v})=\lambda(c\mathbf{v})$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A(c\mathbf{v})=c(A\mathbf{v})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=c(\lambda\mathbf{v})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+definition of eigenpair
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=(c\lambda)\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=(\lambda c)\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+commutative property for multiplication of real numbers
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\lambda(c\mathbf{v})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Each algebraic manipulation must be supported by one of the theorems or
+ a property of the real numbers.
+\end_layout
+
+\begin_layout Standard
+As a second example of the utility of these theorems, we are also prepared
+ to prove the claim that if 
+\begin_inset Formula $(\lambda,\mathbf{v})$
+\end_inset
+
+ is an eigenpair for the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, then 
+\begin_inset Formula $(M-\lambda I)\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, also from section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Eigenpairs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Technically the first line of the justification should itself be justified
+ in some general form before it is used.
+ Can you supply such a proof? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:difference-of-a-matrix-with-itself"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{0}=M\mathbf{v}-M\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the difference between a matrix and itself is a zero matrix
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=M\mathbf{v}-\lambda\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+definition of eigenpair (substitution of 
+\begin_inset Formula $\lambda\mathbf{v}$
+\end_inset
+
+ for 
+\begin_inset Formula $M\mathbf{v}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=M\mathbf{v}-\lambda(I\mathbf{v})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+definition of identity matrix (substitution of 
+\begin_inset Formula $I\mathbf{v}$
+\end_inset
+
+ for 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=M\mathbf{v}-(\lambda I)\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=(M-\lambda I)\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:rightdistributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+properties
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+operations see theorems 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+zero
+\begin_inset space ~
+\end_inset
+
+matrix an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix whose entries are all zero, denoted by 
+\begin_inset Formula $0_{m\times n}$
+\end_inset
+
+ or just 
+\begin_inset Formula $0$
+\end_inset
+
+ when its size is discernible through context.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Illustrate the rule by example.
+ Then explain in your own words why the rule is true.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(A+B)+C=A+(B+C)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:associativity-addition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A+0=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:additive-identity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r(A+B)=rA+rB$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:distribute-scalar-over-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(r+s)A=rA+sA$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:distributivity-matrix-over-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rs)A=r(sA)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rA)B=A(rB)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A^{T})^{T}=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rA)^{T}=rA^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-scalar-multiple"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the rule by showing that the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of the lefthand side of the equation equals the 
+\begin_inset Formula $i\!j$
+\end_inset
+
+-entry of the righthand side.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A+0=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:additive-identity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A(BC)=(AB)C$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A(B+C)=AB+AC$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:left-distributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(r+s)A=rA+sA$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:distributivity-matrix-over-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(rA)B=A(rB)$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ass-scalar-mult-2-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(B+C)A=BA+CA$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:rightdistributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A^{T})^{T}=A$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(AB)^{T}=B^{T}A^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transpose-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the claim by a string of equalities where each equality is supported
+ by a definition or theorem or claim you justify separately.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(AB)^{-1}=B^{-1}A^{-1}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:inverse-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(A^{T})^{-1}=(A^{-1})^{T}$
+\end_inset
+
+ (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:inverse-of-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & 0\\
+-3 & 2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+4 & -2\\
+1 & 5
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $AB^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Without any further computation, find 
+\begin_inset Formula $BA^{T}$
+\end_inset
+
+ and explain how you got it.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+4 & 7\\
+3 & 5
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Without any further computation, find 
+\begin_inset Formula $(A^{T})^{-1}$
+\end_inset
+
+ and explain how you got it.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the claim 
+\begin_inset Formula 
+\[
+(A+B)(C+D)=AC+AD+BC+BD
+\]
+
+\end_inset
+
+using a series of equalities, each one supported by a theorem.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:definition-of-equality"
+
+\end_inset
+
+Justify the claim by arguing that the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the lefthand side of the conclusion equals the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the righthand side of the conclusion.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A=B$
+\end_inset
+
+ then 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ (The conclusion is 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+.
+ Use the assumption that 
+\begin_inset Formula $A=B$
+\end_inset
+
+ in your argument.)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+ then 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ (The conclusion is 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ Use the assumption that 
+\begin_inset Formula $A-B=0$
+\end_inset
+
+ in your argument.)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:zero-products"
+
+\end_inset
+
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix.
+ Justify the claim by arguing that the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the lefthand side equals the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry on the righthand side.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A0_{n\times\ell}=0_{m\times\ell}$
+\end_inset
+
+ for any positive integer 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0_{\ell\times m}A=0_{\ell\times n}$
+\end_inset
+
+ for any positive integer 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:additive-inverse"
+
+\end_inset
+
+Show that, for any matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $-A$
+\end_inset
+
+ is the additive inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ That is,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $-A+A=0$
+\end_inset
+
+; and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A+(-A)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-A$
+\end_inset
+
+ has the common meaning 
+\begin_inset Formula $-1\cdot A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+inverse
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+product 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverse-of-a-product"
+
+\end_inset
+
+
+\begin_inset Formula $(B^{-1}A^{-1})(AB)=((B^{-1}A^{-1})A)B=(B^{-1}(A^{-1}A))B=(B^{-1}I)B=B^{-1}B=I$
+\end_inset
+
+ using the associative property multiple times, the definition of inverse
+ multiple times, and the definition of the multiplicative identity once.
+ The second half of the justification, that 
+\begin_inset Formula $(AB)(B^{-1}A^{-1})=I$
+\end_inset
+
+, can be made by a similar string of equalities.
+ You are encouraged to try it.
+\end_layout
+
+\begin_layout Description
+difference
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+with
+\begin_inset space ~
+\end_inset
+
+itself 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:difference-of-a-matrix-with-itself"
+
+\end_inset
+
+The general statement that if 
+\begin_inset Formula $A$
+\end_inset
+
+ is any matrix then 
+\begin_inset Formula $A-A=0$
+\end_inset
+
+ can be proven by noting that
+\begin_inset Formula 
+\[
+(A-A)_{i,j}=A_{i,j}-A_{i,j}=0
+\]
+
+\end_inset
+
+for all entries 
+\begin_inset Formula $(A-A)_{i,j}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

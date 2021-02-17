@@ -1146,7 +1146,19 @@ The observations that free variables lead to infinitely many solutions and
 \end_layout
 
 \begin_layout Theorem
-A linear system is consistent if and only if the rightmost column of its
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:linear-system-existence-uniqueness"
+
+\end_inset
+
+
+\series bold
+\shape up
+[Existence and Uniqueness]
+\series default
+\shape default
+ A linear system is consistent if and only if the rightmost column of its
  augmented matrix representation is not a pivot column.
  Furthermore, a consistent system will have (a) exactly one solution if
  it admits no free variables; and (b) infinitely many solutions if it admits
@@ -1364,6 +1376,48 @@ consistent having at least one solution.
 
 \begin_layout Description
 inconsistent having no solution.
+\end_layout
+
+\begin_layout Description
+existence
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+uniqueness
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+solutions
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+systems see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:linear-system-existence-uniqueness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description

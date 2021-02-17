@@ -452,6 +452,19 @@ filename "mechanics-multiplication.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Insert length and orthogonality 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "mechanics-determinants.lyx"
@@ -556,7 +569,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "matrixarithmetic-properties.lyx"
+filename "matrixalgebra-properties.lyx"
 
 \end_inset
 
@@ -566,7 +579,31 @@ filename "matrixarithmetic-properties.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "matrixarithmetic-equations.lyx"
+filename "matrixalgebra-equations.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "matrixalgebra-linearindependence.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Include revisit of chapter 1 calculations (determinants, inverses,
+ eigenvectors)
+\end_layout
 
 \end_inset
 
