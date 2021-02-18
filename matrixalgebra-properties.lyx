@@ -96,27 +96,7 @@ status open
 
 
 \backslash
-pagenumbering{gobble}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Part
-Theory
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{arabic}
+mypart{Theory}
 \end_layout
 
 \end_inset

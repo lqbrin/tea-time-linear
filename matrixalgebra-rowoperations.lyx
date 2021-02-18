@@ -1,0 +1,647 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Row-Operations-Revisited"
+
+\end_inset
+
+Row Operations Revisited
+\end_layout
+
+\begin_layout Standard
+Put elementary matrices here leading to the conclusion 
+\begin_inset Formula $\det(EA)=\det(E)\det(A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matrix Characterization Part 2
+\end_layout
+
+\begin_layout Standard
+Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ has a counterpart phrased in terms of the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Parts (i), (ii), (iii), and (v) of this theorem can be justified through
+ reference to the other, but parts (iv) and (vi) cannot.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+[Characterization of Matrices Part 2]
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Matrix-Characterization-2"
+
+\end_inset
+
+
+\series default
+\shape default
+ Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{c}$
+\end_inset
+
+ have 
+\begin_inset Formula $n$
+\end_inset
+
+ entries, and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ have 
+\begin_inset Formula $m$
+\end_inset
+
+ entries.
+ Then the following are equivalent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=(
+\backslash
+roman{enumi})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Enumerate
+No row of 
+\begin_inset Formula $M$
+\end_inset
+
+ is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ has only the trivial solution
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every row.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
+\end_inset
+
+ has no free variables
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
+\end_inset
+
+ has at least one solution for every 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+The justification for this theorem proceeds by logically connecting the
+ statements according to the following diagram.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+ &  & \text{(v)}\\
+ & \Swarrow &  & \Nwarrow\\
+\text{(i)} & \Rightarrow & \text{(ii)} & \Rightarrow & \text{(iii)}\\
+ & \Searrow &  &  & \Uparrow\\
+ &  & \text{(iv)} & \Rightarrow & \text{(vi)}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Though the first several implications can be proven without reference to
+ theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, such reference will be used to emphasize the direct connection between
+ the two theorems.
+\end_layout
+
+\begin_layout Description
+(i)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(ii) The rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent, so the columns of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ are linearly independent.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, none of the columns of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ can be written as a linear combination of the others, so none of the rows
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ can be writen as a linear combination of the others.
+\end_layout
+
+\begin_layout Description
+(ii)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iii) No row of 
+\begin_inset Formula $M$
+\end_inset
+
+ can be written as a linear combination of the others, so no column of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ can be written as a linear combination of the others.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\end_inset
+
+ has only the trivial solution.
+ Since 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula $(M^{T}\mathbf{w})^{T}=\mathbf{0}^{T}$
+\end_inset
+
+ (transpose both sides), which is equivalent to 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ (simplifying the lefthand side), the conclusion follows.
+\end_layout
+
+\begin_layout Description
+(iii)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(v) Since 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ has only the trivial solution, the equivalent equations 
+\begin_inset Formula $(\mathbf{w}^{T}M)^{T}=(\mathbf{0}^{T})^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\end_inset
+
+ have only the trivial solution.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{c}$
+\end_inset
+
+ has no free variables.
+ Therefore, the equivalent equation 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
+\end_inset
+
+ has no free variables.
+\end_layout
+
+\begin_layout Description
+(v)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(i) Since 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
+\end_inset
+
+ has no free variables, the equivalent equation 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{c}$
+\end_inset
+
+ has no free variables.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the columns of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ are linearly independent.
+ Therefore, the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Description
+(i)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iv) Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ does not have a pivot in every row.
+ Then any row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+ has a row of zeros.
+ Since that row of zeros is the result of a nontrivial linear combination
+ of the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+, there is a nontrivial linear combination of the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ that sum to 
+\begin_inset Formula $\mathbf{0}^{T}$
+\end_inset
+
+.
+ Therefore the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are not linearly independent.
+\end_layout
+
+\begin_layout Description
+(iv)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(vi) Since 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot in every row, no row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+ has a row of zeros.
+ Therefore 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+ cannot have a pivot in the rightmost column, and by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:linear-system-existence-uniqueness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is consistent (has at least one solution) for any 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+(vi)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iii) In particular, 
+\begin_inset Formula $M\mathbf{w}_{i}=\left(I_{n\times n}\right)_{:,i}$
+\end_inset
+
+ has at least one solution.
+ Let 
+\begin_inset Formula $\mathbf{w}_{i}$
+\end_inset
+
+ be such a solution for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ It follows (by the matrix product as a linear combination of the columns)
+ that for 
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+\mathbf{w}_{1} & \mathbf{w}_{2} & \cdots & \mathbf{w}_{n}\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $MR=I_{n\times n}$
+\end_inset
+
+.
+ Supposing 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+, the following equations are deduced by matrix algebra.
+\begin_inset Formula 
+\begin{align*}
+(\mathbf{w}^{T}M)R & =\mathbf{0}^{T}R\\
+\mathbf{w}^{T}(MR) & =\mathbf{0}^{T}\\
+\mathbf{w}^{T}I & =\mathbf{0}^{T}\\
+\mathbf{w}^{T} & =\mathbf{0}^{T}
+\end{align*}
+
+\end_inset
+
+Hence 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ has only the trivial solution.
+ 
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+a
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+S
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+m
+\end_layout
+
+\end_body
+\end_document

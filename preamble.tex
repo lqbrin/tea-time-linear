@@ -7,6 +7,25 @@
 \fancyfoot{}
 \definecolor{shadecolor}{RGB}{204,204,255}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create counters for use in book %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{pagegrab}
+\newcounter{enumigrab}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part page without number %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mypart}[1]{
+  \setcounter{pagegrab}{\thepage}
+  \pagenumbering{gobble}
+  \part{#1}
+  \pagenumbering{arabic}
+  \stepcounter{pagegrab}
+  \stepcounter{pagegrab}
+  \setcounter{page}{\thepagegrab}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Redefine \boxed                                       %
 % will put a green box around a mathematical expression %
@@ -17,11 +36,6 @@
 % Define Bold \cdot %
 %%%%%%%%%%%%%%%%%%%%%
 \newcommand{\bcdot}{\boldsymbol\cdot}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Create new counter to save enumi for later %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcounter{enumigrab}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Define dictionary style accent mark %
