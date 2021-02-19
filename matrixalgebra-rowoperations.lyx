@@ -95,15 +95,244 @@ name "sec:Row-Operations-Revisited"
 
 \end_inset
 
-Row Operations Revisited
+Row Operations and the Determinant
 \end_layout
 
 \begin_layout Standard
-Put elementary matrices here leading to the conclusion 
-\begin_inset Formula $\det(EA)=\det(E)\det(A)$
+If I apply a row operation to a matrix and given you the resulting matrix
+ plus the row operation I performed, wil you be able to tell me what the
+ original matrix was? Let's try it! The result of swapping the first two
+ rows of my matrix is
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+23 & 12 & 22\\
+13 & -11 & -19\\
+-16 & 19 & -5
+\end{array}\right].
+\]
+
+\end_inset
+
+What is my matrix? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:whatismymatrix1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+What was my matrix if scaling the third row by 2 results in
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2 & -13 & -6\\
+-7 & -9 & 21\\
+-14 & -18 & 24
+\end{array}\right]?
+\]
+
+\end_inset
+
+Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:whatismymatrix2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+What was my matrix if replacing the first row by the first row plus three
+ times the third results in
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+11 & 9 & -1\\
+3 & 5 & -8\\
+3 & 8 & 1
+\end{array}\right]?
+\]
+
+\end_inset
+
+Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:whatismymatrix3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In each case the row operation can be undone to recover the original matrix.
+ This is exactly the idea of an inverse! The six elementary matrices correspondi
+ng to the six row operations (the row operations that gave the matrices
+ above and the row operations that were used to recover the original matrices),
+ in the order encountered are
+\begin_inset Formula 
+\[
+\begin{gathered}\text{result }\quad\text{ recover}\\
+\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\quad\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2
+\end{array}\right]\quad\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{2}
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\quad\left[\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+It must therefore be that each result matrix is invertible and
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{2}
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+Multiplying the result matrix by the inverse matrix will verify this claim.
+ Each elementary matrix has an inverse elementary matrix of the same type.
+ And in the case of a row swap, the elementary matrix is its own inverse.
+\end_layout
+
+\begin_layout Standard
+Now notice a couple of things about the determinants:
+\begin_inset Formula 
+\[
+\begin{gathered}\left|\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right|=-1\\
+\left|\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2
+\end{array}\right|=2\quad\left|\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{2}
+\end{array}\right|=\frac{1}{2}\\
+\left|\begin{array}{ccc}
+1 & 0 & 3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right|=1\quad\left|\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right|=1
+\end{gathered}
+\]
+
+\end_inset
+
+Making unwarranted generalizations, the determinant of a swap matrix is
+ 
+\begin_inset Formula $-1$
+\end_inset
+
+, the determinant of a scale matrix is the scale factor, and the determinant
+ of a replace matrix is 1.
+ Moreover, the product of the determinant of an elementary matrix and the
+ determinant of its inverse is 1.
+ In the above examples, we have 
+\begin_inset Formula $(-1)(-1)=1$
+\end_inset
+
+, 
+\begin_inset Formula $(2)\left(\frac{1}{2}\right)=1$
+\end_inset
+
+, and 
+\begin_inset Formula $(1)(1)=1$
+\end_inset
+
+.
+ Again making an unwarranted generalization, we might say 
+\begin_inset Formula $\det(E)\det(E^{-1})=\det(I)$
+\end_inset
+
+ for an elementary matrix 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+All of these gerneralizations are actually true! It is the goal of this
+ section and the next to understand why and explore some of the consequences.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -616,7 +845,67 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-S
+The size and number of pivot positions of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ are given.
+ (i) Are the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly independent? (ii) Are the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly indpendent? (iii) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ have? (iv) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ have for arbitrary 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+The size of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is given.
+ What is the maximum number of pivot positions 
+\begin_inset Formula $M$
+\end_inset
+
+ could have? Assume it has that maximum number and answer the following
+ questions.
+ (i) Are the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly independent? (ii) Are the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly indpendent? (iii) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ have? (iv) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ have for arbitrary 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+?
 \end_layout
 
 \begin_layout Standard
@@ -640,7 +929,129 @@ Answers
 \end_layout
 
 \begin_layout Description
-m
+what
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+my
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+(swap)? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:whatismymatrix1"
+
+\end_inset
+
+The original matrix can be recovered by swapping the first two rows back:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+13 & -11 & -19\\
+23 & 12 & 22\\
+-16 & 19 & -5
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+what
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+my
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+(scale)? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:whatismymatrix2"
+
+\end_inset
+
+The original matrix can be recoverd by scaling the third row by 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ (the multiplicative inverse of 
+\begin_inset Formula $2$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2 & -13 & -6\\
+-7 & -9 & 21\\
+-7 & -9 & 12
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+what
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+my
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+(replace)? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:whatismymatrix3"
+
+\end_inset
+
+The original matrix can be recoverd by replacing the first row by the first
+ row plus negative three (the additive inverse of 3) times the third:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2 & -15 & -4\\
+3 & 5 & -8\\
+3 & 8 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
