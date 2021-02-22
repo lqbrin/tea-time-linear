@@ -599,7 +599,7 @@ filename "matrixalgebra-linearindependence.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "matrixalgebra-rowoperations.lyx"
+filename "matrixalgebra-characterizations.lyx"
 
 \end_inset
 

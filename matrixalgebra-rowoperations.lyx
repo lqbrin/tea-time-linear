@@ -95,12 +95,12 @@ name "sec:Row-Operations-Revisited"
 
 \end_inset
 
-Row Operations and the Determinant
+Row Operations and the Determinant (defunct)
 \end_layout
 
 \begin_layout Standard
-If I apply a row operation to a matrix and given you the resulting matrix
- plus the row operation I performed, wil you be able to tell me what the
+If I apply a row operation to a matrix and give you the resulting matrix
+ plus thei row operation I performed, will you be able to tell me what the
  original matrix was? Let's try it! The result of swapping the first two
  rows of my matrix is
 \begin_inset Formula 
@@ -330,497 +330,593 @@ Making unwarranted generalizations, the determinant of a swap matrix is
 \end_layout
 
 \begin_layout Standard
-All of these gerneralizations are actually true! It is the goal of this
- section and the next to understand why and explore some of the consequences.
- 
-\end_layout
-
-\begin_layout Subsection
-Matrix Characterization Part 2
-\end_layout
-
-\begin_layout Standard
-Theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:Matrix-Characterization-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- of section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Linear-Independence"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- has a counterpart phrased in terms of the rows of 
-\begin_inset Formula $M$
-\end_inset
-
-.
- Parts (i), (ii), (iii), and (v) of this theorem can be justified through
- reference to the other, but parts (iv) and (vi) cannot.
-\end_layout
-
-\begin_layout Theorem
-
-\series bold
-\shape up
-[Characterization of Matrices Part 2]
-\begin_inset CommandInset label
-LatexCommand label
-name "thm:Matrix-Characterization-2"
-
-\end_inset
-
-
-\series default
-\shape default
- Suppose 
-\begin_inset Formula $M$
-\end_inset
-
- is an 
-\begin_inset Formula $m\times n$
-\end_inset
-
- matrix, 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{c}$
-\end_inset
-
- have 
-\begin_inset Formula $n$
-\end_inset
-
- entries, and 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{w}$
-\end_inset
-
- have 
-\begin_inset Formula $m$
-\end_inset
-
- entries.
- Then the following are equivalent.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-label=(
-\backslash
-roman{enumi})
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-The rows of 
-\begin_inset Formula $M$
-\end_inset
-
- are linearly independent.
-\end_layout
-
-\begin_layout Enumerate
-No row of 
-\begin_inset Formula $M$
-\end_inset
-
- is a linear combination of the others.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
-\end_inset
-
- has only the trivial solution
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $M$
-\end_inset
-
- has a pivot position in every row.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
-\end_inset
-
- has no free variables
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
-\end_inset
-
- has at least one solution for every 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\noindent
-The justification for this theorem proceeds by logically connecting the
- statements according to the following diagram.
-\end_layout
-
-\begin_layout Standard
+All of these generalizations are actually true! It is the goal of this section
+ and the next to understand why and explore some of the consequences, starting
+ with a generalization of the definition of determinant.
+ It will be convenient, and more or less necessary, to take expressions
+ like
 \begin_inset Formula 
 \[
-\begin{array}{ccccc}
- &  & \text{(v)}\\
- & \Swarrow &  & \Nwarrow\\
-\text{(i)} & \Rightarrow & \text{(ii)} & \Rightarrow & \text{(iii)}\\
- & \Searrow &  &  & \Uparrow\\
- &  & \text{(iv)} & \Rightarrow & \text{(vi)}
-\end{array}
+\det A=(-1)^{1+1}A_{1,1}\det A_{\backslash1,1}+(-1)^{1+2}A_{1,2}\det A_{\backslash1,2}+\cdots+(-1)^{1+n}A_{1,n}\det A_{\backslash1,n}
 \]
 
 \end_inset
 
+and write them in shorthand.
+ Each term of this sum has the exact same form.
+ They all look like 
+\begin_inset Formula $(-1)^{1+j}A_{1,j}\det A_{\backslash1,j}$
+\end_inset
+
+, and the values of 
+\begin_inset Formula $j$
+\end_inset
+
+ are 
+\begin_inset Formula $1,2,3,$
+\end_inset
+
+ and so on through 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ We use the very compact notation 
+\begin_inset Formula 
+\[
+\sum_{j=1}^{n}(-1)^{1+j}A_{1,j}\det A_{\backslash1,j}
+\]
+
+\end_inset
+
+to indicate this sum.
+ The 
+\begin_inset Formula $\sum$
+\end_inset
+
+ symbol means sum, the 
+\begin_inset Formula $j=1$
+\end_inset
+
+ below the 
+\begin_inset Formula $\sum$
+\end_inset
+
+ means start with 
+\begin_inset Formula $j=1$
+\end_inset
+
+, and the 
+\begin_inset Formula $n$
+\end_inset
+
+ above the 
+\begin_inset Formula $\sum$
+\end_inset
+
+ means end with 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ In this style, called sigma notation, the sum of the integers from 1 through
+ 100 is written as 
+\begin_inset Formula 
+\[
+\sum_{j=1}^{100}j
+\]
+
+\end_inset
+
+and the sum of the reciprocals of the integers from 1 through 100 is written
+ as
+\begin_inset Formula 
+\[
+\sum_{i=1}^{100}\frac{1}{i}.
+\]
+
+\end_inset
+
+The counting variable, conventionally 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $j$
+\end_inset
+
+, or 
+\begin_inset Formula $k$
+\end_inset
+
+, is immaterial.
+ Any letter could be used.
+ 
+\end_layout
+
+\begin_layout Standard
+Formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), which we have just summarized as 
+\begin_inset Formula ${\displaystyle \sum_{j=1}^{n}(-1)^{1+j}A_{1,j}\det A_{\backslash1,j}}$
+\end_inset
+
+, is called row expansion (of the determinant) along row one.
+ Row expansion along row 
+\begin_inset Formula $i$
+\end_inset
+
+ can be expressed as
+\begin_inset Formula 
+\begin{equation}
+\sum_{j=1}^{n}(-1)^{i+j}A_{i,j}\det A_{\backslash i,j}\label{eq:determinant-row-i}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $j$
+\end_inset
+
+ takes on the values from 
+\begin_inset Formula $1$
+\end_inset
+
+ through 
+\begin_inset Formula $n$
+\end_inset
+
+ but 
+\begin_inset Formula $i$
+\end_inset
+
+ does not change from one term to the next.
+ Surprisingly, formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-row-i"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) gives the same number no matter what value of 
+\begin_inset Formula $i$
+\end_inset
+
+ is chosen.
+ The row along which the determinant is expanded makes no difference! To
+ illustrate,
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+expansion along row 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+expansion along row 3
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|\begin{array}{ccc}
+-5 & 4 & -1\\
+2 & -2 & 3\\
+5 & -2 & -3
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|\begin{array}{ccc}
+-5 & 4 & -1\\
+2 & -2 & 3\\
+5 & -2 & -3
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-5\left|\begin{array}{cc}
+-2 & 3\\
+-2 & -3
+\end{array}\right|-4\left|\begin{array}{cc}
+2 & 3\\
+5 & -3
+\end{array}\right|-1\left|\begin{array}{cc}
+2 & -2\\
+5 & -2
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=5\left|\begin{array}{cc}
+4 & -1\\
+-2 & 3
+\end{array}\right|+2\left|\begin{array}{cc}
+-5 & -1\\
+2 & 3
+\end{array}\right|-3\left|\begin{array}{cc}
+-5 & 4\\
+2 & -2
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-5(6+6)-4(-6-15)-1(-4+10)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=5(12-2)+2(-15+2)-3(10-8)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-60+84-6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=50-26-6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
 \noindent
-Though the first several implications can be proven without reference to
- theorem 
+To prove that the row of expansion makes no difference is not a simple matter.
+ The approach taken here is to notice that formula (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:Matrix-Characterization-1"
+reference "eq:determinant-row-i"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-, such reference will be used to emphasize the direct connection between
- the two theorems.
+) has four properties and that those properties are enough to define a single,
+ unique, function.
+ Suppose 
+\begin_inset Formula $G$
+\end_inset
+
+ is a function taking 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices as inputs and returning scalars as outputs and 
+\begin_inset Formula $G$
+\end_inset
+
+ has the following properties.
 \end_layout
 
-\begin_layout Description
-(i)
-\begin_inset Formula $\ \Rightarrow\ $
+\begin_layout Enumerate
+\begin_inset Formula $G(I)=1$
 \end_inset
 
-(ii) The rows of 
-\begin_inset Formula $M$
-\end_inset
 
- are linearly independent, so the columns of 
-\begin_inset Formula $M^{T}$
-\end_inset
-
- are linearly independent.
- By theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:Matrix-Characterization-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, none of the columns of 
-\begin_inset Formula $M^{T}$
-\end_inset
-
- can be written as a linear combination of the others, so none of the rows
- of 
-\begin_inset Formula $M$
-\end_inset
-
- can be writen as a linear combination of the others.
 \end_layout
 
-\begin_layout Description
-(ii)
-\begin_inset Formula $\ \Rightarrow\ $
+\begin_layout Enumerate
+\begin_inset Formula $G(A)=0$
 \end_inset
 
-(iii) No row of 
-\begin_inset Formula $M$
+ whenever 
+\begin_inset Formula $A$
 \end_inset
 
- can be written as a linear combination of the others, so no column of 
-\begin_inset Formula $M^{T}$
-\end_inset
+ has two identical columns.
+\end_layout
 
- can be written as a linear combination of the others.
- By theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:Matrix-Characterization-1"
-plural "false"
-caps "false"
-noprefix "false"
-
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
 \end_inset
 
 , 
-\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\begin_inset Formula $B$
 \end_inset
 
- has only the trivial solution.
- Since 
-\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+, and 
+\begin_inset Formula $C$
 \end_inset
 
- is equivalent to 
-\begin_inset Formula $(M^{T}\mathbf{w})^{T}=\mathbf{0}^{T}$
+ are identical except in their 
+\begin_inset Formula $k^{th}$
 \end_inset
 
- (transpose both sides), which is equivalent to 
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+ columns where 
+\begin_inset Formula $C_{:,k}=A_{:,k}+B_{:,k}$
 \end_inset
 
- (simplifying the lefthand side), the conclusion follows.
+, then 
+\begin_inset Formula $G(C)=G(A)+G(B)$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Description
-(iii)
-\begin_inset Formula $\ \Rightarrow\ $
-\end_inset
-
-(v) Since 
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
-\end_inset
-
- has only the trivial solution, the equivalent equations 
-\begin_inset Formula $(\mathbf{w}^{T}M)^{T}=(\mathbf{0}^{T})^{T}$
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
 \end_inset
 
  and 
-\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\begin_inset Formula $B$
 \end_inset
 
- have only the trivial solution.
- By theorem 
+ are identical except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ columns where 
+\begin_inset Formula $A_{:,k}=cB_{:,k}$
+\end_inset
+
+, then 
+\begin_inset Formula $G(A)=cG(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $G$
+\end_inset
+
+ also has an additional two properties.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $G(A)=0$
+\end_inset
+
+ whenever the columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ are linearly dependent.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $D(B)=-D(A)$
+\end_inset
+
+ whenever 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of swapping two columns of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If such a function exists, it is unique.
+ That is, no matter how it is calculated, the result must be the same.
+ Thus showing that (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:Matrix-Characterization-1"
+reference "eq:determinant-row-i"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-, 
-\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{c}$
-\end_inset
-
- has no free variables.
- Therefore, the equivalent equation 
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
-\end_inset
-
- has no free variables.
-\end_layout
-
-\begin_layout Description
-(v)
-\begin_inset Formula $\ \Rightarrow\ $
-\end_inset
-
-(i) Since 
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
-\end_inset
-
- has no free variables, the equivalent equation 
-\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{c}$
-\end_inset
-
- has no free variables.
- By theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:Matrix-Characterization-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, the columns of 
-\begin_inset Formula $M^{T}$
-\end_inset
-
- are linearly independent.
- Therefore, the rows of 
-\begin_inset Formula $M$
-\end_inset
-
- are linearly independent.
-\end_layout
-
-\begin_layout Description
-(i)
-\begin_inset Formula $\ \Rightarrow\ $
-\end_inset
-
-(iv) Suppose 
-\begin_inset Formula $M$
-\end_inset
-
- does not have a pivot in every row.
- Then any row echelon form of 
-\begin_inset Formula $M$
-\end_inset
-
- has a row of zeros.
- Since that row of zeros is the result of a nontrivial linear combination
- of the rows of 
-\begin_inset Formula $M$
-\end_inset
-
-, there is a nontrivial linear combination of the rows of 
-\begin_inset Formula $M$
-\end_inset
-
- that sum to 
-\begin_inset Formula $\mathbf{0}^{T}$
-\end_inset
-
-.
- Therefore the rows of 
-\begin_inset Formula $M$
-\end_inset
-
- are not linearly independent.
-\end_layout
-
-\begin_layout Description
-(iv)
-\begin_inset Formula $\ \Rightarrow\ $
-\end_inset
-
-(vi) Since 
-\begin_inset Formula $M$
-\end_inset
-
- has a pivot in every row, no row echelon form of 
-\begin_inset Formula $M$
-\end_inset
-
- has a row of zeros.
- Therefore 
-\begin_inset Formula $\left[\begin{array}{cc}
-M & \mathbf{b}\end{array}\right]$
-\end_inset
-
- cannot have a pivot in the rightmost column, and by theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:linear-system-existence-uniqueness"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- the system 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
- is consistent (has at least one solution) for any 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-(vi)
-\begin_inset Formula $\ \Rightarrow\ $
-\end_inset
-
-(iii) In particular, 
-\begin_inset Formula $M\mathbf{w}_{i}=\left(I_{n\times n}\right)_{:,i}$
-\end_inset
-
- has at least one solution.
- Let 
-\begin_inset Formula $\mathbf{w}_{i}$
-\end_inset
-
- be such a solution for each 
-\begin_inset Formula $i$
-\end_inset
-
-.
- It follows (by the matrix product as a linear combination of the columns)
- that for 
-\begin_inset Formula $R=\left[\begin{array}{cccc}
-\mathbf{w}_{1} & \mathbf{w}_{2} & \cdots & \mathbf{w}_{n}\end{array}\right]$
-\end_inset
-
-, 
-\begin_inset Formula $MR=I_{n\times n}$
-\end_inset
-
-.
- Supposing 
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
-\end_inset
-
-, the following equations are deduced by matrix algebra.
+) has the first four properties means that determinants can be calculated
+ by expansion along any row.
+ With the further step of showing that column expansion,
 \begin_inset Formula 
-\begin{align*}
-(\mathbf{w}^{T}M)R & =\mathbf{0}^{T}R\\
-\mathbf{w}^{T}(MR) & =\mathbf{0}^{T}\\
-\mathbf{w}^{T}I & =\mathbf{0}^{T}\\
-\mathbf{w}^{T} & =\mathbf{0}^{T}
-\end{align*}
+\begin{equation}
+\sum_{i=1}^{n}(-1)^{i+j}A_{i,j}\det A_{\backslash i,j}\label{eq:determinant-col-j}
+\end{equation}
 
 \end_inset
 
-Hence 
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+for fixed 
+\begin_inset Formula $j$
 \end_inset
 
- has only the trivial solution.
- 
-\end_layout
-
-\begin_layout Subsection
-Key Concepts
-\end_layout
-
-\begin_layout Description
-a
+ also has the first four properties, it too must produce the same result.
 \end_layout
 
 \begin_layout Standard

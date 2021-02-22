@@ -228,6 +228,13 @@ begin{digression}{Foundations of Analysis}
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "dig:peano-axioms"
+
+\end_inset
+
 In 1951 Edmund Landau published the first edition of his 
 \shape italic
 Grundlagen der Analysis
@@ -413,7 +420,14 @@ That is, for any given number there exists either no number or exactly one
 \series bold
 Axiom 5
 \series default
- (Axiom of Induction): 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "axiom:induction"
+
+\end_inset
+
+(Axiom of Induction): 
 \shape italic
 Let there be given a set 
 \begin_inset Formula $\frak{R}$

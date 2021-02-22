@@ -1,0 +1,1329 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Row-Operations-Revisited"
+
+\end_inset
+
+Characterization of 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ Matrices
+\end_layout
+
+\begin_layout Standard
+Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ has a counterpart phrased in terms of the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Parts (i), (ii), (iii), and (v) of the following theorem can be justified
+ through reference to the previous, but parts (iv) and (vi) cannot.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+[Characterization of Matrices Part 2]
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Matrix-Characterization-2"
+
+\end_inset
+
+
+\series default
+\shape default
+ Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{c}$
+\end_inset
+
+ have 
+\begin_inset Formula $n$
+\end_inset
+
+ entries, and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ have 
+\begin_inset Formula $m$
+\end_inset
+
+ entries.
+ Then the following are equivalent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=(
+\backslash
+roman{enumi})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Enumerate
+No row of 
+\begin_inset Formula $M$
+\end_inset
+
+ is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ has only the trivial solution
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every row.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
+\end_inset
+
+ has no free variables
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
+\end_inset
+
+ has at least one solution for every 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+The justification for this theorem proceeds by logically connecting the
+ statements according to the following diagram.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+ &  & \text{(v)}\\
+ & \Swarrow &  & \Nwarrow\\
+\text{(i)} & \Rightarrow & \text{(ii)} & \Rightarrow & \text{(iii)}\\
+ & \Searrow &  &  & \Uparrow\\
+ &  & \text{(iv)} & \Rightarrow & \text{(vi)}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Though the first several implications can be proven without reference to
+ theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, such reference will be used to emphasize the direct connection between
+ the two theorems.
+\end_layout
+
+\begin_layout Description
+(i)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(ii) The rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent, so the columns of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ are linearly independent.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, none of the columns of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ can be written as a linear combination of the others, so none of the rows
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ can be writen as a linear combination of the others.
+\end_layout
+
+\begin_layout Description
+(ii)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iii) No row of 
+\begin_inset Formula $M$
+\end_inset
+
+ can be written as a linear combination of the others, so no column of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ can be written as a linear combination of the others.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\end_inset
+
+ has only the trivial solution.
+ Since 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula $(M^{T}\mathbf{w})^{T}=\mathbf{0}^{T}$
+\end_inset
+
+ (transpose both sides), which is equivalent to 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ (simplifying the lefthand side), the conclusion follows.
+\end_layout
+
+\begin_layout Description
+(iii)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(v) Since 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ has only the trivial solution, the equivalent equations 
+\begin_inset Formula $(\mathbf{w}^{T}M)^{T}=(\mathbf{0}^{T})^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{0}$
+\end_inset
+
+ have only the trivial solution.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{c}$
+\end_inset
+
+ has no free variables.
+ Therefore, the equivalent equation 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
+\end_inset
+
+ has no free variables.
+\end_layout
+
+\begin_layout Description
+(v)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(i) Since 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
+\end_inset
+
+ has no free variables, the equivalent equation 
+\begin_inset Formula $M^{T}\mathbf{w}=\mathbf{c}$
+\end_inset
+
+ has no free variables.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the columns of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ are linearly independent.
+ Therefore, the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Description
+(i)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iv) Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ does not have a pivot in every row.
+ Then any row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+ has a row of zeros.
+ Since that row of zeros is the result of a nontrivial linear combination
+ of the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+, there is a nontrivial linear combination of the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ that sum to 
+\begin_inset Formula $\mathbf{0}^{T}$
+\end_inset
+
+.
+ Therefore the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are not linearly independent.
+\end_layout
+
+\begin_layout Description
+(iv)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(vi) Since 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot in every row, no row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+ has a row of zeros.
+ Therefore 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+ cannot have a pivot in the rightmost column, and by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:linear-system-existence-uniqueness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is consistent (has at least one solution) for any 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+(vi)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(iii) In particular, 
+\begin_inset Formula $M\mathbf{w}_{i}=\left(I_{n\times n}\right)_{:,i}$
+\end_inset
+
+ has at least one solution.
+ Let 
+\begin_inset Formula $\mathbf{w}_{i}$
+\end_inset
+
+ be such a solution for each 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ It follows (by the matrix product as a linear combination of the columns)
+ that for 
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+\mathbf{w}_{1} & \mathbf{w}_{2} & \cdots & \mathbf{w}_{n}\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $MR=I_{n\times n}$
+\end_inset
+
+.
+ Supposing 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+, the following equations are deduced by matrix algebra.
+\begin_inset Formula 
+\begin{align*}
+(\mathbf{w}^{T}M)R & =\mathbf{0}^{T}R\\
+\mathbf{w}^{T}(MR) & =\mathbf{0}^{T}\\
+\mathbf{w}^{T}I & =\mathbf{0}^{T}\\
+\mathbf{w}^{T} & =\mathbf{0}^{T}
+\end{align*}
+
+\end_inset
+
+Hence 
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
+\end_inset
+
+ has only the trivial solution.
+ 
+\end_layout
+
+\begin_layout Standard
+The justification for many of the upcoming claims relies heavily on induction
+ (see axiom 5 of crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:peano-axioms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "axiom:induction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The principle behind induction is to show that (i) the claim is actually
+ true for some particular integer, and (ii) if the claim is true for some
+ integer at least as large, then it is also true for the next integer.
+ This way, part (i) establishes the claim for a particular integer, say
+ 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Then part (ii) establishes the claim for the next integer, 
+\begin_inset Formula $k+1$
+\end_inset
+
+.
+ Part (i) also establishes the claim for the next integer, 
+\begin_inset Formula $k+2$
+\end_inset
+
+.
+ Applying part (i) again establishes the claim for the next integer, 
+\begin_inset Formula $k+3$
+\end_inset
+
+, and so on, part (i) establishing the claim for all integers greater than
+ 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Induction is often the most practical way to show that a statement is true
+ for all integers and is particularly useful in proving claims about matrices
+ of size 
+\begin_inset Formula $n$
+\end_inset
+
+ (for all 
+\begin_inset Formula $n$
+\end_inset
+
+).
+ Proofs of this nature will be shown, but this is not a course on proof
+ technique, so it is up to you or your instructor to decide how deeply you
+ need to understand these proofs.
+ Even if you are not prepared for full comprehension or writing your own
+ induction proofs, reading them is a good way to get a feel for the technique.
+\end_layout
+
+\begin_layout Standard
+An 
+\series bold
+upper triangular matrix
+\series default
+ is one in which all entries below the main diagonal are zero, and a 
+\series bold
+lower triangular matrix
+\series default
+ is one in which all entries above the main diagonal are zero.
+ Using 
+\begin_inset Formula $\star$
+\end_inset
+
+ to represent any number (as in the notation of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Echelon-Forms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), a square upper triangular matrix looks like
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+\star & \star & \star & \star & \cdots & \star\\
+0 & \star & \star & \star & \cdots & \star\\
+0 & 0 & \star & \star & \cdots & \star\\
+0 & 0 & 0 & \star & \cdots & \star\\
+\vdots & \vdots & \vdots & \vdots & \ddots & \star\\
+0 & 0 & 0 & 0 & \cdots & \star
+\end{array}\right]
+\]
+
+\end_inset
+
+and a square lower triangular matrix looks like 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+\star & 0 & 0 & 0 & \cdots & 0\\
+\star & \star & 0 & 0 & \cdots & 0\\
+\star & \star & \star & 0 & \cdots & 0\\
+\star & \star & \star & \star & \cdots & 0\\
+\vdots & \vdots & \vdots & \vdots & \ddots & 0\\
+\star & \star & \star & \star & \cdots & \star
+\end{array}\right].
+\]
+
+\end_inset
+
+All the nonzero entries are above or on the main diagonal (the upper triangle)
+ for an upper triangular matrix, and all the nonzero entries are below or
+ on the main diagonal (the lower triangle) for a lower triangular matrix.
+ The determinant of a lower triangular matrix is the product of the entrieson
+ its diagonal.
+ Now is a good time to work out a couple examples on your own and think
+ about why this is true in general.
+ We will prove it by induction, but the proof may not resonate with you
+ the way your own thoughts about it will.
+\end_layout
+
+\begin_layout Claim*
+If 
+\begin_inset Formula $L$
+\end_inset
+
+ is a lower triangular 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, then 
+\begin_inset Formula $\det L=L_{1,1}L_{2,2}\cdots L_{n,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $L$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix, it is upper triangular and 
+\begin_inset Formula $\det L=\det\left(\left[L_{1,1}\right]\right)=L_{1,1}$
+\end_inset
+
+.
+ This establishes part (i) of the proof.
+ The claim is true for the particular value 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ Now we assume that the claim is true for some (arbitrary) value 
+\begin_inset Formula $n=k$
+\end_inset
+
+ greater than or equal to one.
+ That is, if 
+\begin_inset Formula $L$
+\end_inset
+
+ is a lower triangular 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+, then 
+\begin_inset Formula $\det L=L_{1,1}L_{2,2}\cdots L_{k,k}$
+\end_inset
+
+.
+ To complete the proof, we must use this information to prove that if 
+\begin_inset Formula $L$
+\end_inset
+
+ is a 
+\begin_inset Formula $(k+1)\times(k+1)$
+\end_inset
+
+ matrix, the next integer size up, then 
+\begin_inset Formula $\det L=L_{1,1}L_{2,2}\cdots L_{k+1,k+1}$
+\end_inset
+
+, so suppose 
+\begin_inset Formula $L$
+\end_inset
+
+ is a 
+\begin_inset Formula $(k+1)\times(k+1)$
+\end_inset
+
+ matrix.
+ By definition,
+\begin_inset Formula 
+\begin{equation}
+\det L=(-1)^{1+1}L_{1,1}\det L_{\backslash1,1}+(-1)^{1+2}L_{1,2}\det L_{\backslash1,2}\cdots+(-1)^{1+3}L_{1,3}\det L_{\backslash1,3}\label{eq:det-lower-triangular-1}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $L$
+\end_inset
+
+ is lower triangular, 
+\begin_inset Formula $L_{1,j}=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $j>1$
+\end_inset
+
+.
+ Therefore, all the terms of the determinant are zero except the first one.
+ That is, the determinant simplifies to
+\begin_inset Formula 
+\begin{equation}
+\det L=L_{1,1}\det L_{\backslash1,1}.\label{eq:det-lower-triangular-2}
+\end{equation}
+
+\end_inset
+
+But 
+\begin_inset Formula $L_{\backslash1,1}$
+\end_inset
+
+ is a 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix, so its determinant is the product of the entries on its diagonal
+ (this is our inductive hypothesis).
+ So 
+\begin_inset Formula $\det L_{\backslash1,1}=L_{2,2}L_{3,3}\cdots L_{k+1,k+1}$
+\end_inset
+
+.
+ Substituting this expression into (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:det-lower-triangular-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we have 
+\begin_inset Formula $\det L=L_{1,1}L_{2,2}L_{3,3}\cdots L_{k+1,k+1}$
+\end_inset
+
+, and the proof is complete.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+a
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+The size and number of pivot positions of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ are given.
+ (i) Are the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly independent? (ii) Are the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly indpendent? (iii) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ have? (iv) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ have for arbitrary 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+The size of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is given.
+ What is the maximum number of pivot positions 
+\begin_inset Formula $M$
+\end_inset
+
+ could have? Assume it has that maximum number and answer the following
+ questions.
+ (i) Are the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly independent? (ii) Are the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ linearly indpendent? (iii) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ have? (iv) How many solutions does 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ have for arbitrary 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Redo question 2 assuming 
+\begin_inset Formula $M$
+\end_inset
+
+ has less than the maximum number of pivot positions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $U_{\backslash i,j}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+upper
+\begin_inset space ~
+\end_inset
+
+triangular 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:uppertriangularminor"
+
+\end_inset
+
+What makes a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ upper triangular is that 
+\begin_inset Formula $M_{k,\ell}=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $k>\ell$
+\end_inset
+
+.
+ That is, entries whose row number is greater than their column number are
+ zero.
+ After deleting the first row and some column of 
+\begin_inset Formula $U$
+\end_inset
+
+, as shown below,
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+\boxed{\star} & \boxed{\star} & \boxed{\star} & \boxed{\star} & \boxed{\cdots} & \boxed{\star}\\
+0 & \star & \star & \boxed{\star} & \cdots & \star\\
+0 & 0 & \star & \boxed{\star} & \cdots & \star\\
+0 & 0 & 0 & \boxed{\star} & \cdots & \star\\
+\vdots & \vdots & \vdots & \boxed{\vdots} & \ddots & \star\\
+0 & 0 & 0 & \boxed{0} & \cdots & \star
+\end{array}\right]
+\]
+
+\end_inset
+
+there are two distinct regions of entries.
+ Entries to the left of the deleted column have the same column index in
+ 
+\begin_inset Formula $U_{\backslash i,j}$
+\end_inset
+
+ as they do in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Columns to the right of the deleted column have a column index one less
+ than they do in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ All entries in 
+\begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+ have a row index one less than they do in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ In symbols, 
+\begin_inset Formula 
+\begin{align*}
+(U_{\backslash1,j})_{k,\ell} & =\begin{cases}
+U_{k+1,\ell} & \text{if }\ell<j\\
+U_{k+1,\ell+1} & \text{if }\ell\geq j
+\end{cases}
+\end{align*}
+
+\end_inset
+
+For 
+\begin_inset Formula $k>\ell$
+\end_inset
+
+, 
+\begin_inset Formula $k+1>\ell$
+\end_inset
+
+ and 
+\begin_inset Formula $k+1>\ell+1$
+\end_inset
+
+, so 
+\begin_inset Formula $U_{k+1,\ell}=U_{k+1,\ell+1}=0$
+\end_inset
+
+, meaning 
+\begin_inset Formula $(U_{\backslash1,j})_{k,\ell}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+has
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+zero
+\begin_inset space ~
+\end_inset
+
+on
+\begin_inset space ~
+\end_inset
+
+its
+\begin_inset space ~
+\end_inset
+
+main
+\begin_inset space ~
+\end_inset
+
+diagonal 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:U-has-zero-on-its-diagonal"
+
+\end_inset
+
+As long as 
+\begin_inset Formula $j>1$
+\end_inset
+
+, 
+\begin_inset Formula $(U_{\backslash1,j})_{1,1}=U_{2,1}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Put this in solutions–three separate questions in exercises.
+\end_layout
+
+\end_inset
+
+Note that if 
+\begin_inset Formula $U$
+\end_inset
+
+ is upper triangular, so is 
+\begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+.
+ Can you support this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:uppertriangularminor"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ It is also necessary to note that if 
+\begin_inset Formula $U$
+\end_inset
+
+ is upper triangular, then 
+\begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+ has a zero on its main diagonal whenever 
+\begin_inset Formula $j>1$
+\end_inset
+
+.
+ Can you support this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:U-has-zero-on-its-diagonal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim*
+If 
+\begin_inset Formula $U$
+\end_inset
+
+ is an upper triangular 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, then 
+\begin_inset Formula $\det U=U_{1,1}U_{2,2}\cdots U_{n,n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $U$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix, it is upper triangular and 
+\begin_inset Formula $\det\left(\left[U_{1,1}\right]\right)=U_{1,1}$
+\end_inset
+
+.
+ This establishes part (i) of the proof.
+ The claim is true for the particular value 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ Now we assume that the claim is true for some (arbitrary) value 
+\begin_inset Formula $n=k$
+\end_inset
+
+ greater than or equal to one.
+ That is, if 
+\begin_inset Formula $U$
+\end_inset
+
+ is an upper triangular 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+, then 
+\begin_inset Formula $\det U=U_{1,1}U_{2,2}\cdots U_{k,k}$
+\end_inset
+
+.
+ To complete the proof, we must use this information to prove that if 
+\begin_inset Formula $U$
+\end_inset
+
+ is a 
+\begin_inset Formula $(k+1)\times(k+1)$
+\end_inset
+
+ matrix then 
+\begin_inset Formula $\det U=U_{1,1}U_{2,2}\cdots U_{k+1,k+1}$
+\end_inset
+
+, so suppose 
+\begin_inset Formula $U$
+\end_inset
+
+ is a 
+\begin_inset Formula $(k+1)\times(k+1)$
+\end_inset
+
+ matrix.
+ By definition,
+\begin_inset Formula 
+\[
+\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}+(-1)^{1+2}U_{1,2}\det U_{\backslash1,2}\cdots+(-1)^{1+3}U_{1,3}\det U_{\backslash1,3}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+ is a 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix, its determinant is the product of the entries on its diagonal (this
+ is our inductive hypothesis).
+ Since there is a zero on the diagonal whenever 
+\begin_inset Formula $j>1$
+\end_inset
+
+, all terms except the first are zero.
+ Therefore, 
+\begin_inset Formula $\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}$
+\end_inset
+
+.
+ Again using the inductive hypothesis, 
+\begin_inset Formula $\det U_{\backslash1,1}$
+\end_inset
+
+ is the product of the entries on its main diagonal, 
+\begin_inset Formula $U_{2,2}U_{3,3}\cdots U_{k+1,k+1}$
+\end_inset
+
+.
+ Putting this observation together with 
+\begin_inset Formula $\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\det U=U_{1,1}U_{2,2}U_{3,3}\cdots U_{k+1,k+1}$
+\end_inset
+
+, and the proof is complete.
+\end_layout
+
+\end_body
+\end_document

@@ -88,6 +88,12 @@ theorems-ams
 \begin_body
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Echelon-Forms"
+
+\end_inset
+
 Existence, Uniqueness, and Echelon Forms
 \end_layout
 
