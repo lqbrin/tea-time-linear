@@ -1251,7 +1251,7 @@ Show that the vectors are linearly independent.
 \end_deeper
 \begin_layout Enumerate
 Show that the linear system has at most one solution for any values 
-\begin_inset Formula $b_{1},b_{2},\ldots$
+\begin_inset Formula $b_{1},b_{2},b_{3},b_{4}$
 \end_inset
 
 .
@@ -1325,8 +1325,7 @@ Show that the homogeneous system has only one solution, the trivial solution.
 -2 & 0
 \end{array}\right]\left[\begin{array}{c}
 x_{1}\\
-x_{2}\\
-x_{3}
+x_{2}
 \end{array}\right]=\left[\begin{array}{c}
 0\\
 0\\
@@ -1361,8 +1360,7 @@ x_{3}
 \end{array}\right]\left[\begin{array}{c}
 v_{1}\\
 v_{2}\\
-v_{3}\\
-v_{4}
+v_{3}
 \end{array}\right]=\mathbf{0}$
 \end_inset
 
@@ -1644,6 +1642,12 @@ linearly dependent columns?
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-independence"
+
+\end_inset
+
 What are the possible row echelon forms of a 
 \begin_inset Formula $2\times2$
 \end_inset
@@ -1736,6 +1740,12 @@ x & 4\\
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-independence-1"
+
+\end_inset
+
 Find the value(s) of 
 \begin_inset Formula $x$
 \end_inset

@@ -1,0 +1,427 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+Solutions to Selected Exercises
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Solutions to Selected Exercises}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RE]{Solutions to Selected Exercises}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[LO]{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: What makes any matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ upper triangular is that 
+\begin_inset Formula $M_{k,\ell}=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $k>\ell$
+\end_inset
+
+.
+ That is, entries whose row number is greater than their column number are
+ zero.
+ After deleting the first row and some column of 
+\begin_inset Formula $U$
+\end_inset
+
+, as shown below,
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+\boxed{\star} & \boxed{\star} & \boxed{\star} & \boxed{\star} & \boxed{\cdots} & \boxed{\star}\\
+0 & \star & \star & \boxed{\star} & \cdots & \star\\
+0 & 0 & \star & \boxed{\star} & \cdots & \star\\
+0 & 0 & 0 & \boxed{\star} & \cdots & \star\\
+\vdots & \vdots & \vdots & \boxed{\vdots} & \ddots & \star\\
+0 & 0 & 0 & \boxed{0} & \cdots & \star
+\end{array}\right]
+\]
+
+\end_inset
+
+there are two distinct regions of entries.
+ Entries to the left of the deleted column have the same column index in
+ 
+\begin_inset Formula $U_{\backslash i,j}$
+\end_inset
+
+ as they do in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Columns to the right of the deleted column have a column index one less
+ than they do in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ All entries in 
+\begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+ have a row index one less than they do in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ In symbols [and 
+\series bold
+the start of the proof
+\series default
+],
+\begin_inset Formula 
+\begin{align*}
+(U_{\backslash1,j})_{k,\ell} & =\begin{cases}
+U_{k+1,\ell} & \text{if }\ell<j\\
+U_{k+1,\ell+1} & \text{if }\ell\geq j
+\end{cases}.
+\end{align*}
+
+\end_inset
+
+If 
+\begin_inset Formula $k>\ell$
+\end_inset
+
+, then 
+\begin_inset Formula $k+1>\ell$
+\end_inset
+
+ and 
+\begin_inset Formula $k+1>\ell+1$
+\end_inset
+
+, so 
+\begin_inset Formula $U_{k+1,\ell}=U_{k+1,\ell+1}=0$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $(U_{\backslash1,j})_{k,\ell}=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $k>\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: As long as 
+\begin_inset Formula $j>1$
+\end_inset
+
+, 
+\begin_inset Formula $(U_{\backslash1,j})_{1,1}=U_{2,1}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\series bold
+\shape italic
+[Commentary that is not strictly part of the proof wil be inserted in square
+ brackets and bold italicized.]
+\series default
+\shape default
+ If 
+\begin_inset Formula $U$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix, it is upper triangular and 
+\begin_inset Formula $\det\left(\left[U_{1,1}\right]\right)=U_{1,1}$
+\end_inset
+
+.
+ 
+\series bold
+\shape italic
+[This establishes part (i) of the proof.
+ The claim is true for the particular value 
+\begin_inset Formula $n=1$
+\end_inset
+
+.]
+\series default
+\shape default
+ Now assume that 
+\begin_inset Formula $\det U=U_{1,1}U_{2,2}\cdots U_{k,k}$
+\end_inset
+
+ for some (arbitrary) value 
+\begin_inset Formula $k$
+\end_inset
+
+ greater than or equal to one.
+ 
+\series bold
+\shape italic
+[That is, if 
+\begin_inset Formula $U$
+\end_inset
+
+ is an upper triangular 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+, then the proposition is true.
+ To complete the proof, we must use this information to prove that if 
+\begin_inset Formula $U$
+\end_inset
+
+ is a 
+\begin_inset Formula $(k+1)\times(k+1)$
+\end_inset
+
+ matrix then 
+\begin_inset Formula $\det U=U_{1,1}U_{2,2}\cdots U_{k+1,k+1}$
+\end_inset
+
+.]
+\series default
+\shape default
+ Additionally, suppose 
+\begin_inset Formula $U$
+\end_inset
+
+ is a 
+\begin_inset Formula $(k+1)\times(k+1)$
+\end_inset
+
+ matrix.
+ By definition,
+\begin_inset Formula 
+\[
+\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}+(-1)^{1+2}U_{1,2}\det U_{\backslash1,2}\cdots+(-1)^{1+3}U_{1,3}\det U_{\backslash1,3}
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+ is a 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix, its determinant is the product of the entries on its diagonal 
+\series bold
+\shape italic
+[this is our inductive hypothesis]
+\series default
+\shape default
+.
+ Since there is a zero on the diagonal whenever 
+\begin_inset Formula $j>1$
+\end_inset
+
+, all terms except the first are zero.
+ Therefore, 
+\begin_inset Formula $\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}$
+\end_inset
+
+.
+ Again using the inductive hypothesis, 
+\begin_inset Formula $\det U_{\backslash1,1}$
+\end_inset
+
+ is the product of the entries on its main diagonal, 
+\begin_inset Formula $U_{2,2}U_{3,3}\cdots U_{k+1,k+1}$
+\end_inset
+
+.
+ Putting this observation together with 
+\begin_inset Formula $\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\det U=U_{1,1}U_{2,2}U_{3,3}\cdots U_{k+1,k+1}$
+\end_inset
+
+, and the proof is complete.
+\end_layout
+
+\end_body
+\end_document

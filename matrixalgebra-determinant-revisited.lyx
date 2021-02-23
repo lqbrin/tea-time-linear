@@ -1,0 +1,2146 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+The Determinant Revisited
+\end_layout
+
+\begin_layout Standard
+If I secretly apply a row operation to a matrix and give you the resulting
+ matrix plus the row operation I performed, will you be able to tell me
+ what the original matrix was? Let's try it! The result of swapping the
+ first two rows of my matrix is
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+23 & 12 & 22\\
+13 & -11 & -19\\
+-16 & 19 & -5
+\end{array}\right].
+\]
+
+\end_inset
+
+What is my matrix? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatismymatrix1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+How about another? The result of scaling the third row of my matrix by 2
+ is
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2 & -13 & -6\\
+-7 & -9 & 21\\
+-14 & -18 & 24
+\end{array}\right].
+\]
+
+\end_inset
+
+What is my matrix? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatismymatrix2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+And one last one...the result of replacing the first row of my matrix by the
+ first row plus three times the third is
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+11 & 9 & -1\\
+3 & 5 & -8\\
+3 & 8 & 1
+\end{array}\right].
+\]
+
+\end_inset
+
+What is my matrix? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatismymatrix3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In each case the row operation can be undone to recover the original matrix.
+ This is exactly the idea of an inverse! The six elementary matrices correspondi
+ng to the six row operations (the row operations that gave the matrices
+ above and the row operations that were used to recover the original matrices),
+ in the order encountered are
+\begin_inset Formula 
+\[
+\begin{gathered}\text{operation }\quad\text{ recovery}\\
+\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\quad\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2
+\end{array}\right]\quad\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{2}
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\quad\left[\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+It must therefore be that each operation matrix is invertible and
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{2}
+\end{array}\right]\\
+\left[\begin{array}{ccc}
+1 & 0 & 3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+Multiplying the operation matrix by the inverse matrix will verify this
+ claim.
+ Each elementary matrix has an inverse elementary matrix of the same type.
+ And in the case of a row swap, the elementary matrix is its own inverse.
+\end_layout
+
+\begin_layout Standard
+Now notice a couple of things about the determinants:
+\begin_inset Formula 
+\[
+\begin{gathered}\left|\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right|=-1\\
+\left|\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2
+\end{array}\right|=2\quad\left|\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{2}
+\end{array}\right|=\frac{1}{2}\\
+\left|\begin{array}{ccc}
+1 & 0 & 3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right|=1\quad\left|\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right|=1
+\end{gathered}
+\]
+
+\end_inset
+
+Come to think of it, the determinant of a scale matrix will always be the
+ scale factor! Can you justify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-scale-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Wait a minute! the determinant of a replace matrix is always 1.
+ Can you justify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-replace-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Is the determinant of a swap matrix always 
+\begin_inset Formula $-1$
+\end_inset
+
+? There is no such thing as a swap matrix with one row.
+ There is only one swap matrix with two rows:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+and there are only three swap matrices with three rows:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right],\ \left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array}\right],\text{ and }\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+It is easy enough to check that all four of these matrices have determinant
+ 
+\begin_inset Formula $-1$
+\end_inset
+
+, so maybe all swap matrices do have determinant 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Binomial Coefficients}
+\end_layout
+
+\end_inset
+
+The number of swap matrices with 
+\begin_inset Formula $n$
+\end_inset
+
+ rows, 
+\begin_inset Formula $n>1$
+\end_inset
+
+, is 
+\begin_inset Formula ${\displaystyle \frac{n(n-1)}{2}}$
+\end_inset
+
+.
+ For example, there are 
+\begin_inset Formula ${\displaystyle \frac{4(3)}{2}=6}$
+\end_inset
+
+ swap matrices with 
+\begin_inset Formula $4$
+\end_inset
+
+ rows, and there are 
+\begin_inset Formula ${\displaystyle \frac{100(99)}{2}=4950}$
+\end_inset
+
+ swap matrices with 
+\begin_inset Formula $100$
+\end_inset
+
+ rows.
+ The formula 
+\begin_inset Formula ${\displaystyle \frac{n(n-1)}{2}}$
+\end_inset
+
+ is a special case of the 
+\begin_inset Quotes eld
+\end_inset
+
+choose formula
+\begin_inset Quotes erd
+\end_inset
+
+, which is a formula for the number of ways to choose 
+\begin_inset Formula $k$
+\end_inset
+
+ objects from a set of 
+\begin_inset Formula $n$
+\end_inset
+
+ objects, with 
+\begin_inset Formula $0\leq k\leq n$
+\end_inset
+
+.
+ This number is also known as a binomial coefficient and there are several
+ notations for it.
+ Common notations and the formula for 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ choose 
+\begin_inset Formula $k$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ (a binomial coefficient) are
+\begin_inset Formula 
+\[
+\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)=\,_{n}C_{k}=C(n,k)=\frac{n!}{k!(n-k)!}.
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Proving it for all 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ swap matrices requires induction, but before we can do it cleanly, we need
+ one more fact: if 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $n>1$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align}
+\det M & =(-1)^{i+1}M_{i,1}\det M_{\backslash i,1}+(-1)^{i+2}M_{i,2}\det M_{\backslash i,2}+\cdots+(-1)^{i+n}M_{i,n}\det M_{\backslash i,n}\nonumber \\
+ & =(-1)^{1+j}M_{1,j}\det M_{\backslash1,j}+(-1)^{2+j}M_{2,j}\det M_{\backslash2,j}+\cdots+(-1)^{n+j}M_{n,j}\det M_{\backslash n,j}.\label{eq:determinant-general-expansion}
+\end{align}
+
+\end_inset
+
+for any 
+\begin_inset Formula $i$
+\end_inset
+
+ from 
+\begin_inset Formula $1$
+\end_inset
+
+ through 
+\begin_inset Formula $n$
+\end_inset
+
+ or any 
+\begin_inset Formula $j$
+\end_inset
+
+ from 
+\begin_inset Formula $1$
+\end_inset
+
+ through 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ This formula implies that determinants may be computed by expanding along
+ any row or any column, not just the first row.
+ To illustrate,
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+expansion along row 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+expansion along row 3
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|\begin{array}{ccc}
+-5 & 4 & -1\\
+2 & -2 & 3\\
+5 & -2 & -3
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|\begin{array}{ccc}
+-5 & 4 & -1\\
+2 & -2 & 3\\
+5 & -2 & -3
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-5\left|\begin{array}{cc}
+-2 & 3\\
+-2 & -3
+\end{array}\right|-4\left|\begin{array}{cc}
+2 & 3\\
+5 & -3
+\end{array}\right|-1\left|\begin{array}{cc}
+2 & -2\\
+5 & -2
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=5\left|\begin{array}{cc}
+4 & -1\\
+-2 & 3
+\end{array}\right|+2\left|\begin{array}{cc}
+-5 & -1\\
+2 & 3
+\end{array}\right|-3\left|\begin{array}{cc}
+-5 & 4\\
+2 & -2
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-5(6+6)-4(-6-15)-1(-4+10)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=5(12-2)+2(-15+2)-3(10-8)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-60+84-6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=50-26-6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+expansion along column 2
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|\begin{array}{ccc}
+-5 & 4 & -1\\
+2 & -2 & 3\\
+5 & -2 & -3
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-4\left|\begin{array}{cc}
+2 & 3\\
+5 & -3
+\end{array}\right|-2\left|\begin{array}{cc}
+-5 & -1\\
+5 & -3
+\end{array}\right|+2\left|\begin{array}{cc}
+-5 & -1\\
+2 & 3
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=-4(-6-15)-2(15+5)+2(-15+2)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=84-40-26$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-general-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) makes it relatively straightforward to prove that all swap matrices have
+ determinant 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ We have already shown (assuming you did the calculation above) that the
+ determinant of any 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix (and there is only one of them) is 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ Proceeding by induction, assume that for some 
+\begin_inset Formula $k\geq2$
+\end_inset
+
+, the determinant of all 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ swap matrices is 
+\begin_inset Formula $-1$
+\end_inset
+
+, and let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a particular but arbitrary 
+\begin_inset Formula $(k+1)\times(k+1)$
+\end_inset
+
+ matrix where rows 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ have been swapped.
+ Since 
+\begin_inset Formula $k+1\geq3$
+\end_inset
+
+, there must be a row of 
+\begin_inset Formula $S$
+\end_inset
+
+ that is not involved in the swap, say row 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $\ell\neq i$
+\end_inset
+
+ and 
+\begin_inset Formula $\ell\neq j$
+\end_inset
+
+.
+ Expanding the determinant of 
+\begin_inset Formula $S$
+\end_inset
+
+ along row 
+\begin_inset Formula $\ell$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\det S & =(-1)^{\ell+1}S_{\ell,1}\det S_{\backslash\ell,1}+(-1)^{\ell+2}S_{\ell,2}\det S_{\backslash\ell,2}+\cdots+(-1)^{\ell+k+1}S_{\ell,k+1}\det S_{\backslash\ell,k+1}\\
+ & =(-1)^{\ell+\ell}S_{\ell,\ell}\det S_{\backslash\ell,\ell}
+\end{align*}
+
+\end_inset
+
+because 
+\begin_inset Formula $S_{\ell,:}$
+\end_inset
+
+ is the 
+\begin_inset Formula $\ell^{th}$
+\end_inset
+
+ row of the identity matrix (not being involved in the swap), meaning 
+\begin_inset Formula $S_{\ell,m}=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $\ell\neq m$
+\end_inset
+
+.
+ Since the swapped rows are both in 
+\begin_inset Formula $S_{\backslash\ell,\ell}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{\backslash\ell,\ell}$
+\end_inset
+
+ is a 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ swap matrix and the inductive hypothesis implies 
+\begin_inset Formula $\det S_{\backslash\ell,\ell}=-1$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+\det S=(-1)^{\ell+\ell}S_{\ell,\ell}\det S_{\backslash\ell,\ell}=(1)(1)(-1)=-1,
+\]
+
+\end_inset
+
+completing the proof.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Proof of Formula (
+\backslash
+ref{eq:determinant-general-expansion})}
+\end_layout
+
+\end_inset
+
+Proving formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-general-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) requires a bit of work.
+ One way to do it is to prove that (i) there is only one function 
+\begin_inset Formula $G$
+\end_inset
+
+ taking 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices as inputs and returning scalars as outputs with the following
+ four properties and (ii) the expressions in formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-general-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) have these four properties.
+ Thus, each expression must give the same result.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G(I)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G(A)=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $A$
+\end_inset
+
+ has two identical columns.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are identical except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ columns where 
+\begin_inset Formula $C_{:,k}=A_{:,k}+B_{:,k}$
+\end_inset
+
+, then 
+\begin_inset Formula $G(C)=G(A)+G(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are identical except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ columns where 
+\begin_inset Formula $A_{:,k}=cB_{:,k}$
+\end_inset
+
+, then 
+\begin_inset Formula $G(A)=cG(B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To begin, suppose 
+\begin_inset Formula $G$
+\end_inset
+
+ is a function from 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices to scalars satisfying the four properties above.
+ Then 
+\begin_inset Formula $G$
+\end_inset
+
+ also has the following two properties.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $G(A)=0$
+\end_inset
+
+ whenever the columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ are linearly dependent.
+ 
+\shape italic
+Proof:
+\shape default
+ Because the columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ are linearly dependent, one of them, say column 
+\begin_inset Formula $k$
+\end_inset
+
+, can be written as a linear combination of the others.
+ That is, 
+\begin_inset Formula ${\displaystyle A_{:,k}=\sum_{j\neq k}c_{j}A_{:,j}}$
+\end_inset
+
+ for some constants 
+\begin_inset Formula $c_{j}$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+G(A) & =G\left(\left[\begin{array}{ccccccc}
+A_{:,1} & \cdots & A_{:,k-1} & {\displaystyle \sum_{j\neq k}c_{j}A_{:,j}} & A_{:,k+1} & \cdots & A_{:,n}\end{array}\right]\right)\\
+ & =\sum_{j\neq k}G\left(\left[\begin{array}{ccccccc}
+A_{:,1} & \cdots & A_{:,k-1} & {\displaystyle c_{j}A_{:,j}} & A_{:,k+1} & \cdots & A_{:,n}\end{array}\right]\right)\\
+ & =\sum_{j\neq k}c_{j}G\left(\left[\begin{array}{ccccccc}
+A_{:,1} & \cdots & A_{:,k-1} & {\displaystyle A_{:,j}} & A_{:,k+1} & \cdots & A_{:,n}\end{array}\right]\right)\\
+ & =\sum_{j\neq k}c_{j}\cdot0=0
+\end{align*}
+
+\end_inset
+
+by applying properties 3, 4, and 2, respectively.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $G(B)=-G(A)$
+\end_inset
+
+ whenever 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of swapping two columns of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\shape italic
+Proof:
+\shape default
+ Suppose 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of swapping columns 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+, and without loss of generality, assume 
+\begin_inset Formula $i<j$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+B=\left[\begin{array}{ccccccc}
+A_{:,1} & \cdots & A_{:,j} & \cdots & A_{:,i} & \cdots & A_{:,n}\end{array}\right].
+\]
+
+\end_inset
+
+Now let 
+\begin_inset Formula $C=\left[\begin{array}{ccccccc}
+A_{:,1} & \cdots & A_{:,i}+A_{:,j} & \cdots & A_{:,i}+A_{:,j} & \cdots & A_{:,n}\end{array}\right]$
+\end_inset
+
+.
+ Then by repeated application of property 3,
+\begin_inset Formula 
+\begin{align*}
+G\left(C\right) & =G(A)+G(B)\\
+ & +G\left(\left[\begin{array}{ccccccc}
+A_{:,1} & \cdots & A_{:,i} & \cdots & A_{:,i} & \cdots & A_{:,n}\end{array}\right]\right)\\
+ & +G\left(\left[\begin{array}{ccccccc}
+A_{:,1} & \cdots & A_{:,j} & \cdots & A_{:,j} & \cdots & A_{:,n}\end{array}\right]\right)
+\end{align*}
+
+\end_inset
+
+ and by property 2 the last two terms are zero as is 
+\begin_inset Formula $G(C)$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $0=G(A)+G(B)$
+\end_inset
+
+, concluding the proof.
+\end_layout
+
+\begin_layout Standard
+To begin the induction proof that 
+\begin_inset Formula $G$
+\end_inset
+
+ is unique, note that 
+\begin_inset Formula $G\left(\left[a\right]\right)=G\left(a\left[1\right]\right)=aG\left(\left[1\right]\right)=aG(I)=a$
+\end_inset
+
+ by properties 4 and 1, so 
+\begin_inset Formula $G$
+\end_inset
+
+ is uniquely determined for 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices.
+ Now suppose 
+\begin_inset Formula $G$
+\end_inset
+
+ is unique for all 
+\begin_inset Formula $(k-1)\times(k-1)$
+\end_inset
+
+ matrices for some 
+\begin_inset Formula $k>1$
+\end_inset
+
+, and let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a particular but arbitrary 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix.
+ If the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly dependent, then property 5 implies 
+\begin_inset Formula $G(M)=0$
+\end_inset
+
+, so 
+\begin_inset Formula $G(M)$
+\end_inset
+
+ is uniquely determined.
+ Now suppose the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot in every column.
+ Since 
+\begin_inset Formula $M$
+\end_inset
+
+ is square, 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot in every row.
+ Therefore 
+\begin_inset Formula $M$
+\end_inset
+
+ has a nonzero entry in row 
+\begin_inset Formula $k$
+\end_inset
+
+, say 
+\begin_inset Formula $M_{k,j}\neq0$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccccccc}
+M_{:,1}-\frac{M_{k,1}}{M_{k,j}}M_{:,j} & \cdots & M_{:,j-1}-\frac{M_{k,j-1}}{M_{k,j}}M_{:,j}\  & \ M_{:,j+1}-\frac{M_{k,j+1}}{M_{k,j}}M_{:,j} & \cdots & M_{:,n}-\frac{M_{k,k}}{M_{k,j}}M_{:,j}\  & \ M_{:j}\end{array}\right],
+\]
+
+\end_inset
+
+repeated application of properties 3 and 4 plus property 6 if needed implies
+ 
+\begin_inset Formula $G(A)=\pm G(M)$
+\end_inset
+
+ depending on whether 
+\begin_inset Formula $j=k$
+\end_inset
+
+.
+ Either way, 
+\begin_inset Formula $G(M)$
+\end_inset
+
+ is uniquely determined if 
+\begin_inset Formula $G(A)$
+\end_inset
+
+ is.
+ Note that 
+\begin_inset Formula $A_{k,:}=\left[\begin{array}{cccc}
+0 & \cdots & 0 & M_{k,j}\end{array}\right]$
+\end_inset
+
+, making it sufficient to show that 
+\begin_inset Formula $H(B)$
+\end_inset
+
+ defined on 
+\begin_inset Formula $(k-1)\times(k-1)$
+\end_inset
+
+ matrices by
+\begin_inset Formula 
+\[
+H(B)=\frac{1}{M_{k,j}}G\left(\left[\begin{array}{cc}
+B & M_{1:k-1,j}\\
+\mathbf{0}^{T} & M_{k,j}
+\end{array}\right]\right)
+\]
+
+\end_inset
+
+is uniquely determined.
+ But 
+\begin_inset Formula $H(B)$
+\end_inset
+
+ inherits properties 2, 3, and 4 from 
+\begin_inset Formula $G$
+\end_inset
+
+, so it only remains to establish that 
+\begin_inset Formula $H(I)=1$
+\end_inset
+
+.
+ Then, by the inductive hypothesis, 
+\begin_inset Formula $H$
+\end_inset
+
+ is uniquely determined.
+ To that end,
+\begin_inset Formula 
+\begin{align*}
+H(I) & =\frac{1}{M_{k,j}}G\left(\left[\begin{array}{cc}
+I & M_{1:k-1,j}\\
+\mathbf{0}^{T} & M_{k,j}
+\end{array}\right]\right)\\
+ & =\frac{1}{M_{k,j}}G\left(\left[\begin{array}{cccc}
+I_{:,1} & \cdots & I_{:,k-1} & {\displaystyle \sum_{i=1}^{k}M_{i,j}I_{:,i}}\end{array}\right]\right)\\
+ & =\frac{1}{M_{k,j}}\sum_{i=1}^{k}M_{i,j}G\left(\left[\begin{array}{cccc}
+I_{:,1} & \cdots & I_{:,k-1} & {\displaystyle I_{:,i}}\end{array}\right]\right)\\
+ & =\frac{1}{M_{k,j}}\left(M_{k,j}G(I)\right)\\
+ & =1
+\end{align*}
+
+\end_inset
+
+concluding the proof that 
+\begin_inset Formula $G$
+\end_inset
+
+ is unique.
+\end_layout
+
+\begin_layout Standard
+To complete the proof of formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-general-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it remains to show that each of the two expressions for 
+\begin_inset Formula $\det M$
+\end_inset
+
+ has properties 1 through 4.
+ This is because formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), the definition of determinant, is one of the expressions, so by uniqueness
+ they all produce the same result (as the determinant).
+ 
+\end_layout
+
+\begin_layout Standard
+Proceeding by induction, note that 
+\begin_inset Formula $\det\left(\left[a\right]\right)=a$
+\end_inset
+
+ satisfies all four properties, so the determinant has all four properties
+ on 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices.
+ Now suppose the function 
+\begin_inset Formula 
+\[
+\det M=(-1)^{i+1}M_{i,1}\det M_{\backslash i,1}+(-1)^{i+2}M_{i,2}\det M_{\backslash i,2}+\cdots+(-1)^{i+n}M_{i,\ell-1}\det M_{\backslash i,\ell-1}
+\]
+
+\end_inset
+
+has all four properties on 
+\begin_inset Formula $(\ell-1)\times(\ell-1)$
+\end_inset
+
+ matrices for some 
+\begin_inset Formula $\ell>1$
+\end_inset
+
+.
+ Then 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\begin{align*}
+\det I_{\ell\times\ell} & =(-1)^{i+1}I_{i,1}\det I_{\backslash i,1}+(-1)^{i+2}I_{i,2}\det I_{\backslash i,2}+\cdots+(-1)^{i+\ell}I_{i,\ell}\det I_{\backslash i,\ell}\\
+ & =(-1)^{i+i}I_{i,i}\det I_{\backslash i,i}
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $I_{i,j}=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $j\neq i$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $I_{\backslash i,i}=I_{(\ell-1)\times(\ell-1)}$
+\end_inset
+
+, so by the inductive hypothesis 
+\begin_inset Formula $\det I_{\backslash i,i}=1$
+\end_inset
+
+ and we have 
+\begin_inset Formula $\det I_{\ell\times\ell}=(-1)^{2i}I_{i,i}(1)=(1)(1)(1)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is a particular but arbitrary 
+\begin_inset Formula $\ell\times\ell$
+\end_inset
+
+ matrix with columns 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ identical, and without loss of generality assume 
+\begin_inset Formula $j<k$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{align*}
+\det M & =(-1)^{i+1}M_{i,1}\det M_{\backslash i,1}+(-1)^{i+2}M_{i,2}\det M_{\backslash i,2}+\cdots+(-1)^{i+\ell}M_{i,\ell}\det M_{\backslash i,\ell}\\
+ & =(-1)^{i+j}M_{i,j}\det M_{\backslash i,j}+(-1)^{i+k}M_{i,k}\det M_{\backslash i,k}
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $M_{\backslash i,m}$
+\end_inset
+
+ has two identical columns whenever 
+\begin_inset Formula $m\not\in\{j,k\}$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\det M_{\backslash i,m}=0$
+\end_inset
+
+ by the inductive hypothesis.
+ But because columns 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ are identical, 
+\begin_inset Formula $M_{i,j}=M_{i,k}$
+\end_inset
+
+, so we can rewrite 
+\begin_inset Formula $\det M=(-1)^{i+j}M_{i,j}\left[\det M_{\backslash i,j}+(-1)^{k-j}\det M_{\backslash i,k}\right]$
+\end_inset
+
+.
+ Now if we swap columns 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $j+1$
+\end_inset
+
+ of 
+\begin_inset Formula $M_{\backslash i,k}$
+\end_inset
+
+, and then columns 
+\begin_inset Formula $j+1$
+\end_inset
+
+ and 
+\begin_inset Formula $j+2$
+\end_inset
+
+, and so on to column 
+\begin_inset Formula $k$
+\end_inset
+
+, a total of 
+\begin_inset Formula $k-j-1$
+\end_inset
+
+ swaps, the result is 
+\begin_inset Formula $M_{\backslash i,j}$
+\end_inset
+
+, so by the inductive hypothesis 
+\begin_inset Formula $\det M_{\backslash i,j}=(-1)^{k-j-1}\det M_{\backslash i,k}$
+\end_inset
+
+.
+ Substituting into the latest expression for 
+\begin_inset Formula $\det M$
+\end_inset
+
+, we have 
+\begin_inset Formula $\det M=(-1)^{i+j}M_{i,j}\left[(-1)^{k-j-1}\det M_{\backslash i,k}+(-1)^{k-j}\det M_{\backslash i,k}\right]=(-1)^{i+k-1}\left[\det M_{\backslash i,k}-\det M_{\backslash i,k}\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are identical 
+\begin_inset Formula $\ell\times\ell$
+\end_inset
+
+ matrices except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ columns where 
+\begin_inset Formula $C_{:,k}=A_{:,k}+B_{:,k}$
+\end_inset
+
+.
+ Observe that 
+\begin_inset Formula $C_{\backslash i,k}=B_{\backslash i,k}=A_{\backslash i,k}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{i,j}=B_{i,j}=A_{i,j}$
+\end_inset
+
+ , and 
+\begin_inset Formula $\det C_{\backslash i,j}=\det A_{\backslash i,j}+\det B_{\backslash i,j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+.
+ It then follows that
+\begin_inset Formula 
+\begin{align*}
+\det C & =(-1)^{i+1}C_{i,1}\det C_{\backslash i,1}+(-1)^{i+2}C_{i,2}\det C_{\backslash i,2}+\cdots+(-1)^{i+\ell}C_{i,\ell}\det C_{\backslash i,\ell}\\
+ & =(-1)^{i+k}C_{i,k}\det C_{\backslash i,k}+\sum_{j\neq k}(-1)^{i+j}C_{i,j}\det C_{\backslash i,j}\\
+ & =(-1)^{i+k}\left(A_{i,k}+B_{i,k}\right)\det C_{\backslash i,k}+\sum_{j\neq k}(-1)^{i+j}C_{i,j}\left[\det A_{\backslash i,j}+\det B_{\backslash i,j}\right]\\
+ & (-1)^{i+k}A_{i,k}\det C_{\backslash i,k}+(-1)^{i+k}B_{i,k}\det C_{\backslash i,k}\\
+ & \qquad+\sum_{j\neq k}(-1)^{i+j}\left[C_{i,j}\det A_{\backslash i,j}+C_{i,j}\det B_{\backslash i,j}\right]\\
+ & =(-1)^{i+k}A_{i,k}\det A_{\backslash i,k}+(-1)^{i+k}B_{i,k}\det B_{\backslash i,k}\\
+ & \qquad+\sum_{j\neq k}(-1)^{i+j}\left[A_{i,j}\det A_{\backslash i,j}+B_{i,j}\det B_{\backslash i,j}\right]\\
+ & =\sum_{j=1}^{\ell}(-1)^{i+j}\left[A_{i,j}\det A_{\backslash i,j}+B_{i,j}\det B_{\backslash i,j}\right]=\det A+\det B
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+c
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+T
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Answers
+\end_layout
+
+\begin_layout Description
+what
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+my
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+(swap)? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:whatismymatrix1"
+
+\end_inset
+
+The original matrix can be recovered by swapping the first two rows back:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+13 & -11 & -19\\
+23 & 12 & 22\\
+-16 & 19 & -5
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+what
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+my
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+(scale)? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:whatismymatrix2"
+
+\end_inset
+
+The original matrix can be recoverd by scaling the third row by 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ (the multiplicative inverse of 
+\begin_inset Formula $2$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2 & -13 & -6\\
+-7 & -9 & 21\\
+-7 & -9 & 12
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+what
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+my
+\begin_inset space ~
+\end_inset
+
+matrix
+\begin_inset space ~
+\end_inset
+
+(replace)? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:whatismymatrix3"
+
+\end_inset
+
+The original matrix can be recoverd by replacing the first row by the first
+ row plus negative three (the additive inverse of 3) times the third:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2 & -15 & -4\\
+3 & 5 & -8\\
+3 & 8 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+scale
+\begin_inset space ~
+\end_inset
+
+matrix 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-scale-matrix"
+
+\end_inset
+
+A scale matrix is lower triangular with ones on the diagonal everywhere
+ except the row that it scales, where the entry equals the scale factor.
+ Since its determinant is the product of the entries on its diagonal, the
+ determinant equals the scale factor.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+replace
+\begin_inset space ~
+\end_inset
+
+matrix 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-replace-matrix"
+
+\end_inset
+
+A replace matrix is either lower triangular or upper triangular with ones
+ on the main diagonal.
+ Therefore its determinant is one.
+ NOTE: This argument uses the fact in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
