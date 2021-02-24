@@ -1145,6 +1145,7 @@ because
 \end_inset
 
 completing the proof.
+ 
 \begin_inset ERT
 status open
 
@@ -1636,15 +1637,11 @@ Proceeding by induction, note that
 \end_inset
 
  matrices.
- Now suppose the function 
-\begin_inset Formula 
-\[
-\det M=(-1)^{i+1}M_{i,1}\det M_{\backslash i,1}+(-1)^{i+2}M_{i,2}\det M_{\backslash i,2}+\cdots+(-1)^{i+n}M_{i,\ell-1}\det M_{\backslash i,\ell-1}
-\]
-
+ Now suppose 
+\begin_inset Formula $\det M$
 \end_inset
 
-has all four properties on 
+ has all four properties on 
 \begin_inset Formula $(\ell-1)\times(\ell-1)$
 \end_inset
 
@@ -1652,8 +1649,23 @@ has all four properties on
 \begin_inset Formula $\ell>1$
 \end_inset
 
-.
- Then 
+ and consider, for any fixed 
+\begin_inset Formula $i=1,2,\ldots\ell$
+\end_inset
+
+, the formula
+\begin_inset Formula 
+\[
+\det M=(-1)^{i+1}M_{i,1}\det M_{\backslash i,1}+(-1)^{i+2}M_{i,2}\det M_{\backslash i,2}+\cdots+(-1)^{i+\ell-1}M_{i,\ell}\det M_{\backslash i,\ell}
+\]
+
+\end_inset
+
+on 
+\begin_inset Formula $\ell\times\ell$
+\end_inset
+
+ matrices.
 \end_layout
 
 \begin_layout Enumerate
@@ -1840,12 +1852,12 @@ Suppose
 \begin_inset Formula $\det C_{\backslash i,j}=\det A_{\backslash i,j}+\det B_{\backslash i,j}$
 \end_inset
 
- for all 
-\begin_inset Formula $i$
+ (by the inductive hypothesis) for 
+\begin_inset Formula $j\neq k$
 \end_inset
 
- and 
-\begin_inset Formula $j\neq k$
+ and all 
+\begin_inset Formula $i$
 \end_inset
 
 .
@@ -1867,7 +1879,476 @@ Suppose
 
 \end_layout
 
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are identical 
+\begin_inset Formula $\ell\times\ell$
+\end_inset
+
+ matrices except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ columns where 
+\begin_inset Formula $A_{:,k}=cB_{:,k}$
+\end_inset
+
+.
+ Observe that 
+\begin_inset Formula $B_{\backslash i,k}=A_{\backslash i,k}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{i,j}=A_{i,j}$
+\end_inset
+
+ , and 
+\begin_inset Formula $\det A_{\backslash i,j}=c\det B_{\backslash i,j}$
+\end_inset
+
+ (by the inductive hypothesis) for 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+ and all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ It then follows that
+\begin_inset Formula 
+\begin{align*}
+\det A & =(-1)^{i+1}A_{i,1}\det A_{\backslash i,1}+(-1)^{i+2}A_{i,2}\det A_{\backslash i,2}+\cdots+(-1)^{i+\ell}A_{i,\ell}\det A_{\backslash i,\ell}\\
+ & =(-1)^{i+k}A_{i,k}\det A_{\backslash i,k}+\sum_{j\neq k}(-1)^{i+j}A_{i,j}\det A_{\backslash i,j}\\
+ & =(-1)^{i+k}cB_{i,k}\det B_{\backslash i,k}+\sum_{j\neq k}(-1)^{i+j}B_{i,j}\left(c\det B_{\backslash i,j}\right)\\
+ & =c\left[(-1)^{i+k}B_{i,k}\det B_{\backslash i,k}+\sum_{j\neq k}(-1)^{i+j}B_{i,j}\det B_{\backslash i,j}\right]\\
+ & =c\sum_{j=1}^{\ell}(-1)^{i+j}B_{i,j}\det B_{\backslash i,j}=c\det B
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+Hence the determinant may be calculated by expansion along any row.
+\end_layout
+
+\begin_layout Standard
+As for expansion along any column, we begin by showing that the function
+ 
+\begin_inset Formula $f(M)=\det M^{T}$
+\end_inset
+
+ (where 
+\begin_inset Formula $\det M$
+\end_inset
+
+ is defined by row expansion) has all four properties for any size matrix,
+ so must equal 
+\begin_inset Formula $\det M$
+\end_inset
+
+.
+ Note that if 
+\begin_inset Formula $M$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix, 
+\begin_inset Formula $M^{T}=M$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $f(M)=\det M^{T}=\det M=M_{1,1}$
+\end_inset
+
+, so 
+\begin_inset Formula $f(M)$
+\end_inset
+
+ has all four properties.
+ Observe that if 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $n>1$
+\end_inset
+
+, then by definition of 
+\begin_inset Formula $f$
+\end_inset
+
+ and the row expansion formula for determinant,
+\begin_inset Formula 
+\begin{equation}
+f(M)=\sum_{j=1}^{n}(-1)^{i+j}M_{j,i}\det(M^{T})_{\backslash i,j}\label{eq:det-transpose}
+\end{equation}
+
+\end_inset
+
+for any fixed 
+\begin_inset Formula $i=1,2,\ldots n$
+\end_inset
+
+.
+ We now proceed to show that 
+\begin_inset Formula $f$
+\end_inset
+
+ has all four properties for 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices where 
+\begin_inset Formula $n>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For any 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $I_{n\times n}^{T}=I_{n\times n}$
+\end_inset
+
+, so 
+\begin_inset Formula $f(I_{n\times n})=\det(I_{n\times n}^{T})=\det(I_{n\times n})=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix with two identical columns.
+ Then 
+\begin_inset Formula $M=\left[\begin{array}{cc}
+a & a\\
+b & b
+\end{array}\right]$
+\end_inset
+
+ for some constants 
+\begin_inset Formula $a,b$
+\end_inset
+
+, and
+\begin_inset Formula 
+\[
+f(M)=\det M^{T}=\det\left(\left[\begin{array}{cc}
+a & b\\
+a & b
+\end{array}\right]\right)=ab-ba=0.
+\]
+
+\end_inset
+
+Now set 
+\begin_inset Formula $n>2$
+\end_inset
+
+, suppose 
+\begin_inset Formula $f(A)=0$
+\end_inset
+
+ for any 
+\begin_inset Formula $(n-1)\times(n-1)$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ with two identical columns, and let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with identical columns 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $M$
+\end_inset
+
+ has at least three columns, there is an 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+ such that 
+\begin_inset Formula $i\neq k$
+\end_inset
+
+ and 
+\begin_inset Formula $i\neq\ell$
+\end_inset
+
+.
+ Then, for this particular 
+\begin_inset Formula $i$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+f(M) & =\sum_{j=1}^{n}(-1)^{i+j}M_{j,i}\det(M^{T})_{\backslash i,j}\\
+ & =\sum_{j=1}^{n}(-1)^{i+j}M_{j,i}\det(M_{\backslash j,i})^{T}\\
+ & =\sum_{j=1}^{n}(-1)^{i+j}M_{j,i}f(M_{\backslash j,i})
+\end{align*}
+
+\end_inset
+
+By the inductive hypothesis, 
+\begin_inset Formula $f(M_{\backslash j,i})=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $j$
+\end_inset
+
+, so 
+\begin_inset Formula $f(M)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $n>1$
+\end_inset
+
+ and suppose 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are identical 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ columns where 
+\begin_inset Formula $C_{:,k}=A_{:,k}+B_{:,k}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $(C^{T})_{\backslash k,j}=(A^{T})_{\backslash k,j}=(B^{T})_{\backslash k,j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j=1,\ldots,n$
+\end_inset
+
+ because 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $B^{T}$
+\end_inset
+
+, and 
+\begin_inset Formula $C^{T}$
+\end_inset
+
+ are all identical except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ rows.
+ Now, applying (
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "eq:det-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) with 
+\begin_inset Formula $i=k$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+f(C) & =\sum_{j=1}^{n}(-1)^{k+j}C_{j,k}\det(C^{T})_{\backslash k,j}\\
+ & =\sum_{j=1}^{n}(-1)^{k+j}\left(A_{j,k}+B_{j,k}\right)\det(C^{T})_{\backslash k,j}\\
+ & =\sum_{j=1}^{n}(-1)^{k+j}\left(A_{j,k}\det(C^{T})_{\backslash k,j}+B_{j,k}\det(C^{T})_{\backslash k,j}\right)\\
+ & =\sum_{j=1}^{n}(-1)^{k+j}\left(A_{j,k}\det(A^{T})_{\backslash k,j}+B_{j,k}\det(B^{T})_{\backslash k,j}\right)\\
+ & =\sum_{j=1}^{n}(-1)^{k+j}A_{j,k}\det(A^{T})_{\backslash k,j}+\sum_{j=1}^{\ell}(-1)^{k+j}B_{j,k}\det(B^{T})_{\backslash k,j}\\
+ & =f(A)+f(B)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $n>1$
+\end_inset
+
+ and suppose 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are identical 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ columns where 
+\begin_inset Formula $A_{:,k}=cB_{:,k}$
+\end_inset
+
+.
+ Observe that 
+\begin_inset Formula $(A^{T})_{\backslash k,j}=(B^{T})_{\backslash k,j}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j=1,\ldots,n$
+\end_inset
+
+ because 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $B^{T}$
+\end_inset
+
+ are identical except in their 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ rows.
+ Now applying (
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "eq:det-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) with 
+\begin_inset Formula $i=k$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+f(A) & =\sum_{j=1}^{n}(-1)^{k+j}A_{j,k}\det(A^{T})_{\backslash k,j}\\
+ & =\sum_{j=1}^{n}(-1)^{k+j}cB_{j,k}\det(B^{T})_{\backslash k,j}\\
+ & =c\sum_{j=1}^{n}(-1)^{k+j}B_{j,k}\det(B^{T})_{\backslash k,j}\\
+ & =cf(B)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, the expression
+\begin_inset Formula 
+\[
+(-1)^{1+j}M_{1,j}\det M_{\backslash1,j}+(-1)^{2+j}M_{2,j}\det M_{\backslash2,j}+\cdots+(-1)^{n+j}M_{n,j}\det M_{\backslash n,j}
+\]
+
+\end_inset
+
+from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-general-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) equals
+\begin_inset Formula 
+\begin{align*}
+\sum_{i=1}^{n}(-1)^{i+j}M_{i,j}\det M_{\backslash i,j} & =\sum_{i=1}^{n}(-1)^{j+i}M_{j,i}^{T}\det\left(M_{\backslash j,i}^{T}\right)^{T}\\
+ & =\sum_{i=1}^{n}(-1)^{j+i}M_{j,i}^{T}\det M_{\backslash j,i}^{T}\\
+ & =\det M^{T}\\
+ & =\det M
+\end{align*}
+
+\end_inset
+
+by the row expansion formula and the fact that 
+\begin_inset Formula $\det M^{T}=\det M$
+\end_inset
+
+.
 \begin_inset ERT
 status open
 
@@ -1881,6 +2362,33 @@ end{digression}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Interestingly, within the proof of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-general-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) lies the proof that 
+\begin_inset Formula 
+\[
+\det M^{T}=\det M
+\]
+
+\end_inset
+
+ for any matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
