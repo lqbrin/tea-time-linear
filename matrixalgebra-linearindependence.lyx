@@ -623,7 +623,7 @@ No column of
 \begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
 \end_inset
 
- has at most one solution for every 
+ has at most one solution for each 
 \begin_inset Formula $\mathbf{b}$
 \end_inset
 

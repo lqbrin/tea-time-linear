@@ -93,10 +93,57 @@ The Determinant Revisited
 \end_layout
 
 \begin_layout Standard
-If I secretly apply a row operation to a matrix and give you the resulting
- matrix plus the row operation I performed, will you be able to tell me
- what the original matrix was? Let's try it! The result of swapping the
- first two rows of my matrix is
+Pick a number.
+ Any number.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Add 6.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Multiply (your new number) by 6.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Subtract 9.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Divide by 3.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Subtract 9.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tell me your latest number, and I'll tell you your starting number.
+ It's half of your latest number!
+\end_layout
+
+\begin_layout Standard
+Matrices and row operations work in a similar fashion 
+\begin_inset Formula $\ldots$
+\end_inset
+
+ and you can be the magician.
+ I'll pick a matrix.
+ Any matrix.
+ After swapping the first two rows, my matrix is
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
@@ -108,7 +155,7 @@ If I secretly apply a row operation to a matrix and give you the resulting
 
 \end_inset
 
-What is my matrix? Answer on page 
+What was my original matrix? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:whatismymatrix1"
@@ -123,7 +170,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-How about another? The result of scaling the third row of my matrix by 2
+How about another? After scaling the third row of my matrix by 2, my matrix
  is
 \begin_inset Formula 
 \[
@@ -136,7 +183,7 @@ How about another? The result of scaling the third row of my matrix by 2
 
 \end_inset
 
-What is my matrix? Answer on page 
+What was my original matrix? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:whatismymatrix2"
@@ -151,8 +198,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-And one last one...the result of replacing the first row of my matrix by the
- first row plus three times the third is
+And one last one...after replacing the first row of my matrix by the first
+ row plus three times the third, my matrix is
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
@@ -164,7 +211,7 @@ And one last one...the result of replacing the first row of my matrix by the
 
 \end_inset
 
-What is my matrix? Answer on page 
+What was my original matrix? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:whatismymatrix3"
@@ -179,9 +226,9 @@ noprefix "false"
 
 \begin_layout Standard
 In each case the row operation can be undone to recover the original matrix.
- This is exactly the idea of an inverse! The six elementary matrices correspondi
-ng to the six row operations (the row operations that gave the matrices
- above and the row operations that were used to recover the original matrices),
+ This is exactly the concept of an inverse! The six elementary matrices
+ corresponding to the six row operations (the row operations that gave the
+ matrices above and the row operations used to recover the original matrices),
  in the order encountered are
 \begin_inset Formula 
 \[
@@ -253,10 +300,10 @@ It must therefore be that each operation matrix is invertible and
 
 \end_inset
 
-Multiplying the operation matrix by the inverse matrix will verify this
- claim.
- Each elementary matrix has an inverse elementary matrix of the same type.
- And in the case of a row swap, the elementary matrix is its own inverse.
+Multiplying the operation matrix by the inverse matrix will verify the inverse
+ pairs.
+ Each elementary matrix has an inverse elementary matrix of the same type,
+ and in the case of a row swap, the elementary matrix is its own inverse.
 \end_layout
 
 \begin_layout Standard
@@ -2349,6 +2396,24 @@ by the row expansion formula and the fact that
 \end_inset
 
 .
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+This proof is an adaptation of the presentation in sections 6.1 and 6.2 of
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "meckes"
+literal "false"
+
+\end_inset
+
+.
 \begin_inset ERT
 status open
 
@@ -2366,6 +2431,31 @@ end{digression}
 
 \begin_layout Standard
 \noindent
+To recap,
+\end_layout
+
+\begin_layout Itemize
+the determinant of a swap matrix is 
+\begin_inset Formula $-1$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+the determinant of a scale matrix is the scale factor, and
+\end_layout
+
+\begin_layout Itemize
+the determinant of a replace matrix is 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
 Interestingly, within the proof of (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2376,19 +2466,429 @@ noprefix "false"
 
 \end_inset
 
-) lies the proof that 
-\begin_inset Formula 
-\[
-\det M^{T}=\det M
-\]
+) lies the proofs that
+\end_layout
 
+\begin_layout Itemize
+if 
+\begin_inset Formula $B$
 \end_inset
 
- for any matrix 
+ is the result of swapping two columns of a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, then 
+\begin_inset Formula $\det B=-\det A$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of scaling a columns of a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ by 
+\begin_inset Formula $c$
+\end_inset
+
+, then 
+\begin_inset Formula $\det B=c\det A$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Itemize
+for any square matrix 
 \begin_inset Formula $M$
 \end_inset
 
+, 
+\begin_inset Formula $\det M^{T}=\det M$
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Standard
+Putting these three facts together, it is easy to justify the following
+ two facts.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of swapping two rows of a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, then 
+\begin_inset Formula $\det B=-\det A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+[
+\begin_inset Formula $\det B=\det B^{T}=\det A^{T}=-\det A$
+\end_inset
+
+ since 
+\begin_inset Formula $B^{T}$
+\end_inset
+
+ is the result of swapping two columns of 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $\det M^{T}=\det M$
+\end_inset
+
+.]
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of scaling a rows of a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ by 
+\begin_inset Formula $c$
+\end_inset
+
+, then 
+\begin_inset Formula $\det B=c\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Can you justify this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:determinant-scaled-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The relevance of all these observations is mounting evidence that 
+\begin_inset Formula $\det(EA)=\det E\cdot\det A$
+\end_inset
+
+ for any square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ and elementary matrix 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ This will be an important point soon enough.
+ We already have that 
+\begin_inset Formula $\det(EA)=-\det A=\det E\cdot\det A$
+\end_inset
+
+ when 
+\begin_inset Formula $E$
+\end_inset
+
+ is a swap matrix and 
+\begin_inset Formula $\det(EA)=c\det A=\det E\cdot\det A$
+\end_inset
+
+ when 
+\begin_inset Formula $E$
+\end_inset
+
+ is a scale matrix.
+ We are only missing this fact for elementary replacement matrices.
+\end_layout
+
+\begin_layout Standard
+The proof of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-general-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) does not provide direct proof that if 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of a row replacement in a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, then 
+\begin_inset Formula $\det B=\det A$
+\end_inset
+
+, but it provides the right tools for the job.
+ Besides the facts already noted, we learn from the proof that
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are identical square matrices except in one column, say the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+, where 
+\begin_inset Formula $C_{:,k}=A_{:,k}+B_{:,k}$
+\end_inset
+
+, then 
+\begin_inset Formula $\det(C)=\det A+\det B$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $C$
+\end_inset
+
+ is a square matrix with two identical columns, then 
+\begin_inset Formula $\det C=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As we just encountered, statements about the columns of a matrix and its
+ determinant can generally be restated in terms of rows since 
+\begin_inset Formula $\det M^{T}=\det M$
+\end_inset
+
+.
+ It is safe to conclude that
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are identical square matrices except in one row, say the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+, where 
+\begin_inset Formula $C_{k,:}=A_{k,:}+B_{k,:}$
+\end_inset
+
+, then 
+\begin_inset Formula $\det(C)=\det A+\det B$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $C$
+\end_inset
+
+ is a square matrix with two identical rows, then 
+\begin_inset Formula $\det C=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Justifications are requested in exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-revisited-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-revisited-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ These two facts plus the fact that if 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of scaling a row of a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ by 
+\begin_inset Formula $c$
+\end_inset
+
+, then 
+\begin_inset Formula $\det B=c\det A$
+\end_inset
+
+ make it a straighforward matter to prove that if 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of a row replacement in a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, then 
+\begin_inset Formula $\det B=\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix and suppose 
+\begin_inset Formula $B$
+\end_inset
+
+ is the result of adding 
+\begin_inset Formula $c$
+\end_inset
+
+ times the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+row to the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ row of 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $j\neq k$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+\det B & =\left|\begin{array}{c}
+A_{1,:}\\
+\vdots\\
+A_{k-1,:}\\
+A_{k,:}+cA_{j,:}\\
+A_{k+1}\\
+\vdots\\
+A_{n,:}
+\end{array}\right|=\left|\begin{array}{c}
+A_{1,:}\\
+\vdots\\
+A_{k-1,:}\\
+A_{k,:}\\
+A_{k+1}\\
+\vdots\\
+A_{n,:}
+\end{array}\right|+\left|\begin{array}{c}
+A_{1,:}\\
+\vdots\\
+A_{k-1,:}\\
+cA_{j,:}\\
+A_{k+1}\\
+\vdots\\
+A_{n,:}
+\end{array}\right|=\det A+c\left|\begin{array}{c}
+A_{1,:}\\
+\vdots\\
+A_{k-1,:}\\
+A_{j,:}\\
+A_{k+1}\\
+\vdots\\
+A_{n,:}
+\end{array}\right|=\det A+0=\det A.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula $\det(EA)=1\det A=\det E\cdot\det A$
+\end_inset
+
+ when 
+\begin_inset Formula $E$
+\end_inset
+
+ is a replacement matrix.
 \end_layout
 
 \begin_layout Subsection
@@ -2396,7 +2896,60 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-c
+elementary
+\begin_inset space ~
+\end_inset
+
+matrices are invertible and 
+\begin_inset Formula $\det(EA)=\det E\cdot\det A$
+\end_inset
+
+ for any square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ and elementary matrix 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+by
+\begin_inset space ~
+\end_inset
+
+expansion the determinant of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ may be calculated by expansion along any row or any column:
+\begin_inset Formula 
+\begin{align*}
+\det M & =(-1)^{i+1}M_{i,1}\det M_{\backslash i,1}+(-1)^{i+2}M_{i,2}\det M_{\backslash i,2}+\cdots+(-1)^{i+n}M_{i,n}\det M_{\backslash i,n}\\
+ & =(-1)^{1+j}M_{1,j}\det M_{\backslash1,j}+(-1)^{2+j}M_{2,j}\det M_{\backslash2,j}+\cdots+(-1)^{n+j}M_{n,j}\det M_{\backslash n,j}
+\end{align*}
+
+\end_inset
+
+for any 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+ or any 
+\begin_inset Formula $j=1,\ldots,n$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2421,7 +2974,789 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-T
+Take advantage of the fact that the determinant may be expanded along any
+ row or any column to compute the determinant.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+0 & -2 & 0 & 9\\
+-4 & 0 & 1 & 0\\
+4 & -9 & 0 & -2\\
+0 & 0 & 0 & 4
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+0 & -5 & 0 & -2\\
+0 & 7 & 0 & 0\\
+4 & -3 & 0 & 0\\
+2 & 0 & 2 & -3
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+3 & 0 & 6 & 0\\
+0 & 5 & 0 & 3\\
+5 & 0 & -6 & -3\\
+0 & -9 & 0 & 0
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+0 & 9 & 3 & -2\\
+0 & -2 & 0 & 0\\
+-6 & -4 & 0 & 0\\
+0 & 4 & 2 & 0
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find the determinant of the triangular matrix.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+6 & 0 & 0\\
+-1 & -1 & 0\\
+-1 & 3 & 2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+3 & 2 & 6\\
+0 & 8 & -1\\
+0 & 0 & 5
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+2 & 0 & 0 & 0\\
+-1 & 8 & 0 & 0\\
+1 & 8 & 4 & 0\\
+-2 & -2 & 8 & 7
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+-2 & 7 & 7 & 6\\
+0 & 1 & 3 & -1\\
+0 & 0 & -1 & 6\\
+0 & 0 & 0 & -1
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the fact that
+\begin_inset Formula 
+\[
+\left|\begin{array}{ccc}
+-2 & 0 & 0\\
+8 & -2 & 2\\
+8 & 0 & 8
+\end{array}\right|=32
+\]
+
+\end_inset
+
+ to compute the determinant of
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+-2 & 0 & 0\\
+8 & -2 & 2\\
+8 & 0 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{128}
+\end{array}\right]\left[\begin{array}{ccc}
+-2 & 0 & 0\\
+8 & -2 & 2\\
+8 & 0 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & -\frac{7}{9}\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+-2 & 0 & 0\\
+8 & -2 & 2\\
+8 & 0 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+3 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+18 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+-2 & 0 & 0\\
+8 & -2 & 2\\
+8 & 0 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the fact that
+\begin_inset Formula 
+\[
+\left|\begin{array}{ccc}
+5 & 3 & 7\\
+-1 & 4 & 3\\
+2 & 6 & 8
+\end{array}\right|=14
+\]
+
+\end_inset
+
+ to compute the determinant of
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right]\left[\begin{array}{ccc}
+5 & 3 & 7\\
+-1 & 4 & 3\\
+2 & 6 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 3 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+5 & 3 & 7\\
+-1 & 4 & 3\\
+2 & 6 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & \sqrt{17} & 1
+\end{array}\right]\left[\begin{array}{ccc}
+5 & 3 & 7\\
+-1 & 4 & 3\\
+2 & 6 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array}\right]\left[\begin{array}{ccc}
+1 & -2 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+5 & 3 & 7\\
+-1 & 4 & 3\\
+2 & 6 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the fact that
+\begin_inset Formula 
+\[
+\left|\begin{array}{ccc}
+4 & 4 & -1\\
+1 & 7 & 3\\
+-1 & 3 & 4
+\end{array}\right|=38
+\]
+
+\end_inset
+
+ to compute the determinant of
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+4 & 4 & -1\\
+-1 & 3 & 4\\
+1 & 7 & 3
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+4 & 4 & -1\\
+1 & 7 & 3\\
+-\frac{1}{2} & \frac{3}{2} & 2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+4 & 4 & -1\\
+0 & 10 & 7\\
+-1 & 3 & 4
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+5 & 35 & 15\\
+4 & 4 & -1\\
+-1 & 3 & 4
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the fact that
+\begin_inset Formula 
+\[
+\left|\begin{array}{ccc}
+1 & 6 & 5\\
+1 & -1 & 8\\
+7 & 0 & 5
+\end{array}\right|=336
+\]
+
+\end_inset
+
+ to compute the determinant of
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 6 & 5\\
+1 & -1 & 8\\
+\frac{1}{2} & 0 & \frac{5}{14}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+7 & 0 & 5\\
+1 & -1 & 8\\
+1 & 6 & 5
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & 6 & 5\\
+1 & -1 & 8\\
+9 & -2 & 21
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+1 & -1 & 8\\
+\frac{1}{84} & \frac{1}{14} & \frac{5}{84}\\
+7 & 0 & 5
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the fact that
+\begin_inset Formula 
+\[
+\left|\begin{array}{ccc}
+6 & -2 & 1\\
+6 & 5 & -2\\
+7 & 7 & 8
+\end{array}\right|=455
+\]
+
+\end_inset
+
+ to compute the determinant of
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+6 & 6 & 7\\
+-2 & 5 & 7\\
+1 & -2 & 8
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+6 & 7 & 6\\
+-2 & 7 & 5\\
+1 & 8 & -2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+6 & 6 & 7\\
+-2 & 5 & 7\\
+1 & -2 & 8
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+\pi & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+6 & 6 & 7\\
+-2 & 5 & 7\\
+1 & -2 & 8
+\end{array}\right]\left[\begin{array}{ccc}
+\frac{1}{35} & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the facts that
+\begin_inset Formula 
+\[
+\det\left(E_{3}E_{2}E_{1}A\right)=1
+\]
+
+\end_inset
+
+and 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E_{1}$
+\end_inset
+
+ is a swap matrix.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{2}$
+\end_inset
+
+ is a scale matrix with scale factor 
+\begin_inset Formula $-2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{3}$
+\end_inset
+
+ is a replacement matrix.
+\end_layout
+
+\begin_layout Standard
+to determine 
+\begin_inset Formula $\det A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the facts that
+\begin_inset Formula 
+\[
+\det\left(E_{4}E_{3}E_{2}E_{1}A\right)=1
+\]
+
+\end_inset
+
+and 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E_{1}$
+\end_inset
+
+ is a scale matrix with scale factor 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{2}$
+\end_inset
+
+ is a scale matrix with scale factor 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{3}$
+\end_inset
+
+ is a replacement matrix.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{4}$
+\end_inset
+
+ is a scale matrix with scale factor 
+\begin_inset Formula $\frac{1}{36}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+to determine 
+\begin_inset Formula $\det A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $\det A=3$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\det(2A)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $\det M=\frac{1}{3}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\det(7M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a square matrix and 
+\begin_inset Formula $E$
+\end_inset
+
+ a scale matrix with scale factor 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\det(E^{3}A)$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $\det(EEEA)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $A$
+\end_inset
+
+ is a square matrix, 
+\begin_inset Formula $E$
+\end_inset
+
+ is a swap matrix, and 
+\begin_inset Formula $\det(EA)=33$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove that if 
+\begin_inset Formula $A$
+\end_inset
+
+ is a square matrix and 
+\begin_inset Formula $E$
+\end_inset
+
+ is an elementary matrix, then 
+\begin_inset Formula $\det(AE)=\det E\cdot\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-1"
+
+\end_inset
+
+Use the fact that if 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are identical square matrices except in one column, say the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+, where 
+\begin_inset Formula $C_{:,k}=A_{:,k}+B_{:,k}$
+\end_inset
+
+, then 
+\begin_inset Formula $\det(C)=\det A+\det B$
+\end_inset
+
+ to prove that 
+\shape slanted
+if 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ are identical square matrices except in one row, say the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+, where 
+\begin_inset Formula $C_{k,:}=A_{k,:}+B_{k,:}$
+\end_inset
+
+, then 
+\begin_inset Formula $\det(C)=\det A+\det B$
+\end_inset
+
+
+\shape default
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-2"
+
+\end_inset
+
+Use the fact that if 
+\begin_inset Formula $C$
+\end_inset
+
+ is a square matrix with two identical columns, then 
+\begin_inset Formula $\det C=0$
+\end_inset
+
+ to prove that 
+\shape slanted
+if 
+\begin_inset Formula $C$
+\end_inset
+
+ is a square matrix with two identical rows, then 
+\begin_inset Formula $\det C=0$
+\end_inset
+
+
+\shape default
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited"
+
+\end_inset
+
+Prove that 
+\shape slanted
+the determinant of a square upper triangular matrix is the product of the
+ entries on its diagonal
+\shape default
+ by expanding along the first column.
 \end_layout
 
 \begin_layout Standard
@@ -2645,6 +3980,49 @@ plural "false"
 caps "false"
 noprefix "false"
 
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+scaled
+\begin_inset space ~
+\end_inset
+
+matrix 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-scaled-matrix"
+
+\end_inset
+
+
+\begin_inset Formula $\det B=\det B^{T}=\det A^{T}=c\det A$
+\end_inset
+
+ since 
+\begin_inset Formula $B^{T}$
+\end_inset
+
+ is the result of scaling a column of 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $\det M^{T}=\det M$
 \end_inset
 
 .

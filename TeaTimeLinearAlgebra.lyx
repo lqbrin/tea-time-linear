@@ -617,12 +617,49 @@ filename "matrixalgebra-determinant-revisited.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "matrixalgebra-square-characterizations.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-TODO: Include revisit of chapter 1 calculations (determinants, inverses,
- eigenvectors)
+TODO: Include revisit of chapter 1 calculation of eigenvectors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Linear Transformations 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Vector Spaces 
 \end_layout
 
 \end_inset

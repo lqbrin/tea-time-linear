@@ -858,6 +858,31 @@ noprefix "false"
 , and the proof is complete.
 \end_layout
 
+\begin_layout Standard
+Exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ through 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ request a proof that the determinant of a square upper triangular matrix
+ is also the product of the entries on the main diagonal.
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
@@ -921,7 +946,39 @@ a
 \begin_inset space ~
 \end_inset
 
+(square)
+\begin_inset space ~
+\end_inset
+
 lower
+\begin_inset space ~
+\end_inset
+
+triangular
+\begin_inset space ~
+\end_inset
+
+matrix the product of the entries on the main diagonal.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+(square)
+\begin_inset space ~
+\end_inset
+
+upper
 \begin_inset space ~
 \end_inset
 
