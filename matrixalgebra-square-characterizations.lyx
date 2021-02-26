@@ -95,15 +95,983 @@ name "sec:Characterization-Square-Matrices"
 
 \end_inset
 
-Characterization of 
-\begin_inset Formula $n\times n$
-\end_inset
-
- Matrices
+Characterization of Square Matrices
 \end_layout
 
 \begin_layout Standard
-T
+For square matrices, all twelve of the statements in theorems 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are equivalent.
+ A square matrix with a pivot in every row has a pivot in every column,
+ and vice versa—end of justification.
+ Square matrices have an additional property to discuss, though—invertibility.
+ It turns out that, for a square matrix, the conditions in theorems 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ plus a few that don't appear in those theorems are equivalent to invertibility.
+ Consider the following.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every row and column.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det M\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:row-reduce-to-I"
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ can be row reduced to 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:is-invertible"
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible.
+\end_layout
+
+\begin_layout Enumerate
+There is a matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ such that 
+\begin_inset Formula $LM=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+There is a matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ such that 
+\begin_inset Formula $MR=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+You may or may not have considered these statements equivalent up to this
+ point, and there is no harm done either way.
+ It turns out they are equivalent to one another and equivalent to the statement
+s in theorems 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ All this will be summarized in one last matrix characterization theorem,
+ justified by the following narrative that shows 
+\begin_inset Formula $(1)\Rightarrow(2)\Rightarrow(3)\Rightarrow(4)\Rightarrow(5)\Rightarrow(\text{thm }\ref{thm:Matrix-Characterization-1})\Rightarrow(\text{thm }\ref{thm:Matrix-Characterization-2})\Rightarrow(6)\Rightarrow(\text{thm }\ref{thm:Matrix-Characterization-2})\Rightarrow(1)$
+\end_inset
+
+.
+ Until the statement of the theorem, where this information will be repeated,
+ assume that 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix.
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every row and every column.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "matrix-inverse-algorithm"
+
+\end_inset
+
+ 
+\series bold
+Record the elementary row operations, and more importantly the corresponding
+ elementary matrices, 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}$
+\end_inset
+
+, that reduce 
+\begin_inset Formula $M$
+\end_inset
+
+ to any row echelon form.
+ Then 
+\begin_inset Formula $E_{k}\cdots E_{2}E_{1}M=R$
+\end_inset
+
+ where 
+\begin_inset Formula $R$
+\end_inset
+
+ is in row echelon form.
+ Because all elementary matrices are invertible, 
+\begin_inset Formula $M=E_{1}^{-1}E_{2}^{-1}\cdots E_{k}^{-1}R$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\det M=\det(E_{1}^{-1}E_{2}^{-1}\cdots E_{k}^{-1}R)=\det E_{1}^{-1}\cdot\det E_{2}^{-1}\cdots\det E_{k}^{-1}\cdot\det R$
+\end_inset
+
+ (a result of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\series default
+.
+ Because the inverse of an elementary matrix is an elementary matrix itself
+ and all elementary matrices have nonzero determinant, all the 
+\begin_inset Formula $\det E_{i}^{-1}$
+\end_inset
+
+ are nonzero.
+ Because 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every row, 
+\begin_inset Formula $R$
+\end_inset
+
+ must be upper triangular with nonzero entries (the pivots) on the diagonal,
+ making 
+\begin_inset Formula $\det R$
+\end_inset
+
+ equal to the product of these nonzero entries.
+ Hence 
+\begin_inset Formula $\det R\neq0$
+\end_inset
+
+ and it follows that 
+\begin_inset Formula $\det M\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Supposing 
+\begin_inset Formula $\det M\neq0$
+\end_inset
+
+, its reduced row echelon form—which can be represented by 
+\begin_inset Formula $E_{k}\cdots E_{2}E_{1}M$
+\end_inset
+
+ for some elementary matrices 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}$
+\end_inset
+
+—must also have nonzero determinant.
+ But the only reduced row echelon form (of a square matrix) with nonzero
+ determinant is the identity (all others have a row of zeros, putting a
+ zero on the main diagonal).
+ Therefore 
+\begin_inset Formula $M$
+\end_inset
+
+ can be reduced to 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "par:M-as-a-product"
+
+\end_inset
+
+Supposing 
+\begin_inset Formula $M$
+\end_inset
+
+ can be reduced to 
+\begin_inset Formula $I$
+\end_inset
+
+, we have 
+\begin_inset Formula $E_{k}\cdots E_{2}E_{1}M=I$
+\end_inset
+
+ for some elementary matrices 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $E=E_{k}\cdots E_{2}E_{1}$
+\end_inset
+
+, we have 
+\begin_inset Formula $EM=I$
+\end_inset
+
+.
+ But elementary matrices are invertible, so 
+\begin_inset Formula $E$
+\end_inset
+
+ is invertible and therefore 
+\begin_inset Formula $M=E^{-1}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $E^{-1}$
+\end_inset
+
+ is invertible (with inverse 
+\begin_inset Formula $E$
+\end_inset
+
+), 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible.
+\end_layout
+
+\begin_layout Standard
+Supposing 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, there is a matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ such that 
+\begin_inset Formula $LM=I$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $L=M^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Suppose there is a matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ such that 
+\begin_inset Formula $LM=I$
+\end_inset
+
+, and let 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ have 
+\begin_inset Formula $n$
+\end_inset
+
+ entries.
+ Then, if 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has a solution, it must be 
+\begin_inset Formula $L\mathbf{b}$
+\end_inset
+
+ since 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}\Rightarrow L(M\mathbf{v})=L\mathbf{b}\Rightarrow(LM)\mathbf{v}=L\mathbf{b}\Rightarrow\mathbf{v}=L\mathbf{b}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has at most one solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Supposing 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has at most one solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implies that 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in each column.
+ Since 
+\begin_inset Formula $M$
+\end_inset
+
+ is square, 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in each row, too.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has at least one solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ In particular, there are vectors 
+\begin_inset Formula $\mathbf{v}_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{v}_{i}=I_{:,i}$
+\end_inset
+
+ for each 
+\begin_inset Formula $i=1,2,\ldots,n$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+\mathbf{v}_{1} & \mathbf{v}_{2} & \cdots & \mathbf{v}_{n}\end{array}\right]$
+\end_inset
+
+, we have 
+\begin_inset Formula $R$
+\end_inset
+
+ such that 
+\begin_inset Formula $MR=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Supposing there is a matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ such that 
+\begin_inset Formula $MR=I$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}=R\mathbf{b}$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ since 
+\begin_inset Formula $M(R\mathbf{b})=(MR)\mathbf{b}=I\mathbf{b}=\mathbf{b}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has at least one solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, and by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in each row.
+ Since 
+\begin_inset Formula $M$
+\end_inset
+
+ is square, 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in each column as well.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Proving Real Numbers are Equal}
+\end_layout
+
+\end_inset
+
+Every so often, it is convenient to prove that two real numbers, 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, are equal by showing both 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+ and 
+\begin_inset Formula $x\geq y$
+\end_inset
+
+.
+ The only way 
+\begin_inset Formula $x$
+\end_inset
+
+ can be both less than or equal to 
+\begin_inset Formula $y$
+\end_inset
+
+ and simultaneously greater than or equal to 
+\begin_inset Formula $y$
+\end_inset
+
+ is for 
+\begin_inset Formula $x$
+\end_inset
+
+ to equal 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ This technique is implicitly used to justify part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:exactly-one"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implies 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has at most one solution (the number of solutions is less than or equal
+ to one) and theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implies 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has at least one solution (the number of solutions is greater than or equal
+ to one).
+ Together, then 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has exactly one solution.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+We now have justification for the following theorem.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+[Invertible Matrix Theorem]
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Invertible-Matrix-Theorem"
+
+\end_inset
+
+
+\series default
+\shape default
+ Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ have 
+\begin_inset Formula $n$
+\end_inset
+
+ entries.
+ Then the following are equivalent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=(
+\backslash
+roman{enumi})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Enumerate
+The rows of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Enumerate
+No column of 
+\begin_inset Formula $M$
+\end_inset
+
+ is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+No row of 
+\begin_inset Formula $M$
+\end_inset
+
+ is a linear combination of the others.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ has only the trivial solution.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every column.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every row.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
+\end_inset
+
+ has no free variables.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thmpart:exactly-one"
+
+\end_inset
+
+
+\begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
+\end_inset
+
+ has exactly one solution for every 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ can be row reduced to 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thmpart:left-inverse"
+
+\end_inset
+
+There is a matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ such that 
+\begin_inset Formula $LM=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thmpart:right-inverse"
+
+\end_inset
+
+There is a matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ such that 
+\begin_inset Formula $MR=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det M\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+This theorem gives 13 ways to detect whether a square matrix is invertible,
+ impressive in itself.
+ But we can also draw two separate, significant conclusions from all this.
+ Parts 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:left-inverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:right-inverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ suggest we only need to check that 
+\begin_inset Formula $AB=I$
+\end_inset
+
+ 
+\series bold
+\shape italic
+or
+\series default
+\shape default
+ 
+\begin_inset Formula $BA=I$
+\end_inset
+
+, 
+\series bold
+\shape italic
+not both
+\series default
+\shape default
+ as required by the definition, to conclude that 
+\begin_inset Formula $B$
+\end_inset
+
+ is the inverse of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ The theorem gives the other equality.
+ Additionally, the bolded section of the justification, near the middle
+ of page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "matrix-inverse-algorithm"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, provides an algorithm for calculating the determinant of a square matrix!
+ Can you follow the instructions to compute the determinant of 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+6 & 3 & 6\\
+-2 & 1 & -1\\
+3 & 4 & 6
+\end{array}\right]?
+\]
+
+\end_inset
+
+Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-by-reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+If you concluded in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:end-row-lin-comb-det-connection"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that one row of a matrix could only be written as a linear combination
+ of the others when the determinant of the matrix was zero, you were correct,
+ and we finally have the theory to support it.
 \end_layout
 
 \begin_layout Subsection
@@ -111,7 +1079,108 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-c
+characterization
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+invertible
+\begin_inset space ~
+\end_inset
+
+matrices see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+an
+\begin_inset space ~
+\end_inset
+
+inverse if 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, 
+\begin_inset Formula $\det M^{-1}=\frac{1}{\det M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+product if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices, then 
+\begin_inset Formula $\det(AB)=\det A\cdot\det B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+algorithm
+\begin_inset space ~
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+computing
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+determinant reduce the matrix to row echelon form, noting the row operations
+ used.
+ The product of the determinants of the inverses of the associated elementary
+ matrices with the determinant of the reduced matrix is the desired determinant.
 \end_layout
 
 \begin_layout Standard
@@ -149,6 +1218,94 @@ status open
 \backslash
 finishexercises 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Answers
+\end_layout
+
+\begin_layout Description
+determinant 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-by-reduction"
+
+\end_inset
+
+Recording the elementary row operations as 
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & 3 & 6\\
+-2 & 1 & -1\\
+3 & 4 & 6
+\end{array}\right]$
+\end_inset
+
+ is reduced to row echelon form:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{ccc}
+6 & 3 & 6\\
+-2 & 1 & -1\\
+3 & 4 & 6
+\end{array}\right]\stackrel[M_{3,:}\rightarrow-2M_{3,:}]{M_{2,:}\rightarrow3M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+6 & 3 & 6\\
+-6 & 3 & -3\\
+-6 & -8 & -12
+\end{array}\right]\stackrel[M_{3,:}\rightarrow M_{3,:}+M_{1,:}]{M_{2,:}\rightarrow M_{2,:}+M_{1,:}}{\longrightarrow}\\
+\left[\begin{array}{ccc}
+6 & 3 & 6\\
+0 & 6 & 3\\
+0 & -5 & -6
+\end{array}\right]\stackrel{M_{2,:}\rightarrow M_{2,:}+M_{3,:}}{\longrightarrow}\left[\begin{array}{ccc}
+6 & 3 & 6\\
+0 & 1 & -3\\
+0 & -5 & -6
+\end{array}\right]\stackrel{M_{3,:}\rightarrow M_{3,:}+5M_{2,:}}{\longrightarrow}\\
+\left[\begin{array}{ccc}
+6 & 3 & 6\\
+0 & 1 & -3\\
+0 & 0 & -21
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+The determinant of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & 3 & 6\\
+-2 & 1 & -1\\
+3 & 4 & 6
+\end{array}\right]$
+\end_inset
+
+ is the determinant of 
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & 3 & 6\\
+0 & 1 & -3\\
+0 & 0 & -21
+\end{array}\right]$
+\end_inset
+
+, which is 
+\begin_inset Formula $-126$
+\end_inset
+
+, times the determinants of the inverse elementary matrices (listed in reverse
+ order):
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{array}{ccc}
+6 & 3 & 6\\
+-2 & 1 & -1\\
+3 & 4 & 6
+\end{array}\right| & =(-126)(1)(1)(1)(1)\left(-\frac{1}{2}\right)\left(\frac{1}{3}\right)\\
+ & =21.
+\end{align*}
 
 \end_inset
 

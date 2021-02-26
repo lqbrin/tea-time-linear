@@ -89,6 +89,12 @@ enumitem
 \begin_body
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-Determinant-Revisited"
+
+\end_inset
+
 The Determinant Revisited
 \end_layout
 

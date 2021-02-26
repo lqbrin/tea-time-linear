@@ -602,7 +602,7 @@ No column of
 \begin_inset Formula $M\mathbf{v}=\mathbf{0}$
 \end_inset
 
- has only the trivial solution
+ has only the trivial solution.
 \end_layout
 
 \begin_layout Enumerate
@@ -616,7 +616,7 @@ No column of
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
- has no free variables
+ has no free variables.
 \end_layout
 
 \begin_layout Enumerate
@@ -1666,6 +1666,12 @@ linearly dependent columns?
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-independence-2"
+
+\end_inset
+
 If 
 \begin_inset Formula $M$
 \end_inset

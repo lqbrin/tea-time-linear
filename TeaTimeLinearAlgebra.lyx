@@ -456,7 +456,7 @@ filename "mechanics-multiplication.lyx"
 status open
 
 \begin_layout Plain Layout
-TODO: Insert length and orthogonality 
+TODO: Insert length and orthogonality? 
 \end_layout
 
 \end_inset
@@ -627,12 +627,9 @@ filename "matrixalgebra-square-characterizations.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Include revisit of chapter 1 calculation of eigenvectors
-\end_layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "matrixalgebra-inverse-revisited.lyx"
 
 \end_inset
 

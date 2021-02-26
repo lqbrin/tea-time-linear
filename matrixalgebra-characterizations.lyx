@@ -224,7 +224,7 @@ No row of
 \begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
 \end_inset
 
- has only the trivial solution
+ has only the trivial solution.
 \end_layout
 
 \begin_layout Enumerate
@@ -238,7 +238,7 @@ No row of
 \begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
 \end_inset
 
- has no free variables
+ has no free variables.
 \end_layout
 
 \begin_layout Enumerate
@@ -1549,6 +1549,12 @@ Find the determinant.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-4"
+
+\end_inset
+
 If 
 \begin_inset Formula $M$
 \end_inset

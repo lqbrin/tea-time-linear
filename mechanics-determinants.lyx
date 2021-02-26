@@ -1149,16 +1149,6 @@ So, for the block with determinant
  there was a way to write the third row as a linear combination of the first
  two.
  This bears further investigation, requested in the exercises.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Refer back to this when we revisit determinants.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection

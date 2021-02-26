@@ -663,13 +663,23 @@ Suppose
  are defined and
 \begin_inset Formula 
 \[
-L(AR)=LI_{m\times m}=L\quad\text{and}\quad(LA)R=I_{n\times n}R=R
+L(AR)=LI_{m\times m}=L\quad\text{and}\quad(LA)R=I_{n\times n}R=R.
 \]
 
 \end_inset
 
 By the associative property for matrix multiplication (which we will encounter
- later), 
+ in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 
 \begin_inset Formula $L(AR)=(LA)R$
 \end_inset
 
@@ -678,7 +688,7 @@ By the associative property for matrix multiplication (which we will encounter
 \end_inset
 
 .
- That 
+ 
 \begin_inset Formula $m$
 \end_inset
 
@@ -686,21 +696,48 @@ By the associative property for matrix multiplication (which we will encounter
 \begin_inset Formula $n$
 \end_inset
 
- is proven on page 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: insert refernce to proof (which should be in linear independence section)
-\end_layout
-
+ because 
+\begin_inset Formula $LA=I$
 \end_inset
 
-, showing that 
+ implies 
 \begin_inset Formula $A$
 \end_inset
 
- is square and invertibility only makes sense for square matrices.
+ has a pivot position in each column and 
+\begin_inset Formula $AR=I$
+\end_inset
+
+ implies 
+\begin_inset Formula $A$
+\end_inset
+
+ has a pivot position in each row and the only way to have both is for 
+\begin_inset Formula $A$
+\end_inset
+
+ to be square (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Row-Reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for a definition of pivot position and the proof of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for the rest).
+ Thus invertibility only makes sense for square matrices.
 \begin_inset ERT
 status open
 
@@ -775,7 +812,11 @@ For any matrix
 \begin_inset Formula $A$
 \end_inset
 
-, 
+, if 
+\begin_inset Formula $A$
+\end_inset
+
+ is invertible then
 \begin_inset Formula 
 \begin{equation}
 A^{-1}=\frac{1}{\det A}\left[\begin{array}{cccc}
@@ -797,11 +838,11 @@ where the
 \end_inset
 
 .
- This implies that for 
+ This implies that when 
 \begin_inset Formula $A^{-1}$
 \end_inset
 
- to exist
+ exists
 \end_layout
 
 \begin_layout Enumerate

@@ -1694,6 +1694,12 @@ The coefficient matrix for a homogeneous linear system is given.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:eigenvectors-revisited"
+
+\end_inset
+
 Use row reduction and a reduced row echelon form matrix to find all the
  eigenvectors.
  All eigenvalues for the matrix are given.

@@ -1,0 +1,1019 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-Inverse-Revisited"
+
+\end_inset
+
+The Inverse Revisited
+\end_layout
+
+\begin_layout Standard
+As if we haven't already extracted enough information from theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we also have the rather significant following theorem as a consequence.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+[Determinant of a Product]
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:determinant-of-product"
+
+\end_inset
+
+
+\series default
+\shape default
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices, then 
+\begin_inset Formula $\det(AB)=\det A\cdot\det B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+First suppose 
+\begin_inset Formula $AB$
+\end_inset
+
+ is noninvertible.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\det(AB)=0$
+\end_inset
+
+.
+ If both 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are invertible, then 
+\begin_inset Formula $(AB)(B^{-1}A^{-1})=I$
+\end_inset
+
+, so 
+\begin_inset Formula $AB$
+\end_inset
+
+ is invertible.
+ Therefore we must have that either 
+\begin_inset Formula $A$
+\end_inset
+
+ or 
+\begin_inset Formula $B$
+\end_inset
+
+ is noninvertible, from which it follows 
+\begin_inset Formula $\det A=0$
+\end_inset
+
+ or 
+\begin_inset Formula $\det B=0$
+\end_inset
+
+.
+ Either way, 
+\begin_inset Formula $\det A\cdot\det B=0$
+\end_inset
+
+ and we have shown 
+\begin_inset Formula $\det(AB)=\det A\cdot\det B$
+\end_inset
+
+.
+ Now suppose 
+\begin_inset Formula $AB$
+\end_inset
+
+ is invertible, and let 
+\begin_inset Formula $M=(AB)^{-1}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $I=(AB)M=A(BM)$
+\end_inset
+
+, so 
+\begin_inset Formula $A^{-1}=BM$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ is invertible.
+ As in the justification of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:row-reduce-to-I"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:is-invertible"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:M-as-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we may therefore write 
+\begin_inset Formula $A$
+\end_inset
+
+ as a product of elementary matrices, 
+\begin_inset Formula $E_{k}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\det(AB)=\det(E_{k}^{-1}\cdots E_{2}^{-1}E_{1}^{-1}B)=(\det E_{k}^{-1}\cdots\det E_{2}^{-1}\det E_{1}^{-1})\det B=\det A\det B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+As a direct consequence, we can relate the determinants of inverse matrices.
+ If 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, then 
+\begin_inset Formula $\det M\cdot\det M^{-1}=\det I=1$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\det M^{-1}=\frac{1}{\det M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There is more! The proof of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ also provides an algorithm for finding the inverse of a matrix.
+ Given that 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, it is reducible to the identity matrix, meaning there are
+ elementary matrices 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}$
+\end_inset
+
+ such that 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}M=I$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $M^{-1}=E_{1}E_{2}\cdots E_{k}I$
+\end_inset
+
+, so the same sequence of elementary row operations that reduces 
+\begin_inset Formula $M$
+\end_inset
+
+ to the identity also transforms 
+\begin_inset Formula $I$
+\end_inset
+
+ into 
+\begin_inset Formula $M^{-1}$
+\end_inset
+
+! Hence, if we augment 
+\begin_inset Formula $M$
+\end_inset
+
+ with the identity matrix and reduce to reduced row echelon form, the augmented
+ columns will hold 
+\begin_inset Formula $M^{-1}$
+\end_inset
+
+.
+ To illustrate, let 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+3 & 0 & 5 & 0\\
+5 & 1 & 0 & 2\\
+6 & 2 & 0 & 7\\
+0 & 0 & -1 & -2
+\end{array}\right]
+\]
+
+\end_inset
+
+Augmenting the identity and reducing,
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cccccccc}
+3 & 0 & 5 & 0 & 1 & 0 & 0 & 0\\
+5 & 1 & 0 & 2 & 0 & 1 & 0 & 0\\
+6 & 2 & 0 & 7 & 0 & 0 & 1 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{1,:}\leftrightarrow M_{3,:}}{\longrightarrow}\left[\begin{array}{cccccccc}
+6 & 2 & 0 & 7 & 0 & 0 & 1 & 0\\
+5 & 1 & 0 & 2 & 0 & 1 & 0 & 0\\
+3 & 0 & 5 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{1,:}\rightarrow M_{1,:}-M_{2,:}}{\longrightarrow}\\
+\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+5 & 1 & 0 & 2 & 0 & 1 & 0 & 0\\
+3 & 0 & 5 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel[M_{3,:}\rightarrow M_{3,:}-3M_{1,:}]{M_{2,:}\rightarrow M_{2,:}-5M_{1,:}}{\longrightarrow}\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+0 & -4 & 0 & -23 & 0 & 6 & -5 & 0\\
+0 & -3 & 5 & -15 & 1 & 3 & -3 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{2,:}\rightarrow M_{2,:}-M_{3,:}}{\longrightarrow}\\
+\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+0 & -1 & -5 & -8 & -1 & 3 & -2 & 0\\
+0 & -3 & 5 & -15 & 1 & 3 & -3 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{2,:}\rightarrow-1M_{2,:}}{\longrightarrow}\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+0 & 1 & 5 & 8 & 1 & -3 & 2 & 0\\
+0 & -3 & 5 & -15 & 1 & 3 & -3 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{3,:}\rightarrow M_{3,:}+3M_{2,:}}{\longrightarrow}\\
+\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+0 & 1 & 5 & 8 & 1 & -3 & 2 & 0\\
+0 & 0 & 20 & 9 & 4 & -6 & 3 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{3,:}\rightarrow M_{3,:}+20M_{4,:}}{\longrightarrow}\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+0 & 1 & 5 & 8 & 1 & -3 & 2 & 0\\
+0 & 0 & 0 & -31 & 4 & -6 & 3 & 20\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{3,:}\leftrightarrow M_{4,:}}{\longrightarrow}
+\end{gathered}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+0 & 1 & 5 & 8 & 1 & -3 & 2 & 0\\
+0 & 0 & -1 & -2 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & -31 & 4 & -6 & 3 & 20
+\end{array}\right]\stackrel[M_{4,:}\rightarrow\frac{-1}{31}M_{4,:}]{M_{3,:}\rightarrow-1M_{3,:}}{\longrightarrow}\left[\begin{array}{cccccccc}
+1 & 1 & 0 & 5 & 0 & -1 & 1 & 0\\
+0 & 1 & 5 & 8 & 1 & -3 & 2 & 0\\
+0 & 0 & 1 & 2 & 0 & 0 & 0 & -1\\
+0 & 0 & 0 & 1 & -\frac{4}{31} & \frac{6}{31} & -\frac{3}{31} & -\frac{20}{31}
+\end{array}\right]\stackrel[M_{1,:}\rightarrow M_{1,:}-M_{2,:}]{M_{2,:}\rightarrow M_{2,:}-5M_{3,:}}{\longrightarrow}\\
+\left[\begin{array}{cccccccc}
+1 & 0 & 0 & 7 & -1 & 2 & -1 & -5\\
+0 & 1 & 0 & -2 & 1 & -3 & 2 & 5\\
+0 & 0 & 1 & 2 & 0 & 0 & 0 & -1\\
+0 & 0 & 0 & 1 & -\frac{4}{31} & \frac{6}{31} & -\frac{3}{31} & -\frac{20}{31}
+\end{array}\right]\stackrel{M_{3,:}\rightarrow M_{3,:}-2M_{4,:}}{\longrightarrow}\left[\begin{array}{cccccccc}
+1 & 0 & 0 & 7 & -1 & 2 & -1 & -5\\
+0 & 1 & 0 & -2 & 1 & -3 & 2 & 5\\
+0 & 0 & 1 & 0 & \frac{8}{31} & -\frac{12}{31} & \frac{6}{31} & \frac{9}{31}\\
+0 & 0 & 0 & 1 & -\frac{4}{31} & \frac{6}{31} & -\frac{3}{31} & -\frac{20}{31}
+\end{array}\right]\\
+\stackrel[M_{1,:}\rightarrow M_{1,:}-7M_{4,:}]{M_{2,:}\rightarrow M_{2,:}+2M_{4,:}}{\longrightarrow}\left[\begin{array}{cccccccc}
+1 & 0 & 0 & 0 & -\frac{3}{31} & \frac{20}{31} & -\frac{10}{31} & -\frac{15}{31}\\
+0 & 1 & 0 & 0 & \frac{23}{31} & -\frac{81}{31} & \frac{56}{31} & \frac{115}{31}\\
+0 & 0 & 1 & 0 & \frac{8}{31} & -\frac{12}{31} & \frac{6}{31} & \frac{9}{31}\\
+0 & 0 & 0 & 1 & -\frac{4}{31} & \frac{6}{31} & -\frac{3}{31} & -\frac{20}{31}
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\[
+M^{-1}=\frac{1}{31}\left[\begin{array}{cccc}
+-3 & 20 & -10 & -15\\
+23 & -81 & 56 & 115\\
+8 & -12 & 6 & 9\\
+-4 & 6 & -3 & -20
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Inverses via Row Reduction}
+\end_layout
+
+\end_inset
+
+We could have seen that inverses could be computed with the help of row
+ reduction long ago.
+ After all, if 
+\begin_inset Formula $A$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $B$
+\end_inset
+
+ is its inverse, then 
+\begin_inset Formula $AB=I$
+\end_inset
+
+.
+ By thinking of this product one column at a time, this means
+\begin_inset Formula 
+\[
+AB_{:,1}=I_{:,1},\ AB_{:,2}=I_{:,2},\ \ldots,\ AB_{:,n}=I_{:,n}.
+\]
+
+\end_inset
+
+Solving these equations for the 
+\begin_inset Formula $B_{:,i}$
+\end_inset
+
+ could be done one at a time by row reduction.
+ Putting the solutions together into a matrix would give 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Reducing 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ times would be repetitive and time consuming, though.
+ Better, the solutions could be found simultaneously by augmenting all of
+ the 
+\begin_inset Formula $I_{:,i}$
+\end_inset
+
+ together—in effect, augmenting by the identity matrix—and reducing once
+ (the algorithm presented in this section).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While this process is still tedious for large matrices, it certainly beats
+ the alternative of using formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse_by_adjugate"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Ironically the ideas presented recently give us the tools to prove that
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse_by_adjugate"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) correctly computes the inverse.
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix and consider modifying 
+\begin_inset Formula $M$
+\end_inset
+
+ by replacing row 
+\begin_inset Formula $j$
+\end_inset
+
+ with a copy of row 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ Call the modified matrix 
+\begin_inset Formula $\tilde{M}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+\left|\tilde{M}\right|=(-1)^{j+1}\tilde{M}_{j,1}\left|\tilde{M}_{\backslash j,1}\right|+(-1)^{j+2}\tilde{M}_{j,2}\left|\tilde{M}_{\backslash j,2}\right|+\cdots+(-1)^{j+n}\tilde{M}_{j,n}\left|\tilde{M}_{\backslash j,n}\right|.
+\]
+
+\end_inset
+
+ But 
+\begin_inset Formula $\tilde{M}_{j,k}=M_{i,k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{M}_{\backslash j,k}=M_{\backslash j,k}$
+\end_inset
+
+ by construction, so
+\begin_inset Formula 
+\[
+\left|\tilde{M}\right|=(-1)^{j+1}M_{i,1}\left|M_{\backslash j,1}\right|+(-1)^{j+2}M_{i,2}\left|M_{\backslash j,2}\right|+\cdots+(-1)^{j+n}M_{i,n}\left|M_{\backslash j,n}\right|.
+\]
+
+\end_inset
+
+On the other hand, 
+\begin_inset Formula $\left|\tilde{M}\right|=0$
+\end_inset
+
+ since 
+\begin_inset Formula $\tilde{M}$
+\end_inset
+
+ has two identical rows.
+ We conclude that
+\begin_inset Formula 
+\begin{equation}
+(-1)^{j+1}M_{i,1}\left|M_{\backslash j,1}\right|+(-1)^{j+2}M_{i,2}\left|M_{\backslash j,2}\right|+\cdots+(-1)^{j+n}M_{i,n}\left|M_{\backslash j,n}\right|\label{eq:mismatched-expansion}
+\end{equation}
+
+\end_inset
+
+equals 
+\begin_inset Formula $0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ Observe that when 
+\begin_inset Formula $i=j$
+\end_inset
+
+, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mismatched-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is 
+\begin_inset Formula $\det M$
+\end_inset
+
+ expanded along row 
+\begin_inset Formula $i$
+\end_inset
+
+ (or row 
+\begin_inset Formula $j$
+\end_inset
+
+ depending on your perspective).
+ The proof of formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse_by_adjugate"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) then lies in noticing that for any square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, the entries of the product
+\begin_inset Formula 
+\[
+A\cdot\text{adj}A
+\]
+
+\end_inset
+
+all take the form (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mismatched-expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Accordingly 
+\begin_inset Formula $A\cdot\text{adj}A=(\det A)I$
+\end_inset
+
+ for any square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ is invertible, 
+\begin_inset Formula $\det A\neq0$
+\end_inset
+
+ and we have 
+\begin_inset Formula $A\cdot\frac{1}{\det A}\text{adj}A=I$
+\end_inset
+
+, so 
+\begin_inset Formula $A^{-1}=\frac{1}{\det A}\text{adj}A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Another place where row reduction could help ease an earlier burden is finding
+ eigenvectors.
+ Unless you happened to work through exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenvectors-revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Echelon-Forms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the last time you were asked to compute an eigenvector, you were expected
+ to write out a linear system of equations without using matrix notation
+ and to solve the system using elimination or substitution, not row operations.
+ With the introduction of the parametric vector form for writing solution
+ sets of linear systems with infinitely many solutions, there is no reason
+ not to apply matrix techniques to the task of finding eigenvectors.
+ Can you use row reduction to find the eigenvectors of
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cc}
+-17 & 49\\
+-21 & 53
+\end{array}\right]
+\]
+
+\end_inset
+
+given that its eigenvalues are 
+\begin_inset Formula $4$
+\end_inset
+
+ and 
+\begin_inset Formula $32$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:eigenvectors-via-reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+c
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+T
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Answers
+\end_layout
+
+\begin_layout Description
+eigenvectors 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenvectors-via-reduction"
+
+\end_inset
+
+if 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+, then the associated eigenvector, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, satisfies 
+\begin_inset Formula $(M-\lambda I)\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cc}
+-17 & 49\\
+-21 & 53
+\end{array}\right]
+\]
+
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda=4$
+\end_inset
+
+, that means the unknown eigenvector satisfies
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-21 & 49\\
+-21 & 49
+\end{array}\right]\mathbf{v}=\mathbf{0}.
+\]
+
+\end_inset
+
+This system can be solved by reducing the augmented matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-21 & 49 & 0\\
+-21 & 49 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+Subtracting row 1 from row 2 yields 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-21 & 49 & 0\\
+0 & 0 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ is a free variable and 
+\begin_inset Formula $v_{1}=\frac{-49}{-21}v_{2}=\frac{7}{3}v_{2}$
+\end_inset
+
+.
+ In parametric vector form,
+\begin_inset Formula 
+\[
+\mathbf{v}=r\left[\begin{array}{c}
+\frac{7}{3}\\
+1
+\end{array}\right]
+\]
+
+\end_inset
+
+ or equivalently
+\begin_inset Formula 
+\[
+\mathbf{v}=r\left[\begin{array}{c}
+7\\
+3
+\end{array}\right]
+\]
+
+\end_inset
+
+for any 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Speeding up the process for the eigenvalue 
+\begin_inset Formula $\lambda=32$
+\end_inset
+
+, we need to reduce the augmented matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-49 & 49 & 0\\
+-21 & 21 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+Again the second row disappears with one row operation, leaving 
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-49 & 49 & 0\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+from which we deduce 
+\begin_inset Formula $v_{1}=v_{2}$
+\end_inset
+
+.
+ The solution is therefore 
+\begin_inset Formula 
+\[
+\mathbf{v}=r\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]
+\]
+
+\end_inset
+
+ for any 
+\begin_inset Formula $r$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

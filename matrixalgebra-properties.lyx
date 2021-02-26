@@ -1418,7 +1418,7 @@ name "thm:matrixproperties-part1"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:commutativityforaddition"
+name "thmpart:commutativityforaddition"
 
 \end_inset
 
@@ -1432,7 +1432,7 @@ name "thm:commutativityforaddition"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:associativity-addition"
+name "thmpart:associativity-addition"
 
 \end_inset
 
@@ -1446,7 +1446,7 @@ name "thm:associativity-addition"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:additive-identity"
+name "thmpart:additive-identity"
 
 \end_inset
 
@@ -1460,7 +1460,7 @@ name "thm:additive-identity"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:associativity-multiplication"
+name "thmpart:associativity-multiplication"
 
 \end_inset
 
@@ -1474,7 +1474,7 @@ name "thm:associativity-multiplication"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:left-distributive"
+name "thmpart:left-distributive"
 
 \end_inset
 
@@ -1501,7 +1501,7 @@ whenever the indicated operations are defined.
 Claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:commutativityforaddition"
+reference "thmpart:commutativityforaddition"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1720,7 +1720,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:commutativityforaddition"
+reference "thmpart:commutativityforaddition"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1814,7 +1814,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:left-distributive"
+reference "thmpart:left-distributive"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1851,7 +1851,7 @@ name "thm:matrixproperties-part2"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:distribute-scalar-over-matrices"
+name "thmpart:distribute-scalar-over-matrices"
 
 \end_inset
 
@@ -1865,7 +1865,7 @@ name "thm:distribute-scalar-over-matrices"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:distributivity-matrix-over-scalars"
+name "thmpart:distributivity-matrix-over-scalars"
 
 \end_inset
 
@@ -1879,7 +1879,7 @@ name "thm:distributivity-matrix-over-scalars"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:ass-scalar-mult-2-scalars"
+name "thmpart:ass-scalar-mult-2-scalars"
 
 \end_inset
 
@@ -1893,7 +1893,7 @@ name "thm:ass-scalar-mult-2-scalars"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:ass-scalar-mult-2-matrices"
+name "thmpart:ass-scalar-mult-2-matrices"
 
 \end_inset
 
@@ -1907,7 +1907,7 @@ name "thm:ass-scalar-mult-2-matrices"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:rightdistributive"
+name "thmpart:rightdistributive"
 
 \end_inset
 
@@ -1969,7 +1969,7 @@ name "thm:matrixproperties-part3"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:transpose-of-transpose"
+name "thmpart:transpose-of-transpose"
 
 \end_inset
 
@@ -1983,7 +1983,7 @@ name "thm:transpose-of-transpose"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:transpose-of-scalar-multiple"
+name "thmpart:transpose-of-scalar-multiple"
 
 \end_inset
 
@@ -1997,7 +1997,7 @@ name "thm:transpose-of-scalar-multiple"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:transpose-of-sum"
+name "thmpart:transpose-of-sum"
 
 \end_inset
 
@@ -2011,7 +2011,7 @@ name "thm:transpose-of-sum"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:transpose-of-a-product"
+name "thmpart:transpose-of-a-product"
 
 \end_inset
 
@@ -2025,7 +2025,7 @@ name "thm:transpose-of-a-product"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:inverse-of-the-inverse"
+name "thmpart:inverse-of-the-inverse"
 
 \end_inset
 
@@ -2039,7 +2039,7 @@ name "thm:inverse-of-the-inverse"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:inverse-of-a-product"
+name "thmpart:inverse-of-a-product"
 
 \end_inset
 
@@ -2053,7 +2053,7 @@ name "thm:inverse-of-a-product"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "thm:inverse-of-transpose"
+name "thmpart:inverse-of-transpose"
 
 \end_inset
 
@@ -2084,7 +2084,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:inverse-of-the-inverse"
+reference "thmpart:inverse-of-the-inverse"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2114,7 +2114,7 @@ noprefix "false"
  As for claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:inverse-of-the-inverse"
+reference "thmpart:inverse-of-the-inverse"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2162,7 +2162,7 @@ noprefix "false"
  This has consequences such as the appearance of claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:rightdistributive"
+reference "thmpart:rightdistributive"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2214,7 +2214,7 @@ noprefix "false"
  In particular, notice that (claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:transpose-of-a-product"
+reference "thmpart:transpose-of-a-product"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2225,7 +2225,7 @@ noprefix "false"
  order! Similarly, (claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:inverse-of-a-product"
+reference "thmpart:inverse-of-a-product"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2370,7 +2370,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:ass-scalar-mult-2-matrices"
+reference "thmpart:ass-scalar-mult-2-matrices"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2436,7 +2436,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:ass-scalar-mult-2-scalars"
+reference "thmpart:ass-scalar-mult-2-scalars"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2502,7 +2502,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:ass-scalar-mult-2-scalars"
+reference "thmpart:ass-scalar-mult-2-scalars"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2690,7 +2690,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:ass-scalar-mult-2-matrices"
+reference "thmpart:ass-scalar-mult-2-matrices"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2733,7 +2733,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:rightdistributive"
+reference "thmpart:rightdistributive"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2869,7 +2869,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:associativity-addition"
+reference "thmpart:associativity-addition"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2896,7 +2896,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:additive-identity"
+reference "thmpart:additive-identity"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2923,7 +2923,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:distribute-scalar-over-matrices"
+reference "thmpart:distribute-scalar-over-matrices"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2950,7 +2950,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:distributivity-matrix-over-scalars"
+reference "thmpart:distributivity-matrix-over-scalars"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2977,7 +2977,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:ass-scalar-mult-2-scalars"
+reference "thmpart:ass-scalar-mult-2-scalars"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3004,7 +3004,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:ass-scalar-mult-2-matrices"
+reference "thmpart:ass-scalar-mult-2-matrices"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3031,7 +3031,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:transpose-of-transpose"
+reference "thmpart:transpose-of-transpose"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3058,7 +3058,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:transpose-of-scalar-multiple"
+reference "thmpart:transpose-of-scalar-multiple"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3085,7 +3085,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:transpose-of-sum"
+reference "thmpart:transpose-of-sum"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3126,7 +3126,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:additive-identity"
+reference "thmpart:additive-identity"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3153,7 +3153,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:associativity-multiplication"
+reference "thmpart:associativity-multiplication"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3180,7 +3180,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:left-distributive"
+reference "thmpart:left-distributive"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3207,7 +3207,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:distributivity-matrix-over-scalars"
+reference "thmpart:distributivity-matrix-over-scalars"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3234,7 +3234,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:ass-scalar-mult-2-matrices"
+reference "thmpart:ass-scalar-mult-2-matrices"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3261,7 +3261,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:rightdistributive"
+reference "thmpart:rightdistributive"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3288,7 +3288,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:transpose-of-transpose"
+reference "thmpart:transpose-of-transpose"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3315,7 +3315,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:transpose-of-sum"
+reference "thmpart:transpose-of-sum"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3342,7 +3342,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:transpose-of-a-product"
+reference "thmpart:transpose-of-a-product"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3376,7 +3376,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:inverse-of-a-product"
+reference "thmpart:inverse-of-a-product"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3403,7 +3403,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:inverse-of-transpose"
+reference "thmpart:inverse-of-transpose"
 plural "false"
 caps "false"
 noprefix "false"
