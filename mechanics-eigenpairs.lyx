@@ -940,8 +940,7 @@ noprefix "false"
 ) yields
 \begin_inset Formula 
 \begin{align*}
-(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right) & =(M-\lambda I)^{-1}\mathbf{0}\\
- & =\mathbf{0}
+(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right) & =(M-\lambda I)^{-1}\mathbf{0}=\mathbf{0}.
 \end{align*}
 
 \end_inset
@@ -1024,6 +1023,39 @@ characteristic polynomial
 \end_inset
 
 ).
+ Exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ requests an argument that 
+\begin_inset Formula $\det(M-\lambda I)=0$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection

@@ -146,7 +146,7 @@ noprefix "false"
  claim 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "thm:additive-identity"
+reference "thmpart:additive-identity"
 plural "false"
 caps "false"
 noprefix "false"

@@ -2958,6 +2958,106 @@ for any
 .
 \end_layout
 
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+replacement
+\begin_inset space ~
+\end_inset
+
+matrix if 
+\begin_inset Formula $E$
+\end_inset
+
+ is an elementary replacement matrix, 
+\begin_inset Formula $\det E=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+swap
+\begin_inset space ~
+\end_inset
+
+matrix if 
+\begin_inset Formula $E$
+\end_inset
+
+ is an elementary swap matrix, 
+\begin_inset Formula $\det E=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+deteminant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+scale
+\begin_inset space ~
+\end_inset
+
+matrix if 
+\begin_inset Formula $E$
+\end_inset
+
+ is an elementary scale matrix, 
+\begin_inset Formula $\det E=s$
+\end_inset
+
+ where 
+\begin_inset Formula $s$
+\end_inset
+
+ is the scale factor.
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+transpose for any square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $\det A^{T}=\det A$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \noindent
 \begin_inset ERT
@@ -3635,8 +3735,48 @@ Suppose
 \end_inset
 
 .
- Find 
+ Find
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $\det A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det A^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is a square matrix, 
+\begin_inset Formula $E$
+\end_inset
+
+ is a replacement matrix, and 
+\begin_inset Formula $\det(ME)=-\frac{1}{2}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\det(M^{T})$
 \end_inset
 
 .
