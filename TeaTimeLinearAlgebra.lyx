@@ -642,7 +642,31 @@ status open
 
 \begin_layout Plain Layout
 
-% Linear Transformations 
+% Chapter 4: Linear Transformations 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-linear-transformation.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Chapter 5: Vector Spaces 
 \end_layout
 
 \end_inset
@@ -656,7 +680,35 @@ status open
 
 \begin_layout Plain Layout
 
-% Vector Spaces 
+% Part III: Applications 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Chapter 6: Applications to Branches of Mathematics 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Chapter 7: Applications Outside of Mathematics 
 \end_layout
 
 \end_inset

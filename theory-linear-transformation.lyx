@@ -1,0 +1,1709 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Linear Transformations
+\end_layout
+
+\begin_layout Section
+Functions and Transformations 
+\end_layout
+
+\begin_layout Subsection
+Functions and Relations
+\end_layout
+
+\begin_layout Standard
+Think for a moment about what you remember about functions before reading
+ on.
+ Go ahead.
+ Think about it.
+ Close your eyes.
+ Close the book and just think.
+ There are no right or wrong answers.
+ You remember what you remember.
+\end_layout
+
+\begin_layout Standard
+What did you come up with? Common answers include things like 
+\begin_inset Quotes eld
+\end_inset
+
+inputs and outputs
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+black box
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+slope-intercept
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+graphing
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+zeros
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+there's a domain
+\begin_inset Quotes erd
+\end_inset
+
+, and more.
+ Whatever came to mind is okay—it was probably related.
+ Now try to divorce yourself from all those ideas.
+ Free your mind from past experiences, and start over.
+ We'll come back to the familiar ideas of function notation and graphing
+ later.
+ For now try to think more generally, more abstractly about functions.
+ The ability to think abstractly will become more important as we progress
+ through the present chapter and the next.
+\end_layout
+
+\begin_layout Standard
+A function is made from three ingredients—three sets, really.
+ Two of the sets may contain any types of objects—real numbers in each,
+ fruits in one and colors in the other, car companies in one and countries
+ in the other, subsets of real numbers in one and polynomials in the other,
+ matrices in one and integers in the other—no restrictions.
+ The definition of function does not specify.
+ These two sets are called the domain and codomain.
+ There are no rules about what kinds of sets can be which.
+ Any set can be the domain of a function, and any set can be the codomain
+ of a function.
+ The only requirements of a function are placed on the third set.
+ This set must contain exactly one ordered pair for each element (member)
+ of the domain.
+ The order of the elements is important too.
+ The first component of each ordered pair must be an element of the domain
+ and the second component must be an element of the codomain.
+\end_layout
+
+\begin_layout Standard
+A relation, like a function is made from three sets, a domain, a codomain,
+ and a set of ordered pairs where the first component of the orderd pair
+ is an element of the domain and the second component is an element of the
+ codomain.
+ No further requirements.
+ Thus, a relation can be thought of as a 
+\series bold
+rela
+\series default
+xed func
+\series bold
+tion
+\series default
+.
+ It has to adhere to fewer rules.
+ Given two sets, any set of ordered pairs (where the first component of
+ each ordered pair is taken from one set while the second component is taken
+ from the other set) defines a relation.
+ However, not any set of ordered pairs defines a function.
+ For a relation to be a function, it must contain exactly one ordered pair
+ for each element of the domain.
+\end_layout
+
+\begin_layout Standard
+To be precise, a 
+\series bold
+relation
+\series default
+ is a collection of three sets, 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ is any subset of 
+\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
+\end_inset
+
+.
+ A 
+\series bold
+function
+\series default
+ is a collection of three sets 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
+\end_inset
+
+ containing exactly one such ordered pair for each element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ The set 
+\begin_inset Formula $A$
+\end_inset
+
+ is called the 
+\series bold
+domain
+\series default
+, the set 
+\begin_inset Formula $B$
+\end_inset
+
+ is called the 
+\series bold
+codomain
+\series default
+, and the set 
+\begin_inset Formula $C$
+\end_inset
+
+ is called the 
+\series bold
+rule of correspondence
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Everything else you learned about functions derived from a definition like
+ this one.
+ For example, it is convenient to give functions names just like we do matrices
+ or numbers.
+ By convention, letters such as 
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula $g$
+\end_inset
+
+, and 
+\begin_inset Formula $h$
+\end_inset
+
+ are commonly used as the names for functions.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ is a function containing the three sets 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, as in the definition, this may denoted by 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+, read 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ is a function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ is a function on 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ without mention of the codomain.
+ Implied in this notation is the existence of the third set, 
+\begin_inset Formula $C$
+\end_inset
+
+, defining the rule of correspondence.
+ To completely define a specific function, the set 
+\begin_inset Formula $C$
+\end_inset
+
+ must be stated one way or another.
+ If 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ is in 
+\begin_inset Formula $C$
+\end_inset
+
+, we write 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+, read 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ of 
+\begin_inset Formula $a$
+\end_inset
+
+ equals 
+\begin_inset Formula $b$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+When you first encountered functions, explicit mention of the domain and
+ codomain was probably not made.
+ The domain and codomain quickly faded into the background in favor of presentin
+g only the rule of correspondence, such as 
+\begin_inset Formula $f(x)=3x+11$
+\end_inset
+
+.
+ It was just assumed, after a brief introduction to the idea, that the codomain
+ was the set of all real numbers and the domain was some subset of the real
+ numbers, and with good reason.
+ It would have been rather repetitive to write 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ (
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is the symbol for the set of all real numbers) every time a function on
+ the real numbers came up in algebra class.
+ Additionally, the domains of many of the functions you encountered were
+ not all real numbers.
+ It would have been a difficult distraction to have to write 
+\begin_inset Formula $f:A\to\mathbb{R}$
+\end_inset
+
+ and get the set 
+\begin_inset Formula $A$
+\end_inset
+
+ correct every time a function was mentioned.
+ To compensate for the simplifying assumption, a classic problem in algebra
+ is to find the (implied) domain of functions such as 
+\begin_inset Formula $f(x)=\frac{3x+7}{2x-5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The discussion of inverse functions was likely complicated by not introducing
+ the notion of a relation.
+ if 
+\begin_inset Formula $T$
+\end_inset
+
+ is a relation with domain 
+\begin_inset Formula $A$
+\end_inset
+
+ and codomain 
+\begin_inset Formula $B$
+\end_inset
+
+, the relation with domain 
+\begin_inset Formula $B$
+\end_inset
+
+, codomain 
+\begin_inset Formula $A$
+\end_inset
+
+, and rule of correspondence 
+\begin_inset Formula $\{(T(a),a):a\text{ is in }A\}$
+\end_inset
+
+ is called the 
+\series bold
+inverse relation
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Every relation has an inverse relation.
+ By extension, every function has an inverse relation.
+ That is not to say that every function has an inverse function, however.
+ There are plenty that do not.
+\end_layout
+
+\begin_layout Subsection*
+Maps and Transformations
+\end_layout
+
+\begin_layout Standard
+The ideas and conventions surrounding functions will be perpetuated and,
+ more importantly, extended in this course.
+ First, 
+\series bold
+map
+\series default
+, 
+\series bold
+mapping
+\series default
+, and 
+\series bold
+transformation
+\series default
+ are all synonyms for 
+\series bold
+function
+\series default
+.
+ All four words share the same definition, but 
+\begin_inset Quotes eld
+\end_inset
+
+function
+\begin_inset Quotes erd
+\end_inset
+
+ is often eschewed in favor of one of the others when the codomain is not
+ the set of real numbers.
+ To lend robustness to the conversation, we define the following symbols.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{Z}=\{z:z\text{ is an integer}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{Z}^{+}=\{z:z\text{ is a positive integer}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{Q}=\{q:q\text{ is a rational number}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}=\{r:r\text{ is a real number}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{C}=\{c:c\text{ is a complex number}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}^{n}=\{\mathbf{v}:\mathbf{v}\text{ is an }n\times1\text{ matrix (or vector) with real number entries}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}^{\mathbb{N}}=\{s:s\text{ is a sequence of real numbers}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{M}_{m\times n}(Z)=\{M:M\text{ is an }m\times n\text{ matrix with entries in the set }Z\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $GL_{n}(Z)=\{M\text{ in }\mathcal{M}_{n\times n}(Z):M^{-1}\text{ exists in }\mathcal{M}_{n\times n}(Z)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{P}_{n}(Z)=\{p:p\text{ is a polynomial of degree }n\text{ or less with coefficients in }Z\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(D)=\{f:f\text{ is a function from }D\text{ to }\mathbb{R}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C^{n}(D)=\{f:f\text{ is a continuous function from }D\text{ to }\mathbb{R}\text{ with }n\text{ continuous derivatives}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Z$
+\end_inset
+
+ is taken to be one of 
+\begin_inset Formula $\mathbb{Q},\ \mathbb{R},\text{ or }\mathbb{C}$
+\end_inset
+
+, and 
+\begin_inset Formula $D$
+\end_inset
+
+ is taken to be a subset of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
+\begin_inset Formula $3n+1$
+\end_inset
+
+ conjecture is that iteration (computing the sequence 
+\begin_inset Formula $n,R(n),R(R(n)),R(R(R(n))),\ldots$
+\end_inset
+
+) of the map 
+\begin_inset Formula $R:\mathbb{Z}^{+}\to\mathbb{Z}^{+}$
+\end_inset
+
+ defined by 
+\begin_inset Formula 
+\[
+R(n)=\begin{cases}
+\frac{n}{2} & \text{if }n\text{ is even}\\
+3n+1 & \text{if }n\text{ is odd}
+\end{cases}
+\]
+
+\end_inset
+
+always ends with the cycle 
+\begin_inset Formula $4,2,1,4,2,1,\ldots$
+\end_inset
+
+.
+ Try it starting with 
+\begin_inset Formula $n=13$
+\end_inset
+
+, for example.
+ How many iterations does it take to get the first 
+\begin_inset Formula $4$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:3n-plus-one-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The transformation 
+\begin_inset Formula $\mathcal{A}:C^{0}(D)\to C^{1}(D)$
+\end_inset
+
+ given by 
+\begin_inset Formula $\mathcal{A}(f)=\int_{0}^{x}f(t)\,dt$
+\end_inset
+
+ is a standard of calculus, though it is uncommon to discuss the antiderivative
+ as a transformation.
+ The derivative provides another example of a transformation from some set
+ of functions to another set of functions.
+ For example, 
+\begin_inset Formula $D:\mathbb{P}^{n}\to\mathbb{P}^{n-1}$
+\end_inset
+
+ defined by 
+\begin_inset Formula $D(p)=p'(x)$
+\end_inset
+
+ is a map from the set of polynomials of degree at most 
+\begin_inset Formula $n$
+\end_inset
+
+ to the set of polynomials of degree at most 
+\begin_inset Formula $n-1$
+\end_inset
+
+.
+ For example, if 
+\begin_inset Formula $p(x)=3x^{2}-2x+1$
+\end_inset
+
+, then 
+\begin_inset Formula $D(p)=p'(x)=6x-2$
+\end_inset
+
+.
+ Mechanically there is no advantage to writing the derivative as a transformatio
+n, but conceptually it gives a certain perspective on the process of differentia
+tion.
+ The process itself can be thought of as a function!
+\end_layout
+
+\begin_layout Standard
+The map 
+\begin_inset Formula $l:\mathbb{R}^{\mathbb{N}}\to\mathbb{R}^{\mathbb{N}}$
+\end_inset
+
+ given by 
+\begin_inset Formula $l(s_{0},s_{1},s_{2},\ldots)=s_{1},s_{2},s_{3},\ldots$
+\end_inset
+
+ is sometimes called the (left) shift operator.
+ Its cousin, the left bit shift operator (called left-shift) plays a huge
+ role in computing.
+\end_layout
+
+\begin_layout Standard
+The determinant is a function or map 
+\begin_inset Formula $\det:\mathcal{M}_{n\times n}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+ for each 
+\begin_inset Formula $n$
+\end_inset
+
+ since each 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix has exactly one determinant.
+ Perhaps you thought of this point on your own, and perhaps not.
+ No matter as long as you can see the determinant this way now.
+ The transformation 
+\begin_inset Formula $V:GL_{n}(\mathbb{R})\to GL_{n}(\mathbb{R})$
+\end_inset
+
+ mapping an invertible matrix to its inverse provides motivation to think
+ of finding the inverse of a matrix as a function as well.
+ The most common transformation considered in linear algebra, however, is
+ the transformation 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+, as in 
+\begin_inset Formula $T(\mathbf{x})=\left[\begin{array}{ccc}
+1 & 2 & -5\\
+16 & -4 & 2
+\end{array}\right]\mathbf{x}$
+\end_inset
+
+.
+ It has two special properties,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T(\mathbf{x}+\mathbf{y})=T(\mathbf{x})+T(\mathbf{y})$
+\end_inset
+
+ for any 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ and any 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T(c\mathbf{x})=cT(\mathbf{x})$
+\end_inset
+
+ for any 
+\begin_inset Formula $c$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These two properties make it a linear transformation.
+\end_layout
+
+\begin_layout Subsection*
+Linear Transformations
+\end_layout
+
+\begin_layout Standard
+Given sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ on which addition and scalar multiplication are defined, a 
+\series bold
+linear transformation
+\series default
+ is any transformation 
+\begin_inset Formula $L:A\to B$
+\end_inset
+
+ such that for any 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+ and any scalar 
+\begin_inset Formula $c$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L(x+y)=L(x)+L(y)$
+\end_inset
+
+ and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L(cx)=cL(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Some of the transformations mentioned already are linear transformations
+ and some are not.
+ For example, 
+\begin_inset Formula $R$
+\end_inset
+
+ is not since 
+\begin_inset Formula $R(2+3)=16$
+\end_inset
+
+ but 
+\begin_inset Formula $R(2)+R(3)=1+10=11$
+\end_inset
+
+, and 
+\begin_inset Formula $11\neq16$
+\end_inset
+
+.
+ It is easy to find positive integers that violate property 1.
+ The derivative is a linear transformation since two basic results of calculus
+ are that 
+\begin_inset Formula $(f+g)'=f'+g'$
+\end_inset
+
+ and 
+\begin_inset Formula $(cf)'=cf'$
+\end_inset
+
+.
+ These rules of differentiation say precisely that properties 1 and 2 hold
+ when differentiation is viewed as a mapping.
+ In other words, 
+\begin_inset Formula $D(f+g)=D(f)+D(g)$
+\end_inset
+
+ and 
+\begin_inset Formula $D(cf)=cD(f)$
+\end_inset
+
+.
+ What about 
+\begin_inset Formula $\mathcal{A},l,\det,$
+\end_inset
+
+and 
+\begin_inset Formula $V$
+\end_inset
+
+? Answers on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-or-not"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Vocabulary of Transformations
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $T:A\to B$
+\end_inset
+
+ is a transformation, then 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T(a)$
+\end_inset
+
+ is called 
+\series bold
+the image
+\series default
+ of 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The set of all images, 
+\begin_inset Formula $\{T(a):a\text{ is in }A\}\subseteq B$
+\end_inset
+
+, is called 
+\series bold
+the range
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\text{range}(T)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ is called 
+\series bold
+a preimage
+\series default
+ of 
+\begin_inset Formula $b$
+\end_inset
+
+ whenever 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The set of all preimages of an element 
+\begin_inset Formula $b$
+\end_inset
+
+ of 
+\begin_inset Formula $B$
+\end_inset
+
+ is also called 
+\series bold
+the preimage
+\series default
+ of 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+When the inverse relation of 
+\begin_inset Formula $T$
+\end_inset
+
+ is a function, it is denoted by 
+\begin_inset Formula $T^{-1}:\text{range}(T)\to A$
+\end_inset
+
+ and 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ is called the 
+\series bold
+inverse function
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+ or simply 
+\series bold
+the inverse
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It is not an accident that 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ is called the inverse of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ The notion of an inverse function extends the idea of additive and multiplicati
+ve inverses.
+ By definition, if 
+\begin_inset Formula $T$
+\end_inset
+
+ has an inverse function, 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+, then 
+\begin_inset Formula $T^{-1}(T(a))=a$
+\end_inset
+
+ for any 
+\begin_inset Formula $a$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Composing 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ with 
+\begin_inset Formula $T$
+\end_inset
+
+ returns the starting value, much like left multiplying the matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ by invertible matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and then left multiplying the result by the matrix 
+\begin_inset Formula $M^{-1}$
+\end_inset
+
+ results in the starting value 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $M^{-1}(MA)=A$
+\end_inset
+
+.
+ Start with 
+\begin_inset Formula $A$
+\end_inset
+
+, end with 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ In terms of the inverse function, applying 
+\begin_inset Formula $T$
+\end_inset
+
+ to 
+\begin_inset Formula $a$
+\end_inset
+
+ and then applying 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ to the result results in 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $T^{-1}(T(a))=a$
+\end_inset
+
+.
+ Start with 
+\begin_inset Formula $a$
+\end_inset
+
+, end with 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+relation a collection of three sets, 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ is any subset of 
+\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+function a collection of three sets 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
+\end_inset
+
+ containing exactly one such ordered pair for each element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+domain the set 
+\begin_inset Formula $A$
+\end_inset
+
+ in the definitions of relation and function.
+\end_layout
+
+\begin_layout Description
+codomain the set 
+\begin_inset Formula $B$
+\end_inset
+
+ in the definitions of relation and function.
+\end_layout
+
+\begin_layout Description
+rule
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+correspondence the set 
+\begin_inset Formula $C$
+\end_inset
+
+ in the definitions of relation and function.
+\end_layout
+
+\begin_layout Description
+map a function, usually used when the codomain is not 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+mapping a function, usually used when the codomain is not 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+transformation a function, usually used when the codomain is not 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+transformation given sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ on which addition and scalar multiplication are defined, a transformation
+ 
+\begin_inset Formula $L:A\to B$
+\end_inset
+
+ is linear (is a linear transformation) if for any 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+ and any scalar 
+\begin_inset Formula $c$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L(x+y)=L(x)+L(y)$
+\end_inset
+
+ and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L(cx)=cL(x)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+image an element, 
+\begin_inset Formula $T(a)$
+\end_inset
+
+, of the codomain of a transformation 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+preimage (of an element 
+\begin_inset Formula $b$
+\end_inset
+
+ of the codomain of a transformation 
+\begin_inset Formula $T$
+\end_inset
+
+) an element 
+\begin_inset Formula $a$
+\end_inset
+
+ in the domain of 
+\begin_inset Formula $T$
+\end_inset
+
+ such that 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+ Also, the set of all elements 
+\begin_inset Formula $a$
+\end_inset
+
+ in the domain of 
+\begin_inset Formula $T$
+\end_inset
+
+ such that 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+inverse
+\begin_inset space ~
+\end_inset
+
+relation (of a relation 
+\begin_inset Formula $T$
+\end_inset
+
+ with domain 
+\begin_inset Formula $A$
+\end_inset
+
+ and codomain 
+\begin_inset Formula $B$
+\end_inset
+
+) the relation with domain 
+\begin_inset Formula $B$
+\end_inset
+
+, codomain 
+\begin_inset Formula $A$
+\end_inset
+
+, and rule of correspondence 
+\begin_inset Formula $\{(T(a),a):a\text{ is in }A\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+inverse
+\begin_inset space ~
+\end_inset
+
+function the inverse relation of a function whenever it happens to be a
+ function as well.
+\end_layout
+
+\begin_layout Description
+inverse an inverse function.
+ If 
+\begin_inset Formula $T^{-1}:\text{range}(T)\to A$
+\end_inset
+
+ is the inverse of 
+\begin_inset Formula $T:A\to B$
+\end_inset
+
+, then 
+\begin_inset Formula $T^{-1}(T(a))=a$
+\end_inset
+
+ for all 
+\begin_inset Formula $a$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+I
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $3n+1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+problem 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:3n-plus-one-problem"
+
+\end_inset
+
+
+\begin_inset Formula $R(13)=3(13)+1=40$
+\end_inset
+
+ since 
+\begin_inset Formula $13$
+\end_inset
+
+ is odd.
+ 
+\begin_inset Formula $R(R(13))=R(40)=\frac{40}{2}=20$
+\end_inset
+
+ since 
+\begin_inset Formula $40$
+\end_inset
+
+ is even.
+ 
+\begin_inset Formula $R(R(R(13)))=R(R(40))=R(20)=10$
+\end_inset
+
+, and so on.
+ The sequence 
+\begin_inset Formula $n,R(n),R(R(n)),R(R(R(n))),\ldots$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+13,40,20,10,5,16,8,4,2,1,4,2,1,4,2,\ldots
+\]
+
+\end_inset
+
+so it takes 7 iterations to get the first 
+\begin_inset Formula $4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+or
+\begin_inset space ~
+\end_inset
+
+not? 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-or-not"
+
+\end_inset
+
+Another two results of calculus are that 
+\begin_inset Formula $\int(f+g)=\int f+\int g$
+\end_inset
+
+ and 
+\begin_inset Formula $\int(cf)=c\int f$
+\end_inset
+
+, so 
+\begin_inset Formula $\mathcal{A}(f+g)=\mathcal{A}(f)+\mathcal{A}(g)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{A}(cf)=c\mathcal{A}(f)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ is a linear transformation.
+ On one hand,
+\begin_inset Formula $l(s+t)=l\left((s_{0},s_{1},s_{2},\ldots)+(t_{0},t_{1},t_{2},\ldots)\right)=l\left(s_{0}+t_{0},s_{1}+t_{1},s_{2}+t_{2},\ldots\right)=s_{1}+t_{1},s_{2}+t_{2},\ldots$
+\end_inset
+
+.
+ On the other hand, 
+\begin_inset Formula $l(s)+l(t)=l(s_{0},s_{1},s_{2},\ldots)+l(t_{0},t_{1},t_{2},\ldots)=(s_{1},s_{2},\ldots)+(t_{1},t_{2},\ldots)=s_{1}+t_{1},s_{2}+t_{2},\ldots$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $l(s+t)=l(s)+l(t)$
+\end_inset
+
+.
+ Property 1 holds for 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ To check that property 2 holds, note that 
+\begin_inset Formula $l(cs)=l(cs_{0},cs_{1},cs_{2},\ldots)=cs_{1},cs_{2},\ldots$
+\end_inset
+
+ and 
+\begin_inset Formula $cl(s)=cl(s_{0},s_{1},s_{2},\ldots)=c(s_{1},s_{2},\ldots)=cs_{1},cs_{2},\ldots$
+\end_inset
+
+ too.
+ 
+\begin_inset Formula $\det$
+\end_inset
+
+ is not a linear transformation.
+ For example, let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+2 & 3\\
+3 & 5
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=-A$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\det A=\det B=1$
+\end_inset
+
+, so 
+\begin_inset Formula $\det(A)+\det(B)=2$
+\end_inset
+
+ while 
+\begin_inset Formula $\det(A+B)=0$
+\end_inset
+
+.
+ Matrix inversion is also not a linear transformation.
+ Using the same matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $A^{-1}=\left[\begin{array}{cc}
+5 & -3\\
+-3 & 2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B^{-1}=\left[\begin{array}{cc}
+-5 & 3\\
+3 & -2
+\end{array}\right]$
+\end_inset
+
+ so the sum of the inverses is 
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ but the inverse of the sum does not exist.
+ In other words, 
+\begin_inset Formula $V(A)+V(B)=\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ but 
+\begin_inset Formula $V(A+B)$
+\end_inset
+
+ does not exist, so they are not equal.
+\end_layout
+
+\end_body
+\end_document
