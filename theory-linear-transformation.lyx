@@ -220,18 +220,14 @@ tion
  It has to adhere to fewer rules.
  Given two sets, any set of ordered pairs (where the first component of
  each ordered pair is taken from one set while the second component is taken
- from the other set) defines a relation.
- However, not any set of ordered pairs defines a function.
+ from the other) defines a relation.
+ Remember, though, not any set of ordered pairs defines a function.
  For a relation to be a function, it must contain exactly one ordered pair
  for each element of the domain.
 \end_layout
 
 \begin_layout Standard
-To be precise, a 
-\series bold
-relation
-\series default
- is a collection of three sets, 
+To be precise, even though a relation is composed of three sets, 
 \begin_inset Formula $A$
 \end_inset
 
@@ -251,99 +247,134 @@ relation
 \begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
 \end_inset
 
+, the set 
+\begin_inset Formula $C$
+\end_inset
+
+ is the 
+\series bold
+relation
+\series default
+ itself.
+ The sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are just ingredients.
+ To simplify the notation, the set 
+\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $A\times B$
+\end_inset
+
+, read 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $A$
+\end_inset
+
+ cross 
+\begin_inset Formula $B$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Given sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, a relation, then, is any subset of 
+\begin_inset Formula $A\times B$
+\end_inset
+
 .
  A 
 \series bold
 function
 \series default
- is a collection of three sets 
-\begin_inset Formula $A$
-\end_inset
-
-, 
-\begin_inset Formula $B$
-\end_inset
-
-, 
+ is a subset 
 \begin_inset Formula $C$
 \end_inset
 
-, where 
-\begin_inset Formula $C$
+ of 
+\begin_inset Formula $A\times B$
 \end_inset
 
- is a subset of 
-\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
-\end_inset
-
- containing exactly one such ordered pair for each element of 
+ containing exactly one ordered pair for each element of 
 \begin_inset Formula $A$
 \end_inset
 
 .
- The set 
-\begin_inset Formula $A$
-\end_inset
-
- is called the 
-\series bold
-domain
-\series default
-, the set 
-\begin_inset Formula $B$
-\end_inset
-
- is called the 
-\series bold
-codomain
-\series default
-, and the set 
+ That is, for any function 
 \begin_inset Formula $C$
 \end_inset
 
- is called the 
-\series bold
-rule of correspondence
-\series default
+, if 
+\begin_inset Formula $(a,b_{1})\in C$
+\end_inset
+
+ and 
+\begin_inset Formula $(a,b_{2})\in C$
+\end_inset
+
+ then 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Standard
+A relation 
+\begin_inset Formula $C$
+\end_inset
+
+ might be given using the rather compact notation 
+\begin_inset Formula $C=\{(a,b)\in A\times B:\text{rule of correspondence}\}$
+\end_inset
+
+ such as in
+\begin_inset Formula 
+\[
+C=\{(a,b)\in\mathbb{R}\times\mathbb{R}:a^{2}+b^{2}=1\}.
+\]
+
+\end_inset
+
+The same relation might be simplified to just 
+\begin_inset Formula $a^{2}+b^{2}=1$
+\end_inset
+
+ if it is understood, without writing explicitly, that 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are real numbers.
  
 \end_layout
 
 \begin_layout Standard
-Everything else you learned about functions derived from a definition like
- this one.
- For example, it is convenient to give functions names just like we do matrices
- or numbers.
- By convention, letters such as 
-\begin_inset Formula $f$
-\end_inset
-
-, 
-\begin_inset Formula $g$
-\end_inset
-
-, and 
-\begin_inset Formula $h$
-\end_inset
-
- are commonly used as the names for functions.
- If 
-\begin_inset Formula $f$
-\end_inset
-
- is a function containing the three sets 
-\begin_inset Formula $A$
-\end_inset
-
-, 
-\begin_inset Formula $B$
-\end_inset
-
-, 
-\begin_inset Formula $C$
-\end_inset
-
-, as in the definition, this may denoted by 
+When a relation is a function, we may emphasize this point using the notation
+ 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
@@ -367,81 +398,49 @@ Everything else you learned about functions derived from a definition like
 \begin_inset Quotes erd
 \end_inset
 
- or 
-\begin_inset Quotes eld
-\end_inset
-
-
+.
+ Implied in this notation is that 
 \begin_inset Formula $f$
 \end_inset
 
- is a function on 
-\begin_inset Formula $A$
+ is a function and there exists a rule of correspondence specifying exactly
+ which ordered pairs 
+\begin_inset Formula $(a,b)\in A\times B$
 \end_inset
 
-
-\begin_inset Quotes erd
-\end_inset
-
- without mention of the codomain.
- Implied in this notation is the existence of the third set, 
-\begin_inset Formula $C$
-\end_inset
-
-, defining the rule of correspondence.
- To completely define a specific function, the set 
-\begin_inset Formula $C$
-\end_inset
-
- must be stated one way or another.
- If 
-\begin_inset Formula $(a,b)$
-\end_inset
-
- is in 
-\begin_inset Formula $C$
-\end_inset
-
-, we write 
-\begin_inset Formula $f(a)=b$
-\end_inset
-
-, read 
-\begin_inset Quotes eld
-\end_inset
-
-
+ are in 
 \begin_inset Formula $f$
-\end_inset
-
- of 
-\begin_inset Formula $a$
-\end_inset
-
- equals 
-\begin_inset Formula $b$
-\end_inset
-
-
-\begin_inset Quotes erd
 \end_inset
 
 .
- 
+ To define a specific function, the familiar function notation is often
+ used, as in 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+, 
+\begin_inset Formula $f(a)=\text{"insert formula here"}$
+\end_inset
+
+, meaning 
+\begin_inset Formula $f=\{(a,b)\in A\times B:b=\text{"insert formula here"}\}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 When you first encountered functions, explicit mention of the domain and
  codomain was probably not made.
- The domain and codomain quickly faded into the background in favor of presentin
-g only the rule of correspondence, such as 
+ The domain and codomain quickly faded into the background in favor of focusing
+ on the rule of correspondence, such as 
 \begin_inset Formula $f(x)=3x+11$
 \end_inset
 
 .
  It was just assumed, after a brief introduction to the idea, that the codomain
  was the set of all real numbers and the domain was some subset of the real
- numbers, and with good reason.
+ numbers—with good reason.
  It would have been rather repetitive to write 
 \begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
 \end_inset
@@ -452,8 +451,8 @@ g only the rule of correspondence, such as
 
  is the symbol for the set of all real numbers) every time a function on
  the real numbers came up in algebra class.
- Additionally, the domains of many of the functions you encountered were
- not all real numbers.
+ More importantly, though, the domains of many of the functions you encountered
+ were not all real numbers.
  It would have been a difficult distraction to have to write 
 \begin_inset Formula $f:A\to\mathbb{R}$
 \end_inset
@@ -463,19 +462,26 @@ g only the rule of correspondence, such as
 \end_inset
 
  correct every time a function was mentioned.
+ The domain only includes elements that correspond to some element of the
+ dodomain.
  To compensate for the simplifying assumption, a classic problem in algebra
- is to find the (implied) domain of functions such as 
+ is to find the 
+\shape italic
+implied
+\shape default
+ domain of functions such as 
 \begin_inset Formula $f(x)=\frac{3x+7}{2x-5}$
 \end_inset
 
-.
+, the subset of real numbers that correspond to real numbers according to
+ the formula.
 \end_layout
 
 \begin_layout Standard
 The discussion of inverse functions was likely complicated by not introducing
  the notion of a relation.
  if 
-\begin_inset Formula $T$
+\begin_inset Formula $C$
 \end_inset
 
  is a relation with domain 
@@ -494,8 +500,8 @@ The discussion of inverse functions was likely complicated by not introducing
 \begin_inset Formula $A$
 \end_inset
 
-, and rule of correspondence 
-\begin_inset Formula $\{(T(a),a):a\text{ is in }A\}$
+ given by 
+\begin_inset Formula $C^{-1}=\{(b,a):(a,b)\text{ is in }C\}$
 \end_inset
 
  is called the 
@@ -503,7 +509,7 @@ The discussion of inverse functions was likely complicated by not introducing
 inverse relation
 \series default
  of 
-\begin_inset Formula $T$
+\begin_inset Formula $C$
 \end_inset
 
 .
@@ -586,7 +592,7 @@ function
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mathbb{R}^{n}=\{\mathbf{v}:\mathbf{v}\text{ is an }n\times1\text{ matrix (or vector) with real number entries}\}$
+\begin_inset Formula $\mathbb{R}^{n}=\{\mathbf{v}:\mathbf{v}\text{ is an }n\times1\text{ matrix (vector) with real number entries}\}$
 \end_inset
 
 
@@ -1189,52 +1195,80 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-relation a collection of three sets, 
+Cartesian
+\begin_inset space ~
+\end_inset
+
+product given any sets 
 \begin_inset Formula $A$
 \end_inset
 
-, 
+ and 
 \begin_inset Formula $B$
 \end_inset
 
-, 
-\begin_inset Formula $C$
+, the Cartesian product of 
+\begin_inset Formula $A$
 \end_inset
 
-, where 
-\begin_inset Formula $C$
+ and 
+\begin_inset Formula $B$
 \end_inset
 
- is any subset of 
-\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
+ is the set 
+\begin_inset Formula $\{(a,b):a\in A\text{ and }b\in B\}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $A\times B$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Description
-function a collection of three sets 
+relation given any sets 
 \begin_inset Formula $A$
 \end_inset
 
-, 
+ and 
 \begin_inset Formula $B$
 \end_inset
 
-, 
+, a relation is a subset 
 \begin_inset Formula $C$
 \end_inset
 
-, where 
-\begin_inset Formula $C$
+ of 
+\begin_inset Formula $A\times B$
 \end_inset
 
- is a subset of 
-\begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
-\end_inset
+.
+\end_layout
 
- containing exactly one such ordered pair for each element of 
+\begin_layout Description
+function given any sets 
 \begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, a function is a relation 
+\begin_inset Formula $C$
+\end_inset
+
+ such that if 
+\begin_inset Formula $(a,b_{1})\in C$
+\end_inset
+
+ and 
+\begin_inset Formula $(a,b_{2})\in C$
+\end_inset
+
+ then 
+\begin_inset Formula $b_{1}=b_{2}$
 \end_inset
 
 .
@@ -1265,133 +1299,11 @@ of
 \begin_inset space ~
 \end_inset
 
-correspondence the set 
+correspondence the rule that defines the set 
 \begin_inset Formula $C$
 \end_inset
 
  in the definitions of relation and function.
-\end_layout
-
-\begin_layout Description
-map a function, usually used when the codomain is not 
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-mapping a function, usually used when the codomain is not 
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-transformation a function, usually used when the codomain is not 
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-linear
-\begin_inset space ~
-\end_inset
-
-transformation given sets 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $B$
-\end_inset
-
- on which addition and scalar multiplication are defined, a transformation
- 
-\begin_inset Formula $L:A\to B$
-\end_inset
-
- is linear (is a linear transformation) if for any 
-\begin_inset Formula $x,y$
-\end_inset
-
- in 
-\begin_inset Formula $A$
-\end_inset
-
- and any scalar 
-\begin_inset Formula $c$
-\end_inset
-
-,
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $L(x+y)=L(x)+L(y)$
-\end_inset
-
- and
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $L(cx)=cL(x)$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Description
-image an element, 
-\begin_inset Formula $T(a)$
-\end_inset
-
-, of the codomain of a transformation 
-\begin_inset Formula $T$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-preimage (of an element 
-\begin_inset Formula $b$
-\end_inset
-
- of the codomain of a transformation 
-\begin_inset Formula $T$
-\end_inset
-
-) an element 
-\begin_inset Formula $a$
-\end_inset
-
- in the domain of 
-\begin_inset Formula $T$
-\end_inset
-
- such that 
-\begin_inset Formula $T(a)=b$
-\end_inset
-
-.
- Also, the set of all elements 
-\begin_inset Formula $a$
-\end_inset
-
- in the domain of 
-\begin_inset Formula $T$
-\end_inset
-
- such that 
-\begin_inset Formula $T(a)=b$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Description
@@ -1461,6 +1373,132 @@ inverse an inverse function.
  
 \end_layout
 
+\begin_layout Description
+map a function, usually used when the codomain is not 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+mapping a function, usually used when the codomain is not 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+transformation a function, usually used when the codomain is not 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+image an element, 
+\begin_inset Formula $T(a)$
+\end_inset
+
+, of the codomain of a transformation 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+preimage if 
+\begin_inset Formula $b$
+\end_inset
+
+ is an element of the codomain of a transformation 
+\begin_inset Formula $T$
+\end_inset
+
+, then an element 
+\begin_inset Formula $a$
+\end_inset
+
+ in the domain of 
+\begin_inset Formula $T$
+\end_inset
+
+ is a preimage of 
+\begin_inset Formula $b$
+\end_inset
+
+ if 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+ Also, the set of all elements 
+\begin_inset Formula $a$
+\end_inset
+
+ in the domain of 
+\begin_inset Formula $T$
+\end_inset
+
+ such that 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+transformation given sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ on which addition and scalar multiplication are defined, a transformation
+ 
+\begin_inset Formula $L:A\to B$
+\end_inset
+
+ is linear (is a linear transformation) if for any 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $A$
+\end_inset
+
+ and any scalar 
+\begin_inset Formula $c$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L(x+y)=L(x)+L(y)$
+\end_inset
+
+ and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L(cx)=cL(x)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \noindent
 \begin_inset ERT
@@ -1483,7 +1521,121 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-I
+Verify that if 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix, then 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $T(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+ is a linear transformation.
+\end_layout
+
+\begin_layout Enumerate
+Find the image of 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ under the mapping 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $T(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\text{stuff}$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{a}=\text{stuff}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Perhaps ironically, what is known as a linear function in algebra is not
+ necessarily a linear transformation.
+ Verify that 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)=mx+b$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+is a linear transformation when 
+\begin_inset Formula $b=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+is not a linear transformation when 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The range of the function 
+\begin_inset Formula $g:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $g(x)=x^{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+.
+ Therefore, the inverse relation of 
+\begin_inset Formula $g$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+g^{-1}=\{(y,x)\in[0,\infty)\times\mathbb{R}:y=x^{2}\}.
+\]
+
+\end_inset
+
+Verify that 
+\begin_inset Formula $g$
+\end_inset
+
+ is a function and argue that 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+ is not.
 \end_layout
 
 \begin_layout Standard
