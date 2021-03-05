@@ -98,14 +98,17 @@ Geometric Interpretation of Vectors
 \end_layout
 
 \begin_layout Standard
-Saying that Victor drove 5 kilometers describes how far he drove.
- In the terminology of physics, the magnitude or length of his drive was
- 5 kilometers.
- Saying that Victor drove 5 kilometers due east describes how far he drove
- and which way.
- In the terminology of physics, the magnitude of his drive was 5 kilometers
- and the direction of his drive was due east.
- This information can be captured by the vector 
+One day, my friend Victor took a 5 kilometer drive.
+ When Victor told me this I knew just how long his drive was.
+ It was 5 kilometers.
+ When Victor added that his drive was on a very straight highway headed
+ due east, I knew more.
+ I knew which way Victor was driving.
+ I could imagine tracing out his path on a map by drawing a horizontal arrow
+ pointing to the right (eastward) with a length equivalent to 5 kilometers.
+ The arrow captures both the direction and length of Victor's drive.
+ Vectors can be imagined in the same way.
+ The vector 
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -116,8 +119,22 @@ Saying that Victor drove 5 kilometers describes how far he drove.
 
 \end_inset
 
-by interpreting this vector as Victor's displacement or movement in what
- would be the horizontal and vertical directions on a map pointing due north.
+has a 5 as its first entry and a 0 as its second.
+ Thinking of these entries as 
+\begin_inset Formula $x$
+\end_inset
+
+- and 
+\begin_inset Formula $y$
+\end_inset
+
+- coordinates, the five represents 5 units right (eastward) and the zero
+ represents 0 units up (northward).
+ In this way, the vector represents both the length and direction of Victor's
+ drive, just like the arrow.
+ The vector and the arrow represent the same thing, blurring any distinction
+ between them.
+ 
 \begin_inset Foot
 status collapsed
 
@@ -153,13 +170,27 @@ literal "false"
 
 \begin_layout Standard
 \noindent
-The vector represents Victor's displacement or movement.
+The vector/arrow represents Victor's displacement or movement 5 kilometers
+ in the eastward direction.
 \end_layout
 
 \begin_layout Standard
-If Victor exited the highway at this point (using a road that does not appear
- on the map) and drove 3 kilometers southeast, the second leg of Victor's
- journey could be captured by the vector 
+Notice there is no origin on the map.
+ This is typical of drawing vectors.
+ They are not specified relative to an origin.
+ They only represent a change in location, or displacement, starting anywhere.
+ A vector represents the locations of two points relative to one another.
+ Exactly where those two points lie is not determined by the vector itself.
+ Further information is needed to locate the vector.
+ In the case of Victor's travel, I needed to know on what road and where
+ he was driving to create an accurate picture of his drive.
+\end_layout
+
+\begin_layout Standard
+After driving 5 kilometers east, Victor exited the highway and drove 3 kilometer
+s southeast (using a road that does not appear on the map).
+ When I heard this, I was able to capture this part of Victor's journey
+ by the vector
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -187,7 +218,10 @@ If Victor exited the highway at this point (using a road that does not appear
 
 \begin_layout Standard
 \noindent
-The vector is the hypotenuse of a right triangle with side lengths 
+And I knew exactly where to put it since it started just where the previous
+ leg left off.
+ Drawn as an arrow, ithe vector is the hypotenuse of a right triangle with
+ side lengths 
 \begin_inset Formula $\sqrt{\frac{9}{2}}$
 \end_inset
 
@@ -196,10 +230,13 @@ The vector is the hypotenuse of a right triangle with side lengths
 \end_inset
 
 .
+ It has the right length and it points southeast (and starts where the first
+ leg leaves off), so it accurately represents the second leg of Victor's
+ drive.
 \end_layout
 
 \begin_layout Standard
-Victor's total displacement or movement for the drive, as the crow flies,
+As the crow flies, Victor's total displacement or movement for the drive
  is represented by the sum of the vectors,
 \begin_inset Formula 
 \[
@@ -281,6 +318,34 @@ Since addition of vectors is commutative, it does not matter which vector
 
 \begin_layout Subsection*
 Geometric Interpretation of Linear Transformations
+\end_layout
+
+\begin_layout Standard
+Drawing vectors as arrows gives us a way to picture linear transformations.
+ We can draw any vector and its image to help understand the action of the
+ map geometrically.
+ For example, if every vector we draw has an image pointing in the same
+ direction but twice as long, that gives us a clear picture of how it transforms
+ vectors.
+ It doubles their lengths.
+ 
+\end_layout
+
+\begin_layout Standard
+Since vectors do not have an inherent starting location, we can always imagine
+ them starting anywhere.
+ In the case of picturing linear transformations, it is helpful to imagine
+ vectors rooted at the origin.
+ Much like ploting points in the plane, these vectors are marked off starting
+ at 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+.
+ Given this special use of the vector, there is little distinction between
+ the point at the head of an arrow and the arrow itself.
+ For this reason, it is just as common to imagine a vector as a point as
+ it is to imagine it as an arrow.
 \end_layout
 
 \begin_layout Standard
@@ -388,7 +453,7 @@ status open
 \end_inset
 
 .
- Geometrically these facts can be captured by the diagram
+ Geometrically these facts are captured by the diagram
 \end_layout
 
 \begin_layout Standard
@@ -454,7 +519,40 @@ status open
 \end_layout
 
 \begin_layout Standard
-Adding a picture
+\noindent
+where the vectors have been represented by arrows rooted at the origin.
+ They have also been color coded so the image of the brown vector is brown
+ and the image of the green vector is green.
+ From just these two sample vectors, it is hard to describe just what the
+ transformation does in general.
+ This is where it is helpful to interpret vectors as points.
+ If we color a bunch of points, transform each of them, one at a time, giving
+ their images the same color, we get a much clearer picture of the action
+ of the transformation.
+\end_layout
+
+\begin_layout Standard
+Consider again the transformation
+\begin_inset Formula 
+\[
+T(\mathbf{v})=\left[\begin{array}{cc}
+3 & 2\\
+1 & -2
+\end{array}\right]\mathbf{v}
+\]
+
+\end_inset
+
+but this time imagine the vectors it acts on and their images as points.
+ Coloring all the points in the square with opposite corners at 
+\begin_inset Formula $(-2,-2)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+ to manifest as a photo of a coffee mug
 \begin_inset Foot
 status collapsed
 
@@ -473,14 +571,14 @@ literal "false"
 
 \end_inset
 
-...
+ and coloring their images accordingly is summarized in the folowing diagram.
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename figures/theory-linear-vector-transformations-6.png
-	lyxscale 7
+	lyxscale 20
 	width 7.5cm
 
 \end_inset
@@ -530,12 +628,31 @@ status open
  
 \begin_inset Graphics
 	filename figures/theory-linear-vector-transformations-7.png
-	lyxscale 7
+	lyxscale 20
 	width 7.5cm
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The same brown and green vectors as before are superimposed on the picture
+ to help relate back to this interpretation.
+ The point at the end of the green arrow is sky blue and lands on the boundary
+ of the picture before transforming, so the point at the end of the green
+ arrow is sky blue and lands on the boundary of the picture after transforming,
+ too.
+ The point at the end of the brown arrow is sky blue and lands just next
+ to the handle of the coffee mug before transforming, so the point at the
+ end of the brown arrow is sky blue and lands just next to the handle of
+ the coffee mug after transforming, too.
+ In all, the transformed image is larger than the original, rotated, reflected,
+ and sheared.
+ These are the words we use to describe the action of the transformation.
+ It scales, rotates, reflects, and shears the plane and objects in it.
+ Actually, these are the only actions a linear transformation can take on
+ the plane, as we will see.
 \end_layout
 
 \begin_layout Subsection
