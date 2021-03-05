@@ -132,8 +132,8 @@ has a 5 as its first entry and a 0 as its second.
  represents 0 units up (northward).
  In this way, the vector represents both the length and direction of Victor's
  drive, just like the arrow.
- The vector and the arrow represent the same thing, blurring any distinction
- between them.
+ The vector and the arrow can be interpreted to represent the same thing,
+ blurring any distinction between them.
  
 \begin_inset Foot
 status collapsed
@@ -159,7 +159,7 @@ literal "false"
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename figures/theory-linear-vector-transformations.png
+	filename figures/theory-linear-vector-transformations-0.png
 	lyxscale 50
 	scale 60
 
@@ -170,7 +170,7 @@ literal "false"
 
 \begin_layout Standard
 \noindent
-The vector/arrow represents Victor's displacement or movement 5 kilometers
+The vector/arrow represents Victor's displacement, or movement, 5 kilometers
  in the eastward direction.
 \end_layout
 
@@ -220,7 +220,7 @@ s southeast (using a road that does not appear on the map).
 \noindent
 And I knew exactly where to put it since it started just where the previous
  leg left off.
- Drawn as an arrow, ithe vector is the hypotenuse of a right triangle with
+ Drawn as an arrow, the vector is the hypotenuse of a right triangle with
  side lengths 
 \begin_inset Formula $\sqrt{\frac{9}{2}}$
 \end_inset
@@ -336,7 +336,7 @@ Since vectors do not have an inherent starting location, we can always imagine
  them starting anywhere.
  In the case of picturing linear transformations, it is helpful to imagine
  vectors rooted at the origin.
- Much like ploting points in the plane, these vectors are marked off starting
+ Much like plotting points in the plane, these vectors are marked off starting
  at 
 \begin_inset Formula $(0,0)$
 \end_inset
@@ -344,8 +344,8 @@ Since vectors do not have an inherent starting location, we can always imagine
 .
  Given this special use of the vector, there is little distinction between
  the point at the head of an arrow and the arrow itself.
- For this reason, it is just as common to imagine a vector as a point as
- it is to imagine it as an arrow.
+ For this reason, it is just as common to imagine a vector as a point in
+ the plane as it is to imagine it as an arrow.
 \end_layout
 
 \begin_layout Standard
@@ -520,9 +520,18 @@ status open
 
 \begin_layout Standard
 \noindent
-where the vectors have been represented by arrows rooted at the origin.
- They have also been color coded so the image of the brown vector is brown
- and the image of the green vector is green.
+where the vectors have been represented by arrows rooted at the origin and
+ the 
+\begin_inset Formula $T$
+\end_inset
+
+ indicates that the change is due to the transformation 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ The vectors have also been color coded so the image of the brown vector
+ is brown and the image of the green vector is green.
  From just these two sample vectors, it is hard to describe just what the
  transformation does in general.
  This is where it is helpful to interpret vectors as points.
@@ -643,16 +652,1704 @@ The same brown and green vectors as before are superimposed on the picture
  of the picture before transforming, so the point at the end of the green
  arrow is sky blue and lands on the boundary of the picture after transforming,
  too.
+ A large portion of the green vector runs up the side of the coffee mug
+ both before and after transformation.
  The point at the end of the brown arrow is sky blue and lands just next
  to the handle of the coffee mug before transforming, so the point at the
  end of the brown arrow is sky blue and lands just next to the handle of
  the coffee mug after transforming, too.
- In all, the transformed image is larger than the original, rotated, reflected,
- and sheared.
+ In all, the transformed image is larger than the original, rotated, reflected
+ (the handle is on the left of the coffee mug in one picture and on the
+ right in the other), and sheared (the transformed picture covers a parallelogra
+m, not a square).
  These are the words we use to describe the action of the transformation.
- It scales, rotates, reflects, and shears the plane and objects in it.
- Actually, these are the only actions a linear transformation can take on
- the plane, as we will see.
+ It scales, rotates, reflects, and shears the plane, and objects in it.
+ Actually, these are the only invertible actions a linear transformation
+ can take on the plane, as we will see.
+\end_layout
+
+\begin_layout Subsection*
+The Matrix of a Linear Transformation
+\end_layout
+
+\begin_layout Standard
+Suppose a map 
+\begin_inset Formula $G:\mathbb{R}^{n}\times\mathbb{R}^{m}$
+\end_inset
+
+ is given by 
+\begin_inset Formula $G(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+ for some matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Then, by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:left-distributive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $G(\mathbf{u}+\mathbf{v})=M(\mathbf{u}+\mathbf{v})=M\mathbf{u}+M\mathbf{v}=G(\mathbf{u})+G(\mathbf{v})$
+\end_inset
+
+ and by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:ass-scalar-mult-2-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $G(c\mathbf{u})=M(c\mathbf{u})=c(M\mathbf{u})=cG(\mathbf{u})$
+\end_inset
+
+ for any vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and any scalar 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $G$
+\end_inset
+
+ is a linear transformation.
+\end_layout
+
+\begin_layout Standard
+Suppose a linear transformation 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is given by matrix multiplication by an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $T(\mathbf{v})=A\mathbf{v}$
+\end_inset
+
+.
+ Then it is easy to calculate its action on the vectors 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+0\\
+0\\
+\vdots\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+1\\
+0\\
+\vdots\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+0\\
+1\\
+\vdots\\
+0
+\end{array}\right],\ldots,\left[\begin{array}{c}
+0\\
+0\\
+0\\
+\vdots\\
+1
+\end{array}\right],
+\]
+
+\end_inset
+
+the columns of the 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ identity matrix.
+ Thinking of matrix multiplication of a vector as a linear combination of
+ the columns of the matrix, it is clear that
+\begin_inset Formula 
+\[
+A\left[\begin{array}{c}
+1\\
+0\\
+0\\
+\vdots\\
+0
+\end{array}\right]=A_{:,1},\ A\left[\begin{array}{c}
+0\\
+1\\
+0\\
+\vdots\\
+0
+\end{array}\right]=A_{:,2},\ A\left[\begin{array}{c}
+0\\
+0\\
+1\\
+\vdots\\
+0
+\end{array}\right]=A_{:,3},\ldots,A\left[\begin{array}{c}
+0\\
+0\\
+0\\
+\vdots\\
+1
+\end{array}\right]=A_{:,n}.
+\]
+
+\end_inset
+
+In short, 
+\begin_inset Formula $AI_{:,j}=A_{:,j}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ column of 
+\begin_inset Formula $A$
+\end_inset
+
+ is the image of the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ column of 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+On the other hand, suppose you know the images of the columns of 
+\begin_inset Formula $I$
+\end_inset
+
+ but are not given 
+\begin_inset Formula $T$
+\end_inset
+
+ as a matrix product.
+ In other words, all you know is 
+\begin_inset Formula 
+\[
+T(I_{:,1})=\mathbf{c}_{1},\ T(I_{:,2})=\mathbf{c}_{2},\ldots,T(I_{:,n})=\mathbf{c}_{n}
+\]
+
+\end_inset
+
+for some 
+\begin_inset Formula $m\times1$
+\end_inset
+
+ vectors 
+\begin_inset Formula $\mathbf{c}_{1},\mathbf{c}_{2},\ldots,\mathbf{c}_{n}$
+\end_inset
+
+.
+ It turns out this is enough information to determine 
+\begin_inset Formula $T$
+\end_inset
+
+, and 
+\begin_inset Formula $T$
+\end_inset
+
+ can be represented by matrix multiplication! Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]$
+\end_inset
+
+ be an arbitrary 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector.
+ Due to linearity,
+\begin_inset Formula 
+\begin{align*}
+T(\mathbf{v}) & =T\left(\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]\right)\\
+ & =T\left(\left[\begin{array}{c}
+v_{1}\\
+0\\
+\vdots\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+0\\
+v_{2}\\
+\vdots\\
+0
+\end{array}\right]+\cdots+\left[\begin{array}{c}
+0\\
+0\\
+\vdots\\
+v_{n}
+\end{array}\right]\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & =T\left(v_{1}\left[\begin{array}{c}
+1\\
+0\\
+\vdots\\
+0
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+0\\
+1\\
+\vdots\\
+0
+\end{array}\right]+\cdots+v_{n}\left[\begin{array}{c}
+0\\
+0\\
+\vdots\\
+1
+\end{array}\right]\right)\\
+ & =T\left(v_{1}I_{:,1}+v_{2}I_{:,2}+\cdots+v_{n}I_{:,n}\right)\\
+ & =T\left(v_{1}I_{:,1}\right)+T\left(v_{2}I_{:,2}\right)+\cdots+T\left(v_{n}I_{:,n}\right)\\
+ & =v_{1}T\left(I_{:,1}\right)+v_{2}T\left(I_{:,2}\right)+\cdots+v_{n}T\left(I_{:,n}\right)\\
+ & =v_{1}\mathbf{c}_{1}+v_{2}\mathbf{c}_{2}+\cdots+v_{n}\mathbf{c}_{n}\\
+ & =\left[\begin{array}{cccc}
+\mathbf{c}_{1} & \mathbf{c}_{2} & \cdots & \mathbf{c}_{n}\end{array}\right]\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+\mathbf{c}_{1} & \mathbf{c}_{2} & \cdots & \mathbf{c}_{n}\end{array}\right]\mathbf{v}.
+\end{align*}
+
+\end_inset
+
+In other words, to represent 
+\begin_inset Formula $T$
+\end_inset
+
+ as a matrix product, form the matrix with columns equal to the images of
+ the columns of 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What we learn from these calculations is that given any transformation 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+T\text{ is linear }\Leftrightarrow\ T(\mathbf{v})=M\mathbf{v}\ \text{where}\ M_{:j}=T(I_{:,j}),\,j=1,2,\ldots,n.
+\]
+
+\end_inset
+
+In words, a transformation from 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ is linear if and only if it can be represented by matrix multiplication
+ by a matrix whose columns are the images of the columns of the identity
+ matrix.
+\end_layout
+
+\begin_layout Standard
+This observaton can be applied immediately to write down the algebraic (matrix)
+ representation of transformations with which you may already be familiar.
+ For example, consider reflection about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis in the plane, call it 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+.
+ Geometrically, this transformation can be illustrated as in the following
+ diagram.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-8.png
+	lyxscale 20
+	width 7.5cm
+
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{5
+\backslash
+baselineskip}{
+\end_layout
+
+\end_inset
+
+
+\size larger
+
+\begin_inset Formula $\stackrel{F_{x}}{\longrightarrow}$
+\end_inset
+
+
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-9.png
+	lyxscale 20
+	width 7.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The image of 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ is 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ and the image of 
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ is 
+\begin_inset Formula $-I_{:,2}$
+\end_inset
+
+, so 
+\shape italic
+if
+\shape default
+ this is a linear transformation, 
+\begin_inset Formula 
+\[
+F_{x}(\mathbf{v})=\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]\mathbf{v}.
+\]
+
+\end_inset
+
+It is easy to verify that 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+ acts on the entire plane (not just the columns of 
+\begin_inset Formula $I$
+\end_inset
+
+) in the way expected.
+\begin_inset Formula 
+\[
+F_{x}(\mathbf{v})=\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]\mathbf{v}=\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]=\left[\begin{array}{c}
+v_{1}\\
+-v_{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+so the image of 
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]$
+\end_inset
+
+ is 
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+-v_{2}
+\end{array}\right]$
+\end_inset
+
+, the reflection of 
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]$
+\end_inset
+
+ about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis.
+ It must be that reflection about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis is a linear transformation.
+ Can you justify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:reflection-about-x-axis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Notice that 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+ is an elementary matrix (scale the second row by 
+\begin_inset Formula $-1$
+\end_inset
+
+).
+ Every elementary 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix takes one of the following five forms—swap, scale first row, scale
+ second row, replace first row, replace second row, respectively—for some
+ scalar 
+\begin_inset Formula $r$
+\end_inset
+
+ or 
+\begin_inset Formula $s\neq0$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right],\ \left[\begin{array}{cc}
+s & 0\\
+0 & 1
+\end{array}\right],\ \left[\begin{array}{cc}
+1 & 0\\
+0 & s
+\end{array}\right],\ \left[\begin{array}{cc}
+1 & r\\
+0 & 1
+\end{array}\right],\ \left[\begin{array}{cc}
+1 & 0\\
+r & 1
+\end{array}\right].
+\]
+
+\end_inset
+
+The following series of diagrams illustrates the types of transformations
+ attainable by multiplication by these elementary matrices.
+ Geometrically they are reflection, scaling, scaling with reflection, and
+ shearing.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0.75in">
+<column alignment="center" valignment="top" width="1.7in">
+<column alignment="left" valignment="top" width="3in">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+matrix 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image under 
+\begin_inset Formula $T(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space \enskip{}
+\end_inset
+
+Notes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 15pt
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2pt
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-10.png
+	lyxscale 15
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 2pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+reflection about the line 
+\begin_inset Formula $y=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ and 
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ swap places
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 15pt
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+s & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2pt
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-12.png
+	lyxscale 15
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -4pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+horizontal scale by factor 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+includes reflection about the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis when 
+\begin_inset Formula $s<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+expansion when 
+\begin_inset Formula $|s|>1$
+\end_inset
+
+; compression when 
+\begin_inset Formula $|s|<1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 15pt
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & s
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2pt
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-11.png
+	lyxscale 15
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -4pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+vertical scale by factor 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+includes reflection about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis when 
+\begin_inset Formula $s<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+expansion when 
+\begin_inset Formula $|s|>1$
+\end_inset
+
+; compression when 
+\begin_inset Formula $|s|<1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0.75in">
+<column alignment="center" valignment="top" width="1.7in">
+<column alignment="left" valignment="top" width="3in">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+matrix 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image under 
+\begin_inset Formula $T(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space \enskip{}
+\end_inset
+
+Notes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 15pt
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & r\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2pt
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-13.png
+	lyxscale 15
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 2pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+horizontal shear by factor 
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ is uneffected
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 15pt
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+r & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2pt
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-14.png
+	lyxscale 15
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 2pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+vertical shear by factor 
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ is uneffected
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we have seen previously, any invertible matrix can be written as a product
+ of elementary matrices.
+ If there were some connection between matrix multiplication and linear
+ transformations, we would be on our way to a comprehensive characterization
+ of linear transformations from 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $A(B\mathbf{v})=(AB)\mathbf{v}$
+\end_inset
+
+.
+ In terms of linear transformations, the left side, 
+\begin_inset Formula $A(B\mathbf{v})$
+\end_inset
+
+, represents applying the transformation whose associated matrix is 
+\begin_inset Formula $B$
+\end_inset
+
+ first and then applying the transformation whose associated matrix is 
+\begin_inset Formula $A$
+\end_inset
+
+ to the result.
+ In other words, 
+\begin_inset Formula $A(B\mathbf{v})$
+\end_inset
+
+ represents composing the two transformations whose associated matrices
+ are 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ The right side, 
+\begin_inset Formula $(AB)\mathbf{v}$
+\end_inset
+
+, represents applying the transformation whose associated matrix is the
+ product 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+ It must be that matrix multiplication corresponds to function composition!
+ To facilitate the following discussion, which puts these words into symbols
+ and expands from there, for any matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ we adopt the notation 
+\begin_inset Formula $T_{M}$
+\end_inset
+
+ for the linear transformation 
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{M}(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Letting 
+\begin_inset Formula $T_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ be arbitrary linear transformations from 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+, the following calculation encapsulates the idea that matrix multiplication
+ corresponds to function composition.
+\begin_inset Formula 
+\begin{align*}
+(T_{A}\circ T_{B})(\mathbf{v}) & =T_{A}(T_{B}(\mathbf{v}))\\
+ & =T_{A}(B\mathbf{v})\\
+ & =A(B\mathbf{v})\\
+ & =(AB)\mathbf{v}\\
+ & =T_{AB}(\mathbf{v}).
+\end{align*}
+
+\end_inset
+
+This calculation has two important consequences.
+ First, if 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, then 
+\begin_inset Formula $T_{M}\circ T_{M^{-1}}=T_{M^{-1}}\circ T_{M}=T_{I}$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $\left(T_{M}\circ T_{M^{-1}}\right)(\mathbf{v})=\left(T_{M^{-1}}\circ T_{M}\right)(\mathbf{v})=T_{I}(\mathbf{v})=I\mathbf{v}=\mathbf{v}$
+\end_inset
+
+, so 
+\begin_inset Formula $T_{M}$
+\end_inset
+
+ is invertible and 
+\begin_inset Formula $(T_{M})^{-1}=T_{M^{-1}}$
+\end_inset
+
+.
+ Second, if 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible and we write 
+\begin_inset Formula $M$
+\end_inset
+
+ as the product of elementary matrices, 
+\begin_inset Formula $E_{1}E_{2}\cdots E_{p}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+T_{M}(\mathbf{v}) & =M\mathbf{v}\\
+ & =(E_{1}E_{2}\cdots E_{p})\mathbf{v}\\
+ & =\left(T_{E_{1}}\circ T_{E_{2}}\circ\cdots\circ T_{E_{p}}\right)(\mathbf{v}),
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $T_{M}$
+\end_inset
+
+ is a composition of linear transformations whose associated matrices are
+ elementary matrices.
+\end_layout
+
+\begin_layout Standard
+Finally, because the action of transformations defined by 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ elementary matrices include only reflection, scaling, and shearing, these
+ actions and compositions of them are the only actions of invertible linear
+ transformations on 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ But what about 
+\begin_inset Formula $T_{M}$
+\end_inset
+
+ where 
+\begin_inset Formula $M$
+\end_inset
+
+ is noninvertible? Noninvertible matrices have linearly dependent columns
+ and linearly dependent rows.
+ In the case of 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices that means the rows are multiples of one another or one of the
+ rows contains two zeros.
+ Likewise, either its columns are multiples of one another or one of the
+ columns contains two zeros.
+ In any case, it has the form
+\begin_inset Formula 
+\[
+N=\left[\begin{array}{cc}
+ka & \ell a\\
+kb & \ell b
+\end{array}\right]
+\]
+
+\end_inset
+
+for some scalars 
+\begin_inset Formula $a,b,k,\ell$
+\end_inset
+
+.
+ Can you verify this form covers all four cases? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:four-cases"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ If 
+\begin_inset Formula $k\neq0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+N=\left[\begin{array}{cc}
+ka & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+kb & 1
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]\left[\begin{array}{cc}
+1 & \frac{\ell}{k}\\
+0 & 1
+\end{array}\right]=\left[\begin{array}{cc}
+ka & \ell a\\
+kb & \ell b
+\end{array}\right]
+\]
+
+\end_inset
+
+and if 
+\begin_inset Formula $k=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+N=\left[\begin{array}{cc}
+1 & 0\\
+0 & \ell b
+\end{array}\right]\left[\begin{array}{cc}
+1 & \ell a\\
+0 & 1
+\end{array}\right]\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]=\left[\begin{array}{cc}
+0 & \ell a\\
+0 & \ell b
+\end{array}\right].
+\]
+
+\end_inset
+
+Either way, 
+\begin_inset Formula $N$
+\end_inset
+
+ can be written as the product of elementary matrices and either
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]\text{ or }\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right].
+\]
+
+\end_inset
+
+These matrices are called projection matrices.
+ Their action is to squash (or project) the entire plane onto the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis or the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis, respectively, as shown below.
+ The brown line segment indicates the part of the axis in the image that
+ is not covered by the vector.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0.75in">
+<column alignment="center" valignment="top" width="1.7in">
+<column alignment="left" valignment="top" width="3in">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+matrix 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image under 
+\begin_inset Formula $T(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space \enskip{}
+\end_inset
+
+Notes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 15pt
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2pt
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-15.png
+	lyxscale 15
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 2pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+projection onto the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ is uneffected
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ is squashed to the origin
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 15pt
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2pt
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-16.png
+	lyxscale 15
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 2pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+projection onto the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ is uneffected
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ is squashed to the origin
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These projections complete the characterization of linear transformations
+ from 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, also called linear operators on 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Because every 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix can be written as a product of the matrices 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right],\ \left[\begin{array}{cc}
+s & 0\\
+0 & 1
+\end{array}\right],\ \left[\begin{array}{cc}
+1 & 0\\
+0 & s
+\end{array}\right],\ \left[\begin{array}{cc}
+1 & r\\
+0 & 1
+\end{array}\right],\ \left[\begin{array}{cc}
+1 & 0\\
+r & 1
+\end{array}\right],\ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\ \left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+and multiplication by these matrices represents reflection, scaling, shearing,
+ and/or projection, we have the following theorem.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Characterization-of-Operators-on-R2"
+
+\end_inset
+
+[Characterization of Linear Transformations from 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+]
+\series default
+\shape default
+ A transformation 
+\begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+ is linear if and only if it is a composition of some sequence of reflections,
+ scalings, shearings, and projections.
 \end_layout
 
 \begin_layout Subsection
@@ -660,7 +2357,207 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-r
+geometric
+\begin_inset space ~
+\end_inset
+
+interpretation
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+vectors vectors in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ are often thought of as points or as displacements represented by arrows.
+\end_layout
+
+\begin_layout Description
+geometric
+\begin_inset space ~
+\end_inset
+
+interpretation
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+vector
+\begin_inset space ~
+\end_inset
+
+sum the sum of two vectors is represented geometrically by a diagonal of
+ the parallelogram determined by the two vectors.
+\end_layout
+
+\begin_layout Description
+matrices
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+transformations
+\begin_inset space ~
+\end_inset
+
+from
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+to
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ a transformation 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is linear if and only if 
+\begin_inset Formula $T(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+ where 
+\begin_inset Formula $M_{:j}=T(I_{:,j}),\,j=1,2,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+elementary
+\begin_inset space ~
+\end_inset
+
+matrices
+\begin_inset space ~
+\end_inset
+
+as
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+transformations
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+plane the action of a swap matrix is reflection about the line 
+\begin_inset Formula $y=x$
+\end_inset
+
+; the action of a scale matrix is scaling and possibly reflection; the action
+ of a replacement matrix is shearing.
+\end_layout
+
+\begin_layout Description
+noninvertible
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+transformations
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+plane a linear transformation of the plane, 
+\begin_inset Formula $T_{M}$
+\end_inset
+
+, is noninvertible if and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ is the product of a projection matrix with elementary matrices.
+\end_layout
+
+\begin_layout Description
+geometric
+\begin_inset space ~
+\end_inset
+
+characterization
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+transformations
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+plane see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Characterization-of-Operators-on-R2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -685,7 +2582,163 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-I
+Show that rotation in the plane is linear and write it algebraically as
+ matrix multiplication by the following steps.
+ Let 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ be rotation through angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ counterclockwise about the origin.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Argue in words that 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ is a linear transformation.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation"
+
+\end_inset
+
+Find the images of 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ and 
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ under 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-1"
+
+\end_inset
+
+Write 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ as a matrix product using the results of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find a sequence of elementary matrices whose product is the matrix derived
+ in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Hint: rotation is a composition of shear transformations.
+\end_layout
+
+\begin_layout Enumerate
+Show that reflection about the origin of the plane, which maps 
+\begin_inset Formula $\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+-x\\
+-y
+\end{array}\right]$
+\end_inset
+
+, is linear by finding a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]=\left[\begin{array}{c}
+-x\\
+-y
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that reflection about the origin of the plane, 
+\begin_inset Formula $F_{xy}$
+\end_inset
+
+, which maps 
+\begin_inset Formula $\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+-x\\
+-y
+\end{array}\right]$
+\end_inset
+
+, is linear by showing that 
+\begin_inset Formula $F_{xy}(\mathbf{u}+\mathbf{v})=F_{xy}(\mathbf{u})+F_{xy}(\mathbf{v})$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{xy}(c\mathbf{u})=cF_{xy}(\mathbf{u})$
+\end_inset
+
+ for any vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+and scalar 
+\begin_inset Formula $c$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -705,8 +2758,211 @@ finishexercises
 \end_layout
 
 \begin_layout Subsection
-A
+Answers
 \end_layout
 
+\begin_layout Description
+reflection
+\begin_inset space ~
+\end_inset
+
+about
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+-axis 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:reflection-about-x-axis"
+
+\end_inset
+
+Using 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+ as the name for reflection about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis, note that 
+\begin_inset Formula $F_{x}\left(\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]+\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right)=F_{x}\left(\left[\begin{array}{c}
+u_{1}+v_{1}\\
+u_{2}+v_{2}
+\end{array}\right]\right)=\left[\begin{array}{c}
+u_{1}+v_{1}\\
+-(u_{2}+v_{2})
+\end{array}\right]=\left[\begin{array}{c}
+u_{1}+v_{1}\\
+-u_{2}-v_{2}
+\end{array}\right]=\left[\begin{array}{c}
+u_{1}\\
+-u_{2}
+\end{array}\right]+\left[\begin{array}{c}
+v_{1}\\
+-v_{2}
+\end{array}\right]=F_{x}\left(\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\right)+F_{x}\left(\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{x}\left(c\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\right)=F_{x}\left(\left[\begin{array}{c}
+cu_{1}\\
+cu_{2}
+\end{array}\right]\right)=\left[\begin{array}{c}
+cu_{1}\\
+-cu_{2}
+\end{array}\right]=c\left[\begin{array}{c}
+u_{1}\\
+-u_{2}
+\end{array}\right]=cF_{x}\left(\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\right)$
+\end_inset
+
+.
+ This shows that 
+\begin_inset Formula $F_{x}(\mathbf{u}+\mathbf{v})=F_{x}(\mathbf{u})+F_{x}(\mathbf{v})$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{x}(c\mathbf{u})=cF_{x}(\mathbf{u})$
+\end_inset
+
+ for any vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and scalar 
+\begin_inset Formula $c$
+\end_inset
+
+, so 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+ is linear by definition.
+\end_layout
+
+\begin_layout Description
+four
+\begin_inset space ~
+\end_inset
+
+cases 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:four-cases"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+rows are multiples of one another: if 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are nonzero, then 
+\begin_inset Formula $N_{1,:}=\frac{a}{b}N_{2,:}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{b}{a}N_{1,:}=N_{2,:}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+one of the rows contains two zeros: 
+\begin_inset Formula $a=0$
+\end_inset
+
+ or 
+\begin_inset Formula $b=0$
+\end_inset
+
+ while 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $\ell$
+\end_inset
+
+ are arbitrary
+\end_layout
+
+\begin_layout Itemize
+columns are multiples of one another: if 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $\ell$
+\end_inset
+
+ are nonzero, then 
+\begin_inset Formula $N_{:,1}=\frac{k}{\ell}N_{:,2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\ell}{k}N_{:,1}=N_{:,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+one of the columns contains two zeros: 
+\begin_inset Formula $k=0$
+\end_inset
+
+ or 
+\begin_inset Formula $\ell=0$
+\end_inset
+
+ while 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are arbitrary
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
