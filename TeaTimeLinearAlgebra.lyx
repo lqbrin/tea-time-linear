@@ -671,6 +671,16 @@ filename "theory-linear-vector-transformation.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-det-eig-area.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 

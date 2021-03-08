@@ -994,18 +994,52 @@ In other words, to represent
 \end_layout
 
 \begin_layout Standard
-What we learn from these calculations is that given any transformation 
+These calculations justify the folowing theorem.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Standard-Matrix"
+
+\end_inset
+
+[The Standard Matrix of a Linear Transformation]
+\series default
+\shape default
+ Given a transformation 
 \begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
 \end_inset
 
 , 
-\begin_inset Formula 
-\[
-T\text{ is linear }\Leftrightarrow\ T(\mathbf{v})=M\mathbf{v}\ \text{where}\ M_{:j}=T(I_{:,j}),\,j=1,2,\ldots,n.
-\]
-
+\begin_inset Formula $T$
 \end_inset
 
+ is linear if and only if 
+\begin_inset Formula $T(\mathbf{v})=M\mathbf{v}$
+\end_inset
+
+ where 
+\begin_inset Formula $M_{:j}=T(I_{:,j}),\,j=1,2,\ldots,n$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ is called the standard matrix of 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
 In words, a transformation from 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
@@ -2560,6 +2594,24 @@ noprefix "false"
 .
 \end_layout
 
+\begin_layout Description
+standard
+\begin_inset space ~
+\end_inset
+
+matrix see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Standard-Matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \noindent
 \begin_inset ERT
@@ -2582,7 +2634,28 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Show that rotation in the plane is linear and write it algebraically as
+Prove that the composition of linear transformations is linear.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Does this belong here?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-2"
+
+\end_inset
+
+Argue that rotation in the plane is linear and write it algebraically as
  matrix multiplication by the following steps.
  Let 
 \begin_inset Formula $R_{\theta}$
@@ -2602,6 +2675,11 @@ Argue in words that
 \end_inset
 
  is a linear transformation.
+ Your argument need not be a proof, just enough reason to believe 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ is (likely) linear.
 \end_layout
 
 \begin_layout Enumerate
@@ -2652,6 +2730,80 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the transformation 
+\begin_inset Formula $S:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $S\left(\left[\begin{array}{cc}
+x & y\end{array}\right]^{T}\right)=\left[\begin{array}{cc}
+x^{2} & y^{2}\end{array}\right]^{T}$
+\end_inset
+
+and repeat parts (b) and (c) of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ on 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Use this calculation to explain why 
+\begin_inset Formula $S$
+\end_inset
+
+ is not linear.
+\end_layout
+
+\begin_layout Enumerate
+Prove that the matrix derived in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ affects rotation through angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ about the origin on an arbitrary vector 
+\begin_inset Formula $\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+.
+ This proves that rotation is properly represented by matrix multiplication,
+ making it a linear transformation by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Standard-Matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
 Find a sequence of elementary matrices whose product is the matrix derived
  in exercise 
 \begin_inset CommandInset ref
@@ -2664,7 +2816,27 @@ noprefix "false"
 \end_inset
 
 .
- Hint: rotation is a composition of shear transformations.
+ Hint: try a product of the form
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+c & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+s & 1
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+0 & n
+\end{array}\right]\left[\begin{array}{cc}
+1 & t\\
+0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2700,25 +2872,21 @@ y
 \end_layout
 
 \begin_layout Enumerate
-Show that reflection about the origin of the plane, 
-\begin_inset Formula $F_{xy}$
+Show that 
+\begin_inset Formula $F_{xy}:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
 
-, which maps 
-\begin_inset Formula $\left[\begin{array}{c}
+, 
+\begin_inset Formula $F_{xy}\left(\left[\begin{array}{c}
 x\\
 y
-\end{array}\right]$
-\end_inset
-
- to 
-\begin_inset Formula $\left[\begin{array}{c}
+\end{array}\right]\right)=\left[\begin{array}{c}
 -x\\
 -y
 \end{array}\right]$
 \end_inset
 
-, is linear by showing that 
+ (reflection about the origin of the plane) is linear by showing that 
 \begin_inset Formula $F_{xy}(\mathbf{u}+\mathbf{v})=F_{xy}(\mathbf{u})+F_{xy}(\mathbf{v})$
 \end_inset
 
@@ -2734,7 +2902,7 @@ y
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
-and scalar 
+ and scalar 
 \begin_inset Formula $c$
 \end_inset
 

@@ -1,0 +1,680 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Determinants, Eigenvalues, and Area
+\end_layout
+
+\begin_layout Standard
+Intuitively, we might think of area as the amount of paint needed in painting
+ a particular shape.
+ The more paint needed, the bigger the shape (the more area it covers),
+ and the bigger the shape (the more area it covers), the more paint needed.
+ To have some sense of what is meant by the area of an object, this intuition
+ is good enough.
+ Larger shapes have larger area.
+ Smaler shapes have smaller area, and the area of a shape is some measure
+ of this size.
+\end_layout
+
+\begin_layout Standard
+Calculating the area of a shape (assigning numbers to areas) is another
+ story.
+ We certainly are not going to require that to find the area of an object
+ it needs to be painted and the amount of paint used measured.
+ What paint should be used, by whom, and what instrument should do the measuring
+? This proces would be so imprecise it would lead to a single shape having
+ many areas (depending on the paint, the painter, and the measuring device),
+ a rather undesirable situation.
+ The area of a shape should be uniquely determined.
+ A single shape has but a single size, and so it must have but a single
+ area.
+\end_layout
+
+\begin_layout Standard
+What's all the fuss? We learned a bunch of area formulas in grammar school.
+ The area of a rectangle is its length times width.
+ The area of a triangle is one half its base times height.
+ The area of a circle is 
+\begin_inset Formula $\pi$
+\end_inset
+
+ times the square of its radius.
+ Trapezoids, parallelograms, regular polygons, and unions of such shapes
+ have calculable areas.
+ Doesn't that pretty much cover it? As you might have imagined by now, the
+ answer is no.
+ For a simple example, take the nonempty overlap between a square and circle
+ where neither is the circle contained within the square nor is the square
+ contained within the circle.
+ See figure 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:area-circle-square-overlap"
+
+\end_inset
+
+What is the area of the overlapping section?
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/theory-det-eig-area-01.png
+	lyxscale 20
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:area-circle-square-overlap"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Calculus provides an answer to this question and hints at the complexity
+ of the general question.
+ By slicing the shape into smaller and smaller approximating rectangles
+ and adding up the areas of those rectangles, the area can be approximated
+ more and more accurately.
+ The limit of these areas as the widths of the approximating rectangles
+ aproaches zero is the area of the overlap.
+ If you've taken calculus, that probably reminds you of integration, and
+ it should! If you have not taken calculus, that probably sounds rather
+ confusing and complicated, and it should! That is really the point.
+ It is not an easy matter to calculate area, even of shapes that are easy
+ to draw.
+\end_layout
+
+\begin_layout Standard
+To stretch the point just a bit further, consider the shapes in figure 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:rep-tile-areas"
+
+\end_inset
+
+What are the areas of these shapes?
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-det-eig-area-02.png
+	lyxscale 25
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/theory-det-eig-area-03.png
+	lyxscale 25
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:rep-tile-areas"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The figure on the left is the snail of Solomon Golomb
+\begin_inset CommandInset citation
+LatexCommand cite
+key "golomb"
+literal "false"
+
+\end_inset
+
+ and features an infinitely spiraling appendage.
+ The figure on the right is often referred to as a twin dragon as it is
+ the union of a pair of dragon curves.
+ Neither of these figures can be drawn with perfect precision since each
+ has infinitely small detail.
+ The twin dragon is an example of a self-similar fractal with nonzero area.
+ Its boundary (perimeter) is infinitely long and infinitely intricate.
+ The more one magnifies the boundary, the more detail is revealed.
+ While the snail can be formed by a union of infinitely many nonoverlapping
+ triangles in a straightforward way, making its area calculable, the twin
+ dragon cannot.
+ Even applying calculus to the problem of finding the area of the twin dragon
+ is not a straightforward matter.
+ Does it even have a calculable area? What does having a calculable area
+ mean? Are there sets whose areas are not calculable? These questions can
+ be followed deep into measure theory, a branch of analysis far outside
+ the reaches of this textbook.
+\end_layout
+
+\begin_layout Standard
+With the very definition of area up in the air,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{A Definition of Area}
+\end_layout
+
+\end_inset
+
+The area of a bounded region of the plane, a shape 
+\begin_inset Formula $S$
+\end_inset
+
+, can be defined as follows.
+ Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be a polygonal region containing 
+\begin_inset Formula $S$
+\end_inset
+
+, and let 
+\begin_inset Formula $\mathcal{P}_{R}$
+\end_inset
+
+ be a primitive partition of 
+\begin_inset Formula $R$
+\end_inset
+
+ (a finite set of parallelograms and triangles whose interiors do not overlap
+ and whose union is 
+\begin_inset Formula $R$
+\end_inset
+
+).
+ Define the norm of a partition, denoted 
+\begin_inset Formula $||\mathcal{P}_{R}||$
+\end_inset
+
+, as the maximum of the areas of the primitives in 
+\begin_inset Formula $\mathcal{P}_{R}$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\text{area}(S)=\lim_{||\mathcal{P}_{R}||\to0}\sum_{\substack{p\in\mathcal{P}_{R}\\
+p\subseteq S
+}
+}\text{area}(p)
+\]
+
+\end_inset
+
+whenever such limit exists.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+it hardly makes practical sense to set out to prove the ways linear transformati
+ons affect the areas of general shapes.
+ However, knowing that results on basic shapes generalize to other shapes
+ can be very useful.
+\end_layout
+
+\begin_layout Subsection*
+Areas and determinants
+\end_layout
+
+\begin_layout Standard
+In general, if 
+\begin_inset Formula $T:\mathbb{R}^{m}\to\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+, then 
+\begin_inset Formula $T(S)=\{T(s):s\in S\}$
+\end_inset
+
+.
+ The image of a set 
+\begin_inset Formula $S$
+\end_inset
+
+ is the set of images of all the points in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ To understand how the linear transformation 
+\begin_inset Formula $T_{A}:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{A}(\mathbf{v})=A\mathbf{v}$
+\end_inset
+
+ affects areas, it is convenient to write 
+\begin_inset Formula $A$
+\end_inset
+
+ is a product of elementary matrices, 
+\begin_inset Formula $A=E_{p}\cdots E_{2}E_{1}$
+\end_inset
+
+, as we have done before, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: reference back to where this has been done.
+\end_layout
+
+\end_inset
+
+ assuming 
+\begin_inset Formula $A$
+\end_inset
+
+ is invertible.
+ Since 
+\begin_inset Formula $T_{A}(S)=(T_{E_{p}}\circ\cdots\circ T_{E_{2}}\circ T_{E_{1}})(S)$
+\end_inset
+
+, if we can understand how linear transformations associated with elementary
+ matrices affect area, we have a chance of understanding how general linear
+ transformations affect area.
+ If 
+\begin_inset Formula $E$
+\end_inset
+
+ is a row swap matrix, then 
+\begin_inset Formula $T_{E}$
+\end_inset
+
+ is a reflection about the line 
+\begin_inset Formula $y=x$
+\end_inset
+
+, so in this case 
+\begin_inset Formula $\text{area}(T_{E}(S))=\text{area}(S)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $E$
+\end_inset
+
+ is a row replace matrix, then 
+\begin_inset Formula $T_{E}$
+\end_inset
+
+ is a shear transformation, and it is a known result of calculus that shear
+ transformations do not affect area, so again 
+\begin_inset Formula $\text{area}(T_{E}(S))=\text{area}(S)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $E$
+\end_inset
+
+ is a row scale matrix, then 
+\begin_inset Formula $T_{E}$
+\end_inset
+
+ scales shapes either horizontally or vertically—not both!—by a factor of
+ 
+\begin_inset Formula $s$
+\end_inset
+
+, so 
+\begin_inset Formula $\text{area}(T_{E}(S))=|s|\cdot\text{area}(S)$
+\end_inset
+
+.
+ In every case, 
+\begin_inset Formula $\text{area}(T_{E}(S))=|\det E|\cdot\text{area}(S)$
+\end_inset
+
+.
+ Remember, the determinant of a row swap matrix is 
+\begin_inset Formula $-1$
+\end_inset
+
+, the determinant of a row replace matrix is 
+\begin_inset Formula $1$
+\end_inset
+
+ and the determinant of a row scale matrix with sacle factor 
+\begin_inset Formula $s$
+\end_inset
+
+ is 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\begin{align*}
+\text{area}\left(T_{A}(S)\right) & =\text{area}\left((T_{E_{p}}\circ\cdots\circ T_{E_{2}}\circ T_{E_{1}})(S)\right)\\
+ & =\text{area}\left(T_{E_{p}}\left(\cdots\left(T_{E_{2}}\left(T_{E_{1}}(S)\right)\right)\cdots\right)\right)\\
+ & =|\det E_{p}|\cdots|\det E_{2}|\cdot|\det E_{1}|\cdot\text{area}(S)\\
+ & =|\det A|\cdot\text{area}(S).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ is noninvertible, then one of the columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ is a multiple of the other, so any linear combination of the columns is
+ also a multiple of that column.
+ Therefore, the image of any vector, which is a linear combination of the
+ columns of 
+\begin_inset Formula $A$
+\end_inset
+
+, is a multiple of that column.
+ Thus the image of every vector lies on the line determined by that column,
+ giving the image of any shape area zero.
+ Of course, 
+\begin_inset Formula $|\det A|=0$
+\end_inset
+
+, so again we have 
+\begin_inset Formula $\text{area}(T_{A}(S))=|\det A|\cdot\text{area}(S)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Areas and eigenvalues
+\end_layout
+
+\begin_layout Standard
+Show diagram of parallelogram determined by eigenvectors under linear transforma
+tion to argue 
+\begin_inset Formula $\text{area}(T_{A}(S))=|\lambda_{1}\lambda_{2}|\cdot\text{area}(S)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Volumes 
+\end_layout
+
+\begin_layout Standard
+Everything extends to 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+g
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area"
+
+\end_inset
+
+A
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+r
+\end_layout
+
+\end_body
+\end_document
