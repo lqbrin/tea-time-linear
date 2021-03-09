@@ -90,6 +90,12 @@ enumitem
 \begin_body
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Linear-Transformations-on-Vectors"
+
+\end_inset
+
 Linear Transformations on Vectors
 \end_layout
 

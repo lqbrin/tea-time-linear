@@ -90,37 +90,42 @@ enumitem
 \begin_body
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Determinants-Eigenvalues-Area"
+
+\end_inset
+
 Determinants, Eigenvalues, and Area
 \end_layout
 
 \begin_layout Standard
 Intuitively, we might think of area as the amount of paint needed in painting
  a particular shape.
- The more paint needed, the bigger the shape (the more area it covers),
- and the bigger the shape (the more area it covers), the more paint needed.
+ The more paint needed, the larger its area, and the larger its area, the
+ more paint needed.
  To have some sense of what is meant by the area of an object, this intuition
  is good enough.
- Larger shapes have larger area.
- Smaler shapes have smaller area, and the area of a shape is some measure
- of this size.
+ Larger shapes have larger area while smaller shapes have smaller area,
+ and the area of a shape is some measure of this size.
 \end_layout
 
 \begin_layout Standard
-Calculating the area of a shape (assigning numbers to areas) is another
+Calculating the areas of a shapes (assigning numbers to areas) is another
  story.
  We certainly are not going to require that to find the area of an object
  it needs to be painted and the amount of paint used measured.
  What paint should be used, by whom, and what instrument should do the measuring
-? This proces would be so imprecise it would lead to a single shape having
+? This process would be so imprecise it would lead to a single shape having
  many areas (depending on the paint, the painter, and the measuring device),
  a rather undesirable situation.
  The area of a shape should be uniquely determined.
  A single shape has but a single size, and so it must have but a single
- area.
+ measure of its size.
 \end_layout
 
 \begin_layout Standard
-What's all the fuss? We learned a bunch of area formulas in grammar school.
+A number of area formulas are presented in grammar school.
  The area of a rectangle is its length times width.
  The area of a triangle is one half its base times height.
  The area of a circle is 
@@ -132,18 +137,14 @@ What's all the fuss? We learned a bunch of area formulas in grammar school.
  have calculable areas.
  Doesn't that pretty much cover it? As you might have imagined by now, the
  answer is no.
- For a simple example, take the nonempty overlap between a square and circle
- where neither is the circle contained within the square nor is the square
- contained within the circle.
+ For a simple example, take an arbitrary nonempty overlap between a square
+ and circle where neither is the circle contained within the square nor
+ is the square contained within the circle.
  See figure 
 \begin_inset Float figure
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -155,7 +156,7 @@ name "fig:area-circle-square-overlap"
 
 \end_inset
 
-What is the area of the overlapping section?
+What is the area of the overlapping region?
 \end_layout
 
 \end_inset
@@ -196,7 +197,7 @@ noprefix "false"
 \end_inset
 
 .
- Calculus provides an answer to this question and hints at the complexity
+ Calculus provides a method for calculating its area and hints at the complexity
  of the general question.
  By slicing the shape into smaller and smaller approximating rectangles
  and adding up the areas of those rectangles, the area can be approximated
@@ -301,8 +302,8 @@ literal "false"
 \end_inset
 
  and features an infinitely spiraling appendage.
- The figure on the right is often referred to as a twin dragon as it is
- the union of a pair of dragon curves.
+ The figure on the right is referred to as a twin dragon as it is the union
+ of a pair of dragon curves.
  Neither of these figures can be drawn with perfect precision since each
  has infinitely small detail.
  The twin dragon is an example of a self-similar fractal with nonzero area.
@@ -398,10 +399,10 @@ end{digression}
 
 \begin_layout Standard
 \noindent
-it hardly makes practical sense to set out to prove the ways linear transformati
-ons affect the areas of general shapes.
- However, knowing that results on basic shapes generalize to other shapes
- can be very useful.
+it hardly makes practical sense to expect to prove the ways linear transformatio
+ns affect the areas of general shapes.
+ The following discussion is inherently incomplete this way.
+ Certain claims regarding area will necessarily remain unproven.
 \end_layout
 
 \begin_layout Subsection*
@@ -409,33 +410,55 @@ Areas and determinants
 \end_layout
 
 \begin_layout Standard
-In general, if 
-\begin_inset Formula $T:\mathbb{R}^{m}\to\mathbb{R}^{n}$
+In general, the image of a set 
+\begin_inset Formula $S$
 \end_inset
 
- and 
+ is defined as the set of images of all the points in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ That is, if 
 \begin_inset Formula $S$
 \end_inset
 
  is a subset of 
-\begin_inset Formula $\mathbb{R}^{m}$
+\begin_inset Formula $A$
 \end_inset
 
-, then 
+ and 
+\begin_inset Formula $T:A\to B$
+\end_inset
+
+, then the image of 
+\begin_inset Formula $S$
+\end_inset
+
+ under 
+\begin_inset Formula $T$
+\end_inset
+
+ is defined by 
 \begin_inset Formula $T(S)=\{T(s):s\in S\}$
 \end_inset
 
 .
- The image of a set 
-\begin_inset Formula $S$
+ This definition typical in all of mathematics, not just linear algebra,
+ and applies no matter the sets 
+\begin_inset Formula $A$
 \end_inset
 
- is the set of images of all the points in 
-\begin_inset Formula $S$
+ and 
+\begin_inset Formula $B$
 \end_inset
 
 .
- To understand how the linear transformation 
+ 
+\end_layout
+
+\begin_layout Standard
+To understand how the linear transformation 
 \begin_inset Formula $T_{A}:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
 
@@ -451,21 +474,21 @@ In general, if
 \begin_inset Formula $A=E_{p}\cdots E_{2}E_{1}$
 \end_inset
 
-, as we have done before, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: reference back to where this has been done.
-\end_layout
-
-\end_inset
-
- assuming 
+, as we have done before assuming 
 \begin_inset Formula $A$
 \end_inset
 
- is invertible.
+ is invertible (page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:M-as-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  Since 
 \begin_inset Formula $T_{A}(S)=(T_{E_{p}}\circ\cdots\circ T_{E_{2}}\circ T_{E_{1}})(S)$
 \end_inset
@@ -490,6 +513,7 @@ TODO: reference back to where this has been done.
 \end_inset
 
 .
+ Reflections do not change areas.
  If 
 \begin_inset Formula $E$
 \end_inset
@@ -535,7 +559,7 @@ TODO: reference back to where this has been done.
 \begin_inset Formula $1$
 \end_inset
 
- and the determinant of a row scale matrix with sacle factor 
+ and the determinant of a row scale matrix with scale factor 
 \begin_inset Formula $s$
 \end_inset
 
@@ -577,6 +601,7 @@ If
 , is a multiple of that column.
  Thus the image of every vector lies on the line determined by that column,
  giving the image of any shape area zero.
+ The entire image is contained within a line.
  Of course, 
 \begin_inset Formula $|\det A|=0$
 \end_inset
@@ -593,24 +618,879 @@ Areas and eigenvalues
 \end_layout
 
 \begin_layout Standard
-Show diagram of parallelogram determined by eigenvectors under linear transforma
-tion to argue 
-\begin_inset Formula $\text{area}(T_{A}(S))=|\lambda_{1}\lambda_{2}|\cdot\text{area}(S)$
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix with linearly independent eigenpairs 
+\begin_inset Formula $\lambda_{1},\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2},\mathbf{v}_{2}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $T_{A}(\mathbf{v}_{1})=\lambda_{1}\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{A}(\mathbf{v}_{2})=\lambda_{2}\mathbf{v}_{2}$
+\end_inset
+
+.
+ In fact, if we let 
+\begin_inset Formula $S=\{\mathbf{v}_{1}+\alpha\mathbf{v}_{2}:0\leq\alpha\leq1\}$
+\end_inset
+
+, the line segment from 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbf{v}_{1}+\mathbf{\mathbf{v}}_{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $T_{A}(S)=\{T_{A}(\mathbf{v}_{1}+\alpha\mathbf{v}_{2}):0\leq\alpha\leq1\}=\{\lambda_{1}\mathbf{v}_{1}+\alpha\lambda_{2}\mathbf{v}_{2}:0\leq\alpha\leq1\}$
+\end_inset
+
+ is the line segment from 
+\begin_inset Formula $T_{A}(\mathbf{v}_{1})$
+\end_inset
+
+ to 
+\begin_inset Formula $T_{A}(\mathbf{v}_{2})$
+\end_inset
+
+.
+ Further analysis shows that the image of the parallelogram determined by
+ 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+ is the parallelogram determined by 
+\begin_inset Formula $T_{A}(\mathbf{v}_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{A}(\mathbf{v}_{2})$
+\end_inset
+
+.
+ Can you supply this analysis? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:further-analysis"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Subsection*
-Volumes 
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-det-eig-area-04.png
+	lyxscale 30
+	width 5in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Everything extends to 
+Letting 
+\begin_inset Formula $P$
+\end_inset
+
+ be the parallelogram determined by 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $T_{A}$
+\end_inset
+
+ scales 
+\begin_inset Formula $P$
+\end_inset
+
+ in the 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ direction by a factor of 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ and in the 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+ direction by factor 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+.
+ Therefore, the area of 
+\begin_inset Formula $T_{A}(P)$
+\end_inset
+
+ equals 
+\begin_inset Formula $|\lambda_{1}\lambda_{2}|$
+\end_inset
+
+ times the area of 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Since we have been arguing that linear transformations scale the areas
+ of all shapes the same way, we have generally that 
+\begin_inset Formula $\text{area}(T_{A}(S))=|\lambda_{1}\lambda_{2}|\cdot\text{area}(S)$
+\end_inset
+
+ for any shape whose area is measurable.
+ With respect to the eigenvectors of 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $T_{A}$
+\end_inset
+
+ is a simple scaling.
+\end_layout
+
+\begin_layout Standard
+Now we have that 
+\begin_inset Formula 
+\begin{align*}
+\text{area}(T_{A}(S)) & =|\det A|\cdot\text{area}(S)\\
+ & \text{and}\\
+\text{area}(T_{A}(S)) & =|\lambda_{1}\lambda_{2}|\cdot\text{area}(S).
+\end{align*}
+
+\end_inset
+
+It must be, then, that 
+\begin_inset Formula $|\det A|=|\lambda_{1}\lambda_{2}|$
+\end_inset
+
+.
+ This is true for any 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix including noninvertible ones, but the statement can be made much
+ stronger, as in the following theorem.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Determinant-Eigenvalues"
+
+\end_inset
+
+
+\series bold
+\shape up
+[Determinant and the Product of Eigenvalues]
+\series default
+\shape default
+ If 
+\begin_inset Formula $A$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$
+\end_inset
+
+ are its 
+\begin_inset Formula $n$
+\end_inset
+
+ (possibly complex) eigenvalues, then 
+\begin_inset Formula 
+\[
+\det A=\prod_{i=1}^{n}\lambda_{i}=\lambda_{1}\lambda_{2}\cdots\lambda_{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Some but not all parts of the justification of this theorem are straightforward.
+ For example, if 
+\begin_inset Formula $A$
+\end_inset
+
+ is upper triangular, then the conclusion follows quickly.
+ As we have seen, 
+\begin_inset Formula $\det A$
+\end_inset
+
+ is the product of the entries on the main diagonal.
+ That is, 
+\begin_inset Formula $\det A=\prod_{i=1}^{n}A_{i,i}$
+\end_inset
+
+.
+ The characteristic equation
+\begin_inset Formula 
+\begin{align*}
+0 & =\det(A-\lambda I)\\
+ & =\det\left(\left[\begin{array}{cccc}
+A_{1,1}-\lambda & \star & \cdots & \star\\
+0 & A_{2,2}-\lambda & \cdots & \star\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & A_{n,n}-\lambda
+\end{array}\right]\right)\\
+ & =(A_{1,1}-\lambda)(A_{2,2}-\lambda)\cdots(A_{n,n}-\lambda)
+\end{align*}
+
+\end_inset
+
+has solutions 
+\begin_inset Formula $A_{1,1},A_{2,2},\ldots,A_{n,n}$
+\end_inset
+
+, so the eigenvalues of 
+\begin_inset Formula $A$
+\end_inset
+
+ are the entries on the main diagonal of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\prod_{i=1}^{n}A_{i,i}=\prod_{i=1}^{n}\lambda_{i}$
+\end_inset
+
+ completing the proof for upper triangular matrices.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ is any matrix, the conclusion follows from two facts.
+\end_layout
+
+\begin_layout Enumerate
+The determinant and eigenvalues of 
+\begin_inset Formula $P^{-1}AP$
+\end_inset
+
+ are the same as the determinant and eigenvalues of 
+\begin_inset Formula $A$
+\end_inset
+
+ for any invertible 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For any 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, there is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $P^{-1}AP$
+\end_inset
+
+ is upper triangular.
+\end_layout
+
+\begin_layout Standard
+Assuming these facts true for a moment, if 
+\begin_inset Formula $U=P^{-1}AP$
+\end_inset
+
+, then 
+\begin_inset Formula $\det A=\det U$
+\end_inset
+
+ and the eigenvalues of 
+\begin_inset Formula $A$
+\end_inset
+
+ are the eigenvalues of 
+\begin_inset Formula $U$
+\end_inset
+
+ by fact 1.
+ Now if 
+\begin_inset Formula $P$
+\end_inset
+
+ is that special matrix such that 
+\begin_inset Formula $U$
+\end_inset
+
+ is upper triangular, as guaranteed to exist by fact 2, then the determinant
+ of 
+\begin_inset Formula $U$
+\end_inset
+
+ (which equals the determinant of 
+\begin_inset Formula $A$
+\end_inset
+
+) and the product of the eigenvalues of 
+\begin_inset Formula $U$
+\end_inset
+
+ (which equals the product of the eigenvalues of 
+\begin_inset Formula $A$
+\end_inset
+
+) are both 
+\begin_inset Formula $\prod_{i=1}^{n}U_{i,i}$
+\end_inset
+
+ and therefore equal.
+ This concludes the proof of the theorem for general matrices.
+\end_layout
+
+\begin_layout Standard
+Justification of fact 2 takes a bit of work (see crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:triangularization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), but fact 1 can be justified in reasonably short order.
+ To show that the eigenvalues of 
+\begin_inset Formula $P^{-1}AP$
+\end_inset
+
+ are the same as the eigenvalues of 
+\begin_inset Formula $A$
+\end_inset
+
+ is a matter of a calculation.
+ For any value 
+\begin_inset Formula $\lambda$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\det(P^{-1}AP-\lambda I) & =\det(P^{-1}AP-P^{-1}(\lambda I)P)\\
+ & =\det(P^{-1}(A-\lambda I)P)\\
+ & =\det(P^{-1})\cdot\dot{\det(A-\lambda I)}\cdot\det P\\
+ & =\det(A-\lambda I)
+\end{align*}
+
+\end_inset
+
+so the characteristic equations of 
+\begin_inset Formula $P^{-1}AP$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ are equal making the eigenvalues of 
+\begin_inset Formula $P^{-1}AP$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ equal.
+ Can you show that 
+\begin_inset Formula $\det(P^{-1}AP)=\det A$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:equal-determinants"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Triangularization}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "dig:triangularization"
+
+\end_inset
+
+For a square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $P^{-1}MP$
+\end_inset
+
+ is a triangularization of 
+\begin_inset Formula $M$
+\end_inset
+
+ whenever 
+\begin_inset Formula $P^{-1}MP$
+\end_inset
+
+ is upper triangular.
+ We wish to show that there is a triangularization of any 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix.
+ Triangularization of a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix is simple enough since all 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrices are upper triangular.
+ Choose, 
+\begin_inset Formula $P=\left[\begin{array}{c}
+1\end{array}\right]$
+\end_inset
+
+ for example.
+ Proceeding by induction, assume a triangularization exists for every 
+\begin_inset Formula $(k-1)\times(k-1)$
+\end_inset
+
+ matrix for some 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+, and let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a particular but arbitrary 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix.
+ Take any eigenpair 
+\begin_inset Formula $\lambda,\mathbf{v}$
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ and find vectors 
+\begin_inset Formula $\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{n-1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{\mathbf{v},\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{n-1}\}$
+\end_inset
+
+ is linearly independent.
+ This set can always be found since 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ must have at least one nonzero entry (
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is not a permissible eigenvector).
+ Assuming 
+\begin_inset Formula $\mathbf{v}_{i,1}\neq0$
+\end_inset
+
+, we may take 
+\begin_inset Formula $\{\mathbf{v},\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{n-1}\}=\{\mathbf{v}\}\cup\{I_{:,j}:j\neq i\}$
+\end_inset
+
+.
+ Setting 
+\begin_inset Formula $Q=\left[\begin{array}{ccccc}
+\mathbf{v} & \mathbf{u}_{1} & \mathbf{u}_{2} & \cdots & \mathbf{u}_{n-1}\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $Q$
+\end_inset
+
+ is invertible (its columns are linearly independent), and
+\begin_inset Formula 
+\begin{align*}
+Q^{-1}AQ & =Q^{-1}A\left[\begin{array}{ccccc}
+\mathbf{v} & \mathbf{u}_{1} & \mathbf{u}_{2} & \cdots & \mathbf{u}_{n-1}\end{array}\right]\\
+ & =\left[\begin{array}{ccccc}
+Q^{-1}A\mathbf{v} & Q^{-1}A\mathbf{u}_{1} & Q^{-1}A\mathbf{u}_{2} & \cdots & Q^{-1}A\mathbf{u}_{n-1}\end{array}\right]\\
+ & =\left[\begin{array}{ccccc}
+\lambda Q^{-1}\mathbf{v} & Q^{-1}A\mathbf{u}_{1} & Q^{-1}A\mathbf{u}_{2} & \cdots & Q^{-1}A\mathbf{u}_{n-1}\end{array}\right].
+\end{align*}
+
+\end_inset
+
+While we cannot say much about 
+\begin_inset Formula $Q^{-1}A\mathbf{u}_{j}$
+\end_inset
+
+ for any 
+\begin_inset Formula $j$
+\end_inset
+
+, we can say 
+\begin_inset Formula $\lambda Q^{-1}\mathbf{v}=\lambda I_{:,1}$
+\end_inset
+
+ because 
+\begin_inset Formula $Q^{-1}Q=Q^{-1}\left[\begin{array}{ccccc}
+\mathbf{v} & \mathbf{u}_{1} & \mathbf{u}_{2} & \cdots & \mathbf{u}_{n-1}\end{array}\right]=I$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Q^{-1}$
+\end_inset
+
+ times the first column of 
+\begin_inset Formula $Q$
+\end_inset
+
+ must be the first column of 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ Hence we have 
+\begin_inset Formula 
+\[
+Q^{-1}AQ=\left[\begin{array}{ccccc}
+\lambda & \star & \star & \star & \star\\
+0 & \star & \star & \star & \star\\
+0 & \star & \star & \star & \star\\
+\vdots & \star & \star & \star & \star\\
+0 & \star & \star & \star & \star
+\end{array}\right].
+\]
+
+\end_inset
+
+By the inductive hypothesis, there is a triangularization of 
+\begin_inset Formula $(Q^{-1}AQ)_{\backslash1,1}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be such that 
+\begin_inset Formula $R^{-1}(Q^{-1}AQ)_{\backslash1,1}R$
+\end_inset
+
+ is upper triangular, and set 
+\begin_inset Formula $\hat{Q}=\left[\begin{array}{cc}
+1 & 0\\
+0 & R
+\end{array}\right]$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\hat{Q}^{-1}=\left[\begin{array}{cc}
+1 & 0\\
+0 & R^{-1}
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+\hat{Q}^{-1}(Q^{-1}AQ)\hat{Q}=\left[\begin{array}{cc}
+1 & 0\\
+0 & R^{-1}
+\end{array}\right]\left[\begin{array}{cc}
+\lambda & \star\\
+0 & (Q^{-1}AQ)_{\backslash1,1}
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+0 & R
+\end{array}\right]
+\]
+
+\end_inset
+
+is upper triangular.
+ Hence 
+\begin_inset Formula $(Q\hat{Q})^{-1}A(Q\hat{Q})$
+\end_inset
+
+ is a triangularization of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ This result suffices for our purposes, but the result can be strengthened
+ to specify that 
+\begin_inset Formula $(Q\hat{Q})$
+\end_inset
+
+ have a certain property, a so-called Schur decomposition.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence we have two ways to measure the effect of a linear transformation
+ on the plane.
+ In rough terms, a linear transformation expands or compresses areas by
+ a factor equal to the absolute value of the determinant (which is equal
+ to the absolute value of the product of the eigenvalues) of its standard
+ matrix.
+ More precisely a linear transformation expands or compresses areas in the
+ direction of each eigenvector by a factor equal to the absolute value of
+ the associated eigenvalue.
+\end_layout
+
+\begin_layout Subsection*
+Determinants, eigenvalues, and volumes 
+\end_layout
+
+\begin_layout Standard
+The analysis of elementary 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices follows much along the same lines as the analysis of 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Transformations-on-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Vectors in 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
-!
+ can be imagined as arrows or points just as they are in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Images of cubes in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ under transformations associated with elementary matrices analogous to
+ the images of the coffee cup in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ can be derived.
+ They will also be a collection of reflections, shears, and scalings.
+ Rotation in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ can be accomplished by a compostion of scalings and shears just as in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Noninvertible 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices can be described by compositions of elementary matrices and projection
+s as well.
+ Hence theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Characterization-of-Operators-on-R2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be proved for operators on 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ Generally, if the 
+\begin_inset Formula $2$
+\end_inset
+
+'s in this section are replaced by 
+\begin_inset Formula $3$
+\end_inset
+
+'s and the word area is replaced by the word volume, the discourse still
+ applies with only minor additional modification.
+ In particular, for 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices 
+\begin_inset Formula $M$
+\end_inset
+
+ with eigenvalues 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\lambda_{3}$
+\end_inset
+
+, and three-dimensional regions of space, 
+\begin_inset Formula $R$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\text{volume}(T_{M}(R)) & =|\det M|\cdot\text{volume}(R)\\
+ & =|\lambda_{1}\lambda_{2}\lambda_{3}|\cdot\text{volume}(R)
+\end{align*}
+
+\end_inset
+
+and the concluding paragraph in the discussion of transformations of the
+ plane might be rephrased for transformations of space as follows.
+\end_layout
+
+\begin_layout Standard
+We have two ways to measure the effect of a linear transformation on space,
+ 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ In rough terms, a linear transformation expands or compresses volumes by
+ a factor equal to the absolute value of the determinant (which is equal
+ to the absolute value of the product of the eigenvalues) of its standard
+ matrix.
+ More precisely a linear transformation expands or compresses volumes in
+ the direction of each eigenvector by a factor equal to the absolute value
+ of the associated eigenvalue.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Hyperspace}
+\end_layout
+
+\end_inset
+
+The main results of this section and the previous are stated and hold for
+ 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, giving an enterprising individual a basis to extend the ideas of area
+ and volume to dimensions higher than 3! The notion of a hypercube (in hyperspac
+e) is exactly this enterprise.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -673,7 +1553,72 @@ Answers
 \end_layout
 
 \begin_layout Description
-r
+further
+\begin_inset space ~
+\end_inset
+
+analysis 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:further-analysis"
+
+\end_inset
+
+The parallelogram determined by 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{2}$
+\end_inset
+
+ is the set 
+\begin_inset Formula $S=\{\beta\mathbf{v}_{1}+\alpha\mathbf{v}_{2}:0\leq\alpha,\beta\leq1\}$
+\end_inset
+
+ so its image is
+\begin_inset Formula 
+\begin{align*}
+T_{A}(S) & =T_{A}\left(\{\beta\mathbf{v}_{1}+\alpha\mathbf{v}_{2}:0\leq\alpha,\beta\leq1\}\right)\\
+ & =\{T_{A}(\beta\mathbf{v}_{1}+\alpha\mathbf{v}_{2}):0\leq\alpha,\beta\leq1\}\\
+ & =\{\beta T_{A}(\mathbf{v}_{1})+\alpha T_{A}(\mathbf{v}_{2}):0\leq\alpha,\beta\leq1\}\\
+ & =\{\beta\lambda_{1}\mathbf{v}_{1}+\alpha\lambda_{2}\mathbf{v}_{2}:0\leq\alpha,\beta\leq1\}
+\end{align*}
+
+\end_inset
+
+which is the paralelogram determined by 
+\begin_inset Formula $T_{A}(\mathbf{v}_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{A}(\mathbf{v}_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+equal
+\begin_inset space ~
+\end_inset
+
+determinants 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:equal-determinants"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\det(P^{-1}AP)=\det(P^{-1})\cdot\det A\cdot\det P=\frac{1}{\det P}\cdot\det A\cdot\det P=\det A
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
