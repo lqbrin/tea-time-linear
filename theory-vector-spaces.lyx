@@ -92,12 +92,859 @@ enumitem
 Vector Spaces
 \end_layout
 
-\begin_layout Section
-Vector Spaces
+\begin_layout Standard
+Back in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the definition of linear combination contained a proviso: 
+\begin_inset Quotes eld
+\end_inset
+
+let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a set of objects on which addition and scalar mutliplication are defined.
+\begin_inset Quotes erd
+\end_inset
+
+ At the time several examples of such sets were given, but not much was
+ made of other properties the set should have.
+ Then in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the definition of linear independence contained an extended proviso: 
+\begin_inset Quotes eld
+\end_inset
+
+[l]et 
+\begin_inset Formula $S$
+\end_inset
+
+ be a set of objects on which addition and scalar mutliplication are defined
+ and which contains an additive identity, called 0.
+\begin_inset Quotes erd
+\end_inset
+
+ Existence of an additive identity was necessary to write the equation in
+ the definition.
+ Yet again, little was made of additional properties the set 
+\begin_inset Formula $S$
+\end_inset
+
+ should possess.
 \end_layout
 
 \begin_layout Standard
-a
+Implicit in the assumptions that addition and scalar multiplication are
+ defined is that sums and scalar products of objects in the set 
+\begin_inset Formula $S$
+\end_inset
+
+ are also in the set 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ This property is called closure of the operation.
+ The set 
+\begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
+\end_inset
+
+ is not closed under addition nor scalar multiplication.
+ 
+\begin_inset Formula $t+t^{2}$
+\end_inset
+
+, the sum of two elements in 
+\begin_inset Formula $T$
+\end_inset
+
+, is not itself in 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\begin_inset Formula $17t^{2}$
+\end_inset
+
+, a scalar multiple of an element of 
+\begin_inset Formula $T$
+\end_inset
+
+, is not itself in 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "par:closure-of-linear-combinations"
+
+\end_inset
+
+The set 
+\begin_inset Formula $S=\{\alpha t+\beta t^{2}+\gamma(1+t^{2}):\alpha,\beta,\gamma\in\mathbb{R}\}$
+\end_inset
+
+ containing all linear combinations of elements of 
+\begin_inset Formula $T$
+\end_inset
+
+ (with scalars from the set of real numbers) is closed under addition and
+ scalar multiplication, however.
+ An arbitrary element of 
+\begin_inset Formula $S$
+\end_inset
+
+ has the form 
+\begin_inset Formula $\alpha t+\beta t^{2}+\gamma(1+t^{2})$
+\end_inset
+
+ for some scalars 
+\begin_inset Formula $\alpha,\beta,\gamma$
+\end_inset
+
+.
+ The scalar multiple of an arbitrary element of 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $r(\alpha t+\beta t^{2}+\gamma(1+t^{2}))=(r\alpha)t+(r\beta)t^{2}+(r\gamma)(1+t^{2})$
+\end_inset
+
+ has the form of an element of 
+\begin_inset Formula $S$
+\end_inset
+
+ and is therefore in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ The sum of two elements of 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\alpha_{1}t+\beta_{1}t^{2}+\gamma_{1}(1+t^{2})\right]+\left[\alpha_{2}t+\beta_{2}t^{2}+\gamma_{2}(1+t^{2})\right]=(\alpha_{1}+\alpha_{2})t+(\beta_{1}+\beta_{2})t^{2}+(\gamma_{1}+\gamma_{2})(1+t^{2})$
+\end_inset
+
+ has the form of an element of 
+\begin_inset Formula $S$
+\end_inset
+
+ and is therefore in 
+\begin_inset Formula $S$
+\end_inset
+
+ too.
+\end_layout
+
+\begin_layout Standard
+We are so used to computations like this, it is easy to take their subtleties
+ for granted.
+ In order for 
+\begin_inset Formula $r(\alpha t+\beta t^{2}+\gamma(1+t^{2}))$
+\end_inset
+
+ to equal 
+\begin_inset Formula $(r\alpha)t+(r\beta)t^{2}+(r\gamma)(1+t^{2})$
+\end_inset
+
+ we need to distribute the 
+\begin_inset Formula $r$
+\end_inset
+
+ and associate scalars.
+ Distribution alone yields 
+\begin_inset Formula $r(\alpha t)+r(\beta t)+r(\gamma(1+t^{2}))$
+\end_inset
+
+.
+ The distributive and associative properties are critical to the claim that
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under addition and scalar multiplication.
+ In order for 
+\begin_inset Formula $\left[\alpha_{1}t+\beta_{1}t^{2}+\gamma_{1}(1+t^{2})\right]+\left[\alpha_{2}t+\beta_{2}t^{2}+\gamma_{2}(1+t^{2})\right]$
+\end_inset
+
+ to equal 
+\begin_inset Formula $(\alpha_{1}+\alpha_{2})t+(\beta_{1}+\beta_{2})t^{2}+(\gamma_{1}+\gamma_{2})(1+t^{2})$
+\end_inset
+
+ we need a slightly different distributive property, an associative property,
+ and commutativity of addition!
+\end_layout
+
+\begin_layout Standard
+All the examples of sets 
+\begin_inset Formula $S$
+\end_inset
+
+ considered when the definition of linear combination was introduced (functions,
+ variables, numbers, integrals, vectors, and matrices) have these same propertie
+s.
+ In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Functions-and-Transformations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, when the notion of a linear transformation was introduced, the set of
+ sequences of real numbers was added to this list.
+ Again, the set naturally possessed all the properties discussed so far.
+\end_layout
+
+\begin_layout Standard
+It is time to make explicit all the assumptions we have been making when
+ discussing linear combinations.
+ A set 
+\begin_inset Formula $V$
+\end_inset
+
+ on which addition and scalar multiplication are defined is called a 
+\series bold
+vector space
+\series default
+ if for every 
+\begin_inset Formula $\mathbf{u},\mathbf{v},\mathbf{w}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ and all scalars (real numbers or complex numbers) 
+\begin_inset Formula $s,t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}+\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+ (
+\begin_inset Formula $V$
+\end_inset
+
+ is closed under addition)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$
+\end_inset
+
+ (addition is commutative)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}+(\mathbf{v}+\mathbf{w})=(\mathbf{u}+\mathbf{v})+\mathbf{w}$
+\end_inset
+
+ (addition is associative)
+\end_layout
+
+\begin_layout Enumerate
+there is an element 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{0}+\mathbf{u}=\mathbf{u}$
+\end_inset
+
+ (an additive identity exists)
+\end_layout
+
+\begin_layout Enumerate
+there is an element 
+\begin_inset Formula $-\mathbf{u}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{u}+(-\mathbf{u})=\mathbf{0}$
+\end_inset
+
+.
+ (every element has an additive inverse)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+ (
+\begin_inset Formula $V$
+\end_inset
+
+ is closed under scalar multiplication)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1\mathbf{v}=\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s(\mathbf{u}+\mathbf{v})=s\mathbf{u}+s\mathbf{v}$
+\end_inset
+
+ (scalars distribute over elements of 
+\begin_inset Formula $V$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(s+t)\mathbf{u}=s\mathbf{u}+t\mathbf{u}$
+\end_inset
+
+ (elements of 
+\begin_inset Formula $V$
+\end_inset
+
+ distribute over scalars)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s(t\mathbf{u})=(st)\mathbf{u}$
+\end_inset
+
+ (scalar multiplication is associative)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Fields}
+\end_layout
+
+\end_inset
+
+Sets of scalars other than 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ are permissible in the definition of a vector space.
+ Only a field is required.
+ The field with the fewest elements is 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+ where addition and multiplication are as usual except that 
+\begin_inset Formula $1+1=0$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, the set vectors with real entries, is the prototypical example of a vector
+ space.
+ It is straightforward to verify that 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ has all ten properties.
+ In fact, six of them are just statements of the properties of matrices
+ from section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ so require no additional verification.
+ That leaves properties 5 (which was proven in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 7 (which is clear in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ since 
+\begin_inset Formula $1\cdot r=r$
+\end_inset
+
+ for any real number 
+\begin_inset Formula $r$
+\end_inset
+
+) and closure (which is also clear in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ since the product of real numbers is real).
+ The definition is fashioned to be consistent with 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and to spotlight its most important properties.
+\end_layout
+
+\begin_layout Standard
+When viewed as a vector space, the elements of 
+\begin_inset Formula $V$
+\end_inset
+
+ are called 
+\series bold
+vectors
+\series default
+ even if they are functions, matrices, sequences, or some other type of
+ object.
+ In this abstract sense, even polynomials are vectors! The set 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+, the set of all polynomials with real coefficients and degree 
+\begin_inset Formula $n$
+\end_inset
+
+ or less, is a vector space.
+\end_layout
+
+\begin_layout Enumerate
+The sum of two polynomials of degree 
+\begin_inset Formula $n$
+\end_inset
+
+ or less is a polynomial of degree 
+\begin_inset Formula $n$
+\end_inset
+
+ or less.
+ (closure under addition)
+\end_layout
+
+\begin_layout Enumerate
+For any polynomials 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $q(x)$
+\end_inset
+
+, 
+\begin_inset Formula $p(x)+q(x)=q(x)+p(x)$
+\end_inset
+
+.
+ (addition is commutative)
+\end_layout
+
+\begin_layout Enumerate
+For any polynomials 
+\begin_inset Formula $p(x)$
+\end_inset
+
+, 
+\begin_inset Formula $q(x)$
+\end_inset
+
+, and 
+\begin_inset Formula $r(x)$
+\end_inset
+
+, 
+\begin_inset Formula $p(x)+(q(x)+r(x))=(p(x)+q(x))+r(x)$
+\end_inset
+
+.
+ (addition is associative)
+\end_layout
+
+\begin_layout Enumerate
+The polynomial 
+\begin_inset Formula $z(x)=0$
+\end_inset
+
+ has the property that 
+\begin_inset Formula $z(x)+q(x)=q(x)$
+\end_inset
+
+ for any polynomial 
+\begin_inset Formula $q(x)$
+\end_inset
+
+.
+ (an additive identity exists)
+\end_layout
+
+\begin_layout Enumerate
+Given any polynomial 
+\begin_inset Formula $p(x)$
+\end_inset
+
+, 
+\begin_inset Formula $p(x)+(-1\cdot p(x))=z(x)$
+\end_inset
+
+.
+ (every element has an additive inverse)
+\end_layout
+
+\begin_layout Enumerate
+For any polynomial 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ of degree 
+\begin_inset Formula $n$
+\end_inset
+
+ or less, 
+\begin_inset Formula $rp(x)$
+\end_inset
+
+ is a polynomial of degree 
+\begin_inset Formula $n$
+\end_inset
+
+ or less.
+ (closure under scalar multiplication)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1\cdot p(x)=p(x)$
+\end_inset
+
+ for any polynomial 
+\begin_inset Formula $p(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r(p(x)+q(x))=rp(x)+rq(x)$
+\end_inset
+
+ for any real number 
+\begin_inset Formula $r$
+\end_inset
+
+ and polynomials 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $q(x)$
+\end_inset
+
+.
+ (real numbers distribute over polynomials)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(r+s)p(x)=rp(x)+sp(x)$
+\end_inset
+
+ for any real numbers 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ and polynomial 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ (polynomials distribute over real numbers)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r(sp(x))=(rs)p(x)$
+\end_inset
+
+ for any real numbers 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ and polynomial 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ (scalar multiplication is associative)
+\end_layout
+
+\begin_layout Standard
+Verification that the ten properties of a vector space hold for 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+ is more an exercise in observing that these are well known properties of
+ polynomials than it is an exercise in proving that they hold.
+ The exceptions are properties 1 and 6 where closure cannot be taken for
+ granted, and 4 and 5 where an additive identity and additive inverses are
+ produced as proof of their existence.
+\end_layout
+
+\begin_layout Standard
+Coincidentally, given a subset 
+\begin_inset Formula $H$
+\end_inset
+
+ of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+, the same four properties are the only ones that need to be shown true
+ (in 
+\begin_inset Formula $H$
+\end_inset
+
+) to prove that 
+\begin_inset Formula $H$
+\end_inset
+
+ is itself a vector space.
+ The other six properties are inherited by 
+\begin_inset Formula $H$
+\end_inset
+
+ through the fact that they hold for 
+\shape italic
+all
+\shape default
+ elements of 
+\begin_inset Formula $V$
+\end_inset
+
+, including those in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ However, with only properties 1, 6, 9 and a yet to be proven fact, property
+ 5 can be deduced to hold in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathbf{h}$
+\end_inset
+
+ be a particular but arbitrary element of 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $H$
+\end_inset
+
+ is closed under scalar multiplication, 
+\begin_inset Formula $-1\cdot\mathbf{h}$
+\end_inset
+
+ is in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $H$
+\end_inset
+
+ is closed under addition, 
+\begin_inset Formula $\mathbf{h}+(-1\cdot\mathbf{h})$
+\end_inset
+
+ is in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $\mathbf{h}+(-1\cdot\mathbf{h})=(1+(-1))\mathbf{h}=0\mathbf{h}$
+\end_inset
+
+ by property 9.
+ If it were true that 
+\begin_inset Formula $0\mathbf{h}=\mathbf{0}$
+\end_inset
+
+ (like it is in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+), we would be done as 
+\begin_inset Formula $-1\cdot\mathbf{h}$
+\end_inset
+
+ would then have been shown to be an additive inverse of 
+\begin_inset Formula $\mathbf{h}$
+\end_inset
+
+ in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ Can you prove that 
+\begin_inset Formula $0\mathbf{h}=\mathbf{0}$
+\end_inset
+
+ using only the ten properties of a vector space? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:the-zero-vector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Any subset of a vector space that is itself a vector space is called a 
+\series bold
+subspace
+\series default
+.
+ One common way to define a subspace is through the collection of all linear
+ combinations of a set of vectors.
+ Such a set is called the 
+\series bold
+span
+\series default
+ of those vectors.
+ To be precise, if 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ are elements of a vector space (vectors), the span of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}$
+\end_inset
+
+, is given by
+\begin_inset Formula 
+\[
+\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}=\left\{ c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{k}\mathbf{v}_{k}:c_{1},c_{2},\ldots,c_{k}\text{ are scalars}\right\} .
+\]
+
+\end_inset
+
+Can you show that given any vectors 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ of a vector space, 
+\begin_inset Formula $\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}$
+\end_inset
+
+ is a subspace? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:span-as-subspace"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -105,7 +952,215 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-C
+vector
+\begin_inset space ~
+\end_inset
+
+space A set 
+\begin_inset Formula $V$
+\end_inset
+
+ on which addition and scalar multiplication are defined is called a 
+\series bold
+vector space
+\series default
+ if for every 
+\begin_inset Formula $\mathbf{u},\mathbf{v},\mathbf{w}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ and all scalars (real numbers or complex numbers) 
+\begin_inset Formula $s,t$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}+\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+ (
+\begin_inset Formula $V$
+\end_inset
+
+ is closed under addition)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$
+\end_inset
+
+ (addition is commutative)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}+(\mathbf{v}+\mathbf{w})=(\mathbf{u}+\mathbf{v})+\mathbf{w}$
+\end_inset
+
+ (addition is associative)
+\end_layout
+
+\begin_layout Enumerate
+there is an element 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{0}+\mathbf{u}=\mathbf{u}$
+\end_inset
+
+ (an additive identity exists)
+\end_layout
+
+\begin_layout Enumerate
+there is an element 
+\begin_inset Formula $-\mathbf{u}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{u}+(-\mathbf{u})=\mathbf{0}$
+\end_inset
+
+.
+ (every element has an additive inverse)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+ (
+\begin_inset Formula $V$
+\end_inset
+
+ is closed under scalar multiplication)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1\mathbf{v}=\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s(\mathbf{u}+\mathbf{v})=s\mathbf{u}+s\mathbf{v}$
+\end_inset
+
+ (scalars distribute over elements of 
+\begin_inset Formula $V$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(s+t)\mathbf{u}=s\mathbf{u}+t\mathbf{u}$
+\end_inset
+
+ (elements of 
+\begin_inset Formula $V$
+\end_inset
+
+ distribute over scalars)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s(t\mathbf{u})=(st)\mathbf{u}$
+\end_inset
+
+ (scalar multiplication is associative)
+\end_layout
+
+\end_deeper
+\begin_layout Description
+vector an element of a vector space.
+\end_layout
+
+\begin_layout Description
+span for vectors 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ of a vector space, the span of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}$
+\end_inset
+
+, is the colection of all linear combinations of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+.
+ That is,
+\begin_inset Formula 
+\[
+\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}=\left\{ c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{k}\mathbf{v}_{k}:c_{1},c_{2},\ldots,c_{k}\text{ are scalars}\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+subspace a subset of a vector space that is itself a vector space.
+\end_layout
+
+\begin_layout Description
+subspace
+\begin_inset space ~
+\end_inset
+
+conditions a subset of a vector space is a subspace if it contains 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ and is closed under addition and scalar multiplication.
+\end_layout
+
+\begin_layout Description
+span
+\begin_inset space ~
+\end_inset
+
+as
+\begin_inset space ~
+\end_inset
+
+subspace given any vectors 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ of a vector space, 
+\begin_inset Formula $\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}$
+\end_inset
+
+ is a subspace.
 \end_layout
 
 \begin_layout Standard
@@ -130,7 +1185,194 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-V
+Verify that various vector spaces are truly vector spaces.
+\end_layout
+
+\begin_layout Enumerate
+Verify that various subsets are subspaces.
+\end_layout
+
+\begin_layout Enumerate
+Show that various subsets are not subspaces.
+\end_layout
+
+\begin_layout Enumerate
+Describe geometrically 
+\begin_inset Formula $\text{Span}\{\mathbf{v}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Describe geometrically 
+\begin_inset Formula $\text{Span}\{\mathbf{v}_{1},\mathbf{v}_{2}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\mathbf{u}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{u}_{2}$
+\end_inset
+
+ both have the property of being a zero vector.
+ That is, for any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{u}_{1}+\mathbf{v}=\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{u}_{2}+\mathbf{v}=\mathbf{v}$
+\end_inset
+
+.
+ Supply a reason for each line of the string of equalities proving that
+ 
+\begin_inset Formula $\mathbf{u}_{1}=\mathbf{v}_{1}$
+\end_inset
+
+, thus proving that the zero vector is unique.
+ 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{u}_{1} & =\mathbf{u}_{2}+\mathbf{u}_{1}\\
+ & =\mathbf{u}_{1}+\mathbf{u}_{2}\\
+ & =\mathbf{u}_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Prove that for any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in a vector space, 
+\begin_inset Formula $-1\cdot\mathbf{v}$
+\end_inset
+
+ is an additive inverse.
+ Use the fact that 
+\begin_inset Formula $0\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\mathbf{u}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{u}_{2}$
+\end_inset
+
+ both have the property of being an additive inverse of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ That is, for this particular vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{u}_{1}+\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{u}_{2}+\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ Supply a reason for each line of the string of equalities proving that
+ 
+\begin_inset Formula $\mathbf{u}_{1}=\mathbf{v}_{1}$
+\end_inset
+
+, thus proving that additive inverses are unique [and therefore 
+\begin_inset Formula $-1\cdot\mathbf{v}$
+\end_inset
+
+ is 
+\shape italic
+the
+\shape default
+ additive inverse of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+].
+\begin_inset Formula 
+\begin{align*}
+\mathbf{u}_{1} & =\mathbf{u}_{1}+\mathbf{0}\\
+ & =\mathbf{u}_{1}+(\mathbf{u}_{2}+\mathbf{v})\\
+ & =\mathbf{u}_{1}+(\mathbf{v}+\mathbf{u}_{2})\\
+ & =(\mathbf{u}_{1}+\mathbf{v})+\mathbf{u}_{2}\\
+ & =\mathbf{0}+\mathbf{u}_{2}\\
+ & =\mathbf{u}_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $c$
+\end_inset
+
+ be any scalar.
+ Supply a reason for each line of the string of equalities proving that
+ 
+\begin_inset Formula $c\mathbf{0}=\mathbf{0}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+c\mathbf{0} & =c\mathbf{0}+\mathbf{0}\\
+ & =c\mathbf{0}+(c\mathbf{0}+(-(c\mathbf{0})))\\
+ & =(c\mathbf{0}+c\mathbf{0})+(-(c\mathbf{0}))\\
+ & =c(\mathbf{0}+\mathbf{0})+(-(c\mathbf{0}))\\
+ & =c\mathbf{0}+(-(c\mathbf{0}))\\
+ & =\mathbf{0}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $c\mathbf{u}=\mathbf{0}$
+\end_inset
+
+ for some nonzero scalar 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Create a string of equalities showing the 
+\begin_inset Formula $\mathbf{u}=\mathbf{0}$
+\end_inset
+
+ and justify each equality in the string.
 \end_layout
 
 \begin_layout Standard
@@ -154,8 +1396,198 @@ Answers
 \end_layout
 
 \begin_layout Description
-a
+the
+\begin_inset space ~
+\end_inset
+
+zero
+\begin_inset space ~
+\end_inset
+
+vector 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:the-zero-vector"
+
+\end_inset
+
+Proving that 
+\begin_inset Formula $0\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ for any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ of any vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ is a very abstract and subtle chore.
+ Where to start is a particularly befuddling question.
+ Proofs of this nature are very difficult when seen for the first time.
+ You are in good company if you did not come up with a proof of your own.
+ One way to proceed is to start with one side and produce a list of equalities
+ that flow logically from the properties and lead to the other side.
+ Let 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ be a particular but arbitrary element of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathbf{0}=0\mathbf{v}+(-0\mathbf{v}) & \text{[existence of additive inverses]}\\
+\phantom{\mathbf{0}}=(0+0)\mathbf{v}+(-0\mathbf{v}) & \text{[substitution of }0+0\text{ for }0\text{]}\\
+\phantom{\mathbf{0}}=(0\mathbf{v}+0\mathbf{v})+(-0\mathbf{v}) & \text{[scalars distribute over vectors]}\\
+\phantom{\mathbf{0}}=0\mathbf{v}+(0\mathbf{v}+(-0\mathbf{v})) & \text{[addition is associative]}\\
+\phantom{\mathbf{0}}=0\mathbf{v}+\mathbf{0} & \text{[property of additive inverses]}\\
+\phantom{\mathbf{0}}=0\mathbf{v} & \text{[}\mathbf{0}\text{ is the additive identity]}
+\end{array}
+\]
+
+\end_inset
+
+Note that this proof could be written in precisely the reverse order and
+ it would remain valid.
 \end_layout
 
+\begin_layout Description
+span
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+subspace 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:span-as-subspace"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ be elements of a vector space and set 
+\begin_inset Formula $H=\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0\mathbf{v}_{1}+0\mathbf{v}_{2}+\cdots+0\mathbf{v}_{k}=\mathbf{0}+\mathbf{0}+\cdots+\mathbf{0}=\mathbf{0}$
+\end_inset
+
+ is in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+for any elements 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ of 
+\begin_inset Formula $H$
+\end_inset
+
+, there are scalars 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{k}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\mathbf{u}=b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{k}\mathbf{v}_{k}\quad\text{and}\quad\mathbf{v}=c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{k}\mathbf{v}_{k}
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{align*}
+\mathbf{u}+\mathbf{v} & =\left(b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{k}\mathbf{v}_{k}\right)+\left(c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{k}\mathbf{v}_{k}\right)\\
+ & =b_{1}\mathbf{v}_{1}+c_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}++c_{2}\mathbf{v}_{2}\cdots+b_{k}\mathbf{v}_{k}+c_{k}\mathbf{v}_{k}\\
+ & =(b_{1}+c_{1})\mathbf{v}_{1}+(b_{2}+c_{2})\mathbf{v}_{2}+\cdots+(b_{k}+c_{k})\mathbf{v}_{k}
+\end{align*}
+
+\end_inset
+
+is in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+for any element 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ of 
+\begin_inset Formula $H$
+\end_inset
+
+, there are scalars 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{k}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\mathbf{u}=b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{k}\mathbf{v}_{k}
+\]
+
+\end_inset
+
+so given any scalar 
+\begin_inset Formula $s$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+s\mathbf{u} & =s\left(b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{k}\mathbf{v}_{k}\right)\\
+ & =s(b_{1}\mathbf{v}_{1})+s(b_{2}\mathbf{v}_{2})+\cdots+s(b_{k}\mathbf{v}_{k})\\
+ & =(sb_{1})\mathbf{v}_{1}+(sb_{2})\mathbf{v}_{2}+\cdots+(sb_{k})\mathbf{v}_{k}
+\end{align*}
+
+\end_inset
+
+is in 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

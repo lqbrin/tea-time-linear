@@ -1498,7 +1498,124 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-g
+set
+\begin_inset space ~
+\end_inset
+
+image For any transformation (map or function) 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ and subset 
+\begin_inset Formula $S$
+\end_inset
+
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+f(S)=\{f(s):s\in S\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+area For any linear transformation 
+\begin_inset Formula $T_{A}:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+ and any subset 
+\begin_inset Formula $S$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ with measurable area, 
+\begin_inset Formula 
+\[
+\text{area}(T_{A}(S))=|\det A|\cdot\text{area}(S)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+volume For any linear transformation 
+\begin_inset Formula $T_{A}:\mathbb{R}^{3}\to\mathbb{R}^{3}$
+\end_inset
+
+ and any subset 
+\begin_inset Formula $S$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ with measurable volume, 
+\begin_inset Formula 
+\[
+\text{volume}(T_{A}(S))=|\det A|\cdot\text{volume}(S)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+determinant
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+eigenvalues The determinant of any square matrix is the product of its eigenvalu
+es.
+\end_layout
+
+\begin_layout Description
+triangularization For any square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ there is an invertible matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $P^{-1}MP$
+\end_inset
+
+ is upper triangular.
 \end_layout
 
 \begin_layout Standard
@@ -1529,7 +1646,69 @@ name "exc:det-eig-area"
 
 \end_inset
 
-A
+Prove that any square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ can be factored as 
+\begin_inset Formula $PUP^{-1}$
+\end_inset
+
+ for some invertible matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ and upper triangular matrix 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use the fact that 
+\begin_inset Formula $\text{area}(T_{A}(S))=|\det A|\cdot\text{area}(S)$
+\end_inset
+
+ to justify the claim that the area of the parallelogram determined by the
+ columns of a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use the fact that 
+\begin_inset Formula $\text{volume}(T_{A}(S))=|\det A|\cdot\text{volume}(S)$
+\end_inset
+
+ to justify the claim that the volume of the parallelepiped determined by
+ the columns of a 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
 \end_layout
 
 \begin_layout Standard

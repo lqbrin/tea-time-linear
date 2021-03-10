@@ -100,234 +100,21 @@ Linear Transformations on Vectors
 \end_layout
 
 \begin_layout Subsection*
-Geometric Interpretation of Vectors
-\end_layout
-
-\begin_layout Standard
-One day, my friend Victor took a 5 kilometer drive.
- When Victor told me this I knew just how long his drive was.
- It was 5 kilometers.
- When Victor added that his drive was on a very straight highway headed
- due east, I knew more.
- I knew which way Victor was driving.
- I could imagine tracing out his path on a map by drawing a horizontal arrow
- pointing to the right (eastward) with a length equivalent to 5 kilometers.
- The arrow captures both the direction and length of Victor's drive.
- Vectors can be imagined in the same way.
- The vector 
-\begin_inset Formula 
-\[
-\left[\begin{array}{c}
-5\\
-0
-\end{array}\right]
-\]
-
-\end_inset
-
-has a 5 as its first entry and a 0 as its second.
- Thinking of these entries as 
-\begin_inset Formula $x$
-\end_inset
-
-- and 
-\begin_inset Formula $y$
-\end_inset
-
-- coordinates, the five represents 5 units right (eastward) and the zero
- represents 0 units up (northward).
- In this way, the vector represents both the length and direction of Victor's
- drive, just like the arrow.
- The vector and the arrow can be interpreted to represent the same thing,
- blurring any distinction between them.
- 
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Street map minus vectors 
-\begin_inset CommandInset href
-LatexCommand href
-name "© OpenStreetMap contributors"
-target "https://www.openstreetmap.org/copyright"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figures/theory-linear-vector-transformations-0.png
-	lyxscale 50
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-The vector/arrow represents Victor's displacement, or movement, 5 kilometers
- in the eastward direction.
-\end_layout
-
-\begin_layout Standard
-Notice there is no origin on the map.
- This is typical of drawing vectors.
- They are not specified relative to an origin.
- They only represent a change in location, or displacement, starting anywhere.
- A vector represents the locations of two points relative to one another.
- Exactly where those two points lie is not determined by the vector itself.
- Further information is needed to locate the vector.
- In the case of Victor's travel, I needed to know on what road and where
- he was driving to create an accurate picture of his drive.
-\end_layout
-
-\begin_layout Standard
-After driving 5 kilometers east, Victor exited the highway and drove 3 kilometer
-s southeast (using a road that does not appear on the map).
- When I heard this, I was able to capture this part of Victor's journey
- by the vector
-\begin_inset Formula 
-\[
-\left[\begin{array}{c}
-\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right].
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figures/theory-linear-vector-transformations-2.png
-	lyxscale 50
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-And I knew exactly where to put it since it started just where the previous
- leg left off.
- Drawn as an arrow, the vector is the hypotenuse of a right triangle with
- side lengths 
-\begin_inset Formula $\sqrt{\frac{9}{2}}$
-\end_inset
-
-, which by the Pythagorean theorem gives it length 
-\begin_inset Formula $\sqrt{\left(\sqrt{\frac{9}{2}}\right)^{2}+\left(\sqrt{\frac{9}{2}}\right)^{2}}=3$
-\end_inset
-
-.
- It has the right length and it points southeast (and starts where the first
- leg leaves off), so it accurately represents the second leg of Victor's
- drive.
-\end_layout
-
-\begin_layout Standard
-As the crow flies, Victor's total displacement or movement for the drive
- is represented by the sum of the vectors,
-\begin_inset Formula 
-\[
-\left[\begin{array}{c}
-5+\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right].
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figures/theory-linear-vector-transformations-3.png
-	lyxscale 50
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-Since addition of vectors is commutative, it does not matter which vector
- is plotted first.
- After the pair of displacements, 
-\begin_inset Formula $\left[\begin{array}{c}
-5\\
-0
-\end{array}\right]$
-\end_inset
-
- and 
-\begin_inset Formula $\left[\begin{array}{c}
-\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right]$
-\end_inset
-
-, Victor's total displacement is 
-\begin_inset Formula $\left[\begin{array}{c}
-5+\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right]$
-\end_inset
-
-.
- In the diagram, the gray vectors represent 
-\begin_inset Formula $\left[\begin{array}{c}
-5\\
-0
-\end{array}\right]+\left[\begin{array}{c}
-\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right]$
-\end_inset
-
- and the blue vectors represent 
-\begin_inset Formula $\left[\begin{array}{c}
-\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right]+\left[\begin{array}{c}
-5\\
-0
-\end{array}\right]$
-\end_inset
-
-.
- The five vectors together illustrate the parallelogram rule for vector
- addition.
- The sum of two vectors is a diagonal of the parallelogram determined by
- the two vectors.
-\end_layout
-
-\begin_layout Subsection*
 Geometric Interpretation of Linear Transformations
 \end_layout
 
 \begin_layout Standard
-Drawing vectors as arrows gives us a way to picture linear transformations.
+Drawing vectors as arrows, as in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Length-and-Orthogonality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, gives us a way to picture linear transformations.
  We can draw any vector and its image to help understand the action of the
  map geometrically.
  For example, if every vector we draw has an image pointing in the same
@@ -2413,28 +2200,7 @@ vectors vectors in
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- are often thought of as points or as displacements represented by arrows.
-\end_layout
-
-\begin_layout Description
-geometric
-\begin_inset space ~
-\end_inset
-
-interpretation
-\begin_inset space ~
-\end_inset
-
-of
-\begin_inset space ~
-\end_inset
-
-vector
-\begin_inset space ~
-\end_inset
-
-sum the sum of two vectors is represented geometrically by a diagonal of
- the parallelogram determined by the two vectors.
+ are often thought of as points.
 \end_layout
 
 \begin_layout Description

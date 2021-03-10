@@ -469,7 +469,7 @@ In addition to being a statement about the set of objects rather than one
  It can be written as a linear combination of the others (with all coefficients
  equal to zero) but it is not necessarily the case that any of the other
  objects can be written as a linear combination of the remaining ones.
- As an illustrative example, suppose 
+ To illustrate, suppose 
 \begin_inset Formula 
 \[
 E=\left[\begin{array}{ccc}

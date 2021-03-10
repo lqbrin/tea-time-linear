@@ -1,0 +1,633 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Length-and-Orthogonality"
+
+\end_inset
+
+Length and Orthogonality
+\end_layout
+
+\begin_layout Subsection*
+Geometric Interpretation of Vectors
+\end_layout
+
+\begin_layout Standard
+One day, my friend Victor took a 5 kilometer drive.
+ When Victor told me this I knew just how long his drive was.
+ It was 5 kilometers.
+ When Victor added that his drive was on a very straight highway headed
+ due east, I knew more.
+ I knew which way Victor was driving.
+ I could imagine tracing out his path on a map by drawing a horizontal arrow
+ pointing to the right (eastward) with a length equivalent to 5 kilometers.
+ The arrow captures both the direction and length of Victor's drive.
+ Vectors can be imagined in the same way.
+ The vector 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+has a 5 as its first entry and a 0 as its second.
+ Thinking of these entries as 
+\begin_inset Formula $x$
+\end_inset
+
+- and 
+\begin_inset Formula $y$
+\end_inset
+
+- coordinates, the five represents 5 units right (eastward) and the zero
+ represents 0 units up (northward).
+ In this way, the vector represents both the length and direction of Victor's
+ drive, just like the arrow.
+ The vector and the arrow can be interpreted to represent the same thing,
+ blurring any distinction between them.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Street map minus vectors 
+\begin_inset CommandInset href
+LatexCommand href
+name "© OpenStreetMap contributors"
+target "https://www.openstreetmap.org/copyright"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-0.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The vector/arrow represents Victor's displacement, or movement, 5 kilometers
+ in the eastward direction.
+\end_layout
+
+\begin_layout Standard
+Notice there is no origin on the map.
+ This is typical of drawing vectors.
+ They are not specified relative to an origin.
+ They only represent a change in location, or displacement, starting anywhere.
+ A vector represents the locations of two points relative to one another.
+ Exactly where those two points lie is not determined by the vector itself.
+ Further information is needed to locate the vector.
+ In the case of Victor's travel, I needed to know on what road and where
+ he was driving to create an accurate picture of his drive.
+\end_layout
+
+\begin_layout Standard
+After driving 5 kilometers east, Victor exited the highway and drove 3 kilometer
+s southeast (using a road that does not appear on the map).
+ When I heard this, I was able to capture this part of Victor's journey
+ by the vector
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-2.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+And I knew exactly where to put it since it started just where the previous
+ leg left off.
+ Drawn as an arrow, the vector is the hypotenuse of a right triangle with
+ side lengths 
+\begin_inset Formula $\sqrt{\frac{9}{2}}$
+\end_inset
+
+, which by the Pythagorean theorem gives it length 
+\begin_inset Formula $\sqrt{\left(\sqrt{\frac{9}{2}}\right)^{2}+\left(\sqrt{\frac{9}{2}}\right)^{2}}=3$
+\end_inset
+
+.
+ It has the right length and it points southeast (and starts where the first
+ leg leaves off), so it accurately represents the second leg of Victor's
+ drive.
+\end_layout
+
+\begin_layout Standard
+As the crow flies, Victor's total displacement or movement for the drive
+ is represented by the sum of the vectors,
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+5+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-3.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Since addition of vectors is commutative, it does not matter which vector
+ is plotted first.
+ After the pair of displacements, 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right]$
+\end_inset
+
+, Victor's total displacement is 
+\begin_inset Formula $\left[\begin{array}{c}
+5+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right]$
+\end_inset
+
+.
+ In the diagram, the gray vectors represent 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right]$
+\end_inset
+
+ and the blue vectors represent 
+\begin_inset Formula $\left[\begin{array}{c}
+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right]+\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]$
+\end_inset
+
+.
+ The five vectors together illustrate the parallelogram rule for vector
+ addition.
+ The sum of two vectors is a diagonal of the parallelogram determined by
+ the two vectors.
+\end_layout
+
+\begin_layout Subsection*
+Perpendicularity
+\end_layout
+
+\begin_layout Standard
+The length of a vector, not surprisingly, is defined by the length of its
+ representative arrow.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-length-01.pdf
+	lyxscale 25
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Regardless of which direction a vector 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+ points, its length is 
+\begin_inset Formula $\sqrt{|x|^{2}+|y|^{2}}$
+\end_inset
+
+ or simply 
+\begin_inset Formula $\sqrt{x^{2}+y{}^{2}}$
+\end_inset
+
+.
+ The Pythagorean theorem is helpful in verifying this fact.
+ 
+\end_layout
+
+\begin_layout Standard
+Notice that the dot product of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with itself is
+\begin_inset Formula 
+\[
+\mathbf{v}^{T}\mathbf{v}=\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]^{T}\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]=x^{2}+y^{2}
+\]
+
+\end_inset
+
+so the length of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $|\mathbf{v}|$
+\end_inset
+
+, can also be written as 
+\begin_inset Formula 
+\[
+|\mathbf{v}|=\sqrt{\mathbf{v}^{T}\mathbf{v}}.
+\]
+
+\end_inset
+
+In the following diagram, vectors 
+\begin_inset Formula $\mathbf{v}-\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}+\mathbf{u}$
+\end_inset
+
+ have the same length in one triangle and have different lengths in the
+ other.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/mechanics-length-02.pdf
+	lyxscale 25
+	width 5.5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is congruent to itself and 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ is congruent to 
+\begin_inset Formula $-\mathbf{u}$
+\end_inset
+
+.
+ Therefore the triangle with sides 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{v}-\mathbf{u}$
+\end_inset
+
+ is congruent to the triangle with sides 
+\begin_inset Formula $-\mathbf{u}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{v}+\mathbf{u}$
+\end_inset
+
+ if and only if angle 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is congruent to angle 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (by the side-angle-side theorem of geometry).
+ Hence sides (vectors) 
+\begin_inset Formula $\mathbf{v}-\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}+\mathbf{u}$
+\end_inset
+
+ are congruent if and only if angle 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is congruent to angle 
+\begin_inset Formula $\beta$
+\end_inset
+
+, which happens if and only if 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are perpendicular.
+ This dictates something about the dot product 
+\begin_inset Formula $\mathbf{v}^{T}\mathbf{u}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are perpendicular if and only if
+\begin_inset Formula 
+\begin{align*}
+|\mathbf{v}+\mathbf{u}| & =|\mathbf{v}-\mathbf{u}|\\
+\sqrt{(\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u})} & =\sqrt{(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})}\\
+(\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})\\
+(\mathbf{v}^{T}+\mathbf{u}^{T})(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}^{T}-\mathbf{u}^{T})(\mathbf{v}-\mathbf{u})\\
+\mathbf{v}^{T}\mathbf{v}+\mathbf{v}^{T}\mathbf{u}+\mathbf{u}^{T}\mathbf{v}+\mathbf{u}^{T}\mathbf{u} & =\mathbf{v}^{T}\mathbf{v}-\mathbf{v}^{T}\mathbf{u}-\mathbf{u}^{T}\mathbf{v}+\mathbf{u}^{T}\mathbf{u}\\
+\mathbf{v}^{T}\mathbf{u}+\mathbf{u}^{T}\mathbf{v} & =-\mathbf{v}^{T}\mathbf{u}-\mathbf{u}^{T}\mathbf{v}\\
+2\mathbf{v}^{T}\mathbf{u} & =-2\mathbf{u}^{T}\mathbf{v}\\
+2\mathbf{v}^{T}\mathbf{u} & =-2\mathbf{v}^{T}\mathbf{u}\\
+4\mathbf{v}^{T}\mathbf{u} & =0\\
+\mathbf{v}^{T}\mathbf{u} & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+geometric
+\begin_inset space ~
+\end_inset
+
+interpretation
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+vectors vectors are often thought of as displacements represented by arrows.
+\end_layout
+
+\begin_layout Description
+geometric
+\begin_inset space ~
+\end_inset
+
+interpretation
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+vector
+\begin_inset space ~
+\end_inset
+
+sum the sum of two vectors is represented geometrically by a diagonal of
+ the parallelogram determined by the two vectors.
+\end_layout
+
+\begin_layout Subsection
+SageMath
+\end_layout
+
+\begin_layout Standard
+I
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+M
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

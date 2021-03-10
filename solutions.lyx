@@ -329,7 +329,15 @@ noprefix "false"
 \begin_inset Formula $k$
 \end_inset
 
- greater than or equal to one.
+ greater than or equal to one and arbitrary upper triangular 
+\begin_inset Formula $k\times k$
+\end_inset
+
+ matrix 
+\begin_inset Formula $U$
+\end_inset
+
+.
  
 \series bold
 \shape italic
@@ -354,7 +362,7 @@ noprefix "false"
 \begin_inset Formula $(k+1)\times(k+1)$
 \end_inset
 
- matrix then 
+ upper triangular matrix then 
 \begin_inset Formula $\det U=U_{1,1}U_{2,2}\cdots U_{k+1,k+1}$
 \end_inset
 
@@ -369,17 +377,34 @@ noprefix "false"
 \begin_inset Formula $(k+1)\times(k+1)$
 \end_inset
 
- matrix.
+ upper triangular matrix.
  By definition,
 \begin_inset Formula 
 \[
-\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}+(-1)^{1+2}U_{1,2}\det U_{\backslash1,2}\cdots+(-1)^{1+3}U_{1,3}\det U_{\backslash1,3}
+\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}+(-1)^{1+2}U_{1,2}\det U_{\backslash1,2}\cdots+(-1)^{1+3}U_{1,3}\det U_{\backslash1,3}.
 \]
 
 \end_inset
 
 Since 
 \begin_inset Formula $U_{\backslash1,j}$
+\end_inset
+
+ has a zero on its diagonal whenever 
+\begin_inset Formula $j>1$
+\end_inset
+
+, all terms except the first are zero.
+ Therefore, 
+\begin_inset Formula 
+\begin{equation}
+\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}.\label{eq:determinant-expansion-upper-triangular}
+\end{equation}
+
+\end_inset
+
+Since 
+\begin_inset Formula $U_{\backslash1,1}$
 \end_inset
 
  is a 
@@ -389,34 +414,25 @@ Since
  matrix, its determinant is the product of the entries on its diagonal 
 \series bold
 \shape italic
-[this is our inductive hypothesis]
+[this is the inductive hypothesis]
 \series default
 \shape default
-.
- Since there is a zero on the diagonal whenever 
-\begin_inset Formula $j>1$
-\end_inset
-
-, all terms except the first are zero.
- Therefore, 
-\begin_inset Formula $\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}$
+, so 
+\begin_inset Formula $\det U_{\backslash1,1}=U_{2,2}U_{3,3}\cdots U_{k+1,k+1}$
 \end_inset
 
 .
- Again using the inductive hypothesis, 
-\begin_inset Formula $\det U_{\backslash1,1}$
+ Substituting this expresion into (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant-expansion-upper-triangular"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- is the product of the entries on its main diagonal, 
-\begin_inset Formula $U_{2,2}U_{3,3}\cdots U_{k+1,k+1}$
-\end_inset
-
-.
- Putting this observation together with 
-\begin_inset Formula $\det U=(-1)^{1+1}U_{1,1}\det U_{\backslash1,1}$
-\end_inset
-
-, we have 
+), we have 
 \begin_inset Formula $\det U=U_{1,1}U_{2,2}U_{3,3}\cdots U_{k+1,k+1}$
 \end_inset
 

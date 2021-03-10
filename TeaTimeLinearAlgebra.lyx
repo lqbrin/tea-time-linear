@@ -452,12 +452,9 @@ filename "mechanics-multiplication.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Insert length and orthogonality? 
-\end_layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-length.lyx"
 
 \end_inset
 
@@ -664,6 +661,20 @@ filename "theory-linear-transformation.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "theory-linear-vector-transformation.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Find a place for one-to-one and onto.
+ Another section on linear transformations and invertible matrices?
+\end_layout
 
 \end_inset
 
