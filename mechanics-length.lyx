@@ -337,7 +337,8 @@ Perpendicularity
 \begin_layout Standard
 The length of a vector, not surprisingly, is defined by the length of its
  representative arrow.
- 
+ A collection of vectors pointing in various directions, including vertical
+ and horizontal are shown below.
 \end_layout
 
 \begin_layout Standard
@@ -354,7 +355,7 @@ The length of a vector, not surprisingly, is defined by the length of its
 
 \begin_layout Standard
 \noindent
-Regardless of which direction a vector 
+Regardless of which direction the vector 
 \begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
 x\\
 y
@@ -370,19 +371,23 @@ y
 \end_inset
 
 .
- The Pythagorean theorem is helpful in verifying this fact.
- 
+ The Pythagorean theorem can be used to calculate lengths of vectors that
+ are not horizontal or vertical.
 \end_layout
 
 \begin_layout Standard
-Notice that the dot product of 
+Coincidentally the dot product of 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- with itself is
+ with itself, 
+\begin_inset Formula $\mathbf{v}^{T}\mathbf{v}$
+\end_inset
+
+, is
 \begin_inset Formula 
 \[
-\mathbf{v}^{T}\mathbf{v}=\left[\begin{array}{c}
+\left[\begin{array}{c}
 x\\
 y
 \end{array}\right]^{T}\left[\begin{array}{c}
@@ -397,11 +402,34 @@ so the length of
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
-, denoted 
+ can also be written as 
+\begin_inset Formula $\sqrt{\mathbf{v}^{T}\mathbf{v}}$
+\end_inset
+
+.
+ This expression has a nice symmetry and is independent of the number of
+ entries in 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ It could apply to vectors with 3, 8, or 28 entries just as wel as vectors
+ with 2 entries.
+ Indeed, this is how the length, or magnitude, of a vector is defined for
+ any size vector.
+ The 
+\series bold
+length
+\series default
+ of a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, denoted by 
 \begin_inset Formula $|\mathbf{v}|$
 \end_inset
 
-, can also be written as 
+, is defined as
 \begin_inset Formula 
 \[
 |\mathbf{v}|=\sqrt{\mathbf{v}^{T}\mathbf{v}}.
@@ -409,7 +437,12 @@ so the length of
 
 \end_inset
 
-In the following diagram, vectors 
+
+\end_layout
+
+\begin_layout Standard
+The following diagram illustrates the relationship between the lengths of
+ vectors 
 \begin_inset Formula $\mathbf{v}-\mathbf{u}$
 \end_inset
 
@@ -417,8 +450,43 @@ In the following diagram, vectors
 \begin_inset Formula $\mathbf{v}+\mathbf{u}$
 \end_inset
 
- have the same length in one triangle and have different lengths in the
- other.
+.
+ By the side-angle-side theorem from geometry the marked triangles in each
+ figure are congruent if and only if 
+\begin_inset Formula $\alpha=\beta$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ together form a straight angle, 
+\begin_inset Formula $\alpha=\beta$
+\end_inset
+
+ if and only if they are both right angles.
+ Consequently the lengths of 
+\begin_inset Formula $\mathbf{v}+\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}-\mathbf{u}$
+\end_inset
+
+ are equal if and only if 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are perpendicular.
 \end_layout
 
 \begin_layout Standard
@@ -435,91 +503,8 @@ In the following diagram, vectors
 
 \begin_layout Standard
 \noindent
-Vector 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- is congruent to itself and 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
- is congruent to 
-\begin_inset Formula $-\mathbf{u}$
-\end_inset
-
-.
- Therefore the triangle with sides 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
-, 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
-, and 
-\begin_inset Formula $\mathbf{v}-\mathbf{u}$
-\end_inset
-
- is congruent to the triangle with sides 
-\begin_inset Formula $-\mathbf{u}$
-\end_inset
-
-, 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
-, and 
-\begin_inset Formula $\mathbf{v}+\mathbf{u}$
-\end_inset
-
- if and only if angle 
-\begin_inset Formula $\alpha$
-\end_inset
-
- is congruent to angle 
-\begin_inset Formula $\beta$
-\end_inset
-
- (by the side-angle-side theorem of geometry).
- Hence sides (vectors) 
-\begin_inset Formula $\mathbf{v}-\mathbf{u}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}+\mathbf{u}$
-\end_inset
-
- are congruent if and only if angle 
-\begin_inset Formula $\alpha$
-\end_inset
-
- is congruent to angle 
-\begin_inset Formula $\beta$
-\end_inset
-
-, which happens if and only if 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- are perpendicular.
- This dictates something about the dot product 
-\begin_inset Formula $\mathbf{v}^{T}\mathbf{u}$
-\end_inset
-
-.
- 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- are perpendicular if and only if
+This observation leads to a very useful property of the dot product, exposed
+ by the following calculation.
 \begin_inset Formula 
 \begin{align*}
 |\mathbf{v}+\mathbf{u}| & =|\mathbf{v}-\mathbf{u}|\\
@@ -536,7 +521,53 @@ Vector
 
 \end_inset
 
+Passing from the seventh equation to the eighth equation depends on the
+ fact that 
+\begin_inset Formula $\mathbf{v}^{T}\mathbf{u}=\mathbf{u}^{T}\mathbf{v}$
+\end_inset
 
+.
+ Can you show this is true for any vectors of equal size? Answer on page
+ 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:dot-product-equality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Thus vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ (with two entries) are perpendicular if and only if their dot product is
+ zero.
+ As with the formula for length, this formula naturally extends to vectors
+ with more than two entries.
+ We say that vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ of the same size are 
+\series bold
+orthogonal
+\series default
+ if and only if their dot product is zero.
+ For vectors with two or three entries this means the vectors, eminating
+ from the same point, are perpendicular.
+ In this way, orthogonality extends the idea of perpendicularity to dimensions
+ greater than three.
 \end_layout
 
 \begin_layout Subsection
@@ -580,12 +611,239 @@ sum the sum of two vectors is represented geometrically by a diagonal of
  the parallelogram determined by the two vectors.
 \end_layout
 
+\begin_layout Description
+length the length of a column vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is 
+\begin_inset Formula $\sqrt{\mathbf{v}^{T}\mathbf{v}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+orthogonal two vectors whose dot product is defined and is are orthogonal.
+\end_layout
+
 \begin_layout Subsection
 SageMath
 \end_layout
 
 \begin_layout Standard
-I
+SageMath distinguishes between vectors and matrices, but just like in mathematic
+s the distinction is blurry.
+ The SageMath code
+\end_layout
+
+\begin_layout LyX-Code
+u=vector([1,2,3])
+\end_layout
+
+\begin_layout LyX-Code
+v=matrix(3,1,[3,2,1])
+\end_layout
+
+\begin_layout LyX-Code
+print(u*v)
+\end_layout
+
+\begin_layout Standard
+runs even though the third line requests the product of a vector with a
+ matrix.
+ SageMath treats matrix 
+\family typewriter
+v
+\family default
+ as if it were a vector, sort of.
+ The output of the code is
+\end_layout
+
+\begin_layout LyX-Code
+(10)
+\end_layout
+
+\begin_layout Standard
+a vector with one entry––not a scalar and not a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix.
+ If 
+\family typewriter
+v
+\family default
+ is defined as a vector as in the following code, the output is the scalar
+ value 10, not a vector.
+\end_layout
+
+\begin_layout LyX-Code
+u=vector([1,2,3])
+\end_layout
+
+\begin_layout LyX-Code
+v=vector([3,2,1])
+\end_layout
+
+\begin_layout LyX-Code
+print(u*v)
+\end_layout
+
+\begin_layout Standard
+produces
+\end_layout
+
+\begin_layout LyX-Code
+10
+\end_layout
+
+\begin_layout Standard
+SageMath's internal process of converting one type of variable to another
+ to avoid throwing an error, a process called coersion, can produce unanticipate
+d results.
+ More predictable results are obtained by explicitly converting one type
+ of variable to another.
+ The SageMath code
+\end_layout
+
+\begin_layout LyX-Code
+u=vector([1,2,3])
+\end_layout
+
+\begin_layout LyX-Code
+v=matrix(3,1,[3,2,1])
+\end_layout
+
+\begin_layout LyX-Code
+print(u*vector(v))
+\end_layout
+
+\begin_layout Standard
+explicitly tells SageMath to treat 
+\family typewriter
+v
+\family default
+ as a vector in the computation of the product so no coersion is needed,
+ and it produces
+\end_layout
+
+\begin_layout LyX-Code
+10
+\end_layout
+
+\begin_layout Standard
+just as if 
+\family typewriter
+v
+\family default
+ were defined as a vector in the first place.
+\end_layout
+
+\begin_layout Standard
+Any row or column matrix can be converted to a vector the same way.
+ In fact, vectors can be converted to row or column matrices just as easily.
+ The following code converts 
+\family typewriter
+u
+\family default
+ to a matrix (instead of converting 
+\family typewriter
+v
+\family default
+ to a vector) and then computes the dot product.
+\end_layout
+
+\begin_layout LyX-Code
+u=vector([1,2,3])
+\end_layout
+
+\begin_layout LyX-Code
+v=matrix(3,1,[3,2,1])
+\end_layout
+
+\begin_layout LyX-Code
+print(matrix(1,3,u)*v)
+\end_layout
+
+\begin_layout Standard
+produces the 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix
+\end_layout
+
+\begin_layout LyX-Code
+[10]
+\end_layout
+
+\begin_layout Standard
+since the multiplicands are both matrices.
+ Be aware that vectors and matrices are not equivalent in SageMath.
+ Unexpected results may be seen when the two types are intermingled.
+ To avoid surprises, convert one to the other explicitly as needed.
+\end_layout
+
+\begin_layout Standard
+The length of a vector can be computed using the 
+\family typewriter
+.norm()
+\family default
+ method.
+ Consistent with the developing theme, the 
+\family typewriter
+.norm()
+\family default
+ method can be applied to either matrices or vectors, and the results are
+ different! The following code defines the 
+\begin_inset Quotes eld
+\end_inset
+
+same
+\begin_inset Quotes erd
+\end_inset
+
+ vector as both a SageMath vector and a SageMath matrix and then outputs
+ their lengths, or norms.
+\end_layout
+
+\begin_layout LyX-Code
+u_vec=vector([6,5,-3])
+\end_layout
+
+\begin_layout LyX-Code
+u_mat=matrix(1,3,[6,5,-3])
+\end_layout
+
+\begin_layout LyX-Code
+print(u_vec.norm())
+\end_layout
+
+\begin_layout LyX-Code
+print(u_mat.norm())
+\end_layout
+
+\begin_layout Standard
+produces
+\end_layout
+
+\begin_layout LyX-Code
+sqrt(70)
+\end_layout
+
+\begin_layout LyX-Code
+8.366600265340756
+\end_layout
+
+\begin_layout Standard
+The norm of a vector is computed symbolically while the norm of a matrix
+ is computed as an approximate decimal equivalent.
+ 
+\begin_inset Formula $\sqrt{70}\approx8.366600265340756$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -610,9 +868,79 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-M
+Let 
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+u_{1}\\
+u_{2}\\
+u_{3}
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]$
+\end_inset
+
+ and set 
+\begin_inset Formula 
+\[
+\mathbf{w}=\left[\begin{array}{c}
+u_{2}v_{3}-u_{3}v_{2}\\
+u_{3}v_{1}-u_{1}v_{3}\\
+u_{1}v_{2}-u_{2}v_{1}
+\end{array}\right].
+\]
+
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\mathbf{u}^{T}\mathbf{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\mathbf{v}^{T}\mathbf{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Are 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ perpendicular?
+\end_layout
+
+\begin_layout Enumerate
+Are 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ perpendicular?
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -627,6 +955,79 @@ finishexercises
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+dot
+\begin_inset space ~
+\end_inset
+
+product
+\begin_inset space ~
+\end_inset
+
+equality 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:dot-product-equality"
+
+\end_inset
+
+Letting 
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+u_{1}\\
+u_{2}\\
+\vdots\\
+u_{n}
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\mathbf{u}^{T}\mathbf{v}=\left[\begin{array}{c}
+u_{1}\\
+u_{2}\\
+\vdots\\
+u_{n}
+\end{array}\right]^{T}\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]=u_{1}v_{1}+u_{2}v_{2}+\cdots+u_{n}v_{n}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\mathbf{v}^{T}\mathbf{u}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]^{T}\left[\begin{array}{c}
+u_{1}\\
+u_{2}\\
+\vdots\\
+u_{n}
+\end{array}\right]=v_{1}u_{1}+v_{2}u_{2}+\cdots+v_{n}u_{n}.
+\]
+
+\end_inset
+
+ Since multiplication of scalars is commutative, these expressions are equal.
 \end_layout
 
 \end_body

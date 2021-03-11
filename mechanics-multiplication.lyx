@@ -655,7 +655,12 @@ It's the same calculation! There are enough similarities between column
 \series bold
 column vectors
 \series default
- or just vectors.
+ or just vectors, and we call the row-matrix-column-matrix calculation the
+ 
+\series bold
+dot product
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -676,11 +681,8 @@ A row matrix is sometimes referred to as a
 \series bold
 row vector
 \series default
-, in which case it represents a 
-\series bold
-vector
-\series default
- just like those in physics or calculus.
+ and can be used to represent vectors like those in physics or calculus
+ just as a column vector can.
 \begin_inset ERT
 status open
 
@@ -1014,6 +1016,30 @@ transpose For any
 vector A quantity with both magnitude and direction.
 \end_layout
 
+\begin_layout Description
+dot
+\begin_inset space ~
+\end_inset
+
+product the dot product of 
+\begin_inset Formula $m\times1$
+\end_inset
+
+ matrices 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbf{u}^{T}\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 SageMath
 \end_layout
@@ -1203,9 +1229,9 @@ On the other hand, SageMath is perfectly capable of treating the columns
  as vectors, as seen in the following code.
  The 
 \family typewriter
-.dot_product()
+*
 \family default
- method is used to compute the dot product of two vectors.
+ operator is used to compute the dot product of two vectors.
 \end_layout
 
 \begin_layout LyX-Code
@@ -1269,7 +1295,7 @@ print("Dot product of columns 2 and 3:")
 \end_layout
 
 \begin_layout LyX-Code
-print(c2.dot_product(c3)) 
+print(c2*c3)
 \end_layout
 
 \begin_layout Standard

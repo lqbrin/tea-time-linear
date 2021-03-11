@@ -1,0 +1,682 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Basis and Dimension
+\end_layout
+
+\begin_layout Standard
+Every vector in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ can be written as a unique linear combination of the columns of the 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ identity matrix.
+ Think about it for a moment.
+ Can you justify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:unique-linear-combination"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Taking the perspective that the matrix-column product 
+\begin_inset Formula $M\mathbf{v}$
+\end_inset
+
+ is a linear combination of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ with coefficients from 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, what we are claiming is that for any vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, the equation 
+\begin_inset Formula 
+\begin{equation}
+I\mathbf{v}=\mathbf{b}\label{eq:standard-basis}
+\end{equation}
+
+\end_inset
+
+has exactly one solution.
+ By the invertible matrix theorem, this is equivalent to claiming that 
+\begin_inset Formula $I$
+\end_inset
+
+ is invertible, which of course is true!
+\end_layout
+
+\begin_layout Standard
+Noting that the solution of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:standard-basis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is 
+\begin_inset Formula $\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ we see the vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ itself holds the coefficients of the proclaimed linear combination.
+ There is nothing ground-breaking about the calculation itself.
+ In some ways, it is just a statement of what hopefully seems obvious at
+ this point (substituting 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ for 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in the equation 
+\begin_inset Formula $I\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ makes it true, and this is the only substitution that make it true).
+ However, it hints at another way to imagine vectors.
+\end_layout
+
+\begin_layout Standard
+We can now imagine the vector as holding coefficients of a linear combination.
+ In the background is this special set of vectors (the columns of 
+\begin_inset Formula $I$
+\end_inset
+
+) that provides the vectors for the linear combination.
+ This perspective would not be terribly useful, however, if the columns
+ of 
+\begin_inset Formula $I$
+\end_inset
+
+ were the only special collection of vectors (from which each vector could
+ be written as a unique linear combination).
+ Actually, the columns of any invertible matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ form such a set.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, the invertible matrix theorem tells us that for any vector
+ 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ there is exactly one solution 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ of the equation 
+\begin_inset Formula 
+\[
+M\mathbf{v}=\mathbf{b}.
+\]
+
+\end_inset
+
+In terms of linear combinations, every vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ can be written as a unique linear combination of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ We know from theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that the linear independence of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ provides for uniqueness.
+ In the terminology of the previous section, the fact that 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ always has a solution is to say that the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ span 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ These are the characteristics of these sets that make them special—linear
+ indpendence and span—both of which have meaning in any vector space, not
+ just 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ This motivates the following definitions.
+\end_layout
+
+\begin_layout Standard
+A subset 
+\begin_inset Formula $S$
+\end_inset
+
+ of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ is called a 
+\series bold
+spanning set
+\series default
+ if 
+\begin_inset Formula $\text{span}S=V$
+\end_inset
+
+.
+ A subset of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ is called a 
+\series bold
+basis
+\series default
+ (of 
+\begin_inset Formula $V$
+\end_inset
+
+) if it is a linearly independent spanning set.
+\end_layout
+
+\begin_layout Standard
+From the discussion that led to the definition of a basis, we can be sure
+ that a basis of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ has the nice property that every vector in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ can be written as a unique linear combination of the basis vectors.
+ This does not automatically mean a basis for another vector space will
+ have the same property, so we will need to argue that it does.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{n}\}$
+\end_inset
+
+ be a basis for a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a spanning set, every vector in 
+\begin_inset Formula $V$
+\end_inset
+
+ can be written as a linear combination of the elements of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ Now suppose a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ has two representations as linear combinations of the elements of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula 
+\[
+\mathbf{v}=a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{n}\mathbf{v}_{n}\quad\text{and}\quad\mathbf{v}=b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{n}\mathbf{v}_{n}
+\]
+
+\end_inset
+
+Then 
+\begin_inset Formula $\mathbf{0}=\mathbf{v}-\mathbf{v}=(a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{n}\mathbf{v}_{n})-(b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{n}\mathbf{v}_{n})=(a_{1}-b_{1})\mathbf{v}_{1}+(a_{2}-b_{2})\mathbf{v}_{2}+\cdots+(a_{n}-b_{n})\mathbf{v}_{n}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a linearly independent set, the only solution of this equation is
+\begin_inset Formula 
+\[
+a_{1}-b_{1}=a_{2}-b_{2}=\cdots=a_{n}-b_{n}=0
+\]
+
+\end_inset
+
+and therefore the two linear combinations are equal.
+ So, given a basis of a vector space, every element of the vector space
+ can be written as a unique linear combination of the elements of the basis.
+\end_layout
+
+\begin_layout Standard
+Bases (the plural of basis) have another important property.
+ If there is a basis of a vector space with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements, then any subset of the vector space with more than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements is linearly dependent.
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{n}\}$
+\end_inset
+
+ is a basis of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $S=\{\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{p}\}$
+\end_inset
+
+ where 
+\begin_inset Formula $p>n$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a spanning set, each element of 
+\begin_inset Formula $S$
+\end_inset
+
+ can be written as a linear combination of the elements of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ Let
+\begin_inset Formula 
+\begin{align*}
+\mathbf{u}_{1} & =M_{1,1}\mathbf{v}_{1}+M_{2,1}\mathbf{v}_{2}+\cdots+M_{n,1}\mathbf{v}_{n}\\
+\mathbf{u}_{2} & =M_{1,2}\mathbf{v}_{1}+M_{2,2}\mathbf{v}_{2}+\cdots+M_{n,2}\mathbf{v}_{n}\\
+ & \vdots\\
+\mathbf{u}_{p} & =M_{1,p}\mathbf{v}_{1}+M_{2,p}\mathbf{v}_{2}+\cdots+M_{n,p}\mathbf{v}_{n}
+\end{align*}
+
+\end_inset
+
+ Then 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+M_{1,1} & M_{1,2} & \cdots & M_{1,p}\\
+M_{2,1} & M_{2,2} & \cdots & M_{2,p}\\
+\vdots & \vdots & \ddots & \vdots\\
+M_{n,1} & M_{n,2} & \cdots & M_{n,p}
+\end{array}\right]
+\]
+
+\end_inset
+
+ has more columns than rows, so 
+\begin_inset Formula $M$
+\end_inset
+
+ cannot have a pivot in each column.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, there is a nonzero vector 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{w}=\mathbf{0}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathbf{w}=\left[\begin{array}{cccc}
+w_{1} & w_{2} & \cdots & w_{p}\end{array}\right]^{T}$
+\end_inset
+
+ be such a vector.
+ Then
+\begin_inset Formula 
+\begin{align*}
+w_{1}\mathbf{u}_{1}+w_{2}\mathbf{u}_{2}+\cdots+w_{p}\mathbf{u}_{p} & =\phantom{+}w_{1}M_{1,1}\mathbf{v}_{1}+w_{1}M_{2,1}\mathbf{v}_{2}+\cdots+w_{1}M_{n,1}\mathbf{v}_{n}\\
+ & \phantom{=}\,+w_{2}M_{1,2}\mathbf{v}_{1}+w_{2}M_{2,2}\mathbf{v}_{2}+\cdots+w_{2}M_{n,2}\mathbf{v}_{n}\\
+ & \phantom{=}\quad\vdots\\
+ & \phantom{=}\,+w_{p}M_{1,p}\mathbf{v}_{1}+w_{p}M_{2,p}\mathbf{v}_{2}+\cdots+w_{p}M_{n,p}\mathbf{v}_{n}\\
+ & =\phantom{+}(M_{1,1}w_{1}+M_{1,2}w_{2}+\cdots+M_{1,p}w_{p})\mathbf{v}_{1}\\
+ & \phantom{=}\,+(M_{2,1}w_{1}+M_{2,2}w_{2}+\cdots+M_{2,p}w_{p})\mathbf{v}_{2}\\
+ & \phantom{=}\quad\vdots\\
+ & \phantom{=}\,+(M_{n,1}w_{1}+M_{n,2}w_{2}+\cdots+M_{n,p}w_{p})\mathbf{v}_{n}\\
+ & =0\mathbf{v}_{1}+0\mathbf{v}_{2}+\cdots+0\mathbf{v}_{n}\\
+ & =\mathbf{0}.
+\end{align*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $\mathbf{w}\neq\mathbf{0}$
+\end_inset
+
+, we have demonstrated a nontrivial linear combination of the vectors in
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ that sum to to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+, showing that 
+\begin_inset Formula $S$
+\end_inset
+
+ is linearly dependent.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+v
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+V
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+unique
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+combination 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:unique-linear-combination"
+
+\end_inset
+
+For an arbitrary vector 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}
+\end{array}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{b} & =\left[\begin{array}{c}
+b_{1}\\
+0\\
+0\\
+\vdots\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+0\\
+b_{2}\\
+0\\
+\vdots\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+0\\
+0\\
+b_{3}\\
+\vdots\\
+0
+\end{array}\right]+\cdots+\left[\begin{array}{c}
+0\\
+0\\
+0\\
+\vdots\\
+b_{n}
+\end{array}\right]\\
+ & =b_{1}\left[\begin{array}{c}
+1\\
+0\\
+0\\
+\vdots\\
+0
+\end{array}\right]+b_{2}\left[\begin{array}{c}
+0\\
+1\\
+0\\
+\vdots\\
+0
+\end{array}\right]+b_{3}\left[\begin{array}{c}
+0\\
+0\\
+1\\
+\vdots\\
+0
+\end{array}\right]+\cdots+b_{n}\left[\begin{array}{c}
+0\\
+0\\
+0\\
+\vdots\\
+1
+\end{array}\right]\\
+ & =b_{1}I_{:,1}+b_{2}I_{:,2}+\cdots+b_{n}I_{:,n}
+\end{align*}
+
+\end_inset
+
+and no other linear combination of the columns of 
+\begin_inset Formula $I$
+\end_inset
+
+ equals 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ (because each coefficient of the linear combination affects one and only
+ one entry of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+).
+\end_layout
+
+\end_body
+\end_document
