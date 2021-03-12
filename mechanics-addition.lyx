@@ -673,8 +673,23 @@ Multiplying a matrix by a number is also done component-wise.
 
 \end_inset
 
-This is often referred to as scalar multiplication to differentiate it from
- matrix multiplication, the subject of the next section.
+This is often referred to as scalar
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In this textbook, the word 
+\shape italic
+scalar
+\shape default
+ refers to either a real number or a complex number.
+ In more abstract settings, the word scalar refers to any element of a field.
+\end_layout
+
+\end_inset
+
+ multiplication to differentiate it from matrix multiplication, the subject
+ of the next section.
  In symbols,
 \begin_inset Formula 
 \[
@@ -730,6 +745,64 @@ for all entries
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Fields}
+\end_layout
+
+\end_inset
+
+Sets of scalars other than real numbers and complex numbers are permissible
+ in linear algebra as long as matrix entries come from the same field.
+ A field must contain an additive identity, denoted by 
+\begin_inset Formula $0$
+\end_inset
+
+, and a multiplicative identity, denoted by 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ A field with only these two elements can be defined by treating 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ as integers except that 
+\begin_inset Formula $1+1=0$
+\end_inset
+
+.
+ The field of two elements is often denoted 
+\begin_inset Formula $\mathbb{F}_{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbb{Z}_{2}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -878,7 +951,7 @@ For any matrices
 \end_layout
 
 \begin_layout Description
-scalar A quantity completely specified by a number on an appropriate scale.
+scalar An element of a field.
 \end_layout
 
 \begin_layout Description

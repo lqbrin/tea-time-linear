@@ -170,30 +170,20 @@ noprefix "false"
 
  itself holds the coefficients of the proclaimed linear combination.
  There is nothing ground-breaking about the calculation itself.
- In some ways, it is just a statement of what hopefully seems obvious at
- this point (substituting 
-\begin_inset Formula $\mathbf{b}$
+ However, it strikes at the essence of elements of 
+\begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- for 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- in the equation 
-\begin_inset Formula $I\mathbf{v}=\mathbf{b}$
-\end_inset
-
- makes it true, and this is the only substitution that make it true).
- However, it hints at another way to imagine vectors.
+, paving the way for abstraction to arbitrary vector spaces.
 \end_layout
 
 \begin_layout Standard
-We can now imagine the vector as holding coefficients of a linear combination.
- In the background is this special set of vectors (the columns of 
-\begin_inset Formula $I$
+Given any set of vectors (elements of a vector space), we can now imagine
+ elements of 
+\begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
-) that provides the vectors for the linear combination.
+ as holding coefficients of a linear combination of these vectors.
  This perspective would not be terribly useful, however, if the columns
  of 
 \begin_inset Formula $I$
@@ -201,7 +191,32 @@ We can now imagine the vector as holding coefficients of a linear combination.
 
  were the only special collection of vectors (from which each vector could
  be written as a unique linear combination).
- Actually, the columns of any invertible matrix 
+ As it turns out, there are many such sets of vectors.
+ For example, 
+\begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
+\end_inset
+
+ forms such a set in 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+.
+ Can you verify this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:polynomial-unique-representation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ the columns of any invertible matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -239,21 +254,6 @@ In terms of linear combinations, every vector
 \end_inset
 
 .
- We know from theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:Matrix-Characterization-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- that the linear independence of the columns of 
-\begin_inset Formula $M$
-\end_inset
-
- provides for uniqueness.
  In the terminology of the previous section, the fact that 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
@@ -267,14 +267,40 @@ noprefix "false"
 \end_inset
 
 .
- These are the characteristics of these sets that make them special—linear
- indpendence and span—both of which have meaning in any vector space, not
- just 
+ The linear independence of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ provides for uniqueness (by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ These are the characteristics of the columns of an invertible matrix that
+ makes it a special set—linear independence and span.
+ Conveniently, the terms 
+\shape italic
+linear independence
+\shape default
+ and 
+\shape italic
+span
+\shape default
+ have meaning in 
+\shape italic
+any
+\shape default
+ vector space, not just 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
-.
- This motivates the following definitions.
+, motivating the following definitions.
 \end_layout
 
 \begin_layout Standard
@@ -316,13 +342,38 @@ From the discussion that led to the definition of a basis, we can be sure
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- has the nice property that every vector in 
+ has the special property that every vector in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
  can be written as a unique linear combination of the basis vectors.
- This does not automatically mean a basis for another vector space will
- have the same property, so we will need to argue that it does.
+ However, this property does not automatically transfer to a basis of an
+ arbitrary vector space.
+ We will need to argue that if 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a basis of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is expressible as a unique linear combination of the vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -331,6 +382,14 @@ Let
 \end_inset
 
  be a basis for a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ and let 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ be a vector in 
 \begin_inset Formula $V$
 \end_inset
 
@@ -347,8 +406,30 @@ Let
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
+, including 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
 .
- Now suppose a vector 
+ Thus 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is expressible as at least one linear combination of the vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ It remains to show 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is expressible as at most one linear combination of the vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ To that end, suppose 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -360,7 +441,7 @@ Let
  That is, 
 \begin_inset Formula 
 \[
-\mathbf{v}=a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{n}\mathbf{v}_{n}\quad\text{and}\quad\mathbf{v}=b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{n}\mathbf{v}_{n}
+\mathbf{v}=a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{n}\mathbf{v}_{n}\quad\text{and}\quad\mathbf{v}=b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{n}\mathbf{v}_{n}.
 \]
 
 \end_inset
@@ -455,7 +536,7 @@ M_{n,1} & M_{n,2} & \cdots & M_{n,p}
 
 \end_inset
 
- has more columns than rows, so 
+has more columns than rows, so 
 \begin_inset Formula $M$
 \end_inset
 
@@ -511,7 +592,7 @@ Since
 \begin_inset Formula $S$
 \end_inset
 
- that sum to to 
+ that sum to 
 \begin_inset Formula $\mathbf{0}$
 \end_inset
 
@@ -520,6 +601,191 @@ Since
 \end_inset
 
  is linearly dependent.
+ This fact is important enough to repeat as a theorem.
+\end_layout
+
+\begin_layout Theorem
+If a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ has a basis with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements, then any subset of 
+\begin_inset Formula $V$
+\end_inset
+
+ containing more than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements is linearly dependent.
+\end_layout
+
+\begin_layout Standard
+To understand the implications of this theorem, let 
+\begin_inset Formula $V$
+\end_inset
+
+ be a vector space with basis 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{n}\}$
+\end_inset
+
+ and consider two subsets of 
+\begin_inset Formula $V$
+\end_inset
+
+—
+\begin_inset Formula $F$
+\end_inset
+
+ containing fewer than 
+\begin_inset Formula $n$
+\end_inset
+
+ vectors and 
+\begin_inset Formula $G$
+\end_inset
+
+ containing greater than 
+\begin_inset Formula $n$
+\end_inset
+
+ vectors.
+ 
+\begin_inset Formula $G$
+\end_inset
+
+ cannot be a basis because it has more than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements (which makes it a linearly dependent set).
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ cannot be a basis for 
+\begin_inset Formula $V$
+\end_inset
+
+ because if it were, that would make 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ linearly dependent thereby contradicting the fact that 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a basis.
+ In other words, if a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ admits a basis with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements, all bases of 
+\begin_inset Formula $V$
+\end_inset
+
+ have 
+\begin_inset Formula $n$
+\end_inset
+
+ elements.
+ This number 
+\begin_inset Formula $n$
+\end_inset
+
+ is thus a characteristic of 
+\begin_inset Formula $V$
+\end_inset
+
+ and therefore deserves a name.
+ We call the number of elements in a basis the 
+\series bold
+dimension
+\series default
+ of a vector space.
+ The content of this section justifies the claims that
+\end_layout
+
+\begin_layout Enumerate
+the dimension of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is 
+\begin_inset Formula $n$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Enumerate
+the dimension of 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+ is 3
+\end_layout
+
+\begin_layout Standard
+because
+\end_layout
+
+\begin_layout Enumerate
+the columns of 
+\begin_inset Formula $I_{n\times n}$
+\end_inset
+
+ form a basis of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
+\end_inset
+
+ forms a basis of 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\{I_{:,1},I_{:,2},\ldots,I_{:,n}\}$
+\end_inset
+
+ is called the 
+\series bold
+standard basis
+\series default
+ of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{1,t,\ldots,t^{n}\}$
+\end_inset
+
+ is called the 
+\series bold
+standard basis
+\series default
+ of 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -527,7 +793,131 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-v
+
+\series bold
+spanning
+\begin_inset space ~
+\end_inset
+
+set
+\series default
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ is a spanning set of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ if 
+\begin_inset Formula $\text{span}S=V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+basis a linearly independent spanning set of a vector space.
+\end_layout
+
+\begin_layout Description
+dimension the number of vectors in a basis of a vector space.
+\end_layout
+
+\begin_layout Description
+standard
+\begin_inset space ~
+\end_inset
+
+basis
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ the columns of 
+\begin_inset Formula $I_{n\times n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+standard
+\begin_inset space ~
+\end_inset
+
+basis
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+ 
+\begin_inset Formula $\{1,t,\ldots,t^{n}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+dependence if a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ has dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, any subset of 
+\begin_inset Formula $V$
+\end_inset
+
+ with more than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements is linearly dependent.
+\end_layout
+
+\begin_layout Description
+spanning if a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ has dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, any subset of 
+\begin_inset Formula $V$
+\end_inset
+
+ with less than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements does not span 
+\begin_inset Formula $V$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -552,9 +942,46 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-V
+Justify the claim.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{1,t,\ldots,t^{n}\}$
+\end_inset
+
+ is a basis of 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ has dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, any subset of 
+\begin_inset Formula $V$
+\end_inset
+
+ with less than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements does not span 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -676,6 +1103,90 @@ and no other linear combination of the columns of
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Description
+unique
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+combinations
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+polynomials 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:polynomial-unique-representation"
+
+\end_inset
+
+An arbitrary element of 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+ takes the form 
+\begin_inset Formula $p(t)=at^{2}+bt+c$
+\end_inset
+
+.
+ To write 
+\begin_inset Formula $p$
+\end_inset
+
+ as a linear combination of the elements of 
+\begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
+\end_inset
+
+, we need real numbers 
+\begin_inset Formula $\alpha,\beta,\gamma$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\alpha t+\beta t^{2}+\gamma(1+t^{2})=at^{2}+bt+c
+\]
+
+\end_inset
+
+or 
+\begin_inset Formula $\gamma+\alpha t+(\gamma+\beta)t^{2}=at^{2}+bt+c$
+\end_inset
+
+.
+ From here, it is clear that we need 
+\begin_inset Formula $\gamma=c$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha=b$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma+\beta=a$
+\end_inset
+
+.
+ Solving this last equation for 
+\begin_inset Formula $\beta$
+\end_inset
+
+, we find 
+\begin_inset Formula $\beta=a-\gamma=a-c$
+\end_inset
+
+.
+ The algebra shows that not only is this a solution to the problem, it is
+ the only one!
 \end_layout
 
 \end_body

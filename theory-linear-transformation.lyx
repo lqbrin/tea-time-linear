@@ -88,10 +88,6 @@ enumitem
 
 \begin_body
 
-\begin_layout Chapter
-Linear Transformations
-\end_layout
-
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -103,12 +99,12 @@ Functions and Transformations
 \end_layout
 
 \begin_layout Subsection
-Functions and Relations
+Background
 \end_layout
 
 \begin_layout Standard
-Think for a moment about what you remember about functions before reading
- on.
+Give yourself a moment to recall everything you can about functions before
+ reading on.
  Go ahead.
  Think about it.
  Close your eyes.
@@ -178,15 +174,14 @@ there's a domain
 \begin_inset Quotes erd
 \end_inset
 
-, and more.
+, and so on.
  Whatever came to mind is okay—it was probably related.
  Now try to divorce yourself from all those ideas.
  Free your mind from past experiences, and start over.
  We'll come back to the familiar ideas of function notation and graphing
  later.
  For now try to think more generally, more abstractly about functions.
- The ability to think abstractly will become more important as we progress
- through the present chapter and the next.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -197,12 +192,11 @@ A function is made from three ingredients—three sets, really.
  matrices in one and integers in the other—no restrictions.
  The definition of function does not specify.
  These two sets are called the domain and codomain.
- There are no rules about what kinds of sets can be which.
  Any set can be the domain of a function, and any set can be the codomain
  of a function.
  The only requirements of a function are placed on the third set.
- This set must contain exactly one ordered pair for each element (member)
- of the domain.
+ This set must contain exactly one ordered pair for each element of the
+ domain.
  The order of the elements is important too.
  The first component of each ordered pair must be an element of the domain
  and the second component must be an element of the codomain.
@@ -213,7 +207,7 @@ A relation, like a function is made from three sets, a domain, a codomain,
  and a set of ordered pairs where the first component of the orderd pair
  is an element of the domain and the second component is an element of the
  codomain.
- No further requirements.
+ Unlike a function, there are no further requirements.
  Thus, a relation can be thought of as a 
 \series bold
 rela
@@ -224,12 +218,8 @@ tion
 \series default
 .
  It has to adhere to fewer rules.
- Given two sets, any set of ordered pairs (where the first component of
- each ordered pair is taken from one set while the second component is taken
- from the other) defines a relation.
- Remember, though, not any set of ordered pairs defines a function.
- For a relation to be a function, it must contain exactly one ordered pair
- for each element of the domain.
+ Remember, the set of ordered pairs defining a function must contain exactly
+ one ordered pair for each element of the domain.
 \end_layout
 
 \begin_layout Standard
@@ -308,16 +298,11 @@ relation
 \begin_inset Formula $A\times B$
 \end_inset
 
-.
- A 
+, and a 
 \series bold
 function
 \series default
- is a subset 
-\begin_inset Formula $C$
-\end_inset
-
- of 
+ is a subset of 
 \begin_inset Formula $A\times B$
 \end_inset
 
@@ -326,23 +311,7 @@ function
 \end_inset
 
 .
- That is, for any function 
-\begin_inset Formula $C$
-\end_inset
-
-, if 
-\begin_inset Formula $(a,b_{1})\in C$
-\end_inset
-
- and 
-\begin_inset Formula $(a,b_{2})\in C$
-\end_inset
-
- then 
-\begin_inset Formula $b_{1}=b_{2}$
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -350,7 +319,7 @@ A relation
 \begin_inset Formula $C$
 \end_inset
 
- might be given using the rather compact notation 
+ might be given using the rather compact set notation 
 \begin_inset Formula $C=\{(a,b)\in A\times B:\text{rule of correspondence}\}$
 \end_inset
 
@@ -436,30 +405,23 @@ When a relation is a function, we may emphasize this point using the notation
 \end_layout
 
 \begin_layout Standard
-When you first encountered functions, explicit mention of the domain and
- codomain was probably not made.
- The domain and codomain quickly faded into the background in favor of focusing
- on the rule of correspondence, such as 
+Explicit mention of the domain and codomain of a function is often not made.
+ The domain and codomain often fade into the background in favor of focusing
+ on the rule of correspondence, such as in 
 \begin_inset Formula $f(x)=3x+11$
 \end_inset
 
 .
- It was just assumed, after a brief introduction to the idea, that the codomain
- was the set of all real numbers and the domain was some subset of the real
- numbers—with good reason.
- It would have been rather repetitive to write 
+ It is just assumed or implied that the codomain is the set of all real
+ numbers and the domain is some subset of the real numbers—with good reason.
+ It would be rather repetitive to write 
 \begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
 \end_inset
 
- (
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
- is the symbol for the set of all real numbers) every time a function on
- the real numbers came up in algebra class.
- More importantly, though, the domains of many of the functions you encountered
- were not all real numbers.
- It would have been a difficult distraction to have to write 
+ every time a function on the real numbers comes up.
+ More importantly, though, the domains of many functions with succinct formulas
+ are not all real numbers.
+ It would be a difficult distraction to have to write 
 \begin_inset Formula $f:A\to\mathbb{R}$
 \end_inset
 
@@ -467,11 +429,12 @@ When you first encountered functions, explicit mention of the domain and
 \begin_inset Formula $A$
 \end_inset
 
- correct every time a function was mentioned.
+ correct every time a function is mentioned.
  The domain only includes elements that correspond to some element of the
- dodomain.
- To compensate for the simplifying assumption, a classic problem in algebra
- is to find the 
+ codomain, so to be complete, the definition of a function should include
+ this information.
+ To compensate for the lack of completeness in practice, a classic problem
+ in algebra is to find the 
 \shape italic
 implied
 \shape default
@@ -479,12 +442,12 @@ implied
 \begin_inset Formula $f(x)=\frac{3x+7}{2x-5}$
 \end_inset
 
-, the subset of real numbers that correspond to real numbers according to
- the formula.
+—the subset of real number inputs that correspond to real number outputs
+ according to the formula.
 \end_layout
 
 \begin_layout Standard
-The discussion of inverse functions was likely complicated by not introducing
+The discussion of inverse functions is often obfuscated by not introducing
  the notion of a relation.
  if 
 \begin_inset Formula $C$
@@ -520,7 +483,11 @@ inverse relation
 
 .
  Every relation has an inverse relation.
- By extension, every function has an inverse relation.
+ By extension, every function has an inverse 
+\shape italic
+relation
+\shape default
+.
  That is not to say that every function has an inverse function, however.
  There are plenty that do not.
 \end_layout
@@ -530,11 +497,9 @@ Maps and Transformations
 \end_layout
 
 \begin_layout Standard
-The ideas and conventions surrounding functions will be perpetuated and,
- more importantly, extended in this course.
- First, 
+
 \series bold
-map
+Map
 \series default
 , 
 \series bold
@@ -549,7 +514,8 @@ transformation
 function
 \series default
 .
- All four words share the same definition, but 
+ All four words share the same definition, when the codomain is not the
+ set of real numbers, the word 
 \begin_inset Quotes eld
 \end_inset
 
@@ -557,116 +523,10 @@ function
 \begin_inset Quotes erd
 \end_inset
 
- is often eschewed in favor of one of the others when the codomain is not
- the set of real numbers.
- To lend robustness to the conversation, we define the following symbols.
+ is often supplanted by one of the others.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mathbb{Z}=\{z:z\text{ is an integer}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{Z}^{+}=\{z:z\text{ is a positive integer}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{Q}=\{q:q\text{ is a rational number}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{R}=\{r:r\text{ is a real number}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{C}=\{c:c\text{ is a complex number}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{R}^{n}=\{\mathbf{v}:\mathbf{v}\text{ is an }n\times1\text{ matrix (vector) with real number entries}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{R}^{\mathbb{N}}=\{s:s\text{ is a sequence of real numbers}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathcal{M}_{m\times n}(Z)=\{M:M\text{ is an }m\times n\text{ matrix with entries in the set }Z\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $GL_{n}(Z)=\{M\text{ in }\mathcal{M}_{n\times n}(Z):M^{-1}\text{ exists in }\mathcal{M}_{n\times n}(Z)\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbb{P}_{n}(Z)=\{p:p\text{ is a polynomial of degree }n\text{ or less with coefficients in }Z\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $F(D)=\{f:f\text{ is a function from }D\text{ to }\mathbb{R}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C^{n}(D)=\{f:f\text{ is a continuous function from }D\text{ to }\mathbb{R}\text{ with }n\text{ continuous derivatives}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $Z$
-\end_inset
-
- is taken to be one of 
-\begin_inset Formula $\mathbb{Q},\ \mathbb{R},\text{ or }\mathbb{C}$
-\end_inset
-
-, and 
-\begin_inset Formula $D$
-\end_inset
-
- is taken to be a subset of 
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\noindent
 The 
 \begin_inset Formula $3n+1$
 \end_inset
@@ -719,7 +579,7 @@ noprefix "false"
 
 \begin_layout Standard
 The transformation 
-\begin_inset Formula $\mathcal{A}:C^{0}(D)\to C^{1}(D)$
+\begin_inset Formula $\mathcal{A}:C(D)\to C^{1}(D)$
 \end_inset
 
  given by 
@@ -778,7 +638,7 @@ The map
 
 \begin_layout Standard
 The determinant is a function or map 
-\begin_inset Formula $\det:\mathcal{M}_{n\times n}(\mathbb{R})\to\mathbb{R}$
+\begin_inset Formula $\det:\mathcal{M}_{n\times n}(\mathbb{F})\to\mathbb{F}$
 \end_inset
 
  for each 
@@ -790,10 +650,8 @@ The determinant is a function or map
 \end_inset
 
  matrix has exactly one determinant.
- Perhaps you thought of this point on your own, and perhaps not.
- No matter as long as you can see the determinant this way now.
  The transformation 
-\begin_inset Formula $V:GL_{n}(\mathbb{R})\to GL_{n}(\mathbb{R})$
+\begin_inset Formula $V:GL_{n}(\mathbb{F})\to GL_{n}(\mathbb{F})$
 \end_inset
 
  mapping an invertible matrix to its inverse provides motivation to think
@@ -804,14 +662,19 @@ The determinant is a function or map
 \end_inset
 
 , as in 
-\begin_inset Formula $T(\mathbf{x})=\left[\begin{array}{ccc}
-1 & 2 & -5\\
-16 & -4 & 2
-\end{array}\right]\mathbf{x}$
+\begin_inset Formula $T(\mathbf{x})=M\mathbf{x}$
+\end_inset
+
+ for some matrix 
+\begin_inset Formula $M$
 \end_inset
 
 .
- It has two special properties,
+ Transformations 
+\begin_inset Formula $T$
+\end_inset
+
+ defined this way have two properties:
 \end_layout
 
 \begin_layout Enumerate
@@ -857,7 +720,13 @@ The determinant is a function or map
 \end_layout
 
 \begin_layout Standard
-These two properties make it a linear transformation.
+These two properties mean that performing addition and scalar multiplication
+ in the domain and then transforming (the left sides of the equations) gives
+ the same result as transforming first and then performing the addition
+ and scalar multiplication in the codomain.
+ We say that this type of transformation preserves the operations of addition
+ and scalar multiplication, and its properties form the essence for the
+ abstraction of this idea to arbitrary vector spaces.
 \end_layout
 
 \begin_layout Subsection*
@@ -865,31 +734,31 @@ Linear Transformations
 \end_layout
 
 \begin_layout Standard
-Given sets 
-\begin_inset Formula $A$
+Given vector spaces 
+\begin_inset Formula $V$
 \end_inset
 
  and 
-\begin_inset Formula $B$
+\begin_inset Formula $W$
 \end_inset
 
- on which addition and scalar multiplication are defined, a 
+, a 
 \series bold
 linear transformation
 \series default
  is any transformation 
-\begin_inset Formula $L:A\to B$
+\begin_inset Formula $L:V\to W$
 \end_inset
 
- such that for any 
+ such that for every 
 \begin_inset Formula $x,y$
 \end_inset
 
  in 
-\begin_inset Formula $A$
+\begin_inset Formula $V$
 \end_inset
 
- and any scalar 
+ and scalar 
 \begin_inset Formula $c$
 \end_inset
 
@@ -1107,7 +976,7 @@ ve inverses.
 \begin_inset Formula $T$
 \end_inset
 
- has an inverse function, 
+ has an inverse function 
 \begin_inset Formula $T^{-1}$
 \end_inset
 
@@ -1124,6 +993,15 @@ ve inverses.
 \end_inset
 
 .
+ Start with 
+\begin_inset Formula $a$
+\end_inset
+
+, end with 
+\begin_inset Formula $a$
+\end_inset
+
+.
  Composing 
 \begin_inset Formula $T^{-1}$
 \end_inset
@@ -1132,7 +1010,11 @@ ve inverses.
 \begin_inset Formula $T$
 \end_inset
 
- returns the starting value, much like left multiplying the matrix 
+ returns the starting value, much like 
+\begin_inset Formula $M^{-1}(MA)=A$
+\end_inset
+
+—left multiplying the matrix 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1149,48 +1031,12 @@ ve inverses.
 \end_inset
 
 .
- In other words, 
-\begin_inset Formula $M^{-1}(MA)=A$
-\end_inset
-
-.
  Start with 
 \begin_inset Formula $A$
 \end_inset
 
 , end with 
 \begin_inset Formula $A$
-\end_inset
-
-.
- In terms of the inverse function, applying 
-\begin_inset Formula $T$
-\end_inset
-
- to 
-\begin_inset Formula $a$
-\end_inset
-
- and then applying 
-\begin_inset Formula $T^{-1}$
-\end_inset
-
- to the result results in 
-\begin_inset Formula $a$
-\end_inset
-
-.
- In other words, 
-\begin_inset Formula $T^{-1}(T(a))=a$
-\end_inset
-
-.
- Start with 
-\begin_inset Formula $a$
-\end_inset
-
-, end with 
-\begin_inset Formula $a$
 \end_inset
 
 .
@@ -1644,6 +1490,32 @@ Verify that
  is not.
 \end_layout
 
+\begin_layout Enumerate
+Justify the claim.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For any function 
+\begin_inset Formula $C\subseteq A\times B$
+\end_inset
+
+, if 
+\begin_inset Formula $(a,b_{1})\in C$
+\end_inset
+
+ and 
+\begin_inset Formula $(a,b_{2})\in C$
+\end_inset
+
+ then 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open

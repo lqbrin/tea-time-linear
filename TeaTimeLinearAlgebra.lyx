@@ -399,7 +399,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Part I: Mechanics 
+% Part I: Matrix Mechanics 
 \end_layout
 
 \end_inset
@@ -541,20 +541,6 @@ status open
 
 \begin_layout Plain Layout
 
-% Part II: Theory 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
 % Chapter 3: Matrix Algebra 
 \end_layout
 
@@ -639,8 +625,42 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 4: Linear Transformations 
+% Part II: Matrix Abstraction 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Chapter 4: Vector Spaces 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-vector-spaces.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-basis-and-dimension.lyx"
 
 \end_inset
 
@@ -682,43 +702,13 @@ TODO: Find a place for one-to-one and onto.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "theory-det-eig-area.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-% Chapter 5: Vector Spaces 
+% Chapter 5: Inner Product Spaces 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "theory-vector-spaces.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "theory-basis-and-dimension.lyx"
 
 \end_inset
 
@@ -747,6 +737,16 @@ status open
 
 % Chapter 6: Applications to Branches of Mathematics 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-det-eig-area.lyx"
 
 \end_inset
 

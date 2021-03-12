@@ -88,12 +88,133 @@ enumitem
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mypart{Matrix Abstraction}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Vector-Spaces"
+
+\end_inset
+
 Vector Spaces
 \end_layout
 
+\begin_layout Standard
+Abstraction is at the heart of all of mathematics.
+ It is an essential vehicle for the development of new ideas.
+ Take natural numbers (one, two, three, and so on), for example.
+ These numbers have a 
+\begin_inset Quotes eld
+\end_inset
+
+natural
+\begin_inset Quotes erd
+\end_inset
+
+ meaning—quantity.
+ If you have a number of objects before you, then there are one or two or
+ maybe twenty-two.
+ The objects are there.
+ They can be counted.
+ But what does it mean to 
+\begin_inset Quotes eld
+\end_inset
+
+count
+\begin_inset Quotes erd
+\end_inset
+
+ the number of objects before you when there are none? The whole idea of
+ doing it is an abstraction of the notion of counting, and it leads to the
+ number zero.
+ To the natural numbers, we add this number we call zero, and say that it
+ represents the number of objects you have when you have none.
+ You cannot explain zero in the same concrete way you can explain one or
+ two or three.
+ It requires an intellectual leap in one's understanding of counting.
+\end_layout
+
+\begin_layout Standard
+The use of variables requires another intellectual leap.
+ It is one thing to say that 
+\begin_inset Formula $4+5=5+4$
+\end_inset
+
+, but it is quite another to say that 
+\begin_inset Formula $x+y=y+x$
+\end_inset
+
+.
+ The unspecified quantities (variables 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+) are abstractions of numbers.
+ Much like zero, they represent something that is not readily available
+ to see or put in other concrete terms.
+ This basic idea of using unspecified quantities gives rise to an entire
+ branch of mathematics—algebra! Many branches of mathematics revolve around
+ similar abstractions.
+ A body of objects or ideas is stripped down to its essence, which then
+ gives rise to similar but new objects or ideas.
+ 
+\end_layout
+
+\begin_layout Standard
+Thinking of the numbers one, two, three, and so on as counting numbers allows
+ the abstraction of 
+\begin_inset Quotes eld
+\end_inset
+
+counting
+\begin_inset Quotes erd
+\end_inset
+
+ zero objects.
+ Using symbols other than numbers to stand in for numbers allows the abstraction
+ of including unspecified quantities in an expression.
+ Introducing the number zero or the idea of a variable allows a new perspective
+ from which new mathematics can bloom.
+ This idea is the foundation for many branches of mathematics.
+ Abstract algebra is built upon abstraction of binary operators such as
+ addition and multiplication, both of which are associative, admit an identity
+ element and inverses, and are closed on certain sets of real numbers.
+ Topology is built upon abstraction of open intervals of the real line,
+ arbitrary unions of which are also open, and closed intervals of the real
+ line, finite intersections of which are also closed.
+ Non-Euclidean geometry is built upon abstraction of the idea of the idea
+ of a line.
+\end_layout
+
+\begin_layout Standard
+It is in this vein that this part of the book is called matrix abstraction.
+ The essential ingredients of objects and ideas already explored and understood
+ in a concrete way (vectors, matrix multiplication, and dot product to be
+ specific) will be extracted from their concrete settings, opening doors
+ to new mathematics.
+\end_layout
+
 \begin_layout Section
-Vector Space and Subspaces
+Vector Spaces and Span
 \end_layout
 
 \begin_layout Standard
@@ -170,36 +291,18 @@ Implicit in the assumptions that addition and scalar multiplication are
 \end_inset
 
  is not closed under addition nor scalar multiplication.
- 
-\begin_inset Formula $t+t^{2}$
-\end_inset
+ Can you verify this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:not-closed"
+plural "false"
+caps "false"
+noprefix "false"
 
-, the sum of two elements in 
-\begin_inset Formula $T$
-\end_inset
-
-, is not itself in 
-\begin_inset Formula $T$
-\end_inset
-
-.
- 
-\begin_inset Formula $17t^{2}$
-\end_inset
-
-, a scalar multiple of an element of 
-\begin_inset Formula $T$
-\end_inset
-
-, is not itself in 
-\begin_inset Formula $T$
 \end_inset
 
 .
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
 name "par:closure-of-linear-combinations"
@@ -216,58 +319,25 @@ The set
 
  (with scalars from the set of real numbers) is closed under addition and
  scalar multiplication, however.
- An arbitrary element of 
-\begin_inset Formula $S$
-\end_inset
+ Can you verify this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-combinations-closed"
+plural "false"
+caps "false"
+noprefix "false"
 
- has the form 
-\begin_inset Formula $\alpha t+\beta t^{2}+\gamma(1+t^{2})$
-\end_inset
-
- for some scalars 
-\begin_inset Formula $\alpha,\beta,\gamma$
-\end_inset
-
-.
- The scalar multiple of an arbitrary element of 
-\begin_inset Formula $S$
-\end_inset
-
-, 
-\begin_inset Formula $r(\alpha t+\beta t^{2}+\gamma(1+t^{2}))=(r\alpha)t+(r\beta)t^{2}+(r\gamma)(1+t^{2})$
-\end_inset
-
- has the form of an element of 
-\begin_inset Formula $S$
-\end_inset
-
- and is therefore in 
-\begin_inset Formula $S$
 \end_inset
 
 .
- The sum of two elements of 
-\begin_inset Formula $S$
-\end_inset
-
-, 
-\begin_inset Formula $\left[\alpha_{1}t+\beta_{1}t^{2}+\gamma_{1}(1+t^{2})\right]+\left[\alpha_{2}t+\beta_{2}t^{2}+\gamma_{2}(1+t^{2})\right]=(\alpha_{1}+\alpha_{2})t+(\beta_{1}+\beta_{2})t^{2}+(\gamma_{1}+\gamma_{2})(1+t^{2})$
-\end_inset
-
- has the form of an element of 
-\begin_inset Formula $S$
-\end_inset
-
- and is therefore in 
-\begin_inset Formula $S$
-\end_inset
-
- too.
+ Closure is an essential (and until now unspoken) property of linear combination
+s and linear independence.
 \end_layout
 
 \begin_layout Standard
-We are so used to computations like this, it is easy to take their subtleties
- for granted.
+We are so used to the basic properties of real numbers, such as associativity
+ and commutativity, it is easy to take the subtleties of computations for
+ granted.
  In order for 
 \begin_inset Formula $r(\alpha t+\beta t^{2}+\gamma(1+t^{2}))$
 \end_inset
@@ -276,7 +346,7 @@ We are so used to computations like this, it is easy to take their subtleties
 \begin_inset Formula $(r\alpha)t+(r\beta)t^{2}+(r\gamma)(1+t^{2})$
 \end_inset
 
- we need to distribute the 
+, for example, we need to distribute the 
 \begin_inset Formula $r$
 \end_inset
 
@@ -301,36 +371,18 @@ We are so used to computations like this, it is easy to take their subtleties
 \end_inset
 
  we need a slightly different distributive property, an associative property,
- and commutativity of addition!
-\end_layout
-
-\begin_layout Standard
-All the examples of sets 
-\begin_inset Formula $S$
-\end_inset
-
- considered when the definition of linear combination was introduced (functions,
- variables, numbers, integrals, vectors, and matrices) have these same propertie
-s.
- In section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Functions-and-Transformations"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, when the notion of a linear transformation was introduced, the set of
- sequences of real numbers was added to this list.
- Again, the set naturally possessed all the properties discussed so far.
+ and commutativity of addition! These properties are also essential.
 \end_layout
 
 \begin_layout Standard
 It is time to make explicit all the assumptions we have been making when
  discussing linear combinations.
- A set 
+ This exercise alone will reveal similarities between certain sets of objects
+ that could otherwise easily go unnoticed.
+\end_layout
+
+\begin_layout Standard
+A set 
 \begin_inset Formula $V$
 \end_inset
 
@@ -346,7 +398,7 @@ vector space
 \begin_inset Formula $V$
 \end_inset
 
- and all scalars (real numbers or complex numbers) 
+ and all scalars 
 \begin_inset Formula $s,t$
 \end_inset
 
@@ -434,7 +486,7 @@ there is an element
 \begin_inset Formula $1\mathbf{v}=\mathbf{v}$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -467,65 +519,34 @@ there is an element
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{digression}{Fields}
-\end_layout
-
+The set of all 
+\begin_inset Formula $n\times1$
 \end_inset
 
-Sets of scalars other than 
+ matrices (vectors of size 
+\begin_inset Formula $n$
+\end_inset
+
+) with real entries is the prototypical example of a vector space.
+ We use the symbol 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
- and 
-\begin_inset Formula $\mathbb{C}$
-\end_inset
-
- are permissible in the definition of a vector space.
- Only a field is required.
- The field with the fewest elements is 
-\begin_inset Formula $\{0,1\}$
-\end_inset
-
- where addition and multiplication are as usual except that 
-\begin_inset Formula $1+1=0$
-\end_inset
-
-.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{digression}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+ for the set of all real numbers, and use the symbol 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
-, the set vectors with real entries, is the prototypical example of a vector
- space.
- It is straightforward to verify that 
-\begin_inset Formula $\mathbb{R}^{n}$
+ for the set of all 
+\begin_inset Formula $n\times1$
 \end_inset
 
- has all ten properties.
- In fact, six of them are just statements of the properties of matrices
- from section 
+ matrices with real entries.
+ For 
+\begin_inset Formula $V=\mathbb{R}^{n}$
+\end_inset
+
+, properties 2,3,4,8,9, and 10 are taken directly from the theorems of section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:operation-properties"
@@ -535,18 +556,19 @@ noprefix "false"
 
 \end_inset
 
- so require no additional verification.
- That leaves properties 5 (which was proven in section 
+, property 5 is addressed in exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:operation-properties"
+reference "exc:additive-inverse"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-), 7 (which is clear in 
+ of the same section, and the other four follow from properties of real
+ numbers.
+ Property 7 is clear in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -558,20 +580,21 @@ noprefix "false"
 \begin_inset Formula $r$
 \end_inset
 
-) and closure (which is also clear in 
+.
+ Closure (properties 1 and 6) are also clear in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- since the product of real numbers is real).
- The definition is fashioned to be consistent with 
+ since sums and products of real numbers are real.
+ Thus, these ten properties are modeled after properties of 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- and to spotlight its most important properties.
+ and are demed necessary for abstraction.
 \end_layout
 
 \begin_layout Standard
-When viewed as a vector space, the elements of 
+Elements of a vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -589,7 +612,19 @@ vectors
 \begin_inset Formula $n$
 \end_inset
 
- or less, is a vector space.
+ or less, is a vector space
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+with the understanding that adding polynomials and multiplying polynomials
+ by real numbers work as in high school algebra.
+\end_layout
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -766,15 +801,41 @@ For any polynomial
 \end_layout
 
 \begin_layout Standard
-Verification that the ten properties of a vector space hold for 
+These ten statements 
+\begin_inset Quotes eld
+\end_inset
+
+prove
+\begin_inset Quotes erd
+\end_inset
+
+ that the ten properties of a vector space hold for 
 \begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
 \end_inset
 
- is more an exercise in observing that these are well known properties of
- polynomials than it is an exercise in proving that they hold.
- The exceptions are properties 1 and 6 where closure cannot be taken for
- granted, and 4 and 5 where an additive identity and additive inverses are
- produced as proof of their existence.
+ since they are all statements of well known properties of polynomials.
+ As such, proving that 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+ is a vector space is more an exercise of observing that polynomials have
+ the right properties (based on familiarity with polynomials) rather than
+ demonstrating that polynomials have the right properties.
+ If the properties of polynomials were not so well known, more would need
+ to be said.
+ Even with great familiarity, the same four properties that derived from
+ properties of real numbers (1,4,5,6) require deliberate attention.
+ Closure (properties 1 and 6) cannot be taken for granted.
+ These properties only follow because scalar multiplication and polynomial
+ addition do not increase the degree of a polynomial.
+ Properties 4 and 5 assert that an additive identity is in the set and for
+ every element of the set, its additive inverse is also in the set.
+ These properies are not automatic for any subset of polynomials, so it
+ is critical to note that 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+ contains them.
 \end_layout
 
 \begin_layout Standard
@@ -782,7 +843,7 @@ Coincidentally, given a subset
 \begin_inset Formula $H$
 \end_inset
 
- of a vector space 
+ of any vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -808,11 +869,11 @@ all
 \begin_inset Formula $V$
 \end_inset
 
-, including those in 
+ (including those in 
 \begin_inset Formula $H$
 \end_inset
 
-.
+).
  However, with only properties 1, 6, 9 and a yet to be proven fact, property
  5 can be deduced to hold in 
 \begin_inset Formula $H$
@@ -895,6 +956,8 @@ noprefix "false"
 \end_inset
 
 .
+ Hence a subset of a vector space is a vector space itself if it satisfies
+ properties 1, 4, and 6 (closure and containment of the zero vector).
 \end_layout
 
 \begin_layout Standard
@@ -904,7 +967,16 @@ subspace
 \series default
 .
  One common way to define a subspace is through the collection of all linear
- combinations of a set of vectors.
+ combinations of a set of vectors (reminiscent of how 
+\begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
+\end_inset
+
+ is not closed under addition or multiplication but the collection of all
+ linear combinations of elements of 
+\begin_inset Formula $T$
+\end_inset
+
+ is).
  Such a set is called the 
 \series bold
 span
@@ -1167,6 +1239,141 @@ subspace given any vectors
  is a subspace.
 \end_layout
 
+\begin_layout Subsection*
+Notation
+\end_layout
+
+\begin_layout Standard
+Some subsets of the complex numbers are denoted as follows.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{Z}=\{z:z\text{ is an integer}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{Z}^{+}=\{z:z\text{ is a positive integer}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{Q}=\{q:q\text{ is a rational number}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}=\{r:r\text{ is a real number}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{C}=\{c:c\text{ is a complex number}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Some sets, each of which has a natural definition as a vector space, are
+ denoted as follows.
+ 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+ is taken to be one of 
+\begin_inset Formula $\mathbb{Q},\ \mathbb{R},\text{ or }\mathbb{C}$
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $Z$
+\end_inset
+
+ could actually be any field.
+\end_layout
+
+\end_inset
+
+, and 
+\begin_inset Formula $D$
+\end_inset
+
+ is taken to be a subset of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}^{n}=\{\mathbf{v}:\mathbf{v}\text{ is an }n\times1\text{ matrix (vector) with real number entries}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{R}^{\mathbb{N}}=\{s:s\text{ is a sequence of real numbers}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{M}_{m\times n}(\mathbb{F})=\{M:M\text{ is an }m\times n\text{ matrix with entries in the set }\mathbb{F}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $GL_{n}(\mathbb{F})=\{M\text{ in }\mathcal{M}_{n\times n}(\mathbb{F}):M^{-1}\text{ exists in }\mathcal{M}_{n\times n}(\mathbb{F})\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{F})=\{p:p\text{ is a polynomial of degree }n\text{ or less with coefficients in }\mathbb{F}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(D)=\{f:f\text{ is a function from }D\text{ to }\mathbb{R}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C(D)=\{f:f\text{ is a continuous function from }D\text{ to }\mathbb{R}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C^{n}(D)=\{f:f\text{ is a continuous function from }D\text{ to }\mathbb{R}\text{ with }n\text{ continuous derivatives}\}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \noindent
 \begin_inset ERT
@@ -1400,6 +1607,132 @@ Answers
 \end_layout
 
 \begin_layout Description
+not
+\begin_inset space ~
+\end_inset
+
+closed 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:not-closed"
+
+\end_inset
+
+With 
+\begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
+\end_inset
+
+, 
+\begin_inset Formula $t\in T$
+\end_inset
+
+ and 
+\begin_inset Formula $t^{2}\in T$
+\end_inset
+
+, but 
+\begin_inset Formula $t+t^{2}$
+\end_inset
+
+, the sum of two elements in 
+\begin_inset Formula $T$
+\end_inset
+
+, is not itself in 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\begin_inset Formula $17t^{2}$
+\end_inset
+
+, a scalar multiple of an element of 
+\begin_inset Formula $T$
+\end_inset
+
+, is not itself in 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+closure
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+combinations 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-combinations-closed"
+
+\end_inset
+
+With 
+\begin_inset Formula $S=\{\alpha t+\beta t^{2}+\gamma(1+t^{2}):\alpha,\beta,\gamma\in\mathbb{R}\}$
+\end_inset
+
+, an arbitrary element of 
+\begin_inset Formula $S$
+\end_inset
+
+ has the form 
+\begin_inset Formula $\alpha t+\beta t^{2}+\gamma(1+t^{2})$
+\end_inset
+
+ for some scalars 
+\begin_inset Formula $\alpha,\beta,\gamma$
+\end_inset
+
+.
+ The scalar multiple of an arbitrary element of 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $r(\alpha t+\beta t^{2}+\gamma(1+t^{2}))=(r\alpha)t+(r\beta)t^{2}+(r\gamma)(1+t^{2})$
+\end_inset
+
+ has the form of an element of 
+\begin_inset Formula $S$
+\end_inset
+
+ and is therefore in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ The sum of two elements of 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\alpha_{1}t+\beta_{1}t^{2}+\gamma_{1}(1+t^{2})\right]+\left[\alpha_{2}t+\beta_{2}t^{2}+\gamma_{2}(1+t^{2})\right]=(\alpha_{1}+\alpha_{2})t+(\beta_{1}+\beta_{2})t^{2}+(\gamma_{1}+\gamma_{2})(1+t^{2})$
+\end_inset
+
+ has the form of an element of 
+\begin_inset Formula $S$
+\end_inset
+
+ and is therefore in 
+\begin_inset Formula $S$
+\end_inset
+
+ too.
+\end_layout
+
+\begin_layout Description
 the
 \begin_inset space ~
 \end_inset
@@ -1494,6 +1827,7 @@ Let
 
 \begin_deeper
 \begin_layout Enumerate
+[property 4] 
 \begin_inset Formula $0\mathbf{v}_{1}+0\mathbf{v}_{2}+\cdots+0\mathbf{v}_{k}=\mathbf{0}+\mathbf{0}+\cdots+\mathbf{0}=\mathbf{0}$
 \end_inset
 
@@ -1505,7 +1839,7 @@ Let
 \end_layout
 
 \begin_layout Enumerate
-for any elements 
+[property 1] for any elements 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -1551,7 +1885,7 @@ is in
 \end_layout
 
 \begin_layout Enumerate
-for any element 
+[property 6] for any element 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
