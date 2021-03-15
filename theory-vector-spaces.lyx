@@ -111,11 +111,11 @@ name "chap:Vector-Spaces"
 
 \end_inset
 
-Vector Spaces
+Vector Spaces and Inner Product Spaces
 \end_layout
 
 \begin_layout Standard
-Abstraction is at the heart of all of mathematics.
+Abstraction is at the heart of most of mathematics.
  It is an essential vehicle for the development of new ideas.
  Take natural numbers (one, two, three, and so on), for example.
  These numbers have a 
@@ -139,9 +139,8 @@ count
 \begin_inset Quotes erd
 \end_inset
 
- the number of objects before you when there are none? The whole idea of
- doing it is an abstraction of the notion of counting, and it leads to the
- number zero.
+ the number of objects before you when there are none? The very idea is
+ an abstraction of the notion of counting, and it leads to the number zero.
  To the natural numbers, we add this number we call zero, and say that it
  represents the number of objects you have when you have none.
  You cannot explain zero in the same concrete way you can explain one or
@@ -171,9 +170,9 @@ The use of variables requires another intellectual leap.
 ) are abstractions of numbers.
  Much like zero, they represent something that is not readily available
  to see or put in other concrete terms.
- This basic idea of using unspecified quantities gives rise to an entire
- branch of mathematics—algebra! Many branches of mathematics revolve around
- similar abstractions.
+ The very idea of using unspecified quantities gives rise to an entire branch
+ of mathematics—algebra! Many branches of mathematics revolve around similar
+ abstractions.
  A body of objects or ideas is stripped down to its essence, which then
  gives rise to similar but new objects or ideas.
  
@@ -190,10 +189,9 @@ counting
 \end_inset
 
  zero objects.
- Using symbols other than numbers to stand in for numbers allows the abstraction
- of including unspecified quantities in an expression.
- Introducing the number zero or the idea of a variable allows a new perspective
- from which new mathematics can bloom.
+ Using symbols other than numbers to stand for numbers allows the abstraction
+ of unspecified quantities in an expression.
+ Abstraction provides a new perspective from which new mathematics can bloom.
  This idea is the foundation for many branches of mathematics.
  Abstract algebra is built upon abstraction of binary operators such as
  addition and multiplication, both of which are associative, admit an identity
@@ -201,12 +199,14 @@ counting
  Topology is built upon abstraction of open intervals of the real line,
  arbitrary unions of which are also open, and closed intervals of the real
  line, finite intersections of which are also closed.
- Non-Euclidean geometry is built upon abstraction of the idea of the idea
- of a line.
+ Non-Euclidean geometry is built upon abstraction of the idea of a line.
+ Analysis is built upon abstraction of finite quantity and size to infinite
+ quantity and infinitesimal size.
+ At some level, each branch of mathematics is based upon abstraction.
 \end_layout
 
 \begin_layout Standard
-It is in this vein that this part of the book is called matrix abstraction.
+This part of the book proceeds in this vein.
  The essential ingredients of objects and ideas already explored and understood
  in a concrete way (vectors, matrix multiplication, and dot product to be
  specific) will be extracted from their concrete settings, opening doors
@@ -214,6 +214,12 @@ It is in this vein that this part of the book is called matrix abstraction.
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Vector-Spaces-and-Span"
+
+\end_inset
+
 Vector Spaces and Span
 \end_layout
 
@@ -318,7 +324,7 @@ The set
 \end_inset
 
  (with scalars from the set of real numbers) is closed under addition and
- scalar multiplication, however.
+ scalar multiplication.
  Can you verify this? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
@@ -330,8 +336,8 @@ noprefix "false"
 \end_inset
 
 .
- Closure is an essential (and until now unspoken) property of linear combination
-s and linear independence.
+ Closure is an essential (and until now unmentioned) property of linear
+ combinations and linear independence, and there are others.
 \end_layout
 
 \begin_layout Standard
@@ -375,10 +381,11 @@ We are so used to the basic properties of real numbers, such as associativity
 \end_layout
 
 \begin_layout Standard
-It is time to make explicit all the assumptions we have been making when
- discussing linear combinations.
- This exercise alone will reveal similarities between certain sets of objects
- that could otherwise easily go unnoticed.
+It is time to make explicit all the properties of matrices we have taking
+ advantage of when discussing linear combinations.
+ This exercise will provide an abstract footing from which to explore, revealing
+ similarities between certain sets of objects that could otherwise easily
+ go unnoticed.
 \end_layout
 
 \begin_layout Standard
@@ -527,7 +534,7 @@ The set of all
 \begin_inset Formula $n$
 \end_inset
 
-) with real entries is the prototypical example of a vector space.
+) with real entries is the model from which this list is derived.
  We use the symbol 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
@@ -536,11 +543,16 @@ The set of all
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- for the set of all 
+ for the set of all ordered lists of 
+\begin_inset Formula $n$
+\end_inset
+
+ real numbers, their representation as 
 \begin_inset Formula $n\times1$
 \end_inset
 
- matrices with real entries.
+ matrices with real entries giving meaning to the operations of addition
+ and scalar multiplication.
  For 
 \begin_inset Formula $V=\mathbb{R}^{n}$
 \end_inset
@@ -556,7 +568,7 @@ noprefix "false"
 
 \end_inset
 
-, property 5 is addressed in exercise 
+; property 5 is addressed in exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:additive-inverse"
@@ -566,7 +578,7 @@ noprefix "false"
 
 \end_inset
 
- of the same section, and the other four follow from properties of real
+ of the same section; and the other four follow from properties of real
  numbers.
  Property 7 is clear in 
 \begin_inset Formula $\mathbb{R}^{n}$
@@ -586,15 +598,19 @@ noprefix "false"
 \end_inset
 
  since sums and products of real numbers are real.
- Thus, these ten properties are modeled after properties of 
+ Hence, these ten properties describe the essential features of 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- and are demed necessary for abstraction.
+, making 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ the canonical vector space and allowing abstraction.
 \end_layout
 
 \begin_layout Standard
-Elements of a vector space 
+Elements of an arbitrary vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -602,8 +618,8 @@ Elements of a vector space
 \series bold
 vectors
 \series default
- even if they are functions, matrices, sequences, or some other type of
- object.
+ (even if they are functions, matrices, sequences, or some other type of
+ object).
  In this abstract sense, even polynomials are vectors! The set 
 \begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
 \end_inset
@@ -624,6 +640,16 @@ with the understanding that adding polynomials and multiplying polynomials
 \end_inset
 
 .
+ Proof of this claim is mostly an exercise of 
+\shape italic
+observing
+\shape default
+ that polynomials have the right properties (based on familiarity with polynomia
+ls) rather than 
+\shape italic
+demonstrating
+\shape default
+ that polynomials have the right properties.
  
 \end_layout
 
@@ -683,7 +709,11 @@ The polynomial
 \begin_inset Formula $z(x)=0$
 \end_inset
 
- has the property that 
+ is in 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+ and has the property that 
 \begin_inset Formula $z(x)+q(x)=q(x)$
 \end_inset
 
@@ -702,6 +732,14 @@ Given any polynomial
 
 , 
 \begin_inset Formula $p(x)+(-1\cdot p(x))=z(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $-1\cdot p(x)$
+\end_inset
+
+ is in 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
 \end_inset
 
 .
@@ -801,37 +839,17 @@ For any polynomial
 \end_layout
 
 \begin_layout Standard
-These ten statements 
-\begin_inset Quotes eld
-\end_inset
-
-prove
-\begin_inset Quotes erd
-\end_inset
-
- that the ten properties of a vector space hold for 
-\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
-\end_inset
-
- since they are all statements of well known properties of polynomials.
- As such, proving that 
-\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
-\end_inset
-
- is a vector space is more an exercise of observing that polynomials have
- the right properties (based on familiarity with polynomials) rather than
- demonstrating that polynomials have the right properties.
- If the properties of polynomials were not so well known, more would need
- to be said.
- Even with great familiarity, the same four properties that derived from
- properties of real numbers (1,4,5,6) require deliberate attention.
+If the properties of polynomials were not so well known, each one would
+ ned to be accompanied by reference to a theorem or axiom for support.
+ Even with great familiarity, though, the same four properties that derived
+ from properties of real numbers (1,4,5,6) require further attention.
  Closure (properties 1 and 6) cannot be taken for granted.
  These properties only follow because scalar multiplication and polynomial
  addition do not increase the degree of a polynomial.
  Properties 4 and 5 assert that an additive identity is in the set and for
  every element of the set, its additive inverse is also in the set.
- These properies are not automatic for any subset of polynomials, so it
- is critical to note that 
+ These properies are not automatic for arbitrary subsets of polynomials.
+ It is critical to note that 
 \begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
 \end_inset
 
@@ -874,17 +892,27 @@ all
 \end_inset
 
 ).
- However, with only properties 1, 6, 9 and a yet to be proven fact, property
- 5 can be deduced to hold in 
+ In fact property 5 can be deduced once properties 1 and 6 have been established.
+\end_layout
+
+\begin_layout Standard
+Suppose 
 \begin_inset Formula $H$
 \end_inset
 
-.
- Let 
+ is a subset of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+, properties 1 and 6 hold for 
+\begin_inset Formula $H$
+\end_inset
+
+, and 
 \begin_inset Formula $\mathbf{h}$
 \end_inset
 
- be a particular but arbitrary element of 
+ is a particular but arbitrary element of 
 \begin_inset Formula $H$
 \end_inset
 
@@ -893,7 +921,7 @@ all
 \begin_inset Formula $H$
 \end_inset
 
- is closed under scalar multiplication, 
+ is closed under scalar multiplication (property 6), 
 \begin_inset Formula $-1\cdot\mathbf{h}$
 \end_inset
 
@@ -906,7 +934,7 @@ all
 \begin_inset Formula $H$
 \end_inset
 
- is closed under addition, 
+ is closed under addition (property 1), 
 \begin_inset Formula $\mathbf{h}+(-1\cdot\mathbf{h})$
 \end_inset
 
@@ -1319,7 +1347,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mathbb{R}^{n}=\{\mathbf{v}:\mathbf{v}\text{ is an }n\times1\text{ matrix (vector) with real number entries}\}$
+\begin_inset Formula $\mathbb{R}^{n}=\{\mathbf{v}:\mathbf{v}\text{ is an ordered list of }n\text{ real numbers}\}$
 \end_inset
 
 

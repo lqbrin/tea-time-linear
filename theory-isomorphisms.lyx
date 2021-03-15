@@ -1,0 +1,1114 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Isomorphisms"
+
+\end_inset
+
+Isomorphisms
+\end_layout
+
+\begin_layout Standard
+The word 
+\shape italic
+vector
+\shape default
+ has been used in a number of different ways in this book.
+ In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the word vector was said to have the understood meaning from physics or
+ calculus and 
+\shape italic
+represented
+\shape default
+ using the angled bracket notation 
+\begin_inset Formula $\langle x,y\rangle$
+\end_inset
+
+.
+ 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ matrices were called column vectors, or just vectors, and were said to
+ 
+\shape italic
+represent
+\shape default
+ vectors despite being different objects.
+ The calculus/physics idea of a vector was brought to life geometrically
+ in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Length-and-Orthogonality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ when a vector was 
+\shape italic
+represented
+\shape default
+ by an arrow with both magnitude and direction.
+ In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ it was noted that vectors in a vector space have unique 
+\shape italic
+representations
+\shape default
+ as linear combinations of basis vectors.
+ Most recently, vectors (with tails at the origin, in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Transformations-on-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) were 
+\shape italic
+represented
+\shape default
+ by points.
+ In all instances, these were 
+\shape italic
+representations
+\shape default
+ of vectors, not vectors outright.
+ Only in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, where the word 
+\shape italic
+vector
+\shape default
+ was used to refer to any element of a vector space, did we have a definition.
+ To be clear, this is the one and only definition of vector.
+ All other uses will have to be justified from within this umbrella.
+\end_layout
+
+\begin_layout Standard
+By definition, 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is the set of all ordered lists of 
+\begin_inset Formula $n$
+\end_inset
+
+ real numbers.
+ It is not, on the surface, a vector space at all.
+ Elements of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ are therefore not inherently vectors! It is only once addition and scalar
+ multiplication are defined (and adhere to the ten properties outlined in
+ section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) that 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ becomes a vector space.
+ When nothing is said to the contrary, addition and scalar multiplication
+ in 
+\begin_inset Formula $\mathbb{R}^{n}=\{r_{1},r_{2},\ldots,r_{n}:r_{i}\in\mathbb{R},i=1,2,\ldots,n\}$
+\end_inset
+
+ are understood to be defined element-wise.
+ That is, for any elements 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}\in\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{n}\in\mathbb{R}^{n}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+r_{1},r_{2},\ldots,r_{n}\ +\ s_{1},s_{2},\ldots,s_{n}\ =\ r_{1}+s_{1},r_{2}+s_{2},\ldots,r_{n}+s_{n}
+\]
+
+\end_inset
+
+and for any element 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}\in\mathbb{R}^{n}$
+\end_inset
+
+ and scalar 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+c\ \times\ r_{1},r_{2},\ldots,r_{n}\ =\ cr_{1},cr_{2},\ldots,cr_{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These definitions should remind you of the definitions of matrix addition
+ and scalar multiplication, which are defined entry-wise.
+ For 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ matrices, addition and scalar multiplication are defined as follows.
+ For any elements 
+\begin_inset Formula $\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]\in\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+s_{1}\\
+s_{2}\\
+\vdots\\
+s_{n}
+\end{array}\right]\in\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]+\left[\begin{array}{c}
+s_{1}\\
+s_{2}\\
+\vdots\\
+s_{n}
+\end{array}\right]=\left[\begin{array}{c}
+r_{1}+s_{1}\\
+r_{2}+s_{2}\\
+\vdots\\
+r_{n}+s_{n}
+\end{array}\right]
+\]
+
+\end_inset
+
+and for any element 
+\begin_inset Formula $\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]\in\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ and scalar 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+c\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]=\left[\begin{array}{c}
+cr_{1}\\
+cr_{2}\\
+\vdots\\
+cr_{n}
+\end{array}\right].
+\]
+
+\end_inset
+
+So what is the difference between elements of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and elements of 
+\begin_inset Formula $\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+? Functionally there is no difference! There is no way to distinguish elements
+ of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and elements of 
+\begin_inset Formula $\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ based purely on their properties.
+ Each ordered list of real numbers 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}$
+\end_inset
+
+ could just as easily be written as a column matrix 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]
+\]
+
+\end_inset
+
+and vice versa.
+ The sum of two ordered lists of real numbers could just as easily be written
+ as a sum of two column matrices and vice versa.
+ Each scalar multiple of an ordered list of real numbers could just as easily
+ be written as a scalar multiple of a column matrix and vice versa.
+ When two sets are interchangeable in form and function, we say they are
+ isomorphic.
+\end_layout
+
+\begin_layout Standard
+Formally, two sets are isomorphic if there exists an isomorphism between
+ them.
+ What defines an isomorphism depends on the structure of the sets.
+ A vector space is a set endowed with two operations.
+ The set defines the elements of the vector space and the operations define
+ the structure.
+ An isomorphism between vector spaces maps each element of one vector space
+ to exactly one element of the other and preserves vector addition and scalar
+ multiplication.
+ Such an isomorphism can be understood as the mathematical formalization
+ allowing the free flow between one representation of a vector and another.
+ It supplies the rigor behind using row vectors, column vectors, ordered
+ lists, arrows, points, linear combinations, and vectors in the sense of
+ calculus or physics as if they were all the same thing.
+ For example, the map 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+T(r_{1},r_{2},\ldots,r_{n})=\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]
+\]
+
+\end_inset
+
+is an isomorphism.
+ Can you verify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:first-isomorphism"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ To complete the formalism, the following definitions are introduced.
+ A map 
+\begin_inset Formula $T:A\to B$
+\end_inset
+
+ is called 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+onto
+\series default
+ if for each 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at least one solution 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+one-to-one
+\series default
+ if for each 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at most one solution 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are vector spaces, then 
+\begin_inset Formula $T$
+\end_inset
+
+ is an 
+\series bold
+isomorphism
+\series default
+ if it is one-to-one, onto, and linear.
+ Being one-to-one and onto assures 
+\begin_inset Quotes eld
+\end_inset
+
+each element of one vector space to exactly one element of the other
+\begin_inset Quotes erd
+\end_inset
+
+ and being linear assures it 
+\begin_inset Quotes eld
+\end_inset
+
+preserves vector addition and scalar multiplication
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When we use the various representations of elements of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ interchangeably, we are relying on the existence of an isomorphism from
+ each one to each other.
+ Much like showing that a list of statements are equivalent by showing a
+ path of implications from any statement to any other, this can be done
+ by showing a path of isomorphisms from any vector space to any other.
+ This is because the composition of isomorphisms is an isomorphism.
+ Can you jutify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:composition-of-isomorphisms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Diagrammatically, this might look like so.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Once isomorphisms 
+\begin_inset Formula $f,g,h,k,\ell,m,p,q$
+\end_inset
+
+ between the sets as shown are demonstrated to exist, each set is isomorphic
+ to each other by composition.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+onto a map 
+\begin_inset Formula $T:A\to B$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at least one solution 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+one-to-one a map 
+\begin_inset Formula $T:A\to B$
+\end_inset
+
+ such that for each 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at most one solution 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+isomorphism a one-to-one, onto, linear transformation between vector spaces.
+\end_layout
+
+\begin_layout Description
+isomorphic vector spaces between which there exists an isomorphism.
+\end_layout
+
+\begin_layout Description
+composition
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+isomorphisms is an isomorphism.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Justify the claim.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+the statement 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is one-to-one
+\begin_inset Quotes erd
+\end_inset
+
+ may be added to the list of equivalent statements of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+the statement 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is onto
+\begin_inset Quotes erd
+\end_inset
+
+ may be added to the list of equivalent statements of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+the statements 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is one-to-one
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is onto
+\begin_inset Quotes erd
+\end_inset
+
+ may be added to the list of equivalent statements of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+first
+\begin_inset space ~
+\end_inset
+
+isomorphism 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:first-isomorphism"
+
+\end_inset
+
+An isomorphism between vector spaces maps each element of one vector space
+ to exactly one element of the other and preserves vector addition and scalar
+ multiplication.
+ The map 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+T(r_{1},r_{2},\ldots,r_{n})=\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]
+\]
+
+\end_inset
+
+does just that because
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+the arbitrary element 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}\in\mathbb{R}^{n}$
+\end_inset
+
+ maps via 
+\begin_inset Formula $T$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]\in\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ and only 
+\begin_inset Formula $\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+the arbitrary element 
+\begin_inset Formula $\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]\in\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ maps via 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+ to 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}\in\mathbb{R}^{n}$
+\end_inset
+
+ and only 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T(r_{1},r_{2},\ldots,r_{n}\ +\ s_{1},s_{2},\ldots,s_{n})=T(r_{1}+s_{1},r_{2}+s_{2},\ldots,r_{n}+s_{n})=\left[\begin{array}{c}
+r_{1}+s_{1}\\
+r_{2}+s_{2}\\
+\vdots\\
+r_{n}+s_{n}
+\end{array}\right]=\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]+\left[\begin{array}{c}
+s_{1}\\
+s_{2}\\
+\vdots\\
+s_{n}
+\end{array}\right]=T(r_{1},r_{2},\ldots,r_{n})+T(s_{1},s_{2},\ldots,s_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T(c\ \times\ r_{1},r_{2},\ldots,r_{n})=T(cr_{1},cr_{2,}\ldots,cr_{n})=\left[\begin{array}{c}
+cr_{1}\\
+cr_{2}\\
+\vdots\\
+cr_{n}
+\end{array}\right]=c\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]=cT(r_{1},r_{2},\ldots,r_{n})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+composition
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+isomorphisms 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:composition-of-isomorphisms"
+
+\end_inset
+
+Let 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ be vector spaces and 
+\begin_inset Formula $T:A\to B$
+\end_inset
+
+ and 
+\begin_inset Formula $S:B\to C$
+\end_inset
+
+ be isomorphisms.
+ We need to show that 
+\begin_inset Formula $S\circ T:A\to C$
+\end_inset
+
+ is an isomorphism.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $c$
+\end_inset
+
+ be an element of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Then because 
+\begin_inset Formula $S$
+\end_inset
+
+ is onto, there is at least one 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ such that 
+\begin_inset Formula $S(b)=c$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $b$
+\end_inset
+
+ be such a solution.
+ Because 
+\begin_inset Formula $T$
+\end_inset
+
+ is onto, there is at least one 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ such that 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $a$
+\end_inset
+
+ be such a solution.
+ Then 
+\begin_inset Formula $S\circ T(a)=S(T(a))=S(b)=c$
+\end_inset
+
+ so 
+\begin_inset Formula $S\circ T(a)=c$
+\end_inset
+
+ has at least one soution and 
+\begin_inset Formula $S\circ T$
+\end_inset
+
+ is onto.
+ Generally, this shows that 
+\series bold
+the composition of onto mappings is an onto mapping
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $S\circ T(a_{1})=c$
+\end_inset
+
+ and 
+\begin_inset Formula $S\circ T(a_{2})=c$
+\end_inset
+
+.
+ Equivalently 
+\begin_inset Formula $S(T(a_{1}))=c$
+\end_inset
+
+ and 
+\begin_inset Formula $S(T(a_{2}))=c$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $S$
+\end_inset
+
+ is one-to-one, so the equation 
+\begin_inset Formula $S(b)=c$
+\end_inset
+
+ has at most one solution.
+ Therefore, 
+\begin_inset Formula $T(a_{1})=T(a_{2})=b$
+\end_inset
+
+ for the same 
+\begin_inset Formula $b\in B$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $T$
+\end_inset
+
+ is one-to-one, the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at most one solution.
+ Therefore 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+, which shows that for each 
+\begin_inset Formula $c\in C$
+\end_inset
+
+, the equation 
+\begin_inset Formula $S\circ T(a_{1})=c$
+\end_inset
+
+ has at most one solution and 
+\begin_inset Formula $S\circ T$
+\end_inset
+
+ is one-to-one.
+ Generally, this shows that 
+\series bold
+the composition of one-to-one mappings is a one-to-one mapping
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+In exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:comp-of-linear-maps-is-linear"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Functions-and-Transformations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: make sure reference to correct section once the exercise placement
+ is finalized 
+\end_layout
+
+\end_inset
+
+ you are asked to show that the composition of linear transformations is
+ linear.
+ This completes the proof.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

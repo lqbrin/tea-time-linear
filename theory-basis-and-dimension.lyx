@@ -89,6 +89,12 @@ enumitem
 \begin_body
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Basis-and-Dimension"
+
+\end_inset
+
 Basis and Dimension
 \end_layout
 
@@ -118,11 +124,11 @@ noprefix "false"
 
 \begin_layout Standard
 Taking the perspective that the matrix-column product 
-\begin_inset Formula $M\mathbf{v}$
+\begin_inset Formula $I\mathbf{v}$
 \end_inset
 
  is a linear combination of the columns of 
-\begin_inset Formula $M$
+\begin_inset Formula $I$
 \end_inset
 
  with coefficients from 
@@ -141,7 +147,11 @@ I\mathbf{v}=\mathbf{b}\label{eq:standard-basis}
 
 \end_inset
 
-has exactly one solution.
+has exactly one solution 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
  By the invertible matrix theorem, this is equivalent to claiming that 
 \begin_inset Formula $I$
 \end_inset
@@ -191,7 +201,7 @@ Given any set of vectors (elements of a vector space), we can now imagine
 
  were the only special collection of vectors (from which each vector could
  be written as a unique linear combination).
- As it turns out, there are many such sets of vectors.
+ As it turns out, there are many such sets.
  For example, 
 \begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
 \end_inset

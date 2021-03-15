@@ -2406,21 +2406,6 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Prove that the composition of linear transformations is linear.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Does this belong here?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:linear-vector-transformation-2"

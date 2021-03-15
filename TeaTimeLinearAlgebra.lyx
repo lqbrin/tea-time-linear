@@ -419,6 +419,16 @@ status open
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Insert definition of matrix equality 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -639,7 +649,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 4: Vector Spaces 
+% Chapter 4: Vector Spaces and Inner Product Spaces 
 \end_layout
 
 \end_inset
@@ -681,6 +691,16 @@ filename "theory-linear-transformation.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "theory-linear-vector-transformation.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-isomorphisms.lyx"
 
 \end_inset
 

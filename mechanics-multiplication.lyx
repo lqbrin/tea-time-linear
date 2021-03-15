@@ -677,6 +677,13 @@ begin{digression}{Row Vector}
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "dig:row-matrix"
+
+\end_inset
+
 A row matrix is sometimes referred to as a 
 \series bold
 row vector

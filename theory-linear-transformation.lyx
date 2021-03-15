@@ -514,8 +514,8 @@ transformation
 function
 \series default
 .
- All four words share the same definition, when the codomain is not the
- set of real numbers, the word 
+ All four words share the same definition.
+ When the codomain is not the set of real numbers, the word 
 \begin_inset Quotes eld
 \end_inset
 
@@ -524,6 +524,7 @@ function
 \end_inset
 
  is often supplanted by one of the others.
+ Getting used to this fact is a matter of experience with it.
 \end_layout
 
 \begin_layout Standard
@@ -535,7 +536,11 @@ The
 \begin_inset Formula $n,R(n),R(R(n)),R(R(R(n))),\ldots$
 \end_inset
 
-) of the map 
+) of the 
+\shape italic
+map
+\shape default
+ 
 \begin_inset Formula $R:\mathbb{Z}^{+}\to\mathbb{Z}^{+}$
 \end_inset
 
@@ -578,7 +583,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The transformation 
+The 
+\shape italic
+transformation
+\shape default
+ 
 \begin_inset Formula $\mathcal{A}:C(D)\to C^{1}(D)$
 \end_inset
 
@@ -587,9 +596,12 @@ The transformation
 \end_inset
 
  is a standard of calculus, though it is uncommon to discuss the antiderivative
- as a transformation.
- The derivative provides another example of a transformation from some set
- of functions to another set of functions.
+ as a transformation during a calculus class.
+ The derivative provides another example of a 
+\shape italic
+transformation
+\shape default
+ from some set of functions to another set of functions.
  For example, 
 \begin_inset Formula $D:\mathbb{P}^{n}\to\mathbb{P}^{n-1}$
 \end_inset
@@ -598,7 +610,11 @@ The transformation
 \begin_inset Formula $D(p)=p'(x)$
 \end_inset
 
- is a map from the set of polynomials of degree at most 
+ is a 
+\shape italic
+map
+\shape default
+ from the set of polynomials of degree at most 
 \begin_inset Formula $n$
 \end_inset
 
@@ -616,14 +632,21 @@ The transformation
 \end_inset
 
 .
- Mechanically there is no advantage to writing the derivative as a transformatio
-n, but conceptually it gives a certain perspective on the process of differentia
-tion.
+ Mechanically there is no advantage to writing the derivative as a 
+\shape italic
+transformation
+\shape default
+, but conceptually it gives a certain perspective on the process of differentiat
+ion.
  The process itself can be thought of as a function!
 \end_layout
 
 \begin_layout Standard
-The map 
+The 
+\shape italic
+map
+\shape default
+ 
 \begin_inset Formula $l:\mathbb{R}^{\mathbb{N}}\to\mathbb{R}^{\mathbb{N}}$
 \end_inset
 
@@ -637,7 +660,11 @@ The map
 \end_layout
 
 \begin_layout Standard
-The determinant is a function or map 
+The determinant is a function or 
+\shape italic
+map
+\shape default
+ 
 \begin_inset Formula $\det:\mathcal{M}_{n\times n}(\mathbb{F})\to\mathbb{F}$
 \end_inset
 
@@ -650,18 +677,33 @@ The determinant is a function or map
 \end_inset
 
  matrix has exactly one determinant.
- The transformation 
+ The 
+\shape italic
+transformation
+\shape default
+ 
 \begin_inset Formula $V:GL_{n}(\mathbb{F})\to GL_{n}(\mathbb{F})$
 \end_inset
 
- mapping an invertible matrix to its inverse provides motivation to think
- of finding the inverse of a matrix as a function as well.
- The most common transformation considered in linear algebra, however, is
- the transformation 
+ 
+\shape italic
+mapping
+\shape default
+ an invertible matrix to its inverse provides motivation to think of finding
+ the inverse of a matrix as a function as well.
+ The most common 
+\shape italic
+transformation
+\shape default
+ considered in linear algebra, however, is the 
+\shape italic
+transformation
+\shape default
+ 
 \begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
 \end_inset
 
-, as in 
+, 
 \begin_inset Formula $T(\mathbf{x})=M\mathbf{x}$
 \end_inset
 
@@ -721,12 +763,14 @@ The determinant is a function or map
 
 \begin_layout Standard
 These two properties mean that performing addition and scalar multiplication
- in the domain and then transforming (the left sides of the equations) gives
- the same result as transforming first and then performing the addition
- and scalar multiplication in the codomain.
+ in the domain and then transforming (the lefthand sides of the equations)
+ gives the same result as transforming first and then performing the addition
+ and scalar multiplication in the codomain (the righthand sides of the equations
+).
  We say that this type of transformation preserves the operations of addition
- and scalar multiplication, and its properties form the essence for the
- abstraction of this idea to arbitrary vector spaces.
+ and scalar multiplication.
+ Its properties form the essence for the abstraction of this idea to arbitrary
+ vector spaces.
 \end_layout
 
 \begin_layout Subsection*
@@ -780,8 +824,18 @@ linear transformation
 \end_layout
 
 \begin_layout Standard
-Some of the transformations mentioned already are linear transformations
- and some are not.
+This definition is modeled after 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $T(\mathbf{x})=M\mathbf{x}$
+\end_inset
+
+, making this particular transformation the canonical example of a linear
+ transforamtion.
+ Some of the other transformations mentioned previously are linear transformatio
+ns and some are not.
  For example, 
 \begin_inset Formula $R$
 \end_inset
@@ -1513,6 +1567,27 @@ For any function
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:comp-of-linear-maps-is-linear"
+
+\end_inset
+
+The composition of linear transformations is linear.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Does this belong here?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
