@@ -833,7 +833,7 @@ This definition is modeled after
 \end_inset
 
 , making this particular transformation the canonical example of a linear
- transforamtion.
+ transformation.
  Some of the other transformations mentioned previously are linear transformatio
 ns and some are not.
  For example, 
@@ -1250,7 +1250,7 @@ inverse
 \end_inset
 
 function the inverse relation of a function whenever it happens to be a
- function as well.
+ function.
 \end_layout
 
 \begin_layout Description
@@ -1277,6 +1277,11 @@ inverse an inverse function.
 
 .
  
+\end_layout
+
+\begin_layout Description
+invertible a function is called invertible if its inverse relation is a
+ function.
 \end_layout
 
 \begin_layout Description
@@ -1361,17 +1366,16 @@ linear
 \begin_inset space ~
 \end_inset
 
-transformation given sets 
-\begin_inset Formula $A$
+transformation given vector spaces 
+\begin_inset Formula $V$
 \end_inset
 
  and 
-\begin_inset Formula $B$
+\begin_inset Formula $W$
 \end_inset
 
- on which addition and scalar multiplication are defined, a transformation
- 
-\begin_inset Formula $L:A\to B$
+, a transformation 
+\begin_inset Formula $L:V\to W$
 \end_inset
 
  is linear (is a linear transformation) if for any 
@@ -1379,7 +1383,7 @@ transformation given sets
 \end_inset
 
  in 
-\begin_inset Formula $A$
+\begin_inset Formula $V$
 \end_inset
 
  and any scalar 
@@ -1570,6 +1574,36 @@ For any function
 \end_layout
 
 \begin_layout Enumerate
+If the mapping 
+\begin_inset Formula $L:V\to W$
+\end_inset
+
+ is linear, then 
+\begin_inset Formula $L(\mathbf{0})=\mathbf{0}$
+\end_inset
+
+.
+ Note: the 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ on the lefthand side is the zero vector of 
+\begin_inset Formula $V$
+\end_inset
+
+ and the 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ on the righthand side is the zero vector in 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ They are not necessarily equal.
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:comp-of-linear-maps-is-linear"
@@ -1588,6 +1622,36 @@ TODO: Does this belong here?
 \end_inset
 
 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-one-shot"
+
+\end_inset
+
+A map 
+\begin_inset Formula $L:V\to W$
+\end_inset
+
+ is linear if and only if 
+\begin_inset Formula $L(x+cy)=L(x)+cL(y)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ and scalar 
+\begin_inset Formula $c$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper

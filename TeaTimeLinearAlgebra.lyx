@@ -708,12 +708,22 @@ filename "theory-isomorphisms.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-inner-product-space.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-TODO: Find a place for one-to-one and onto.
- Another section on linear transformations and invertible matrices?
+
+% Chapter 5: Coordinate Vectors 
 \end_layout
 
 \end_inset
@@ -727,7 +737,8 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 5: Inner Product Spaces 
+% coordinate vectors, change of bases, finding bases, orthogonalization
+ 
 \end_layout
 
 \end_inset

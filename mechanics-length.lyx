@@ -426,13 +426,13 @@ length
 \end_inset
 
 , denoted by 
-\begin_inset Formula $|\mathbf{v}|$
+\begin_inset Formula $||\mathbf{v}||$
 \end_inset
 
 , is defined as
 \begin_inset Formula 
 \[
-|\mathbf{v}|=\sqrt{\mathbf{v}^{T}\mathbf{v}}.
+||\mathbf{v}||=\sqrt{\mathbf{v}^{T}\mathbf{v}}.
 \]
 
 \end_inset
@@ -506,18 +506,18 @@ The following diagram illustrates the relationship between the lengths of
 This observation leads to a very useful property of the dot product, exposed
  by the following calculation.
 \begin_inset Formula 
-\begin{align*}
-|\mathbf{v}+\mathbf{u}| & =|\mathbf{v}-\mathbf{u}|\\
-\sqrt{(\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u})} & =\sqrt{(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})}\\
-(\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})\\
-(\mathbf{v}^{T}+\mathbf{u}^{T})(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}^{T}-\mathbf{u}^{T})(\mathbf{v}-\mathbf{u})\\
-\mathbf{v}^{T}\mathbf{v}+\mathbf{v}^{T}\mathbf{u}+\mathbf{u}^{T}\mathbf{v}+\mathbf{u}^{T}\mathbf{u} & =\mathbf{v}^{T}\mathbf{v}-\mathbf{v}^{T}\mathbf{u}-\mathbf{u}^{T}\mathbf{v}+\mathbf{u}^{T}\mathbf{u}\\
-\mathbf{v}^{T}\mathbf{u}+\mathbf{u}^{T}\mathbf{v} & =-\mathbf{v}^{T}\mathbf{u}-\mathbf{u}^{T}\mathbf{v}\\
-2\mathbf{v}^{T}\mathbf{u} & =-2\mathbf{u}^{T}\mathbf{v}\\
-2\mathbf{v}^{T}\mathbf{u} & =-2\mathbf{v}^{T}\mathbf{u}\\
-4\mathbf{v}^{T}\mathbf{u} & =0\\
-\mathbf{v}^{T}\mathbf{u} & =0
-\end{align*}
+\begin{align}
+||\mathbf{v}+\mathbf{u}|| & =||\mathbf{v}-\mathbf{u}||\nonumber \\
+\sqrt{(\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u})} & =\sqrt{(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})}\nonumber \\
+(\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})\nonumber \\
+(\mathbf{v}^{T}+\mathbf{u}^{T})(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}^{T}-\mathbf{u}^{T})(\mathbf{v}-\mathbf{u})\nonumber \\
+\mathbf{v}^{T}\mathbf{v}+\mathbf{v}^{T}\mathbf{u}+\mathbf{u}^{T}\mathbf{v}+\mathbf{u}^{T}\mathbf{u} & =\mathbf{v}^{T}\mathbf{v}-\mathbf{v}^{T}\mathbf{u}-\mathbf{u}^{T}\mathbf{v}+\mathbf{u}^{T}\mathbf{u}\nonumber \\
+\mathbf{v}^{T}\mathbf{u}+\mathbf{u}^{T}\mathbf{v} & =-\mathbf{v}^{T}\mathbf{u}-\mathbf{u}^{T}\mathbf{v}\nonumber \\
+2\mathbf{v}^{T}\mathbf{u} & =-2\mathbf{u}^{T}\mathbf{v}\nonumber \\
+2\mathbf{v}^{T}\mathbf{u} & =-2\mathbf{v}^{T}\mathbf{u}\nonumber \\
+4\mathbf{v}^{T}\mathbf{u} & =0\nonumber \\
+\mathbf{v}^{T}\mathbf{u} & =0\label{eq:orthogonality}
+\end{align}
 
 \end_inset
 
@@ -938,6 +938,55 @@ Are
 \end_inset
 
  perpendicular?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the claim.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:distance-between-vectors"
+
+\end_inset
+
+If 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are placed with their tails at the same point, then 
+\begin_inset Formula $||\mathbf{u}-\mathbf{v}||$
+\end_inset
+
+ is the distance between the heads of 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ As such, we define the distance between 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as 
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})=||\mathbf{u}-\mathbf{v}||$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper

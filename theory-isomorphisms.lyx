@@ -542,7 +542,7 @@ When we use the various representations of elements of
  path of implications from any statement to any other, this can be done
  by showing a path of isomorphisms from any vector space to any other.
  This is because the composition of isomorphisms is an isomorphism.
- Can you jutify this claim? Answer on page 
+ Can you justify this claim? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:composition-of-isomorphisms"
@@ -553,17 +553,316 @@ noprefix "false"
 \end_inset
 
 .
- Diagrammatically, this might look like so.
+ See figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Isomorphism-Path"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-\noindent
-Once isomorphisms 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Isomorphism-Path"
+
+\end_inset
+
+Isomorphism Path
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/theory-isomorphisms.pdf
+	lyxscale 45
+	width 5.5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ Once isomorphisms 
 \begin_inset Formula $f,g,h,k,\ell,m,p,q$
 \end_inset
 
- between the sets as shown are demonstrated to exist, each set is isomorphic
+ between the sets are demonstrated to exist, each vector space is isomorphic
  to each other by composition.
+ For example, 
+\begin_inset Formula $g:\mathcal{M}_{n\times1}(\mathbb{R})\to\mathcal{M}_{1\times n}(\mathbb{R})$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\[
+g\left(\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]\right)=\left[\begin{array}{cccc}
+r_{1} & r_{2} & \cdots & r_{n}\end{array}\right]
+\]
+
+\end_inset
+
+is an isomorphism.
+ Can you justify this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:isomorphism-g"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Maybe more surprising is the claim that all 
+\begin_inset Formula $n$
+\end_inset
+
+-dimensional vector spaces over the real numbers (those defined for real
+ number scalars) are isomorphic.
+ In different words, we might say up to isomorphism, there is only one vector
+ space over the real numbers.
+ Different vector spaces may look different and contain different objects,
+ but they all have the same structure and therefore are interchangeable.
+ This claim can be proven by leaning on the fact that an 
+\begin_inset Formula $n$
+\end_inset
+
+-dimensional vector space has a basis with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ be 
+\begin_inset Formula $n$
+\end_inset
+
+-dimensional vector spaces.
+ By definition, each has a basis with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements.
+ Let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{n}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{n}\}$
+\end_inset
+
+ be bases for 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+, respectively, and define
+\begin_inset Formula 
+\begin{align*}
+f:V\to\mathbb{R}^{n},f(\mathbf{v}) & =r_{1},r_{2},\ldots,r_{n}\text{ where }\mathbf{v}=r_{1}\mathbf{v}_{1}+r_{2}\mathbf{v}_{2}+\cdots+r_{n}\mathbf{v}_{n}\\
+g:W\to\mathbb{R}^{n},g(\mathbf{w}) & =s_{1},s_{2},\ldots,s_{n}\text{ where }\mathbf{w}=s_{1}\mathbf{w}_{1}+s_{2}\mathbf{w}_{2}+\cdots+s_{n}\mathbf{w}_{n}
+\end{align*}
+
+\end_inset
+
+Since the expression of an element of a vector space as a linear combination
+ of basis vectors is unique, 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ are well-defined (they are actually functions, not simply relations).
+ Given an arbitrary element 
+\begin_inset Formula $\mathbf{r}=r_{1},r_{2},\ldots,r_{n}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, let 
+\begin_inset Formula $\mathbf{v}=r_{1}\mathbf{v}_{1}+r_{2}\mathbf{v}_{2}+\cdots+r_{n}\mathbf{v}_{n}$
+\end_inset
+
+.
+ Since vector spaces are closed under linear combinations, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Furthermore, 
+\begin_inset Formula $f(\mathbf{v})=r_{1},r_{2},\ldots,r_{n}$
+\end_inset
+
+ so 
+\begin_inset Formula $f$
+\end_inset
+
+ is onto.
+ Now suppose there is a second element 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $f(\mathbf{u})=r_{1},r_{2},\ldots,r_{n}$
+\end_inset
+
+.
+ By definition of 
+\begin_inset Formula $f$
+\end_inset
+
+ it must be that 
+\begin_inset Formula $\mathbf{u}=r_{1}\mathbf{v}_{1}+r_{2}\mathbf{v}_{2}+\cdots+r_{n}\mathbf{v}_{n}$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{u}=\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is one-to-one.
+ Now let 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ be arbitrary elements of 
+\begin_inset Formula $V$
+\end_inset
+
+, and write 
+\begin_inset Formula $\mathbf{u}=r_{1}\mathbf{v}_{1}+r_{2}\mathbf{v}_{2}+\cdots+r_{n}\mathbf{v}_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=s_{1}\mathbf{v}_{1}+s_{2}\mathbf{v}_{2}+\cdots+s_{n}\mathbf{v}_{n}$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $c$
+\end_inset
+
+ be an arbitrary scalar, 
+\begin_inset Formula 
+\begin{align*}
+f(\mathbf{u}+c\mathbf{v}) & =f(r_{1}\mathbf{v}_{1}+r_{2}\mathbf{v}_{2}+\cdots+r_{n}\mathbf{v}_{n}+c(s_{1}\mathbf{v}_{1}+s_{2}\mathbf{v}_{2}+\cdots+s_{n}\mathbf{v}_{n}))\\
+ & =f(r_{1}\mathbf{v}_{1}+r_{2}\mathbf{v}_{2}+\cdots+r_{n}\mathbf{v}_{n}+cs_{1}\mathbf{v}_{1}+cs_{2}\mathbf{v}_{2}+\cdots+cs_{n}\mathbf{v}_{n})\\
+ & =f((r_{1}+cs_{1})\mathbf{v}_{1}+(r_{2}+cs_{2})\mathbf{v}_{2}+\cdots+(r_{n}+cs_{n})\mathbf{v}_{n})\\
+ & =r_{1}+cs_{1},r_{2}+cs_{2},\ldots,r_{n}+cs_{n}\\
+ & =r_{1},r_{2},\ldots,r_{n}\ +\ cs_{1},cs_{2},\ldots,cs_{n}\\
+ & =r_{1},r_{2},\ldots,r_{n}\ +\ c\ \times\ s_{1},s_{2},\ldots,s_{n}\\
+ & =f(\mathbf{u})+cf(\mathbf{v})
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $f$
+\end_inset
+
+ is linear.
+ Because 
+\begin_inset Formula $f$
+\end_inset
+
+ is one-to-one, onto, and linear, 
+\begin_inset Formula $f$
+\end_inset
+
+ is an isomorphism.
+ By similar argument, 
+\begin_inset Formula $g$
+\end_inset
+
+ is also an isomorphism.
+ By exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-of-iso-is-iso"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+ is an isomorphism.
+ Since the composition of isomorphisms is an isomorphism, 
+\begin_inset Formula $g^{-1}\circ f:V\to W$
+\end_inset
+
+ is an isomorphism.
 \end_layout
 
 \begin_layout Subsection
@@ -744,6 +1043,52 @@ noprefix "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f:V\to W$
+\end_inset
+
+ is an isomorphism between vector spaces 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+, then 
+\begin_inset Formula $f$
+\end_inset
+
+ is invertible.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-of-iso-is-iso"
+
+\end_inset
+
+If 
+\begin_inset Formula $f:V\to W$
+\end_inset
+
+ is an isomorphism between vector spaces 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+, then 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ is an isomorphism.
 \end_layout
 
 \end_deeper
@@ -1107,6 +1452,192 @@ TODO: make sure reference to correct section once the exercise placement
  you are asked to show that the composition of linear transformations is
  linear.
  This completes the proof.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+isomorphism
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $g$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphism-g"
+
+\end_inset
+
+Let 
+\begin_inset Formula $g:\mathcal{M}_{n\times1}(\mathbb{R})\to\mathcal{M}_{1\times n}(\mathbb{R})$
+\end_inset
+
+ be defined by
+\begin_inset Formula 
+\[
+g\left(\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]\right)=\left[\begin{array}{cccc}
+r_{1} & r_{2} & \cdots & r_{n}\end{array}\right].
+\]
+
+\end_inset
+
+Then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Given 
+\begin_inset Formula $\left[\begin{array}{cccc}
+r_{1} & r_{2} & \cdots & r_{n}\end{array}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{1\times n}(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+g\left(\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]\right)=\left[\begin{array}{cccc}
+r_{1} & r_{2} & \cdots & r_{n}\end{array}\right]
+\]
+
+\end_inset
+
+ so 
+\begin_inset Formula $g$
+\end_inset
+
+ is onto.
+\end_layout
+
+\begin_layout Enumerate
+Given 
+\begin_inset Formula $r=\left[\begin{array}{cccc}
+r_{1} & r_{2} & \cdots & r_{n}\end{array}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{1\times n}(\mathbb{R})$
+\end_inset
+
+, suppose 
+\begin_inset Formula $g(u)=r$
+\end_inset
+
+ and 
+\begin_inset Formula $g(v)=r$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+u=\left[\begin{array}{c}
+r_{1}\\
+r_{2}\\
+\vdots\\
+r_{n}
+\end{array}\right]=v
+\]
+
+\end_inset
+
+ so 
+\begin_inset Formula $g$
+\end_inset
+
+ is one-to-one.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x=\left[\begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n}\end{array}\right]^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $y=\left[\begin{array}{cccc}
+y_{1} & y_{2} & \cdots & y_{n}\end{array}\right]^{T}$
+\end_inset
+
+ be in 
+\begin_inset Formula $\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ be a scalar.
+ Using the result of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-one-shot"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Functions-and-Transformations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the following calculation shows the linearity of 
+\begin_inset Formula $L$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+L(x+cy) & =L\left(\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{array}\right]+c\left[\begin{array}{c}
+y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{array}\right]\right)\\
+ & =L\left(\left[\begin{array}{c}
+x_{1}+cy_{1}\\
+x_{2}+cy_{2}\\
+\vdots\\
+x_{n}+cy_{n}
+\end{array}\right]\right)\\
+ & =\left[\begin{array}{cccc}
+x_{1}+cy_{1} & x_{2}+cy_{2} & \cdots & x_{n}+cy_{n}\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n}\end{array}\right]+c\left[\begin{array}{cccc}
+y_{1} & y_{2} & \cdots & y_{n}\end{array}\right]\\
+ & =L(x)+cL(y)
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
