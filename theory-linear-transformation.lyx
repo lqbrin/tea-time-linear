@@ -983,6 +983,22 @@ the preimage
 \end_layout
 
 \begin_layout Itemize
+If 
+\begin_inset Formula $B$
+\end_inset
+
+ is a vector space, the 
+\series bold
+kernel
+\series default
+ is the preimage of 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
 When the inverse relation of 
 \begin_inset Formula $T$
 \end_inset
@@ -1356,6 +1372,18 @@ preimage if
 
  such that 
 \begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+range the set of all images, 
+\begin_inset Formula $\text{range}f=\{f(a):a\text{ is in }A\}$
+\end_inset
+
+ for any function 
+\begin_inset Formula $f:A\to B$
 \end_inset
 
 .

@@ -686,24 +686,16 @@ Can you verify that
 \begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
 \end_inset
 
-, 
-\begin_inset Formula $\langle p,q\rangle=\int_{-1}^{1}p(t)q(t)\,dt$
+,
+\begin_inset Formula 
+\[
+\langle p_{0}+p_{1}x+p_{2}x^{2},q_{0}+q_{1}x+q_{2}x^{2}\rangle=\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}
+\]
+
 \end_inset
 
- is an inner product? If you have not taken calculus, for 
-\begin_inset Formula $p(x)=p_{0}+p_{1}x+p_{2}x^{2}$
-\end_inset
-
- and 
-\begin_inset Formula $q(x)=q_{0}+q_{1}x+q_{2}x^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $\langle p,q\rangle=\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}$
-\end_inset
-
- and 
-\begin_inset Formula $\langle p,p\rangle=\frac{1}{15}\left[(2p_{2}+5p_{0})^{2}+2p_{2}^{2}+5p_{0}^{2}+10p_{1}^{2}\right]$
+is an inner product? If you have taken calculus, this is equivalent to 
+\begin_inset Formula $\langle p,q\rangle=\int_{-1}^{1}p(x)q(x)\,dx$
 \end_inset
 
 .
@@ -725,7 +717,187 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-o
+inner
+\begin_inset space ~
+\end_inset
+
+product an operator 
+\begin_inset Formula $\langle,\rangle:V\times V\to\mathbb{R}$
+\end_inset
+
+ on a real vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\langle\mathbf{u},\mathbf{u}\rangle\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\langle\mathbf{u},\mathbf{u}\rangle=0$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mathbf{u}=\mathbf{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\langle\mathbf{u},\mathbf{v}\rangle=\langle\mathbf{v},\mathbf{u}\rangle$
+\end_inset
+
+ for all 
+\begin_inset Formula $\mathbf{u},\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\langle\mathbf{u}+\mathbf{w},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{v}\rangle+\langle\mathbf{w},\mathbf{v}\rangle$
+\end_inset
+
+ for all 
+\begin_inset Formula $\mathbf{u},\mathbf{v},\mathbf{w}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\langle c\mathbf{u},\mathbf{v}\rangle=c\langle\mathbf{u},\mathbf{v}\rangle$
+\end_inset
+
+ for all 
+\begin_inset Formula $\mathbf{u},\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ and all scalars 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+inner
+\begin_inset space ~
+\end_inset
+
+product
+\begin_inset space ~
+\end_inset
+
+space a vector space endowed with an inner product.
+\end_layout
+
+\begin_layout Description
+norm extension of the idea of magnitude in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ to vectors in any inner product space.
+ The norm of a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $||\mathbf{v}||$
+\end_inset
+
+ and is calculated as 
+\begin_inset Formula $||\mathbf{v}||=\sqrt{\langle\mathbf{v},\mathbf{v}\rangle}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+distance extension of the idea of distance in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ to vectors in any inner product space.
+ The distance between two vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})$
+\end_inset
+
+ and is calculated as 
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})=||\mathbf{u}-\mathbf{v}||$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+orthogonal extension of the idea of perpendicular in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ to vectors in any inner product space.
+ Two vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are said to be orthogonal if 
+\begin_inset Formula $\langle\mathbf{u},\mathbf{v}\rangle=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -750,7 +922,31 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-J
+Verify that the operator is an inner product.
+\end_layout
+
+\begin_layout Enumerate
+Find the distance between the vectors.
+\end_layout
+
+\begin_layout Enumerate
+Find the norm of the vector
+\end_layout
+
+\begin_layout Enumerate
+Are the vectors orthogonal?
+\end_layout
+
+\begin_layout Enumerate
+Explore quadratic forms (???), inner products of the form 
+\begin_inset Formula $\mathbf{v}^{T}A^{T}A\mathbf{v}$
+\end_inset
+
+ [
+\begin_inset Formula $=(A\mathbf{v})^{T}A\mathbf{v}$
+\end_inset
+
+].
 \end_layout
 
 \begin_layout Standard
@@ -919,8 +1115,12 @@ Given polynomials
 \begin_inset Formula $p(x)=p_{0}+p_{1}x+p_{2}x^{2}$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $q(x)=q_{0}+q_{1}x+q_{2}x^{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $r(x)=r_{0}+r_{1}x+r_{2}x^{2}$
 \end_inset
 
  in 
@@ -929,14 +1129,19 @@ Given polynomials
 
  and the operator
 \begin_inset Formula 
-\begin{align*}
-\langle p,q\rangle & =\int_{-1}^{1}p(t)q(t)\,dt\\
- & =\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}
-\end{align*}
+\[
+\langle p(x),q(x)\rangle=\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0},
+\]
 
 \end_inset
 
+the most challenging part of the verification is the need for some fancy
+ algebra to show properties 1 and 2.
+ The expression 
+\begin_inset Formula $\langle p,p\rangle$
+\end_inset
 
+ is manipulated into a sum of squares for this purpose.
 \end_layout
 
 \begin_deeper
@@ -965,7 +1170,7 @@ For any
 \begin_inset Formula $p_{0}=p_{1}=p_{2}=0$
 \end_inset
 
- since the square of each appears as a term in the inner product.
+ since the square of each appears as a term in the sum.
  And 
 \begin_inset Formula $p_{0}=p_{1}=p_{2}=0$
 \end_inset
@@ -982,52 +1187,94 @@ For any
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\langle\mathbf{u},\mathbf{v}\rangle=\langle\mathbf{v},\mathbf{u}\rangle$
-\end_inset
-
- for all 
-\begin_inset Formula $\mathbf{u},\mathbf{v}$
+For any 
+\begin_inset Formula $p,q$
 \end_inset
 
  in 
-\begin_inset Formula $V$
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\langle p,q\rangle & =\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}\\
+ & =\frac{2}{5}q_{2}p_{2}+\frac{2}{3}q_{2}p_{0}+\frac{2}{3}q_{1}p_{1}+\frac{2}{3}q_{0}p_{2}+2q_{0}p_{0}\\
+ & =\frac{2}{5}q_{2}p_{2}+\frac{2}{3}q_{0}p_{2}+\frac{2}{3}q_{1}p_{1}+\frac{2}{3}q_{2}p_{0}+2q_{0}p_{0}\\
+ & =\langle q,p\rangle
+\end{align*}
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\langle\mathbf{u}+\mathbf{w},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{v}\rangle+\langle\mathbf{w},\mathbf{v}\rangle$
-\end_inset
-
- for all 
-\begin_inset Formula $\mathbf{u},\mathbf{v},\mathbf{w}$
+For any 
+\begin_inset Formula $p,q,r$
 \end_inset
 
  in 
-\begin_inset Formula $V$
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\langle p+q,r\rangle & =\left\langle \left(p_{0}+p_{1}x+p_{2}x^{2}\right)+\left(q_{0}+q_{1}x+q_{2}x^{2}\right)\ ,\ r_{0}+r_{1}x+r_{2}x^{2}\right\rangle \\
+ & =\left\langle \left(p_{0}+q_{0}\right)+\left(p_{1}+q_{1}\right)x+\left(p_{2}+q_{2}\right)x^{2}\ ,\ r_{0}+r_{1}x+r_{2}x^{2}\right\rangle \\
+ & =\frac{2}{5}\left(p_{2}+q_{2}\right)r_{2}+\frac{2}{3}\left(p_{0}+q_{0}\right)r_{2}+\frac{2}{3}\left(p_{1}+q_{1}\right)r_{1}+\frac{2}{3}\left(p_{2}+q_{2}\right)r_{0}+2\left(p_{0}+q_{0}\right)r_{0}\\
+ & =\frac{2}{5}p_{2}r_{2}+\frac{2}{5}q_{2}r_{2}+\frac{2}{3}p_{0}r_{2}+\frac{2}{3}q_{0}r_{2}+\frac{2}{3}p_{1}r_{1}+\frac{2}{3}q_{1}r_{1}\\
+ & \phantom{=}\quad+\frac{2}{3}p_{2}r_{0}+\frac{2}{3}q_{2}r_{0}+2p_{0}r_{0}+2q_{0}r_{0}\\
+ & =\frac{2}{5}p_{2}r_{2}+\frac{2}{3}p_{0}r_{2}+\frac{2}{3}p_{1}r_{1}+\frac{2}{3}p_{2}r_{0}+2p_{0}r_{0}\\
+ & \phantom{=}\quad+\frac{2}{5}q_{2}r_{2}+\frac{2}{3}q_{0}r_{2}+\frac{2}{3}q_{1}r_{1}+\frac{2}{3}q_{2}r_{0}+2q_{0}r_{0}\\
+ & =\langle p,r\rangle+\langle q,r\rangle
+\end{align*}
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\langle c\mathbf{u},\mathbf{v}\rangle=c\langle\mathbf{u},\mathbf{v}\rangle$
-\end_inset
-
- for all 
-\begin_inset Formula $\mathbf{u},\mathbf{v}$
+For any 
+\begin_inset Formula $p,q$
 \end_inset
 
  in 
-\begin_inset Formula $V$
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
 \end_inset
 
- and all scalars 
+ and scalar 
 \begin_inset Formula $c$
 \end_inset
 
+,
+\begin_inset Formula 
+\begin{align*}
+\langle cp,q\rangle & =\left\langle c\left(p_{0}+p_{1}x+p_{2}x^{2}\right)\ ,\ q_{0}+q_{1}x+q_{2}x^{2}\right\rangle \\
+ & =\left\langle cp_{0}+cp_{1}x+cp_{2}x^{2}\ ,\ q_{0}+q_{1}x+q_{2}x^{2}\right\rangle \\
+ & =\frac{2}{5}cp_{2}q_{2}+\frac{2}{3}cp_{0}q_{2}+\frac{2}{3}cp_{1}q_{1}+\frac{2}{3}cp_{2}q_{0}+2cp_{0}q_{0}\\
+ & =c\left(\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}\right)\\
+ & =c\langle p,q\rangle
+\end{align*}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $\langle p,q\rangle=\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}$
+\end_inset
+
+ satisfies the five properties of an inner product (and is therefore an
+ inner product on 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper

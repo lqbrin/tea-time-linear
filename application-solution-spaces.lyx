@@ -1,0 +1,725 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Applications to Matrices
+\end_layout
+
+\begin_layout Section
+Solution Spaces []
+\end_layout
+
+\begin_layout Standard
+Given a coefficient matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and a particular vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, we can use row reduction to determine whether a solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ exists and find it if it does, but we have no way to tell ahead of time
+ whether a solution will exist.
+ Nor do we have an efficient way of finding all the solutions when there
+ are more than one.
+ We can apply the lessons of sections 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: fill in section numbers.
+ 
+\end_layout
+
+\end_inset
+
+ to address these shortcomings and generally better understand solution
+ sets of linear systems.
+\end_layout
+
+\begin_layout Subsection*
+Definitions
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix and define 
+\begin_inset Formula $N=\{\mathbf{v}\in\mathbb{R}^{n}:M\mathbf{v}=\mathbf{0}\}$
+\end_inset
+
+ (the solutions set of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+) and 
+\begin_inset Formula $C=\{M\mathbf{v}:\mathbf{v}\in\mathbb{R}^{n}\}$
+\end_inset
+
+ (the set of all linear combinations of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+).
+ Then 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ are vector spaces.
+ PROOF: Since 
+\begin_inset Formula $C$
+\end_inset
+
+ is the collection of all linear combinations of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $C=\text{span}\{M_{:,1},M_{:,2},\ldots,M_{:,n}\}$
+\end_inset
+
+.
+ Being the span of a set of vectors, 
+\begin_inset Formula $C$
+\end_inset
+
+ is a vector space (see 
+\begin_inset Quotes eld
+\end_inset
+
+span is a subspace
+\begin_inset Quotes erd
+\end_inset
+
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:span-as-subspace"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ is called the 
+\series bold
+column space
+\series default
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $N$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, we need check three things: (1) 
+\begin_inset Formula $\mathbf{0}\in N$
+\end_inset
+
+ since 
+\begin_inset Formula $M\mathbf{0}=\mathbf{0}$
+\end_inset
+
+.
+ (2) if 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ scalar then 
+\begin_inset Formula $M(\mathbf{u}+c\mathbf{v})=M\mathbf{u}+M(c\mathbf{v})=\mathbf{0}+c(M\mathbf{v})=c\mathbf{0}=\mathbf{0}$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{u}+c\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ is called the 
+\series bold
+null space
+\series default
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Implications
+\end_layout
+
+\begin_layout Standard
+Row operations were defined to maintain the solution sets of linear systems.
+ Solutions of row reduced linear systems are solutions of the original linear
+ system.
+ Using the matrix form for a linear system, this means given a particular
+ vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has the exact same solution set as 
+\begin_inset Formula $(EM)\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ for any elementary matrix 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ In particular this means the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ (the solution set of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+) and the null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+ (the solution set of 
+\begin_inset Formula $(EM)\mathbf{v}=\mathbf{0}$
+\end_inset
+
+) are equal for any elementary matrix 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ 
+\series bold
+Row operations do not affect the null space of a matrix
+\series default
+.
+ Stated another way, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+.
+ To rigrously prove this claim, let 
+\begin_inset Formula $M$
+\end_inset
+
+ be an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $E$
+\end_inset
+
+ be an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ elementary matrix.
+ Then 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ implies 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $(EM)\mathbf{v}=E(M\mathbf{v})=E\mathbf{0}=\mathbf{0}$
+\end_inset
+
+, so 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+.
+ [This establishes that if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+.] Furthermore, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in the null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+ implies 
+\begin_inset Formula $(EM)\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $E(M\mathbf{v})=\mathbf{0}$
+\end_inset
+
+ so 
+\begin_inset Formula $M\mathbf{v}=E^{-1}\mathbf{0}=\mathbf{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ [This establishes that if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.] We have now established that the following two statements are equivalent
+ for any 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To rephrase one more time, this means a certain set of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly dependent if and only if the same set of columns of 
+\begin_inset Formula $EM$
+\end_inset
+
+ are linearly dependent.
+ This follows since 
+\begin_inset Quotes eld
+\end_inset
+
+a certain set of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly dependent
+\begin_inset Quotes erd
+\end_inset
+
+ means there is a linear combination of those columns that sums to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+ To be rigorous, if 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $E$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ elementary matrix, then the following are equivalent.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ M_{:,c_{1}},M_{:,c_{2}},\ldots,M_{:,c_{k}}\right\} $
+\end_inset
+
+ is linearly dependent for the set of indices 
+\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ (EM)_{:,c_{1}},(EM)_{:,c_{2}},\ldots,(EM)_{:,c_{k}}\right\} $
+\end_inset
+
+ is linearly dependent for the set of indices 
+\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Assuming 1 holds, there are scalars 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{k}$
+\end_inset
+
+, not all zero, such that 
+\begin_inset Formula $a_{1}M_{:,c_{1}}+a_{2}M_{:,c_{2}}+\cdots+a_{k}M_{:,c_{k}}=\mathbf{0}$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula 
+\begin{align*}
+a_{1}(EM)_{:,c_{1}}+a_{2}(EM)_{:,c_{2}}+\cdots+a_{k}(EM)_{:,c_{k}} & =a_{1}\left(EM_{:,c_{1}}\right)+a_{2}\left(EM_{:,c_{2}}\right)+\cdots+a_{k}\left(EM_{:,c_{k}}\right)\\
+ & =E\left(a_{1}M{}_{:,c_{1}}\right)+E\left(a_{2}M{}_{:,c_{2}}\right)+\cdots+E\left(a_{k}M{}_{:,c_{k}}\right)\\
+ & =E\left(a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}}\right)\\
+ & =E\mathbf{0}\\
+ & =\mathbf{0}
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\left\{ (EM)_{:,c_{1}},(EM)_{:,c_{2}},\ldots,(EM)_{:,c_{k}}\right\} $
+\end_inset
+
+ is linearly dependent.
+ Assuming 2 holds, 1 can be proven in a similar manner.
+ Can you provide the details? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linearly-dependent-columns"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Equivalently, a certain set of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent if and only if the same set of columns of 
+\begin_inset Formula $EM$
+\end_inset
+
+ are linearly independent.
+ 
+\series bold
+Row operations do not affect the linear dependence relationships among the
+ columns of a matrix
+\series default
+.
+\end_layout
+
+\begin_layout Subsection*
+Bases for the null space and column space of a matrix
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+i
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+V
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+linearly
+\begin_inset space ~
+\end_inset
+
+dependent
+\begin_inset space ~
+\end_inset
+
+columns 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linearly-dependent-columns"
+
+\end_inset
+
+Assuming 
+\begin_inset Formula $\left\{ (EM)_{:,c_{1}},(EM)_{:,c_{2}},\ldots,(EM)_{:,c_{k}}\right\} $
+\end_inset
+
+ is linearly dependent for the set of indices 
+\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
+\end_inset
+
+., there are scalars 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{k}$
+\end_inset
+
+, not all zero, such that 
+\begin_inset Formula $a_{1}(EM)_{:,c_{1}}+a_{2}(EM)_{:,c_{2}}+\cdots+a_{k}(EM)_{:,c_{k}}=\mathbf{0}$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula 
+\begin{align*}
+a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}} & =(E^{-1}E)\left(a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}}\right)\\
+ & =E^{-1}\left(E\left(a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}}\right)\right)\\
+ & =E^{-1}\left(E\left(a_{1}M{}_{:,c_{1}}\right)+E\left(a_{2}M{}_{:,c_{2}}\right)+\cdots+E\left(a_{k}M{}_{:,c_{k}}\right)\right)\\
+ & =E^{-1}\left(a_{1}\left(EM_{:,c_{1}}\right)+a_{2}\left(EM_{:,c_{2}}\right)+\cdots+a_{k}\left(EM_{:,c_{k}}\right)\right)\\
+ & =E^{-1}\left(a_{1}(EM)_{:,c_{1}}+a_{2}(EM)_{:,c_{2}}+\cdots+a_{k}(EM)_{:,c_{k}}\right)\\
+ & =E^{-1}\mathbf{0}\\
+ & =\mathbf{0}
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\left\{ M_{:,c_{1}},M_{:,c_{2}},\ldots,M_{:,c_{k}}\right\} $
+\end_inset
+
+ is linearly dependent.
+\end_layout
+
+\end_body
+\end_document

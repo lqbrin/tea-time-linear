@@ -723,7 +723,99 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 5: Coordinate Vectors 
+% Chapter 5: Applications to matrices 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-solution-spaces.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Sections 1.1-1.5, 1.7-1.9, 2.1-2.3, 2.5, 2.8, 3.1-3.2, 3.3 (adjoint), 4.1-4.7 (4.6???),
+ 5.1-5.4
+\end_layout
+
+\begin_layout Plain Layout
+
+%**** Coordinate Systems/Vectors
+\end_layout
+
+\begin_layout Plain Layout
+
+%**** Change of Basis
+\end_layout
+
+\begin_layout Plain Layout
+
+%**** Null space, Column space / Kernel, Range / Rank, Nullity
+\end_layout
+
+\begin_layout Plain Layout
+
+% Eigenspaces
+\end_layout
+
+\begin_layout Plain Layout
+
+% Invertible Matrix Theorem Revisited (one-to-one, onto, Col A=R^n, dim(Col
+ A)=n, Nul A={0}, eigenvalues/eigenvectors, etc.
+ -- page 158
+\end_layout
+
+\begin_layout Plain Layout
+
+% Orthogonal Sets
+\end_layout
+
+\begin_layout Plain Layout
+
+% Orthogonal Projection
+\end_layout
+
+\begin_layout Plain Layout
+
+% Gram-Schmidt method
+\end_layout
+
+\begin_layout Plain Layout
+
+%**** LU Factorization 
+\end_layout
+
+\begin_layout Plain Layout
+
+%**** Diagonalization/Similarity
+\end_layout
+
+\begin_layout Plain Layout
+
+% QR Factorization
+\end_layout
+
+\begin_layout Plain Layout
+
+% Cramer's Rule
+\end_layout
+
+\begin_layout Plain Layout
+
+% Uniqueness of RREF
 \end_layout
 
 \end_inset
@@ -737,22 +829,7 @@ status open
 
 \begin_layout Plain Layout
 
-% coordinate vectors, change of bases, finding bases, orthogonalization
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Part III: Applications 
+% Part III: Applications Beyond Matrices 
 \end_layout
 
 \end_inset
@@ -767,6 +844,45 @@ status open
 \begin_layout Plain Layout
 
 % Chapter 6: Applications to Branches of Mathematics 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Solution spaces (Null space, Column space / Rank, Nullity)
+\end_layout
+
+\begin_layout Plain Layout
+
+% Cordinate Vectors/Change of Basis? 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Fractals 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Least Squares
+\end_layout
+
+\begin_layout Plain Layout
+
+% Linear Programming
+\end_layout
+
+\begin_layout Plain Layout
+
+% Isometries of the Square/Cube (preview of abstract algebra)?
 \end_layout
 
 \end_inset
@@ -791,6 +907,35 @@ status open
 \begin_layout Plain Layout
 
 % Chapter 7: Applications Outside of Mathematics 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Fourier Series
+\end_layout
+
+\begin_layout Plain Layout
+
+% Leontief input-output
+\end_layout
+
+\begin_layout Plain Layout
+
+% Markov Chains
+\end_layout
+
+\begin_layout Plain Layout
+
+% Differential Equations / Difference Equations / Eigenpairs
 \end_layout
 
 \end_inset
