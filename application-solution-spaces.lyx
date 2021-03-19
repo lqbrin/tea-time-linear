@@ -94,6 +94,12 @@ Applications to Matrices
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Solution-Spaces"
+
+\end_inset
+
 Solution Spaces []
 \end_layout
 
@@ -273,6 +279,57 @@ null space
 \series default
  of 
 \begin_inset Formula $M$
+\end_inset
+
+.
+ The dimension of the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+ is called the 
+\series bold
+rank
+\series default
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ The dimension of the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ is called the 
+\series bold
+nullity
+\series default
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ For any eigenvalue 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+, the null space of 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+ is called the 
+\series bold
+eigenspace
+\series default
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ corresponding to 
+\begin_inset Formula $\lambda$
 \end_inset
 
 .
@@ -487,7 +544,7 @@ Row operations do not affect the null space of a matrix
 \end_layout
 
 \begin_layout Standard
-To rephrase one more time, this means a certain set of columns of 
+To further this implication, this means a certain set of columns of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -521,7 +578,7 @@ a certain set of columns of
 \begin_inset Formula $m\times n$
 \end_inset
 
- matrix and 
+ matrix, 
 \begin_inset Formula $E$
 \end_inset
 
@@ -529,29 +586,25 @@ a certain set of columns of
 \begin_inset Formula $n\times n$
 \end_inset
 
- elementary matrix, then the following are equivalent.
+ elementary matrix, and 
+\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
+\end_inset
+
+ is a set of indices, then the following are equivalent.
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\left\{ M_{:,c_{1}},M_{:,c_{2}},\ldots,M_{:,c_{k}}\right\} $
 \end_inset
 
- is linearly dependent for the set of indices 
-\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
-\end_inset
-
-.
+ is linearly dependent.
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\left\{ (EM)_{:,c_{1}},(EM)_{:,c_{2}},\ldots,(EM)_{:,c_{k}}\right\} $
 \end_inset
 
- is linearly dependent for the set of indices 
-\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
-\end_inset
-
-.
+ is linearly dependent.
 \end_layout
 
 \begin_layout Standard
@@ -597,7 +650,7 @@ noprefix "false"
 \begin_inset Formula $M$
 \end_inset
 
- are linearly independent if and only if the same set of columns of 
+ is linearly independent if and only if the same set of columns of 
 \begin_inset Formula $EM$
 \end_inset
 
@@ -614,12 +667,808 @@ Row operations do not affect the linear dependence relationships among the
 Bases for the null space and column space of a matrix
 \end_layout
 
+\begin_layout Standard
+The very nature of the row reduction algorithm followed by writing solutions
+ of the homogeneous equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ in parametric form provides a basis for the null space.
+ Each free variable gives rise to one vector in the parametric vector form
+ (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The collection of all the vectors from this form comprise a basis.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $v_{f_{1}},v_{f_{2}},\ldots,v_{f_{k}}$
+\end_inset
+
+ are the free variables of the linear system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, then the row reduction algorithm leads to a solution of the form 
+\begin_inset Formula 
+\[
+\mathbf{v}=v_{f_{1}}\left[\begin{array}{c}
+c_{1,1}\\
+c_{2,1}\\
+\vdots\\
+c_{n,1}
+\end{array}\right]+v_{f_{2}}\left[\begin{array}{c}
+c_{1,2}\\
+c_{2,2}\\
+\vdots\\
+c_{n,2}
+\end{array}\right]+\cdots+v_{f_{k}}\left[\begin{array}{c}
+c_{1,k}\\
+c_{2,k}\\
+\vdots\\
+c_{n,k}
+\end{array}\right].
+\]
+
+\end_inset
+
+This form constitutes all of the solutions of the homogeneous equation,
+ so the columns of the matrix
+\begin_inset Formula 
+\[
+C=\left[\begin{array}{cccc}
+c_{1,1} & c_{1,2} & \cdots & c_{1,k}\\
+c_{2,1} & c_{2,2} & \cdots & c_{2,k}\\
+\vdots & \vdots & \ddots & \vdots\\
+c_{n,1} & c_{n,2} & \cdots & c_{n,k}
+\end{array}\right]
+\]
+
+\end_inset
+
+span the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ The algorithm also provides that 
+\begin_inset Formula $c_{f_{1},1}=1$
+\end_inset
+
+ while 
+\begin_inset Formula $c_{f_{1},2}=c_{f_{1},3}=\cdots=c_{f_{1},k}=0$
+\end_inset
+
+.
+ To reiterate, 
+\begin_inset Formula $C_{f_{1},:}$
+\end_inset
+
+ (row 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ of 
+\begin_inset Formula $C$
+\end_inset
+
+) has a 
+\begin_inset Formula $1$
+\end_inset
+
+ for its first entry and zeros elsewhere.
+ The entries of 
+\begin_inset Formula $C_{f_{2},:}$
+\end_inset
+
+ are all zero except the second, the entries of row 
+\begin_inset Formula $C_{f_{3},:}$
+\end_inset
+
+ are all zero except the third, and so on.
+ Consequently the columns of 
+\begin_inset Formula $C$
+\end_inset
+
+ are linearly independent.
+ Hence the columns of 
+\begin_inset Formula $C$
+\end_inset
+
+ (the vectors of the parametric form of the solution) are a linearly independent
+ spanning set—a basis—for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $v_{b_{1}},v_{b_{2}},\ldots,v_{b_{\ell}}$
+\end_inset
+
+ are the basic variables for the linear system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{1}<b_{2}<\cdots<b_{\ell}$
+\end_inset
+
+.
+ We will argue that columns 
+\begin_inset Formula $M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}$
+\end_inset
+
+ form a basis for the column space.
+ To see that these columns are linearly independent, let 
+\begin_inset Formula $R$
+\end_inset
+
+ be the reduced row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $R_{:,b_{j}}$
+\end_inset
+
+ (column 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ of 
+\begin_inset Formula $R$
+\end_inset
+
+) cannot be written as a linear combination of columns 
+\begin_inset Formula $R_{:,b_{1}},R_{:,b_{2}},\ldots,R_{:,b_{j-1}}$
+\end_inset
+
+ (the columns to the left of column 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ corresponding to basic variables) for any 
+\begin_inset Formula $j>1$
+\end_inset
+
+.
+ This is enough to show that 
+\begin_inset Formula $R_{:,b_{1}},R_{:,b_{2}},\ldots,R_{:,b_{\ell}}$
+\end_inset
+
+ are linearly independent.
+ Can you provide the details? HINT: Show that the vectors 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{1}\neq\mathbf{0}$
+\end_inset
+
+ are linearly dependent if and only if there is a 
+\begin_inset Formula $k>1$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ can be written as a linear combination of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k-1}$
+\end_inset
+
+.
+ Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-dependence-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Because row operations do not affect the linear dependence relationships
+ among the columns of a matrix, we have that 
+\begin_inset Formula $M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}$
+\end_inset
+
+ are linearly independent.
+ 
+\end_layout
+
+\begin_layout Standard
+To see that 
+\begin_inset Formula $M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}$
+\end_inset
+
+ span the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+ we will rely on the fact that if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the span of (the arbitrary set of vectors) 
+\begin_inset Formula $V=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}\}$
+\end_inset
+
+, then 
+\begin_inset Formula $\text{span}V=\text{span}\left(V\cup\{\mathbf{v}\}\right)$
+\end_inset
+
+.
+ Can you support this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:span-adding-lin-dep-vector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ To see why this is useful, note that if column 
+\begin_inset Formula $f$
+\end_inset
+
+ of 
+\begin_inset Formula $R$
+\end_inset
+
+ corresponds to a free variable, then 
+\begin_inset Formula $R_{:,f}$
+\end_inset
+
+ is a linear combination of the columns of basic variables to the left of
+ 
+\begin_inset Formula $R_{:,f}$
+\end_inset
+
+, say 
+\begin_inset Formula $R_{:,b_{1}},R_{:,b_{2}},\ldots,R_{:,b_{j}}$
+\end_inset
+
+ where 
+\begin_inset Formula $b_{j}<f<b_{j+1}$
+\end_inset
+
+.
+ This is because 
+\begin_inset Formula $R_{b_{1}}$
+\end_inset
+
+, the leftmost column corresponding to a basic variable, has a 
+\begin_inset Formula $1$
+\end_inset
+
+ in its first entry and zeros elsewhere; 
+\begin_inset Formula $R_{b_{2}}$
+\end_inset
+
+ has a 
+\begin_inset Formula $1$
+\end_inset
+
+ in its second entry and zeros elsewhere; 
+\begin_inset Formula $R_{b_{3}}$
+\end_inset
+
+ has a 
+\begin_inset Formula $1$
+\end_inset
+
+ in its third entry and zeros elsewhere; and so on.
+ By construction, 
+\begin_inset Formula $R_{:,f}$
+\end_inset
+
+ cannot have a nonzero entry below row 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ (if it did, it would contain a leading entry and therefore not be the column
+ of a free variable).
+ In symbols,
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccccc}
+R_{:,b_{1}} & R_{:,b_{2}} & \cdots & R_{:,b_{j}} & R_{:,f}\end{array}\right]=\left[\begin{array}{ccccc}
+1 & 0 & \cdots & 0 & R_{1,f}\\
+0 & 1 & \cdots & 0 & R_{2,f}\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+0 & 0 & \cdots & 1 & R_{j,f}\\
+0 & 0 & \cdots & 0 & 0\\
+\vdots & \vdots & \cdots & \vdots & \vdots\\
+0 & 0 & \cdots & 0 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+Hence, 
+\begin_inset Formula $R_{:,f}$
+\end_inset
+
+ is a linear combination of 
+\begin_inset Formula $R_{:,b_{1}},R_{:,b_{2}},\ldots,R_{:,b_{\ell}}$
+\end_inset
+
+.
+ Because row operations do not affect the linear dependence relationships
+ among the columns of a matrix, we have that 
+\begin_inset Formula $M_{:,f}$
+\end_inset
+
+ is a linear combination of 
+\begin_inset Formula $M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $M_{:,f}$
+\end_inset
+
+ is in the span of 
+\begin_inset Formula $M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}$
+\end_inset
+
+.
+ Repeatedly adding the columns of free variables (which are in the span
+ of the columns of basic variables) to the set 
+\begin_inset Formula $\{M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}\}$
+\end_inset
+
+ leads to the conclusion that 
+\begin_inset Formula 
+\begin{align*}
+\text{span}\{M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}\} & =\text{span}\{M_{:,1},M_{:,2},\ldots,M_{:,n}\}\\
+ & =\text{column space of }M.
+\end{align*}
+
+\end_inset
+
+Hence 
+\begin_inset Formula $\{M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}\}$
+\end_inset
+
+ is a linearly independent spanning set—a basis—for the column space of
+ 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The preceding dicussion justifies two general statements about any 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, the combination of which leads to one of the most fundamental theorems
+ of linear agebra.
+ 
+\end_layout
+
+\begin_layout Itemize
+a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ can be formed using one vector for each free variable of the linear system
+ 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+ is formed from the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ corresponding to the basic variables of the linear system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These statements mean the rank of 
+\begin_inset Formula $M$
+\end_inset
+
+ equals the number of basic variables of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+, and the nullity of 
+\begin_inset Formula $M$
+\end_inset
+
+ equals the number of free variables of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ variables in total, we have the following theorem.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+[Rank and Nullity]
+\series default
+\shape default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Rank-and-Nullity"
+
+\end_inset
+
+ If 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix, then the rank of 
+\begin_inset Formula $M$
+\end_inset
+
+ and the nullity of 
+\begin_inset Formula $M$
+\end_inset
+
+ sum to 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+General Solutions
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathbf{v}_{p}$
+\end_inset
+
+ be a particular solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ be a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Now suppose 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is any solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{align*}
+M(\mathbf{v}-\mathbf{v}_{p}) & =M\mathbf{v}-M\mathbf{v}_{p}\\
+ & =\mathbf{b}-\mathbf{b}\\
+ & =\mathbf{0}.
+\end{align*}
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $\mathbf{v}-\mathbf{v}_{p}$
+\end_inset
+
+ is in the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ is a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+, there are coefficients 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{k}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{v}-\mathbf{v}_{p}=a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{k}\mathbf{v}_{k}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula 
+\[
+\mathbf{v}=\mathbf{v}_{p}+a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{k}\mathbf{v}_{k}.
+\]
+
+\end_inset
+
+On the other hand, if 
+\begin_inset Formula $\mathbf{v}=\mathbf{v}_{p}+a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{k}\mathbf{v}_{k}$
+\end_inset
+
+ for some coefficients 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{k}$
+\end_inset
+
+ and particular solution 
+\begin_inset Formula $\mathbf{v}_{p}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+M\mathbf{v} & =M\left(\mathbf{v}_{p}+a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{k}\mathbf{v}_{k}\right)\\
+ & =M\mathbf{v}_{p}+M\left(a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{k}\mathbf{v}_{k}\right)\\
+ & =\mathbf{b}+\mathbf{0}\\
+ & =\mathbf{b}.
+\end{align*}
+
+\end_inset
+
+To summarize, these comments justify the following theorem.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+[Characterization of Solutions of a Linear System]
+\series default
+\shape default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Char-of-Sols-of-linear-system"
+
+\end_inset
+
+ For a consistent linear system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+, the solution set is
+\begin_inset Formula 
+\[
+\mathbf{v}=\mathbf{v}_{p}+a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{k}\mathbf{v}_{k}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{v}_{p}$
+\end_inset
+
+ is any particular solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+\end_inset
+
+ is a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
 
 \begin_layout Description
-i
+column
+\begin_inset space ~
+\end_inset
+
+space of an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\begin_inset Formula $\text{span}\{M_{:,1},M_{:,2},\ldots,M_{:,n}\}=\{M\mathbf{v}:\mathbf{v}\in\mathbb{R}^{n}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+null
+\begin_inset space ~
+\end_inset
+
+space of an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\begin_inset Formula $\{\mathbf{v}\in\mathbb{R}^{n}:M\mathbf{v}=\mathbf{0}\}$
+\end_inset
+
+, the solution set of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+eigenspace of 
+\begin_inset Formula $M$
+\end_inset
+
+ corresponding to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the null space of 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+vector
+\begin_inset space ~
+\end_inset
+
+spaces the column space of a matrix and the null space of a matrix are vector
+ spaces.
+\end_layout
+
+\begin_layout Description
+column
+\begin_inset space ~
+\end_inset
+
+space
+\begin_inset space ~
+\end_inset
+
+basis the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ corresponding to basic variables form a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+null
+\begin_inset space ~
+\end_inset
+
+space
+\begin_inset space ~
+\end_inset
+
+basis the vectors in the parametric vector form of the solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ form a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+characterization
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+solutions
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+system see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Char-of-Sols-of-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+row
+\begin_inset space ~
+\end_inset
+
+operations (i) do not affect the null space of a matrix, and (ii) do not
+ affect the linear dependence relationships of the columns of a matrix.
 \end_layout
 
 \begin_layout Standard
@@ -644,7 +1493,245 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-V
+Is 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Find a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ reduces to 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Verify that 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is in the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the general solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Can the solution set of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{b}\neq\mathbf{0}$
+\end_inset
+
+ be a vector space?
+\end_layout
+
+\begin_layout Enumerate
+Columns 
+\begin_inset Formula $2$
+\end_inset
+
+ and 
+\begin_inset Formula $5$
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ form a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Use this information to help decide whether 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ (give 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+) is consistent.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $M=$
+\end_inset
+
+ (fill it in).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ by inspection (
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is just one of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Use the fact that 
+\begin_inset Formula $\{\ldots\}$
+\end_inset
+
+ (fill in) is a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ to write down all the solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ in parametric vector form.
+\end_layout
+
+\begin_layout Enumerate
+Write down three distinct solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ all different from the solution in (a).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use the fact that row operations were used to reduce 
+\begin_inset Formula $A=$
+\end_inset
+
+ to 
+\begin_inset Formula $B=$
+\end_inset
+
+ to find a set of columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ that are linearly independent.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=$
+\end_inset
+
+ (has a parameter 
+\begin_inset Formula $k$
+\end_inset
+
+ in it), 
+\begin_inset Formula $B=$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{v}=$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verify that 
+\begin_inset Formula $B\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Given that 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are row equivalent, find 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Eigenspace questions.
+\end_layout
+
+\begin_layout Enumerate
+What is the rank of a matrix of all zeros?
 \end_layout
 
 \begin_layout Standard
@@ -719,6 +1806,223 @@ so
 \end_inset
 
  is linearly dependent.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+dependence
+\begin_inset space ~
+\end_inset
+
+part
+\begin_inset space ~
+\end_inset
+
+2 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-dependence-part2"
+
+\end_inset
+
+Show that the vectors 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{1}\neq\mathbf{0}$
+\end_inset
+
+ are linearly dependent if and only if there is a 
+\begin_inset Formula $k>1$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ can be written as a linear combination of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k-1}$
+\end_inset
+
+.
+ Supposing 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ can be written as a linear combination of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k-1}$
+\end_inset
+
+, we have immediately that 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}$
+\end_inset
+
+ are linearly dependent.
+ Now suppose 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{1}\neq\mathbf{0}$
+\end_inset
+
+ are linearly dependent.
+ Then there exists a linear combination 
+\begin_inset Formula 
+\[
+a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{p}\mathbf{v}_{p}=\mathbf{0}.
+\]
+
+\end_inset
+
+It must be that at least one of 
+\begin_inset Formula $a_{2},a_{3},\ldots,a_{p}$
+\end_inset
+
+ is nonzero since 
+\begin_inset Formula $\mathbf{v}_{1}\neq\mathbf{0}$
+\end_inset
+
+.
+ Set 
+\begin_inset Formula $k=\max\{i:a_{i}\neq0\}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $k>1$
+\end_inset
+
+, 
+\begin_inset Formula $a_{k}\neq0$
+\end_inset
+
+, and 
+\begin_inset Formula $a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{k}\mathbf{v}_{k}=\mathbf{0}$
+\end_inset
+
+, so
+\begin_inset Formula 
+\[
+\mathbf{v}_{k}=-\frac{a_{1}}{a_{k}}\mathbf{v}_{1}-\frac{a_{2}}{a_{k}}\mathbf{v}_{2}-\cdots-\frac{a_{k-1}}{a_{k}}\mathbf{v}_{k-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+span 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:span-adding-lin-dep-vector"
+
+\end_inset
+
+Show that if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the span of (the arbitrary set of vectors) 
+\begin_inset Formula $V=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}\}$
+\end_inset
+
+, then 
+\begin_inset Formula $\text{span}V=\text{span}\left(V\cup\{\mathbf{v}\}\right)$
+\end_inset
+
+.
+ First, 
+\begin_inset Formula $\text{span}V\subseteq\text{span}\left(V\cup\{\mathbf{v}\}\right)$
+\end_inset
+
+ always since every linear combination of the vectors in 
+\begin_inset Formula $V$
+\end_inset
+
+ is also a linear combination of vectors in 
+\begin_inset Formula $V\cup\{\mathbf{v}\}$
+\end_inset
+
+ (with the coefficient of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ equal 
+\begin_inset Formula $0$
+\end_inset
+
+, for example).
+ It remains to show that 
+\begin_inset Formula $\text{span}\left(V\cup\{\mathbf{v}\}\right)\subseteq\text{span}V$
+\end_inset
+
+.
+ In other words, if 
+\begin_inset Formula $\mathbf{w}\in\text{span}\left(V\cup\{\mathbf{v}\}\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathbf{w}\in\text{span}V$
+\end_inset
+
+.
+ To that end, suppose 
+\begin_inset Formula $\mathbf{w}\in\text{span}\left(V\cup\{\mathbf{v}\}\right)$
+\end_inset
+
+ and (a) write 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ as a linear combination of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p},\mathbf{v}$
+\end_inset
+
+; and (b) write 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a linear combination of 
+\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}$
+\end_inset
+
+ (which is possible since 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in the span of 
+\begin_inset Formula $V$
+\end_inset
+
+): 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{w} & =a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{p}\mathbf{v}_{p}+a\mathbf{v}\\
+\mathbf{v} & =b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{p}\mathbf{v}_{p}.
+\end{align*}
+
+\end_inset
+
+By substitution,
+\begin_inset Formula 
+\begin{align*}
+\mathbf{w} & =a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{p}\mathbf{v}_{p}+a(b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{p}\mathbf{v}_{p})\\
+ & =(a_{1}+ab_{1})\mathbf{v}_{1}+(a_{2}+ab_{2})\mathbf{v}_{2}+\cdots+(a_{p}+ab_{p})\mathbf{v}_{p}
+\end{align*}
+
+\end_inset
+
+and therefore 
+\begin_inset Formula $\mathbf{w}\in\text{span}V$
+\end_inset
+
+.
 \end_layout
 
 \end_body

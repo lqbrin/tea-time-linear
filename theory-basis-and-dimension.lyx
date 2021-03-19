@@ -721,7 +721,20 @@ To understand the implications of this theorem, let
 dimension
 \series default
  of a vector space.
- The content of this section justifies the claims that
+ The trivial vector space, 
+\begin_inset Formula $\{\mathbf{0}\}$
+\end_inset
+
+ contains only the one vector 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ and, by definition, has dimension 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Observe that
 \end_layout
 
 \begin_layout Enumerate

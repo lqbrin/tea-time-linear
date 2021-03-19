@@ -1,0 +1,683 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Coordinate-Vectors"
+
+\end_inset
+
+Coordinate Vectors []
+\end_layout
+
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ it was noted that given a basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ for a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+, each vector in 
+\begin_inset Formula $V$
+\end_inset
+
+ has a unique (exactly one) representation as a linear combination of the
+ vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ In other words, there is a one-to-one correspondence between elements of
+ 
+\begin_inset Formula $V$
+\end_inset
+
+ and linear combinations of vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ Every linear combination of vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ corresponds to exactly one vector in 
+\begin_inset Formula $V$
+\end_inset
+
+, and every vector in 
+\begin_inset Formula $V$
+\end_inset
+
+ corresponds to exactly one linear combination of vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ To provide an analogy, linear combinations of vectors in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ serve as unique identifiers for the vectors of 
+\begin_inset Formula $V$
+\end_inset
+
+ much the same way social security numbers serve as unique identifiers for
+ citizens of the United States (and other countries with a social security
+ system.
+ The column matrix formed from the coefficients of such a linear combination
+ is called the 
+\series bold
+coordinate vector
+\series default
+ with respect to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As pointed out in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\mathcal{E}=\{I_{:,1},I_{:,2},\ldots,I_{:,n}\}
+\]
+
+\end_inset
+
+is a basis for the vector space 
+\begin_inset Formula $\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ (the collection of all 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ matrices with real coefficients), also known as 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Technically, 
+\begin_inset Formula $\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ are isomorphic (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Isomorphisms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+.
+ In fact, 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ matrices as we have been using them all along are coordinate vectors with
+ respect to this basis (called the standard basis of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+).
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]=v_{1}I_{:,1}+v_{2}I_{:,2}+\cdots+v_{n}I_{:,n}
+\]
+
+\end_inset
+
+(and this is the only such linear combination) so 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]}$
+\end_inset
+
+ is the coordinate vector of 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mathcal{E}=\{I_{:,1},I_{:,2},\ldots,I_{:,n}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the context of coordinate vectors, the vectors of a basis must be ordered,
+ and the entries in the coordinate vector must correspond to this ordering.
+ The first entry of the coordinate vector corresponds with the first vector
+ in the basis.
+ The second entry of the coordinate vector corresponds with the second vector
+ in the basis.
+ And so on.
+ This correspondence is required to maintain the uniqueness of representation.
+ Therefore different orderings of the same basis may provide different coordinat
+e vectors for a single given vector.
+ The basis 
+\begin_inset Formula $\mathcal{B}=\{I_{:,2},I_{:,1},\ldots,I_{:,n}\}$
+\end_inset
+
+ is different from the standard basis 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+.
+ Of course, it is still true that
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]=v_{1}I_{:,1}+v_{2}I_{:,2}+\cdots+v_{n}I_{:,n}
+\]
+
+\end_inset
+
+but this means 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+v_{2}\\
+v_{1}\\
+\vdots\\
+v_{n}
+\end{array}\right]}$
+\end_inset
+
+ is the coordinate vector of 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mathcal{B}=\{I_{:,2},I_{:,1},\ldots,I_{:,n}\}$
+\end_inset
+
+.
+ To keep the various coordinate vectors straight, the coordinate vector
+ with respect to a basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ will be subscripted with a 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ as in 
+\begin_inset Formula 
+\[
+{\displaystyle \left[\begin{array}{c}
+v_{2}\\
+v_{1}\\
+\vdots\\
+v_{n}
+\end{array}\right]}_{\mathcal{B}}={\displaystyle \left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given that there is essentially no difference between a vector and its represent
+ation with respect to the standard basis, 
+\begin_inset Formula 
+\[
+{\displaystyle \left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]}={\displaystyle \left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]}_{\mathcal{E}},
+\]
+
+\end_inset
+
+all vectors in the remainder of this section will be subscripted to help
+ avoid confusion.
+ In general, 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ means the coordinate vector of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to the basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ In this vein we have 
+\begin_inset Formula 
+\[
+{\displaystyle \left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]}_{\mathcal{E}}={\displaystyle \left[\begin{array}{c}
+v_{2}\\
+v_{1}\\
+\vdots\\
+v_{n}
+\end{array}\right]}_{\mathcal{B}}.
+\]
+
+\end_inset
+
+Letting 
+\begin_inset Formula ${\displaystyle \mathcal{C}=\left\{ \left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]_{\mathcal{E}},\left[\begin{array}{c}
+1\\
+1\\
+0
+\end{array}\right]_{\mathcal{E}},\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]_{\mathcal{E}}\right\} }$
+\end_inset
+
+, can you verify that
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+6\\
+4\\
+-3
+\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+4\\
+6\\
+-3
+\end{array}\right]_{\mathcal{B}}=\left[\begin{array}{c}
+2\\
+7\\
+-3
+\end{array}\right]_{\mathcal{C}}?
+\]
+
+\end_inset
+
+Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:equivalent-coordinate-vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Notice that
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+2\\
+7\\
+-3
+\end{array}\right]_{\mathcal{C}}=2\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]_{\mathcal{E}}+7\left[\begin{array}{c}
+1\\
+1\\
+0
+\end{array}\right]_{\mathcal{E}}-3\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]_{\mathcal{E}}=\left(\left[\begin{array}{ccc}
+1 & 1 & 1\\
+0 & 1 & 1\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{c}
+2\\
+7\\
+-3
+\end{array}\right]\right)_{\mathcal{E}}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+4\\
+6\\
+-3
+\end{array}\right]_{\mathcal{B}}=4\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right]_{\mathcal{E}}+6\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]_{\mathcal{E}}-3\left[\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right]_{\mathcal{E}}=\left(\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{c}
+4\\
+6\\
+-3
+\end{array}\right]\right)_{\mathcal{E}}.
+\]
+
+\end_inset
+
+In general, if 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a basis of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ written with respect to the standard basis, and 
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+c
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+I
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+equivalent
+\begin_inset space ~
+\end_inset
+
+coordinate
+\begin_inset space ~
+\end_inset
+
+vectors 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:equivalent-coordinate-vectors"
+
+\end_inset
+
+Remember, any vector subscripted with an 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ is the same as the vectors we have been writing all along without subscripts,
+ so they should be treated as if the subscript were not there.
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+2\\
+7\\
+-3
+\end{array}\right]_{\mathcal{C}} & =2\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]_{\mathcal{E}}+7\left[\begin{array}{c}
+1\\
+1\\
+0
+\end{array}\right]_{\mathcal{E}}-3\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+2+7-3\\
+7-3\\
+-3
+\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+6\\
+4\\
+-3
+\end{array}\right]_{\mathcal{E}}\\
+\left[\begin{array}{c}
+4\\
+6\\
+-3
+\end{array}\right]_{\mathcal{B}} & =4I_{:,2}+6I_{:,1}-3I_{:,3}=4\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right]_{\mathcal{E}}+6\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]_{\mathcal{E}}-3\left[\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+6\\
+4\\
+-3
+\end{array}\right]_{\mathcal{E}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
