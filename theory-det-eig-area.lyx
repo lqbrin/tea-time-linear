@@ -89,6 +89,14 @@ enumitem
 
 \begin_body
 
+\begin_layout Part
+Applications Beyond Matrix Algebra
+\end_layout
+
+\begin_layout Chapter
+Applications within Mathematics
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -96,7 +104,7 @@ name "sec:Determinants-Eigenvalues-Area"
 
 \end_inset
 
-Determinants, Eigenvalues, and Area
+Geometry: Determinants, Eigenvalues, and Area []
 \end_layout
 
 \begin_layout Standard
@@ -1705,10 +1713,6 @@ Use the fact that
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Enumerate
-
 \end_layout
 
 \begin_layout Standard

@@ -1318,11 +1318,7 @@ Some sets, each of which has a natural definition as a vector space, are
 \begin_inset Formula $\mathbb{F}$
 \end_inset
 
- is taken to be one of 
-\begin_inset Formula $\mathbb{Q},\ \mathbb{R},\text{ or }\mathbb{C}$
-\end_inset
-
-
+ is taken to be one of
 \begin_inset Foot
 status collapsed
 
@@ -1333,6 +1329,10 @@ status collapsed
  could actually be any field.
 \end_layout
 
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{Q},\ \mathbb{R},\text{ or }\mathbb{C}$
 \end_inset
 
 , and 

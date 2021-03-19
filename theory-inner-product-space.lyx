@@ -430,6 +430,26 @@ inner product space
 
 \begin_layout Standard
 \align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
@@ -649,17 +669,13 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Standard
-\noindent
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Figure out why footnotes are not showing up 
-\end_layout
-
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 One reason for using the words norm and orthogonal instead of magnitude
  and perpendicular is because magnitude and perpendicular have ingrained
  geometric meaning that does not readily transer to objects such as matrices

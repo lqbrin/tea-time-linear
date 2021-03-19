@@ -304,7 +304,15 @@ e vectors for a single given vector.
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
-.
+ (even though, as sets, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ are equal).
  Of course, it is still true that
 \begin_inset Formula 
 \[
@@ -373,7 +381,7 @@ v_{n}
 
 \begin_layout Standard
 Given that there is essentially no difference between a vector and its represent
-ation with respect to the standard basis, 
+ation with respect to the standard basis— 
 \begin_inset Formula 
 \[
 {\displaystyle \left[\begin{array}{c}
@@ -386,13 +394,13 @@ v_{1}\\
 v_{2}\\
 \vdots\\
 v_{n}
-\end{array}\right]}_{\mathcal{E}},
+\end{array}\right]}_{\mathcal{E}}
 \]
 
 \end_inset
 
-all vectors in the remainder of this section will be subscripted to help
- avoid confusion.
+for example—all vectors in the remainder of this section will be subscripted
+ to help avoid confusion.
  In general, 
 \begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
 \end_inset
@@ -546,7 +554,360 @@ In general, if
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- written with respect to the standard basis, and 
+ with its vectors written with respect to the standard basis, and 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ is the matrix whose columns are the vectors of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, respecting order, then
+\begin_inset Formula 
+\begin{equation}
+\left[\mathbf{v}\right]_{\mathcal{E}}=\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}.\label{eq:to-standard-basis}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But there is nothing terribly special about the standard basis beyond the
+ fact that it is the most familiar.
+ If the basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is written with respect to the basis 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ (and 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+ is the matrix whose columns are these vectors, respecting order), then
+ 
+\begin_inset Formula 
+\begin{equation}
+\left[\mathbf{v}\right]_{\mathcal{C}}=\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}.\label{eq:change-of-basis}
+\end{equation}
+
+\end_inset
+
+This can be verified by direct calculation.
+ Let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\{\mathbf{c}_{1},\mathbf{c}_{2},\ldots,\mathbf{c}_{n}\}$
+\end_inset
+
+ and write the vectors of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align}
+\mathbf{b}_{1} & =M_{1,1}\mathbf{c}_{1}+M_{2,1}\mathbf{c}_{2}+\cdots+M_{n,1}\mathbf{c}_{n}\nonumber \\
+\mathbf{b}_{2} & =M_{1,2}\mathbf{c}_{1}+M_{2,2}\mathbf{c}_{2}+\cdots+M_{n,2}\mathbf{c}_{n}\nonumber \\
+ & \vdots\nonumber \\
+\mathbf{b}_{n} & =M_{1,n}\mathbf{c}_{1}+M_{2,n}\mathbf{c}_{2}+\cdots+M_{n,n}\mathbf{c}_{n}\label{eq:B-wrt-C}
+\end{align}
+
+\end_inset
+
+and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=v_{1}\mathbf{b}_{1}+v_{2}\mathbf{b}_{2}+\cdots+v_{n}\mathbf{b}_{n}.\label{eq:v-wrt-B}
+\end{equation}
+
+\end_inset
+
+ Then
+\begin_inset Formula 
+\[
+\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\begin{array}{cccc}
+M_{1,1} & M_{1,2} & \cdots & M_{1,n}\\
+M_{2,1} & M_{2,2} & \cdots & M_{2,n}\\
+\vdots & \vdots & \ddots & \vdots\\
+M_{n,1} & M_{n,2} & \cdots & M_{n,n}
+\end{array}\right]
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{align}
+\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}} & =v_{1}\left[\begin{array}{c}
+M_{1,1}\\
+M_{2,1}\\
+\vdots\\
+M_{n,1}
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+M_{1,2}\\
+M_{2,2}\\
+\vdots\\
+M_{n,2}
+\end{array}\right]+\cdots+v_{n}\left[\begin{array}{c}
+M_{1,n}\\
+M_{2,n}\\
+\vdots\\
+M_{n,n}
+\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{c}
+v_{1}M_{1,1}+v_{2}M_{1,2}+\cdots+v_{n}M_{1,n}\\
+v_{1}M_{2,1}+v_{2}M_{2,2}+\cdots+v_{n}M_{2,n}\\
+\vdots\\
+v_{1}M_{n,1}+v_{2}M_{n,2}+\cdots+v_{n}M_{n,n}
+\end{array}\right].\label{eq:v-wrt-C}
+\end{align}
+
+\end_inset
+
+On the other hand, direct substitution of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:B-wrt-C"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) into (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:v-wrt-B"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) yields
+\begin_inset Formula 
+\begin{align*}
+\mathbf{v} & =v_{1}\left(M_{1,1}\mathbf{c}_{1}+M_{2,1}\mathbf{c}_{2}+\cdots+M_{n,1}\mathbf{c}_{n}\right)\\
+ & \phantom{=}\quad+v_{2}\left(M_{1,2}\mathbf{c}_{1}+M_{2,2}\mathbf{c}_{2}+\cdots+M_{n,2}\mathbf{c}_{n}\right)\\
+ & \phantom{=}\qquad\vdots\\
+ & \phantom{=}\quad+v_{n}\left(M_{1,n}\mathbf{c}_{1}+M_{2,n}\mathbf{c}_{2}+\cdots+M_{n,n}\mathbf{c}_{n}\right)\\
+ & =\left(v_{1}M_{1,1}+v_{2}M_{1,2}+\cdots+v_{n}M_{1,n}\right)\mathbf{c}_{1}\\
+ & \phantom{=}\quad+\left(v_{1}M_{2,1}+v_{2}M_{2,2}+\cdots+v_{n}M_{2,n}\right)\mathbf{c}_{2}\\
+ & \phantom{=}\qquad\vdots\\
+ & \phantom{=}\quad+\left(v_{1}M_{n,1}+v_{2}M_{n,2}+\cdots+v_{n}M_{n,n}\right)\mathbf{c}_{n}
+\end{align*}
+
+\end_inset
+
+which verifies that (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:v-wrt-C"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+ Equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:change-of-basis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is one formula for a so-called 
+\series bold
+change of basis
+\series default
+.
+ It gives a formula for changing the basis with respect to which 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is written from 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Being a basis of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ contains 
+\begin_inset Formula $n$
+\end_inset
+
+ linearly independent vectors with 
+\begin_inset Formula $n$
+\end_inset
+
+ entries each, so 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+ is invertible for any basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ written with respect to any basis 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ (how it is written is actually immaterial as far as linear independence
+ is concerned).
+ In particular, if both bases 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ are written with respect to the standard basis and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an arbitrary vector, we have 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{E}}=\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{E}}=\left[\mathcal{C}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+, so
+\begin_inset Formula 
+\[
+\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\mathcal{C}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{C}}
+\]
+
+\end_inset
+
+and we can conclude
+\begin_inset Formula 
+\[
+\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\mathbf{v}\right]_{\mathcal{C}}\quad\text{and}\quad\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\mathcal{C}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{C}}.
+\]
+
+\end_inset
+
+Comparing this to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:change-of-basis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) it must be that 
+\begin_inset Formula $\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}\left[\mathcal{B}\right]_{\mathcal{E}}=\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+ or
+\begin_inset Formula 
+\begin{equation}
+\left[\mathbf{v}\right]_{\mathcal{C}}=\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}.\label{eq:change-of-basis-2}
+\end{equation}
+
+\end_inset
+
+In retrospect, this should not be surprising.
+ Multiplying 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ gives 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{E}}$
+\end_inset
+
+ (see equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:to-standard-basis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)).
+ This same equation tells us that multiplying 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{E}}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}$
+\end_inset
+
+ gives 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+ Diagrammatically
+\begin_inset Formula 
+\[
+\left[\mathbf{v}\right]_{\mathcal{B}}\overset{\text{times }\left[\mathcal{B}\right]_{\mathcal{E}}}{\longrightarrow}\left[\mathbf{v}\right]_{\mathcal{E}}\overset{\text{times }\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}}{\longrightarrow}\left[\mathbf{v}\right]_{\mathcal{C}},
+\]
+
+\end_inset
+
+which is just another way to write (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:change-of-basis-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -554,7 +915,72 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-c
+coordinate
+\begin_inset space ~
+\end_inset
+
+vector of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to basis 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ is the vector 
+\begin_inset Formula 
+\[
+\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]_{\mathcal{B}}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{v}=v_{1}\mathbf{b}_{1}+v_{2}\mathbf{b}_{2}+\cdots+v_{n}\mathbf{b}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+change
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+basis given bases 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}\in V$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\left[\mathbf{v}\right]_{\mathcal{C}}=\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
