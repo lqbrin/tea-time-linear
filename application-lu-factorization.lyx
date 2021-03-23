@@ -90,7 +90,7 @@ enumitem
 \begin_body
 
 \begin_layout Chapter
-Applications to Matrix Algebra
+Automated Calculation
 \end_layout
 
 \begin_layout Section
@@ -104,7 +104,21 @@ LU Factorization []
 \end_layout
 
 \begin_layout Standard
-I
+We have seen on several occasions (see sections 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: list sections
+\end_layout
+
+\end_inset
+
+) that row operations can be represented via left-multiplication by elementary
+ matrices.
+ Adding the fact that elementary matrices are invertible gives a method
+ for factoring matrices in much the same way we can factors integers and
+ polynomials.
 \end_layout
 
 \begin_layout Subsection

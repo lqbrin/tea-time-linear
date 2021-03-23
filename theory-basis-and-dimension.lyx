@@ -809,6 +809,13 @@ standard basis
 \end_inset
 
 .
+\begin_inset CommandInset label
+LatexCommand label
+name "par:standard-basis-of-PnR"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

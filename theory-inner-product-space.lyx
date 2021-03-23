@@ -338,6 +338,13 @@ inner product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:inner-product-positivity"
+
+\end_inset
+
+
 \begin_inset Formula $\langle\mathbf{u},\mathbf{u}\rangle\geq0$
 \end_inset
 
@@ -353,6 +360,13 @@ inner product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:inner-product-zero"
+
+\end_inset
+
+
 \begin_inset Formula $\langle\mathbf{u},\mathbf{u}\rangle=0$
 \end_inset
 
@@ -364,6 +378,13 @@ inner product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:inner-product-symmetry"
+
+\end_inset
+
+
 \begin_inset Formula $\langle\mathbf{u},\mathbf{v}\rangle=\langle\mathbf{v},\mathbf{u}\rangle$
 \end_inset
 
@@ -379,6 +400,13 @@ inner product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:inner-product-preserve-sum"
+
+\end_inset
+
+
 \begin_inset Formula $\langle\mathbf{u}+\mathbf{w},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{v}\rangle+\langle\mathbf{w},\mathbf{v}\rangle$
 \end_inset
 
@@ -394,6 +422,13 @@ inner product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:inner-product-preserve-scalar-mult"
+
+\end_inset
+
+
 \begin_inset Formula $\langle c\mathbf{u},\mathbf{v}\rangle=c\langle\mathbf{u},\mathbf{v}\rangle$
 \end_inset
 
@@ -704,9 +739,9 @@ Can you verify that
 
 ,
 \begin_inset Formula 
-\[
-\langle p_{0}+p_{1}x+p_{2}x^{2},q_{0}+q_{1}x+q_{2}x^{2}\rangle=\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}
-\]
+\begin{equation}
+\langle p_{0}+p_{1}x+p_{2}x^{2},q_{0}+q_{1}x+q_{2}x^{2}\rangle=\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}\label{eq:P2-inner-product}
+\end{equation}
 
 \end_inset
 

@@ -723,7 +723,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 5: Applications to matrix algebra 
+% Chapter 5: Applications within linear algebra 
 \end_layout
 
 \end_inset
@@ -755,6 +755,16 @@ filename "application-solution-spaces.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-coordinate-vectors.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-orthogonalization.lyx"
 
 \end_inset
 

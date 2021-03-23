@@ -1,0 +1,1208 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Orthogonalization"
+
+\end_inset
+
+Orthogonalization []
+\end_layout
+
+\begin_layout Standard
+Determining the coefficients in the linear combination of basis vectors
+ that sum to a given vector is big business in engineering and the sciences.
+ This problem is generally aided by careful choice of basis vectors (see
+ Legendre Polynomials, Fourier Series, and Finite Element Methods, for example).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Add references to this book(?) and engineering texts 
+\end_layout
+
+\end_inset
+
+But what makes one set of basis vectors better than another? To get some
+ idea, suppose we have an arbitrary basis 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ for an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+ and an arbitrary vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ The problem stated mathematically is to find coefficients 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n}.\label{eq:the-coefficient-problem}
+\end{equation}
+
+\end_inset
+
+If 
+\begin_inset Formula $V=\mathbb{R}^{n}$
+\end_inset
+
+, this is the vector form of a linear system.
+ It can be solved by row reduction.
+ If 
+\begin_inset Formula $V\neq\mathbb{R}^{n}$
+\end_inset
+
+, it is less obvious how to solve.
+ Using coordinate vectors (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Coordinate-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is one way to proceed, but since 
+\begin_inset Formula $V$
+\end_inset
+
+ is an inner product space, we can leverage the inner product to turn the
+ problem into a question of solving a linear system instead.
+ To start, can you show that if 
+\begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+ for any vector 
+\begin_inset Formula $\mathbf{w}\in V$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{w}=\mathbf{0}$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:zero-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Only the zero vector is orthogonal to (has inner product zero with) every
+ vector in a basis.
+\end_layout
+
+\begin_layout Standard
+Taking the inner product with each basis vector on both sides of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) produces the following linear system.
+\begin_inset Formula 
+\begin{align}
+\langle\mathbf{v},\mathbf{b}_{1}\rangle & =\langle a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n},\mathbf{b}_{1}\rangle\nonumber \\
+\langle\mathbf{v},\mathbf{b}_{2}\rangle & =\langle a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n},\mathbf{b}_{2}\rangle\nonumber \\
+ & \vdots\nonumber \\
+\langle\mathbf{v},\mathbf{b}_{n}\rangle & =\langle a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n},\mathbf{b}_{n}\rangle\label{eq:coefficients-inner-products}
+\end{align}
+
+\end_inset
+
+and by inner product space properties 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-preserve-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-preserve-scalar-mult"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\langle\mathbf{v},\mathbf{b}_{1}\rangle & =a_{1}\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle+a_{2}\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle+\cdots+a_{n}\langle\mathbf{b}_{n},\mathbf{b}_{1}\rangle\\
+\langle\mathbf{v},\mathbf{b}_{2}\rangle & =a_{1}\langle\mathbf{b}_{1},\mathbf{b}_{2}\rangle+a_{2}\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle+\cdots+a_{n}\langle\mathbf{b}_{n},\mathbf{b}_{2}\rangle\\
+ & \vdots\\
+\langle\mathbf{v},\mathbf{b}_{n}\rangle & =a_{1}\langle\mathbf{b}_{1},\mathbf{b}_{n}\rangle+a_{2}\langle\mathbf{b}_{2},\mathbf{b}_{n}\rangle+\cdots+a_{n}\langle\mathbf{b}_{n},\mathbf{b}_{n}\rangle
+\end{align*}
+
+\end_inset
+
+and in matrix format
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cccc}
+\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle & \langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle & \cdots & \langle\mathbf{b}_{n},\mathbf{b}_{1}\rangle\\
+\langle\mathbf{b}_{1},\mathbf{b}_{2}\rangle & \langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle & \cdots & \langle\mathbf{b}_{n},\mathbf{b}_{2}\rangle\\
+\vdots & \vdots & \ddots & \vdots\\
+\langle\mathbf{b}_{1},\mathbf{b}_{n}\rangle & \langle\mathbf{b}_{2},\mathbf{b}_{n}\rangle & \cdots & \langle\mathbf{b}_{n},\mathbf{b}_{n}\rangle
+\end{array}\right]\left[\begin{array}{c}
+a_{1}\\
+a_{2}\\
+\vdots\\
+a_{n}
+\end{array}\right]=\left[\begin{array}{c}
+\langle\mathbf{v},\mathbf{b}_{1}\rangle\\
+\langle\mathbf{v},\mathbf{b}_{2}\rangle\\
+\vdots\\
+\langle\mathbf{v},\mathbf{b}_{n}\rangle
+\end{array}\right].\label{eq:coefficients-matrix-format}
+\end{equation}
+
+\end_inset
+
+No matter the vector and no matter the basis, this problem is reduced to
+ solving this linear system of equations, a problem that we have studied
+ extensively!
+\end_layout
+
+\begin_layout Standard
+If that were all there were to it, though, this method would hardly be better
+ than using coordinate vectors.
+ This section began by suggesting that careful choice of basis would help.
+ Since the process of row reduction involves producing zeros above and below
+ the pivots, starting with some zeros in the matrix would be beneficial.
+ For example, if 
+\begin_inset Formula $\langle\mathbf{b}_{1},\mathbf{b}_{2}\rangle$
+\end_inset
+
+ were zero, it would put zeros in the 
+\begin_inset Formula $1,2$
+\end_inset
+
+-entry and the 
+\begin_inset Formula $2,1$
+\end_inset
+
+-entry.
+ More generally, if 
+\begin_inset Formula $\langle\mathbf{b}_{i},\mathbf{b}_{j}\rangle$
+\end_inset
+
+ were zero, it would put zeros in the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entry and the 
+\begin_inset Formula $j,i$
+\end_inset
+
+-entry.
+ The more orthogonal pairs of basis vectors (zero inner products between
+ basis vectors) the better.
+ Thinking greedily, if 
+\begin_inset Formula $\langle\mathbf{b}_{i},\mathbf{b}_{j}\rangle=0$
+\end_inset
+
+ for all pairs 
+\begin_inset Formula $i,j$
+\end_inset
+
+, 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+, the system reads 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle & 0 & \cdots & 0\\
+0 & \langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \langle\mathbf{b}_{n},\mathbf{b}_{n}\rangle
+\end{array}\right]\left[\begin{array}{c}
+a_{1}\\
+a_{2}\\
+\vdots\\
+a_{n}
+\end{array}\right]=\left[\begin{array}{c}
+\langle\mathbf{v},\mathbf{b}_{1}\rangle\\
+\langle\mathbf{v},\mathbf{b}_{2}\rangle\\
+\vdots\\
+\langle\mathbf{v},\mathbf{b}_{n}\rangle
+\end{array}\right]
+\]
+
+\end_inset
+
+and has solution 
+\begin_inset Formula $a_{1}=\frac{\langle\mathbf{v},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}=\frac{\langle\mathbf{v},\mathbf{b}_{2}\rangle}{\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle}$
+\end_inset
+
+,
+\begin_inset Formula $\ldots$
+\end_inset
+
+,
+\begin_inset Formula $a_{n}=\frac{\langle\mathbf{v},\mathbf{b}_{n}\rangle}{\langle\mathbf{b}_{n},\mathbf{b}_{n}\rangle}$
+\end_inset
+
+.
+ Better yet, if 
+\begin_inset Formula $\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle=\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{b}_{n},\mathbf{b}_{n}\rangle=1$
+\end_inset
+
+, the solution is simply 
+\begin_inset Formula $a_{1}=\langle\mathbf{v},\mathbf{b}_{1}\rangle$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}=\langle\mathbf{v},\mathbf{b}_{2}\rangle$
+\end_inset
+
+,
+\begin_inset Formula $\ldots$
+\end_inset
+
+,
+\begin_inset Formula $a_{n}=\langle\mathbf{v},\mathbf{b}_{n}\rangle$
+\end_inset
+
+—the coefficients are simply the inner products of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with each of the basis vectors.
+\end_layout
+
+\begin_layout Standard
+The question then turns to (a) establishing bases within which pairs of
+ vectors are orthogonal, and (b) possibly ensuring all their norms (inner
+ products 
+\begin_inset Formula $\langle\mathbf{b}_{i},\mathbf{b}_{i}\rangle$
+\end_inset
+
+) are one.
+ The prototypical example of such a basis is the standard basis 
+\begin_inset Formula $\mathcal{E}=\{I_{:,1},I_{:,2},\ldots,I_{:,n}\}$
+\end_inset
+
+ with inner product 
+\begin_inset Formula $\langle\mathbf{u},\mathbf{v}\rangle=\mathbf{u}\bcdot\mathbf{v}$
+\end_inset
+
+ (the dot product, after which inner products were modeled).
+ Can you verify that the inner product of every pair of vectors in 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ is zero and that the norm of each vector in 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ is one? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:standard-basis-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The standard basis 
+\begin_inset Formula $\mathcal{E}=\{1,t,t^{2}\}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+ (see page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:standard-basis-of-PnR"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) with inner product (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:P2-inner-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) does not have these properties.
+ Can you identify at least one violation? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:P2R-violation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The SageMath output below demonstrates a process for taking any basis of
+ 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and modifying it so that all pairs of vectors are orthogonal, a process
+ called orthogonalization.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-orthogonalization-01.png
+	lyxscale 33
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The first vector of the orthogonal basis is taken as the first vector of
+ the original basis.
+ The second vector of the orthogonal basis is taken as the second vector
+ of the original basis minus a particular vector.
+ The third vector of the orthogonal basis is taken as the third vector of
+ the original basis minus two particular vectors.
+ But what vectors ought to be subtracted? A clever observation will answer
+ the question.
+\end_layout
+
+\begin_layout Standard
+Given any vectors 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\left\langle \mathbf{b}_{1},\mathbf{b}_{2}-\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}\right\rangle  & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\left\langle \mathbf{b}_{1},\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}\right\rangle \\
+ & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\left\langle \mathbf{b}_{1},\mathbf{b}_{1}\right\rangle \\
+ & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle\\
+ & =0
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}_{2}-\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}$
+\end_inset
+
+ are always orthogonal (even if 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+ are not).
+ And this applies in any inner product space, not just 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ The term 
+\begin_inset Formula $\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}$
+\end_inset
+
+ is called the component of 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+ in the 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ direction or the projection of 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+, and is often denoted by 
+\begin_inset Formula $\text{proj}_{\mathbf{b}_{1}}\mathbf{b}_{2}$
+\end_inset
+
+.
+ Subtracting this term from 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+ removes this component from 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+, leaving only the component of 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+ orthogonal to 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+.
+ In 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, this can be seen geometrically:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-orthogonalization-02.pdf
+	lyxscale 33
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given a set of three vectors, 
+\begin_inset Formula $\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3}$
+\end_inset
+
+, they can be orthogonalized by extending the process to 
+\begin_inset Formula $\mathbf{b}_{3}$
+\end_inset
+
+.
+ Its components in the directions of both 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}_{2}-\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}$
+\end_inset
+
+ will need to be subtracted.
+ Letting 
+\begin_inset Formula $\mathbf{w}_{1}=\mathbf{b}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}_{2}=\mathbf{b}_{2}-\text{proj}_{\mathbf{w}_{1}}\mathbf{b}_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{w}_{3}=\mathbf{b}_{3}-\text{proj}_{\mathbf{w}_{1}}\mathbf{b}_{3}-\text{proj}_{\mathbf{w}_{2}}\mathbf{b}_{3}$
+\end_inset
+
+.
+ For larger sets, the process continues recursively.
+\begin_inset Formula 
+\begin{align}
+\mathbf{w}_{1} & =\mathbf{b}_{1}\nonumber \\
+\mathbf{w}_{j} & =\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{1}}\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{2}}\mathbf{b}_{j}-\cdots-\text{proj}_{\mathbf{w}_{j-1}}\mathbf{b}_{j},\quad j=2,3,\ldots,n.\label{eq:orthogonalization}
+\end{align}
+
+\end_inset
+
+The process as described by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is called Gram-Schmidt orthogonalization.
+\end_layout
+
+\begin_layout Standard
+A couple details have thus far been overlooked.
+ The discussion at the beginning of the section establishes that (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) implies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), but what we have been relying on is the converse, that (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) implies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Following our steps backward, the same properties of inner product spaces
+ that gave us that (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) implies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) work in reverse, giving us (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) implies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ However, the implication from (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is not as straightforward.
+ Assuming (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) we need to show that 
+\begin_inset Formula $\mathbf{v}=a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n}$
+\end_inset
+
+.
+ Moving everything to the lefthand side in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
+\begin_inset Formula 
+\begin{align*}
+\langle\mathbf{v},\mathbf{b}_{1}\rangle-\langle a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n},\mathbf{b}_{1}\rangle & =0\\
+\langle\mathbf{v},\mathbf{b}_{2}\rangle-\langle a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n},\mathbf{b}_{2}\rangle & =0\\
+ & \vdots\\
+\langle\mathbf{v},\mathbf{b}_{n}\rangle-\langle a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n},\mathbf{b}_{n}\rangle & =0
+\end{align*}
+
+\end_inset
+
+which implies
+\begin_inset Formula 
+\begin{align*}
+\langle\mathbf{v}-(a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n}),\mathbf{b}_{1}\rangle & =0\\
+\langle\mathbf{v}-(a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n}),\mathbf{b}_{2}\rangle & =0\\
+ & \vdots\\
+\langle\mathbf{v}-(a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n}),\mathbf{b}_{n}\rangle & =0
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{v}-(a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n})$
+\end_inset
+
+ is orthogonal to each basis vector.
+ As shown in 
+\begin_inset Quotes eld
+\end_inset
+
+zero inner products
+\begin_inset Quotes erd
+\end_inset
+
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:zero-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this means 
+\begin_inset Formula $\mathbf{v}-(a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n})=\mathbf{0}$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathbf{v}=a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The span of the orthogonalized vectors is the same as the span of the original
+ vectors.
+ This is an important feature of the process if you are orthogonalizing
+ the basis of a subspace.
+ Even more is true, though: 
+\begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j=1,2,\ldots,n$
+\end_inset
+
+.
+ This can be justified by induction.
+ Clearly 
+\begin_inset Formula $\text{span}\{\mathbf{w}_{1}\}=\text{span}\{\mathbf{b}_{1}\}$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathbf{w}_{1}=\mathbf{b}_{1}$
+\end_inset
+
+ so the claim is true for 
+\begin_inset Formula $j=1$
+\end_inset
+
+.
+ Now suppose 
+\begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j-1}\}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j-1}\}$
+\end_inset
+
+ for some arbitrary 
+\begin_inset Formula $j\geq2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+It was established that 
+\begin_inset Formula $\mathbf{w}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}_{2}$
+\end_inset
+
+ as computed in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are orthogonal, but other pairs were not proven orthogonal.
+ 
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+c
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+I
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+zero
+\begin_inset space ~
+\end_inset
+
+inner
+\begin_inset space ~
+\end_inset
+
+products 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:zero-inner-products"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{w}=c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+ means 
+\begin_inset Formula $c_{1}\langle\mathbf{w},\mathbf{b}_{1}\rangle=c_{2}\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=c_{n}\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+.
+ By properties 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-symmetry"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-preserve-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-preserve-scalar-mult"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of inner product spaces (see page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "enu:inner-product-preserve-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 
+\begin_inset Formula $\langle\mathbf{w},c_{1}\mathbf{b}_{1}\rangle=\langle\mathbf{w},c_{2}\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},c_{n}\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+, so 
+\begin_inset Formula $\langle\mathbf{w},c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}=\mathbf{w}$
+\end_inset
+
+ so 
+\begin_inset Formula $\langle\mathbf{w},\mathbf{w}\rangle=0$
+\end_inset
+
+ and by property 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-zero"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{w}=\mathbf{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+standard
+\begin_inset space ~
+\end_inset
+
+basis
+\begin_inset space ~
+\end_inset
+
+inner
+\begin_inset space ~
+\end_inset
+
+products 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:standard-basis-inner-products"
+
+\end_inset
+
+For pairs of basis vectors, 
+\begin_inset Formula $i<j$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\langle I_{:,i},I_{:,j}\rangle & =I_{:,i}\bcdot I_{:,j}\\
+ & =0\cdot0+\cdots+0\cdot0+\overset{i^{th}\text{ term}}{\overbrace{1\cdot0}}+0\cdot0+\cdots+0\cdot0+\overset{j^{th}\text{ term}}{\overbrace{0\cdot1}}+0\cdot0+\cdots+0\cdot0\\
+ & =0.
+\end{align*}
+
+\end_inset
+
+For 
+\begin_inset Formula $i>j$
+\end_inset
+
+, the same computation holds by symmetry (property 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-symmetry"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of inner product spaces).
+ For the norms of basis vectors,
+\begin_inset Formula 
+\begin{align*}
+||I_{:,i}|| & =\sqrt{I_{:,i}\bcdot I_{:,i}}\\
+ & =\sqrt{0\cdot0+\cdots+0\cdot0+\overset{i^{th}\text{ term}}{\overbrace{1\cdot1}}+0\cdot0+\cdots+0\cdot0}\\
+ & =1.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+violation 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:P2R-violation"
+
+\end_inset
+
+
+\begin_inset Formula $\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}$
+\end_inset
+
+ Violations are easy to come by.
+ The inner products 
+\begin_inset Formula $\langle1,t\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle t,t^{2}\rangle$
+\end_inset
+
+ are both zero, but 
+\begin_inset Formula $\langle1,t^{2}\rangle$
+\end_inset
+
+ is not:
+\begin_inset Formula 
+\begin{align*}
+\langle1,t^{2}\rangle & =\langle1(1)+0(t)+0(t^{2}),\ 0(1)+0(t)+1(t^{2})\rangle\\
+ & =\frac{2}{5}(0\cdot1)+\frac{2}{3}(1\cdot1)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(0\cdot0)+2(1\cdot0)\\
+ & =\frac{2}{3}.
+\end{align*}
+
+\end_inset
+
+ None of the norms are one:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Since 
+\begin_inset Formula $1^{2}=1$
+\end_inset
+
+, it is just as well to see that the norm squared is not 1 as in 
+\begin_inset Formula $||1||^{2}=\langle1,1\rangle=\frac{2}{5}(0\cdot0)+\frac{2}{3}(1\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(0\cdot1)+2(1\cdot1)=2$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+||1||=\sqrt{\langle1,1\rangle} & =\sqrt{\frac{2}{5}(0\cdot0)+\frac{2}{3}(1\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(0\cdot1)+2(1\cdot1)}=\sqrt{2}\\
+||t||=\sqrt{\langle t,t\rangle} & =\sqrt{\frac{2}{5}(0\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(1\cdot1)+\frac{2}{3}(0\cdot0)+2(0\cdot0)}=\sqrt{\frac{2}{3}}\\
+||t^{2}||=\sqrt{\langle t^{2},t^{2}\rangle} & =\sqrt{\frac{2}{5}(1,1)+\frac{2}{3}(0\cdot1)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(1\cdot0)+2(0\cdot0)}=\sqrt{\frac{2}{5}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
