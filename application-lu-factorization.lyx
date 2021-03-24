@@ -89,8 +89,12 @@ enumitem
 
 \begin_body
 
+\begin_layout Part
+Applications
+\end_layout
+
 \begin_layout Chapter
-Automated Calculation
+Numerical Linear Algebra
 \end_layout
 
 \begin_layout Section

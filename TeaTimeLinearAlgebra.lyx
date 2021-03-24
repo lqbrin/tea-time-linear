@@ -723,18 +723,8 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 5: Applications within linear algebra 
+% Chapter 5: Exploring Vector Spaces 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "application-lu-factorization.lyx"
 
 \end_inset
 
@@ -795,26 +785,6 @@ status open
 
 \begin_layout Plain Layout
 
-% Orthogonal Sets
-\end_layout
-
-\begin_layout Plain Layout
-
-% Orthogonal Projection
-\end_layout
-
-\begin_layout Plain Layout
-
-% Gram-Schmidt method
-\end_layout
-
-\begin_layout Plain Layout
-
-%**** LU Factorization 
-\end_layout
-
-\begin_layout Plain Layout
-
 %**** Diagonalization/Similarity
 \end_layout
 
@@ -844,7 +814,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Part III: Applications Beyond Matrices 
+% Part III: Applications 
 \end_layout
 
 \end_inset
@@ -858,7 +828,31 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 6: Applications to Branches of Mathematics 
+% Chapter 6: Numerical Linear Algebra 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-lu-factorization.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Chapter 7: Applications to Branches of Mathematics 
 \end_layout
 
 \end_inset
@@ -911,7 +905,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 7: Applications Outside of Mathematics 
+% Chapter 8: Applications Outside of Mathematics 
 \end_layout
 
 \end_inset

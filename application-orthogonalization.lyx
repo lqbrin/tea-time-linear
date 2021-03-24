@@ -100,26 +100,25 @@ Orthogonalization []
 \end_layout
 
 \begin_layout Standard
-Determining the coefficients in the linear combination of basis vectors
- that sum to a given vector is big business in engineering and the sciences.
- This problem is generally aided by careful choice of basis vectors (see
- Legendre Polynomials, Fourier Series, and Finite Element Methods, for example).
- 
+Determining the linear combination of basis vectors that sums to a given
+ vector is big business in engineering and the sciences.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-TODO: Add references to this book(?) and engineering texts 
+TODO: Add references to this book(?) and engineering texts
 \end_layout
 
 \end_inset
 
-But what makes one set of basis vectors better than another? To get some
- idea, suppose we have an arbitrary basis 
+ This problem is generally aided by careful choice of basis vectors (see
+ Legendre Polynomials, Fourier Series, and Finite Element Methods, for example).
+ But what makes one set of basis vectors more amenable than another? To
+ get some idea, suppose we have an arbitrary basis 
 \begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
 \end_inset
 
- for an inner product space 
+ of an inner product space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -165,13 +164,28 @@ noprefix "false"
 
 \end_inset
 
-) is one way to proceed, but since 
+) is one way to turn (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) into a linear system, but in neither case does the generated linear system
+ shed light on simplifying the process.
+ Since 
 \begin_inset Formula $V$
 \end_inset
 
- is an inner product space, we can leverage the inner product to turn the
- problem into a question of solving a linear system instead.
- To start, can you show that if 
+ is an inner product space, perhaps the inner product can be used to illuminate
+ instead.
+\end_layout
+
+\begin_layout Standard
+To start, can you show that if 
 \begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
 \end_inset
 
@@ -282,9 +296,30 @@ No matter the vector and no matter the basis, this problem is reduced to
 \begin_layout Standard
 If that were all there were to it, though, this method would hardly be better
  than using coordinate vectors.
+ Either way, we can turn (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) into a linear system.
  This section began by suggesting that careful choice of basis would help.
  Since the process of row reduction involves producing zeros above and below
- the pivots, starting with some zeros in the matrix would be beneficial.
+ the pivots, starting with some zeros in the coefficient matrix of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) would be beneficial.
  For example, if 
 \begin_inset Formula $\langle\mathbf{b}_{1},\mathbf{b}_{2}\rangle$
 \end_inset
@@ -327,7 +362,7 @@ If that were all there were to it, though, this method would hardly be better
 
 , the system reads 
 \begin_inset Formula 
-\[
+\begin{equation}
 \left[\begin{array}{cccc}
 \langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle & 0 & \cdots & 0\\
 0 & \langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle & \cdots & 0\\
@@ -343,8 +378,8 @@ a_{n}
 \langle\mathbf{v},\mathbf{b}_{2}\rangle\\
 \vdots\\
 \langle\mathbf{v},\mathbf{b}_{n}\rangle
-\end{array}\right]
-\]
+\end{array}\right]\label{eq:coefficients-diagonal}
+\end{equation}
 
 \end_inset
 
@@ -385,7 +420,7 @@ and has solution
 \begin_inset Formula $a_{n}=\langle\mathbf{v},\mathbf{b}_{n}\rangle$
 \end_inset
 
-—the coefficients are simply the inner products of 
+—the coefficients are just the inner products of 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -473,7 +508,7 @@ noprefix "false"
 \begin_layout Standard
 The SageMath output below demonstrates a process for taking any basis of
  
-\begin_inset Formula $\mathbb{R}^{n}$
+\begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
  and modifying it so that all pairs of vectors are orthogonal, a process
@@ -494,7 +529,48 @@ The SageMath output below demonstrates a process for taking any basis of
 
 \begin_layout Standard
 \noindent
-The first vector of the orthogonal basis is taken as the first vector of
+Follow this 
+\begin_inset CommandInset href
+LatexCommand href
+name "SageCell link"
+target "https://sagecell.sagemath.org/?z=eJx9j0FuwyAQRfeWfAfEylTQdmZWrcUmOUDPYNomtRQbizhBuX1nQmRHqhokmM__bwSzS3FQ42mYLs-pG7_40g9TTLOSWz_OdRXAn78_55iam9W4NwuvloxpVcBHIT0I62pKYulNd-yPavOu2bxZ7m6tdoBV4ippkaauMvgA8i0WTD1lMC9NBqm8W5XRB3QSy_euEP2BOMASoAQolTd3kw_kpE8ObJcZPtL8E_dx7A6qjLP9b5xlqqU3g_La8turg-IEtNpJyWC1EHhH0JWgQpAQRWBByfwCkzuCLA==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+ to generate random examples.
+ Can you verify that all pairs of the vectors 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+5\\
+-5\\
+0
+\end{array}\right],\left[\begin{array}{c}
+3\\
+3\\
+9
+\end{array}\right],\left[\begin{array}{c}
+-\frac{63}{22}\\
+-\frac{63}{22}\\
+\frac{21}{11}
+\end{array}\right]
+\]
+
+\end_inset
+
+from the SageMath snapshot are orthogonal? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonal-pairs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The first vector of the orthogonal basis is taken as the first vector of
  the original basis.
  The second vector of the orthogonal basis is taken as the second vector
  of the original basis minus a particular vector.
@@ -505,7 +581,7 @@ The first vector of the orthogonal basis is taken as the first vector of
 \end_layout
 
 \begin_layout Standard
-Given any vectors 
+Given any nonzero vectors 
 \begin_inset Formula $\mathbf{b}_{1}$
 \end_inset
 
@@ -515,12 +591,12 @@ Given any vectors
 
 ,
 \begin_inset Formula 
-\begin{align*}
-\left\langle \mathbf{b}_{1},\mathbf{b}_{2}-\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}\right\rangle  & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\left\langle \mathbf{b}_{1},\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}\right\rangle \\
- & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\left\langle \mathbf{b}_{1},\mathbf{b}_{1}\right\rangle \\
- & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle\\
- & =0
-\end{align*}
+\begin{align}
+\left\langle \mathbf{b}_{1},\mathbf{b}_{2}-\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}\right\rangle  & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\left\langle \mathbf{b}_{1},\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}\right\rangle \nonumber \\
+ & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\frac{\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\left\langle \mathbf{b}_{1},\mathbf{b}_{1}\right\rangle \nonumber \\
+ & =\left\langle \mathbf{b}_{1},\mathbf{b}_{2}\right\rangle -\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle\nonumber \\
+ & =0\label{eq:Gram-Schmidt-first-step}
+\end{align}
 
 \end_inset
 
@@ -558,7 +634,11 @@ so
 \begin_inset Formula $\mathbf{b}_{1}$
 \end_inset
 
- direction or the projection of 
+ direction or the (orthogonal) 
+\series bold
+projection
+\series default
+ of 
 \begin_inset Formula $\mathbf{b}_{2}$
 \end_inset
 
@@ -566,7 +646,7 @@ so
 \begin_inset Formula $\mathbf{b}_{1}$
 \end_inset
 
-, and is often denoted by 
+, and is often denoted 
 \begin_inset Formula $\text{proj}_{\mathbf{b}_{1}}\mathbf{b}_{2}$
 \end_inset
 
@@ -575,11 +655,15 @@ so
 \begin_inset Formula $\mathbf{b}_{2}$
 \end_inset
 
- removes this component from 
+ removes the component of 
 \begin_inset Formula $\mathbf{b}_{2}$
 \end_inset
 
-, leaving only the component of 
+ in the 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ direction, leaving only the component of 
 \begin_inset Formula $\mathbf{b}_{2}$
 \end_inset
 
@@ -587,12 +671,16 @@ so
 \begin_inset Formula $\mathbf{b}_{1}$
 \end_inset
 
-.
+ (not in the direction of 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+).
  In 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
-, this can be seen geometrically:
+, this is seen geometrically in the following diagram.
 \end_layout
 
 \begin_layout Standard
@@ -608,11 +696,11 @@ so
 \end_layout
 
 \begin_layout Standard
-Given a set of three vectors, 
+A set of three nonzero vectors, 
 \begin_inset Formula $\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3}$
 \end_inset
 
-, they can be orthogonalized by extending the process to 
+, can be orthogonalized by extending the process to 
 \begin_inset Formula $\mathbf{b}_{3}$
 \end_inset
 
@@ -658,12 +746,72 @@ noprefix "false"
 
 \end_inset
 
-) is called Gram-Schmidt orthogonalization.
+) is called 
+\series bold
+orthogonalization
+\series default
+, or Gram-Schmidt orthogonalization.
 \end_layout
 
 \begin_layout Standard
 A couple details have thus far been overlooked.
- The discussion at the beginning of the section establishes that (
+ For one, formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) only works if the denominators 
+\begin_inset Formula $\langle\mathbf{w}_{1},\mathbf{w}_{1}\rangle,\langle\mathbf{w}_{2},\mathbf{w}_{2}\rangle,\ldots,\langle\mathbf{w}_{n-1},\mathbf{w}_{n-1}\rangle$
+\end_inset
+
+ of the projections are all nonzero.
+ That is, the vectors 
+\begin_inset Formula $\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{n-1}$
+\end_inset
+
+ are nonzero.
+ Can you provide an argument that 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ being linearly independent assures 
+\begin_inset Formula $\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{n-1}$
+\end_inset
+
+ are nonzero? HINT: Show that if 
+\begin_inset Formula $\mathbf{w}_{j}=\mathbf{0}$
+\end_inset
+
+ for some 
+\begin_inset Formula $j$
+\end_inset
+
+, then 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ is linearly dependent.
+ Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonal-vectors-are-nonzero"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For two, the discussion at the beginning of the section establishes that
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:the-coefficient-problem"
@@ -849,10 +997,10 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The span of the orthogonalized vectors is the same as the span of the original
- vectors.
- This is an important feature of the process if you are orthogonalizing
- the basis of a subspace.
+For three, the span of the orthogonalized vectors is the same as the span
+ of the original vectors.
+ This is a particularly important feature of the process if you are orthogonaliz
+ing the basis of a subspace.
  Even more is true, though: 
 \begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
 \end_inset
@@ -862,34 +1010,195 @@ The span of the orthogonalized vectors is the same as the span of the original
 \end_inset
 
 .
- This can be justified by induction.
- Clearly 
-\begin_inset Formula $\text{span}\{\mathbf{w}_{1}\}=\text{span}\{\mathbf{b}_{1}\}$
+ Let 
+\begin_inset Formula $W_{j}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
 \end_inset
 
- since 
-\begin_inset Formula $\mathbf{w}_{1}=\mathbf{b}_{1}$
+, making 
+\begin_inset Formula $W_{j}$
 \end_inset
 
- so the claim is true for 
-\begin_inset Formula $j=1$
-\end_inset
-
-.
- Now suppose 
-\begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j-1}\}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j-1}\}$
-\end_inset
-
- for some arbitrary 
-\begin_inset Formula $j\geq2$
+ a vector space with dimension 
+\begin_inset Formula $j$
 \end_inset
 
 .
- 
+ Each 
+\begin_inset Formula $\mathbf{w}_{j}$
+\end_inset
+
+ is by construction a linear combination of 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+\end_inset
+
+ and therefore in 
+\begin_inset Formula $W_{j}$
+\end_inset
+
+.
+ Of course 
+\begin_inset Formula $W_{1}=\text{span}\{\mathbf{b}_{1}\}\subset W_{2}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2}\}\subset\cdots\subset W_{j}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}$
+\end_inset
+
+ are all in 
+\begin_inset Formula $W_{j}$
+\end_inset
+
+.
+ If we knew that 
+\begin_inset Formula $\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}$
+\end_inset
+
+ were linearly independent, we would have 
+\begin_inset Formula $j$
+\end_inset
+
+ linearly independent vectors in a 
+\begin_inset Formula $j$
+\end_inset
+
+-dimensional vector space, making 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
+\end_inset
+
+ a basis for 
+\begin_inset Formula $W_{j}$
+\end_inset
+
+.
+ Being a basis, 
+\begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
+\end_inset
+
+ would equal 
+\begin_inset Formula $W_{j}$
+\end_inset
+
+ and we would be done.
 \end_layout
 
 \begin_layout Standard
-It was established that 
+Direct computation shows that a set of nonzero vectors 
+\begin_inset Formula $S=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}\}$
+\end_inset
+
+ in which every pair of distinct vectors is orthogonal is linearly independent.
+ Suppose 
+\begin_inset Formula $c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{p}\mathbf{v}_{p}=\mathbf{0}$
+\end_inset
+
+ for scalars 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{p}$
+\end_inset
+
+.
+ Then
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+see exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-with-zero"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+0=\left\langle \mathbf{0},\mathbf{v}_{1}\right\rangle  & =\left\langle (c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{p}\mathbf{v}_{p}),\mathbf{v}_{1}\right\rangle \\
+ & =\left\langle c_{1}\mathbf{v}_{1},\mathbf{v}_{1}\right\rangle +\left\langle c_{2}\mathbf{v}_{2},\mathbf{v}_{1}\right\rangle +\cdots+\left\langle c_{p}\mathbf{v}_{p},\mathbf{v}_{1}\right\rangle \\
+ & =c_{1}\left\langle \mathbf{v}_{1},\mathbf{v}_{1}\right\rangle +c_{2}\left\langle \mathbf{v}_{2},\mathbf{v}_{1}\right\rangle +\cdots+c_{p}\left\langle \mathbf{v}_{p},\mathbf{v}_{1}\right\rangle \\
+ & =c_{1}\left\langle \mathbf{v}_{1},\mathbf{v}_{1}\right\rangle 
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $\left\langle \mathbf{v}_{i},\mathbf{v}_{j}\right\rangle =0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ (every pair of distinct vectors is orthogonal).
+ But 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ is a nonzero vector, so 
+\begin_inset Formula $\left\langle \mathbf{v}_{1},\mathbf{v}_{1}\right\rangle \neq0$
+\end_inset
+
+ (inner product property 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-zero"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Hence 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ must be zero.
+ Similarly 
+\begin_inset Formula $c_{2},c_{3},\ldots,c_{p}$
+\end_inset
+
+ must also be zero.
+\end_layout
+
+\begin_layout Standard
+It remains to show that every pair of distinct vectors in 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
+\end_inset
+
+ is orthogonal.
+ Every pair of distinct vectors in 
+\begin_inset Formula $\{\mathbf{w}_{1}\}$
+\end_inset
+
+ is orthogonal (vacuously since there are no distinct paris in the set).
+ By (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Gram-Schmidt-first-step"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 
 \begin_inset Formula $\mathbf{w}_{1}$
 \end_inset
 
@@ -897,18 +1206,118 @@ It was established that
 \begin_inset Formula $\mathbf{w}_{2}$
 \end_inset
 
- as computed in (
+ are orthogonal so every pair of distinct vectors in 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2}\}$
+\end_inset
+
+ is orthogonal.
+ Now suppose every pair of distinct vectors in 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j-1}\}$
+\end_inset
+
+ is orthogonal for some 
+\begin_inset Formula $j\geq3$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $1\leq i<j$
+\end_inset
+
+ , then
+\begin_inset Formula 
+\begin{align*}
+\left\langle \mathbf{w}_{i},\mathbf{w}_{j}\right\rangle  & =\left\langle \mathbf{w}_{i},\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{1}}\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{2}}\mathbf{b}_{j}-\cdots-\text{proj}_{\mathbf{w}_{j-1}}\mathbf{b}_{j}\right\rangle \\
+ & =\left\langle \mathbf{w}_{i},\mathbf{b}_{j}-\frac{\langle\mathbf{b}_{j},\mathbf{w}_{1}\rangle}{\langle\mathbf{w}_{1},\mathbf{w}_{1}\rangle}\mathbf{w}_{1}-\frac{\langle\mathbf{b}_{j},\mathbf{w}_{2}\rangle}{\langle\mathbf{w}_{2},\mathbf{w}_{2}\rangle}\mathbf{w}_{2}-\cdots-\frac{\langle\mathbf{b}_{j},\mathbf{w}_{j-1}\rangle}{\langle\mathbf{w}_{j-1},\mathbf{w}_{j-1}\rangle}\mathbf{w}_{j-1}\right\rangle \\
+ & =\left\langle \mathbf{w}_{i},\mathbf{b}_{j}\right\rangle -\left\langle \mathbf{w}_{i},\frac{\langle\mathbf{b}_{j},\mathbf{w}_{1}\rangle}{\langle\mathbf{w}_{1},\mathbf{w}_{1}\rangle}\mathbf{w}_{1}\right\rangle -\left\langle \mathbf{w}_{i},\frac{\langle\mathbf{b}_{j},\mathbf{w}_{2}\rangle}{\langle\mathbf{w}_{2},\mathbf{w}_{2}\rangle}\mathbf{w}_{2}\right\rangle -\cdots-\left\langle \mathbf{w}_{i},\frac{\langle\mathbf{b}_{j},\mathbf{w}_{j-1}\rangle}{\langle\mathbf{w}_{j-1},\mathbf{w}_{j-1}\rangle}\mathbf{w}_{j-1}\right\rangle \\
+ & =\left\langle \mathbf{w}_{i},\mathbf{b}_{j}\right\rangle -\frac{\langle\mathbf{b}_{j},\mathbf{w}_{1}\rangle}{\langle\mathbf{w}_{1},\mathbf{w}_{1}\rangle}\left\langle \mathbf{w}_{i},\mathbf{w}_{1}\right\rangle -\frac{\langle\mathbf{b}_{j},\mathbf{w}_{2}\rangle}{\langle\mathbf{w}_{2},\mathbf{w}_{2}\rangle}\left\langle \mathbf{w}_{i},\mathbf{w}_{2}\right\rangle -\cdots-\frac{\langle\mathbf{b}_{j},\mathbf{w}_{j-1}\rangle}{\langle\mathbf{w}_{j-1},\mathbf{w}_{j-1}\rangle}\left\langle \mathbf{w}_{i},\mathbf{w}_{j-1}\right\rangle \\
+ & =\left\langle \mathbf{w}_{i},\mathbf{b}_{j}\right\rangle -\frac{\langle\mathbf{b}_{j},\mathbf{w}_{i}\rangle}{\langle\mathbf{w}_{i},\mathbf{w}_{i}\rangle}\left\langle \mathbf{w}_{i},\mathbf{w}_{i}\right\rangle \\
+ & =\left\langle \mathbf{w}_{i},\mathbf{b}_{j}\right\rangle -\left\langle \mathbf{w}_{i},\mathbf{b}_{j}\right\rangle \\
+ & =0
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $\left\langle \mathbf{w}_{i},\mathbf{w}_{k}\right\rangle =0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $k\neq i$
+\end_inset
+
+.
+ By induction, every pair of distinct vectors in 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
+\end_inset
+
+ is orthogonal.
+\end_layout
+
+\begin_layout Standard
+A set of vectors in which every pair of distinct vectors is orthogonal is
+ called an 
+\series bold
+orthogonal set
+\series default
+.
+ A vector with norm 1 is called a 
+\series bold
+unit vector
+\series default
+.
+ If each vector in an orthogonal set is a unit vector, it is called an 
+\series bold
+orthonormal set
+\series default
+.
+ If all the vectors in an orthogonal set are scaled to have norm 1 (normalized),
+ the orthogonal set becomes an orthonormal set with the same span.
+\end_layout
+
+\begin_layout Standard
+Returning to the original question of writing vectors as linear combinations
+ of basis elements, we see that if 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ is an orthogonal basis, then (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:orthogonalization"
+reference "eq:coefficients-matrix-format"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-) are orthogonal, but other pairs were not proven orthogonal.
- 
+) reduces to 
+\begin_inset Formula 
+\[
+a_{i}=\frac{\langle\mathbf{v},\mathbf{b}_{i}\rangle}{\langle\mathbf{b}_{i},\mathbf{b}_{i}\rangle},\quad i=1,2,\ldots,n.
+\]
+
+\end_inset
+
+In words, writing a vector as a linear combination of orthogonal basis vectors
+ amounts to projecting the vector onto each of the basis vectors.
+ As a formula, if 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ is an orthogonal basis and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an arbitrary vector in an inner product space, then
+\begin_inset Formula 
+\[
+\mathbf{v}=\left(\text{proj}_{\mathbf{b}_{1}}\mathbf{v}\right)+\left(\text{proj}_{\mathbf{b}_{2}}\mathbf{v}\right)+\cdots+\left(\text{proj}_{\mathbf{b}_{n}}\mathbf{v}\right).
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -916,7 +1325,154 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-c
+unit
+\begin_inset space ~
+\end_inset
+
+vector vector with norm 1.
+\end_layout
+
+\begin_layout Description
+orthogonal
+\begin_inset space ~
+\end_inset
+
+set set in which every pair of distinct vectors is orthogonal.
+\end_layout
+
+\begin_layout Description
+orthonormal
+\begin_inset space ~
+\end_inset
+
+set orthogonal set of unit vectors.
+\end_layout
+
+\begin_layout Description
+(orthogonal)
+\begin_inset space ~
+\end_inset
+
+projection (of one vector onto another)
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}=\frac{\langle\mathbf{v},\mathbf{u}\rangle}{\langle\mathbf{u},\mathbf{u}\rangle}\mathbf{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+orthogonal
+\begin_inset space ~
+\end_inset
+
+basis basis that is an orthogonal set.
+ If 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+ is an orthogonal basis and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an arbitrary vector in an inner product space, then
+\begin_inset Formula 
+\[
+\mathbf{v}=\left(\text{proj}_{\mathbf{b}_{1}}\mathbf{v}\right)+\left(\text{proj}_{\mathbf{b}_{2}}\mathbf{v}\right)+\cdots+\left(\text{proj}_{\mathbf{b}_{n}}\mathbf{v}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+normalize scale a vector to meet a certain criterion.
+ Often this means scaling so the norm is one.
+\end_layout
+
+\begin_layout Description
+(Gram-Schmidt)
+\begin_inset space ~
+\end_inset
+
+orthogonalzation given a linearly independent set 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+, the set 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{n}\}$
+\end_inset
+
+ defined by
+\begin_inset Formula 
+\begin{align*}
+\mathbf{w}_{1} & =\mathbf{b}_{1}\\
+\mathbf{w}_{j} & =\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{1}}\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{2}}\mathbf{b}_{j}-\cdots-\text{proj}_{\mathbf{w}_{j-1}}\mathbf{b}_{j},\quad j=2,3,\ldots,n.
+\end{align*}
+
+\end_inset
+
+has the following properties for 
+\begin_inset Formula $j=1,2,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
+\end_inset
+
+ is an orthogonal set.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+orthogonality
+\begin_inset space ~
+\end_inset
+
+to
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+basis The only vector orthogonal to every vector of a basis is 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+orthogonal
+\begin_inset space ~
+\end_inset
+
+sets
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+independence an orthogonal set of nonzero vectors is linearly independent.
 \end_layout
 
 \begin_layout Standard
@@ -941,7 +1497,7 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-I
+P
 \end_layout
 
 \begin_layout Standard
@@ -962,6 +1518,55 @@ finishexercises
 
 \begin_layout Subsection
 Answers
+\end_layout
+
+\begin_layout Description
+orthogonal
+\begin_inset space ~
+\end_inset
+
+pairs 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonal-pairs"
+
+\end_inset
+
+The three possible dot products are all zero:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+5\\
+-5\\
+0
+\end{array}\right]\bcdot\left[\begin{array}{c}
+3\\
+3\\
+9
+\end{array}\right] & =5(3)-5(3)+0(9)=0\\
+\left[\begin{array}{c}
+5\\
+-5\\
+0
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-\frac{63}{22}\\
+-\frac{63}{22}\\
+\frac{21}{11}
+\end{array}\right] & =-5\left(\frac{63}{22}\right)+5\left(\frac{63}{22}\right)+0\left(\frac{21}{11}\right)=0\\
+\left[\begin{array}{c}
+3\\
+3\\
+9
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-\frac{63}{22}\\
+-\frac{63}{22}\\
+\frac{21}{11}
+\end{array}\right] & =-3\left(\frac{63}{22}\right)-3\left(\frac{63}{22}\right)+9\left(\frac{21}{11}\right)=-\frac{189}{22}+\frac{189}{22}=0
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -1202,6 +1807,72 @@ Since
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+orthogonalized
+\begin_inset space ~
+\end_inset
+
+vectors
+\begin_inset space ~
+\end_inset
+
+are
+\begin_inset space ~
+\end_inset
+
+nonzero 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonal-vectors-are-nonzero"
+
+\end_inset
+
+ Suppose 
+\begin_inset Formula $\mathbf{w}_{j}=\mathbf{0}$
+\end_inset
+
+ for some 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Since each 
+\begin_inset Formula $\mathbf{w}_{i}$
+\end_inset
+
+ is a linear combination of 
+\begin_inset Formula $\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathbf{w}_{j} & =\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{1}}\mathbf{b}_{j}-\text{proj}_{\mathbf{w}_{2}}\mathbf{b}_{j}-\cdots-\text{proj}_{\mathbf{w}_{j-1}}\mathbf{b}_{j}\\
+ & =\mathbf{b}_{j}+\text{some linear combination of }\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j-1}
+\end{align*}
+
+\end_inset
+
+giving a nontrivial linear combination of 
+\begin_inset Formula $\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}$
+\end_inset
+
+ that sums to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+ This implies 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+\end_inset
+
+, and therefore 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
+\end_inset
+
+, is linearly dependent.
 \end_layout
 
 \end_body

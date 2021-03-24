@@ -1000,6 +1000,41 @@ Explore quadratic forms (???), inner products of the form
 ].
 \end_layout
 
+\begin_layout Enumerate
+Justify the claim.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-with-zero"
+
+\end_inset
+
+For any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in an inner product space, 
+\begin_inset Formula $\left\langle \mathbf{0},\mathbf{v}\right\rangle =\left\langle \mathbf{v},\mathbf{0}\right\rangle =0$
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: provide solution.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
