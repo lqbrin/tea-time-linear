@@ -108,21 +108,1514 @@ LU Factorization []
 \end_layout
 
 \begin_layout Standard
-We have seen on several occasions (see sections 
-\begin_inset Note Note
-status open
+Computers, as the name would suggest, are famously adept at computation.
+ Handling fractions, square roots, irrational constants, and 
+\begin_inset Formula $1+2$
+\end_inset
+
+ are all the same to a computer.
+ Ask a human to execute five, six, or twenty numerical operations to solve
+ a single problem and they might think you're simply asking too much.
+ Ask a computer to do the same and you'll have your answer in just a few
+ milliseconds.
+ Humans and computers bring very different skills to task.
+ 
+\end_layout
+
+\begin_layout Standard
+Humans provide the algorithms and instructions for the computer and the
+ computer grinds out the computations with amazing speed.
+ The speed and accuracy of computer calculations make the otherwise impractical
+ practical.
+ Linear systems with a hundred, thousand, or even a hundred thousand equations
+ are within the practical limits of computers.
+ But at that size, efficiency plays a major role in practicality.
+ An efficient algorithm may be able to handle a computation in a few seconds
+ while an inefficient one may take a few days for the same result.
+\end_layout
+
+\begin_layout Standard
+The efficiency of an algorithm is calculated by comparing the number of
+ computations needed with common functions such as 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $3^{n}$
+\end_inset
+
+ where 
+\begin_inset Formula $n$
+\end_inset
+
+ is some measure of the 
+\begin_inset Quotes eld
+\end_inset
+
+size
+\begin_inset Quotes erd
+\end_inset
+
+ of the problem.
+ This way, we have a good idea how the time it takes to solve a problem
+ grows as the size grows.
+ In solving linear systems 
+\begin_inset Formula $n$
+\end_inset
+
+ represents the number of equations to be solved.
+ The row reduction algorithm of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Row-Reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, also known as Gaussian elimination, requires 
+\begin_inset Formula $\frac{n^{3}}{3}+n^{2}-\frac{n}{3}$
+\end_inset
+
+ multiplications/divisions and 
+\begin_inset Formula $\frac{n^{3}}{3}+\frac{n^{2}}{2}-\frac{5n}{6}$
+\end_inset
+
+ additions/subtractions (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "burdenfaires"
+literal "false"
+
+\end_inset
+
+ section 6.1) to execute.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:operations-row-reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-TODO: list sections
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:operations-row-reduction"
+
+\end_inset
+
+Arithmetic operations required for row reduction
 \end_layout
 
 \end_inset
 
-) that row operations can be represented via left-multiplication by elementary
- matrices.
- Adding the fact that elementary matrices are invertible gives a method
- for factoring matrices in much the same way we can factors integers and
- polynomials.
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+equations, 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times/\div$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+/-$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+total
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{3}n^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5+\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $42+\frac{2}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+321
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+276
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+597
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $486$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+51
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $46,801$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $45,475$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $92,276$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $88,434$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+102
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $364,106$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $358,853$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $722,959$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $707,472$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+501
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $42,168,001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $42,042,250$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $84,210,251$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $83,834,334$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2,001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2,674,672,001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2,672,669,000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5,347,341,001$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5,341,337,334$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10,002$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $333,633,410,006$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $333,583,385,003$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $667,216,795,009$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $667,066,746,672$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ lists the number of arithmetic operations required to execute reduction
+ to reduced row echelon form for a general linear system with 
+\begin_inset Formula $n$
+\end_inset
+
+ equations in 
+\begin_inset Formula $n$
+\end_inset
+
+ unknowns.
+ For a human with a handheld calculator, systems with 2 or 3 variables are
+ doable.
+ Systems with 4 variables would be tedious in general, but practical with
+ a few strategically placed zeros (which can dramatically reduce the number
+ of computations required).
+ However, even 9 equations in 9 unknowns would be a bit much for a person.
+ 
+\end_layout
+
+\begin_layout Standard
+You might well ask whether systems of 500 equations in 500 unknowns are
+ practical even for a computer.
+ Their solution by Gaussian elimination requires over 83 million computations!
+ Even if the computer does one computation every microsecond (millionth
+ of a second), solving a system of 500 equations in 500 unknowns will take
+ about 83 seconds.
+ Depending on how quickly results are needed, this may or may not be practical.
+ The same computer would take over 
+\begin_inset Formula $5,300$
+\end_inset
+
+ seconds (about an hour and a half) to solve a system of 
+\begin_inset Formula $2,000$
+\end_inset
+
+ equations in 
+\begin_inset Formula $2,000$
+\end_inset
+
+ unknowns and over 
+\begin_inset Formula $666,000$
+\end_inset
+
+ seconds (over 7 and a half days!) to solve a system of 
+\begin_inset Formula $10,000$
+\end_inset
+
+ equations in 
+\begin_inset Formula $10,000$
+\end_inset
+
+ unknowns.
+ Of course faster computers or clusters of computers could be put to the
+ task to speed up the computation, but no matter how much computing power
+ is supplied, there will always be a size outside its practical limits.
+ 
+\end_layout
+
+\begin_layout Standard
+A better option is to streamline the algorithm.
+ The numerical 
+\begin_inset Quotes eld
+\end_inset
+
+speed
+\begin_inset Quotes erd
+\end_inset
+
+ of Gaussian elimination is approximately proportional to 
+\begin_inset Formula $n^{3}$
+\end_inset
+
+.
+ The rightmost column of table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:operations-row-reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates this point.
+ The number of computations can be well approximated by 
+\begin_inset Formula $\frac{2}{3}n^{3}$
+\end_inset
+
+ for large 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ In the parlance of numerical analysis, one would say the algorithm executes
+ in 
+\begin_inset Formula $O(n^{3})$
+\end_inset
+
+ time, read 
+\begin_inset Quotes eld
+\end_inset
+
+big-oh of 
+\begin_inset Formula $n^{3}$
+\end_inset
+
+ time
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The implication is doubling the size of the problem multiplies the time
+ it takes to execute by 8 and more generally increasing the size by a factor
+ of 
+\begin_inset Formula $k$
+\end_inset
+
+ increases its execution time by a factor of 
+\begin_inset Formula $k^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If the algorithm executed in, say, 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+ time it would reduce the number of computations needed to solve large problems
+ by several orders of magnitude.
+ For example, an algorithm that required approximately 
+\begin_inset Formula $4n^{2}$
+\end_inset
+
+ computations would need 
+\begin_inset Quotes eld
+\end_inset
+
+only
+\begin_inset Quotes erd
+\end_inset
+
+ about 
+\begin_inset Formula $1,000,000$
+\end_inset
+
+ computations to solve a system of 500 equations in 500 unknowns (compare
+ this to the 83 million for Gausian elimination); about 
+\begin_inset Formula $16,000,000$
+\end_inset
+
+ for a system of 
+\begin_inset Formula $2,000$
+\end_inset
+
+ equations in 
+\begin_inset Formula $2,000$
+\end_inset
+
+ unknowns (compare this to the over 53 bilion for Gaussian elimination);
+ and about 
+\begin_inset Formula $400$
+\end_inset
+
+ million for a system of 
+\begin_inset Formula $10,000$
+\end_inset
+
+ equations in 
+\begin_inset Formula $10,000$
+\end_inset
+
+ unknowns (reducing the estimated time of 7.5 days to about 6 minutes!).
+\end_layout
+
+\begin_layout Standard
+Now imagine you have to solve the system multiple times for multiple sets
+ of constants, but the same coefficient matrix.
+ 7.5 days is preferable to 75 days for solving the system with ten different
+ sets of constants.
+ This is the approximate effect and purpose of using 
+\begin_inset Formula $LU$
+\end_inset
+
+ factorization—solving large systems for multiple sets of constants.
+ The factorization itself takes about the same effort as Gaussian elimination,
+ but subsequent solutions take 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+ time.
+\end_layout
+
+\begin_layout Standard
+The efficiency gain is due to turning the general problem into a special
+ case that is much quicker to solve.
+ As noted earlier, asking a human with a handheld calculator to solve a
+ system of 4 equations in 4 unknowns borders on the impractical as it requires
+ as many as 62 individual arithmetic operations.
+ But asking a human to solve a system of 4 equations in 4 unknowns where
+ the coefficient matrix is upper triangular is well within reason.
+ You might have a go at solving the system 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+-14 & 0 & -10 & 12\\
+0 & 9 & -8 & 4\\
+0 & 0 & -15 & -6\\
+0 & 0 & 0 & 10
+\end{array}\right]\left[\begin{array}{c}
+w\\
+x\\
+y\\
+z
+\end{array}\right]=\left[\begin{array}{c}
+-11\\
+-2\\
+6\\
+15
+\end{array}\right]
+\]
+
+\end_inset
+
+to see that it takes 26 arithmetic operations—still not terribly appealing
+ but much better than the 62 for Gaussian elimination of a general 4-equation,
+ 4-variable system.
+ A similar reduction is achieved when the coefficient matrix is lower triangular.
+ These observations are at the heart of the 
+\begin_inset Formula $LU$
+\end_inset
+
+ factorization (upper-lower factorization) algorithm.
+ It requires many fewer computations to solve two linear systems, one with
+ an upper triangular coefficient matrix and the other with a lower triangular
+ coefficient matrix, than it does to solve a single general linear system.
+ In general, solving a system with either upper triangular or lower triangular
+ coefficient matrix can be done in 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+ time.
+\end_layout
+
+\begin_layout Standard
+If we could factor a general coefficient matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ into the product of a lower triangular and upper triangular matrix, we
+ could achieve such efficiency.
+ Solving 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ directly by Gaussian elimination requires 
+\begin_inset Formula $O(n^{3})$
+\end_inset
+
+ operations while solving 
+\begin_inset Formula $LU\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+twice
+\begin_inset Quotes erd
+\end_inset
+
+—first to find 
+\begin_inset Formula $U\mathbf{v}$
+\end_inset
+
+ by solving 
+\begin_inset Formula $L\mathbf{w}=\mathbf{b}$
+\end_inset
+
+ and second to find 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ by solving 
+\begin_inset Formula $U\mathbf{v}=\mathbf{w}$
+\end_inset
+
+—requires only 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+ operations.
+\end_layout
+
+\begin_layout Standard
+The process for factoring 
+\begin_inset Formula $M$
+\end_inset
+
+ into 
+\begin_inset Formula $LU$
+\end_inset
+
+ essentially amounts to saving your progress in executing Gaussian elimination
+ at the point where 
+\begin_inset Formula $M$
+\end_inset
+
+ has first reached echelon form.
+ As we did several times in sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Square-Matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we will rely on the fact that row reduction can be expressed by multiplication
+ by (invertible) elementary matrices.
+ If we record the row operations (elementary matrices) that reduce 
+\begin_inset Formula $M$
+\end_inset
+
+ to echelon form, we have
+\begin_inset Formula 
+\[
+E_{p}\cdots E_{2}E_{1}M=U
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $U$
+\end_inset
+
+ (the echelon frorm of 
+\begin_inset Formula $M$
+\end_inset
+
+) is upper triangular.
+ Assuming no row swaps have been done, the product 
+\begin_inset Formula $E_{p}\cdots E_{2}E_{1}$
+\end_inset
+
+ is lower triangular since all row replacements are done by adding a multiple
+ of one row to a row below it (and row scaling does not affect the locations
+ of zeros).
+ By the same reasoning the inverse of 
+\begin_inset Formula $E_{p}\cdots E_{2}E_{1}$
+\end_inset
+
+ is lower triangular, so setting 
+\begin_inset Formula $L^{-1}=E_{p}\cdots E_{2}E_{1}$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\[
+M=(E_{p}\cdots E_{2}E_{1})^{-1}U=LU.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is not realistic to expect that reduction can be done without row swaps,
+ however.
+ If, for example, the 
+\begin_inset Formula $1,1$
+\end_inset
+
+-entry of 
+\begin_inset Formula $M$
+\end_inset
+
+ is zero and there is at least one nonzero entry below it, there is no choice.
+ The first operation of row reduction requires a row swap.
+ This means 
+\begin_inset Formula $M$
+\end_inset
+
+ cannot always be factored into a lower triangular times upper triangular
+ product, and allowing row swaps is necessary.
+ In the end, a factorization that includes row swaps does not factor 
+\begin_inset Formula $M$
+\end_inset
+
+ into a product 
+\begin_inset Formula $LU$
+\end_inset
+
+.
+ Instead, it factors 
+\begin_inset Formula $PM$
+\end_inset
+
+ into a product 
+\begin_inset Formula $LU$
+\end_inset
+
+ where 
+\begin_inset Formula $P$
+\end_inset
+
+ is a permutation matrix, a matrix that holds the same rows as the identity
+ matrix but in a possibly different order.
+ Including 
+\begin_inset Formula $P$
+\end_inset
+
+ in the computation this way does not add any arithmetic operations to the
+ algorithm.
+ It adds only swapping of values, a computer operation that is so fast as
+ to be insignificant compared to arithmetic operations.
+ Allowing row swaps in an 
+\begin_inset Formula $LU$
+\end_inset
+
+ decomposition is known as 
+\begin_inset Formula $LU$
+\end_inset
+
+ decomposition with 
+\series bold
+partial pivoting
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+An Example
+\end_layout
+
+\begin_layout Standard
+To illustrate the method, we will factor (factorize, or decompose)
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+18 & -35 & -4 & -56\\
+-14 & 21 & 4 & 42\\
+6 & -7 & -1 & -23\\
+6 & -9 & -2 & -18
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+\text{operations} & \quad & \text{result}\\
+M_{1,:}\leftrightarrow M_{4,:} &  & \left[\begin{array}{cccc}
+6 & -9 & -2 & -18\\
+-14 & 21 & 4 & 42\\
+6 & -7 & -1 & -23\\
+18 & -35 & -4 & -56
+\end{array}\right]\\
+M_{1,:}\rightarrow\frac{1}{3}M_{1,:} &  & \left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+-14 & 21 & 4 & 42\\
+6 & -7 & -1 & -23\\
+18 & -35 & -4 & -56
+\end{array}\right]
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+\begin{array}{cc}
+M_{2,:} & \rightarrow7M_{1,:}+M_{2,:}\\
+M_{3,:} & \rightarrow-3M_{1,:}+M_{3,:}\\
+M_{4,:} & \rightarrow-9M_{1,:}+M_{4,:}
+\end{array} & \quad & \left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & 2 & 1 & -5\\
+0 & -8 & 2 & -2
+\end{array}\right]\\
+M_{2,:}\leftrightarrow M_{3,:} &  & \left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 2 & 1 & -5\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & -8 & 2 & -2
+\end{array}\right]\\
+M_{4,:}\rightarrow4M_{2,:}+M_{4,:} &  & \left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 2 & 1 & -5\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & 0 & 6 & -22
+\end{array}\right]\\
+M_{4,:}\rightarrow9M_{3,:}+M_{4,:} &  & \left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 2 & 1 & -5\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & 0 & 0 & -22
+\end{array}\right]
+\end{array}
+\]
+
+\end_inset
+
+We have reached echelon form, so we have identified 
+\begin_inset Formula $U$
+\end_inset
+
+ (the echelon form itself):
+\begin_inset Formula 
+\[
+U=\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 2 & 1 & -5\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & 0 & 0 & -22
+\end{array}\right]
+\]
+
+\end_inset
+
+and the product of the 8 elementary matrices corresponding to the 8 row
+ operations form 
+\begin_inset Formula $P^{-1}L$
+\end_inset
+
+.
+ Apply the inverse of each row operation, in reverse order, starting with
+ the identity matrix:
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+\text{operation} & \quad & \text{inverse}\\
+\begin{aligned}M_{4,:} & \rightarrow9M_{3,:}+M_{4,:}\\
+M_{4,:} & \rightarrow4M_{2,:}+M_{4,:}\\
+M_{2,:} & \leftrightarrow M_{3,:}\\
+M_{4,:} & \rightarrow-9M_{1,:}+M_{4,:}\\
+M_{3,:} & \rightarrow-3M_{1,:}+M_{3,:}\\
+M_{2,:} & \rightarrow7M_{1,:}+M_{2,:}\\
+M_{1,:} & \rightarrow(1/3)M_{1,:}\\
+M_{1,:} & \leftrightarrow M_{4,:}
+\end{aligned}
+ &  & \begin{aligned}M_{4,:} & \rightarrow-9M_{3,:}+M_{4,:}\\
+M_{4,:} & \rightarrow-4M_{2,:}+M_{4,:}\\
+M_{2,:} & \leftrightarrow M_{3,:}\\
+M_{4,:} & \rightarrow9M_{1,:}+M_{4,:}\\
+M_{3,:} & \rightarrow3M_{1,:}+M_{3,:}\\
+M_{2,:} & \rightarrow-7M_{1,:}+M_{2,:}\\
+M_{1,:} & \rightarrow3M_{1,:}\\
+M_{1,:} & \leftrightarrow M_{4,:}
+\end{aligned}
+\end{array}
+\]
+
+\end_inset
+
+In full detail:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & -9 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & -4 & -9 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0\\
+0 & -4 & -9 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0\\
+9 & -4 & -9 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\rightarrow\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+3 & 1 & 0 & 0\\
+9 & -4 & -9 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+-7 & 0 & 1 & 0\\
+3 & 1 & 0 & 0\\
+9 & -4 & -9 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+3 & 0 & 0 & 0\\
+-7 & 0 & 1 & 0\\
+3 & 1 & 0 & 0\\
+9 & -4 & -9 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+9 & -4 & -9 & 1\\
+-7 & 0 & 1 & 0\\
+3 & 1 & 0 & 0\\
+3 & 0 & 0 & 0
+\end{array}\right]=P^{-1}L
+\]
+
+\end_inset
+
+At this point, we have
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+9 & -4 & -9 & 1\\
+-7 & 0 & 1 & 0\\
+3 & 1 & 0 & 0\\
+3 & 0 & 0 & 0
+\end{array}\right]\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 2 & 1 & -5\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & 0 & 0 & -22
+\end{array}\right],
+\]
+
+\end_inset
+
+which, as expected, is not lower triangular times upper triangular.
+ The final step is to permute the rows of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ The permutation matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ can be constructed by applying only the row swaps to the identity matrix,
+ in the same order in which they were applied during row reduction.
+ In this case, that means 
+\begin_inset Formula $M_{1,:}\leftrightarrow M_{4,:}$
+\end_inset
+
+ and then 
+\begin_inset Formula $M_{2,:}\leftrightarrow M_{3,:}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+0 & 0 & 0 & 1\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0\\
+1 & 0 & 0 & 0
+\end{array}\right]=P.
+\]
+
+\end_inset
+
+In this case the order of the swaps does not matter, but when an index is
+ repeated within the set of swaps, the order will matter.
+ Finally, we have 
+\begin_inset Formula 
+\[
+PM=LU=\left[\begin{array}{cccc}
+3 & 0 & 0 & 0\\
+3 & 1 & 0 & 0\\
+-7 & 0 & 1 & 0\\
+9 & -4 & -9 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 2 & 1 & -5\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & 0 & 0 & -22
+\end{array}\right]
+\]
+
+\end_inset
+
+or 
+\begin_inset Formula $M=P^{-1}LU$
+\end_inset
+
+.
+ Can you verify this? 
+\end_layout
+
+\begin_layout Standard
+Therefore the system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula $P^{-1}LU\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+ Solving amounts to first applying 
+\begin_inset Formula $P$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, permuting its entries, yielding 
+\begin_inset Formula $LU\mathbf{v}=P\mathbf{b}$
+\end_inset
+
+; second, solving 
+\begin_inset Formula $L\mathbf{w}=P\mathbf{b}$
+\end_inset
+
+, which yields 
+\begin_inset Formula $\mathbf{w}=L^{-1}P\mathbf{b}$
+\end_inset
+
+; and third, solving 
+\begin_inset Formula $U\mathbf{v}=\mathbf{w}$
+\end_inset
+
+, which yields 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $U\mathbf{v}=L^{-1}P\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, 
+\begin_inset Formula $U$
+\end_inset
+
+ will be invertible, and we will have 
+\begin_inset Formula $\mathbf{v}=U^{-1}L^{-1}P\mathbf{b}=M^{-1}\mathbf{b}$
+\end_inset
+
+.
+ But the method works even when 
+\begin_inset Formula $M$
+\end_inset
+
+ is noninvertible—whenever 
+\begin_inset Formula $U\mathbf{v}=\mathbf{w}$
+\end_inset
+
+ is consistent, its solutions will also be solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ (and whenever 
+\begin_inset Formula $U\mathbf{v}=\mathbf{w}$
+\end_inset
+
+ is inconsistent 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ will also be inconsistent).
 \end_layout
 
 \begin_layout Subsection
@@ -130,7 +1623,90 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-c
+factorizaton factoring a matrix into a product of matrices.
+\end_layout
+
+\begin_layout Description
+decomposition factorization.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $LU$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+factorization factoring a matrix into a product of a lower triangular matrix
+ (
+\begin_inset Formula $L$
+\end_inset
+
+) by an upper triangular matrix (
+\begin_inset Formula $U$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+partial
+\begin_inset space ~
+\end_inset
+
+pivoting allowing row swaps in 
+\begin_inset Formula $LU$
+\end_inset
+
+ factorization.
+ In this case, the algorithm factorizes 
+\begin_inset Formula $PM$
+\end_inset
+
+ into 
+\begin_inset Formula $LU$
+\end_inset
+
+ for some permutation matrix 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+permutation
+\begin_inset space ~
+\end_inset
+
+matrix a matrix containing the same rows as an identity matrix but in a
+ possibly different order.
+ Such a matrix will have exactly one 
+\begin_inset Formula $1$
+\end_inset
+
+ in each row and each column and zeros elsewhere.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $LU$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+advantage solving a system in 
+\begin_inset Formula $O(n^{3})$
+\end_inset
+
+ time, subsequently solving systems with the same coefficient matrix but
+ different constants in 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+ time.
 \end_layout
 
 \begin_layout Standard
