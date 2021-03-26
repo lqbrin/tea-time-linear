@@ -2666,6 +2666,14 @@ y
 .
 \end_layout
 
+\begin_layout Enumerate
+Find standard matrix for reflection about the vertical 
+\begin_inset Formula $y$
+\end_inset
+
+-axis.
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

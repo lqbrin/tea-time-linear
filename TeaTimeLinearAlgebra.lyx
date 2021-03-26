@@ -762,6 +762,16 @@ filename "application-orthogonalization.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-similarity-transformations.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -769,11 +779,6 @@ status open
 
 % Sections 1.1-1.5, 1.7-1.9, 2.1-2.3, 2.5, 2.8, 3.1-3.2, 3.3 (adjoint), 4.1-4.7 (4.6???),
  5.1-5.4
-\end_layout
-
-\begin_layout Plain Layout
-
-% Eigenspaces
 \end_layout
 
 \begin_layout Plain Layout
@@ -786,6 +791,11 @@ status open
 \begin_layout Plain Layout
 
 %**** Diagonalization/Similarity
+\end_layout
+
+\begin_layout Plain Layout
+
+% Power Method
 \end_layout
 
 \begin_layout Plain Layout
