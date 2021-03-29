@@ -1132,7 +1132,11 @@ These statements mean the rank of
 
 \series bold
 \shape up
-[Rank and Nullity]
+[
+\shape default
+Rank
+\shape up
+ and Nullity]
 \series default
 \shape default
 
@@ -1570,7 +1574,7 @@ Find the general solution of
 
 \end_deeper
 \begin_layout Enumerate
-Can the solution set of 
+Is the solution set of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -1734,6 +1738,216 @@ Eigenspace questions.
 What is the rank of a matrix of all zeros?
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:product-with-invertible-preserves-rank-1"
+
+\end_inset
+
+Given an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and invertible 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+, show that the rank of 
+\begin_inset Formula $MP$
+\end_inset
+
+ equals the rank of 
+\begin_inset Formula $M$
+\end_inset
+
+ by the following argument.
+ Let 
+\begin_inset Formula $S_{M}$
+\end_inset
+
+ be the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{MP}$
+\end_inset
+
+ be the column space of 
+\begin_inset Formula $MP$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ is in 
+\begin_inset Formula $S_{M}$
+\end_inset
+
+, and show that 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ is in 
+\begin_inset Formula $S_{MP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ is in 
+\begin_inset Formula $S_{MP}$
+\end_inset
+
+, and show that 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ is in 
+\begin_inset Formula $S_{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Conclude that the rank of 
+\begin_inset Formula $M$
+\end_inset
+
+ equals the rank of 
+\begin_inset Formula $MP$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:product-with-invertible-preserves-rank-2"
+
+\end_inset
+
+Given an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and invertible 
+\begin_inset Formula $m\times m$
+\end_inset
+
+ matrix 
+\begin_inset Formula $Q$
+\end_inset
+
+, show that the rank of 
+\begin_inset Formula $QM$
+\end_inset
+
+ equals the rank of 
+\begin_inset Formula $M$
+\end_inset
+
+ by the following argument.
+ Let 
+\begin_inset Formula $N_{M}$
+\end_inset
+
+ be the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N_{QM}$
+\end_inset
+
+ be the null space of 
+\begin_inset Formula $QM$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $N_{M}$
+\end_inset
+
+, and show that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $N_{QM}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $N_{QM}$
+\end_inset
+
+, and show that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $N_{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Conclude that the rank of 
+\begin_inset Formula $M$
+\end_inset
+
+ equals the rank of 
+\begin_inset Formula $QM$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open

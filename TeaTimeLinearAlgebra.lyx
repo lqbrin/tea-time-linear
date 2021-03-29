@@ -790,11 +790,6 @@ status open
 
 \begin_layout Plain Layout
 
-%**** Diagonalization/Similarity
-\end_layout
-
-\begin_layout Plain Layout
-
 % Power Method
 \end_layout
 
@@ -838,7 +833,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 6: Numerical Linear Algebra 
+% Chapter 6: Elements of Numerical Linear Algebra 
 \end_layout
 
 \end_inset
@@ -850,6 +845,16 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-lu-factorization.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-power-method.lyx"
 
 \end_inset
 

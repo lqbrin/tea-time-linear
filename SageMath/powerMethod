@@ -1,0 +1,17 @@
+M=matrix(3,3,[ZZ.random_element(-10,10) for i in range(9)])
+v=vector([CC.random_element(),CC.random_element(),CC.random_element()])
+lastapprox = 1
+approx = 7
+iterations = 0
+while (abs(approx-lastapprox)>10^-10):
+    oldv = v/v.norm()
+    v=M*oldv
+    lastapprox=approx
+    approx=v[0]/oldv[0]
+    iterations=iterations+1
+print(M)
+print("eigenvector v:",v)
+print("eigenvalue l:",approx)
+print("Mv =",M*v)
+print("lv =",approx*v)
+print("in",str(iterations),"iterations")

@@ -107,10 +107,6 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -130,7 +126,7 @@ Reflection about the line
 \end_inset
 
 
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -252,7 +248,8 @@ s would maintain their relative positions across
 \end_layout
 
 \begin_layout Standard
-Using the standard matrix for reflection about the 
+This composition is easy enough to write down.
+ Using the standard matrix for reflection about the 
 \begin_inset Formula $x$
 \end_inset
 
@@ -314,7 +311,7 @@ M & =\left[\begin{array}{cc}
 
 \end_inset
 
-which can of course be multiplied to get
+which can of course be calculated to get
 \begin_inset Formula 
 \begin{align}
 M & =\left[\begin{array}{cc}
@@ -607,16 +604,16 @@ Generalizing, we have the standard matrix
 \end_inset
 
  such that 
-\begin_inset Formula $M=P^{-1}DP$
+\begin_inset Formula $M=PDP^{-1}$
 \end_inset
 
 .
  Right multiplying both sides by 
-\begin_inset Formula $P^{-1}$
+\begin_inset Formula $P$
 \end_inset
 
  we require 
-\begin_inset Formula $MP^{-1}=P^{-1}D$
+\begin_inset Formula $MP=PD$
 \end_inset
 
 .
@@ -624,16 +621,16 @@ Generalizing, we have the standard matrix
 \begin_inset Formula 
 \[
 \left[\begin{array}{cccc}
-M(P^{-1})_{:,1} & M(P^{-1})_{:,2} & \cdots & M(P^{-1})_{:,n}\end{array}\right]
+MP_{:,1} & MP_{:,2} & \cdots & MP_{:,n}\end{array}\right]
 \]
 
 \end_inset
 
-and the left side can be written as
+and the right side can be written as
 \begin_inset Formula 
 \[
 \left[\begin{array}{cccc}
-D_{1,1}(P^{-1})_{:,1} & D_{2,2}(P^{-1})_{:,2} & \cdots & D_{n,n}(P^{-1})_{:,n}\end{array}\right].
+D_{1,1}P_{:,1} & D_{2,2}P_{:,2} & \cdots & D_{n,n}P_{:,n}\end{array}\right].
 \]
 
 \end_inset
@@ -641,16 +638,16 @@ D_{1,1}(P^{-1})_{:,1} & D_{2,2}(P^{-1})_{:,2} & \cdots & D_{n,n}(P^{-1})_{:,n}\e
 Equating columns of the two sides, we get
 \begin_inset Formula 
 \begin{align*}
-M(P^{-1})_{:,1} & =D_{1,1}(P^{-1})_{:,1}\\
-M(P^{-1})_{:,2} & =D_{2,2}(P^{-1})_{:,2}\\
+MP_{:,1} & =D_{1,1}P_{:,1}\\
+MP_{:,2} & =D_{2,2}P_{:,2}\\
  & \vdots\\
-M(P^{-1})_{:,n} & =D_{n,n}(P^{-1})_{:,n}.
+MP_{:,n} & =D_{n,n}P_{:,n}.
 \end{align*}
 
 \end_inset
 
 The columns of 
-\begin_inset Formula $P^{-1}$
+\begin_inset Formula $P$
 \end_inset
 
  are eigenvectors of 
@@ -703,11 +700,7 @@ noprefix "false"
 \end_inset
 
 .
- Of course, 
-\begin_inset Formula $P=(P^{-1})^{-1}$
-\end_inset
-
-, so
+ It folows that
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -732,7 +725,7 @@ and we see that
 \end_inset
 
  has the effect of reflection about the second vector of the basis 
-\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\begin_inset Formula $\mathcal{C}=\left\{ \left[\begin{array}{c}
 -2\\
 1
 \end{array}\right]\left[\begin{array}{c}
@@ -761,10 +754,10 @@ has the effect of reflection about the second basis vector (rooted at the
 parallel
 \shape default
  to the first vector.
- Because the standard basis vector meet at a right angle, reflection is
+ Because the standard basis vectors meet at a right angle, reflection is
  done along lines perpendicular to the axes.
- If the basis vectors met at a different angle, though, reflection is done
- along lines meting at that same angle.
+ If the basis vectors meet at a different angle, reflection is done along
+ lines meeting at that same angle.
 \end_layout
 
 \begin_layout Standard
@@ -776,37 +769,1079 @@ This analysis can be verified by plotting a couple of points and their images
 .
  For example,
 \begin_inset Formula 
-\[
+\begin{equation}
 S\left(\left[\begin{array}{c}
-1\\
-5
-\end{array}\right]\right)=\left[\begin{array}{c}
-\\
-\\
-\end{array}\right]\quad S\left(\left[\begin{array}{c}
-0\\
--2
-\end{array}\right]\right)=\left[\begin{array}{c}
-\\
-\\
-\end{array}\right]\quad S\left(\left[\begin{array}{c}
 1\\
 -1
 \end{array}\right]\right)=\left[\begin{array}{c}
-\\
-\\
-\end{array}\right]\quad S\left(\left[\begin{array}{c}
-2\\
-2
+-3\\
+-1
+\end{array}\right];\ S\left(\left[\begin{array}{c}
+-2\\
+1
 \end{array}\right]\right)=\left[\begin{array}{c}
-\\
-\\
+10\\
+-5
+\end{array}\right];\ S\left(\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]\right)=\left[\begin{array}{c}
+2\\
+9
+\end{array}\right];\ S\left(\left[\begin{array}{c}
+-\frac{17}{25}\\
+\frac{36}{25}
+\end{array}\right]\right)=\left[\begin{array}{c}
+-1\\
+6
+\end{array}\right]\label{eq:some-images-under-S}
+\end{equation}
+
+\end_inset
+
+Figure 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:geometry-of-S"
+
+\end_inset
+
+Visualizing the action of 
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/application-similarity-02.pdf
+	lyxscale 25
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:geometry-of-S"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the geometry of 
+\begin_inset Formula $S$
+\end_inset
+
+ with respect to both the standard basis and the basis 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ The purple grid shows coordinates with respect to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\left[\begin{array}{c}
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+ direction is the positive 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ axis (first basis vector) and the 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+-3
+\end{array}\right]$
+\end_inset
+
+ direction is the positive 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $y$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ axis (second basis vector) in these coordinates.
+ Notice the point 
+\begin_inset Formula $\left[\begin{array}{c}
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+ has coordinates 
+\color violet
+
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\color inherit
+ with respect to the purple grid.
+ In other words,
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+-2\\
+1
+\end{array}\right]_{\mathcal{E}}={\color{violet}\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]_{\mathcal{C}}}
+\]
+
+\end_inset
+
+They are the same point in the plane! Coordinates with respect to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ make it easy to trace its action under 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ It is first reflected about the second basis vector, making its coordinates
+ 
+\color violet
+
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+0
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+
+\color inherit
+ (with respect to the purple grid) and then expanded by a factor of 
+\begin_inset Formula $5$
+\end_inset
+
+, making its cordinates 
+\color violet
+
+\begin_inset Formula $\left[\begin{array}{c}
+-5\\
+0
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+
+\color inherit
+ (with respect to the purple grid).
+ Other points can be understood similarly.
+ The coordinates of point 
+\begin_inset Formula $P$
+\end_inset
+
+ are 
+\begin_inset Formula $\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]$
+\end_inset
+
+ with respect to the standard basis, but 
+\color violet
+
+\begin_inset Formula $\left[\begin{array}{c}
+\frac{3}{5}\\
+-\frac{4}{5}
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+
+\color inherit
+ with respect to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ (marked as 
+\begin_inset Formula $P$
+\end_inset
+
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:geometry-of-S"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Can you verify this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:coordinates-with-respect-to-C"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Reflection across the second basis vector gives it coordinates 
+\color violet
+
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{3}{5}\\
+-\frac{4}{5}
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+
+\color inherit
+ (shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:geometry-of-S"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ connected to 
+\begin_inset Formula $P$
+\end_inset
+
+ by an orange dashed line segment crossing the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $y$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ axis parallel to the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ axis) and then expanding by a factor of 
+\begin_inset Formula $5$
+\end_inset
+
+ gives it coordinates 
+\color violet
+
+\begin_inset Formula $\left[\begin{array}{c}
+-3\\
+-4
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+
+\color inherit
+.
+ This point is marked as 
+\begin_inset Formula $S(P)$
+\end_inset
+
+ in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:geometry-of-S"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ What are the coordinates of 
+\begin_inset Formula $S(P)$
+\end_inset
+
+ with respect to the standard basis? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:coordinates-with-respect-to-E"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Similarity
+\end_layout
+
+\begin_layout Standard
+Separating the matrix calculations of the preceding discussion from their
+ geometric interpretation, we have been examining matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ related by the equation
+\begin_inset Formula 
+\[
+B=P^{-1}AP,
+\]
+
+\end_inset
+
+a relation known as 
+\series bold
+similarity
+\series default
+.
+ Indeed, matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are called 
+\series bold
+similar
+\series default
+ if 
+\begin_inset Formula $B=P^{-1}AP$
+\end_inset
+
+ (or equivalently 
+\begin_inset Formula $PBP^{-1}=A$
+\end_inset
+
+).
+ Consistent with the name, matrices related this way share a number of similar
+ features.
+\end_layout
+
+\begin_layout Theorem
+If matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are similar, then 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same (i) determinant, (ii) eigenvalues, and (iii) rank.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=(
+\backslash
+roman{enumi})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:determinant-of-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the fact that 
+\begin_inset Formula $\det P^{-1}=\frac{1}{\det P}$
+\end_inset
+
+ (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 
+\begin_inset Formula $\det B=\det(P^{-1}AP)=\det P^{-1}\cdot\det A\cdot\det P=\frac{1}{\det P}\cdot\det A\cdot\det P=\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+If 
+\begin_inset Formula $\lambda,\mathbf{v}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $B$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{align*}
+B\mathbf{v}=\lambda\mathbf{v} & \Rightarrow(P^{-1}AP)\mathbf{v}=\lambda\mathbf{v}\\
+ & \Rightarrow P^{-1}A(P\mathbf{v})=\lambda\mathbf{v}\\
+ & \Rightarrow A(P\mathbf{v})=\lambda(P\mathbf{v})
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an eigenvalue of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Similarly, if 
+\begin_inset Formula $\lambda,\mathbf{w}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $A$
+\end_inset
+
+ then
+\begin_inset Formula 
+\begin{align*}
+A\mathbf{w}=\lambda\mathbf{w} & \Rightarrow(PBP^{-1})\mathbf{w}=\lambda\mathbf{w}\\
+ & \Rightarrow PB(P^{-1}\mathbf{w})=\lambda\mathbf{w}\\
+ & \Rightarrow B(P^{-1}\mathbf{w})=\lambda(P^{-1}\mathbf{w})
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an eigenvalue of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+By exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:product-with-invertible-preserves-rank-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:product-with-invertible-preserves-rank-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Solution-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, neither right multiplying nor left multiplying a matrix by an invertible
+ matrix changes its rank, so rank of 
+\begin_inset Formula $A$
+\end_inset
+
+, which equals the rank of 
+\begin_inset Formula $PBP^{-1}$
+\end_inset
+
+, equals the rank of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Other similar features of similar matrices are explored in the exercises.
+ 
+\end_layout
+
+\begin_layout Standard
+Another important feature of similar matrices is that powers of similar
+ matrices are similar.
+ That is, if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are square and similar, then 
+\begin_inset Formula $A^{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $B^{k}$
+\end_inset
+
+ are similar, where the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ power of 
+\begin_inset Formula $M$
+\end_inset
+
+ is defined by 
+\begin_inset Formula 
+\[
+M^{k}=\overset{k\text{ times}}{\overbrace{M\cdot M\cdots M}}
+\]
+
+\end_inset
+
+(analogous to powers of real numbers).
+ To see that this is true, write 
+\begin_inset Formula $A=PBP^{-1}$
+\end_inset
+
+ and compute
+\begin_inset Formula 
+\begin{align*}
+A^{k} & =(PBP^{-1})^{k}\\
+ & =\overset{k\text{ times}}{\overbrace{PBP^{-1}\cdot PBP^{-1}\cdots PBP^{-1}}}\\
+ & =\overset{k\text{ times}}{P\overbrace{B\cdot B\cdots B}}P^{-1}\\
+ & =PB^{k}P^{-1}
+\end{align*}
+
+\end_inset
+
+This is particularly useful when 
+\begin_inset Formula $A$
+\end_inset
+
+ is similar to a diagonal matrix.
+ In this case, 
+\begin_inset Formula $A=PDP^{-1}$
+\end_inset
+
+ for a diagonal matrix 
+\begin_inset Formula $D$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{align*}
+A^{k} & =PD^{k}P^{-1}\\
+ & =P\left[\begin{array}{cccc}
+D_{1,1} & 0 & \cdots & 0\\
+0 & D_{2,2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & D_{n,n}
+\end{array}\right]^{k}P^{-1}\\
+ & =P\left[\begin{array}{cccc}
+D_{1,1}^{k} & 0 & \cdots & 0\\
+0 & D_{2,2}^{k} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & D_{n,n}^{k}
+\end{array}\right]P^{-1}
+\end{align*}
+
+\end_inset
+
+so the difficulty in raising 
+\begin_inset Formula $A$
+\end_inset
+
+ to any power is commensurate with the difficulty of raising 
+\begin_inset Formula $D$
+\end_inset
+
+ to that power.
+ Earlier we found that 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]=\left[\begin{array}{cc}
+-2 & 1\\
+1 & -3
+\end{array}\right]\left[\begin{array}{cc}
+-5 & 0\\
+0 & 5
+\end{array}\right]\left[\begin{array}{cc}
+-\frac{3}{5} & -\frac{1}{5}\\
+-\frac{1}{5} & -\frac{2}{5}
 \end{array}\right]
 \]
 
 \end_inset
 
+so 
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]^{5} & =\left[\begin{array}{cc}
+-2 & 1\\
+1 & -3
+\end{array}\right]\left[\begin{array}{cc}
+-5 & 0\\
+0 & 5
+\end{array}\right]^{5}\left[\begin{array}{cc}
+-\frac{3}{5} & -\frac{1}{5}\\
+-\frac{1}{5} & -\frac{2}{5}
+\end{array}\right]\\
+ & =\left[\begin{array}{cc}
+-2 & 1\\
+1 & -3
+\end{array}\right]\left[\begin{array}{cc}
+-3125 & 0\\
+0 & 3125
+\end{array}\right]\left[\begin{array}{cc}
+-\frac{3}{5} & -\frac{1}{5}\\
+-\frac{1}{5} & -\frac{2}{5}
+\end{array}\right]\\
+ & =\left[\begin{array}{cc}
+-4375 & -2500\\
+3750 & 4375
+\end{array}\right].
+\end{align*}
 
+\end_inset
+
+While that may not be the most pleasant computation, it certainly beats
+ computing 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]^{5}=\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]
+\]
+
+\end_inset
+
+directly.
+ This property of similar matrices is at the heart of the power method for
+ estimating eigenvalues (section 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Add reference.
+ 
+\end_layout
+
+\end_inset
+
+), which is at the heart of Markov chain problems (section 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Add reference.
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+When a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is similar to a diagonal matrix 
+\begin_inset Formula $D$
+\end_inset
+
+, we say that 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\series bold
+diagonalizable
+\series default
+ and that the matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ of 
+\begin_inset Formula $P^{-1}MP=D$
+\end_inset
+
+ 
+\series bold
+diagonalizes
+\series default
+ 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ We saw earlier that if 
+\begin_inset Formula $P^{-1}MP=D$
+\end_inset
+
+ then the columns of 
+\begin_inset Formula $P$
+\end_inset
+
+ are eigenvectors.
+ We shall now add the observation that the eigenvectors (columns of 
+\begin_inset Formula $P$
+\end_inset
+
+) must be linearly independent, a requirement for 
+\begin_inset Formula $P$
+\end_inset
+
+ to be invertible.
+ On the other hand, if 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix admitting 
+\begin_inset Formula $n$
+\end_inset
+
+ linearly independent eigenvectors, then 
+\begin_inset Formula $M$
+\end_inset
+
+ is diagonalizable and 
+\begin_inset Formula $P$
+\end_inset
+
+, a matrix whose columns are 
+\begin_inset Formula $n$
+\end_inset
+
+ linearly independent eigenvectors of 
+\begin_inset Formula $M$
+\end_inset
+
+, diagonalizes 
+\begin_inset Formula $M$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+P^{-1}MP & =P^{-1}\left[\begin{array}{cccc}
+\lambda_{1}P_{:,1} & \lambda_{2}P_{:,2} & \cdots & \lambda_{n}P_{:,n}\end{array}\right]\\
+ & =P^{-1}P\left[\begin{array}{cccc}
+\lambda_{1} & 0 & \cdots & 0\\
+0 & \lambda_{2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \lambda_{n}
+\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+\lambda_{1} & 0 & \cdots & 0\\
+0 & \lambda_{2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \lambda_{n}
+\end{array}\right],
+\end{align*}
+
+\end_inset
+
+which is diagonal.
+ Altogether, an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is diagonalizable if and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ linearly independent eigenvectors.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+similar
+\begin_inset space ~
+\end_inset
+
+matrices matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are similar if there is an invertible matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $A=P^{-1}BP$
+\end_inset
+
+ (equivalently 
+\begin_inset Formula $PAP^{-}1=B$
+\end_inset
+
+ or 
+\begin_inset Formula $PA=BP$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+similarity Matrices that are similar have similarity.
+ Matrices that have similarity have the same (i) determinant, (ii) eigenvalues,
+ and (iii) rank.
+\end_layout
+
+\begin_layout Description
+diagonalizable a matrix that is similar to a diagonal matrix.
+ 
+\end_layout
+
+\begin_layout Description
+diagonalizability an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is diagonalizable if and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ linearly independent eigenvectors.
+ Such 
+\begin_inset Formula $M$
+\end_inset
+
+ is diagonalized by any matrix whose columns are 
+\begin_inset Formula $n$
+\end_inset
+
+ linearly independent eigenvectors.
+\end_layout
+
+\begin_layout Description
+powers
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+matrices The 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ power of matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is deifined by 
+\begin_inset Formula 
+\[
+M^{k}=\overset{k\text{ times}}{\overbrace{M\cdot M\cdots M}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+similarity
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+powers The 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ powers of similar matrices are similar.
+\end_layout
+
+\begin_layout Description
+geometry
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+diagonalizable
+\begin_inset space ~
+\end_inset
+
+matrices If 
+\begin_inset Formula $M$
+\end_inset
+
+ is a diagonalizable 
+\begin_inset Formula $2\times2$
+\end_inset
+
+, respectively 
+\begin_inset Formula $3\times3$
+\end_inset
+
+, matrix, its action on the plane, respectively space, can be understood
+ as a scaling (and possibly reflecting) transformation relative to a basis
+ of eigenvectors.
 \end_layout
 
 \begin_layout Standard
@@ -831,9 +1866,19 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-I
+Justify the claim.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+Similar matrices have the same trace (sum of the entries on the main diagonal).
+\end_layout
+
+\begin_layout Enumerate
+Similar matrices have equal eigenspace dimensions.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -1041,6 +2086,141 @@ which gives eigenvectors of the forms
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+coordinates
+\begin_inset space ~
+\end_inset
+
+with
+\begin_inset space ~
+\end_inset
+
+respect
+\begin_inset space ~
+\end_inset
+
+to
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinates-with-respect-to-C"
+
+\end_inset
+
+The change of coordinates matrix from the standard basis to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is 
+\begin_inset Formula $\left[\begin{array}{cc}
+-\frac{3}{5} & -\frac{1}{5}\\
+-\frac{1}{5} & -\frac{2}{5}
+\end{array}\right]$
+\end_inset
+
+, so point 
+\begin_inset Formula $P$
+\end_inset
+
+ has coordinates
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-\frac{3}{5} & -\frac{1}{5}\\
+-\frac{1}{5} & -\frac{2}{5}
+\end{array}\right]\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+\frac{3}{5}\\
+-\frac{4}{5}
+\end{array}\right]_{\mathcal{C}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+coordinates
+\begin_inset space ~
+\end_inset
+
+with
+\begin_inset space ~
+\end_inset
+
+respect
+\begin_inset space ~
+\end_inset
+
+to
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinates-with-respect-to-E"
+
+\end_inset
+
+As can be seen from figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:geometry-of-S"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the coordinates of 
+\begin_inset Formula $S(P)$
+\end_inset
+
+ are 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+9
+\end{array}\right]_{\mathcal{E}}$
+\end_inset
+
+, consistent with (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:some-images-under-S"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), which shows 
+\begin_inset Formula $S\left(\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]\right)=\left[\begin{array}{c}
+2\\
+9
+\end{array}\right]$
+\end_inset
+
+.
 \end_layout
 
 \end_body
