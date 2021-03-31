@@ -432,7 +432,7 @@ Being a scalar multiple, the vector
 \begin_inset Formula $\mathbf{\hat{v}}_{i}$
 \end_inset
 
- numerically demonstrate that the 
+ numerically demonstrates that the 
 \begin_inset Formula $\mathbf{\hat{v}}_{i}$
 \end_inset
 
@@ -505,18 +505,21 @@ n of one of its eigenvectors.
  than solving a characteristic equation.
  More importantly, though, as noted earlier, general polynomials of degree
  five or higher cannot be solved exactly.
- This means eigenpairs for square matrices of size 5 and up canonot generally
- be found exactly.
+ This means eigenpairs for square matrices of size 
+\begin_inset Formula $5\times5$
+\end_inset
+
+ and up canonot generally be found exactly.
  Numerical methods must be used!
 \end_layout
 
 \begin_layout Standard
 This approach of iteratively multiplying some vector by the matrix whose
- eigenpairs are desired, which is known as the 
+ eigenpairs are desired, known as the 
 \series bold
 power method
 \series default
- seems to have potential, but the example should leave you with lots of
+, seems to have potential, but the example should leave you with lots of
  questions.
  For example,
 \begin_inset VSpace medskip
@@ -614,8 +617,11 @@ roman{enumi})
 \end_layout
 
 \begin_layout Enumerate
-one of the eigenvalues is dominant in the sense that its magnitude is larger
- than all the others, and
+one of the eigenvalues is 
+\series bold
+dominant
+\series default
+ in the sense that its magnitude is larger than all the others, and
 \end_layout
 
 \begin_layout Enumerate
@@ -643,7 +649,7 @@ The method only determines the eigenvector corresponding to the dominant
 
 \begin_layout Enumerate
 The accuracy of the approximation is proportional to the largest ratio 
-\begin_inset Formula $\left(\frac{\lambda_{j}}{\lambda_{i}}\right)^{k},\ i\neq j$
+\begin_inset Formula $\left|\frac{\lambda_{j}}{\lambda_{i}}\right|^{k},\ i\neq j$
 \end_inset
 
 .
@@ -651,8 +657,43 @@ The accuracy of the approximation is proportional to the largest ratio
 
 \begin_layout Standard
 The exercises explore a number of these points, and describes a modification
- of the power method that can be used to find any eigenvalue with a 1-dimensiona
-l eigenspace.
+ of the power method that can be used to find any eigenpair.
+\end_layout
+
+\begin_layout Standard
+On a practical note, implementation of the method will include scaling 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ with each iteration.
+ As the example shows, the norm of 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ can grow very large very quickly.
+ Crumpet 1 reveals that 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ will grow (or decay) exponentially.
+ Since it is only the direction of 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ that matters, scaling does not affect the success of the algorithm.
+ Typically, 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ will be scaled by 
+\begin_inset Formula $\max\{|(\mathbf{v}_{k})_{j,1}|:j=1,2,\ldots,n\}$
+\end_inset
+
+ so that the magnitude of the greatest (or least) entry of 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ is one.
  
 \begin_inset ERT
 status open
@@ -783,15 +824,8 @@ noprefix "false"
 0 & \lambda_{2}^{k} & \cdots & 0\\
 \vdots & \vdots & \ddots & \vdots\\
 0 & 0 & \cdots & \lambda_{n}^{k}
-\end{array}\right]\mathbf{w}
-\end{align*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\phantom{\mathbf{v}_{k}=M^{k}\mathbf{v}_{0}} & =\lambda_{j}^{k}P\left[\begin{array}{cccc}
+\end{array}\right]\mathbf{w}\\
+ & =\lambda_{j}^{k}P\left[\begin{array}{cccc}
 \frac{\lambda_{1}^{k}}{\lambda_{j}^{k}} & 0 & \cdots & 0\\
 0 & \frac{\lambda_{2}^{k}}{\lambda_{j}^{k}} & \cdots & 0\\
 \vdots & \vdots & \ddots & \vdots\\
@@ -854,7 +888,37 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-s
+dominant
+\begin_inset space ~
+\end_inset
+
+eigenvalue an eigenvalue with larger magnitude than all other eigenvalues
+ of a given matrix.
+\end_layout
+
+\begin_layout Description
+power
+\begin_inset space ~
+\end_inset
+
+method iteration of the recurrence relation 
+\begin_inset Formula $\mathbf{v}_{k}=M\mathbf{v}_{k-1}$
+\end_inset
+
+ for some initial vector 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+.
+ Under certain conditions the sequence 
+\begin_inset Formula $\mathbf{v}_{0},\mathbf{v}_{1},\ldots$
+\end_inset
+
+ will converge to an eigenvector of 
+\begin_inset Formula $M$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -879,7 +943,276 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-J
+Find the dominant eigenvalue.
+\end_layout
+
+\begin_layout Enumerate
+Does the matrix have a dominant eigenvalue?
+\end_layout
+
+\begin_layout Enumerate
+Here are the first 6 terms of 
+\begin_inset Formula $\mathbf{v}_{k}=M\mathbf{v}_{k-1}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Create examples and rephrase.
+ 
+\end_layout
+
+\end_inset
+
+ Estimate an eigenpair.
+\end_layout
+
+\begin_layout Enumerate
+Here are the first 6 terms of 
+\begin_inset Formula $\mathbf{v}_{k}=\frac{M\mathbf{v}_{k-1}}{||M\mathbf{v}_{k-1}||_{\infty}}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Create examples and rephrase of first 6 terms of the power method.
+\end_layout
+
+\end_inset
+
+ Estimate an eigenpair.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Find 
+\begin_inset Formula $\mathbf{v}_{10}$
+\end_inset
+
+ and 
+\begin_inset Formula $M\mathbf{v}_{10}$
+\end_inset
+
+ of the power method.
+ Does it seem that the method will converge? You may use the code at 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Provide link 
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Redo question 3 find 
+\begin_inset Formula $\mathbf{v}_{100}$
+\end_inset
+
+ and 
+\begin_inset Formula $M\mathbf{v}_{100}$
+\end_inset
+
+ instead.
+ Does it seem that the method will converge? You may use the code at 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Provide link
+\end_layout
+
+\end_inset
+
+.
+ Compare your answer to your answer in question 3.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Dominant eigenvalue has multi-dimensional eigenspace
+\end_layout
+
+\begin_layout Enumerate-Resume
+The dominant eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+ has a 2-dimensional eigenspace (algebraic multiplicity = geometric multiplicity
+ = 2).
+ Apply the power method anyway.
+ Does it work?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Matrix not diagonalizable
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $M$
+\end_inset
+
+ is not diagonalizable but has a dominant eigenvalue with multiplicity 1
+ (1-dimensional eigenspace).
+ Apply the power method anyway.
+ Does it work?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Failure
+\end_layout
+
+\begin_layout Enumerate-Resume
+Dominant eigenvalue with algebraic mult greater than geom multiplicity (dim
+ of nullspace of 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+).
+ Compute 
+\begin_inset Formula $M^{\text{high power}}$
+\end_inset
+
+ and look at columns.
+ Is there an eigenvector?
+\end_layout
+
+\begin_layout Enumerate-Resume
+Two eigenvalues with the same modulus/absolute value (alg mult 1 each).
+ Run the method anyway.
+ Do you get a linear combination of the two eigenvectors?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+The inverse power method
+\end_layout
+
+\begin_layout Enumerate-Resume
+Show that if 
+\begin_inset Formula $\lambda,\mathbf{v}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible, then 
+\begin_inset Formula $\frac{1}{\lambda},\mathbf{v}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $M^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Show that if 
+\begin_inset Formula $\lambda,\mathbf{v}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $M$
+\end_inset
+
+ then 
+\begin_inset Formula $\lambda-\alpha,\mathbf{v}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $M-\alpha I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Combine 11 and 12 to show that if 
+\begin_inset Formula $\lambda,\mathbf{v}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is not an eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{1}{\lambda-\alpha},\mathbf{v}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $(M-\alpha I)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+2 is a good estimate of one of the non-dominant eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Apply the power method to 
+\begin_inset Formula $(M-2I)^{-1}$
+\end_inset
+
+ to find the eigenvalue and an associated eigenvector.
 \end_layout
 
 \begin_layout Standard

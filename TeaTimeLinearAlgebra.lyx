@@ -790,21 +790,6 @@ status open
 
 \begin_layout Plain Layout
 
-% Power Method
-\end_layout
-
-\begin_layout Plain Layout
-
-% QR Factorization
-\end_layout
-
-\begin_layout Plain Layout
-
-% Cramer's Rule
-\end_layout
-
-\begin_layout Plain Layout
-
 % Uniqueness of RREF
 \end_layout
 
@@ -833,7 +818,46 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 6: Elements of Numerical Linear Algebra 
+% Chapter 6: Mathematical Applications 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% QR Factorization
+\end_layout
+
+\begin_layout Plain Layout
+
+% Cramer's Rule
+\end_layout
+
+\begin_layout Plain Layout
+
+% Fractals (rep-tiles)
+\end_layout
+
+\begin_layout Plain Layout
+
+% Approximation
+\end_layout
+
+\begin_layout Plain Layout
+
+% Fourier Series
+\end_layout
+
+\begin_layout Plain Layout
+
+% Isometries of the Square/Cube (preview of abstract algebra)?
 \end_layout
 
 \end_inset
@@ -862,49 +886,6 @@ filename "application-power-method.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Chapter 7: Applications to Branches of Mathematics 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Fractals 
-\end_layout
-
-\begin_layout Plain Layout
-
-% Least Squares
-\end_layout
-
-\begin_layout Plain Layout
-
-% Linear Programming
-\end_layout
-
-\begin_layout Plain Layout
-
-% Isometries of the Square/Cube (preview of abstract algebra)?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "theory-det-eig-area.lyx"
@@ -920,7 +901,7 @@ status open
 
 \begin_layout Plain Layout
 
-% Chapter 8: Applications Outside of Mathematics 
+% Chapter 7: Applications in Other Disciplines 
 \end_layout
 
 \end_inset
@@ -934,7 +915,12 @@ status open
 
 \begin_layout Plain Layout
 
-% Fourier Series
+% Linear Regression
+\end_layout
+
+\begin_layout Plain Layout
+
+% Discrete dynamical systems
 \end_layout
 
 \begin_layout Plain Layout
@@ -944,12 +930,22 @@ status open
 
 \begin_layout Plain Layout
 
+% Difference Equations
+\end_layout
+
+\begin_layout Plain Layout
+
 % Markov Chains
 \end_layout
 
 \begin_layout Plain Layout
 
-% Differential Equations / Difference Equations / Eigenpairs
+% Differential Equations???
+\end_layout
+
+\begin_layout Plain Layout
+
+% Linear Programming???
 \end_layout
 
 \end_inset
