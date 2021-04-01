@@ -99,55 +99,607 @@ name "sec:Approximation"
 Approximation []
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $W$
+\begin_layout Standard
+From the very beginning of our discussion of linear systems, we acknowledged
+ that there were systems with no solution (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Systems-of-Linear"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- is a subspace of 
-\begin_inset Formula $V$
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ This was a familiar state of affairs as you undoubtedly have seen equations
+ like 
+\begin_inset Formula $x^{2}+1=0$
 \end_inset
 
 , 
-\begin_inset Formula $\mathbf{v}\in W^{\perp}$
+\begin_inset Formula $\sin\theta=2$
 \end_inset
 
- iff 
-\begin_inset Formula $\mathbf{v}$
+, and 
+\begin_inset Formula $\frac{1}{2+e^{t}}=3$
 \end_inset
 
- orthogonal to (
-\begin_inset Formula $\langle\mathbf{v},w\rangle=0$
+, all of which have 
+\begin_inset Quotes eld
 \end_inset
 
-) every 
-\begin_inset Formula $w\in W$
+no solution
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Full disclosure, what was meant by 
+\begin_inset Quotes eld
+\end_inset
+
+no solution
+\begin_inset Quotes erd
+\end_inset
+
+ was 
+\shape italic
+no real number solution
+\shape default
+.
+ All three equations have complex number solutions! 
+\begin_inset Formula $\sqrt{-1}$
+\end_inset
+
+, 
+\begin_inset Formula $\sin^{-1}(2)$
+\end_inset
+
+, and 
+\begin_inset Formula $\ln\left(-\frac{5}{3}\right)$
+\end_inset
+
+ are perfectly well defined complex numbers, and are, respectively, solutions
+ of the three equations.
+ It's possible you studied complex numbers enough to know this already,
+ but it's also possible this comes as a revelation.
+ No worries either way.
+\end_layout
+
+\begin_layout Standard
+Linear systems with no solution are different.
+ When we say they have no solution, they have no integer solution, no rational
+ number solution, no real number solution, and no complex number solution.
+ They simply have no solution.
+ What more is there to say?
+\end_layout
+
+\begin_layout Standard
+The linear equation
+\begin_inset Formula 
+\begin{equation}
+54x+30y=17\label{eq:best-approx-one-equation}
+\end{equation}
+
+\end_inset
+
+has 
+\shape italic
+no integer solution
+\shape default
+.
+ This can be seen by factoring a 
+\begin_inset Formula $6$
+\end_inset
+
+ from the left hand side:
+\begin_inset Formula 
+\[
+6(9x+5y)=17
+\]
+
+\end_inset
+
+showing that the left side is, for any integers 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, a multiple of 6 while the right side is not.
+ The best we can hope for are integers 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ that make 
+\begin_inset Formula $54x+30y$
+\end_inset
+
+ close to 17.
+ To say it another way, we can look for integers 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ so that
+\begin_inset Formula 
+\[
+|(54x+30y)-17|
+\]
+
+\end_inset
+
+(the distance between 
+\begin_inset Formula $54x+30y$
+\end_inset
+
+ and 
+\begin_inset Formula $17$
+\end_inset
+
+) is small.
+ In fact, if we could find a minimum of this quantity, that would mean something.
+ Among all the pairs of integers 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, this pair (or these pairs) make 
+\begin_inset Formula $54x+30y$
+\end_inset
+
+ as close to 
+\begin_inset Formula $17$
+\end_inset
+
+ as possible.
+ Can you find the minimum possible value of 
+\begin_inset Formula $|(54x+30y)-17|$
+\end_inset
+
+ for integers 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:minimum-integer-solution"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 .
  
-\begin_inset Formula $W^{\perp}$
-\end_inset
-
-=orthogonal complement.
 \end_layout
 
-\begin_layout Enumerate
-THM: 
-\begin_inset Formula $\mathbf{v}\in W^{\perp}$
+\begin_layout Standard
+\begin_inset Formula $54(-34)+30(78)=18$
 \end_inset
 
- iff 
+, so 
+\begin_inset Formula $(\hat{x},\hat{y})=(-34,78)$
+\end_inset
+
+ is a 
+\series bold
+best approximation
+\series default
+ of an integer solution of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:best-approx-one-equation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The pair 
+\begin_inset Formula $(-34,78)$
+\end_inset
+
+ does not solve (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:best-approx-one-equation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), but it makes its two sides as close as possible (using integers).
+ That is,
+\begin_inset Formula 
+\[
+|(54\hat{x}+30\hat{y})-17|\leq|(54x+30y)-17|
+\]
+
+\end_inset
+
+for all integer pairs 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+.
+ We could use calculus to seek best real number approximations of 
+\begin_inset Formula $x^{2}+1=0$
+\end_inset
+
+, 
+\begin_inset Formula $\sin\theta=2$
+\end_inset
+
+, and 
+\begin_inset Formula $\frac{1}{2+e^{t}}=3$
+\end_inset
+
+, but the point is made.
+ Even when an equation has no solution, it may have a best approximation
+ (to a solution).
+\end_layout
+
+\begin_layout Standard
+Using this discussion as a model for linear systems with no solution, we
+ ask whether 
+\begin_inset Formula 
+\[
+M\mathbf{v}=\mathbf{b}
+\]
+
+\end_inset
+
+has a best approximation (to a solution) when inconsistent.
+ That is, can we find 
+\begin_inset Formula $\hat{\mathbf{v}}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+||M\hat{\mathbf{v}}-\mathbf{b}||\leq||M\mathbf{v}-\mathbf{b}||
+\]
+
+\end_inset
+
+for all 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- orthogonal to every element of a basis of 
+? For example,
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cc}
+1 & -3\\
+4 & 9\\
+-9 & 6
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]=\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]\label{eq:best-approximation-system}
+\end{equation}
+
+\end_inset
+
+is inconsistent.
+ Can you show this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inconsistent-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ To say it another way, 
+\begin_inset Formula $\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]$
+\end_inset
+
+ is not in the column space of 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & -3\\
+4 & 9\\
+-9 & 6
+\end{array}\right]$
+\end_inset
+
+, hinting at how to find a best approximation—look inside the column space
+ of 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & -3\\
+4 & 9\\
+-9 & 6
+\end{array}\right]$
+\end_inset
+
+ for a vector that is as close to 
+\begin_inset Formula $\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]$
+\end_inset
+
+ as possible.
+ 
+\end_layout
+
+\begin_layout Standard
+In fact, we have done this to some extent already! 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+3\\
+4
+\end{array}\right]$
+\end_inset
+
+ is not in the column space of 
+\begin_inset Formula $M=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is not a multiple (linear combination) of 
+\begin_inset Formula $M_{:,1}$
+\end_inset
+
+.
+ Nonetheless there is a multiple (linear combination) of 
+\begin_inset Formula $M_{:,1}$
+\end_inset
+
+ that is closest to 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ Geometrically, this means there is a point on the line determined by 
+\begin_inset Formula $M_{:,1}$
+\end_inset
+
+ closest to 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ This situation is diagrammed here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-approximation-01.pdf
+	lyxscale 25
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+We know the shortest distance between a point and a line is measured perpendicul
+arly.
+ The point on the line where this shortest distance occurs marks exactly
+ the (orthogonal) projection of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ onto 
+\begin_inset Formula $M_{:,1}$
+\end_inset
+
+, as diagrammed here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-approximation-02.pdf
+	lyxscale 25
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Helpful to this discussion is to then see orthogonal projection as projecting
+ a vector onto a subspace (rather than another vector).
+ The line determined by 
+\begin_inset Formula $M_{:,1}$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ as it is the span of 
+\begin_inset Formula $M_{:,1}$
+\end_inset
+
+.
+ In three dimensions, there is a point in a plane nearest any point/vector
+ not in the plane.
+ That point occurs exactly at the projection of the vector onto the plane
+ (and that plane is a subspace of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+).
+ Again, projection is best viewed as projecting a vector onto a subspace.
+\end_layout
+
+\begin_layout Standard
+With this in mind, we have to address the questions of (i) how to project
+ a vector onto a subspace and (ii) whether that projection is always the
+ nearest point/vector within the subspace.
+ A lot of this work has already been done, but there is a bit more to do
+ now.
+\end_layout
+
+\begin_layout Standard
+First, let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{p}\}$
+\end_inset
+
+ be an orthogonal basis for a subspace 
+\begin_inset Formula $W$
+\end_inset
+
+ of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Then the 
+\series bold
+orthogonal projection
+\series default
+ of any 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+ onto 
+\begin_inset Formula $W$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+, is defined by
+\begin_inset Formula 
+\[
+\text{proj}_{W}\mathbf{v}=\text{proj}_{\mathbf{b}_{1}}\mathbf{v}+\text{proj}_{\mathbf{b}_{2}}\mathbf{v}+\cdots+\text{proj}_{\mathbf{b}_{p}}\mathbf{v}.
+\]
+
+\end_inset
+
+Because each projection is a multiple of one of the basis elements, this
+ is a linear combination of the basis elements and therefore lies in 
 \begin_inset Formula $W$
 \end_inset
 
 .
+ Next, we will need some terminology.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
+If 
+\begin_inset Formula $W$
+\end_inset
+
+ is a subspace of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to every vector in 
+\begin_inset Formula $W$
+\end_inset
+
+, then we say 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is 
+\series bold
+orthogonal
+\series default
+ to 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ The set of all vectors in 
+\begin_inset Formula $V$
+\end_inset
+
+ orthogonal to 
+\begin_inset Formula $W$
+\end_inset
+
+ is called the 
+\series bold
+orthogonal complement
+\series default
+ of 
+\begin_inset Formula $W$
+\end_inset
+
+ and is denoted by 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ (read 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $W$
+\end_inset
+
+ perp
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Can you show that 
 \begin_inset Formula $W^{\perp}$
 \end_inset
 
@@ -155,15 +707,158 @@ THM:
 \begin_inset Formula $V$
 \end_inset
 
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:is-a-vector-space"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Enumerate
-Let 
+\begin_layout Standard
+Just as 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}-\text{proj}_{\mathbf{w}}\mathbf{v}$
+\end_inset
+
+ are orthogonal for any vectors 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+ (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we can now show that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}-\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+ are orthogonal for any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and subspace 
 \begin_inset Formula $W$
 \end_inset
 
- be a subspace of inner product space 
+ of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{p}\}$
+\end_inset
+
+ be an 
+\shape italic
+orthogonal basis
+\shape default
+ of 
+\begin_inset Formula $W$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\langle\mathbf{v}-\text{proj}_{W}\mathbf{v},\mathbf{b}_{j}\rangle & =\left\langle \mathbf{v}-\left(\text{proj}_{\mathbf{b}_{1}}\mathbf{v}+\text{proj}_{\mathbf{b}_{p}}\mathbf{v}+\cdots+\text{proj}_{\mathbf{b}_{p}}\mathbf{v}\right),\mathbf{b}_{j}\right\rangle \\
+ & =\left\langle \mathbf{v},\mathbf{b}_{j}\right\rangle -\left\langle \text{proj}_{\mathbf{b}_{1}}\mathbf{v},\mathbf{b}_{j}\right\rangle -\left\langle \text{proj}_{\mathbf{b}_{p}}\mathbf{v},\mathbf{b}_{j}\right\rangle -\cdots-\left\langle \text{proj}_{\mathbf{b}_{p}}\mathbf{v},\mathbf{b}_{j}\right\rangle \\
+ & =\left\langle \mathbf{v},\mathbf{b}_{j}\right\rangle -\left\langle \text{proj}_{\mathbf{b}_{j}}\mathbf{v},\mathbf{b}_{j}\right\rangle \\
+ & =\left\langle \mathbf{v},\mathbf{b}_{j}\right\rangle -\left\langle \frac{\langle\mathbf{v},\mathbf{b}_{j}\rangle}{\langle\mathbf{b}_{j},\mathbf{b}_{j}\rangle}\mathbf{b}_{j},\mathbf{b}_{j}\right\rangle \\
+ & =\left\langle \mathbf{v},\mathbf{b}_{j}\right\rangle -\frac{\langle\mathbf{v},\mathbf{b}_{j}\rangle}{\langle\mathbf{b}_{j},\mathbf{b}_{j}\rangle}\left\langle \mathbf{b}_{j},\mathbf{b}_{j}\right\rangle \\
+ & =0
+\end{align*}
+
+\end_inset
+
+for each 
+\begin_inset Formula $j=1,2,\ldots,p$
+\end_inset
+
+, so 
+\begin_inset Formula $\mathbf{v}-\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+ is orthogonal to every element of a basis of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ This is enough to show that 
+\begin_inset Formula $\mathbf{v}-\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+ is orthogonal to every vector in 
+\begin_inset Formula $W$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathbf{v}-\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ Can you provide the details? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonal-decomposition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This leads to the following theorem.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+\shape up
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:Orthogonal-Decomposition"
+
+\end_inset
+
+[Orthogonal Decomposition]
+\series default
+\shape default
+ Let 
+\begin_inset Formula $W$
+\end_inset
+
+ be a subspace of an inner product space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -189,57 +884,480 @@ where
 \end_inset
 
 .
- [see 1 on 3/31/21]
 \end_layout
 
-\begin_layout Enumerate
-Let 
-\begin_inset Formula $W$
+\begin_layout Standard
+\noindent
+Existence: we have just shown that 
+\begin_inset Formula $\mathbf{v}-\text{proj}_{W}\mathbf{v}$
 \end_inset
 
- be a subspace of inner product space 
-\begin_inset Formula $V$
-\end_inset
-
-, 
-\begin_inset Formula $\mathbf{v}\in V$
-\end_inset
-
-, and 
-\begin_inset Formula $\mathbf{w}=\text{proj}_{W}\mathbf{v}$
+ is in 
+\begin_inset Formula $W^{\perp}$
 \end_inset
 
 .
- Then for eah 
-\begin_inset Formula $\mathbf{x}\in W$
+ Since 
+\begin_inset Formula $\text{proj}_{W}\mathbf{v}$
 \end_inset
 
-, 
-\begin_inset Formula $\mathbf{x}\neq\mathbf{w}$
+ is in 
+\begin_inset Formula $W$
 \end_inset
 
-,
+ and 
 \begin_inset Formula 
 \[
-||\mathbf{w}-\mathbf{v}||<||\mathbf{x}-\mathbf{v}|.
+\mathbf{v}=\text{proj}_{W}\mathbf{v}+(\mathbf{v}-\text{proj}_{W}\mathbf{v})
 \]
 
 \end_inset
 
+we have existence.
+\end_layout
 
-\begin_inset Formula $\mathbf{w}$
+\begin_layout Standard
+\noindent
+Uniqueness: suppose 
+\begin_inset Formula $\mathbf{v}=\hat{\mathbf{w}}+\hat{\mathbf{w}}^{\perp}$
 \end_inset
 
- is the closest point in 
+ for some (possibly other) 
+\begin_inset Formula $\hat{\mathbf{w}}$
+\end_inset
+
+ in 
 \begin_inset Formula $W$
 \end_inset
 
- to 
-\begin_inset Formula $\mathbf{v}$
+ and 
+\begin_inset Formula $\hat{\mathbf{w}}^{\perp}$
+\end_inset
+
+ in 
+\begin_inset Formula $W^{\perp}$
 \end_inset
 
 .
- [see 2 on 3/31/21]
+ Then, of course, 
+\begin_inset Formula $\mathbf{w}+\mathbf{w}^{\perp}=\hat{\mathbf{w}}+\hat{\mathbf{w}}^{\perp}$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{w}-\hat{\mathbf{w}}=\hat{\mathbf{w}}^{\perp}-\mathbf{w}^{\perp}$
+\end_inset
+
+.
+ Noting that 
+\begin_inset Formula $\mathbf{w}-\hat{\mathbf{w}}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\mathbf{w}}^{\perp}-\mathbf{w}^{\perp}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\langle\mathbf{w}-\hat{\mathbf{w}},\hat{\mathbf{w}}^{\perp}-\mathbf{w}^{\perp}\rangle=0$
+\end_inset
+
+.
+ Setting 
+\begin_inset Formula $\mathbf{x}=\mathbf{w}-\hat{\mathbf{w}}=\hat{\mathbf{w}}^{\perp}-\mathbf{w}^{\perp}$
+\end_inset
+
+, this means
+\begin_inset Formula 
+\[
+\langle\mathbf{x},\mathbf{x}\rangle=\langle\mathbf{w}-\hat{\mathbf{w}},\hat{\mathbf{w}}^{\perp}-\mathbf{w}^{\perp}\rangle=0,
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{x}=\mathbf{0}$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathbf{w}=\hat{\mathbf{w}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\mathbf{w}}^{\perp}=\mathbf{w}^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $\mathbf{v}=\text{proj}_{W}\mathbf{v}+(\mathbf{v}-\text{proj}_{W}\mathbf{v})$
+\end_inset
+
+ is the unique decomposition of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ into the sum of two vectors, one in 
+\begin_inset Formula $W$
+\end_inset
+
+ and one in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ Finally, we are ready to answer our original question.
+ In the form of a theorem, we have the following.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:best-approximation"
+
+\end_inset
+
+
+\series bold
+\shape up
+[Best Approximation]
+\series default
+\shape default
+ If 
+\begin_inset Formula $W$
+\end_inset
+
+ is a subspace of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{w}=\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+ is the closest point to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+dfasfdfad
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Provide this proof.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:best-approximation-linear-system"
+
+\end_inset
+
+
+\series bold
+\shape up
+[Best Approximation for a Linear System]
+\series default
+\shape default
+ Given any 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\mathbf{v}}=\text{proj}_{W}\mathbf{b}$
+\end_inset
+
+ is the best approximation to a solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+, where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Can you use theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to prove theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:best-approximation-corollary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Finally, we can return to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:best-approximation-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and provide an answer.
+ We need to project 
+\begin_inset Formula 
+\[
+\mathbf{b}=\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]
+\]
+
+\end_inset
+
+onto the column space of 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cc}
+1 & -3\\
+4 & 9\\
+-9 & 6
+\end{array}\right].
+\]
+
+\end_inset
+
+This requires an orthogonal basis of the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Using Gram-Schmidt orthogonalization, let 
+\begin_inset Formula 
+\[
+\mathbf{w}_{1}=M_{:,2}=\left[\begin{array}{c}
+-3\\
+9\\
+6
+\end{array}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+\mathbf{w}_{2} & =M_{:,1}-\text{proj}_{\mathbf{w}_{1}}M_{:,1}=\left[\begin{array}{c}
+1\\
+4\\
+-9
+\end{array}\right]-\frac{\langle M_{:,1},\mathbf{w}_{1}\rangle}{\langle\mathbf{w}_{1},\mathbf{w}_{1}\rangle}\left[\begin{array}{c}
+-3\\
+9\\
+6
+\end{array}\right]=\left[\begin{array}{c}
+1\\
+4\\
+-9
+\end{array}\right]-\frac{-1}{6}\left[\begin{array}{c}
+-3\\
+9\\
+6
+\end{array}\right]\\
+ & =\frac{1}{2}\left[\begin{array}{c}
+1\\
+11\\
+-16
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+Taking (scalar multiples of 
+\begin_inset Formula $\mathbf{w}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}_{2}$
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\{\mathbf{b}_{1},\mathbf{b}_{2}\}=\left\{ \left[\begin{array}{c}
+-1\\
+3\\
+2
+\end{array}\right],\left[\begin{array}{c}
+1\\
+11\\
+-16
+\end{array}\right]\right\} 
+\]
+
+\end_inset
+
+as the orthogonal basis of the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+, the projection of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ onto this subspace is
+\begin_inset Formula 
+\begin{align*}
+\text{proj}_{\mathbf{b}_{1}}\mathbf{b}+\text{proj}_{\mathbf{b}_{2}}\mathbf{b} & =\frac{\langle\mathbf{b},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}+\frac{\langle\mathbf{b},\mathbf{b}_{2}\rangle}{\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle}\mathbf{b}_{2}=\frac{3}{2}\mathbf{b}_{1}-\frac{7}{54}\mathbf{b}_{2}\\
+ & =\frac{1}{27}\left[\begin{array}{c}
+-44\\
+83\\
+137
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence 
+\begin_inset Formula 
+\[
+\frac{1}{27}\left[\begin{array}{c}
+-44\\
+83\\
+137
+\end{array}\right]\approx\left[\begin{array}{c}
+-1.63\\
+3.07\\
+5.07
+\end{array}\right]
+\]
+
+\end_inset
+
+is the closest vector to
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]
+\]
+
+\end_inset
+
+in the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ The distance between these two vectors happens to be
+\begin_inset Formula 
+\begin{align*}
+\left\Vert \frac{1}{27}\left[\begin{array}{c}
+-44\\
+83\\
+137
+\end{array}\right]-\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]\right\Vert  & =\frac{1}{27}\left\Vert \left[\begin{array}{c}
+-44\\
+83\\
+137
+\end{array}\right]-\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]\right\Vert =\frac{1}{27}\left\Vert \left[\begin{array}{c}
+-52\\
+78\\
+130
+\end{array}\right]\right\Vert \\
+ & =\frac{26}{27}\sqrt{38}\approx5.936
+\end{align*}
+
+\end_inset
+
+and there is no vector in the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+ closer to 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -296,7 +1414,451 @@ Answers
 \end_layout
 
 \begin_layout Description
-f
+minimum
+\begin_inset space ~
+\end_inset
+
+integer
+\begin_inset space ~
+\end_inset
+
+solution 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:minimum-integer-solution"
+
+\end_inset
+
+We know that 
+\begin_inset Formula $|(54x+30y)-17|$
+\end_inset
+
+ cannot equal zero, so the best we can hope for is to find integers 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ so that 
+\begin_inset Formula $|(54x+30y)-17|=1$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $(54x+30y)-17=1$
+\end_inset
+
+ or 
+\begin_inset Formula $(54x+30y)-17=-1$
+\end_inset
+
+.
+ Adding 17 to both sides of these equations, we seek integer solutions of
+ 
+\begin_inset Formula $54x+30y=18$
+\end_inset
+
+ or 
+\begin_inset Formula $54x+30y=16$
+\end_inset
+
+.
+ Since 16 is not a multiple of 6, there is no hope of finding integer solutions
+ of 
+\begin_inset Formula $54x+30y=16$
+\end_inset
+
+.
+ Since 18 is a multiple of 6, perhaps there are integer solutions of 
+\begin_inset Formula $54x+30y=18$
+\end_inset
+
+.
+ Dividing both sides of the equation by 6, 
+\begin_inset Formula $9x+5y=3$
+\end_inset
+
+ or 
+\begin_inset Formula $9x=3-5y$
+\end_inset
+
+.
+ As long as 
+\begin_inset Formula $3-5y$
+\end_inset
+
+ is a multiple of 9, we will have a solution.
+ For example, 
+\begin_inset Formula $y=-3$
+\end_inset
+
+ makes 
+\begin_inset Formula $3-5y=18$
+\end_inset
+
+ (and 
+\begin_inset Formula $x=2$
+\end_inset
+
+ makes 
+\begin_inset Formula $9x=18$
+\end_inset
+
+), so one solution is 
+\begin_inset Formula $(x,y)=(2,-3)$
+\end_inset
+
+.
+ Sure enough, 
+\begin_inset Formula $|(54\cdot2+30\cdot-3)-17|=|108-90-17|=1$
+\end_inset
+
+.
+ There are others.
+\end_layout
+
+\begin_layout Description
+inconsistent
+\begin_inset space ~
+\end_inset
+
+system 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inconsistent-system"
+
+\end_inset
+
+The augmented matrix for the system reduces as follows.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & -3 & 8\\
+4 & 9 & 5\\
+-9 & 6 & 7
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & -3 & 8\\
+0 & 21 & -27\\
+0 & -21 & 79
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & -3 & 8\\
+0 & 21 & -27\\
+0 & 0 & 52
+\end{array}\right]
+\]
+
+\end_inset
+
+An echelon form has a pivot in the rightmost column (the third row represents
+ the equation 
+\begin_inset Formula $0=52$
+\end_inset
+
+), so the system is inconsistent.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+subspace 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:is-a-vector-space"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ be in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ be scalar.
+ (By definition, 
+\begin_inset Formula $\langle\mathbf{u},\mathbf{w}\rangle=\langle\mathbf{v},\mathbf{w}\rangle=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ in 
+\begin_inset Formula $W$
+\end_inset
+
+).
+ Then for any 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ in 
+\begin_inset Formula $W$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\langle\mathbf{0},\mathbf{w}\rangle=\langle0\mathbf{w},\mathbf{w}\rangle=0\langle\mathbf{w},\mathbf{w}\rangle=0
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\langle\mathbf{u}+\mathbf{v},\mathbf{w}\rangle=\langle\mathbf{u},\mathbf{w}\rangle+\langle\mathbf{v},\mathbf{w}\rangle=0
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\langle c\mathbf{u},\mathbf{w}\rangle=c\langle\mathbf{u},\mathbf{w}\rangle=c\cdot0=0
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{u}+\mathbf{v}$
+\end_inset
+
+, and 
+\begin_inset Formula $c\mathbf{u}$
+\end_inset
+
+ are all in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $V$
+\end_inset
+
+, this is sufficient to show that 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ is a subspace.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\mathbf{v}-\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+is
+\begin_inset space ~
+\end_inset
+
+in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonal-decomposition"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to every element of 
+\shape italic
+any
+\shape default
+ basis 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{p}\}$
+\end_inset
+
+ of a subspace 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Then for any scalars 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{p}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\langle\mathbf{v},c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{p}\mathbf{b}_{p}\rangle & =\langle\mathbf{v},c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{p}\mathbf{b}_{p}\rangle\\
+ & =\langle\mathbf{v},c_{1}\mathbf{b}_{1}\rangle+\langle\mathbf{v},c_{2}\mathbf{b}_{2}\rangle+\cdots+\langle\mathbf{v},c_{p}\mathbf{b}_{p}\rangle\\
+ & =c_{1}\langle\mathbf{v},\mathbf{b}_{1}\rangle+c_{2}\langle\mathbf{v},\mathbf{b}_{2}\rangle+\cdots+c_{p}\langle\mathbf{v},\mathbf{b}_{p}\rangle\\
+ & =0.
+\end{align*}
+
+\end_inset
+
+Since every vector in 
+\begin_inset Formula $W$
+\end_inset
+
+ has the form 
+\begin_inset Formula $c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{p}$
+\end_inset
+
+, this shows 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to every vector in 
+\begin_inset Formula $W$
+\end_inset
+
+ and therefore is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+REMARK: Note that if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to every element of 
+\shape italic
+any
+\shape default
+ basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ (since 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to 
+\shape italic
+every
+\shape default
+ vector in 
+\begin_inset Formula $W$
+\end_inset
+
+—including basis vectors).
+ Altogether we have that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to every element of a basis of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+theorem
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+implies
+\begin_inset space ~
+\end_inset
+
+corollary
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:best-approximation-corollary"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

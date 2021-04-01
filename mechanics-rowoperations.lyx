@@ -1174,7 +1174,11 @@ equation An (ordered) list of values
 \begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
 \end_inset
 
-, respectively, in the equation make the equation true.
+, respectively, in the linear equation 
+\begin_inset Formula $c_{1}v_{1}+c_{2}v_{2}+\cdots+c_{n}v_{n}=b$
+\end_inset
+
+ make the equation true.
 \end_layout
 
 \begin_layout Standard
@@ -1199,6 +1203,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations"
+
+\end_inset
+
 Represent the linear system as a matrix.
 \end_layout
 
@@ -1238,6 +1248,12 @@ v_{1} & + & v_{2} & + & v_{3} & = & 11
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-1"
+
+\end_inset
+
 Write the linear system associated with the matrix.
  Assume the variables of the system are 
 \begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
@@ -1281,6 +1297,12 @@ Write the linear system associated with the matrix.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-2"
+
+\end_inset
+
 The matrix for a linear system is given.
  Find one solution of the associated system.
  Assume the variables of the system are 
@@ -1337,6 +1359,12 @@ The matrix for a linear system is given.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-3"
+
+\end_inset
+
 A matrix representing a linear system is given.
  Explain why the system has no solution.
 \begin_inset Formula 
@@ -1353,6 +1381,12 @@ A matrix representing a linear system is given.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-4"
+
+\end_inset
+
 A matrix representing a linear system is given.
  Find one solution of the system, and explain why the system has infinitely
  many more solutions.
@@ -1371,11 +1405,24 @@ A matrix representing a linear system is given.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-5"
+
+\end_inset
+
 What elementary row operation will transform 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-6"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 1 & -4 & 4 & -9\\
 1 & 6 & -5 & 1\\
@@ -1395,6 +1442,13 @@ What elementary row operation will transform
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-7"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 -3 & 3 & 3 & -7\\
 4 & -3 & 3 & 6\\
@@ -1414,6 +1468,13 @@ What elementary row operation will transform
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-8"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 -5 & 3 & -2 & 7\\
 2 & -6 & 3 & -5\\
@@ -1433,6 +1494,13 @@ What elementary row operation will transform
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-9"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 5 & -4 & 8 & 2\\
 9 & 3 & -2 & -2\\
@@ -1452,6 +1520,13 @@ What elementary row operation will transform
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-10"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 2 & 6 & -1 & -8\\
 -1 & 1 & -6 & 4\\
@@ -1472,11 +1547,24 @@ What elementary row operation will transform
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-11"
+
+\end_inset
+
 Perform the row operation on the matrix.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-12"
+
+\end_inset
+
+
 \begin_inset Formula $A=\left[\begin{array}{ccc}
 3 & -8 & -9\\
 -9 & 5 & 2\\
@@ -1493,6 +1581,13 @@ Perform the row operation on the matrix.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-13"
+
+\end_inset
+
+
 \begin_inset Formula $B=\left[\begin{array}{cccc}
 3 & -1 & 1 & -7\\
 1 & -2 & 6 & -4
@@ -1507,6 +1602,13 @@ Perform the row operation on the matrix.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-14"
+
+\end_inset
+
+
 \begin_inset Formula $C=\left[\begin{array}{cc}
 -6 & 2\\
 9 & 9\\
@@ -1523,6 +1625,13 @@ Perform the row operation on the matrix.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-15"
+
+\end_inset
+
+
 \begin_inset Formula $D=\left[\begin{array}{ccc}
 -9 & -9 & -6\\
 5 & 6 & -2\\
@@ -1538,6 +1647,13 @@ Perform the row operation on the matrix.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-16"
+
+\end_inset
+
+
 \begin_inset Formula $E=\left[\begin{array}{cc}
 -8 & 5\\
 -7 & -9\\
@@ -1553,6 +1669,13 @@ Perform the row operation on the matrix.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-17"
+
+\end_inset
+
+
 \begin_inset Formula $F=\left[\begin{array}{cccc}
 -5 & 1 & 9 & -6\\
 -3 & -5 & 1 & -1\\
@@ -1569,6 +1692,12 @@ Perform the row operation on the matrix.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-18"
+
+\end_inset
+
 The matrix 
 \begin_inset Formula $T$
 \end_inset
@@ -1583,6 +1712,13 @@ The matrix
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-19"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 -2 & 0 & 0\\
 0 & 1 & 0\\
@@ -1594,6 +1730,13 @@ The matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-20"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 1 & 0 & 0 & 0\\
 0 & 1 & 0 & 0\\
@@ -1606,6 +1749,13 @@ The matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-21"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & 0\\
 0 & 1 & 0\\
@@ -1617,6 +1767,13 @@ The matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-22"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 0 & 0 & 1\\
 0 & 1 & 0\\
@@ -1628,6 +1785,13 @@ The matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-23"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 1 & 0 & 0 & 0\\
 0 & 1 & 0 & 0\\
@@ -1640,6 +1804,13 @@ The matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-24"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & 0\\
 0 & 1 & 0\\
@@ -1652,12 +1823,25 @@ The matrix
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-25"
+
+\end_inset
+
 Carry out a single elementary row operation to secure a 1 in row 1, column
  1.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-26"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 10 & 1 & 7\\
 3 & -3 & -5
@@ -1668,6 +1852,13 @@ Carry out a single elementary row operation to secure a 1 in row 1, column
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-27"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 5 & 6 & -4\\
 2 & 3 & -2
@@ -1678,6 +1869,13 @@ Carry out a single elementary row operation to secure a 1 in row 1, column
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-28"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 -1 & 2 & 3\\
 -2 & 10 & -3
@@ -1689,12 +1887,25 @@ Carry out a single elementary row operation to secure a 1 in row 1, column
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-29"
+
+\end_inset
+
 Execute a single elementary row operation to secure a 0 in row 2, column
  1.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-30"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 10 & 2\\
 3 & -3 & -5
@@ -1705,6 +1916,13 @@ Execute a single elementary row operation to secure a 0 in row 2, column
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-31"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & -3\\
 2 & 3 & -2
@@ -1715,6 +1933,13 @@ Execute a single elementary row operation to secure a 0 in row 2, column
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-32"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & -2 & -3\\
 -2 & 10 & -3
@@ -1726,12 +1951,25 @@ Execute a single elementary row operation to secure a 0 in row 2, column
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-33"
+
+\end_inset
+
 Find the first row of the product by computing an appropriate linear combination
  of the rows of the righthand matrix.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-34"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 -2 & 1\\
 7 & -5
@@ -1745,6 +1983,13 @@ Find the first row of the product by computing an appropriate linear combination
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-35"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 5 & -2 & 4\\
 7 & -5 & -8
@@ -1760,6 +2005,12 @@ Find the first row of the product by computing an appropriate linear combination
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-36"
+
+\end_inset
+
 If the third row of 
 \begin_inset Formula $A$
 \end_inset
@@ -1776,6 +2027,12 @@ If the third row of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-37"
+
+\end_inset
+
 If the first and second rows of 
 \begin_inset Formula $A$
 \end_inset

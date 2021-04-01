@@ -428,6 +428,32 @@ TODO: Insert definition of matrix equality
 
 \end_inset
 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: shorten every 
+\begin_inset Quotes eld
+\end_inset
+
+denoted by
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+denoted
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -889,6 +915,16 @@ filename "application-power-method.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "theory-det-eig-area.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-approximation.lyx"
 
 \end_inset
 
