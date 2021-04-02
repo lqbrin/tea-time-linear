@@ -157,7 +157,8 @@ no solution
 no real number solution
 \shape default
 .
- All three equations have complex number solutions! 
+ All three equations have complex number solutions.
+ 
 \begin_inset Formula $\sqrt{-1}$
 \end_inset
 
@@ -202,7 +203,7 @@ no integer solution
 \begin_inset Formula $6$
 \end_inset
 
- from the left hand side:
+ from the left-hand side:
 \begin_inset Formula 
 \[
 6(9x+5y)=17
@@ -365,8 +366,7 @@ for all integer pairs
 \end_inset
 
 , but the point is made.
- Even when an equation has no solution, it may have a best approximation
- (to a solution).
+ Even when an equation has no solution, it may have a best approximation.
 \end_layout
 
 \begin_layout Standard
@@ -379,7 +379,7 @@ M\mathbf{v}=\mathbf{b}
 
 \end_inset
 
-has a best approximation (to a solution) when inconsistent.
+has a best approximation when inconsistent.
  That is, can we find 
 \begin_inset Formula $\hat{\mathbf{v}}$
 \end_inset
@@ -387,13 +387,13 @@ has a best approximation (to a solution) when inconsistent.
  such that
 \begin_inset Formula 
 \[
-||M\hat{\mathbf{v}}-\mathbf{b}||\leq||M\mathbf{v}-\mathbf{b}||
+\left\Vert M\hat{\mathbf{v}}-\mathbf{b}\right\Vert <\left\Vert M\mathbf{v}-\mathbf{b}\right\Vert 
 \]
 
 \end_inset
 
 for all 
-\begin_inset Formula $\mathbf{v}$
+\begin_inset Formula $\mathbf{v}\neq\hat{\mathbf{v}}$
 \end_inset
 
 ? For example,
@@ -682,7 +682,7 @@ orthogonal complement
 \begin_inset Formula $W$
 \end_inset
 
- and is denoted by 
+ and is denoted 
 \begin_inset Formula $W^{\perp}$
 \end_inset
 
@@ -1063,18 +1063,108 @@ name "thm:best-approximation"
 \end_layout
 
 \begin_layout Standard
-dfasfdfad
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Provide this proof.
- 
-\end_layout
+Justification of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+ relies on a generalization of the Pythagorean theorem.
+ Can you prove that if 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
 
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are orthogonal (vectors of an inner product space), then 
+\begin_inset Formula $\left\Vert \mathbf{u}+\mathbf{v}\right\Vert ^{2}=\left\Vert \mathbf{u}\right\Vert ^{2}+\left\Vert \mathbf{v}\right\Vert ^{2}$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:Pythagorean-theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Now let 
+\begin_inset Formula $\hat{\mathbf{w}}$
+\end_inset
+
+ be any vector in 
+\begin_inset Formula $W$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\mathbf{w}}\neq\mathbf{w}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\mathbf{v}-\mathbf{w}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}-\hat{\mathbf{w}}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+, they are orthogonal, and the Pythagorean applies.
+ But 
+\begin_inset Formula $(\mathbf{v}-\mathbf{w})+(\mathbf{w}-\hat{\mathbf{w}})=\mathbf{v}-\hat{\mathbf{w}}$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\[
+\left\Vert \mathbf{v}-\hat{\mathbf{w}}\right\Vert ^{2}=\left\Vert \mathbf{v}-\mathbf{w}\right\Vert ^{2}+\left\Vert \mathbf{w}-\hat{\mathbf{w}}\right\Vert ^{2}.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\hat{\mathbf{w}}\neq\mathbf{w}$
+\end_inset
+
+, 
+\begin_inset Formula $\left\Vert \mathbf{w}-\hat{\mathbf{w}}\right\Vert ^{2}>0$
+\end_inset
+
+ and therfore 
+\begin_inset Formula $\left\Vert \mathbf{v}-\hat{\mathbf{w}}\right\Vert ^{2}>\left\Vert \mathbf{v}-\mathbf{w}\right\Vert ^{2}$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ is the closest point to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $W$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Corollary
@@ -1358,6 +1448,82 @@ and there is no vector in the column space of
 \end_inset
 
 .
+ See figure 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Best-Approximation"
+
+\end_inset
+
+Best Approximation of a Solution of 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & -3\\
+4 & 9\\
+-9 & 6
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]=\left[\begin{array}{c}
+8\\
+5\\
+7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/application-approximation-03.png
+	lyxscale 25
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Best-Approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1365,7 +1531,229 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-s
+best
+\begin_inset space ~
+\end_inset
+
+approximation of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is a vector 
+\begin_inset Formula $\hat{\mathbf{v}}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\left\Vert M\hat{\mathbf{v}}-\mathbf{b}\right\Vert <\left\Vert M\mathbf{v}-\mathbf{b}\right\Vert 
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $\mathbf{v}\neq\hat{\mathbf{v}}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix, 
+\begin_inset Formula $\mathbf{v},\hat{\mathbf{v}}$
+\end_inset
+
+ are in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Description
+best
+\begin_inset space ~
+\end_inset
+
+approximation
+\begin_inset space ~
+\end_inset
+
+theorem see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+orthogonal a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to a subspace 
+\begin_inset Formula $W$
+\end_inset
+
+ if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to every vector in 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to 
+\begin_inset Formula $W$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to every vector in a basis of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+(orthogonal)
+\begin_inset space ~
+\end_inset
+
+projection of a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ onto a subspace 
+\begin_inset Formula $W$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+, is defined by
+\begin_inset Formula 
+\[
+\text{proj}_{W}\mathbf{v}=\text{proj}_{\mathbf{b}_{1}}\mathbf{v}+\text{proj}_{\mathbf{b}_{2}}\mathbf{v}+\cdots+\text{proj}_{\mathbf{b}_{p}}\mathbf{v}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+orthogonal
+\begin_inset space ~
+\end_inset
+
+complement of a subspace 
+\begin_inset Formula $W$
+\end_inset
+
+ is the set of all vectors orthogonal to 
+\begin_inset Formula $W$
+\end_inset
+
+, denoted 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ For any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}-\text{proj}_{W}\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+orthogonal
+\begin_inset space ~
+\end_inset
+
+decomposition writing 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a sum 
+\begin_inset Formula $\mathbf{w}+\mathbf{w}^{\perp}$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}^{\perp}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ See theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Orthogonal-Decomposition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1815,6 +2203,42 @@ every
 
 \end_deeper
 \begin_layout Description
+Pythagorean
+\begin_inset space ~
+\end_inset
+
+theorem 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:Pythagorean-theorem"
+
+\end_inset
+
+Because 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are orthogonal, 
+\begin_inset Formula $\langle\mathbf{u},\mathbf{v}\rangle=0$
+\end_inset
+
+ and therefore
+\begin_inset Formula 
+\begin{align*}
+\left\Vert \mathbf{u}+\mathbf{v}\right\Vert ^{2} & =\langle\mathbf{u}+\mathbf{v},\mathbf{u}+\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{u}\rangle+2\langle\mathbf{u},\mathbf{v}\rangle+\langle\mathbf{v},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle\\
+ & =\left\Vert \mathbf{u}\right\Vert ^{2}+\left\Vert \mathbf{v}\right\Vert ^{2}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 theorem
 \begin_inset space ~
 \end_inset
@@ -1858,7 +2282,43 @@ name "ans:best-approximation-corollary"
 
 \end_inset
 
+Corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+ is the special case of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ where 
+\begin_inset Formula $V=\mathbb{R}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ (and 
+\begin_inset Formula $W$
+\end_inset
+
+ is the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+).
 \end_layout
 
 \end_body

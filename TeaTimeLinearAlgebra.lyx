@@ -454,6 +454,18 @@ denoted
 
 \end_inset
 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Replace double vertical bars by 
+\backslash
+Vert 
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -858,22 +870,7 @@ status open
 
 \begin_layout Plain Layout
 
-% QR Factorization
-\end_layout
-
-\begin_layout Plain Layout
-
-% Cramer's Rule
-\end_layout
-
-\begin_layout Plain Layout
-
 % Fractals (rep-tiles)
-\end_layout
-
-\begin_layout Plain Layout
-
-% Approximation
 \end_layout
 
 \begin_layout Plain Layout
@@ -884,6 +881,16 @@ status open
 \begin_layout Plain Layout
 
 % Isometries of the Square/Cube (preview of abstract algebra)?
+\end_layout
+
+\begin_layout Plain Layout
+
+% QR Factorization
+\end_layout
+
+\begin_layout Plain Layout
+
+% Cramer's Rule
 \end_layout
 
 \end_inset
