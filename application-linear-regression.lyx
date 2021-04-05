@@ -104,11 +104,17 @@ Linear Regression []
 \end_layout
 
 \begin_layout Standard
-January driving data for a 2010 VW Jetta Sportwagen TDI appears in the chart
- below.
- What is this car's diesel mileage (in miles per gallon) in January? This
- particular car did the majority of this driving in New England (average
- temperature around 30
+Perhaps the most ubiquitous application of linear algebra outside the boundaries
+ of mathematics is linear regression, used to produce models of phenomena
+ in innumerable fields including meteorology, engineering, geology, business,
+ physics, and many more.
+\end_layout
+
+\begin_layout Standard
+February driving data for a 2010 VW Jetta Sportwagen TDI appears in the
+ chart below.
+ This car was driven in New England, where the average temperature in February
+ is around 30
 \begin_inset Formula $^{\circ}$
 \end_inset
 
@@ -116,13 +122,94 @@ F, 0
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-C).
+C.
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename figures/Diesel-Mileage.pdf
+	filename figures/dieselChart.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The graphs in figure 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:diesel-basic-graphs"
+
+\end_inset
+
+Graphs of Diesel Data
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Graphics
+	filename figures/dieselConsumption.pdf
+	scale 75
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/dieselMileageVsSpeed.pdf
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:diesel-basic-graphs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrate two widely understood phenomena about combustion engine vehicles—mil
+es driven and gallons consumed are nearly directly proportional, and highway
+ driving uses less fuel per mile than city driving.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Graphics
+	filename figures/dieselPrice.pdf
+	scale 75
 
 \end_inset
 
