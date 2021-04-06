@@ -105,39 +105,34 @@ Linear Regression []
 
 \begin_layout Standard
 Perhaps the most ubiquitous application of linear algebra outside the boundaries
- of mathematics is linear regression, used to produce models of phenomena
- in innumerable fields including meteorology, engineering, geology, business,
- physics, and many more.
-\end_layout
-
-\begin_layout Standard
-February driving data for a 2010 VW Jetta Sportwagen TDI appears in the
- chart below.
- This car was driven in New England, where the average temperature in February
- is around 30
-\begin_inset Formula $^{\circ}$
-\end_inset
-
-F, 0
-\begin_inset Formula $^{\circ}$
-\end_inset
-
-C.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figures/dieselChart.pdf
+ of mathematics is linear regression, used to test hypotheses and produce
+ models of phenomena in innumerable fields including meteorology, criminology,
+ economics, materials science, archaeology, enginering, and psychology.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Regression1,Regression2,Regression3,Regression4,Regression5,Regression6,Regression7"
+literal "false"
 
 \end_inset
 
-
+ Anywhere two or more quantities are suspected of correlation, regression
+ analysis can be performed.
+ In its simplest form, two quantities are suspected of having a linear relations
+hip.
+ Data are collected on the two quantities, and a model (linear function)
+ predicting one quantity based on the other is produced and analyzed.
+ 
 \end_layout
 
 \begin_layout Standard
-\noindent
-The graphs in figure 
+For example, it is well known that the distance a gas or diesel powered
+ vehicle is driven (in miles, for example) is more or less directly proportional
+ to the volume of fuel (in gallons, for example) consumed.
+ Also understood is that highway driving generally uses less fuel per mile
+ than city driving.
+ This is why statistics on new cars will include both a highway and a city
+ mileage estimate.
+ The graphs in figure 
 \begin_inset Float figure
 wide false
 sideways false
@@ -199,14 +194,297 @@ noprefix "false"
 
 \end_inset
 
- illustrate two widely understood phenomena about combustion engine vehicles—mil
-es driven and gallons consumed are nearly directly proportional, and highway
- driving uses less fuel per mile than city driving.
+ were produced from the February driving data for a 2010 VW Jetta Sportwagen
+ TDI in the chart below.
+ Only February data are considered because it is also known that ambient
+ temperature affects a combustion engine's efficiency.
+ This car was driven in New England, where the average temperature in February
+ is around 30
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+F, 0
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C.
  
 \end_layout
 
 \begin_layout Standard
+The graphs confirm the claims that driving longer distances requires more
+ fuel and that highway driving uses fuel more efficiently than city driving
+ (as average speed increases so does mileage).
+ When trends like these are observed, linear regression provides a way to
+ quantify the relationship between the variables in the form of a function.
+ This function can then be used to predict one quantity from the other.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/dieselChart.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's say the owner of this vehicle is planning a trip from New Haven, CT
+ to Augusta, ME (approximately 600-miles round trip) next February and is
+ interested in how much fuel will be used.
+ Perhaps the simplest way to estimate is to sum the elapsed miles, sum the
+ gallons, and divide.
+ This gives an average of about 
+\begin_inset Formula $0.0286996$
+\end_inset
+
+ gallons per mile.
+ A 600-mile trip at this rate of consumption would require 
+\begin_inset Formula $0.0286996\cdot600=17.21976$
+\end_inset
+
+ gallons of diesel.
+ 
+\end_layout
+
+\begin_layout Standard
+For this application, that is probably good enough.
+ However, we can do (slightly) better using linear regression.
+ We know that fuel consumed is (roughly) directly proportional to miles
+ driven, so they are (approximately) related by a function of the form 
+\begin_inset Formula $y=kx$
+\end_inset
+
+.
+ Either variable can represent either quantity, but since we are interested
+ in predicting fuel required given distance driven, we are looking for a
+ function of the form 
+\begin_inset Formula $f(x)=kx$
+\end_inset
+
+ where 
+\begin_inset Formula $x=\text{distance driven}$
+\end_inset
+
+ and 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is the fuel required.
+ The estimate above produces the model 
+\begin_inset Formula $f(x)=0.0286996x$
+\end_inset
+
+, but what is the best value for 
+\begin_inset Formula $k$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+It depends on how you define 
+\begin_inset Quotes eld
+\end_inset
+
+best value
+\begin_inset Quotes erd
+\end_inset
+
+, but one reasonable definition is to minimize the sum of the squared errors,
+ where an error, also known as a residual, is the difference between an
+ observed response and the modeled response to the same input.
+ For example, 
+\begin_inset Formula $12.956$
+\end_inset
+
+ is the observed response to the input 
+\begin_inset Formula $394$
+\end_inset
+
+ (observed on 02/17/13).
+ The modeled response, using 
+\begin_inset Formula $f(x)=0.0286996x$
+\end_inset
+
+, is 
+\begin_inset Formula $f(394)=0.0286996\cdot394\approx11.308$
+\end_inset
+
+ gallons, however.
+ The error, or residual, for this observation is therefore 
+\begin_inset Formula $11.308-12.956$
+\end_inset
+
+ or 
+\begin_inset Formula $-1.648$
+\end_inset
+
+ gallons.
+ The squared error is 
+\begin_inset Formula $(-1.648)^{2}\approx2.716$
+\end_inset
+
+.
+ A similar squared error can be calculated for each observation.
+ The sum of the squared errors is, accurate to 5 decimal places, 
+\begin_inset Formula $9.30835$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+As a linear algebra problem, finding the best value of 
+\begin_inset Formula $k$
+\end_inset
+
+ in this sense amounts to finding the best approximation (see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{c}
+450\\
+685\\
+394\\
+\vdots\\
+441
+\end{array}\right],\quad\mathbf{v}=\left[\begin{array}{c}
+k\end{array}\right],\quad\mathbf{b}=\left[\begin{array}{c}
+13.25\\
+18.101\\
+12.956\\
+\vdots\\
+13.003
+\end{array}\right]
+\]
+
+\end_inset
+
+since 
+\begin_inset Formula 
+\begin{align*}
+\left\Vert M\mathbf{v}-\mathbf{b}\right\Vert  & =\left\Vert \begin{array}{c}
+450k-13.25\\
+685k-18.101\\
+394k-12.956\\
+\vdots\\
+441k-13.003
+\end{array}\right\Vert \\
+ & =\sqrt{(450k-13.25)^{2}+\cdots+(441k-13.003)^{2}},
+\end{align*}
+
+\end_inset
+
+the square root of the sum of the squared errors.
+ And 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ tells us the best approximation is the projection of 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ onto the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $W$
+\end_inset
+
+ be the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\text{proj}_{W}\mathbf{b} & =\text{proj}_{M_{:,1}}\mathbf{b}=\frac{\mathbf{b}\bcdot M_{:,1}}{M_{:,1}\bcdot M_{:,1}}M_{:,1}=\frac{74639.689}{2619895}\\
+ & \approx0.0284896M_{:,1}
+\end{align*}
+
+\end_inset
+
+so the best value of 
+\begin_inset Formula $k$
+\end_inset
+
+ is 
+\begin_inset Formula $0.0284896$
+\end_inset
+
+ (giving about 
+\begin_inset Formula $17.09$
+\end_inset
+
+ gallons for a 600-mile trip).
+ The sum of the squared errors for the model 
+\begin_inset Formula $f(x)=0.0284896x$
+\end_inset
+
+ is 
+\begin_inset Formula $\left\Vert M\left[\begin{array}{c}
+0.0284896\end{array}\right]-\mathbf{b}\right\Vert ^{2}\approx9.19278$
+\end_inset
+
+—slightly lower than the 
+\begin_inset Formula $9.30835$
+\end_inset
+
+ we got from the model 
+\begin_inset Formula $f(x)=0.0286996x$
+\end_inset
+
+.
+ Plotting the model on the same axes as the data illustrates the closeness
+ of fit.
+\end_layout
+
+\begin_layout Standard
 \noindent
+\align center
+\begin_inset Graphics
+	filename figures/dieselConsumptionTrend.pdf
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The driving data provide other opportunities for linear regression.
+ Plotting the price of diesel over time produces the following graph.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
 \begin_inset Graphics
 	filename figures/dieselPrice.pdf
 	scale 75
@@ -216,12 +494,978 @@ es driven and gallons consumed are nearly directly proportional, and highway
 
 \end_layout
 
+\begin_layout Standard
+\noindent
+This graph shows an overall downward trend in price over the six year span
+ of the data.
+ Linear regression can be used to capture this overall trend.
+ If we are interested in an average decresase in price over this time span,
+ we could find the best fit model of the form 
+\begin_inset Formula $p(t)=p_{0}+rt$
+\end_inset
+
+, a linear model whose slope estimates the average annual drop in price.
+\end_layout
+
+\begin_layout Standard
+As a linear algebra problem, we wish to find the best approximation to 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ where 
+\begin_inset Formula $M$
+\end_inset
+
+ holds the inputs, 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ holds the responses, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ holds the unknown parameters 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ In this case, the input variable is time, which we will measure in days
+ since 1 February 2012:
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cc}
+1 & 7\\
+1 & 22\\
+1 & 382\\
+\vdots & \vdots\\
+1 & 2211
+\end{array}\right],\quad\mathbf{v}=\left[\begin{array}{c}
+p_{0}\\
+r
+\end{array}\right],\quad\mathbf{b}=\left[\begin{array}{c}
+4.36\\
+4.40\\
+4.36\\
+\vdots\\
+3.15
+\end{array}\right],
+\]
+
+\end_inset
+
+which has best approximation
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+p_{0}\\
+r
+\end{array}\right]\approx\left[\begin{array}{c}
+4.55591498045673\\
+-0.000845069933663
+\end{array}\right].
+\]
+
+\end_inset
+
+Since we measured time in days, 
+\begin_inset Formula $r$
+\end_inset
+
+ represents the average change in price per day, not year.
+ To get an annual change, we multiply 
+\begin_inset Formula $r$
+\end_inset
+
+ by 365 to get 
+\begin_inset Formula $-0.308$
+\end_inset
+
+, an average decrease of approximately 31 cents per year.
+\end_layout
+
+\begin_layout Standard
+The graph of diesel price over time does not indicate a steady decline,
+ however.
+ While the overall trend is downward, there is a fluctuation as well.
+ A more accurate model of the actual price over this time period would come
+ from a model that caputures this fluctuation.
+ For example, a model of the form 
+\begin_inset Formula $f(t)=p_{0}+rt+\alpha\sin(\omega t)+\beta\cos(\omega t)$
+\end_inset
+
+ might provide reasonable results since it includes a linear portion (
+\begin_inset Formula $p_{0}+rt$
+\end_inset
+
+) to capture the overall decrease and periodic portion (
+\begin_inset Formula $\alpha\sin(\omega t)+\beta\cos(\omega t)$
+\end_inset
+
+) to capture the fluctuation.
+ Linear regression only approximates parameters that very linearly with
+ respect to the response, though.
+ Since 
+\begin_inset Formula $\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ are not linearly related, the value 
+\begin_inset Formula $\omega=\frac{2\pi}{5\times365}$
+\end_inset
+
+ will be assumed.
+ This value of 
+\begin_inset Formula $\omega$
+\end_inset
+
+ gives the sine and cosine functions a 
+\begin_inset Formula $5$
+\end_inset
+
+-year period.
+\end_layout
+
+\begin_layout Standard
+As a linear algebra problem, we wish to find the best approximation to 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ where 
+\begin_inset Formula $M$
+\end_inset
+
+ holds the inputs, 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ holds the responses, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ holds the unknown parameters.
+ Again, time will be measured in days since 1 February 2012.
+\begin_inset Formula 
+\[
+M=\overset{\begin{array}{cccc}
+ & \ \ t & \quad\sin(\omega t) & \hspace{1.5em}\cos(\omega t)\end{array}}{\left[\begin{array}{cccc}
+1 & 7 & 0.0172134 & 0.999852\\
+1 & 22 & 0.0540754 & 0.998537\\
+1 & 382 & 0.807206 & 0.590269\\
+\vdots & \vdots & \vdots & \vdots\\
+1 & 2211 & -0.748605 & 0.663016
+\end{array}\right]},\quad\mathbf{v}=\left[\begin{array}{c}
+p_{0}\\
+r\\
+\alpha\\
+\beta
+\end{array}\right],\quad\mathbf{b}=\left[\begin{array}{c}
+4.36\\
+4.40\\
+4.36\\
+\vdots\\
+3.15
+\end{array}\right],
+\]
+
+\end_inset
+
+which has best approximation
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+p_{0}\\
+r\\
+\alpha\\
+\beta
+\end{array}\right]\approx\left[\begin{array}{c}
+4.47274711624545\\
+-0.000907047402863\\
+0.71642901672004\\
+-0.22510779212064
+\end{array}\right].
+\]
+
+\end_inset
+
+The sums of the squared errors for the two models
+\begin_inset Formula 
+\begin{align*}
+p(x) & =4.55591-845070(10)^{-4}t\\
+f(x) & =4.47275-907047(10)^{-4}t+0.716429\sin(\omega t)-0.225108\cos(\omega t)
+\end{align*}
+
+\end_inset
+
+are 
+\begin_inset Formula $3.02939$
+\end_inset
+
+ and 
+\begin_inset Formula $0.460556$
+\end_inset
+
+, respectively.
+ The graphs of the two models superimposed on the data clearly illustrate
+ how much closer 
+\begin_inset Formula $f$
+\end_inset
+
+ comes to predicting the observed data.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/dieselPriceTrend.pdf
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a final linear regression on the February driving data, we return to
+ the thought that mileage is affected by driving speed.
+ One model that incorporates this fact is 
+\begin_inset Formula $g(x,s)=(k+\beta s)x=kx+\beta sx$
+\end_inset
+
+, where 
+\begin_inset Formula $x$
+\end_inset
+
+ is distance (as before) and 
+\begin_inset Formula $s$
+\end_inset
+
+ is average speed.
+ The number of gallons consumed per mile, 
+\begin_inset Formula $(k+\beta s)$
+\end_inset
+
+, varies with average speed 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $g(0,s)=0$
+\end_inset
+
+.
+ This model is slightly different from the ones we have derived so far.
+ Here, we have two input variables, making this a multiple linear regression,
+ or multilinear regression.
+ The principle is the same, however.
+ We wish to find the best approximation of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ where 
+\begin_inset Formula $M$
+\end_inset
+
+ holds the inputs, 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ holds the responses, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ holds the unknown parameters.
+ In this case,
+\begin_inset Formula 
+\[
+M=\overset{\begin{array}{cc}
+x & \qquad sx\phantom{\sin}\end{array}}{\left[\begin{array}{cc}
+450 & 9782.55\\
+685 & 20401.355\\
+394 & 7130.612\\
+\vdots & \vdots\\
+441 & 12324.627
+\end{array}\right]},\quad\mathbf{v}=\left[\begin{array}{c}
+k\\
+\beta
+\end{array}\right],\quad\mathbf{b}=\left[\begin{array}{c}
+13.25\\
+18.101\\
+12.956\\
+\vdots\\
+13.003
+\end{array}\right],
+\]
+
+\end_inset
+
+which has best approximation
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+k\\
+\beta
+\end{array}\right]\approx\left[\begin{array}{c}
+0.0379147381262610\\
+-0.000346513745672586
+\end{array}\right]
+\]
+
+\end_inset
+
+and sum of squared errors 
+\begin_inset Formula $5.21664$
+\end_inset
+
+.
+ Compare this to the 
+\begin_inset Formula $9.30835$
+\end_inset
+
+ we found without considering average driving speed.
+\end_layout
+
+\begin_layout Standard
+Given that the hypothetical trip from New Haven to Augusta is to be driven
+ mostly on the highway, we can approximate the required fuel by, for example,
+ 
+\begin_inset Formula 
+\begin{align*}
+g(600,45) & =(0.0379147-0.000346514(45))600\\
+ & \approx13.39,
+\end{align*}
+
+\end_inset
+
+significantly different from the original estimates of over 17 gallons.
+ The 
+\begin_inset Formula $13.39$
+\end_inset
+
+ gallon estimate should be met with some skepticism, however.
+ It uses an average speed of 45 miles per hour while the highest average
+ speed for which we have data is about 35 miles per hour.
+ There is no evidence that the model applies to an average speed of 45 miles
+ per hour.
+ More data and possibly a revision to the model should be considered before
+ using an average speed of 45.
+ On the other hand, hypothesizing that it is reasonable to expect the car's
+ efficiency to be better at an average speed of 45 miles per hour than it
+ is at an average speed of 35 miles per hour, we can use the model with
+ an average speed of 35 to get an (expected) overestimate of the required
+ volume of fuel.
+ 
+\begin_inset Formula 
+\begin{align*}
+g(600,35) & =(0.0379147-0.000346514(35))600\\
+ & \approx15.47
+\end{align*}
+
+\end_inset
+
+is still considerably less than 
+\begin_inset Formula $17$
+\end_inset
+
+—and likely an overestimate.
+ 
+\end_layout
+
+\begin_layout Standard
+A linear regression model with two input parameters is, geometrically, a
+ regression surface.
+ A plot of 
+\begin_inset Formula $g(x,s)$
+\end_inset
+
+ with the twelve data points is shown below.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/approximation-regression-01.png
+	lyxscale 33
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Normal Equations
+\end_layout
+
+\begin_layout Standard
+As presented in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the calculation of a best approximation involves projecting onto the column
+ space of a coefficient matrix, requiring an orthogonal basis for the column
+ space.
+ While (Gram-Schmidt) orthogonalization can be applied to find such a basis,
+ the process is computationally intensive and more detrimental to the results,
+ error prone.
+ In practice, the normal equations
+\begin_inset Formula 
+\[
+M^{T}M\mathbf{v}=M^{T}\mathbf{b}
+\]
+
+\end_inset
+
+are solved instead.
+ It is known that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is a solution of the normal equations if and only if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is a best approximation to a solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Normal Equations} 
+\end_layout
+
+\end_inset
+
+Letting 
+\begin_inset Formula $W$
+\end_inset
+
+ be the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+, an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix, the following statements are equivalent.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{\mathbf{v}}$
+\end_inset
+
+ is a best approximation of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\hat{\mathbf{v}}$
+\end_inset
+
+ is the closest point to 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\hat{\mathbf{v}}=\text{proj}_{W}\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{b}-M\hat{\mathbf{v}}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\mathbf{b}-M\hat{\mathbf{v}}\right)^{T}M_{:,j}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $j=1,2,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1\Leftrightarrow2$
+\end_inset
+
+ by definition of best approximation.
+ 
+\begin_inset Formula $2\Leftrightarrow3$
+\end_inset
+
+ by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $3\Rightarrow4$
+\end_inset
+
+ by the fact that 
+\begin_inset Formula $(\mathbf{b}-\text{proj}_{W}\mathbf{b})$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $4\Rightarrow3$
+\end_inset
+
+ by the facts that (i) 
+\begin_inset Formula $\mathbf{b}=M\hat{\mathbf{v}}+(\mathbf{b}-M\hat{\mathbf{v}})$
+\end_inset
+
+; (ii) 
+\begin_inset Formula $M\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+; (iii) 
+\begin_inset Formula $\mathbf{b}-M\hat{\mathbf{v}}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+; and (iv) corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:unique-decomposition-projection"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $4\Leftrightarrow5$
+\end_inset
+
+ by definition of 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ and the fact that each column of 
+\begin_inset Formula $M$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ 
+\begin_inset Formula $5\Leftrightarrow6$
+\end_inset
+
+ by matrix algebra: for each 
+\begin_inset Formula $j=1,2,\ldots,n$
+\end_inset
+
+, 
+\begin_inset Formula $\left(\mathbf{b}-M\hat{\mathbf{v}}\right)^{T}M_{:,j}=0\Leftrightarrow M_{:,j}^{T}\left(\mathbf{b}-M\hat{\mathbf{v}}\right)=0\Leftrightarrow M_{:,j}^{T}\mathbf{b}-M_{:,j}^{T}M\hat{\mathbf{v}}=0\Leftrightarrow M_{:,j}^{T}\mathbf{b}=M_{:,j}^{T}M\hat{\mathbf{v}}$
+\end_inset
+
+, this last equality being true for all 
+\begin_inset Formula $j$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Because the set of best approximations of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ equals precisely the solution set of 
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
+\end_inset
+
+, the linear system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has a unique best approximation for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
+\end_inset
+
+ has a unique solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
+\end_inset
+
+ has a unique solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=\mathbf{0}$
+\end_inset
+
+ has only the trivial solution if and only if 
+\begin_inset Formula $M^{T}M$
+\end_inset
+
+ is invertible.
+ Hence the linear system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has a unique best approximation for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M^{T}M$
+\end_inset
+
+ is invertible.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solving the normal equations amounts to solving a linear system of 
+\begin_inset Formula $p$
+\end_inset
+
+ equations in 
+\begin_inset Formula $p$
+\end_inset
+
+ variables where 
+\begin_inset Formula $p$
+\end_inset
+
+ is the number of parameters (not the number of data points).
+ The normal equations represent a relatively small system with known, dependable
+ solution techniques.
+ 
+\end_layout
+
+\begin_layout Standard
+For example, the model 
+\begin_inset Formula $p(t)=p_{0}+rt$
+\end_inset
+
+, which came from a best approximation with
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cc}
+1 & 7\\
+1 & 22\\
+1 & 382\\
+\vdots & \vdots\\
+1 & 2211
+\end{array}\right],\quad\mathbf{v}=\left[\begin{array}{c}
+p_{0}\\
+r
+\end{array}\right],\quad\mathbf{b}=\left[\begin{array}{c}
+4.36\\
+4.40\\
+4.36\\
+\vdots\\
+3.15
+\end{array}\right]
+\]
+
+\end_inset
+
+can be solved by first computing
+\begin_inset Formula 
+\[
+M^{T}M=\left[\begin{array}{cc}
+12 & 12580\\
+12580 & 19526278
+\end{array}\right]\quad\text{and}\quad M^{T}\mathbf{b}=\left[\begin{array}{c}
+44.04\\
+40812.34
+\end{array}\right]
+\]
+
+\end_inset
+
+and then solving
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+12 & 12580\\
+12580 & 19526278
+\end{array}\right]\left[\begin{array}{c}
+p_{0}\\
+r
+\end{array}\right]=\left[\begin{array}{c}
+44.04\\
+40812.34
+\end{array}\right].
+\]
+
+\end_inset
+
+Can you provide this solution? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-system-solution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
 
 \begin_layout Description
-f
+least
+\begin_inset space ~
+\end_inset
+
+squares
+\begin_inset space ~
+\end_inset
+
+solution a best approximation 
+\begin_inset Formula $\hat{\mathbf{v}}$
+\end_inset
+
+ of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ having sum of squared errors 
+\begin_inset Formula $\left\Vert M\hat{\mathbf{v}}-\mathbf{b}\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+sum
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+squared
+\begin_inset space ~
+\end_inset
+
+errors given observations 
+\begin_inset Formula $(X_{i},y_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2,\ldots,N$
+\end_inset
+
+, and model 
+\begin_inset Formula $y=f(X)$
+\end_inset
+
+, 
+\begin_inset Formula $(f(X_{1})-y_{1})^{2}+(f(X_{2})-y_{2})^{2}+\cdots+(f(X_{N})-y_{N})^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+linear
+\begin_inset space ~
+\end_inset
+
+regression given a model of the form 
+\begin_inset Formula $f(X)=\beta_{1}f_{1}(X)+\beta_{2}f_{2}(X)+\cdots+\beta_{p}f_{p}(X)$
+\end_inset
+
+ and observations 
+\begin_inset Formula $(X_{i},y_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2,\ldots,N$
+\end_inset
+
+, linear regression refers to finding a best approximation of
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+f_{1}(X_{1}) & f_{2}(X_{1}) & \cdots & f_{p}(X_{1})\\
+f_{1}(X_{2}) & f_{2}(X_{2}) & \cdots & f_{p}(X_{2})\\
+\vdots & \vdots & \ddots & \vdots\\
+f_{1}(X_{N}) & f_{2}(X_{N}) & \cdots & f_{p}(X_{N})
+\end{array}\right]\left[\begin{array}{c}
+\beta_{1}\\
+\beta_{2}\\
+\vdots\\
+\beta_{p}
+\end{array}\right]=\left[\begin{array}{c}
+y_{1}\\
+y_{2}\\
+\vdots\\
+y_{p}
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+normal
+\begin_inset space ~
+\end_inset
+
+equations 
+\begin_inset Formula $M^{T}M\mathbf{v}=M^{T}\mathbf{b}$
+\end_inset
+
+, whose solutions coincide precisely with best approximations of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+multiple
+\begin_inset space ~
+\end_inset
+
+linear
+\begin_inset space ~
+\end_inset
+
+regression linear regression with more than one (multiple) input variables.
+\end_layout
+
+\begin_layout Description
+multilinear
+\begin_inset space ~
+\end_inset
+
+regression another name for multiple linear regression.
 \end_layout
 
 \begin_layout Standard
@@ -270,7 +1514,73 @@ Answers
 \end_layout
 
 \begin_layout Description
-e
+linear
+\begin_inset space ~
+\end_inset
+
+system
+\begin_inset space ~
+\end_inset
+
+solution 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-system-solution"
+
+\end_inset
+
+The solution can be reached by row reduction or the inverse method.
+ Since the coefficient matrix is 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ and it is easy enough to compute a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ inverse, that is probably the easiest route:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+12 & 12580\\
+12580 & 19526278
+\end{array}\right]^{-1} & =\frac{1}{12(19526278)-12580^{2}}\left[\begin{array}{cc}
+19526278 & -12580\\
+-12580 & 12
+\end{array}\right]\\
+ & =\left[\begin{array}{cc}
+\frac{19526278}{76058936} & -\frac{12580}{76058936}\\
+-\frac{12580}{76058936} & \frac{12}{76058936}
+\end{array}\right]\approx\left[\begin{array}{cc}
+0.256726 & -1.65398(10)^{-4}\\
+-1.65398(10)^{-4} & 1.57772(10)^{-7}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{v}=\left[\begin{array}{c}
+p_{0}\\
+r
+\end{array}\right] & \approx\left[\begin{array}{cc}
+0.256726 & -1.65398(10)^{-4}\\
+-1.65398(10)^{-4} & 1.57772(10)^{-7}
+\end{array}\right]\left[\begin{array}{c}
+44.04\\
+40812.34
+\end{array}\right]\\
+ & \approx\left[\begin{array}{c}
+4.556\\
+-8.451(10)^{-4}
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -996,8 +996,14 @@ so
 .
 \end_layout
 
-\begin_layout Standard
-Thus 
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:unique-decomposition-projection"
+
+\end_inset
+
+ 
 \begin_inset Formula $\mathbf{v}=\text{proj}_{W}\mathbf{v}+(\mathbf{v}-\text{proj}_{W}\mathbf{v})$
 \end_inset
 
@@ -1014,7 +1020,11 @@ Thus
 \end_inset
 
 .
- Finally, we are ready to answer our original question.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, we are ready to answer our original question.
  In the form of a theorem, we have the following.
 \end_layout
 
