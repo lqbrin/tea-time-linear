@@ -1,0 +1,488 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Markov-Chains"
+
+\end_inset
+
+Markov Chains []
+\end_layout
+
+\begin_layout Standard
+From 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.capitalbikeshare.com/about"
+target "https://www.capitalbikeshare.com/about"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+Capital Bikeshare is metro DC's bikeshare system, with more than 4,300 bikes
+ available at 500 stations across six jurisdictions: Washington, DC; Arlington,
+ VA; Alexandria, VA; Montgomery County, MD; Prince George's County, MD;
+ Fairfax County, VA; and the City of Falls Church, VA.
+ Capital Bikeshare provides residents and visitors with a convenient, fun
+ and affordable transportation option for getting from Point A to Point
+ B.
+\end_layout
+
+\begin_layout Quote
+Capital Bikeshare, like other bikeshare systems, consists of a fleet of
+ specially designed, sturdy and durable bikes that are locked into a network
+ of docking stations throughout the region.
+ The bikes can be unlocked from any station and returned to any station
+ in the system, making them ideal for one-way trips.
+ People use bikeshare to commute to work or school, run errands, get to
+ appointments or social engagements and more.
+\end_layout
+
+\begin_layout Quote
+Capital Bikeshare is available for use 24 hours a day, 7 days a week, 365
+ days a year.
+ Riders have access to a bike at any station across the system.
+\end_layout
+
+\begin_layout Standard
+Capital Bikeshare makes their trip data avaialable to the general public
+ free of charge.
+ The data includes (i) duration of trip, (ii) start date and time, (iii)
+ end date and time, (iv) starting station name and number, (v) ending station
+ name and number, and more.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.capitalbikeshare.com/system-data"
+target "https://www.capitalbikeshare.com/system-data"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following chart was processed from real Capital Bikeshare data for the
+ year 2018.
+ It shows the total number of rides that started and ended in the section
+ of Alexandria containing bike stations 31041 through 31048.
+ The locations of the stations are to the right of the chart.
+ The total number of rides accounted for is 
+\begin_inset Formula $10,364$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/BikeshareData-Alexandria-2018.pdf
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+From this data, we can use linear algebra to estimate the distribution of
+ bicycles among the stations.
+ The method begins by dividing each column of the chart by the total number
+ of rides in the column.
+ The first column is divided by 1221, the second column by 2010, and so
+ on, resulting in a table whose columns al sum to 1.
+ Accurate to five decimal places, this normalized chart is collected in
+ the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccccccc}
+0.54382 & 0.08109 & 0.06937 & 0.11661 & 0.17025 & 0.07161 & 0.13270 & 0.14191\\
+0.10156 & 0.25821 & 0.13694 & 0.18728 & 0.26612 & 0.13151 & 0.32949 & 0.39357\\
+0.05405 & 0.10249 & 0.09189 & 0.10247 & 0.09587 & 0.16797 & 0.30596 & 0.00998\\
+0.04586 & 0.06020 & 0.04955 & 0.18375 & 0.05289 & 0.09505 & 0.05709 & 0.27772\\
+0.03358 & 0.06368 & 0.03694 & 0.02591 & 0.11570 & 0.15755 & 0.03205 & 0.10366\\
+0.01638 & 0.04826 & 0.08829 & 0.04829 & 0.12562 & 0.12500 & 0.03505 & 0.00610\\
+0.14087 & 0.27910 & 0.51171 & 0.10365 & 0.10579 & 0.23438 & 0.09114 & 0.01552\\
+0.06388 & 0.10697 & 0.01532 & 0.23204 & 0.06777 & 0.01693 & 0.01652 & 0.05155
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ thereby represents the proportion of rides starting at the station represented
+ by the column that end at the station represented by the row.
+ For example, the 
+\begin_inset Formula $0.06937$
+\end_inset
+
+ in the first row, third column means that 6.937% of rides starting at station
+ number 31043 end at station number 31041.
+ In other words, about 7% of the bikes at station number 31043 are destined
+ for station number 31041.
+\end_layout
+
+\begin_layout Standard
+Multiplying 
+\begin_inset Formula $M_{2,1}M_{1,5}$
+\end_inset
+
+ then represents the percentage of bikes at the station of column 2 (31042)
+ that are destined for the station of column 5 (31045) via the station of
+ column 1 (31041).
+ Similarly, 
+\begin_inset Formula $M_{2,2}M_{2,5}$
+\end_inset
+
+ represents the percentage of bikes at station 31042 that are destined for
+ station 31045 via station 31042 (the first ride is from station 31042 back
+ to station 31042); 
+\begin_inset Formula $M_{2,3}M_{3,5}$
+\end_inset
+
+ represents the percentage of bikes at station 31042 that are destined for
+ station 31045 via station 31043; and so on.
+ The sum 
+\begin_inset Formula $M_{2,1}M_{1,5}+M_{2,2}M_{2,5}+\cdots+M_{8,2}M_{8,5}$
+\end_inset
+
+ therefore represents the total percentage of bikes at station 31042 that
+ will end up at station 31045 
+\shape italic
+after two rides
+\shape default
+.
+ Notice that's just a row-column product (row 2 times column 5), which is
+ the 
+\begin_inset Formula $2,5$
+\end_inset
+
+-entry of 
+\begin_inset Formula $M^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Generalizing, the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entry of
+\begin_inset Formula 
+\[
+M^{2}=\left[\begin{array}{cccccccc}
+0.34772 & 0.14568 & 0.14367 & 0.16169 & 0.17933 & 0.14162 & 0.14917 & 0.16962\\
+0.18009 & 0.25757 & 0.26034 & 0.24737 & 0.21787 & 0.22429 & 0.20081 & 0.22320\\
+0.09918 & 0.14711 & 0.20639 & 0.09837 & 0.11594 & 0.15050 & 0.11192 & 0.09361\\
+0.07128 & 0.08900 & 0.06889 & 0.13178 & 0.08122 & 0.07528 & 0.06639 & 0.10299\\
+0.04552 & 0.05952 & 0.05190 & 0.06237 & 0.07117 & 0.06664 & 0.05208 & 0.05619\\
+0.03239 & 0.05021 & 0.05196 & 0.04321 & 0.06101 & 0.07067 & 0.05955 & 0.05025\\
+0.15859 & 0.18732 & 0.17162 & 0.16729 & 0.20517 & 0.21018 & 0.29330 & 0.17834\\
+0.06525 & 0.06360 & 0.04523 & 0.08794 & 0.06829 & 0.06081 & 0.06678 & 0.12580
+\end{array}\right]
+\]
+
+\end_inset
+
+holds the percentage of bikes starting at station 
+\begin_inset Formula $3104i$
+\end_inset
+
+ that end up at station 
+\begin_inset Formula $3104j$
+\end_inset
+
+ after two rides.
+ Likewise, the 
+\begin_inset Formula $i,j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $M^{k}$
+\end_inset
+
+ holds the percentage of bikes starting at station 
+\begin_inset Formula $3104i$
+\end_inset
+
+ that end up at station 
+\begin_inset Formula $3104j$
+\end_inset
+
+ after 
+\begin_inset Formula $k$
+\end_inset
+
+ rides.
+ Multiplying 
+\begin_inset Formula $M^{2}$
+\end_inset
+
+ by itself, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M^{4}=\left[\begin{array}{cccccccc}
+0.22039 & 0.18022 & 0.17861 & 0.18487 & 0.18748 & 0.17934 & 0.18079 & 0.18673\\
+0.21605 & 0.22893 & 0.23122 & 0.22754 & 0.22432 & 0.22723 & 0.22265 & 0.22529\\
+0.12247 & 0.13283 & 0.13920 & 0.12638 & 0.12854 & 0.13309 & 0.12804 & 0.12492\\
+0.08042 & 0.08277 & 0.08089 & 0.08616 & 0.08189 & 0.08129 & 0.08003 & 0.08512\\
+0.05346 & 0.05606 & 0.05568 & 0.05638 & 0.05587 & 0.05612 & 0.05539 & 0.05599\\
+0.04633 & 0.05067 & 0.05076 & 0.04970 & 0.05058 & 0.05155 & 0.05181 & 0.04994\\
+0.19212 & 0.20053 & 0.19847 & 0.19753 & 0.20252 & 0.20392 & 0.21272 & 0.19884\\
+0.06877 & 0.06799 & 0.06518 & 0.07144 & 0.06880 & 0.06746 & 0.06857 & 0.07318
+\end{array}\right]
+\]
+
+\end_inset
+
+and then 
+\begin_inset Formula $M^{4}$
+\end_inset
+
+ by itself,
+\begin_inset Formula 
+\[
+M^{8}=\left[\begin{array}{cccccccc}
+0.19015 & 0.18855 & 0.18844 & 0.18879 & 0.18885 & 0.18851 & 0.18857 & 0.18887\\
+0.22448 & 0.22495 & 0.22501 & 0.22487 & 0.22483 & 0.22494 & 0.22486 & 0.22484\\
+0.12913 & 0.12955 & 0.12965 & 0.12942 & 0.12944 & 0.12956 & 0.12947 & 0.12938\\
+0.08181 & 0.08186 & 0.08185 & 0.08189 & 0.08185 & 0.08185 & 0.08183 & 0.08189\\
+0.05532 & 0.05542 & 0.05542 & 0.05541 & 0.05540 & 0.05542 & 0.05541 & 0.05541\\
+0.04985 & 0.05004 & 0.05005 & 0.05001 & 0.05001 & 0.05005 & 0.05005 & 0.05000\\
+0.20067 & 0.20111 & 0.20109 & 0.20102 & 0.20108 & 0.20116 & 0.20127 & 0.20103\\
+0.06858 & 0.06853 & 0.06849 & 0.06858 & 0.06855 & 0.06852 & 0.06854 & 0.06859
+\end{array}\right]
+\]
+
+\end_inset
+
+and so on,
+\begin_inset Formula 
+\[
+M^{16}=\left[\begin{array}{cccccccc}
+0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890\\
+0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483\\
+0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944\\
+0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185\\
+0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540\\
+0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000\\
+0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104\\
+0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855
+\end{array}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+M^{32}=\left[\begin{array}{cccccccc}
+0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890 & 0.18890\\
+0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483 & 0.22483\\
+0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944 & 0.12944\\
+0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185 & 0.08185\\
+0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540 & 0.05540\\
+0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000 & 0.05000\\
+0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104 & 0.20104\\
+0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855 & 0.06855
+\end{array}\right].
+\]
+
+\end_inset
+
+Notice that (i) accurate to five decimal places, 
+\begin_inset Formula $M^{16}=M^{32}$
+\end_inset
+
+, and (ii) the columns of 
+\begin_inset Formula $M^{16}$
+\end_inset
+
+ are all the same! Higher powers of 
+\begin_inset Formula $M$
+\end_inset
+
+ will also be the same.
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+l
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+I
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+l
+\end_layout
+
+\end_body
+\end_document
