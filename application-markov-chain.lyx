@@ -139,13 +139,13 @@ Capital Bikeshare is available for use 24 hours a day, 7 days a week, 365
 \end_layout
 
 \begin_layout Standard
-Capital Bikeshare makes their trip data avaialable to the general public
+Capital Bikeshare makes their trip data available to the general public
  free of charge.
  The data includes (i) duration of trip, (ii) start date and time, (iii)
  end date and time, (iv) starting station name and number, (v) ending station
  name and number, and more.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 See 
@@ -190,19 +190,18 @@ The following chart was processed from real Capital Bikeshare data for the
 \end_layout
 
 \begin_layout Standard
-\noindent
-From this data, we can use linear algebra to estimate the distribution of
- bicycles among the stations.
+From these data, linear algebra can be applied to estimate the distribution
+ of bicycles among the stations.
  The method begins by dividing each column of the chart by the total number
  of rides in the column.
  The first column is divided by 1221, the second column by 2010, and so
- on, resulting in a table whose columns al sum to 1.
+ on, resulting in a table whose columns all sum to 1.
  Accurate to five decimal places, this normalized chart is collected in
  the matrix 
 \begin_inset Formula $M$
 \end_inset
 
-.
+:
 \end_layout
 
 \begin_layout Standard
@@ -226,16 +225,16 @@ M=\left[\begin{array}{cccccccc}
 \begin_inset Formula $M$
 \end_inset
 
- thereby represents the proportion of rides starting at the station represented
+ thereby represents the percentage of rides starting at the station represented
  by the column that end at the station represented by the row.
  For example, the 
 \begin_inset Formula $0.06937$
 \end_inset
 
  in the first row, third column means that 6.937% of rides starting at station
- number 31043 end at station number 31041.
- In other words, about 7% of the bikes at station number 31043 are destined
- for station number 31041.
+ number 31043 ended at station number 31041.
+ Empirically speaking, about 7% of the bikes at station number 31043 are
+ destined for station number 31041.
 \end_layout
 
 \begin_layout Standard
@@ -243,27 +242,27 @@ Multiplying
 \begin_inset Formula $M_{2,1}M_{1,5}$
 \end_inset
 
- then represents the percentage of bikes at the station of column 2 (31042)
- that are destined for the station of column 5 (31045) via the station of
- column 1 (31041).
+ then represents the percentage of bikes at the station of column 5 (31045)
+ that are destined for the station of column 2 (31042) after being dropped
+ at the station of column 1 (31041).
  Similarly, 
 \begin_inset Formula $M_{2,2}M_{2,5}$
 \end_inset
 
- represents the percentage of bikes at station 31042 that are destined for
- station 31045 via station 31042 (the first ride is from station 31042 back
- to station 31042); 
+ represents the percentage of bikes at station 31045 that are destined for
+ station 31042 via station 31042 (the second ride is from station 31042
+ back to station 31042); 
 \begin_inset Formula $M_{2,3}M_{3,5}$
 \end_inset
 
- represents the percentage of bikes at station 31042 that are destined for
- station 31045 via station 31043; and so on.
+ represents the percentage of bikes at station 31045 that are destined for
+ station 31042 via station 31043; and so on.
  The sum 
 \begin_inset Formula $M_{2,1}M_{1,5}+M_{2,2}M_{2,5}+\cdots+M_{8,2}M_{8,5}$
 \end_inset
 
- therefore represents the total percentage of bikes at station 31042 that
- will end up at station 31045 
+ therefore represents the total percentage of bikes at station 31045 that
+ will end up at station 31042 
 \shape italic
 after two rides
 \shape default
@@ -304,11 +303,11 @@ M^{2}=\left[\begin{array}{cccccccc}
 \end_inset
 
 holds the percentage of bikes starting at station 
-\begin_inset Formula $3104i$
+\begin_inset Formula $3104j$
 \end_inset
 
  that end up at station 
-\begin_inset Formula $3104j$
+\begin_inset Formula $3104i$
 \end_inset
 
  after two rides.
@@ -321,11 +320,11 @@ holds the percentage of bikes starting at station
 \end_inset
 
  holds the percentage of bikes starting at station 
-\begin_inset Formula $3104i$
+\begin_inset Formula $3104j$
 \end_inset
 
  that end up at station 
-\begin_inset Formula $3104j$
+\begin_inset Formula $3104i$
 \end_inset
 
  after 
@@ -424,7 +423,840 @@ Notice that (i) accurate to five decimal places,
 \begin_inset Formula $M$
 \end_inset
 
- will also be the same.
+ will be no different.
+\end_layout
+
+\begin_layout Standard
+This means that after 16 rides each, about 
+\begin_inset Formula $18.89$
+\end_inset
+
+% of bikes from station 31041 will end up at station 31041.
+ 
+\begin_inset Formula $18.89$
+\end_inset
+
+% of bikes from station 31042 will end up at station 31041.
+ 
+\begin_inset Formula $18.89$
+\end_inset
+
+% of bikes from station 31043 will end up at station 31041.
+ Altogether, then, about 
+\begin_inset Formula $18.89$
+\end_inset
+
+% of all the bikes in the neighborhood will end up at station 31041.
+ Likewise, about 
+\begin_inset Formula $22.48$
+\end_inset
+
+% of all the bikes in the neighborhood will end up at station 2, 
+\begin_inset Formula $12.94$
+\end_inset
+
+% at station 3, and so on.
+ No matter how the bikes are initially distributed, they will end up distributed
+ this way after a short time, and stay that way (so long as the empirical
+ percentages hold).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Why it Works}
+\end_layout
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is a positive column-stochastic matrix.
+ The Gershgorin circle theorem ensures that 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ (and therefore 
+\begin_inset Formula $M$
+\end_inset
+
+) has no eigenvalue with magnitude greater than one and its only possible
+ eigenvalue with magnitude equal to one is 1.
+ Letting 
+\begin_inset Formula $\mathbf{1}$
+\end_inset
+
+ be the column vector whose entries are all 1, note that 
+\begin_inset Formula $M^{T}\mathbf{1}=\mathbf{1}$
+\end_inset
+
+ (this is equivalent to saying the rows of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ sum to 1) so 1 is indeed an eigenvalue of 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $M$
+\end_inset
+
+ has dominant eigenvalue 1.
+ Since 
+\begin_inset Formula $M^{T}-I$
+\end_inset
+
+ is real, its null space admits a basis of real vectors.
+ Suppose 
+\begin_inset Formula $\mathbf{w}\neq k\mathbf{1}$
+\end_inset
+
+ is a real nonzero vector in the null space of 
+\begin_inset Formula $M^{T}-I$
+\end_inset
+
+, and assume 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ has at least one positive entry (if it does not, multiply it by 
+\begin_inset Formula $-1$
+\end_inset
+
+).
+ Now set
+\begin_inset Formula 
+\[
+\alpha_{max}=\max\{\alpha:\mathbf{1}-\alpha\mathbf{w}\text{ is nonnegative}\}
+\]
+
+\end_inset
+
+(the set is nonempty since it contains 0 and closed since the limit of a
+ nonnegative sequence is nonnegative, so it has a maximum).
+ Now 
+\begin_inset Formula $\mathbf{u}=\mathbf{1}-\alpha_{max}\mathbf{w}$
+\end_inset
+
+ has at least one zero entry (if it does not, then 
+\begin_inset Formula $\alpha_{max}$
+\end_inset
+
+ is not maximal).
+ But 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ is then a nonnegative eigenvector (of the positive matrix 
+\begin_inset Formula $M$
+\end_inset
+
+) and hence must be positive, contradicting that it has at least one zero
+ entry.
+ Thus no such 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ exists, and the eigenspace of 1 is one-dimensional.
+ A dominant eigenvalue with a one-dimensional eigenspace is exactly what
+ is needed for the power method to work (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Power-Method"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ In this case, the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is stochastic, so instead of computing 
+\begin_inset Formula $\mathbf{v}_{k}=M^{k}\mathbf{v}_{0}$
+\end_inset
+
+, we simply calculate 
+\begin_inset Formula $M^{k}$
+\end_inset
+
+.
+ The entries of 
+\begin_inset Formula $M^{k}$
+\end_inset
+
+ will never tend to 0 or infintity since powers of stochastic matrices are
+ stochastic, so we do not have to worry about scaling after each iteration.
+ We can then multiply any nonzero 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ by 
+\begin_inset Formula $M^{k}$
+\end_inset
+
+ to find the approximation 
+\begin_inset Formula $\mathbf{v}_{k}$
+\end_inset
+
+ of the dominant eigenvector.
+\end_layout
+
+\begin_layout Subsubsection*
+Vocabulary
+\end_layout
+
+\begin_layout Itemize
+A 
+\series bold
+positive matrix
+\series default
+ is one whose entries are all positive.
+\end_layout
+
+\begin_layout Itemize
+A 
+\series bold
+nonnegative matrix
+\series default
+ is one who entries are all nonnegative.
+\end_layout
+
+\begin_layout Itemize
+A 
+\series bold
+stochastic matrix
+\series default
+ is a nonnegative matrix whose columns each sum to 1.
+\end_layout
+
+\begin_layout Subsubsection*
+Lemmas
+\end_layout
+
+\begin_layout Standard
+In each of the following lemmas, 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ is positive and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ is a nonnegative eigenvector, then 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ is positive.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Since eigenvectors are nonzero and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ is nonnegative, 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ has a positive entry, say its 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+.
+ If follows that 
+\begin_inset Formula 
+\[
+(M\mathbf{w})_{j,1}=\sum_{k=1}^{n}M_{j,k}\mathbf{w}_{k,1}\geq M_{j,i}\mathbf{w}_{i,1}>0
+\]
+
+\end_inset
+
+for each 
+\begin_inset Formula $j=1,2,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ are the same.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Since the determinants of a matrix and its transpose are equal (section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), for any scalar 
+\begin_inset Formula $\lambda$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\det(M-\lambda I)=\det(M-\lambda I)^{T}=\det(M^{T}-(\lambda I)^{T})=\det(M^{T}-\lambda I).
+\]
+
+\end_inset
+
+Hence 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ have the same characteristic equation and therefore the same eigenvalues.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If the entries of 
+\begin_inset Formula $M$
+\end_inset
+
+ are real numbers and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is a real number, then the null space of 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+ admits a basis of vectors with real entries.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Since the null space of any matrix can be found through row reduction, and
+ row reducing a real matrix does not requre complex numbers, a real basis
+ of 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+ (which has real entries) exists.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Gershgorin circle theorem: Every (possibly complex) eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+ lies in at least one disk with center 
+\begin_inset Formula $M_{i,i}$
+\end_inset
+
+ and radius 
+\begin_inset Formula $r_{i}=\sum_{j\neq i}|M_{i,j}|$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Suppose 
+\begin_inset Formula $\lambda,\mathbf{w}$
+\end_inset
+
+ is an eigenpair of 
+\begin_inset Formula $M$
+\end_inset
+
+ and let 
+\begin_inset Formula $\mathbf{w}_{i,1}$
+\end_inset
+
+ be the entry of 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ with greatest magnitude.
+ Because 
+\begin_inset Formula $M\mathbf{w}=\lambda\mathbf{w}$
+\end_inset
+
+, we have for each 
+\begin_inset Formula $i=1,2,\ldots,n$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda x_{i,1}=\sum_{j=1}^{n}M_{i,j}x_{j,1}$
+\end_inset
+
+.
+ Hence
+\begin_inset Formula 
+\[
+(\lambda-M_{i,i})x_{i,1}=\lambda x_{i,1}-M_{i,i}x_{i,1}=\sum_{j\neq i}M_{i,j}x_{j,1}
+\]
+
+\end_inset
+
+from which it follows
+\begin_inset Formula 
+\[
+\left|\lambda-M_{i,i}\right|=\frac{1}{|x_{i,1}|}\left|\sum_{j\neq i}M_{i,j}x_{j,1}\right|\leq\sum_{j\neq i}|M_{i,j}|\cdot\left|\frac{x_{j,1}}{x_{i,1}}\right|\leq\sum_{j\neq i}|M_{i,j}|.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Powers of stochastic matrices are stochastic.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a stochastic matrix.
+ By definition, 
+\begin_inset Formula $\mathbf{1}^{T}S=\mathbf{1}^{T}$
+\end_inset
+
+ (the sum of each column of 
+\begin_inset Formula $S$
+\end_inset
+
+ is one).
+ By induction, assume 
+\begin_inset Formula $S^{k}$
+\end_inset
+
+ is stochastic for some 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+\mathbf{1}^{T}S^{k+1}=\left(\mathbf{1}^{T}S^{k}\right)S=\mathbf{1}^{T}S=\mathbf{1}^{T}
+\]
+
+\end_inset
+
+so the columns of 
+\begin_inset Formula $S^{k+1}$
+\end_inset
+
+ sum to one.
+ Of course powers of nonnegative matrices are nonnegative, so 
+\begin_inset Formula $S^{k+1}$
+\end_inset
+
+ is stochastic.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Suppose Capital Bikeshare supplies each station with the same number of
+ bicycles.
+ That information can be recorded in a column vector with length eight and
+ each entry equal to 
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+.
+ After one month, we assume that the empirical data on transitions from
+ one station to another is reasonably accurate, so the distribution of bicycles
+ will be approximately
+\begin_inset Formula 
+\[
+M\left[\begin{array}{c}
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}
+\end{array}\right]\approx\left[\begin{array}{c}
+0.166\\
+0.226\\
+0.116\\
+0.103\\
+0.071\\
+0.062\\
+0.185\\
+0.071
+\end{array}\right].
+\]
+
+\end_inset
+
+Multiplying the distribution vector by the 
+\series bold
+transition matrix
+\series default
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ gives the new distribution of bicycles among the stations.
+ After another month, the distribution of bicycles will be approximately
+\begin_inset Formula 
+\[
+M\left[\begin{array}{c}
+0.166\\
+0.226\\
+0.116\\
+0.103\\
+0.071\\
+0.062\\
+0.185\\
+0.071
+\end{array}\right]\approx M^{2}\left[\begin{array}{c}
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}
+\end{array}\right]\approx\left[\begin{array}{c}
+0.180\\
+0.226\\
+0.128\\
+0.086\\
+0.058\\
+0.052\\
+0.196\\
+0.073
+\end{array}\right]
+\]
+
+\end_inset
+
+and after four months,
+\begin_inset Formula 
+\[
+M^{2}\left[\begin{array}{c}
+0.180\\
+0.226\\
+0.128\\
+0.086\\
+0.058\\
+0.052\\
+0.196\\
+0.073
+\end{array}\right]\approx M^{4}\left[\begin{array}{c}
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}
+\end{array}\right]\approx\left[\begin{array}{c}
+0.187\\
+0.225\\
+0.129\\
+0.082\\
+0.056\\
+0.050\\
+0.201\\
+0.069
+\end{array}\right]
+\]
+
+\end_inset
+
+and after eight months,
+\begin_inset Formula 
+\[
+M^{4}\left[\begin{array}{c}
+0.187\\
+0.225\\
+0.129\\
+0.082\\
+0.056\\
+0.050\\
+0.201\\
+0.069
+\end{array}\right]\approx M^{8}\left[\begin{array}{c}
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}\\
+\frac{1}{8}
+\end{array}\right]\approx\left[\begin{array}{c}
+0.189\\
+0.225\\
+0.129\\
+0.082\\
+0.055\\
+0.050\\
+0.201\\
+0.069
+\end{array}\right]
+\]
+
+\end_inset
+
+which is, accurate to three decimal places, equal to the columns of 
+\begin_inset Formula $M^{16}$
+\end_inset
+
+ (and 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+ for that matter).
+ The distribution of bicycles does not change much after the first two months.
+ 
+\end_layout
+
+\begin_layout Standard
+More importantly, the distribution we see after 8 months will be the eventual
+ distribution of bicycles no matter the initial distribution! Given any
+ initial distribution of bicycles, 
+\begin_inset Formula $\left[\begin{array}{cccccccc}
+w_{1} & w_{2} & w_{3} & w_{4} & w_{5} & w_{6} & w_{7} & w_{8}\end{array}\right]^{T}$
+\end_inset
+
+ (where 
+\begin_inset Formula $\sum_{i=1}^{8}w_{i}=1$
+\end_inset
+
+ and each 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is nonnegative),
+\begin_inset Formula 
+\[
+M^{16}\left[\begin{array}{c}
+w_{1}\\
+w_{2}\\
+w_{3}\\
+w_{4}\\
+w_{5}\\
+w_{6}\\
+w_{7}\\
+w_{8}
+\end{array}\right]\approx\left[\begin{array}{c}
+0.18890\sum_{i=1}^{8}w_{i}\\
+0.22483\sum_{i=1}^{8}w_{i}\\
+0.12944\sum_{i=1}^{8}w_{i}\\
+0.08185\sum_{i=1}^{8}w_{i}\\
+0.05540\sum_{i=1}^{8}w_{i}\\
+0.05000\sum_{i=1}^{8}w_{i}\\
+0.20104\sum_{i=1}^{8}w_{i}\\
+0.06855\sum_{i=1}^{8}w_{i}
+\end{array}\right]=\sum_{i=1}^{8}w_{i}\left[\begin{array}{c}
+0.18890\\
+0.22483\\
+0.12944\\
+0.08185\\
+0.05540\\
+0.05000\\
+0.20104\\
+0.06855
+\end{array}\right]=\left[\begin{array}{c}
+0.18890\\
+0.22483\\
+0.12944\\
+0.08185\\
+0.05540\\
+0.05000\\
+0.20104\\
+0.06855
+\end{array}\right].
+\]
+
+\end_inset
+
+This means the distribution of bicycles in the long-run is given by this
+ vector, 
+\begin_inset Formula $\mathbf{v}=M_{i,1}$
+\end_inset
+
+, the eigenvector of 
+\begin_inset Formula $M$
+\end_inset
+
+ corresponding with eigenvalue 1.
+ This distribution is called the steady-state distribution because if reached,
+ it never deviates: 
+\begin_inset Formula $M\mathbf{v}=\mathbf{v}$
+\end_inset
+
+.
+ We would expect to see the bicycles distributed among the stations in these
+ proportions after adequate time.
+\end_layout
+
+\begin_layout Subsection
+Formalities
+\end_layout
+
+\begin_layout Standard
+The sequence of bicycle distributions in the Capital Bikeshare scenario
+ is an example of a discrete-time 
+\series bold
+Markov chain
+\series default
+.
+ Any Markov chain necessarily consists of a set of 
+\series bold
+states
+\series default
+ (stations in our example), a set of probabilities that some object (bicycle
+ in our example) will transition from one state to any other depending only
+ on its current state after one time step, and an initial distribution among
+ the possible states.
+ The matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, where 
+\begin_inset Formula $M_{i,j}$
+\end_inset
+
+ is the probability of transitioning from state 
+\begin_inset Formula $j$
+\end_inset
+
+ to state 
+\begin_inset Formula $i$
+\end_inset
+
+, is the 
+\series bold
+transition matrix
+\series default
+, and each distribution 
+\begin_inset Formula $\mathbf{v}_{n}$
+\end_inset
+
+ other than 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ statisfies 
+\begin_inset Formula $\mathbf{v}_{n}=M\mathbf{v}_{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Other situations that can be modeled by Markov chains include
+\end_layout
+
+\begin_layout Enumerate
+board games whose movement is determined by the roll of a die, such as Snakes
+ and Ladders (the spaces on the board are the states, the game piece is
+ the object, and the roll of the die provides the transition probabilities);
+\end_layout
+
+\begin_layout Enumerate
+sentence construction, as used by computer auto-completion (the states are
+ the words of a specific language, the object is the reader's focus, and
+ the probability of one word following another in a sentence provides the
+ transition probabilites);
+\end_layout
+
+\begin_layout Enumerate
+a closed economy—one where a set of commodities is produced and consumed
+ by the same group (the states are the sectors of the economy, the commodities
+ are the objects, and transitioning is interpreted as consumption);
+\end_layout
+
+\begin_layout Enumerate
+the weather (the states are weather conditions such as sunny, cloudy, and
+ rainy, the object is the weather, and the transition probabilities are
+ the conditional probabilities that one weather condition will follow another
+ on, say, the next day);
+\end_layout
+
+\begin_layout Enumerate
+gambling (the states are the amounts of money the gambler could have, the
+ object is the gambler, and the likelihoods of winning or losing certain
+ amounts of money provide the transition probabilities);
+\end_layout
+
+\begin_layout Enumerate
+a single server queue (the states are the possible sizes of the queue, the
+ object is the queue, and the likelihoods of increasing or decreasing the
+ size of the queue by certain amounts provide the transition probabilities).
 \end_layout
 
 \begin_layout Subsection
@@ -432,9 +1264,192 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-l
+transition
+\begin_inset space ~
+\end_inset
+
+matrix a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ where 
+\begin_inset Formula $M_{i,j}$
+\end_inset
+
+ is the probability of transitioning from state 
+\begin_inset Formula $j$
+\end_inset
+
+ to state 
+\begin_inset Formula $i$
+\end_inset
+
+ in one time step.
+ The entries of 
+\begin_inset Formula $M$
+\end_inset
+
+ are nonnegative and each column of 
+\begin_inset Formula $M$
+\end_inset
+
+ sums to 1.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A square matrix whose entries are nonnegative and whose columns each sum
+ to 1 is also called a 
+\series bold
+stochastic matrix
+\series default
+ (whether it models state transition probabilities or not).
 \end_layout
 
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+Markov
+\begin_inset space ~
+\end_inset
+
+chain a sequence of distributions arising from an initial distribution 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ and the recurrence 
+\begin_inset Formula $\mathbf{v}_{n}=M\mathbf{v}_{n-1}$
+\end_inset
+
+, 
+\begin_inset Formula $n>0$
+\end_inset
+
+ for some transition matrix 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In a more general setting, the transition matrix may change with time, and
+ would then be replaced by 
+\begin_inset Formula $M_{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+state one of the possible conditions of the object associated with a Markov
+ chain.
+\end_layout
+
+\begin_layout Description
+steady-state
+\begin_inset space ~
+\end_inset
+
+distribution a distribution 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{v}=\mathbf{v}$
+\end_inset
+
+ (by definition an eigenvector corresponding to eigenvalue 1).
+\end_layout
+
+\begin_layout Description
+properties
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+transition
+\begin_inset space ~
+\end_inset
+
+matrix If 
+\begin_inset Formula $M$
+\end_inset
+
+ is a transition matrix,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+each column of 
+\begin_inset Formula $M$
+\end_inset
+
+ sums to one;
+\end_layout
+
+\begin_layout Enumerate
+each entry of 
+\begin_inset Formula $M$
+\end_inset
+
+ is nonnegative;
+\end_layout
+
+\begin_layout Enumerate
+1 is one of its eigenvalues;
+\end_layout
+
+\begin_layout Enumerate
+none of its eigenvalues has magnitude greater than one.
+\end_layout
+
+\begin_layout Standard
+If, additionally, all the entries of some power, 
+\begin_inset Formula $M^{k}$
+\end_inset
+
+, of 
+\begin_inset Formula $M$
+\end_inset
+
+ are all positive,
+\end_layout
+
+\begin_layout Enumerate
+1 is a dominant eigenvalue;
+\end_layout
+
+\begin_layout Enumerate
+the eigenspace of 1 is one-dimensional;
+\end_layout
+
+\begin_layout Enumerate
+each column of 
+\begin_inset Formula $M^{k}$
+\end_inset
+
+ approaches the same eigenvector, that corresponding with the eigenvalue
+ 1, the steady-state vector.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \noindent
 \begin_inset ERT
