@@ -883,16 +883,6 @@ status open
 % Isometries of the Square/Cube (preview of abstract algebra)?
 \end_layout
 
-\begin_layout Plain Layout
-
-% QR Factorization
-\end_layout
-
-\begin_layout Plain Layout
-
-% Cramer's Rule
-\end_layout
-
 \end_inset
 
 
@@ -958,11 +948,6 @@ status open
 
 \begin_layout Plain Layout
 
-% Linear Regression
-\end_layout
-
-\begin_layout Plain Layout
-
 % Discrete dynamical systems
 \end_layout
 
@@ -974,21 +959,6 @@ status open
 \begin_layout Plain Layout
 
 % Difference Equations
-\end_layout
-
-\begin_layout Plain Layout
-
-% Markov Chains
-\end_layout
-
-\begin_layout Plain Layout
-
-% Differential Equations???
-\end_layout
-
-\begin_layout Plain Layout
-
-% Linear Programming???
 \end_layout
 
 \end_inset
