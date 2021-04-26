@@ -1,0 +1,232 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Fourier Series []
+\end_layout
+
+\begin_layout Standard
+Sound is the perception of pressure variation.
+ Tuning forks, speakers, musical instruments, voice boxes, whistles, and
+ anything else that makes sound must somehow cause varying pressure.
+ One common way to create pressure variation is through physical vibration.
+ Tuning forks, speakers, the strings of stringed instruments, and vocal
+ cords all use this technique.
+ Their vibrations cause alternating moments of compression (increased pressure)
+ and rarefaction (reduced pressure) in the air.
+\end_layout
+
+\begin_layout Standard
+The greater the difference in high and low pressures, the louder the sound.
+ Sometimes the pressure difference (volume or intensity) is so great, our
+ whole bodies vibrate.
+ Thunder, subwoofers, fireworks, and helicopters can do this, but for most
+ sounds it is only our eardrums that perceive the pressure variation.
+\end_layout
+
+\begin_layout Standard
+The faster the pressure alternates between high and low, the higher the
+ pitch.
+ Middle C, for example, is the result of pressure varying from neutral to
+ high to low and back to neutral approximately 261.6 times per second.
+ Each variation through neutral, high, low and back to neutral is one cycle,
+ so we also say that middle C has a frequency of 261.6 cycles per second.
+ One Hertz, abreviated Hz, equals one cycle per second, so we also say middle
+ C has a frequency of 261.6 Hz.
+ The highest note on a piano, B
+\begin_inset Formula $_{8}$
+\end_inset
+
+, has a frequency of about 7902.1 Hz and the lowest note on a piano has a
+ frequency of about 16.35 Hz.
+\end_layout
+
+\begin_layout Standard
+The human ear is capable of perceiving frequencies between about 20 Hz and
+ 20,000 Hz.
+ Air pressure can certainly alternate between high and low slower than 20
+ cycles per second and faster than 20,000 cycles per second.
+ Our ears just won't pick up those vibrations.
+ Dog whistles ideally emit sound between 23,000 Hz and 54,000 Hz
+\begin_inset CommandInset citation
+LatexCommand cite
+key "coile"
+literal "false"
+
+\end_inset
+
+, above the range of human hearing but within the range of canine hearing.
+ Elephants were the first land animals to be observed to produce sound below
+ the range of human hearing
+\begin_inset CommandInset citation
+LatexCommand cite
+key "payne"
+literal "false"
+
+\end_inset
+
+, creating calls with frequencies as low as 14 Hz.
+\end_layout
+
+\begin_layout Standard
+A sound wave, therefore can be modeled by a record of the pressure it causes
+ on a receiver such as a microphone or eardrum over time.
+ The simplest type of sound waves are simple harmonic vibrations–one intensity
+ and one frequency, shifting from high to low pressure smoothly, like a
+ sine curve.
+ Until the advent of electronics, the closest approximation to a simple
+ harmonic vibration was the sound of a tuning fork.
+ Over the course of a second or so, neither the frequency nor the intensity
+ of a vibrating tuning fork changes appreciably, and the vibrations are
+ sinusoidal.
+ The graph of a 440 Hz sine wave is a mathematical model of this sound.
+ See figure [440 HZ sine wave with wavelength, frequency, amplitude labeled].
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+t
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+I
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+l
+\end_layout
+
+\end_body
+\end_document
