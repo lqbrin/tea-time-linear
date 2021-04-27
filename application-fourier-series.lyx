@@ -168,7 +168,266 @@ A sound wave, therefore can be modeled by a record of the pressure it causes
  of a vibrating tuning fork changes appreciably, and the vibrations are
  sinusoidal.
  The graph of a 440 Hz sine wave is a mathematical model of this sound.
- See figure [440 HZ sine wave with wavelength, frequency, amplitude labeled].
+ See figure 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:440-Hz-Sound-Wave"
+
+\end_inset
+
+Mathematical Model of a 440 Hz Simple Harmomic Sound Wave
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/application-fourier-series-01.pdf
+	lyxscale 44
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:440-Hz-Sound-Wave"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Naturally produced sounds are not so neat.
+ Even a tuning fork does not produce sound in a perfect sine wave.
+ Its intensity decreases continuously as it rings, and air particles do
+ not compress and rarefy in a perfectly sinusoidal pattern.
+ The matter is even more complex for musical instruments.
+ Even on a stringed instrument where a string vibrates at a steady frequency,
+ the body picks up the vibration and imparts its own signature frequencies
+ to the sound.
+ Wind and percussion instruments are the same.
+ The richness of their sound comes from a variable intensity patchwork of
+ many frequencies.
+ The graph of two cycles of an actual recording of a 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: get type of drum
+\end_layout
+
+\end_inset
+
+ drum are shown in figure 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Two-cycles-of-a-drum"
+
+\end_inset
+
+Two cycles of the sound of a drum.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/ding-medium-2-cycles.pdf
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Two-cycles-of-a-drum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The wave is clearly not sinusoidal, featuring 8 peaks and 8 valleys per
+ cycle.
+ In a sense, the best sinusoidal approximation of this sound wave is shown
+ below as 
+\begin_inset Formula $f1(t)=-5498.21\sin\left(29\cdot\frac{8820}{121}\pi t\right)$
+\end_inset
+
+, a frequency of 
+\begin_inset Formula $\frac{1}{2}\cdot29\cdot\frac{8820}{121}\approx1056.9$
+\end_inset
+
+ Hz.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/ding-medium-2-cycles-fourier1.pdf
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+As expected, this sine wave does a poor job of approximating the drum wave.
+ But we can do better.
+ Allowing the sum of two sine waves, we can improve the approximation considerab
+ly, shown below as 
+\begin_inset Formula $f2(t)=-5498.21\sin\left(29\cdot\frac{8820}{121}\pi t\right)-4891.4\sin\left(28\cdot\frac{8820}{121}\pi t\right)$
+\end_inset
+
+, a combination of frequencies 
+\begin_inset Formula $1056.9$
+\end_inset
+
+ Hz and 
+\begin_inset Formula $\frac{1}{2}\cdot28\cdot\frac{8820}{121}\approx1020.5$
+\end_inset
+
+ Hz.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/ding-medium-2-cycles-fourier2.pdf
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The approximation now peters out as does the drum wave, and the peaks and
+ valleys match better.
+ Allowing a combination of four sinusoidal waves,
+\begin_inset Formula 
+\begin{align*}
+f4(t)= & -5498.21\sin\left(29\cdot\frac{8820}{121}\pi t\right)-4891.4\sin\left(28\cdot\frac{8820}{121}\pi t\right)\\
+ & +4394.8\sin\left(33\cdot\frac{8820}{121}\pi t\right)-3469.0\sin\left(31\cdot\frac{8820}{121}\pi t\right)
+\end{align*}
+
+\end_inset
+
+the approximation continues to improve, as seen here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/ding-medium-2-cycles-fourier4.pdf
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The more sinusoidal waves allowed, the better the approximation.
+ The differences largely disappear with the allowance of 14 sinusoidal waves:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/ding-medium-2-cycles-fourier14.pdf
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In order of greatest to least intensity, the frequencies represented in
+ 
+\begin_inset Formula $f14$
+\end_inset
+
+ are 1056.9, 1020.5, 1202.7, 1129.8, 984.0, 1166.3, 291.6, 1640.1, 1093.4, 1457.9,
+ 1567.2, 1275.6, 328.0, and 1239.2 Hz.
+ For the brief moment represented in the graph 
+\begin_inset Formula $\left(\frac{121}{8820}\approx0.01372\text{ sec}\right)$
+\end_inset
+
+, this means the sound of the drum was dominated by these 14 frequencies.
+ 
+\end_layout
+
+\begin_layout Standard
+Similarly examining a full 2 seconds of the audio reveals that the overall
+ dominant frequencies of this particular drum sound, in order from most
+ to least dominant are 290, 1177, and 1027 Hz.
+ The note played was likely D
+\begin_inset Formula $_{4}$
+\end_inset
+
+, equivalent to the D string on a violin or viola played open.
+ 
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection
