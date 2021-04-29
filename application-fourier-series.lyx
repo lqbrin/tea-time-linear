@@ -591,7 +591,7 @@ and
 
 \end_inset
 
- whenever 
+whenever 
 \begin_inset Formula $m\neq n$
 \end_inset
 
@@ -936,9 +936,101 @@ Given a continuous function, we choose a set of sine functions or a set
 \begin_inset Formula $m=0,1,2$
 \end_inset
 
-),
+)?
 \end_layout
 
+\begin_deeper
+\begin_layout Description
+Answer: The best approximation is 
+\begin_inset Formula $\mathbf{v}=\text{proj}_{\text{span}\{\mathcal{B}_{1}\}}f$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\langle f,1\rangle}{\langle1,1\rangle}1+\frac{\left\langle f,\cos\left(\frac{\pi}{2}t\right)\right\rangle }{\left\langle \cos\left(\frac{\pi}{2}t\right),\cos\left(\frac{\pi}{2}t\right)\right\rangle }\cos\left(\frac{\pi}{2}t\right)+\frac{\left\langle f,\cos\left(\pi t\right)\right\rangle }{\left\langle \cos\left(\pi t\right),\cos\left(\pi t\right)\right\rangle }\cos\left(\pi t\right).
+\]
+
+\end_inset
+
+Using a computer algebra system to help with the integration,
+\begin_inset Formula 
+\[
+\mathbf{v}=-16\frac{\pi^{2}-12}{\pi^{4}}\cos\left(\frac{\pi}{2}t\right).
+\]
+
+\end_inset
+
+Due to symmetry, the first and third terms are zero.
+ The distance between 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is
+\begin_inset Formula 
+\[
+d(f,\mathbf{v})=\left\Vert f-\mathbf{v}\right\Vert =\sqrt{\left\langle f-\mathbf{v},f-\mathbf{v}\right\rangle }\approx0.0299.
+\]
+
+\end_inset
+
+The graphs of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are shown below with the area between the two shaded over the interval
+ 
+\begin_inset Formula $[0,2]$
+\end_inset
+
+.
+ Since the distance between 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ involves integrating 
+\begin_inset Formula $\left(f-\mathbf{v}\right)^{2}$
+\end_inset
+
+, the shaded area does not represent the distance between the vectors exactly,
+ but it helps give a visual sense of this distance.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-fourier-series-02.pdf
+	lyxscale 33
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\mathcal{B}_{2}=\left\{ \sin\left(\frac{\pi}{2}t\right),\sin\left(\pi t\right),\sin\left(\frac{3\pi}{2}t\right)\right\} $
 \end_inset
@@ -947,14 +1039,625 @@ Given a continuous function, we choose a set of sine functions or a set
 \begin_inset Formula $m=1,2,3$
 \end_inset
 
-),
+)?
 \end_layout
 
+\begin_deeper
+\begin_layout Description
+Answer: The best approximation is 
+\begin_inset Formula $\mathbf{w}=\text{proj}_{\text{span}\{\mathcal{B}_{2}\}}f$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\left\langle f,\sin\left(\frac{\pi}{2}t\right)\right\rangle }{\left\langle \sin\left(\frac{\pi}{2}t\right),\sin\left(\frac{\pi}{2}t\right)\right\rangle }\sin\left(\frac{\pi}{2}t\right)+\frac{\left\langle f,\sin\left(\pi t\right)\right\rangle }{\left\langle \sin\left(\pi t\right),\sin\left(\pi t\right)\right\rangle }\sin\left(\pi t\right)+\frac{\left\langle f,\sin\left(\frac{3\pi}{2}t\right)\right\rangle }{\left\langle \sin\left(\frac{3\pi}{2}t\right),\sin\left(\frac{3\pi}{2}t\right)\right\rangle }\sin\left(\frac{3\pi}{2}t\right).
+\]
+
+\end_inset
+
+Using a computer algebra system to help with the integration,
+\begin_inset Formula 
+\[
+\mathbf{w}=\frac{12}{\pi^{3}}\sin(\pi x).
+\]
+
+\end_inset
+
+Due to symmetry the first and third terms are zero again.
+ The distance between 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+d(f,\mathbf{w})=\sqrt{\left\langle f-\mathbf{w},f-\mathbf{w}\right\rangle }\approx0.0026.
+\]
+
+\end_inset
+
+The graphs of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ are shown below with the area between the two shaded.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-fourier-series-03.pdf
+	lyxscale 33
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\mathcal{B}_{3}=\left\{ \sin\left(\frac{m\pi}{2}t\right):m=1,2,\ldots,10\right\} $
 \end_inset
 
+?
+\end_layout
 
+\begin_deeper
+\begin_layout Description
+Answer: The best approximation is 
+\begin_inset Formula $\mathbf{x}=\text{proj}_{\text{span}\{\mathcal{B}_{3}\}}f$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\sum_{m=1}^{10}\frac{\left\langle f,\sin\left(\frac{m\pi}{2}t\right)\right\rangle }{\left\langle \sin\left(\frac{m\pi}{2}t\right),\sin\left(\frac{m\pi}{2}t\right)\right\rangle }\sin\left(\frac{m\pi}{2}t\right).
+\]
+
+\end_inset
+
+Using a computer algebra system to help with the integration,
+\begin_inset Formula 
+\[
+\mathbf{x}=\frac{12}{125\pi^{3}}\sin(5\pi x)+\frac{3}{16\pi^{3}}\sin(4\pi x)+\frac{4}{9\pi^{3}}\sin(3\pi x)+\frac{3}{2\pi^{3}}\sin(2\pi x)+\frac{12}{\pi^{3}}\sin(\pi x).
+\]
+
+\end_inset
+
+Due to symmetry the odd terms are zero.
+ The distance between 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+d(f,\mathbf{x})\approx0.00000572.
+\]
+
+\end_inset
+
+The graphs of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ are shown below.
+ The area between the vectors over the interval 
+\begin_inset Formula $[0,2]$
+\end_inset
+
+ is imperceptible as the distance calculation might suggest.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-fourier-series-04.pdf
+	lyxscale 33
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The choice of subspace, and therefore its basis, makes all the difference
+ in how close the given function might be approximated.
+ 
+\end_layout
+
+\begin_layout Standard
+In the case of the sound wave that opened this section, coefficients 
+\begin_inset Formula 
+\[
+\frac{\left\langle \text{Drum},\sin\left(m\cdot\frac{8820}{121}\pi t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{8820}{121}\pi t\right),\sin\left(m\cdot\frac{8820}{121}\pi t\right)\right\rangle },\ m=1,2,\ldots,120
+\]
+
+\end_inset
+
+were calculated and sorted from greatest magnitude to least.
+ In decreasing order, the top 14 magnitudes were from the coefficients correspon
+ding to 
+\begin_inset Formula $m=29,28,33,31,27,32,8,45,30,40,43,35,9,34$
+\end_inset
+
+, so the set 
+\begin_inset Formula $\left\{ \sin\left(m\cdot\frac{8820}{121}\pi t\right):m=29,28,33,31,27,32,8,45,30,40,43,35,9,34\right\} $
+\end_inset
+
+, and subsets, were chosen as bases to create the approximations.
+ The frequency of any harmonic function, 
+\begin_inset Formula $\sin(\omega x)$
+\end_inset
+
+ or 
+\begin_inset Formula $\cos(\omega x)$
+\end_inset
+
+, is 
+\begin_inset Formula $\frac{\omega}{2\pi}$
+\end_inset
+
+, so the frequencies of these basis elements are
+\begin_inset Formula 
+\begin{align*}
+ & \left\{ m\cdot\frac{44100}{121}:m=29,28,33,31,27,32,8,45,30,40,43,35,9,34\right\} \\
+= & \left\{ 1056.9,1020.5,1202.7,1129.8,984.0,1166.3,291.6,1640.1,\right.\\
+ & \left.1093.4,1457.9,1567.2,1275.6,328.0,1239.2\right\} 
+\end{align*}
+
+\end_inset
+
+as noted previously.
+ 
+\end_layout
+
+\begin_layout Standard
+For a function 
+\begin_inset Formula $f$
+\end_inset
+
+ defined over the interval 
+\begin_inset Formula $[0,L]$
+\end_inset
+
+, the (infinite) series
+\begin_inset Formula 
+\[
+b_{1}\sin\left(\frac{\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{\pi}{L}x\right)+\cdots
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }
+\]
+
+\end_inset
+
+is called the 
+\series bold
+Fourier sine series
+\series default
+ for 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ The (infinite) series
+\begin_inset Formula 
+\[
+a_{0}+a_{1}\cos\left(\frac{\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{\pi}{L}x\right)+\cdots
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{\pi}{L}t\right),\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }
+\]
+
+\end_inset
+
+is called the 
+\series bold
+Fourier cosine series
+\series default
+ for 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $a_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{m}$
+\end_inset
+
+ are called 
+\series bold
+Fourier coefficients
+\series default
+, and the functions 
+\begin_inset Formula $\sin\left(m\cdot\frac{\pi}{L}x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\cos\left(m\cdot\frac{\pi}{L}x\right)$
+\end_inset
+
+ are called the 
+\series bold
+
+\begin_inset Formula $m^{th}$
+\end_inset
+
+ harmonics
+\series default
+.
+ Most of our effort to now has concentrated on the sine series since we
+ have been examining functions for which 
+\begin_inset Formula $f(0)=f(L)=0$
+\end_inset
+
+.
+ In general though, any piecewise continuous functions can be approximated
+ arbitrarily closely using a finite number of terms of either the Fourier
+ sine series, as we have done, 
+\shape italic
+or
+\shape default
+ the Fourier cosine series.
+ The fit will simply be better with certain selections of harmonics.
+\end_layout
+
+\begin_layout Standard
+A general Fourier series involves both sine and cosine functions and is
+ defined over domains symmetric about zero.
+ For any function 
+\begin_inset Formula $f$
+\end_inset
+
+ defined over the interval 
+\begin_inset Formula $[-L,L]$
+\end_inset
+
+, the (infinite) series
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:audacity"
+
+\end_inset
+
+Recording of 
+\begin_inset Quotes eld
+\end_inset
+
+linear algebra rules
+\begin_inset Quotes erd
+\end_inset
+
+ as displayed by Audacity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/application-fourier-series-05.png
+	lyxscale 25
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a_{0}+a_{1}\cos\left(\frac{2\pi}{L}x\right)+b_{1}\sin\left(\frac{2\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{2\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{2\pi}{L}x\right)+\cdots
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{2\pi}{L}t\right),\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }\quad\text{and}\quad b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{2\pi}{L}t\right),\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }
+\]
+
+\end_inset
+
+is called the 
+\series bold
+Fourier series
+\series default
+ for 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Indeed, the term Fourier series, with no qualifiers, refers to this series,
+ not the sine or cosine series.
+ As before the 
+\begin_inset Formula $a_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{m}$
+\end_inset
+
+ are called  Fourier coefficients and the functions 
+\begin_inset Formula $\sin\left(m\cdot\frac{2\pi}{L}x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\cos\left(m\cdot\frac{2\pi}{L}x\right)$
+\end_inset
+
+ are called the 
+\begin_inset Formula $m^{th}$
+\end_inset
+
+ harmonics.
+\end_layout
+
+\begin_layout Standard
+Whether any of these series converges to something useful is a deep and
+ interesting topic of analysis.
+ Generally, though, piecewise continuous functions can be approximated arbitrari
+ly closely using a finite number of terms from any one of the Fourier series.
+ Because sines and cosines are periodic, especially good approximations
+ with small numbers of harmonics can often be found for functions 
+\begin_inset Formula $f$
+\end_inset
+
+ where 
+\begin_inset Formula $f(-L)=f(L)$
+\end_inset
+
+ (for general Fourier series) or 
+\begin_inset Formula $f(0)=f(L)$
+\end_inset
+
+ (for sine or cosine series).
+\end_layout
+
+\begin_layout Standard
+It is not only functions that show some regularity or symmetry that can
+ be approximated by Fourier series.
+ The real power of Fourier analysis is to suss out the most important frequencie
+s when none are apparent.
+ Circling back to sound waves, figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:audacity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Audacity: 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.audacityteam.org/"
+target "https://www.audacityteam.org/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ shows the full 1.82 seconds of a voice saying 
+\begin_inset Quotes eld
+\end_inset
+
+linear algebra rules
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The sound wave shows no particular symmetry or regularity since the sound
+ is constantly changing throughout.
+ 
+\end_layout
+
+\begin_layout Standard
+The first 16,095 Fourier sine series coefficients were calculated.
+ Using the dominant 1, 74, 637, and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+16095
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ harmonics, best approximations were calculated.
+ The following graphs of the 
+\begin_inset Quotes eld
+\end_inset
+
+linear algebra rules
+\begin_inset Quotes erd
+\end_inset
+
+ audio and its approximations over two separate time intervals illustrate
+ how extending the basis improves the approximation.
+ F1, F74, F637, and F16095 are the approximations using the dominant 1,
+ 74, 637, and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+16095
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ harmonics, respectively.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-fourier-series-06.pdf
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-fourier-series-07.pdf
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+F16095 is barely visible beneath the original curve, suggesting that the
+ approximation is very good (which should probably be expected having used
+ so many terms).
+ However, the distance between F16095 and the original wave is about 254.4,
+ a number that may seem large.
+ Distances are relative to the function being approximated, though.
+ The norm of the original is 3493.5.
+ 
+\begin_inset Formula $d(\text{f16095},\text{original})$
+\end_inset
+
+ is only about one fourteenth (3.7%) the norm (size) of the original—not
+ bad.
+ On the other hand, the distances between the original and F1, F74, and
+ F637 are 3479.5, 3032.0, and 2084.8, respectively.
+ As their distances are similar in magnitude to the norm of the original,
+ it should be expected that they do a poor job approximating the original
+ sound wave.
+ This expectation is born out by the graphs.
+\end_layout
+
+\begin_layout Standard
+In the end, though, the sound of the reproduction should be the judge of
+ the quality of the approximation.
+ The ancillary website 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: insert website
+\end_layout
+
+\end_inset
+
+ contains all the data and playable sound files for the sounds mentioned
+ in this section as well as several others, such as boiling water and birds
+ chirping.
+ The audio corresponding to F1 is a simple computer tone and does not resemble
+ the original audio at all except that it catures the overall pitch.
+ The sound of F74 is slightly better in that it oscillates, but in no way
+ sounds like speech.
+ The words can clearly be heard behind a noisy foreground in F637, but it
+ is still a poor reproduction.
+ Think Alexander Graham Bell and his first phone call.
+ Finally, F16095 and the original audio are indistinguishable, at least
+ to my ear.
+ Have a listen!
 \end_layout
 
 \begin_layout Subsection
@@ -962,7 +1665,175 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-t
+Fourier
+\begin_inset space ~
+\end_inset
+
+series for functions 
+\begin_inset Formula $f$
+\end_inset
+
+ defined over 
+\begin_inset Formula $[-L,L]$
+\end_inset
+
+, the series
+\begin_inset Formula 
+\[
+a_{0}+a_{1}\cos\left(\frac{2\pi}{L}x\right)+b_{1}\sin\left(\frac{2\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{2\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{2\pi}{L}x\right)+\cdots
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{2\pi}{L}t\right),\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }\quad\text{and}\quad b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{2\pi}{L}t\right),\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Fourier
+\begin_inset space ~
+\end_inset
+
+sine
+\begin_inset space ~
+\end_inset
+
+series for functions 
+\begin_inset Formula $f$
+\end_inset
+
+ defined over 
+\begin_inset Formula $[0,L]$
+\end_inset
+
+, the series
+\begin_inset Formula 
+\[
+b_{1}\sin\left(\frac{\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{\pi}{L}x\right)+\cdots
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Fourier
+\begin_inset space ~
+\end_inset
+
+cosine
+\begin_inset space ~
+\end_inset
+
+series for functions 
+\begin_inset Formula $f$
+\end_inset
+
+ defined over 
+\begin_inset Formula $[0,L]$
+\end_inset
+
+, the series
+\begin_inset Formula 
+\[
+a_{0}+a_{1}\cos\left(\frac{\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{\pi}{L}x\right)+\cdots
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{\pi}{L}t\right),\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Fourier
+\begin_inset space ~
+\end_inset
+
+coefficients the 
+\begin_inset Formula $a_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{m}$
+\end_inset
+
+ of a Fourier series, Fourier sine series, or Fourier cosine series.
+\end_layout
+
+\begin_layout Description
+harmonics the functions 
+\begin_inset Formula $\cos\left(m\cdot\frac{2\pi}{L}t\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\sin\left(m\cdot\frac{2\pi}{L}x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\left(m\cdot\frac{\pi}{L}t\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\sin\left(m\cdot\frac{\pi}{L}t\right)$
+\end_inset
+
+ appearing in Fourier series are called 
+\begin_inset Formula $m^{th}$
+\end_inset
+
+ harmonics, or simply harmonics when not referring to any particular frequency.
+\end_layout
+
+\begin_layout Description
+approximations piecewise continuous functions can be approximated arbitrarily
+ closely using a finite number of terms from any one of the Fourier series.
+ Especially good approximations with small numbers of harmonics can often
+ be found for smooth functions 
+\begin_inset Formula $f$
+\end_inset
+
+ where 
+\begin_inset Formula $f(-L)=f(L)$
+\end_inset
+
+ (for general Fourier series) or 
+\begin_inset Formula $f(0)=f(L)$
+\end_inset
+
+ (for sine or cosine series).
+\end_layout
+
+\begin_layout Description
+Fourier
+\begin_inset space ~
+\end_inset
+
+analysis the process of determining a large selection of Fourier coefficients
+ with the purpose of identifying those with some particular characteristic.
 \end_layout
 
 \begin_layout Standard
@@ -1001,6 +1872,10 @@ Argue that
 \end_layout
 
 \begin_layout Enumerate
+Heat equation stuff.
+\end_layout
+
+\begin_layout Enumerate
 Show (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1014,6 +1889,58 @@ noprefix "false"
 ).
 \end_layout
 
+\begin_layout Enumerate
+Why is 
+\begin_inset Formula $m=0$
+\end_inset
+
+ not included in the family of harmonics for Fourier series?
+\end_layout
+
+\begin_layout Enumerate
+Show that, in the inner product space 
+\begin_inset Formula $V_{[0,L]}$
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle =\frac{L}{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $m=1,2,\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Show that, in the inner product space 
+\begin_inset Formula $V_{[0,L]}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle 1,1\right\rangle =L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \cos\left(m\cdot\frac{\pi}{L}t\right),\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle =\frac{L}{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $m=1,2,\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
