@@ -1,0 +1,48 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 19.07.0 ] */
+/* [wxMaxima: input   start ] */
+solns(n):=block([r,k,eq,eqsolve,s,rsolve],
+    array(r,length(n)),
+    r[1]:z/((n[1]+1)*z/2+(n[1]-1)/2),
+    for k:2 thru length(n) do
+        r[k]:r[k-1]*((n[k-1]-1)*z/2+(n[k-1]+1)/2)/((n[k]+1)*z/2+(n[k]-1)/2),
+    s:sum(r[k],k,1,length(n)),
+    eq:s=1,
+    eqsolve:solve(eq),
+    print(eqsolve),
+    rsolve:ev(realroots(eqsolve[length(eqsolve)]),numer),
+    for k:1 thru length(n) do
+        print(subst(rsolve[1],r[k])),
+    rsolve
+);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solns([3,3]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solns([3,3,3]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solns([3,3,3,3]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solns([5,3,5,3]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solns([5,3,7,3,5,9]);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 19.07.0"$

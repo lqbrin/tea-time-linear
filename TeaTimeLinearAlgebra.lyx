@@ -870,16 +870,6 @@ status open
 
 \begin_layout Plain Layout
 
-% Fractals (rep-tiles)
-\end_layout
-
-\begin_layout Plain Layout
-
-% Fourier Series
-\end_layout
-
-\begin_layout Plain Layout
-
 % Isometries of the Square/Cube (preview of abstract algebra)?
 \end_layout
 
@@ -948,17 +938,12 @@ status open
 
 \begin_layout Plain Layout
 
-% Discrete dynamical systems
+% Discrete dynamical systems / Difference Equations
 \end_layout
 
 \begin_layout Plain Layout
 
 % Leontief input-output
-\end_layout
-
-\begin_layout Plain Layout
-
-% Difference Equations
 \end_layout
 
 \end_inset
@@ -990,6 +975,26 @@ filename "application-markov-chain.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-fourier-series.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-discrete-dynamical-systems.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "application-rep-tiles.lyx"
 
 \end_inset
 
