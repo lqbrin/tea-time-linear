@@ -100,7 +100,459 @@ Rep-tiles []
 \end_layout
 
 \begin_layout Standard
-U
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: get permission for the Escher.
+ Add information about copyright.
+ requested from www.mcescher.com
+\end_layout
+
+\end_inset
+
+The floors of kitchens, bathrooms, museums, and other spaces are more often
+ than not tiled in some fashion.
+ Flat ceramic or natural stone tiles are placed together in a regular pattern,
+ sometimes more artistically than others.
+ The tiles are laid flat without overlapping and covering the whole floor.
+ Perhaps the most common tile shape for this purpose is the square.
+ It is easy to design a covering of a floor using squares of the same size.
+ Squares are flexible and simple this way.
+ More fanciful floor coverings are made of rectangular, triangular, hexagonal,
+ and octagonal tiles.
+ Fitting these various shapes together to cover a floor can be an artistic
+ endeavor, limited mostly by imagination.
+\end_layout
+
+\begin_layout Standard
+Tessellations are the mathematical equivalent of floor tiling.
+ Any piecing together of a set of shapes, covering a flat surface without
+ overlapping is called a tiling or tessellation.
+ As with floors, perhaps the simplest way to tile, or tessellate, the plane
+ is with squares.
+ Any flat surface can be covered by fitting squares of the same size together
+ at their corners, maintaining parallel sides, just like the pattern seen
+ on graph paper.
+ The same can be done with equilateral triangles and regular hexagons.
+ These coverings are called regular tesselations, samples shown here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-01.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Irregular polygons tile the plane just as well.
+ Parallelograms, pentagons, convex and concave, can all be fitted to tessellatio
+n, samples shown here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-02.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+M.C.
+ Escher famously made tessellation an artform.
+ Tilings with irregularly shaped birds, fish, human figures, and other natural
+ shapes appear in many of his most famous creations.
+ See figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:escher"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, for example.
+ One way to create Escher-esque tessellations is to start with a regular
+ tile and modify its perimeter in a symmetric way, preserving its tessellating
+ nature.
+ The third tessellation of the diagram above is created from squares where
+ each side is replaced by a zig-zag.
+ Among the infinite possibilities are the two shown here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-03.pdf
+	lyxscale 44
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Each side of each tile has 180 degree rotational symmetry.
+ The tile created from the equilateral triangle has 120 degree rotational
+ symmetry as a whole, and the tile created from the square has 90 degree
+ rotational symmetry as a whole.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:escher"
+
+\end_inset
+
+M.C.
+ Escher's System X(e)
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/escher-systemXe.png
+	lyxscale 50
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Some tiles are doubly tiling.
+ Not only can they be used to tile the plane, but they can also be fitted
+ together to tile larger copies of themselves! These tiles are called rep-tiles,
+ short for self-replicating tiles.
+ Again, the square provides an immediate example.
+ Four squares fitted together at a corner, sides parallel to one another
+ form a square with side length twice the original (and four times the area).
+ Equilateral triangles, and in fact all triangles, are rep-tiles.
+ Four of them can be pieced together, three in the same orientation and
+ the fourth rotated 180 degrees.
+ Regular hexagons are not rep-tiles as no finite number of copies of a hexagon
+ can be fitted together (as tiles, without overlap) to form a hexagon.
+ However, there are irregular hexagons that are rep-tiles.
+ One such hexagon has a symmetric L shape—three squares glued together in
+ an ell.
+ To see that they are self-replicating, the following diagram shows four
+ of each shape fitted together to form a larger replica.
+ We have already seen that these shapes tessellate the plane, so they are
+ indeed rep-tiles.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-04.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As these rep-tiles are polygons, rigorous mathematical descriptions of each
+ are easily within reach.
+ A square with given side length defines that shape.
+ The three side lengths of a triangle define its shape.
+ The height of the L-shape with an appropriate accompanying name (though
+ I'm not sure there is one) would suffice to describe the last one.
+ In the absence of a good name, perhaps the height with a description such
+ as a square with one quadrant missing will do as a complete description.
+ Linear algebra provides language to do better!
+\end_layout
+
+\begin_layout Standard
+After building a larger replica of a rep-tile, one can switch perspecives
+ and look at the construction as a dissection of the larger rep-tile.
+ From this viewpoint, rep-tiles are tiles that tessellate the plane and
+ admit a dissection into finitely many similar copies.
+ All the figures of the previous diagram can be seen from this vantage.
+ The larger square is made up of four smaller squares.
+ The triangle is broken up into four similar triangles.
+ The L-shape is likewise divided into four smaller copies of itself.
+\end_layout
+
+\begin_layout Standard
+By imposing a set of axes on any of these figures, rigorous mathematical
+ description of the figures are available as sets of affine transformations—comp
+ositions of linear transformations and translations.
+ Again beginning with the square, putting its lower left corner at the origin
+ and giving it side length 2 leads to the following set of transformations.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-05.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each transformation maps the whole square (the one with opposite corners
+ 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+) to one of the parts of its dissection.
+ You should recognize the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices as those accomplishing scaling by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ in both horizontal and vertical directions.
+ The addition of 
+\begin_inset Formula $2\times1$
+\end_inset
+
+ vectors accomplishes various translations.
+ 
+\begin_inset Formula $T_{4}\left(\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]\right)=\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{4}\left(\left[\begin{array}{c}
+2\\
+2
+\end{array}\right]\right)=\left[\begin{array}{c}
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+, for example.
+ The image of the 
+\begin_inset Formula $2$
+\end_inset
+
+ by 
+\begin_inset Formula $2$
+\end_inset
+
+ square under 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ is the purple square.
+ Contracting the 
+\begin_inset Formula $2$
+\end_inset
+
+ by 
+\begin_inset Formula $2$
+\end_inset
+
+ square by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ and then translating the contracted copy right 1 unit lands the image of
+ the larger square (well, squarely) on top of the purple square, the bottom
+ right square of the dissection.
+ Letting 
+\begin_inset Formula $S$
+\end_inset
+
+ be the 
+\begin_inset Formula $2$
+\end_inset
+
+ by 
+\begin_inset Formula $2$
+\end_inset
+
+ square with opposite corners 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+, we then have 
+\begin_inset Formula 
+\begin{equation}
+S=T_{1}(S)\cup T_{2}(S)\cup T_{3}(S)\cup T_{4}(S).\label{eq:hutchinson-square}
+\end{equation}
+
+\end_inset
+
+A theorem of Hutchinson
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hutchinson"
+literal "false"
+
+\end_inset
+
+ asserts that 
+\begin_inset Formula $S$
+\end_inset
+
+ is the only compact set with this property.
+ As such, 
+\begin_inset Formula $S$
+\end_inset
+
+ is defined by it.
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ is the sole compact set satisfying (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hutchinson-square"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+A special case of Hutchinson's theorem states that, more generally, if 
+\begin_inset Formula $\mathcal{C}=\{C_{1},C_{2},\ldots,C_{n}\}$
+\end_inset
+
+ is a set of similtudes in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ with scale factors less than one, then there is exactly one compact set
+ 
+\begin_inset Formula $K$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathcal{H}_{\mathcal{C}}(K)=K$
+\end_inset
+
+ where, for any subset 
+\begin_inset Formula $A$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+\mathcal{H}_{\mathcal{C}}(A)=C_{1}(A)\cup C_{2}(A)\cup\cdots\cup C_{n}(A).\label{eq:hutchinson-operator}
+\end{equation}
+
+\end_inset
+
+Moreover, 
+\begin_inset Formula 
+\[
+\lim_{k\to\infty}\mathcal{H}_{\mathcal{C}}^{\circ k}(A)=K
+\]
+
+\end_inset
+
+for any compact set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Not only does the theorem assert the existence and uniqueness of the set
+ 
+\begin_inset Formula $K$
+\end_inset
+
+, it gives a way to construct it.
+\end_layout
+
+\begin_layout Standard
+Applying this theorem to the set 
+\begin_inset Formula $\mathcal{T}=\{T_{1},T_{2},T_{3},T_{4}\}$
+\end_inset
+
+ we can forget where the transformations came from and recover the square
+ from 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+.
+ All we need is a compact set 
+\begin_inset Formula $A$
+\end_inset
+
+ and a lot of patience! The square is the limit of the sequence 
+\begin_inset Formula $\mathcal{H}_{\mathcal{T}}(A),\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}(A)\right),\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}(A)\right)\right),\ldots$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsection
