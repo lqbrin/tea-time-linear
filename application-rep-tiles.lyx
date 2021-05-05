@@ -299,13 +299,20 @@ Some tiles are doubly tiling.
 \begin_layout Standard
 As these rep-tiles are polygons, rigorous mathematical descriptions of each
  are easily within reach.
- A square with given side length defines that shape.
- The three side lengths of a triangle define its shape.
- The height of the L-shape with an appropriate accompanying name (though
- I'm not sure there is one) would suffice to describe the last one.
- In the absence of a good name, perhaps the height with a description such
- as a square with one quadrant missing will do as a complete description.
- Linear algebra provides language to do better!
+ A circle is described as the locus of points equidistant from a given point.
+ With this description, a point, and a distance, exactly one circle is determine
+d and it can be sketched from this information.
+ A square is described as a quadrilateral with four congruent sides and
+ four congruent interior angles.
+ With this description and the locations of a pair of opposite vertices,
+ exactly one square is determined and it can be sketched from this information.
+ A triangle is a three-sided polygon.
+ With this description and the locations of its vertices, exactly one triangle
+ is determined and it can be sketched from this information.
+ The L-shaped tile is harder to describe and harder still to provide sufficient
+ information for drawing a particular such tile.
+ Linear algebra provides a common language to describe all rep-tiles—transformat
+ions.
 \end_layout
 
 \begin_layout Standard
@@ -314,17 +321,28 @@ After building a larger replica of a rep-tile, one can switch perspecives
  From this viewpoint, rep-tiles are tiles that tessellate the plane and
  admit a dissection into finitely many similar copies.
  All the figures of the previous diagram can be seen from this vantage.
- The larger square is made up of four smaller squares.
- The triangle is broken up into four similar triangles.
- The L-shape is likewise divided into four smaller copies of itself.
+ The large square is made up of four smaller squares.
+ The large triangle is broken up into four similar triangles.
+ The large L-shape is likewise divided into four smaller copies of itself.
 \end_layout
 
 \begin_layout Standard
 By imposing a set of axes on any of these figures, rigorous mathematical
- description of the figures are available as sets of affine transformations—comp
-ositions of linear transformations and translations.
- Again beginning with the square, putting its lower left corner at the origin
- and giving it side length 2 leads to the following set of transformations.
+ descriptions of the figures are available as sets of affine transformations—com
+positions of linear transformations and translations.
+ Any placement of the axes—or from the perspective of the square, putting
+ it anywhere in the plane—will do.
+ We only need a frame of reference.
+ For simplicity, if we arrange for opposite corners of the square to coincide
+ with 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+, the following diagram shows the transformations that determine the square.
 \end_layout
 
 \begin_layout Standard
@@ -354,7 +372,7 @@ Each transformation maps the whole square (the one with opposite corners
 \begin_inset Formula $2\times2$
 \end_inset
 
- matrices as those accomplishing scaling by a factor of 
+ matrices as scaling by a factor of 
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
@@ -363,12 +381,28 @@ Each transformation maps the whole square (the one with opposite corners
 \begin_inset Formula $2\times1$
 \end_inset
 
- vectors accomplishes various translations.
+ vectors provide translations.
+ In words, 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ can be described as scaling by 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ horizontally and vertically followed by translation (shifting) 1 unit horizonta
+lly.
  
 \begin_inset Formula $T_{4}\left(\left[\begin{array}{c}
 0\\
 0
 \end{array}\right]\right)=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]=\left[\begin{array}{c}
 1\\
 0
 \end{array}\right]$
@@ -379,13 +413,19 @@ Each transformation maps the whole square (the one with opposite corners
 2\\
 2
 \end{array}\right]\right)=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]+\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]=\left[\begin{array}{c}
 2\\
 1
 \end{array}\right]$
 \end_inset
 
 , for example.
- The image of the 
+ In fact, the image of the 
 \begin_inset Formula $2$
 \end_inset
 
@@ -397,8 +437,7 @@ Each transformation maps the whole square (the one with opposite corners
 \begin_inset Formula $T_{4}$
 \end_inset
 
- is the purple square.
- Contracting the 
+ is the purple square: contracting the 
 \begin_inset Formula $2$
 \end_inset
 
@@ -411,7 +450,7 @@ Each transformation maps the whole square (the one with opposite corners
 \end_inset
 
  and then translating the contracted copy right 1 unit lands the image of
- the larger square (well, squarely) on top of the purple square, the bottom
+ the larger square (well, squarely) on top of the purple square—the bottom
  right square of the dissection.
  Letting 
 \begin_inset Formula $S$
@@ -433,10 +472,28 @@ Each transformation maps the whole square (the one with opposite corners
 \begin_inset Formula $(2,2)$
 \end_inset
 
-, we then have 
+, we therefore have 
+\begin_inset Formula $T_{4}(S)=\text{the purple square}$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula $T_{1}(S)=\text{the orange square}$
+\end_inset
+
+ (the bottom left square of the dissection); 
+\begin_inset Formula $T_{2}(S)=\text{the blue square}$
+\end_inset
+
+ (the top left square of the dissection); and 
+\begin_inset Formula $T_{3}(S)=\text{the green square}$
+\end_inset
+
+ (the top right square of the dissection).
+ Altogether, then
 \begin_inset Formula 
 \begin{equation}
-S=T_{1}(S)\cup T_{2}(S)\cup T_{3}(S)\cup T_{4}(S).\label{eq:hutchinson-square}
+T_{1}(S)\cup T_{2}(S)\cup T_{3}(S)\cup T_{4}(S)=S.\label{eq:hutchinson-square}
 \end{equation}
 
 \end_inset
@@ -454,16 +511,15 @@ literal "false"
 \end_inset
 
  is the only compact set with this property.
- As such, 
+ In other words, 
+\begin_inset Formula $T_{1},T_{2},T_{3},T_{4}$
+\end_inset
+
+ determine 
 \begin_inset Formula $S$
 \end_inset
 
- is defined by it.
- 
-\begin_inset Formula $S$
-\end_inset
-
- is the sole compact set satisfying (
+ via equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:hutchinson-square"
@@ -474,21 +530,34 @@ noprefix "false"
 \end_inset
 
 ).
- 
+ These four transformations provide a complete description of the square
+ with opposite corners at 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-A special case of Hutchinson's theorem states that, more generally, if 
+A special case of Hutchinson's theorem states that if 
 \begin_inset Formula $\mathcal{C}=\{C_{1},C_{2},\ldots,C_{n}\}$
 \end_inset
 
- is a set of similtudes in 
+ is any set of similtudes in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
  with scale factors less than one, then there is exactly one compact set
  
 \begin_inset Formula $K$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
  such that 
@@ -503,7 +572,11 @@ A special case of Hutchinson's theorem states that, more generally, if
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
-,
+, 
+\begin_inset Formula $\mathcal{H}_{\mathcal{C}}$
+\end_inset
+
+ is defined by 
 \begin_inset Formula 
 \begin{equation}
 \mathcal{H}_{\mathcal{C}}(A)=C_{1}(A)\cup C_{2}(A)\cup\cdots\cup C_{n}(A).\label{eq:hutchinson-operator}
@@ -537,8 +610,8 @@ Applying this theorem to the set
 \begin_inset Formula $\mathcal{T}=\{T_{1},T_{2},T_{3},T_{4}\}$
 \end_inset
 
- we can forget where the transformations came from and recover the square
- from 
+, even if we completely forget where the transformations came from, we can
+ recover the square from 
 \begin_inset Formula $\mathcal{T}$
 \end_inset
 
@@ -551,8 +624,337 @@ Applying this theorem to the set
 \begin_inset Formula $\mathcal{H}_{\mathcal{T}}(A),\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}(A)\right),\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}(A)\right)\right),\ldots$
 \end_inset
 
+, so we can generate the square by iterating 
+\begin_inset Formula $\mathcal{H}_{\mathcal{T}}$
+\end_inset
+
+ on 
+\shape italic
+any
+\shape default
+ compact set 
+\begin_inset Formula $A$
+\end_inset
+
 .
- 
+ The first few terms of this sequence are shown below, where 
+\begin_inset Formula $A$
+\end_inset
+
+ takes the shape of a kitty
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kitty image downloaded from 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://openclipart.org/detail/292277/cute-cat"
+target "https://openclipart.org/detail/292277/cute-cat"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathcal{T}}(A)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}(A)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}\left(\mathcal{H}_{\mathcal{T}}(A)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-06.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-07.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-08.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-09.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Granted that was a heap of trouble to mathematically describe a square.
+ It is much easier to list a pair of opposite vertices.
+ On the other hand, we now have a language to describe any rep-tile as a
+ set of transformations.
+\end_layout
+
+\begin_layout Standard
+Can you 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Pumpkin image downloaded from 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://openclipart.org/detail/86665/plain-pumpkin"
+target "https://openclipart.org/detail/86665/plain-pumpkin"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathcal{C}}(A)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathcal{C}}\left(\mathcal{H}_{\mathcal{C}}(A)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathcal{C}}\left(\mathcal{H}_{\mathcal{C}}\left(\mathcal{H}_{\mathcal{C}}(A)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-10.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-11.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-12.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-13.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
