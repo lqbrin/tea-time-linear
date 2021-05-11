@@ -115,7 +115,8 @@ The floors of kitchens, bathrooms, museums, and other spaces are more often
  than not tiled in some fashion.
  Flat ceramic or natural stone tiles are placed together in a regular pattern,
  sometimes more artistically than others.
- The tiles are laid flat, covering the whole floor without overlapping.
+ In any case, the tiles are laid flat, covering the whole floor without
+ overlapping.
  Perhaps the most common tile shape for this purpose is the square.
  It is easy to design a covering of a floor using squares of the same size.
  Squares are flexible and simple this way.
@@ -268,11 +269,12 @@ rep-tiles
 \series default
 , short for self-replicating tiles.
  Again, the square provides an immediate example.
- Four squares fitted together at a corner, sides parallel to one another
- form a square with side length twice the original (and four times the area).
+ Four congruent squares fitted together at a corner, sides parallel to one
+ another form a square with side length twice the original (and four times
+ the area).
  Equilateral triangles, and in fact all triangles, are rep-tiles.
- Four of them can be pieced together, three in the same orientation and
- the fourth rotated 180 degrees, to form a larger copy.
+ Four congruent copies can be pieced together, three in the same orientation
+ and the fourth rotated 180 degrees, to form a larger copy.
  Regular hexagons are not rep-tiles as no finite number of copies of a hexagon
  can be fitted together (as tiles, without overlap) to form a hexagon.
  However, there are irregular hexagons that are rep-tiles.
@@ -302,7 +304,7 @@ As these rep-tiles are polygons, rigorous mathematical descriptions of each
  are easily within reach.
  A square is described as a quadrilateral with four congruent sides and
  four congruent interior angles.
- With this description and the locations of one pair of opposite vertices,
+ With this description and the location of one pair of opposite vertices,
  exactly one square is determined and it can be sketched from this information.
  A triangle is a three-sided polygon.
  With this description and the locations of its vertices, exactly one triangle
@@ -354,7 +356,7 @@ begin{digression}{Solomon Golomb}
 
 \end_inset
 
-Solomon Golomb is often credited with coining the term 
+Solomon Golomb is credited with coining the term 
 \shape italic
 rep-tile
 \shape default
@@ -404,6 +406,17 @@ it can be dissected into
 \end_inset
 
 .
+ Curiously, Martin Gardner
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardner"
+literal "false"
+
+\end_inset
+
+ credits Golomb with laying the foundation for the study of rep-tiles and
+ inventing the term in a series of private papers, all in his article appearing
+ more than a year earlier than Golomb's!
 \begin_inset ERT
 status open
 
@@ -565,7 +578,7 @@ lly.
 \begin_inset Formula $(2,2)$
 \end_inset
 
-, we therefore have 
+, we thereby have 
 \begin_inset Formula $T_{4}(S)=\text{the purple square}$
 \end_inset
 
@@ -647,12 +660,17 @@ noprefix "false"
 \begin_inset Formula $(2,2)$
 \end_inset
 
- and are 
+.
+ Incidentally, each transformation 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+ is a 
 \series bold
-similitudes
+similitude
 \series default
-—rigid transformations (rotations, reflections, and translations) composed
- with 
+—a rigid transformation (rotation, reflection, translation, or composition
+ thereof) composed with 
 \series bold
 dilation
 \series default
@@ -1310,7 +1328,7 @@ noprefix "false"
 \begin_inset Formula $\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{2}\right)^{2}=1$
 \end_inset
 
-, a fact that is not hard to verify.
+, an equality that is not hard to verify.
  As a matter of vocabulary, the set of similitudes associated with a rep-tile
  is an 
 \series bold
@@ -1731,7 +1749,28 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-A
+Show that the 
+\begin_inset Formula $1,2,\sqrt{5}$
+\end_inset
+
+ triangle is rep-5 two different ways (pinwheel tiling and not).
+\end_layout
+
+\begin_layout Enumerate
+Show that the 30-60-90 triangle is rep-3.
+\end_layout
+
+\begin_layout Enumerate
+Trapezoids.
+\end_layout
+
+\begin_layout Enumerate
+(i) Fixed points of affine transformations; and (ii) using them to help
+ determine rep-tiles of an IFS.
+\end_layout
+
+\begin_layout Enumerate
+Find IFS of dragon–put three line segments and a set of axes to help.
 \end_layout
 
 \begin_layout Standard

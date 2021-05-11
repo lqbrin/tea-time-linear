@@ -100,6 +100,241 @@ Discrete Dynamical Systems []
 \end_layout
 
 \begin_layout Standard
+You have just finished chopping, slicing, mixing, blending, marinating,
+ layering, and otherwise preparing your favorite dish.
+ You are ready to place it in the oven when you realize it has not been
+ preheated.
+ Preheat now, or put your assembled dish in, start the oven and guess how
+ long it will take to properly bake? Neither! Model the situation with a
+ discrete dynamical system and know just how long to put it in a cold oven.
+\end_layout
+
+\begin_layout Standard
+Next time you bake brownies, you might try this experiment.
+ It requires an over thermometer with a probe that can be inserted into
+ the brownie mix, preferably connected to a console that sits outside the
+ oven, displaying the inside temperature.
+ First, gather the preheating characteristics of the oven.
+ Place the probe in the empty oven approximately where you will later put
+ the brownies.
+ Note the temperature of the probe (air inside the oven) and begin preheating
+ the oven.
+ Likely the recipe will require a 350 
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+F or 175 
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C oven.
+ Record the thermometer reading every 30 seconds until the oven reaches
+ the target temperature.
+\end_layout
+
+\begin_layout Standard
+Have a look at the graph of temperature versus time.
+ If your oven is like mine, you will get a curve that looks something like
+ this.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/brownies.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Curiously there is essentially no heating during the first 90 seconds, after
+ which the temperature increases about 20 degrees per minute—in a very steadily
+ linear fashion.
+ Modeling this behavior is straightforward.
+\end_layout
+
+\begin_layout Standard
+Remove the probe from the oven, let it cool, and let the oven return to
+ its preheated temperature.
+ When the probe has cooled to room temperature and the brownie mix has been
+ poured into the brownie pan, insert the probe into the brownie mix.
+ Record its internal temperature and put the brownies in the preheated oven.
+ Record the thermometer reading every minute until the brownies are done.
+ You will notice the heating is not linear.
+ 
+\end_layout
+
+\begin_layout Standard
+Newton's law of cooling, which applies equally to heating, suggests that
+ the change in temperature of a body is approximtely proportional to the
+ difference between the temperature of the body and the temperature of its
+ surroundings, ambient temperature.
+ As an equation,
+\begin_inset Formula 
+\[
+\Delta T\approx k(M-T).
+\]
+
+\end_inset
+
+If brownies obey this law, plotting the temperature over time will reveal
+ a concave down graph.
+ As the brownies' temperature increases, the difference between ambient
+ (oven) temperature and brownie temperature, 
+\begin_inset Formula $(M-T)$
+\end_inset
+
+, decreases.
+ In turn, the change in temperature over a fixed amount of time, 
+\begin_inset Formula $\Delta T$
+\end_inset
+
+, will also decrease.
+ This is, at least as a general characteristic, exactly what I found!
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/brownies2.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, to see if the brownies truly follow Newton's law of cooling, a
+ plot of 
+\begin_inset Formula $M-T$
+\end_inset
+
+ versus 
+\begin_inset Formula $\Delta T$
+\end_inset
+
+ will reveal a straight line passing through the origin, just as any two
+ directly related variables will.
+ Alas, this is not what I found.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/brownies3.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The graph looks somewhat linear, but clearly would not pass through the
+ origin if extended to 
+\begin_inset Formula $T-M=0$
+\end_inset
+
+.
+ Unfortunately, this is a critical feature of the law.
+ When there is no difference between the temperature of a body and its surroundi
+ngs, the body will neither heat nor cool.
+ You can leave a glass of water on the counter for hours, days, or weeks.
+ Its temperature stabilizes at room temperature.
+\end_layout
+
+\begin_layout Standard
+Needing a relationship where the dependent variable and the independent
+ variable are simultaneously zero, perhaps we can model the situation with
+ an equation of the form 
+\begin_inset Formula 
+\[
+\Delta T=k(M-T)^{\alpha}.
+\]
+
+\end_inset
+
+Taking the logarithm of both sides, 
+\begin_inset Formula $\ln(\Delta T)=\ln(k)+\alpha\ln(M-T)$
+\end_inset
+
+.
+ Setting 
+\begin_inset Formula $y=\ln(\Delta T)$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=\ln(k)$
+\end_inset
+
+, and 
+\begin_inset Formula $x=\ln(M-T)$
+\end_inset
+
+, we seek 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ such that 
+\begin_inset Formula $y=\beta+\alpha x$
+\end_inset
+
+, a linear relationship between 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Linear regression (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Regression"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) should do the trick.
+ 
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+F
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Useful results of search 
 \begin_inset Quotes eld
 \end_inset
@@ -141,31 +376,6 @@ LatexCommand href
 name "https://www.math.umd.edu/~tjp/131%2014.0%20Discrete%20Dynamical%20Systems.pdf"
 target "https://www.math.umd.edu/~tjp/131%2014.0%20Discrete%20Dynamical%20Systems.pdf"
 literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Key Concepts
-\end_layout
-
-\begin_layout Description
-F
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-startexercises 
-\end_layout
 
 \end_inset
 
