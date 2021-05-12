@@ -119,12 +119,12 @@ Next time you bake brownies, you might try this experiment.
  the brownies.
  Note the temperature of the probe (air inside the oven) and begin preheating
  the oven.
- Likely the recipe will require a 350 
-\begin_inset Formula $^{\circ}$
+ Likely the recipe will require a 
+\begin_inset Formula $350^{\circ}$
 \end_inset
 
-F or 175 
-\begin_inset Formula $^{\circ}$
+F or 
+\begin_inset Formula $175^{\circ}$
 \end_inset
 
 C oven.
@@ -136,6 +136,27 @@ C oven.
 Have a look at the graph of temperature versus time.
  If your oven is like mine, you will get a curve that looks something like
  this.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Data, graphs, and calculations for this entire discussion are available
+ in a spreadsheet at the ancillary site.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Make data available, insert URL here.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -151,9 +172,14 @@ Have a look at the graph of temperature versus time.
 \begin_layout Standard
 \noindent
 Curiously there is essentially no heating during the first 90 seconds, after
- which the temperature increases about 20 degrees per minute—in a very steadily
- linear fashion.
- Modeling this behavior is straightforward.
+ which the temperature increases in a very steadily linear fashion at about
+ 
+\begin_inset Formula $21^{\circ}$
+\end_inset
+
+F per minute.
+ We will use this observation to model the temperature of the oven during
+ preheating.
 \end_layout
 
 \begin_layout Standard
@@ -169,7 +195,7 @@ Remove the probe from the oven, let it cool, and let the oven return to
 
 \begin_layout Standard
 Newton's law of cooling, which applies equally to heating, suggests that
- the change in temperature of a body is approximtely proportional to the
+ the change in temperature of a body is approximately proportional to the
  difference between the temperature of the body and the temperature of its
  surroundings, ambient temperature.
  As an equation,
@@ -193,7 +219,7 @@ If brownies obey this law, plotting the temperature over time will reveal
 \end_inset
 
 , will also decrease.
- This is, at least as a general characteristic, exactly what I found!
+ This is, at least as a general characteristic, exactly what the data provide!
 \end_layout
 
 \begin_layout Standard
@@ -207,8 +233,8 @@ If brownies obey this law, plotting the temperature over time will reveal
 \end_layout
 
 \begin_layout Standard
-However, to see if the brownies truly follow Newton's law of cooling, a
- plot of 
+However, if the brownies truly follow Newton's law of cooling, a plot of
+ 
 \begin_inset Formula $M-T$
 \end_inset
 
@@ -218,7 +244,7 @@ However, to see if the brownies truly follow Newton's law of cooling, a
 
  will reveal a straight line passing through the origin, just as any two
  directly related variables will.
- Alas, this is not what I found.
+ Alas this is not what the data suggest.
 \end_layout
 
 \begin_layout Standard
@@ -233,69 +259,22 @@ However, to see if the brownies truly follow Newton's law of cooling, a
 
 \begin_layout Standard
 \noindent
-The graph looks somewhat linear, but clearly would not pass through the
+The scatterplot looks quite linear, but clearly would not pass through the
  origin if extended to 
-\begin_inset Formula $T-M=0$
+\begin_inset Formula $M-T=0$
 \end_inset
 
 .
  Unfortunately, this is a critical feature of the law.
  When there is no difference between the temperature of a body and its surroundi
 ngs, the body will neither heat nor cool.
- You can leave a glass of water on the counter for hours, days, or weeks.
- Its temperature stabilizes at room temperature.
+ Laying a glass of water on the counter for hours, days, or weeks, it will
+ remain at room temperature for the duration.
 \end_layout
 
 \begin_layout Standard
-Needing a relationship where the dependent variable and the independent
- variable are simultaneously zero, perhaps we can model the situation with
- an equation of the form 
-\begin_inset Formula 
-\[
-\Delta T=k(M-T)^{\alpha}.
-\]
-
-\end_inset
-
-Taking the logarithm of both sides, 
-\begin_inset Formula $\ln(\Delta T)=\ln(k)+\alpha\ln(M-T)$
-\end_inset
-
-.
- Setting 
-\begin_inset Formula $y=\ln(\Delta T)$
-\end_inset
-
-, 
-\begin_inset Formula $\beta=\ln(k)$
-\end_inset
-
-, and 
-\begin_inset Formula $x=\ln(M-T)$
-\end_inset
-
-, we seek 
-\begin_inset Formula $\alpha$
-\end_inset
-
- and 
-\begin_inset Formula $\beta$
-\end_inset
-
- such that 
-\begin_inset Formula $y=\beta+\alpha x$
-\end_inset
-
-, a linear relationship between 
-\begin_inset Formula $y$
-\end_inset
-
- and 
-\begin_inset Formula $x$
-\end_inset
-
-.
- Linear regression (section 
+Nonetheless, this is what the data are telling us, law or no law.
+ We apply linear regression (section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Linear-Regression"
@@ -305,8 +284,500 @@ noprefix "false"
 
 \end_inset
 
-) should do the trick.
+) to the data, deriving a model of the from 
+\begin_inset Formula $\Delta T=\alpha_{0}+\alpha_{1}(M-T)$
+\end_inset
+
+ that applies when 
+\begin_inset Formula $146^{\circ}\text{F}\leq M-T\leq284^{\circ}\text{F}$
+\end_inset
+
+.
+ The normal equations are
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+26 & 4936\\
+4936 & 977404
+\end{array}\right]\left[\begin{array}{c}
+\alpha_{0}\\
+\alpha_{1}
+\end{array}\right]=\left[\begin{array}{c}
+139\\
+30395
+\end{array}\right]
+\]
+
+\end_inset
+
+and have solution 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+\alpha_{0}\\
+\alpha_{1}
+\end{array}\right]=\left[\begin{array}{cc}
+26 & 4936\\
+4936 & 977404
+\end{array}\right]^{-1}\left[\begin{array}{c}
+139\\
+30395
+\end{array}\right]=\left[\begin{array}{c}
+-13.516\\
+.099356
+\end{array}\right].
+\]
+
+\end_inset
+
+Hence the temperature of the brownies can reasonably be modeled by 
+\begin_inset Formula $\Delta T=-13.516+.099356(M-T)$
+\end_inset
+
+.
+ The graph here illustrates the reasonableness of this model.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/brownies4.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Understanding that Newton's law of cooling only applies for 
+\begin_inset Quotes eld
+\end_inset
+
+small
+\begin_inset Quotes erd
+\end_inset
+
+ temperature differences we can only conclude that for our brownies the
  
+\begin_inset Formula $350^{\circ}$
+\end_inset
+
+F oven provides a temperature difference outside the range of 
+\begin_inset Quotes eld
+\end_inset
+
+small
+\begin_inset Quotes erd
+\end_inset
+
+.
+ To understand the heating of brownies placed in a cold oven, though, we
+ need a model for small temperature differences.
+ Without any further data, we will assume that Newton's law of cooling applies
+ at temperature differences less than 
+\begin_inset Formula $146^{\circ}$
+\end_inset
+
+F (the smallest observed temperature difference).
+ According to our model, at 
+\begin_inset Formula $M-T=146$
+\end_inset
+
+, we have 
+\begin_inset Formula $\Delta T=-13.516+.099356(146)=0.98998\approx1$
+\end_inset
+
+.
+ Since Newton's law implies that 
+\begin_inset Formula $\Delta T$
+\end_inset
+
+ and 
+\begin_inset Formula $M-T$
+\end_inset
+
+ are directly proportional, we arrive at the simple relation 
+\begin_inset Formula $\Delta T=\frac{1}{146}(M-T)$
+\end_inset
+
+ for 
+\begin_inset Formula $0\leq M-T\leq146$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally we are ready to run a simulation and find out just how long the
+ brownies should bake starting in a cold oven.
+ From the observation of oven temperature during preheating, we have 
+\begin_inset Formula 
+\[
+\Delta M=21
+\]
+
+\end_inset
+
+90 seconds or more into heating (and 
+\begin_inset Formula $\Delta M=0$
+\end_inset
+
+ prior since the oven does not heat during the first 90 seconds).
+ Substituting 
+\begin_inset Formula $\Delta T=T(t+1)-T(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta M=M(t+1)-M(t)$
+\end_inset
+
+, the changes in temperature over the course of 1 minute, we have starting
+ at 
+\begin_inset Formula $1.5$
+\end_inset
+
+ minutes,
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+M(t+1)\\
+T(t+1)
+\end{array}\right]=\left[\begin{array}{c}
+M(t)\\
+T(t)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+\frac{1}{146}(M(t)-T(t))
+\end{array}\right].\label{eq:model-part1}
+\end{equation}
+
+\end_inset
+
+Given that the brownies began at 
+\begin_inset Formula $66^{\circ}$
+\end_inset
+
+F and the oven began at 
+\begin_inset Formula $72^{\circ}$
+\end_inset
+
+F, we have
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+M(1.5)\\
+T(1.5)
+\end{array}\right] & =\left[\begin{array}{c}
+72\\
+66
+\end{array}\right],\\
+\left[\begin{array}{c}
+M(2.5)\\
+T(2.5)
+\end{array}\right] & =\left[\begin{array}{c}
+M(1.5)\\
+T(1.5)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+\frac{1}{146}(M(1.5)-T(1.5))
+\end{array}\right]=\left[\begin{array}{c}
+72\\
+66
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+\frac{1}{146}(72-66)
+\end{array}\right]=\left[\begin{array}{c}
+93\\
+66.041
+\end{array}\right],\\
+\left[\begin{array}{c}
+M(3.5)\\
+T(3.5)
+\end{array}\right] & =\left[\begin{array}{c}
+M(2.5)\\
+T(2.5)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+\frac{1}{146}(M(2.5)-T(2.5))
+\end{array}\right]=\left[\begin{array}{c}
+114\\
+66.226
+\end{array}\right],\ldots
+\end{align*}
+
+\end_inset
+
+and more succinctly,
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{c}
+M(1.5)\\
+T(1.5)
+\end{array}\right],\left[\begin{array}{c}
+M(2.5)\\
+T(2.5)
+\end{array}\right],\left[\begin{array}{c}
+M(3.5)\\
+T(3.5)
+\end{array}\right],\ldots=\\
+\left[\begin{array}{c}
+72\\
+66
+\end{array}\right],\left[\begin{array}{c}
+93\\
+66.041
+\end{array}\right],\left[\begin{array}{c}
+114\\
+66.226
+\end{array}\right],\left[\begin{array}{c}
+135\\
+66.553
+\end{array}\right],\left[\begin{array}{c}
+156\\
+67.022
+\end{array}\right],\left[\begin{array}{c}
+177\\
+67.631
+\end{array}\right],\left[\begin{array}{c}
+198\\
+68.380
+\end{array}\right],\left[\begin{array}{c}
+219\\
+69.268
+\end{array}\right],\ldots
+\end{gathered}
+\]
+
+\end_inset
+
+bringing us to 
+\begin_inset Formula $8.5$
+\end_inset
+
+ minutes.
+ At this point, 
+\begin_inset Formula $M-T=219-69.268=149.73$
+\end_inset
+
+, which exceeds 146.
+ To continue, we need to start using 
+\begin_inset Formula $\Delta T=-13.516+.099356(M-T)$
+\end_inset
+
+, or 
+\begin_inset Formula $T(t+1)=T(t)-13.516+.099356(M(t)-T(t))$
+\end_inset
+
+ for the change in brownie temperature.
+ In other words, we now have 
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+M(t+1)\\
+T(t+1)
+\end{array}\right]=\left[\begin{array}{c}
+M(t)\\
+T(t)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+-13.516+.099356(M(t)-T(t))
+\end{array}\right].\label{eq:model-part2}
+\end{equation}
+
+\end_inset
+
+So
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+M(9.5)\\
+T(9.5)
+\end{array}\right]=\left[\begin{array}{c}
+219\\
+69.268
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+-13.516+.099356(149.73)
+\end{array}\right]=\left[\begin{array}{c}
+240\\
+70.629
+\end{array}\right]
+\]
+
+\end_inset
+
+and so on,
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{c}
+M(10.5)\\
+T(10.5)
+\end{array}\right],\left[\begin{array}{c}
+M(11.5)\\
+T(11.5)
+\end{array}\right],\left[\begin{array}{c}
+M(12.5)\\
+T(12.5)
+\end{array}\right],\ldots=\\
+\left[\begin{array}{c}
+261\\
+73.941
+\end{array}\right],\left[\begin{array}{c}
+282\\
+79.010
+\end{array}\right],\left[\begin{array}{c}
+303\\
+85.662
+\end{array}\right],\left[\begin{array}{c}
+324\\
+93.740
+\end{array}\right],\left[\begin{array}{c}
+345\\
+103.10
+\end{array}\right],\ldots
+\end{gathered}
+\]
+
+\end_inset
+
+at which point we reach another milestone.
+ The oven temperature does not jump another 
+\begin_inset Formula $21^{\circ}$
+\end_inset
+
+F at this point.
+ It will only increase another 
+\begin_inset Formula $5^{\circ}$
+\end_inset
+
+F, so is essentially up to working temperature.
+ The first 
+\begin_inset Formula $14.5$
+\end_inset
+
+ minutes of baking brings the oven to 
+\begin_inset Formula $\sim350^{\circ}$
+\end_inset
+
+F and the brownies to 
+\begin_inset Formula $\sim103^{\circ}$
+\end_inset
+
+F, a state that the brownies baking in a preheated oven reached in about
+ 
+\begin_inset Formula $2.5$
+\end_inset
+
+ minutes.
+ To summarize, brownies in a cold oven took 
+\begin_inset Formula $14.5$
+\end_inset
+
+ minutes to get to the same point (oven temperature 
+\begin_inset Formula $350^{\circ}$
+\end_inset
+
+F, brownie temperature 
+\begin_inset Formula $103^{\circ}$
+\end_inset
+
+F) the brownies reached in a preheated oven in only 
+\begin_inset Formula $2.5$
+\end_inset
+
+ minutes.
+ From here out it is safe to assume the baking will proceed similarly.
+ Therefore it takes 12 more minutes to bake brownies starting in a cold
+ oven than it does starting in a preheated oven.
+ We simply add 12 minutes to the baking time and proceed.
+ Presumably this applies to any baking done at 
+\begin_inset Formula $350^{\circ}$
+\end_inset
+
+F.
+ The first 14.5 minutes of baking starting with a cold oven are equivalent
+ to only 
+\begin_inset Formula $2.5$
+\end_inset
+
+ minutes of baking starting with a preheated oven.
+\end_layout
+
+\begin_layout Standard
+This is neither an engineering nor math modeling class, yet the majority
+ of the discussion to now has been about the modeling process.
+ Not to worry, the reader will not be asked to create their own models.
+ Instead, focus on the results of the modeling process, equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:model-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:model-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ These are discrete dynamical systems.
+ The rest of the discussion has hopefuly grabbed your attention and motivated
+ the discsussion.
+\end_layout
+
+\begin_layout Standard
+In general, a first order discrete dynamical system is one of the form
+\begin_inset Formula 
+\begin{align*}
+\mathbf{x}(n+1) & =\mathbf{f}(\mathbf{x}(n))\\
+\mathbf{x}(0) & =\mathbf{x}_{0}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{f}:\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+ is an arbitrary function.
+ Rewriting equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:model-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) in these terms, 
+\begin_inset Formula $\mathbf{x}(n)=\left[\begin{array}{c}
+M(n)\\
+T(n)
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{f}(\mathbf{x}(n))=$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
