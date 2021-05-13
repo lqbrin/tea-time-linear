@@ -730,24 +730,72 @@ noprefix "false"
 ).
  These are discrete dynamical systems.
  The rest of the discussion has hopefuly grabbed your attention and motivated
- the discsussion.
+ study.
+ In case not, I should mention discrete dynamical systems are used to model
+ phenomena in biology, medicine, physics, economics, engineering, and a
+ host of other areas.
+ Chances are, if you are studying linear algebra, discrete dynamical systems
+ appear in your field of study.
 \end_layout
 
 \begin_layout Standard
-In general, a first order discrete dynamical system is one of the form
+A 
+\series bold
+first order discrete dynamical system
+\series default
+ is an equation
 \begin_inset Formula 
-\begin{align*}
-\mathbf{x}(n+1) & =\mathbf{f}(\mathbf{x}(n))\\
-\mathbf{x}(0) & =\mathbf{x}_{0}
-\end{align*}
+\begin{align}
+\mathbf{x}_{k+1} & =\mathbf{f}(\mathbf{x}_{k}),\label{eq:dds-recurrence}
+\end{align}
 
 \end_inset
 
-where 
-\begin_inset Formula $\mathbf{x}$
+which paired with an 
+\series bold
+initial condition
+\series default
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{x}_{0}=\mathbf{v}\label{eq:dds-initial-condition}
+\end{equation}
+
 \end_inset
 
- is in 
+defines a sequence 
+\begin_inset Formula $\mathbf{x}_{0},\mathbf{x}_{1},\mathbf{x}_{2},\ldots$
+\end_inset
+
+.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dds-recurrence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is called a 
+\series bold
+recurrence
+\series default
+ or 
+\series bold
+recurrence relation
+\series default
+ and determines all of the terms of the sequence except 
+\begin_inset Formula $\mathbf{x}_{0}$
+\end_inset
+
+, which must be supplied separately.
+ For purpose of our study of linear algebra, 
+\begin_inset Formula $\mathbf{x}_{k}$
+\end_inset
+
+ are in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -756,7 +804,11 @@ where
 \end_inset
 
  is an arbitrary function.
- Rewriting equation (
+ 
+\end_layout
+
+\begin_layout Standard
+Equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:model-part1"
@@ -766,18 +818,861 @@ noprefix "false"
 
 \end_inset
 
-) in these terms, 
-\begin_inset Formula $\mathbf{x}(n)=\left[\begin{array}{c}
-M(n)\\
-T(n)
+) can be rewritten in terms of this definition by setting 
+\begin_inset Formula $\mathbf{x}_{k}=\left[\begin{array}{c}
+M(k)\\
+T(k)
 \end{array}\right]$
 \end_inset
 
- and 
-\begin_inset Formula $\mathbf{f}(\mathbf{x}(n))=$
+, from which it follows
+\begin_inset Formula 
+\begin{align*}
+\mathbf{f}(\mathbf{x}_{k}) & =\left[\begin{array}{c}
+M(k)\\
+T(k)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+\frac{1}{146}(M(k)-T(k))
+\end{array}\right]\\
+ & =\left[\begin{array}{c}
+M(k)\\
+T(k)
+\end{array}\right]+\frac{1}{146}\left[\begin{array}{cc}
+0 & 0\\
+1 & -1
+\end{array}\right]\left[\begin{array}{c}
+M(k)\\
+T(k)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]\\
+ & =\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{c}
+M(k)\\
+T(k)
+\end{array}\right]+\frac{1}{146}\left[\begin{array}{cc}
+0 & 0\\
+1 & -1
+\end{array}\right]\left[\begin{array}{c}
+M(k)\\
+T(k)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]\\
+ & =\left(\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]+\frac{1}{146}\left[\begin{array}{cc}
+0 & 0\\
+1 & -1
+\end{array}\right]\right)\left[\begin{array}{c}
+M(k)\\
+T(k)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]\\
+ & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\left[\begin{array}{c}
+M(k)\\
+T(k)
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]\\
+ & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+This is an example of a 
+\series bold
+nonlinear discrete dynamical system
+\series default
+ as the function 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ is not linear.
+ More precisely in this case, 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ is 
+\series bold
+affine
+\series default
+.
+ It takes the form 
+\begin_inset Formula $M\mathbf{x}_{k}+\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As noted in the definition, a discrete dynamical system determines a sequence.
+ Our first order of business is to understand how so.
+ For each initial condition, the sequence defined by a discrete dynamical
+ system can be calculated term-by-term.
+ The recurrence relation defines each term after the first.
+ For example, the first few terms of the sequence defined by the system
+\begin_inset Formula 
+\begin{align}
+\mathbf{x}_{k+1} & =\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right]\label{eq:recurrence-example1}
+\end{align}
+
+\end_inset
+
+with initial condition
+\begin_inset Formula 
+\[
+\mathbf{x}_{0}=\left[\begin{array}{c}
+8\\
+-5\\
+6
+\end{array}\right]
+\]
+
+\end_inset
+
+can be calculated as follows.
+ According to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
+\begin_inset Formula 
+\begin{align*}
+\mathbf{x}_{1}=\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\mathbf{x}_{0}+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right] & =\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\left[\begin{array}{c}
+8\\
+-5\\
+6
+\end{array}\right]+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right]=\left[\begin{array}{c}
+-4.4\\
+.5\\
+-1.8
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+Also according to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
+\begin_inset Formula 
+\begin{align*}
+\mathbf{x}_{2}=\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\mathbf{x}_{1}+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right] & =\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\left[\begin{array}{c}
+-4.4\\
+.5\\
+-1.8
+\end{array}\right]+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right]=\left[\begin{array}{c}
+5.52\\
+-7.35\\
+6.74
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+Similarly,
+\begin_inset Formula 
+\[
+\mathbf{x}_{3}=\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\left[\begin{array}{c}
+5.52\\
+-7.35\\
+6.74
+\end{array}\right]+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right]=\left[\begin{array}{c}
+-2.416\\
+-.035\\
+-.782
+\end{array}\right]
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\mathbf{x}_{4}=\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\left[\begin{array}{c}
+-2.416\\
+-.035\\
+-.782
+\end{array}\right]+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right]=\left[\begin{array}{c}
+3.933\\
+-6.198\\
+5.443
+\end{array}\right]
+\]
+
+\end_inset
+
+accurate to 3 decimal places.
+ The first five terms of the sequence are 
+\begin_inset Formula $\mathbf{x}_{0},\mathbf{x}_{1},\mathbf{x}_{2},\mathbf{x}_{3},\mathbf{x}_{4}$
+\end_inset
+
+, which have just been calculated (using this 
+\begin_inset CommandInset href
+LatexCommand href
+name "SageMath SageCell"
+target "https://sagecell.sagemath.org/?z=eJxFi00KwjAQhfeF3iFkleok5MeRWugReoLiopUqWTSVIUiOb0JA32J48z2-adyXSD4JBw5mqZVBkEa5cm65KkQwqgdXhv9olcV71zbr-Nke8SAxW5AIl8KS_sG-wGuBb_IhCq7ZwCHpDJ4HMc98YLSE1yYMYDe0DcvJ_nRK-rzWt5oeeDW_1GErEA==&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+) as
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+8\\
+-5\\
+6
+\end{array}\right],\left[\begin{array}{c}
+-4.4\\
+.5\\
+-1.8
+\end{array}\right],\left[\begin{array}{c}
+5.52\\
+-7.35\\
+6.74
+\end{array}\right],\left[\begin{array}{c}
+-2.416\\
+-.035\\
+-.782
+\end{array}\right],\left[\begin{array}{c}
+3.933\\
+-6.198\\
+5.443
+\end{array}\right].
+\]
+
+\end_inset
+
+Further terms can be calculated similarly.
+ The process of calculating the terms is called 
+\series bold
+iteration
+\series default
+.
+ The terms themselves are called 
+\series bold
+iterates
+\series default
+ or 
+\series bold
+iterations
+\series default
+, and the sequence is called the 
+\series bold
+orbit
+\series default
+ of 
+\begin_inset Formula $\mathbf{x}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given the dynamical system
+\begin_inset Formula 
+\begin{align*}
+\mathbf{x}_{k+1} & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+from the brownie baking model, can you find the first 5 iterates in the
+ orbit of
+\begin_inset Formula 
+\[
+\mathbf{x}_{0}=\left[\begin{array}{c}
+72\\
+66
+\end{array}\right]?
+\]
+
+\end_inset
+
+Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:brownie-iterates"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As a final exercise in iteration, the first 5 iterates in the orbit of 
+\begin_inset Formula $\mathbf{x}_{0}=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+ for the dynamical system
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=\left[\begin{array}{cc}
+\frac{\sqrt{6}+\sqrt{2}}{4} & \frac{-\sqrt{6}+\sqrt{2}}{4}\\
+\frac{\sqrt{6}-\sqrt{2}}{4} & \frac{\sqrt{6}+\sqrt{2}}{4}
+\end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
+-2\\
+2
+\end{array}\right]
+\]
+
+\end_inset
+
+are (approximately)
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+1
+\end{array}\right],\left[\begin{array}{c}
+-1.293\\
+3.224
+\end{array}\right],\left[\begin{array}{c}
+-4.083\\
+4.780
+\end{array}\right],\left[\begin{array}{c}
+-7.182\\
+5.560
+\end{array}\right],\left[\begin{array}{c}
+-10.376\\
+5.512
+\end{array}\right].
+\]
+
+\end_inset
+
+Can you verify these terms (using SageMath)? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:last-iteration-example"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The first few iterates of an orbit are often not the ultimate goal.
+ For many applications, the point of interest is the long run.
+ How can the 
+\begin_inset Formula $1000^{th}$
+\end_inset
+
+ through 
+\begin_inset Formula $2000^{th}$
+\end_inset
+
+ or 
+\begin_inset Formula $1,000,000^{th}$
+\end_inset
+
+ through 
+\begin_inset Formula $1,000,012^{th}$
+\end_inset
+
+ iterations of an orbit be described in general terms? Such a desctiption
+ is called the system's 
+\series bold
+long term behavior
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+In the case of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
+\begin_inset Formula 
+\[
+\mathbf{x}_{5}=\left[\begin{array}{c}
+-1.146\\
+-1.174\\
+0.401
+\end{array}\right],\ \mathbf{x}_{30}=\left[\begin{array}{c}
+1.108\\
+-3.416\\
+2.647
+\end{array}\right],\ \mathbf{x}_{55}=\left[\begin{array}{c}
+1.111\\
+-3.419\\
+2.650
+\end{array}\right],\text{ and }\mathbf{x}_{80}=\left[\begin{array}{c}
+1.111\\
+-3.419\\
+2.650
+\end{array}\right]
+\]
+
+\end_inset
+
+accurate to 3 decimal places.
+ It takes a short while, but the terms reveal a pattern.
+ All terms 
+\begin_inset Formula $\mathbf{x}_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $k\geq55$
+\end_inset
+
+ are, accurate to 3 decimal places, equal to 
+\begin_inset Formula $\left[\begin{array}{c}
+1.111\\
+-3.419\\
+2.650
+\end{array}\right]$
+\end_inset
+
+.
+ The iterates after the 
+\begin_inset Formula $54^{th}$
+\end_inset
+
+ do not change much.
+ When the iterates of a dynamical system settle down this way, we say that
+ the orbit approaches a particular vector.
+ But what vector, and can we predict it without computing large numbers
+ of iterates?
+\end_layout
+
+\begin_layout Standard
+By definition, 
+\begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})$
+\end_inset
+
+, so when a dynamical system settles on a particular vector, we have 
+\begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})\approx\mathbf{x}_{k}$
+\end_inset
+
+.
+ Therein lies the answer to the mystery.
+ 
+\end_layout
+
+\begin_layout Standard
+The iterates are getting closer and closer to satisfying the equation 
+\begin_inset Formula $\mathbf{f}(\mathbf{x}_{k})=\mathbf{x}_{k}$
+\end_inset
+
+.
+ Any solution of the equation 
+\begin_inset Formula $\mathbf{f}(\mathbf{x}^{*})=\mathbf{x}^{*}$
+\end_inset
+
+ is called a 
+\series bold
+fixed point
+\series default
+ of 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+, and if 
+\begin_inset Formula $\mathbf{x}_{k}$
+\end_inset
+
+ were such a value, we would have 
+\begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})=\mathbf{f}(\mathbf{x}^{*})=\mathbf{x}^{*}=\mathbf{x}_{k}$
+\end_inset
+
+.
+ The sequence would be fixed forever more at the value 
+\begin_inset Formula $\mathbf{x}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the case of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) a fixed point of 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ satisfies
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\mathbf{x}^{*}+\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right]=\mathbf{x}^{*},
+\]
+
+\end_inset
+
+an equation we can solve:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]\mathbf{x}^{*}-\mathbf{x}^{*} & =-\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right]\\
+\left(\left[\begin{array}{ccc}
+-.15 & -1.3 & -1.95\\
+-.55 & 1.8 & 3.15\\
+.15 & -1.3 & -2.25
+\end{array}\right]-I\right)\mathbf{x}^{*} & =-\left[\begin{array}{c}
+2\\
+-5\\
+4
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+By row reduction (using this 
+\begin_inset CommandInset href
+LatexCommand href
+name "SageMath SageCell"
+target "https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw1jHWidY10DM01dE11DMGEZZApp6pqY6hnoWOMUgCIWmkZ2Qaq8nLlWRblppckl-kEW2ko2uqYwISc1SwVdDw1YWYq5eZkppXkllSqWGsqamXWJqeC-Rq6CYB1RUUZQKZjnCWUlFqSmlyarFCSb4SQlqvqCg1TUNTEwAi3i2-&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+), it turns out
+\begin_inset Formula 
+\[
+\mathbf{x}^{*}=\frac{1}{117}\left[\begin{array}{c}
+130\\
+-400\\
+310
+\end{array}\right]\approx\left[\begin{array}{c}
+1.111111111\\
+-3.418803419\\
+2.649572650
+\end{array}\right].
+\]
+
+\end_inset
+
+It seems clear enough the orbit is 
+\series bold
+approaching the fixed point
+\series default
+.
+ When this happens, we say 
+\begin_inset Formula $\mathbf{x}^{*}$
+\end_inset
+
+ is an attracting fixed point or, simply, an 
+\series bold
+attractor
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Not all orbits of discrete dynamical systems approach a fixed point, however.
+ The dynamical system
+\begin_inset Formula 
+\begin{align*}
+\mathbf{x}_{k+1} & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+with initial condition
+\begin_inset Formula 
+\[
+\mathbf{x}_{0}=\left[\begin{array}{c}
+72\\
+66
+\end{array}\right]
+\]
+
+\end_inset
+
+from the brownie baking model does not.
+ This fact is clear by observing the behavior of the first entry of 
+\begin_inset Formula $\mathbf{x}_{k}$
+\end_inset
+
+.
+ It simply increases by 21 with each iteration.
+ To be precise, 
+\begin_inset Formula $\left(\mathbf{x}_{k}\right)_{1,1}=72+21k$
+\end_inset
+
+, which tends to infinity as 
+\begin_inset Formula $k$
+\end_inset
+
+ grows.
+ Therefore, 
+\begin_inset Formula $\Vert\mathbf{x}_{k}\Vert$
+\end_inset
+
+ diverges to 
+\begin_inset Formula $\infty$
+\end_inset
+
+ and we say the orbit 
+\series bold
+tends toward infinity
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Finally, the orbit of 
+\begin_inset Formula $\mathbf{x}_{0}=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+ for the dynamical system
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=\left[\begin{array}{cc}
+\frac{\sqrt{6}+\sqrt{2}}{4} & \frac{-\sqrt{6}+\sqrt{2}}{4}\\
+\frac{\sqrt{6}-\sqrt{2}}{4} & \frac{\sqrt{6}+\sqrt{2}}{4}
+\end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
+-2\\
+2
+\end{array}\right]
+\]
+
+\end_inset
+
+does not present a clear pattern even after 100 iterations.
+ As computed in this 
+\begin_inset CommandInset href
+LatexCommand href
+name "SageMath SageCell"
+target "https://sagecell.sagemath.org/?z=eJzztTXUN9HKTSwpyqzQMNIx0okuLiwq0TDTM9DUBrOMgCwdBThTFy6to8DLpYAB4NK66LpRjYzV5OVKsi1LTS7JL9KI1gUK6QAxSLTCAC5sqGMIEikoyswr0VAyULBS0qkwAAqk5RcpZCpk5ikUJealp2oAlRkYalpBnAPU7qtVYaCdBOFC9GbqKEH0AgDkBzzH&lang=sage&interacts=eJyLjgUAARUAuQ=="
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{x}_{98}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{x}_{100}$
+\end_inset
+
+ are (again accurate to three decimal places), 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+-4.083\\
+4.780
+\end{array}\right],\left[\begin{array}{c}
+-7.182\\
+5.560
+\end{array}\right],\left[\begin{array}{c}
+-10.376\\
+5.512
+\end{array}\right].
+\]
+
+\end_inset
+
+Though it is likely not at all clear from this short list nor the SageMath
+ output, the orbit exhibits a very simple pattern.
+ To see it, a graph of the first 100 iterations:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-discrete-01.pdf
+	lyxscale 33
+	width 4in
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+It appears there are only 24 iterations, but that is because they repeat.
+ As indicated, 
+\begin_inset Formula $\mathbf{x}_{0}=\mathbf{x}_{24}=\mathbf{x}_{48}=\cdots$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula $\mathbf{x}_{1}=\mathbf{x}_{25}=\mathbf{x}_{49}=\cdots$
+\end_inset
+
+ and so on.
+ As a result, 
+\begin_inset Formula $\mathbf{x}_{98}$
+\end_inset
+
+ coincides with 
+\begin_inset Formula $\mathbf{x}_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{x}_{99}$
+\end_inset
+
+ coincides with 
+\begin_inset Formula $\mathbf{x}_{3}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{x}_{100}$
+\end_inset
+
+ coincides with 
+\begin_inset Formula $\mathbf{x}_{4}$
+\end_inset
+
+.
+ When a sequence of iterates repeats this way, we say the orbit is 
+\series bold
+periodic
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+An analysis of the eigenvalues will reveal how to predict the type of long
+ term behavior.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -882,8 +1777,161 @@ Answers
 \end_layout
 
 \begin_layout Description
-i
+brownie
+\begin_inset space ~
+\end_inset
+
+iterates 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:brownie-iterates"
+
+\end_inset
+
+Given that 
+\begin_inset Formula $\mathbf{x}_{0}=\left[\begin{array}{c}
+72\\
+66
+\end{array}\right]$
+\end_inset
+
+, accurate to three decimal places,
+\begin_inset Formula 
+\begin{align*}
+\mathbf{x}_{1} & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\left[\begin{array}{c}
+72\\
+66
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+93\\
+66.041
+\end{array}\right]\\
+\mathbf{x}_{2} & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\left[\begin{array}{c}
+93\\
+66.041
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+114\\
+66.226
+\end{array}\right]\\
+\mathbf{x}_{3} & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\left[\begin{array}{c}
+114\\
+66.226
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+135\\
+66.553
+\end{array}\right]\\
+\mathbf{x}_{4} & =\frac{1}{146}\left[\begin{array}{cc}
+146 & 0\\
+1 & 145
+\end{array}\right]\left[\begin{array}{c}
+135\\
+66.553
+\end{array}\right]+\left[\begin{array}{c}
+21\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+156\\
+67.022
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+so the first five iterates of the orbit are
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+72\\
+66
+\end{array}\right],\left[\begin{array}{c}
+93\\
+66.041
+\end{array}\right],\left[\begin{array}{c}
+114\\
+66.226
+\end{array}\right],\left[\begin{array}{c}
+135\\
+66.553
+\end{array}\right],\left[\begin{array}{c}
+156\\
+67.022
+\end{array}\right].
+\]
+
+\end_inset
+
+
 \end_layout
 
+\begin_layout Description
+last
+\begin_inset space ~
+\end_inset
+
+iteration
+\begin_inset space ~
+\end_inset
+
+example 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:last-iteration-example"
+
+\end_inset
+
+Sample SageMath code that can be copied and pasted into a SageCell:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+M=1/4*matrix(2,2,[sqrt(6.0)+sqrt(2.0), sqrt(2.0)-sqrt(6.0),
+\end_layout
+
+\begin_layout LyX-Code
+                   sqrt(6.0)-sqrt(2.0), sqrt(6.0)+sqrt(2.0)])
+\end_layout
+
+\begin_layout LyX-Code
+b=vector([-2.0,2.0])
+\end_layout
+
+\begin_layout LyX-Code
+x0=vector([1,1])
+\end_layout
+
+\begin_layout LyX-Code
+print("0 :",x0)
+\end_layout
+
+\begin_layout LyX-Code
+for i in range(1,5):
+\end_layout
+
+\begin_layout LyX-Code
+    x0=M*x0+b
+\end_layout
+
+\begin_layout LyX-Code
+    print(i,":",x0)
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
