@@ -661,6 +661,191 @@ Row operations do not affect the linear dependence relationships among the
  columns of a matrix
 \series default
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Uniqueness of Reduced Row Echelon Form}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "dig:UniquenessOfRREF"
+
+\end_inset
+
+The fact that row operations do not affect the linear dependence relationships
+ among the columns of a matrix lies at the heart of a proof that 
+\shape italic
+the reduced row echelon form of a matrix exists and is unique
+\shape default
+.
+ The row reduction algorithm provides existence.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose that an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ has two reduced row echelon forms, 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ The pivot columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are exactly those columns that are linearly independent of the columns
+ to their left.
+ This follows from the facts that (i) each pivot column of a matrix in reduced
+ row echelon form is linearly independent of the columns on its left (it
+ has a nonzero entry in a row where all the columns to its left have zeros);
+ and (ii) each non-pivot column is linearly dependent on the columns to
+ its left (it can be written as a linear combination of those columns).
+ Because row operations do not alter the linear dependence relations among
+ the columns of a matrix (and 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are the results of series of row operations on 
+\begin_inset Formula $M$
+\end_inset
+
+), the pivot columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ must be the same as those of 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Since the pivot columns of a reduced row echelon form contain a 1 in the
+ pivot position and zeros elsewhere, the pivot columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are in fact equal.
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $A_{:,j}$
+\end_inset
+
+ is a nonpivot column of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $A_{:,j}$
+\end_inset
+
+ is to the left of all the pivot columns of 
+\begin_inset Formula $A$
+\end_inset
+
+, it must be a column of zeros.
+ In this case, the same is true of 
+\begin_inset Formula $B_{:,j}$
+\end_inset
+
+ so 
+\begin_inset Formula $A_{:,j}=B_{:,j}$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $A_{:,j}$
+\end_inset
+
+ is to the right of at least one pivot column of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $A_{:,j}$
+\end_inset
+
+ is a linear combination of the pivot columns to its left, which is to say
+ 
+\begin_inset Formula $A_{:,j}$
+\end_inset
+
+ is either a column of zeros or it is linear dependent on the pivot columns
+ to its left.
+ Since 
+\begin_inset Formula $B_{:,j}$
+\end_inset
+
+ has the same linear dependence relation to the pivot columns on its left
+ (so must be zero if 
+\begin_inset Formula $A_{:,j}$
+\end_inset
+
+ is zero and must be the 
+\shape italic
+same
+\shape default
+ linear combination of the pivot columns on its left if nonzero) and the
+ pivot columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are equal, it follows that 
+\begin_inset Formula $B_{:,j}=A_{:,j}$
+\end_inset
+
+.
+ This completes the proof.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*

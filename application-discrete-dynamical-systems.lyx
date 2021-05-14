@@ -741,7 +741,7 @@ noprefix "false"
 \begin_layout Standard
 A 
 \series bold
-first order discrete dynamical system
+first order homogeneous discrete dynamical system
 \series default
  is an equation
 \begin_inset Formula 
@@ -778,7 +778,7 @@ noprefix "false"
 
 \end_inset
 
-) is called a 
+) is an example of a 
 \series bold
 recurrence
 \series default
@@ -907,20 +907,24 @@ nonlinear discrete dynamical system
 \end_inset
 
  is not linear.
- More precisely in this case, 
-\begin_inset Formula $\mathbf{f}$
-\end_inset
-
- is 
+ More precisely in this case, the system is 
 \series bold
 affine
 \series default
 .
  It takes the form 
-\begin_inset Formula $M\mathbf{x}_{k}+\mathbf{b}$
+\begin_inset Formula 
+\begin{equation}
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\mathbf{b}.\label{eq:affine-dynamical-system}
+\end{equation}
+
 \end_inset
 
-.
+
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ is an affine map.
 \end_layout
 
 \begin_layout Standard
@@ -1160,15 +1164,15 @@ orbit
 \begin_layout Standard
 Given the dynamical system
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 \mathbf{x}_{k+1} & =\frac{1}{146}\left[\begin{array}{cc}
 146 & 0\\
 1 & 145
 \end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
 21\\
 0
-\end{array}\right]
-\end{align*}
+\end{array}\right]\label{eq:recurrence-example-2}
+\end{align}
 
 \end_inset
 
@@ -1207,15 +1211,15 @@ As a final exercise in iteration, the first 5 iterates in the orbit of
 
  for the dynamical system
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathbf{x}_{k+1}=\left[\begin{array}{cc}
 \frac{\sqrt{6}+\sqrt{2}}{4} & \frac{-\sqrt{6}+\sqrt{2}}{4}\\
 \frac{\sqrt{6}-\sqrt{2}}{4} & \frac{\sqrt{6}+\sqrt{2}}{4}
 \end{array}\right]\mathbf{x}_{k}+\left[\begin{array}{c}
 -2\\
 2
-\end{array}\right]
-\]
+\end{array}\right]\label{eq:recurrence-example-3}
+\end{equation}
 
 \end_inset
 
@@ -1670,9 +1674,476 @@ periodic
 \end_layout
 
 \begin_layout Standard
-An analysis of the eigenvalues will reveal how to predict the type of long
- term behavior.
- 
+As with the power method (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Power-Method"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and Markov chains (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Markov-Chains"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), both of which can be framed as discrete dynamical systems, eigenvalues
+ tell the story of long term behavior.
+ For the example systems of this section, each of the form (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:affine-dynamical-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ and its spectral radius are listed in the chart.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+System
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Spectral Radius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Long term behavior
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-.8,-.3,.5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+approaches fixed point
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,\frac{145}{146}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tends toward infinity
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{6}+\sqrt{2}}{4}\pm i\frac{\sqrt{6}-\sqrt{2}}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+periodic
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
+\series bold
+spectral radius
+\series default
+ of a square matrix is the maximum of the magnitudes (absolute values) of
+ its eigenvalues.
+ The magnitude of a complex number 
+\begin_inset Formula $a+ib$
+\end_inset
+
+ is 
+\begin_inset Formula $\sqrt{a^{2}+b^{2}}$
+\end_inset
+
+, so
+\begin_inset Formula 
+\begin{align*}
+\left|\frac{\sqrt{6}+\sqrt{2}}{4}\pm i\frac{\sqrt{6}-\sqrt{2}}{4}\right| & =\sqrt{\left(\frac{\sqrt{6}+\sqrt{2}}{4}\right)^{2}+\left(\frac{\sqrt{6}-\sqrt{2}}{4}\right)^{2}}\\
+ & =\sqrt{\frac{6+2\sqrt{12}+2}{16}+\frac{6-2\sqrt{12}+2}{16}}\\
+ & =\sqrt{\frac{6+2+6+2}{16}}\\
+ & =1.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Much like a geometric series, which converges when the ratio is less than
+ one and diverges when the ratio is greater than one, an affine system will
+ approach the fixed point when the spectral radius is less than one and
+ will generally tend toward infinity when the spectral radius is greater
+ than one.
+ The analogy ends there.
+ An affine dynamical system whose matrix has spectral radius one can exhibit
+ several different behaviors: tendency toward infinity and periodicity as
+ seen above, but also convergence to a fixed point, depending on the system
+ and the initial condition.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Long Term Behavior}
+\end_layout
+
+\end_inset
+
+For an affine discrete dynamical system, 
+\begin_inset Formula $\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\mathbf{b}$
+\end_inset
+
+, where 1 is not an eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+, the system has a unique fixed point:
+\begin_inset Formula 
+\begin{align*}
+M\mathbf{x}^{*}+\mathbf{b} & =\mathbf{x}^{*}\\
+M\mathbf{x}^{*}-\mathbf{x}^{*} & =-\mathbf{b}\\
+(M-I)\mathbf{x}^{*} & =-\mathbf{b}\\
+\mathbf{x}^{*} & =-(M-I)^{-1}\mathbf{b}.
+\end{align*}
+
+\end_inset
+
+The inverse of 
+\begin_inset Formula $M-I$
+\end_inset
+
+ exists because 1 is not an eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $\mathbf{y}=\mathbf{x}-\mathbf{x}^{*}$
+\end_inset
+
+, which implies 
+\begin_inset Formula $\mathbf{x}=\mathbf{y}+\mathbf{x}^{*}$
+\end_inset
+
+, and substituting into 
+\begin_inset Formula $\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\mathbf{b}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\mathbf{y}_{k+1}+\mathbf{x}^{*} & =M(\mathbf{y}_{k}+\mathbf{x}^{*})+\mathbf{b}\\
+ & =M\mathbf{y}_{k}+\left(M\mathbf{x}^{*}+\mathbf{b}\right)\\
+ & =M\mathbf{y}_{k}+\mathbf{x}^{*}.
+\end{align*}
+
+\end_inset
+
+So 
+\begin_inset Formula $\mathbf{y}_{k+1}=M\mathbf{y}_{k}$
+\end_inset
+
+.
+ The analysis of this linear dynamical system fully informs the behavior
+ of the affine system.
+ Assuming 
+\begin_inset Formula $M$
+\end_inset
+
+ is diagonalizable, we set 
+\begin_inset Formula $\mathbf{y}_{0}=\mathbf{x}_{0}-\mathbf{x}^{*}$
+\end_inset
+
+ (by substitution) and write 
+\begin_inset Formula $\mathbf{y}_{0}$
+\end_inset
+
+ in terms of a basis of eigenvectors, 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{n}\}$
+\end_inset
+
+ corresponding to eigenvalues 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\ldots,\lambda_{n}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+\mathbf{y}_{0}=c_{1}\mathbf{w}_{1}+c_{2}\mathbf{w}_{2}+\cdots+c_{n}\mathbf{w}_{n}
+\]
+
+\end_inset
+
+for some scalars 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{y}_{1}=M\left(c_{1}\mathbf{w}_{1}+c_{2}\mathbf{w}_{2}+\cdots+c_{n}\mathbf{w}_{n}\right)=c_{1}\lambda_{1}\mathbf{w}_{1}+c_{2}\lambda_{2}\mathbf{w}_{2}+\cdots+c_{n}\lambda_{n}\mathbf{w}_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{y}_{2}=M\left(c_{1}\lambda_{1}\mathbf{w}_{1}+c_{2}\lambda_{2}\mathbf{w}_{2}+\cdots+c_{n}\lambda_{n}\mathbf{w}_{n}\right)=c_{1}\lambda_{1}^{2}\mathbf{w}_{1}+c_{2}\lambda_{2}^{2}\mathbf{w}_{2}+\cdots+c_{n}\lambda_{n}^{2}\mathbf{w}_{n}$
+\end_inset
+
+, and so on:
+\begin_inset Formula 
+\[
+\mathbf{y}_{k}=c_{1}\lambda_{1}^{k}\mathbf{w}_{1}+c_{2}\lambda_{2}^{k}\mathbf{w}_{2}+\cdots+c_{n}\lambda_{n}^{k}\mathbf{w}_{n}.
+\]
+
+\end_inset
+
+This solution is dominated by the eigenvalue(s) with the greatest magnitude.
+ If the dominant magnitude is less than one, 
+\begin_inset Formula $\mathbf{y}_{k}$
+\end_inset
+
+ will tend toward zero and therefore 
+\begin_inset Formula $\mathbf{x}_{k}$
+\end_inset
+
+ will tend toward the fixed point.
+ If the dominant magnitude is greater than one, 
+\begin_inset Formula $\mathbf{y}_{k}$
+\end_inset
+
+ will tend toward infinity as long as 
+\begin_inset Formula $c_{j}\neq0$
+\end_inset
+
+ for some 
+\begin_inset Formula $j$
+\end_inset
+
+ with 
+\begin_inset Formula $|\lambda_{j}|>1$
+\end_inset
+
+, in which case 
+\begin_inset Formula $\mathbf{x}_{k}$
+\end_inset
+
+ will tend toward infinity.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1680,7 +2151,194 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-F
+first
+\begin_inset space ~
+\end_inset
+
+order
+\begin_inset space ~
+\end_inset
+
+homogeneous
+\begin_inset space ~
+\end_inset
+
+discrete
+\begin_inset space ~
+\end_inset
+
+dynamical
+\begin_inset space ~
+\end_inset
+
+system an equation of the form 
+\begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+nonlinear
+\begin_inset space ~
+\end_inset
+
+discrete
+\begin_inset space ~
+\end_inset
+
+dynamical
+\begin_inset space ~
+\end_inset
+
+system a discrete dynamical system whose recurrence is nonlinear.
+\end_layout
+
+\begin_layout Description
+initial
+\begin_inset space ~
+\end_inset
+
+condition a value 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ for the first term of a dynamical system, usually given as 
+\begin_inset Formula $\mathbf{x}_{0}=\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+recurrence a general term for the type of equation appearing in a discrete
+ dynamical system.
+\end_layout
+
+\begin_layout Description
+recurrence
+\begin_inset space ~
+\end_inset
+
+relation a recurrence.
+ 
+\end_layout
+
+\begin_layout Description
+affine
+\begin_inset space ~
+\end_inset
+
+discrete
+\begin_inset space ~
+\end_inset
+
+dynamical
+\begin_inset space ~
+\end_inset
+
+system a dynamical system of the form 
+\begin_inset Formula $\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+affine
+\begin_inset space ~
+\end_inset
+
+map a map 
+\begin_inset Formula $\mathbf{f}:\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathbf{f}(\mathbf{x})=M\mathbf{x}+\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+iteration the process of calculating the terms of the sequence determined
+ by a discrete dynamical system.
+\end_layout
+
+\begin_layout Description
+iterates the terms of the sequence determined by a discrete dynamical system.
+\end_layout
+
+\begin_layout Description
+iterations iterates.
+\end_layout
+
+\begin_layout Description
+orbit the sequence determined by a discrete dynamical system—the solution
+ of a dynamical system with initial condition.
+\end_layout
+
+\begin_layout Description
+long
+\begin_inset space ~
+\end_inset
+
+term
+\begin_inset space ~
+\end_inset
+
+behavior a qualitative description of the orbit of a dynamical system.
+ The phrases 
+\begin_inset Quotes eld
+\end_inset
+
+approaching the fixed point
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+tending toward infinity
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+periodic
+\begin_inset Quotes erd
+\end_inset
+
+ are often used.
+ Another possibility for nonlinear dynamical systems is 
+\begin_inset Quotes eld
+\end_inset
+
+chaotic
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+fixed
+\begin_inset space ~
+\end_inset
+
+point a solution of the equation 
+\begin_inset Formula $\mathbf{f}(\mathbf{x}^{*})=\mathbf{x}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+attractor the fixed point of a dynamical system whose solutions tend toward
+ it.
 \end_layout
 
 \begin_layout Standard

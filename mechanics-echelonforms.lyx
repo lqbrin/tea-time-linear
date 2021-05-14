@@ -861,6 +861,16 @@ general solution
 \series default
  of the linear system.
  See section 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Fill in reference.
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset ERT
 status open
 
@@ -1224,7 +1234,41 @@ Reduced row echelon form requires that the entries above pivots are zero
 
 \end_inset
 
+It is not by mistake that we refer to 
+\series bold
+\shape italic
+a
+\series default
+\shape default
+ row echelon form or 
+\series bold
+\shape italic
+the
+\series default
+\shape default
+ reduced row echelon form of a matrix.
+ Row echelon form is not unique, but reduced row echelon form is unique
+ (see crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:UniquenessOfRREF"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "dig:UniquenessOfRREF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -1437,6 +1481,32 @@ vector
 \end_inset
 
 form a linear combination of vectors.
+\end_layout
+
+\begin_layout Description
+reduced
+\begin_inset space ~
+\end_inset
+
+row
+\begin_inset space ~
+\end_inset
+
+echelon
+\begin_inset space ~
+\end_inset
+
+form of a matrix is unique.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Include exercise(s) on this?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

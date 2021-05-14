@@ -819,18 +819,6 @@ status open
  5.1-5.4
 \end_layout
 
-\begin_layout Plain Layout
-
-% Invertible Matrix Theorem Revisited (one-to-one, onto, Col A=R^n, dim(Col
- A)=n, Nul A={0}, eigenvalues/eigenvectors, etc.
- -- page 158
-\end_layout
-
-\begin_layout Plain Layout
-
-% Uniqueness of RREF
-\end_layout
-
 \end_inset
 
 
@@ -925,25 +913,6 @@ status open
 \begin_layout Plain Layout
 
 % Chapter 7: Applications in Other Disciplines 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Discrete dynamical systems / Difference Equations
-\end_layout
-
-\begin_layout Plain Layout
-
-% Leontief input-output
 \end_layout
 
 \end_inset
