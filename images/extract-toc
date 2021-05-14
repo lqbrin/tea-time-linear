@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pdfseparate -f 5 -l 9 ../../TeaTimeLinearAlgebra.pdf TTLA%d.pdf
+pdfunite TTLA* contents.pdf
+pdftopng contents.pdf 50% 20
+rm TTLA* contents.pdf

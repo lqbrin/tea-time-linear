@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pdfseparate -f 1 -l 1 ../../TeaTimeLinearAlgebra.pdf titlepage.pdf
+pdftopng titlepage.pdf 38% 50
+rm titlepage.pdf
