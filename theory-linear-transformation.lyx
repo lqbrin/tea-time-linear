@@ -265,7 +265,7 @@ relation
 \begin_inset Formula $\{(a,b):a\text{ is in }A\text{ and }b\text{ is in }B\}$
 \end_inset
 
- is denoted by 
+ is denoted  
 \begin_inset Formula $A\times B$
 \end_inset
 
@@ -1003,7 +1003,7 @@ When the inverse relation of
 \begin_inset Formula $T$
 \end_inset
 
- is a function, it is denoted by 
+ is a function, it is denoted  
 \begin_inset Formula $T^{-1}:\text{range}(T)\to A$
 \end_inset
 

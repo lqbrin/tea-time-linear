@@ -281,7 +281,7 @@ For each
 \begin_inset Formula $x$
 \end_inset
 
-, which will be denoted by 
+, which will be denoted  
 \begin_inset Formula $x'$
 \end_inset
 
@@ -1366,7 +1366,7 @@ noprefix "false"
 \series bold
 zero matrix
 \series default
- and is denoted by 
+ and is denoted  
 \begin_inset Formula $0_{m\times n}$
 \end_inset
 
@@ -2796,7 +2796,7 @@ matrix an
 \begin_inset Formula $m\times n$
 \end_inset
 
- matrix whose entries are all zero, denoted by 
+ matrix whose entries are all zero, denoted  
 \begin_inset Formula $0_{m\times n}$
 \end_inset
 

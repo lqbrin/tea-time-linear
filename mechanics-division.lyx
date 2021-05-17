@@ -330,7 +330,7 @@ leaves the multiplicand (the matrix being multiplied by it) unchanged.
 \series bold
 identity matrix
 \series default
- is denoted by 
+ is denoted  
 \begin_inset Formula $I_{n\times n}$
 \end_inset
 
@@ -362,7 +362,7 @@ identity matrix
 \end_inset
 
 .
- Matrices denoted by 
+ Matrices denoted  
 \begin_inset Formula $I$
 \end_inset
 

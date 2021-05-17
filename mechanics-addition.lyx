@@ -9,6 +9,9 @@
 \input $HOME/Documents/scsu/Book-Linear/preamble
 \end_preamble
 \use_default_options true
+\begin_modules
+figs-within-sections
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -33,7 +36,16 @@
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -128,12 +140,14 @@ Pick your favorite two
  blocks and think about how you might add them to one another.
  Don't just read on.
  Stop and think about this briefly.
- [PAUSE HERE AND THINK.] If you are like most students, you probably came
- up with one of two ways to add the blocks.
- The first one is to add all the numbers in each block giving a sum of 90.
- Sum a different pair of blocks, and you will notice you get 90 again.
- In fact, take any pair of blocks and the sum done this way will give you
- 90.
+ There are no right or wrong answers.
+ What would be one reasonable way to add two blocks? If you are like most
+ students, you probably came up with one of two ways to add the blocks.
+ The first one is to add all the numbers in each block.
+ If you did this, you should have gotten 90 for the total.
+ Sum the numbers in a different pair of blocks, and you will notice you
+ get 90 again.
+ The sum of the 18 numbers in any two blocks is 90.
  Can you see why? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
@@ -147,7 +161,6 @@ noprefix "false"
 .
  This way of adding is legitimate, but maybe a little unsatisfying since
  the sum is always 90.
- A second way of adding supplies some variation in the sums.
 \end_layout
 
 \begin_layout Standard
@@ -209,8 +222,8 @@ With this idea in hand, perhaps the most organized way to proceed is to
  add the number in the upper-left corner of the first matrix to the number
  in the upper-left corner of the second matrix to produce the number in
  the upper-left corner of the sum.
- Similarly, the other 8 numbers of the sum can be produced by adding the
- corresponding numbers (by location) of the two blocks being added.
+ Similarly, the other 8 numbers of the sum can be produced by adding correspondi
+ng numbers (by location) of the two blocks being added.
  Here is an illustration of that process.
 \end_layout
 
@@ -359,13 +372,12 @@ raisebox{.3in}{$=$}
 \end_layout
 
 \begin_layout Standard
-\noindent
-This is exactly the path taken in adding matrices, component-wise (entry-by-entr
-y) addition.
- In the notation of matrices,
+The exact same component-wise (entry-by-entry) mechanics are used for adding
+ matrices.
+ Using matrix entry notation,
 \begin_inset Formula 
 \[
-\text{if }A\text{ and }B\text{ are matrices, then }(A+B)_{i,j}=A_{i,j}+A_{i,j}
+\text{if }A\text{ and }B\text{ are matrices, then }(A+B)_{i,j}=A_{i,j}+B_{i,j}
 \]
 
 \end_inset
@@ -387,7 +399,7 @@ for all entries
 \end_inset
 
 .
- The 
+ That is, the 
 \begin_inset Formula $i,\!j$
 \end_inset
 
@@ -408,7 +420,23 @@ for all entries
 \end_inset
 
 .
- This requires 
+ For the sume to be defined 
+\begin_inset Quotes eld
+\end_inset
+
+for all entries 
+\begin_inset Formula $A_{i,j}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{i,j}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ 
 \begin_inset Formula $A$
 \end_inset
 
@@ -416,8 +444,7 @@ for all entries
 \begin_inset Formula $B$
 \end_inset
 
- to have at least as many rows and columns as their sum, but in fact, adding
- matrices requires that both addends and the sum have the exact same size.
+ must have the exact same size.
  The sum of matrices of differing size is undefined.
  Subtraction of matrices is defined analogously.
 \begin_inset Formula 
@@ -448,7 +475,8 @@ for all entries
 \end_layout
 
 \begin_layout Standard
-Now let's do the same addition exercise using matrices.
+All that is to say we add matrices the same way we added the sudoku blocks
+ and we can subtract matrices in a similar manner.
  Transferring the numbers of a sudoku board to a matrix is good practice
  in creating matrices where there are none, extracting them from their context
  for mathematical work.
@@ -644,7 +672,7 @@ Previously we added the upper-left block and the middle block of the sudoku
 
 \end_inset
 
-Numerically, it is the same computation.
+Conceptually, it is the same computation.
 \end_layout
 
 \begin_layout Standard
@@ -759,11 +787,11 @@ begin{digression}{Fields}
 
 Sets of scalars other than real numbers and complex numbers are permissible
  in linear algebra as long as matrix entries come from the same field.
- A field must contain an additive identity, denoted by 
+ A field must contain an additive identity, denoted  
 \begin_inset Formula $0$
 \end_inset
 
-, and a multiplicative identity, denoted by 
+, and a multiplicative identity, denoted  
 \begin_inset Formula $1$
 \end_inset
 
@@ -1061,11 +1089,17 @@ print(5*C)
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-name "Try it at \\tt{sagecell.sagemath.org}"
-target "https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNAw1jHWiTbUMdEx1zHSMQNyLHRMdSxjNXm5nFCUmAOVmAGVWAA5lkAlhiAlBUWZeSUajtpOcDaQ4YyiD2SkCchIoF5zHUMdC4Q-Uy1nTQALOyGG&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "true"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNAw1jHWiTbUMdEx1zHSMQNyLHRM
+dSxjNXm5nFCUmAOVmAGVWAA5lkAlhiAlBUWZeSUajtpOcDaQ4YyiD2SkCchIoF5zHUMdC4Q-Uy1nTQAL
+OyGG&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
 
 \end_inset
 
@@ -1571,9 +1605,12 @@ status open
 \backslash
 item
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxtkbFqxDAQRPuD-wdDmoTMgnclWXKR4kgfOEgX
+UqRIkeK4EC6Qz8-M7MrYIFuSd3fezp6Gp-Hycfv5-rsvmPCWAyMsV1jKMNe-oSEm5MRzgwXvku6di9-Y
+eZ5wPAybx3KGB4MCrBcNGUn5AZXxwgUmp4oZ7w_Hw8sGxYIKKSlT0eTJBVEhUSdMpA7IX0Ij4ASvOxyM
+jZWVIVTni1hOOlWKDsEilEneSc5bEpcfiydqf00lAFtkb-zHZ-QZ7iAwi1kZd0gCi1fysQrWmENNax1K
+AAQLlE7xuh3N2LXUeXeRGxqiKU1YarbuLGdltMmItDcUqZQVc0bQUrKIYDFDPaqN1hnuhufr5fv39jmc
+Hs__5bJrSg==&lang=sage&interacts=eJyLjgUAARUAuQ==} 
 \end_layout
 
 \end_inset
@@ -1595,9 +1632,12 @@ status open
 \backslash
 item
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxtkbFqxDAQRPuD-wdDmgRmwbuSbKm4IqQ_CFwX
+UqRIkeJICBfI59-M7MrYIFuSd3fezj4Pp-H6cfv9-n8smPCWAyMsz7CUYa59RUVMyInnCgveJd07F7_R
+eJ5wPAybx3KGB4MCrBcVGUn5AZXxwgUmpxkN70_Hw3mDYkGFlJSpaPLkgpghUSdMpA7IX0Ij4ASfdzgY
+GysrQ6jOF7GcdKoUHYJFKJO8k7xuSVx-LJ6o_TWVAGyRvbEfb8gN7iAwi1kZd0gCi1fycRasMYeaVjuU
+AAgWKJ3ish3N2LXUeXeRGxqiKU1YatbuLGdltMmItDcUqZQVsyFoKVlEsJihHtVG7QwPw8v39efv9jmc
+rVzuUWFrkQ==&lang=sage&interacts=eJyLjgUAARUAuQ==} 
 \end_layout
 
 \end_inset
@@ -1619,9 +1659,12 @@ status open
 \backslash
 item
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxtkT9rw0AMxfdAvoOhS0KfjKX7P3Qo3QOBbqVD
+hw4dQkpJIB-_T2dPxoaz786S3k9Pr8PLcPm6_f08DgkZH9EwQWKBhAhR31dUWEYMPFeI8S74vXLxa43n
+jP1uWD0SI9QYZGA9q4gInm_wMpq4wORQ0PB53O9OKxQxKoTgmR5NnphgBS6qhLHQAfnL0QiYoWWDg7G2
+sDKE6nwRS0nnlaxDsAhlgnaS85pE3Y_ZE29_SSUAW2Rv7EcbYoMqCMxikqYNEsPslftYHFaYQ02pHcoB
+CGZIneJ9PZqpa3nn3UVuaIhPKWOuWbuznJXQJiHS1lBcJS2YDUZLyeIEsxneo7dRO8PT8Ha9_N5v30MY
+tRx0VD0_j2an4z9ocG3E&lang=sage&interacts=eJyLjgUAARUAuQ==} 
 \end_layout
 
 \end_inset
@@ -1648,52 +1691,6 @@ end{enumerate}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\noindent
-You may 
-\begin_inset CommandInset href
-LatexCommand href
-name "follow this link"
-target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQFAoF0xxVXpkgTUuTxM7N2ZWxYe3ctaT6N3pbX5fv5-_P191JQcc-BFZYbLGWYa9_RERU58dxhwbuke-fiNwbPFdfLcngsZ3gwKMB60ZGRlB9QGS9cYHJqGHjcrpf3A4oFFVJSpqLJkwuiQaJOmEgTkL-ERsAKbyccjI2dlSFU54tYTjpVignBIpRJPkk-jiQuPzZP1P6eSgC2yN7Yjw_kAXcQmMWsrCckgc0r-dgEa8yhpvUJJQCCBcqk-DyOZp1a6ny6yA0N0ZQqtpp9OstZGW0yIp0NRSplxxwIWkoWEWxmqEe10cnwD7w-ZzY=&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "false"
-
-\end_inset
-
- or copy and paste the following code into a SageCell to get started.
-\end_layout
-
-\begin_layout LyX-Code
-A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
-\end_layout
-
-\begin_layout LyX-Code
-                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
-\end_layout
-
-\begin_layout LyX-Code
-N = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
-\end_layout
-
-\begin_layout LyX-Code
-                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
-\end_layout
-
-\begin_layout LyX-Code
-Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
-\end_layout
-
-\begin_layout LyX-Code
-                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
-\end_layout
-
-\begin_layout LyX-Code
-T = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
-\end_layout
-
-\begin_layout LyX-Code
-                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
 \end_layout
 
 \begin_layout Subsection

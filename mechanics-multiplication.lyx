@@ -40,7 +40,7 @@
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder false
-\pdf_colorlinks false
+\pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
@@ -234,7 +234,7 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \end_inset
 
 -entry of 
-\begin_inset Formula $AB$
+\begin_inset Formula $P=AB$
 \end_inset
 
  is the single entry of the product of the 
@@ -253,7 +253,7 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \begin_inset Formula $B$
 \end_inset
 
- (where this makes sense).
+, where this makes sense.
  That is, if 
 \begin_inset Formula $A$
 \end_inset
@@ -263,7 +263,7 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \end_inset
 
  are matrices, then the product 
-\begin_inset Formula $AB$
+\begin_inset Formula $P=AB$
 \end_inset
 
  is calculated by setting 
@@ -287,7 +287,7 @@ The rows of
 \begin_inset Formula $B$
 \end_inset
 
- must all have the same length (number of entries).
+ must have the same number of entries.
  Otherwise 
 \begin_inset Formula $A_{i,:}B_{:,j}$
 \end_inset
@@ -353,7 +353,7 @@ on.
 \end_inset
 
  that's exactly the right size for the product 
-\begin_inset Formula $AB$
+\begin_inset Formula $P$
 \end_inset
 
 .
@@ -523,7 +523,7 @@ noprefix "false"
 
 \end_inset
 
- might look like the following on paper (at least to start).
+ might look (at least to start) like the following on paper.
 \end_layout
 
 \begin_layout Standard
@@ -569,7 +569,10 @@ For example, the
  In fact, it will be very important that you acquire such proficiency.
  This row-matrix-column-matrix calculation sits at the core of linear algebra
  and its connection to various sciences.
- If you have seen the dot product, a very similar calculation, in physics
+\end_layout
+
+\begin_layout Standard
+If you have seen the dot product, a very similar calculation, in physics
  or calculus, think of the row-matrix-column-matrix product as the linear
  algebra equivalent of the dot product.
  
@@ -631,7 +634,7 @@ In linear algebra (matrices):
 0\\
 14\\
 -1
-\end{array}\right]=5\cdot0+3\cdot14+6\cdot-1=36}$
+\end{array}\right]=\left[5\cdot0+3\cdot14+6\cdot-1\right]=\left[36\right]}$
 \end_inset
 
 
@@ -713,8 +716,9 @@ Thus the distinction between the two objects is blurred, but make no mistake,
  It is a convenience in linear algebra to represent vectors as column matrices,
  giving the column matrix notation two meanings, (1) a matrix, and (2) a
  vector.
- Though we try not to do this type of thing in mathematics often, it happens
- sometimes, much like the numerous words in English with multiple meanings.
+ Though we try not to do this type of thing often in mathematics, giving
+ a single notation multiple meanings, it happens much like words in English
+ are given multiple meanings.
  What you can do with a ring depends entirely on what type of ring.
  A wedding ring might be worn on your ring finger, and a circus ring might
  contain a tiny car with two dozen clowns in it.
@@ -794,7 +798,7 @@ noprefix "false"
 
 ), so the product is rightfully a matrix.
  In the calculation of a matrix product, the result of each individual dot
- product will become an entry—a scalar—not a matrix in the resulting matrix.
+ product will become an entry—a scalar, not a matrix—in the product.
  The square brackets are dropped.
  The 
 \begin_inset Formula $1\times1$
@@ -818,11 +822,11 @@ on between these two objects.
 \end_inset
 
  matrix notation (square brackets) and scalar notation (lack of delimiters)
- each represent both objects, whichever is appropriate for the situation.
+ represent one another, whichever is appropriate for the situation.
 \end_layout
 
 \begin_layout Standard
-Compute the products.
+Can you compute the products
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -831,18 +835,30 @@ Compute the products.
 \end{array}\right]\left[\begin{array}{cc}
 2 & 3\\
 -1 & 0
-\end{array}\right]\qquad\left[\begin{array}{cc}
+\end{array}\right]\qquad\text{and}\qquad\left[\begin{array}{cc}
 2 & 3\\
 -1 & 0
 \end{array}\right]\left[\begin{array}{cc}
 1 & -2\\
 3 & 7
-\end{array}\right]
+\end{array}\right]?
 \]
 
 \end_inset
 
-Besides good practice in multiplying matrices, this example shows that 
+Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Besides good practice in multiplying matrices, this example shows that
+ 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -1073,6 +1089,22 @@ M.transpose()
 \begin_inset Formula $A_{:,2}^{T}A_{:,3}$
 \end_inset
 
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJx1js0KwjAQhO-C7zD0lEgodKMehB7yAN68iYcQ
+gwRsWpIIPr79kbSH9rTD7Lczq-pGp-C-jIQU90oM4yhO4vzg-10XnE-suI4E1KXInspqxm7B6uT8C6Z9
+fxofQdD-CQkdMZYYGxcRvTCEGrm_EqqcTlnFh63c2BKfSycLtAg2tPLcn5NLTm5zhBS0j10bLZJrbMRa
+AJWZYvzQ5_0AEnRkIQ==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -1233,7 +1265,23 @@ matrix()
 
 \begin_layout Standard
 On the other hand, SageMath is perfectly capable of treating the columns
- as vectors, as seen in the following code.
+ as vectors, as seen in the following code 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNAw0jHWiTbUAVEmOqY6ZrGavFwF
+RZl5JRpKvmAVCo5WSnAxRzgLoSykKDWxJDMvXSE5P6c0N69YwUghMS9FwVghsVihLDW5JL-oGMkEICPZ
+SMFWwVEPolzDECRijCxihDAbIqJghGRAshEWN0DVGSOrM8aiziW_RKGgKD-lNLlEIT8N3cUotmgBDQAA
+R6RWYw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+.
  The 
 \family typewriter
 *
@@ -2004,7 +2052,7 @@ value{enumigrab}}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2012,9 +2060,12 @@ status open
 \backslash
 item
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxtkbtqxDAQRfuF_QdBGhvugGf0sFykWPIFCXEV
+EkiRIsWyIezCfn7uyG5ibJAljeZx5s4pPIbz5_X3-95lFLwlwwBJIyQmiPq5osIKUuS9Qoy26Hbl4m4T
+7wXHQ9h8khLU6GRgPqtIiB5v8DSaucDgOGLCe388zBsUMVaI0SPdmzwpw0Z4USWMxQbIJ0cjYIGOOxz0
+tZWVLqzOH7GUdJ7JGgSTsEzURvK8JVHXY9HE219DCcAW2Rv70QlpgioIzGSShx0Sw6KV6zg6rDCGNaU2
+KAcgmCE3ipftaIZWyztvKvJAQXxKBUvO2pTlrIQyCZH2huJV8oo5wSgpWZxgEcN79DZqY3gIT5fzz-36
+FbrTx2vfzbT9s859e_gDlfpx1A==&lang=sage&interacts=eJyLjgUAARUAuQ==} 
 \end_layout
 
 \end_inset
@@ -2033,7 +2084,7 @@ Compute
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2041,9 +2092,12 @@ status open
 \backslash
 item
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxtkb1qxDAQhHuD30GQ5g5mwbuSbLlIEfIEPpwq
+xJAiRYrjQrhAHj-zsotgbJAtWfvzzexTeAzX9_v35-8po8drMnSQNEBigqjvCwqsR4o8F4jxX_T_ysWv
+jTz3aJuweyQlqDHIwHpWkBA93-BlNHOByXHAiLdz27zsUMTYIUbP9GjypAwb4E2VMBYrIK8cjYA9dDjg
+YKxtrAxhd76IpaTzSlYhWIRtolaSaU-i7sfqicvfUglAidRGPToijVAFgVlMcndAYli9ch8HhxXmsKeU
+CuUABDPkSnHZj6arvVx5dZEbGuJT6rHWLNVZzkpokxDpaCjeJW-YI4yWksUJVjNco8soleEhPN-uXz_3
+j3CK0zIHCXZZ5vMyt83_yzjVmz9Kz3NR&lang=sage&interacts=eJyLjgUAARUAuQ==} 
 \end_layout
 
 \end_inset
@@ -2062,7 +2116,7 @@ Compute
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2070,9 +2124,13 @@ status open
 \backslash
 item
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxtkUFLxDAQhe8L_Q8BLy2-QDNJ2vTgIfgLWrYn
+ccGDBw-LIiv4832T9qCxhbTJ9M3MNy_ZPJjry-3z7buNGPAUBD1sGGF9gHW6T0iQAcHznGCFMa9xx8Wv
+TDwPaE6memwIcEKRgPUkIcBrvkDLuMgFJvsRE5675rRWKFbYwXvNVDV5QoSM0KaOMOILIH8pGgEHuPGA
+g1rZWSlhd76I5UinlaRAsAjbeFdI5prEqR-bJzr-nkoAjsjZOI-bECY4BwKzmI39AYlg80p9HBXWMoc9
+bSpQCkAwQSwUS301femlkxcXuaEheksDtpqpOMu7srTJEunoUrRL3DEnCC0lixJsZuiMOkYqDHfm8f36
+8XV7Ne28dJdzc_ody-16OXfL3-C85qUWtpm6uahzVcLcm3_y3DLUVSUWY00mwg8EjI0Z&lang=sage&i
+nteracts=eJyLjgUAARUAuQ==} 
 \end_layout
 
 \end_inset
@@ -2109,50 +2167,50 @@ end{enumerate}
 
 \end_layout
 
-\begin_layout Standard
-\noindent
-You may 
-\begin_inset CommandInset href
-LatexCommand href
-name "follow this link"
-target "https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDeweXORiBpf0vUuQREkh1XHFlijQhRR4_M2tXxoa1d9eS5tPobXldvp-_P19_LwUV9xxYYbnBUoa59h0dUZETzx0WvEu6dy5-Y_Bccb0sh8dyhgeDAqwXHRlJ-QGV8cIFJqeGgcftevk8oFhQISVlKpo8uSAaJOqEiTQB-UtoBKzwdsLB2NhZGUJ1vojlpFOlmBAsQpnkk-T9SOLyY_NE7e-pBGCL7I39-EAecAeBWczKekIS2LySj02wxhxqWp9QAiBYoEyKj-No1qmlzqeL3NAQTaliq9mns5yV0SYj0tlQpFJ2zIGgpWQRwWaGelQbnQz_xjhnOw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "false"
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+products 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-products"
 
 \end_inset
 
- or copy and paste the following code into a SageCell to get started.
-\end_layout
+The products are
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+1 & -2\\
+3 & 7
+\end{array}\right]\left[\begin{array}{cc}
+2 & 3\\
+-1 & 0
+\end{array}\right] & =\left[\begin{array}{cc}
+4 & 3\\
+-1 & 9
+\end{array}\right]\\
+\left[\begin{array}{cc}
+2 & 3\\
+-1 & 0
+\end{array}\right]\left[\begin{array}{cc}
+1 & -2\\
+3 & 7
+\end{array}\right] & =\left[\begin{array}{cc}
+11 & 17\\
+-1 & 2
+\end{array}\right].
+\end{align*}
 
-\begin_layout LyX-Code
-A = matrix(5,6,[42,0,-47,-34,-10,-48,8,26,43,-18,-20,-30,-41,-40,-29,-36,
-\end_layout
+\end_inset
 
-\begin_layout LyX-Code
-                -44,12,-42,47,28,4,38,-22,18,-15,-1,29,37,9,])
-\end_layout
 
-\begin_layout LyX-Code
-U = matrix(5,6,[-21,-33,28,-15,34,45,27,40,-13,-23,-10,15,43,-6,46,17,
-\end_layout
-
-\begin_layout LyX-Code
-                13,21,-40,-46,2,16,22,-14,10,-12,29,35,48,-31,])
-\end_layout
-
-\begin_layout LyX-Code
-Q = matrix(5,6,[-17,-37,-34,20,-14,10,-23,44,47,18,19,49,11,33,35,-50,
-\end_layout
-
-\begin_layout LyX-Code
-                2,9,-36,-18,7,17,-49,31,-8,16,28,-32,-2,5,])
-\end_layout
-
-\begin_layout LyX-Code
-R = matrix(5,6,[40,47,13,-2,-22,3,-45,4,-16,6,-18,8,18,-26,-27,-19,
-\end_layout
-
-\begin_layout LyX-Code
-                -48,-35,33,35,9,25,2,7,-8,10,-12,-34,11,38,])
 \end_layout
 
 \end_body

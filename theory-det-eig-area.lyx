@@ -362,7 +362,7 @@ The area of a bounded region of the plane, a shape
 
 ).
  Define the norm of a partition, denoted 
-\begin_inset Formula $||\mathcal{P}_{R}||$
+\begin_inset Formula $\Vert\mathcal{P}_{R}\Vert$
 \end_inset
 
 , as the maximum of the areas of the primitives in 
@@ -373,7 +373,7 @@ The area of a bounded region of the plane, a shape
  Then
 \begin_inset Formula 
 \[
-\text{area}(S)=\lim_{||\mathcal{P}_{R}||\to0}\sum_{\substack{p\in\mathcal{P}_{R}\\
+\text{area}(S)=\lim_{\Vert\mathcal{P}_{R}\Vert\to0}\sum_{\substack{p\in\mathcal{P}_{R}\\
 p\subseteq S
 }
 }\text{area}(p)

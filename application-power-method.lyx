@@ -972,7 +972,7 @@ TODO: Create examples and rephrase.
 
 \begin_layout Enumerate
 Here are the first 6 terms of 
-\begin_inset Formula $\mathbf{v}_{k}=\frac{M\mathbf{v}_{k-1}}{||M\mathbf{v}_{k-1}||_{\infty}}$
+\begin_inset Formula $\mathbf{v}_{k}=\frac{M\mathbf{v}_{k-1}}{\Vert M\mathbf{v}_{k-1}\Vert_{\infty}}$
 \end_inset
 
 .

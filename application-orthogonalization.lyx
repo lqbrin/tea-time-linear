@@ -1726,7 +1726,7 @@ noprefix "false"
  For the norms of basis vectors,
 \begin_inset Formula 
 \begin{align*}
-||I_{:,i}|| & =\sqrt{I_{:,i}\bcdot I_{:,i}}\\
+\Vert I_{:,i}\Vert & =\sqrt{I_{:,i}\bcdot I_{:,i}}\\
  & =\sqrt{0\cdot0+\cdots+0\cdot0+\overset{i^{th}\text{ term}}{\overbrace{1\cdot1}}+0\cdot0+\cdots+0\cdot0}\\
  & =1.
 \end{align*}
@@ -1788,7 +1788,7 @@ Since
 \end_inset
 
 , it is just as well to see that the norm squared is not 1 as in 
-\begin_inset Formula $||1||^{2}=\langle1,1\rangle=\frac{2}{5}(0\cdot0)+\frac{2}{3}(1\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(0\cdot1)+2(1\cdot1)=2$
+\begin_inset Formula $\Vert1\Vert^{2}=\langle1,1\rangle=\frac{2}{5}(0\cdot0)+\frac{2}{3}(1\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(0\cdot1)+2(1\cdot1)=2$
 \end_inset
 
 .
@@ -1799,9 +1799,9 @@ Since
 
 \begin_inset Formula 
 \begin{align*}
-||1||=\sqrt{\langle1,1\rangle} & =\sqrt{\frac{2}{5}(0\cdot0)+\frac{2}{3}(1\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(0\cdot1)+2(1\cdot1)}=\sqrt{2}\\
-||t||=\sqrt{\langle t,t\rangle} & =\sqrt{\frac{2}{5}(0\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(1\cdot1)+\frac{2}{3}(0\cdot0)+2(0\cdot0)}=\sqrt{\frac{2}{3}}\\
-||t^{2}||=\sqrt{\langle t^{2},t^{2}\rangle} & =\sqrt{\frac{2}{5}(1,1)+\frac{2}{3}(0\cdot1)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(1\cdot0)+2(0\cdot0)}=\sqrt{\frac{2}{5}}.
+\Vert1\Vert=\sqrt{\langle1,1\rangle} & =\sqrt{\frac{2}{5}(0\cdot0)+\frac{2}{3}(1\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(0\cdot1)+2(1\cdot1)}=\sqrt{2}\\
+\Vert t\Vert=\sqrt{\langle t,t\rangle} & =\sqrt{\frac{2}{5}(0\cdot0)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(1\cdot1)+\frac{2}{3}(0\cdot0)+2(0\cdot0)}=\sqrt{\frac{2}{3}}\\
+\Vert t^{2}\Vert=\sqrt{\langle t^{2},t^{2}\rangle} & =\sqrt{\frac{2}{5}(1,1)+\frac{2}{3}(0\cdot1)+\frac{2}{3}(0\cdot0)+\frac{2}{3}(1\cdot0)+2(0\cdot0)}=\sqrt{\frac{2}{5}}.
 \end{align*}
 
 \end_inset

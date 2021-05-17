@@ -112,7 +112,7 @@ Geometric Interpretation of Vectors
 \end_layout
 
 \begin_layout Standard
-One day, my friend Victor took a 5 kilometer drive.
+One day my friend Victor took a 5 kilometer drive.
  When Victor told me this I knew just how long his drive was.
  It was 5 kilometers.
  When Victor added that his drive was on a very straight highway headed
@@ -255,14 +255,20 @@ As the crow flies, Victor's total displacement or movement for the drive
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
+5\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right]=\left[\begin{array}{c}
 5+\sqrt{\frac{9}{2}}\\
 -\sqrt{\frac{9}{2}}
-\end{array}\right].
+\end{array}\right],
 \]
 
 \end_inset
 
-
+the black vector in the diagram.
 \end_layout
 
 \begin_layout Standard
@@ -278,31 +284,8 @@ As the crow flies, Victor's total displacement or movement for the drive
 \end_layout
 
 \begin_layout Standard
-\noindent
 Since addition of vectors is commutative, it does not matter which vector
  is plotted first.
- After the pair of displacements, 
-\begin_inset Formula $\left[\begin{array}{c}
-5\\
-0
-\end{array}\right]$
-\end_inset
-
- and 
-\begin_inset Formula $\left[\begin{array}{c}
-\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right]$
-\end_inset
-
-, Victor's total displacement is 
-\begin_inset Formula $\left[\begin{array}{c}
-5+\sqrt{\frac{9}{2}}\\
--\sqrt{\frac{9}{2}}
-\end{array}\right]$
-\end_inset
-
-.
  In the diagram, the gray vectors represent 
 \begin_inset Formula $\left[\begin{array}{c}
 5\\
@@ -324,8 +307,29 @@ Since addition of vectors is commutative, it does not matter which vector
 \end_inset
 
 .
- The five vectors together illustrate the parallelogram rule for vector
- addition.
+ After the pair of displacements, 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right]$
+\end_inset
+
+, Victor's total displacement is 
+\begin_inset Formula $\left[\begin{array}{c}
+5+\sqrt{\frac{9}{2}}\\
+-\sqrt{\frac{9}{2}}
+\end{array}\right]$
+\end_inset
+
+ no matter which displacement comes first.
+ The diagram illustrates the parallelogram rule for vector addition.
  The sum of two vectors is a diagonal of the parallelogram determined by
  the two vectors.
 \end_layout
@@ -425,14 +429,14 @@ length
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
-, denoted by 
-\begin_inset Formula $||\mathbf{v}||$
+, denoted  
+\begin_inset Formula $\Vert\mathbf{v}\Vert$
 \end_inset
 
 , is defined as
 \begin_inset Formula 
 \[
-||\mathbf{v}||=\sqrt{\mathbf{v}^{T}\mathbf{v}}.
+\Vert\mathbf{v}\Vert=\sqrt{\mathbf{v}^{T}\mathbf{v}}.
 \]
 
 \end_inset
@@ -451,7 +455,7 @@ The following diagram illustrates the relationship between the lengths of
 \end_inset
 
 .
- By the side-angle-side theorem from geometry the marked triangles in each
+ By the side-angle-side theorem from geometry the pair of triangles in each
  figure are congruent if and only if 
 \begin_inset Formula $\alpha=\beta$
 \end_inset
@@ -507,7 +511,7 @@ This observation leads to a very useful property of the dot product, exposed
  by the following calculation.
 \begin_inset Formula 
 \begin{align}
-||\mathbf{v}+\mathbf{u}|| & =||\mathbf{v}-\mathbf{u}||\nonumber \\
+\Vert\mathbf{v}+\mathbf{u}\Vert & =\Vert\mathbf{v}-\mathbf{u}\Vert\nonumber \\
 \sqrt{(\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u})} & =\sqrt{(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})}\nonumber \\
 (\mathbf{v}+\mathbf{u})^{T}(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}-\mathbf{u})^{T}(\mathbf{v}-\mathbf{u})\nonumber \\
 (\mathbf{v}^{T}+\mathbf{u}^{T})(\mathbf{v}+\mathbf{u}) & =(\mathbf{v}^{T}-\mathbf{u}^{T})(\mathbf{v}-\mathbf{u})\nonumber \\
@@ -521,8 +525,17 @@ This observation leads to a very useful property of the dot product, exposed
 
 \end_inset
 
-Passing from the seventh equation to the eighth equation depends on the
- fact that 
+Vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ (with two entries) are perpendicular if and only if their dot product is
+ zero! Passing from the seventh equation to the eighth equation depends
+ on the fact that 
 \begin_inset Formula $\mathbf{v}^{T}\mathbf{u}=\mathbf{u}^{T}\mathbf{v}$
 \end_inset
 
@@ -539,18 +552,15 @@ noprefix "false"
 \end_inset
 
 .
- Thus vectors 
-\begin_inset Formula $\mathbf{u}$
+\end_layout
+
+\begin_layout Standard
+As with the formula 
+\begin_inset Formula $\Vert\mathbf{v}\Vert=\sqrt{\mathbf{v}^{T}\mathbf{v}}$
 \end_inset
 
- and 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- (with two entries) are perpendicular if and only if their dot product is
- zero.
- As with the formula for length, this formula naturally extends to vectors
- with more than two entries.
+ for length, this calculation is independent of the number of entries in
+ the vectors.
  We say that vectors 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
@@ -564,10 +574,60 @@ noprefix "false"
 orthogonal
 \series default
  if and only if their dot product is zero.
- For vectors with two or three entries this means the vectors, eminating
- from the same point, are perpendicular.
- In this way, orthogonality extends the idea of perpendicularity to dimensions
- greater than three.
+ For vectors with two or three entries this means the vectors are perpendicular.
+ As a result, orthogonality is precisely the same as perpendicularity in
+ two and three dimensions, and extends the idea to dimensions greater than
+ three.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "par:distance-between-vectors"
+
+\end_inset
+
+If 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are placed with their tails at the same point, then 
+\begin_inset Formula $\Vert\mathbf{u}-\mathbf{v}\Vert$
+\end_inset
+
+ is the distance between the heads of 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ See the diagram above.
+ As such, the distance between 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $\Vert\mathbf{u}-\mathbf{v}\Vert$
+\end_inset
+
+.
+ Easy to picture in two dimensions, this formula applies to vectors of any
+ length again extending a two- and three-dimensional notion to higher dimensions.
 \end_layout
 
 \begin_layout Subsection
@@ -587,7 +647,7 @@ of
 \begin_inset space ~
 \end_inset
 
-vectors vectors are often thought of as displacements represented by arrows.
+vectors Vectors are often thought of as displacements represented by arrows.
 \end_layout
 
 \begin_layout Description
@@ -607,12 +667,12 @@ vector
 \begin_inset space ~
 \end_inset
 
-sum the sum of two vectors is represented geometrically by a diagonal of
+sum The sum of two vectors is represented geometrically by a diagonal of
  the parallelogram determined by the two vectors.
 \end_layout
 
 \begin_layout Description
-length the length of a column vector 
+length of a column vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -624,7 +684,16 @@ length the length of a column vector
 \end_layout
 
 \begin_layout Description
-orthogonal two vectors whose dot product is defined and is are orthogonal.
+orthogonal Two vectors whose dot product is defined and zero are orthogonal.
+\end_layout
+
+\begin_layout Description
+distance The distance between two vectors is the length of their difference,
+ 
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})=\Vert\mathbf{u}-\mathbf{v}\Vert$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -650,7 +719,22 @@ print(u*v)
 \end_layout
 
 \begin_layout Standard
-runs even though the third line requests the product of a vector with a
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwrtS1LTS7JL9KINtQx0jGO1eTlKrPNTSwpyqzQ
+MNYx1Ik2BgobgoQLijLzSjRKtco0AZl-Dvk=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ runs even though the third line requests the product of a vector with a
  matrix.
  SageMath treats matrix 
 \family typewriter
@@ -691,6 +775,21 @@ print(u*v)
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwrtS1LTS7JL9KINtQx0jGO1eTlKoMLGQOFDEFC
+BUWZeSUapVplmgBlyA47&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
 produces
 \end_layout
 
@@ -720,7 +819,22 @@ print(u*vector(v))
 \end_layout
 
 \begin_layout Standard
-explicitly tells SageMath to treat 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwrtS1LTS7JL9KINtQx0jGO1eTlKrPNTSwpyqzQ
+MNYx1Ik2BgobgoQLijLzSjRKtaDqyzQ1ASEGEd0=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ explicitly tells SageMath to treat 
 \family typewriter
 v
 \family default
@@ -767,7 +881,23 @@ print(matrix(1,3,u)*v)
 \end_layout
 
 \begin_layout Standard
-produces the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwrtS1LTS7JL9KINtQx0jGO1eTlKrPNTSwpyqzQ
+MNYx1Ik2BgobgoQLijLzSjSgUoY6xjqlmlplmgBpNRKb&lang=sage&interacts=eJyLjgUAARUAuQ=
+=}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ produces the 
 \begin_inset Formula $1\times1$
 \end_inset
 
@@ -825,7 +955,23 @@ print(u_mat.norm())
 \end_layout
 
 \begin_layout Standard
-produces
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwrjS9LTbYF4pL8Io1oMx1THV3jWE1ertL43MQS
+WyAuyqzQMNQx1kGSKyjKzCvRKAXp1MvLL8rV0EQSBGqBCQIAOnEcvg==&lang=sage&interacts=eJy
+LjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ produces
 \end_layout
 
 \begin_layout LyX-Code
@@ -938,55 +1084,6 @@ Are
 \end_inset
 
  perpendicular?
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Justify the claim.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:distance-between-vectors"
-
-\end_inset
-
-If 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- are placed with their tails at the same point, then 
-\begin_inset Formula $||\mathbf{u}-\mathbf{v}||$
-\end_inset
-
- is the distance between the heads of 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
-.
- As such, we define the distance between 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- as 
-\begin_inset Formula $d(\mathbf{u},\mathbf{v})=||\mathbf{u}-\mathbf{v}||$
-\end_inset
-
-.
 \end_layout
 
 \end_deeper

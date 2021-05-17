@@ -13,6 +13,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcounter{pagegrab}
 \newcounter{enumigrab}
+\newcounter{sagemathcell}
+\setcounter{sagemathcell}{1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Part page without number %
@@ -26,6 +28,8 @@
   \stepcounter{pagegrab}
   \setcounter{page}{\thepagegrab}
 }
+
+\newcommand{\sagecell}[1]{\href{#1}{\includegraphics[height=12pt]{SageMathCell} \thesagemathcell}\stepcounter{sagemathcell}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Redefine \boxed                                       %
@@ -47,7 +51,7 @@
 % Sage and GeoGebra Logo definitions %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{$HOME/Documents/scsu/Book-Linear/figures/}}
-\newcommand{\sage}{\includegraphics[height=12pt]{sageLogo}}
+\newcommand{\sage}{\href{https://sagecell.sagemath.org/}{\includegraphics[height=12pt]{SageMathCell}}}
 \newcommand{\geogebra}{\includegraphics[height=12pt]{geogebraLogo}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%

@@ -38,7 +38,16 @@ figs-within-sections
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -291,8 +300,8 @@ two by three
  The number of rows is always listed first.
  The rows are indexed from top to bottom, and the columns are indexed from
  left to right.
- The first column is the leftmost column, and the first row is the topmost
- row.
+ The first row is the topmost row, and the first column is the leftmost
+ column.
  There are no restrictions on the numbers of rows or columns other than
  each must be a positive integer.
  The individual quantities in a matrix are called
@@ -347,11 +356,24 @@ Matrices are most often labeled by capital letter variables such as
 \begin_inset Formula $A$
 \end_inset
 
- is denoted by 
+ is denoted  
 \begin_inset Formula $A_{i,j}$
 \end_inset
 
 .
+ The 
+\begin_inset Formula $5,\!1$
+\end_inset
+
+-entry (fifth row, first column) of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is denoted  
+\begin_inset Formula $M_{5,1}$
+\end_inset
+
+, for example.
 \end_layout
 
 \begin_layout Standard
@@ -405,21 +427,16 @@ end{digression}
 
 \begin_layout Standard
 \noindent
-The 
-\begin_inset Formula $5,\!1$
-\end_inset
+Two matrices are 
+\series bold
+equal
+\series default
+ if they are the same size and corresponding entries are equal.
+\end_layout
 
--entry of a matrix 
-\begin_inset Formula $M$
-\end_inset
-
- is denoted by 
-\begin_inset Formula $M_{5,1}$
-\end_inset
-
-.
- Taking our cue from computer science and the currently very popular Python
- programming language, the 
+\begin_layout Standard
+Taking a cue from computer science and the currently popular Python programming
+ language, the 
 \begin_inset Formula $i^{th}$
 \end_inset
 
@@ -427,7 +444,7 @@ The
 \begin_inset Formula $B$
 \end_inset
 
- is denoted by 
+ is denoted  
 \begin_inset Formula $B_{i,:}$
 \end_inset
 
@@ -444,7 +461,7 @@ The
 \begin_inset Formula $B$
 \end_inset
 
- is denoted by 
+ is denoted  
 \begin_inset Formula $B_{:,j}$
 \end_inset
 
@@ -596,12 +613,8 @@ Though we will not make frequent use of it, the
 \end_layout
 
 \begin_layout Standard
-Typically the entries of a matrix will have underlying meaning, but the
- point of putting quantities in a matrix is to perform some mathematical
- operation.
- Labels would only get in the way, so the rows and columns of a matrix are
- not labeled directly.
- Their meaning must be gathered some other way.
+Often the entries of a matrix will have underlying meaning, derived from
+ the context of a story problem or application.
  A table or spreadsheet of common grocery items at various stores such as
 \end_layout
 
@@ -1206,11 +1219,9 @@ would be summarized in a matrix as
 \end_inset
 
 All the descriptive words are stripped.
- While the meaning of the entries in this case is stated explicitly elsewhere,
- there are times when meaning will be simply implied or understood from
- context.
- In any case, If the numbers in a matrix are to retain their contextual
- meaning, that information must be supplied separately.
+ Labels would only get in the way of any mathematical operation, so the
+ rows and columns of a matrix are not labeled.
+ Their meaning must be communicated some other way.
  View 
 \begin_inset CommandInset href
 LatexCommand href
@@ -1243,6 +1254,15 @@ https://youtu.be/BZWFkUQ3tco?t=71
  (3:13) for more examples where a matrix might be useful.
 \end_layout
 
+\begin_layout Standard
+While the meaning of the entries in the grocery items example is stated
+ explicitly in the table/spreadsheet, there are times when meaning will
+ simply be implied or understood from context.
+ In any case, if the numbers in a matrix are to have contextual meaning,
+ that information must be supplied separately.
+ 
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
@@ -1259,8 +1279,6 @@ matrix A rectangular array of algebraic quantities usually delimited by
 \end_inset
 
 entry One of the individual quantities in a matrix.
- Subscripted lower case letters are used to represent entries of a matrix.
- 
 \end_layout
 
 \begin_layout Description
@@ -1268,7 +1286,7 @@ entry One of the individual quantities in a matrix.
 \begin_inset space ~
 \end_inset
 
-size Stated as the number of rows 
+size The number of rows 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1277,6 +1295,15 @@ by
 \end_inset
 
  the number of columns.
+\end_layout
+
+\begin_layout Description
+matrix
+\begin_inset space ~
+\end_inset
+
+equality Two matrices are equal if they are the same size and corresponding
+ entries are equal.
 \end_layout
 
 \begin_layout Description
@@ -1416,7 +1443,7 @@ SageMath
 The matrices and operations of this section (and the entire text) can be
  handled electronically by SageMath.
  All you need is the syntax, the proper combinations of words and symbols.
- Before any operations can be performed, a matrix must be defined.
+ A matrix must be defined before it can be used in any computation.
  In SageMath, there are several ways to define a matrix, but we will most
  often use the syntax
 \end_layout
@@ -1469,8 +1496,7 @@ begin{digression}{Instantiation}
 
 \end_inset
 
-In computer science, the creation or definition of a variable is called
- 
+In computer science, giving a value to a variable is called 
 \shape italic
 instantiation
 \shape default
@@ -1492,8 +1518,8 @@ end{digression}
 
 \begin_layout Standard
 \noindent
-as a matrix from which we can extract entries or submatrices, or simply
- print out.
+as a matrix from which we can extract entries or submatrices, print out,
+ or perform operations.
  Just as we can on paper, we can name the matrix using any letter.
  It does not have to be 
 \family typewriter
@@ -1532,7 +1558,11 @@ M
 \family default
  (in SageMath, Python, and many other programming languages) is row 0, the
  second row is row 1, and so on.
- The square bracket notation is used to extract entries of a matrix, too.
+ 
+\end_layout
+
+\begin_layout Standard
+The square bracket notation is used to extract entries of a matrix, too.
  In SageMath the 
 \begin_inset Formula $i,j$
 \end_inset
@@ -1895,20 +1925,28 @@ M
 S
 \family default
 , but do not create any output.
- When the code is run (evaluated), it seems nothing has happened! (You can
- 
-\begin_inset CommandInset href
-LatexCommand href
-name "try it at \\tt{sagecell.sagemath.org}"
-target "https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdKJNgQSxjomOqY6ZrGavFzBQGnfaCMdq1gA2d0Juw==&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "true"
+ When the code is run (evaluated), it seems nothing has happened! Test it
+ by following this link:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdKJNgQSxjomOqY6ZrGa
+vFzBQGnfaCMdq1gA2d0Juw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
 
 \end_inset
 
-).
- Rest assured, though, these lines cause SageMath to do things internally.
+.
+ Rest assured, these lines cause SageMath to do things internally.
  We just aren't seeing the results yet.
- If we add a couple lines requesting the display of our matrices, we will
+\end_layout
+
+\begin_layout Standard
+If we add a couple lines requesting the display of our matrices, we will
  see the results.
  In SageMath, this can be done with the 
 \family typewriter
@@ -1974,7 +2012,7 @@ SageCell.SageMath.org
 \begin_inset Graphics
 	filename figures/mechanics-whatis-sagecell.png
 	lyxscale 50
-	scale 60
+	scale 75
 
 \end_inset
 
@@ -1982,12 +2020,18 @@ SageCell.SageMath.org
 \begin_inset Newline newline
 \end_inset
 
+Live at 
+\begin_inset ERT
+status open
 
-\begin_inset CommandInset href
-LatexCommand href
-name "Try it at \\tt{sagecell.sagemath.org}"
-target "https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdKJNgQSxjomOqY6ZrGavFzBQGnfaCMdq1heroKizLwSDV9NGAvOCNYEAG8rEho=&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "true"
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdKJNgQSxjomOqY6ZrGa
+vFzBQGnfaCMdq1heroKizLwSDV9NGAvOCNYEAG8rEho=&lang=sage&interacts=eJyLjgUAARUAuQ=
+=}
+\end_layout
 
 \end_inset
 
@@ -2543,14 +2587,14 @@ status open
 
 
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxzUbBVyE0sKcqs0DDWMdGJ1jXSMTTQ0TXXsdAB
+Ms11DA1BHF0THVMdM6BMrCYvl7KCRqamQkFRZl6JQn5piUJJRioQZxalKBTllyvkpym48HJBVGEoS8ss
+Ki5RSM7PKc3NA6sEAAw3Izc=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \end_inset
 
-Add code that will print out (i) the third row and (ii) the first column
+ Add code that will print out (i) the third row and (ii) the first column
  of 
 \family typewriter
 D
@@ -2572,7 +2616,7 @@ D = matrix(3,4,[-2,10,-7,8,-2,7,
 \end_layout
 
 \begin_layout Standard
-What is the output of your code?
+What is the output of your code? 
 \end_layout
 
 \end_deeper
@@ -2584,14 +2628,14 @@ status open
 
 
 \backslash
-sage
-\backslash
- 
+sagecell{https://sagecell.sagemath.org/?z=eJxzUbBVyE0sKcqs0DDRMdaJ1jXSMTTQ0TXXsdAB
+Ms11DA1BHF0THVMdM6BMrCYvl7KCRqamQkFRZl6JQn5piUJJRioQZxalKBTllyvkpym48HJBVGEoS8ss
+Ki5RSM7PKc3NA6sEAAw5Izc=&lang=sage&interacts=eJyLjgUAARUAuQ==} 
 \end_layout
 
 \end_inset
 
-If you swap the 3 and the 4 in the code of exercise 
+ If you swap the 3 and the 4 in the code of exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:mechanics-whatis"

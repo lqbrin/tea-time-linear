@@ -394,6 +394,53 @@ mainmatter
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+UNIFORMIZATION COMPLETED
+\end_layout
+
+\begin_layout Itemize
+Use 
+\backslash
+Vert instead of ||
+\end_layout
+
+\begin_layout Itemize
+Use 
+\begin_inset Quotes eld
+\end_inset
+
+denoted
+\begin_inset Quotes erd
+\end_inset
+
+ instead of 
+\begin_inset Quotes eld
+\end_inset
+
+denoted by
+\begin_inset Quotes erd
+\end_inset
+
+ (remove the 
+\begin_inset Quotes eld
+\end_inset
+
+by
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -414,54 +461,6 @@ status open
 \begin_layout Plain Layout
 
 % Chapter 1: Matrix Calculations 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Insert definition of matrix equality 
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: shorten every 
-\begin_inset Quotes eld
-\end_inset
-
-denoted by
-\begin_inset Quotes erd
-\end_inset
-
- to 
-\begin_inset Quotes eld
-\end_inset
-
-denoted
-\begin_inset Quotes erd
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Replace double vertical bars by 
-\backslash
-Vert 
 \end_layout
 
 \end_inset

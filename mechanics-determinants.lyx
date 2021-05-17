@@ -156,13 +156,17 @@ the discriminant
 \end_inset
 
  has.
- It is determinative of the types of roots, and in this light might just
- as well be known as a determinant (which, in English, means determinative).
- In mathematics, though, that term is reserved for linear algebra.
+ It is determinative of the type of roots, and in this light might just
+ as well be known as a determinant (which means determinative).
+ In mathematics, though, the term 
+\shape italic
+determinant
+\shape default
+ is reserved for linear algebra.
  The determinant is a determinative calculation that can be made for any
  matrix much the same way the discriminant is a determinative calculation
  that can be made for any quadratic function.
- Exactly what the determinants determines will have to wait a short while.
+ Exactly what the determinant determines will have to wait a short while.
 \end_layout
 
 \begin_layout Standard
@@ -226,19 +230,23 @@ The determinant of a square matrix with more than one row, and therefore
 status collapsed
 
 \begin_layout Plain Layout
-For this formula to work for 
+This formula can be made to work for 
 \begin_inset Formula $1\times1$
 \end_inset
 
- matrices, we define 
-\begin_inset Formula $\det A_{\backslash1,1}$
+ matrices by defining 
+\begin_inset Formula $\det A_{\backslash1,1}=1$
 \end_inset
 
- to be 1 for a 
+ for a 
 \begin_inset Formula $1\times1$
 \end_inset
 
- matrix.
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -367,7 +375,10 @@ noprefix "false"
  the determinant determined.
  If nothing else, hopefully you are convinced that completing this calculation
  by hand would take a while and be prone to error.
- The real point of this example is to familiarize yourself with the recursive
+\end_layout
+
+\begin_layout Standard
+The main point of this discourse is to familiarize you with the recursive
  definition.
  Making sure you get the right signs on the coefficients and extract the
  right submatrices at each step takes some practice.
@@ -500,27 +511,28 @@ noprefix "false"
 linear combination
 \series default
 .
- More generally, let 
+ It is the sum of scalar multiples of matrices.
+ More generally, if 
 \begin_inset Formula $S$
 \end_inset
 
- be a set of objects on which addition and scalar mutliplication are defined.
- Sound familiar? For scalars 
-\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+ is any set of objects on which addition and scalar mutliplication are defined
+ (sound familiar?), 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
 \end_inset
 
- and objects 
+ are scalars, objects 
 \begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
 \end_inset
 
- of 
+ are in 
 \begin_inset Formula $S$
 \end_inset
 
 , the expression 
 \begin_inset Formula 
 \[
-x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}
+c_{1}b_{1}+c_{2}b_{2}+\cdots+c_{n}b_{n}
 \]
 
 \end_inset
@@ -530,7 +542,7 @@ is called a linear combination of the objects
 \end_inset
 
 , and 
-\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
 \end_inset
 
  are called the 

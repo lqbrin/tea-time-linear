@@ -214,7 +214,7 @@ noprefix "false"
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
-, which we will begin to denote by 
+, which we will begin to denote  
 \begin_inset Formula $\mathbf{u}\bcdot\mathbf{v}$
 \end_inset
 
@@ -556,7 +556,7 @@ magnitude
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $||\mathbf{u}||=\sqrt{\mathbf{u}\bcdot\mathbf{u}}$
+\begin_inset Formula $\Vert\mathbf{u}\Vert=\sqrt{\mathbf{u}\bcdot\mathbf{u}}$
 \end_inset
 
 
@@ -568,7 +568,7 @@ magnitude
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $||\mathbf{u}||=\sqrt{\langle\mathbf{u},\mathbf{u}\rangle}$
+\begin_inset Formula $\Vert\mathbf{u}\Vert=\sqrt{\langle\mathbf{u},\mathbf{u}\rangle}$
 \end_inset
 
 
@@ -621,7 +621,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $d(\mathbf{u},\mathbf{v})=||\mathbf{u}-\mathbf{v}||$
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})=\Vert\mathbf{u}-\mathbf{v}\Vert$
 \end_inset
 
 
@@ -633,7 +633,7 @@ noprefix "false"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $d(\mathbf{u},\mathbf{v})=||\mathbf{u}-\mathbf{v}||$
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})=\Vert\mathbf{u}-\mathbf{v}\Vert$
 \end_inset
 
 
@@ -886,12 +886,12 @@ norm extension of the idea of magnitude in
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- is denoted by 
-\begin_inset Formula $||\mathbf{v}||$
+ is denoted  
+\begin_inset Formula $\Vert\mathbf{v}\Vert$
 \end_inset
 
  and is calculated as 
-\begin_inset Formula $||\mathbf{v}||=\sqrt{\langle\mathbf{v},\mathbf{v}\rangle}$
+\begin_inset Formula $\Vert\mathbf{v}\Vert=\sqrt{\langle\mathbf{v},\mathbf{v}\rangle}$
 \end_inset
 
 .
@@ -915,12 +915,12 @@ distance extension of the idea of distance in
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- is denoted by 
+ is denoted  
 \begin_inset Formula $d(\mathbf{u},\mathbf{v})$
 \end_inset
 
  and is calculated as 
-\begin_inset Formula $d(\mathbf{u},\mathbf{v})=||\mathbf{u}-\mathbf{v}||$
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})=\Vert\mathbf{u}-\mathbf{v}\Vert$
 \end_inset
 
 .
