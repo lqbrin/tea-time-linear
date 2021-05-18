@@ -123,42 +123,17 @@ there's no such thing as subtraction—it's just adding the opposite
 \begin_inset Quotes erd
 \end_inset
 
- or something to that effect.
+ or something like it.
  There is a vital concept of linear algebra buried in this addage.
  The link between addition, opposites, and zero that makes subtraction optional
- this way is as follows.
- For any real numbers 
-\begin_inset Formula $a$
-\end_inset
-
- and 
-\begin_inset Formula $b$
-\end_inset
-
-,
+ is a well known property of real numbers.
+ The sum of opposites is zero.
 \end_layout
 
 \begin_layout Standard
-\align center
-\begin_inset Formula $a$
-\end_inset
-
- and 
-\begin_inset Formula $b$
-\end_inset
-
- are opposites if and only if 
-\begin_inset Formula $a+b=b+a=0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Why zero, and not some other number here? Zero is that special number that
- can be added to any number without changing its value, and there is none
- other like it! In symbols, 
+Why zero, and not some other number? Zero is that special number that can
+ be added to any number without changing its value.
+ There is no other! In symbols, 
 \begin_inset Formula $a+0=0+a=a$
 \end_inset
 
@@ -184,8 +159,8 @@ is defined
 \series default
 \shape default
  by the fact that adding the two yields the additive identity.
- Two numbers are opposites (additive inverses) if and only if their sum
- is zero.
+ Two numbers are additive inverses (opposites) if and only if their sum
+ is the additive identity (zero).
 \end_layout
 
 \begin_layout Standard
@@ -201,17 +176,21 @@ multiplicative identity
 \end_inset
 
 .
- The multiplicative inverse, or reciprocal, of a real number 
+ The multiplicative inverse (reciprocal) of a real number 
 \series bold
 \shape italic
 is defined
 \series default
 \shape default
  by the fact that multiplying the two yields the multiplicative identity.
- Two numbers are reciprocals (multiplicative inverses) if and only if their
- product is one.
- This leads us to a link between multiplication, reciprocals, and one that
- is analogous to the link between addition, opposites, and zero.
+ Two numbers are multiplicative inverses (reciprocals) if and only if their
+ product is the multiplicative identity (one).
+ 
+\end_layout
+
+\begin_layout Standard
+The link between multiplication, reciprocals, and one is analogous to the
+ link between addition, opposites, and zero.
  For any real numbers 
 \begin_inset Formula $a$
 \end_inset
@@ -236,6 +215,26 @@ is defined
 \begin_inset Formula ${\displaystyle a\cdot b=b\cdot a=1}$
 \end_inset
 
+
+\begin_inset Newline newline
+\end_inset
+
+and
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are opposites if and only if 
+\begin_inset Formula ${\displaystyle a+b=b+a=0}$
+\end_inset
+
 .
 \end_layout
 
@@ -249,7 +248,7 @@ The same relationship holds among addition, opposites, and zero as holds
 
 \begin_layout Standard
 There is an important analogy for matrices.
- Compute the following products.
+ To see it, compute the following products.
 \begin_inset Formula 
 \[
 \begin{gathered}\left[\begin{array}{cc}
@@ -315,14 +314,17 @@ noprefix "false"
 \end_inset
 
 leaves the multiplicand (the matrix being multiplied by it) unchanged.
- Multiplication by matrices such as these acts very much like multiplying
- numbers by 1, or adding 0.
- This is like the properties that made 1 the multiplicative identity and
- 0 the additive identity for real numbers, and this is the property that
- makes these matrices identity matrices.
- They can each be multiplied with any other, as long as the product is defined,
+ Multiplying a matrix by matrices such as these does not change the value
+ of the matrix, the exact same property that made 1 the multiplicative identity
+ and 0 the additive identity for real numbers.
+ By extension, that makes these matrices identity matrices.
+ They can each be multiplied with any other (as long as the product is defined)
  without changing the other's value.
- The 
+ 
+\end_layout
+
+\begin_layout Standard
+The 
 \begin_inset Formula $n\times n$
 \end_inset
 
@@ -338,9 +340,9 @@ identity matrix
 \begin_inset Formula $I$
 \end_inset
 
- when the size of the matrix is determined by context.
- Identity matrices have ones on the main diagonal, the diagonal of entries
- running from the 
+ when the size of the matrix is known or unimportant.
+ Identity matrices have ones on the main diagonal, the diagonal running
+ from the 
 \begin_inset Formula $1,\!1$
 \end_inset
 
@@ -362,12 +364,12 @@ identity matrix
 \end_inset
 
 .
- Matrices denoted  
-\begin_inset Formula $I$
+ For any matrix 
+\begin_inset Formula $M$
 \end_inset
 
- are those special matrices such that 
-\begin_inset Formula $A\cdot I_{n\times n}=I_{m\times m}\cdot A=A$
+, 
+\begin_inset Formula $M\cdot I=I\cdot M=M$
 \end_inset
 
 .
@@ -376,7 +378,7 @@ identity matrix
 \begin_layout Standard
 With an identity, or really set of identities, for multiplication, we are
  only one element shy of the operation, inverse, identity triumvirate for
- matrices.
+ matrices—the inverse.
  Compute the following products.
 \begin_inset Formula 
 \[
@@ -447,7 +449,8 @@ noprefix "false"
 \begin_inset Formula $a\cdot b=b\cdot a=1$
 \end_inset
 
-, but we observed in section 
+.
+ Unfortunately we observed in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Matrix-Multiplication"
@@ -457,9 +460,21 @@ noprefix "false"
 
 \end_inset
 
- that matrix multiplication was not commutative.
- Compute the following products (the same as above only in the opposite
- order).
+ that matrix multiplication is not commutative.
+ We cannot immediately conclude that 
+\begin_inset Formula $BA=I$
+\end_inset
+
+ just because 
+\begin_inset Formula $AB=I$
+\end_inset
+
+.
+ Will we get lucky, though?
+\end_layout
+
+\begin_layout Standard
+Compute the following products (the same as above only in the opposite order).
 \begin_inset Formula 
 \[
 \begin{gathered}\left[\begin{array}{cc}
@@ -493,24 +508,23 @@ noprefix "false"
 
 \end_inset
 
-As you were hopefully able to verify, all of these products are the (appropriate
- size) identity too! It seems that multiplicative inverse pairs commute.
+As you were hopefully able to verify, all of these products are identity
+ matrices too! It seems that multiplicative inverse pairs commute.
  That is, if 
-\begin_inset Formula $A$
+\begin_inset Formula $AB=I$
 \end_inset
 
- and 
-\begin_inset Formula $B$
-\end_inset
-
- are multiplicative inverses, then 
-\begin_inset Formula $AB=BA$
+, then 
+\begin_inset Formula $BA=I$
 \end_inset
 
 .
  We finally have evidence that a matrix analogy for linking multiplication,
  inverses, and identity matrices exists.
- For any matrices 
+\end_layout
+
+\begin_layout Standard
+For any matrices 
 \begin_inset Formula $A$
 \end_inset
 

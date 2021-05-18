@@ -43,7 +43,7 @@ enumitem
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder false
-\pdf_colorlinks false
+\pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
@@ -221,16 +221,34 @@ The determinant of a square matrix with more than one row, and therefore
 \begin_inset Formula $A$
 \end_inset
 
- is an 
-\begin_inset Formula $n\times n$
+ has 
+\begin_inset Formula $n$
 \end_inset
 
- matrix
+ rows and 
+\begin_inset Formula $n$
+\end_inset
+
+ columns, 
+\begin_inset Formula $n>1$
+\end_inset
+
+, then
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-This formula can be made to work for 
+Formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:determinant_row_1_expansion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) can be made to work for 
 \begin_inset Formula $1\times1$
 \end_inset
 
@@ -251,7 +269,7 @@ This formula can be made to work for
 
 \end_inset
 
-, then
+
 \begin_inset Formula 
 \begin{equation}
 \det A=(-1)^{1+1}A_{1,1}\det A_{\backslash1,1}+(-1)^{1+2}A_{1,2}\det A_{\backslash1,2}+\cdots+(-1)^{1+n}A_{1,n}\det A_{\backslash1,n}.\label{eq:determinant_row_1_expansion}
@@ -323,7 +341,7 @@ noprefix "false"
 \begin_inset Formula $-393,294$
 \end_inset
 
- by the way, than before.
+, than before.
  Now there are four separate determinants to determine.
  To continue the computation, the determinant of each 
 \begin_inset Formula $3\times3$
@@ -373,8 +391,8 @@ noprefix "false"
 
  determinants (scalars), at which point the arithmetic could be done and
  the determinant determined.
- If nothing else, hopefully you are convinced that completing this calculation
- by hand would take a while and be prone to error.
+ Hopefully you are convinced that completing this calculation by hand would
+ take a while and be prone to error.
 \end_layout
 
 \begin_layout Standard
@@ -473,11 +491,18 @@ noprefix "false"
 \end_inset
 
 While more succinct, this presentation hides the details of the calculation.
+ Each 
+\begin_inset Formula $C_{i,j}$
+\end_inset
+
+ may be an involved calcuation itself.
 \end_layout
 
 \begin_layout Standard
-The expression 
-\begin_inset Formula $-12\left|\begin{array}{ccc}
+The expression
+\begin_inset Formula 
+\[
+\begin{gathered}-12\left|\begin{array}{ccc}
 45 & -46 & 23\\
 -28 & 4 & -48\\
 34 & -38 & -18
@@ -485,7 +510,8 @@ The expression
 28 & -46 & 23\\
 -15 & 4 & -48\\
 -1 & -38 & -18
-\end{array}\right|-45\left|\begin{array}{ccc}
+\end{array}\right|\\
+-45\left|\begin{array}{ccc}
 28 & 45 & 23\\
 -15 & -28 & -48\\
 -1 & 34 & -18
@@ -493,7 +519,10 @@ The expression
 28 & 45 & -46\\
 -15 & -28 & 4\\
 -1 & 34 & -38
-\end{array}\right|$
+\end{array}\right|
+\end{gathered}
+\]
+
 \end_inset
 
 from calculation (
@@ -521,7 +550,7 @@ linear combination
 \begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
 \end_inset
 
- are scalars, objects 
+ are scalars, and objects 
 \begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
 \end_inset
 
@@ -529,7 +558,7 @@ linear combination
 \begin_inset Formula $S$
 \end_inset
 
-, the expression 
+, then the expression 
 \begin_inset Formula 
 \[
 c_{1}b_{1}+c_{2}b_{2}+\cdots+c_{n}b_{n}
@@ -709,16 +738,27 @@ noprefix "false"
 
 \begin_layout Standard
 \noindent
-Treating each row of each block of the sudoku board as a 
+Can the third row of the 
+\begin_inset Formula $2,\!1$
+\end_inset
+
+-block of the completed sudoku board be written as a linear combination
+ of the first two rows? Maybe you feel there is a natural way to understand
+ linear combinations of rows of a sudoku puzzle and maybe not.
+ It is not something done in solving the puzzle.
+ However, if we cast each sudoku row as a 
 \begin_inset Formula $1\times3$
 \end_inset
 
- (row) matrix, the operations of addition and scalar multiplication are
- inherited by the sudoku rows.
- This means to add two rows of a sudoku block, the inherited operation of
- addition comes from writing each row as a row matrix, adding the matrices
- and writing the resulting matrix as a sudoku row.
- For example,
+ (row) matrix, operate on the row matrices and then cast back to sudoku
+ rows, it would be as if the sudoku rows themselves were being added.
+ In mathematics, we might say the sudoku rows inherit the operations of
+ addition and scalar multiplication from the corresponding operations on
+ matrices.
+\end_layout
+
+\begin_layout Standard
+For example,
 \end_layout
 
 \begin_layout Standard
@@ -776,7 +816,7 @@ raisebox{6pt}{$
 \begin_inset Formula $\Downarrow$
 \end_inset
 
-
+ (casting to matrices)
 \end_layout
 
 \end_inset
@@ -804,6 +844,7 @@ raisebox{6pt}{$
 \begin_inset Text
 
 \begin_layout Plain Layout
+(casting to sudoku rows) 
 \begin_inset Formula $\Downarrow$
 \end_inset
 
@@ -839,10 +880,18 @@ raisebox{6pt}{$
 
 \begin_layout Standard
 \noindent
-Scalar multiplication on sudoku rows is defined analogously.
- With addition and scalar multiplication defined, linear combinations are
- defined.
- Can the third row of the 
+Scalar multiplication on sudoku rows is inherited in the same manner.
+ With addition and scalar multiplication inherited, linear combinations
+ are inherited.
+ Back to the question
+\begin_inset Formula $\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Can the third row of the 
 \begin_inset Formula $2,\!1$
 \end_inset
 
@@ -856,7 +905,7 @@ noprefix "false"
 
 \end_inset
 
-) be written as a linear combination of the first two rows? In other words,
+) be written as a linear combination of the first two rows? Rephrasing,
  does the following equation have a solution?
 \begin_inset CommandInset label
 LatexCommand label
@@ -964,7 +1013,7 @@ raisebox{6pt}{$
 
 \begin_layout Standard
 \noindent
-To answer the question, write the equation in terms of matrices and solve:
+Casting the equation in terms of matrices and solving:
 \begin_inset Formula 
 \begin{align*}
 a\left[\begin{array}{ccc}
@@ -979,7 +1028,7 @@ a\left[\begin{array}{ccc}
 \end_inset
 
 For these two row matrices to be equal corresponding entries must be equal.
- In other words, the simultaneous equations
+ That is, the simultaneous equations
 \begin_inset Formula 
 \begin{align*}
 3a+9b & =8\\
@@ -989,7 +1038,7 @@ a+2b & =5
 
 \end_inset
 
-must be true.
+must all be true.
  The second and third equations can be solved (as a system) by elimination,
  for example.
  The second equation minus 3 times the third equation yields 
@@ -1018,15 +1067,7 @@ must be true.
 \begin_inset Formula $b$
 \end_inset
 
- (and only these values of 
-\begin_inset Formula $a$
-\end_inset
-
- and 
-\begin_inset Formula $b$
-\end_inset
-
-) satisfy the second and third equations.
+ constitute the only simultaneous solution of the second and third equations.
  Substituting into the first equation yields 
 \begin_inset Formula $3\left(\frac{-11}{4}\right)+9\left(\frac{31}{8}\right)=8$
 \end_inset
@@ -1078,7 +1119,7 @@ By contrast the third row of the
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -1097,7 +1138,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Through inheritance the determinant of any 
+Through the process of inheritance the determinant of any 
 \begin_inset Formula $3\times3$
 \end_inset
 
@@ -1241,13 +1282,13 @@ linear
 combination An expression of the form 
 \begin_inset Formula 
 \[
-x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=\sum_{i=1}^{n}x_{i}b_{i}
+c_{1}b_{1}+c_{2}b_{2}+\cdots+c_{n}b_{n}=\sum_{i=1}^{n}c_{i}b_{i}
 \]
 
 \end_inset
 
 where 
-\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
 \end_inset
 
  are scalars and 
@@ -1305,6 +1346,24 @@ noprefix "false"
 \end_inset
 
 ).
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDRMdGJ1jU00jGx1NE1MdXR
+NTTQMbLQAbFMzHSMjIECQCZIBChgAeTpGANZxiCWRawmL1dBUWZeiYavXkpqSWpRbmZeIpCnqQkAQhAX
+kw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout LyX-Code
@@ -1875,13 +1934,17 @@ noprefix "false"
 
 \begin_layout Enumerate-Resume
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJylkL0OgjAUhXcT3oEw0eTG5Lb8FI2bK09gHEAZ
+iIKGdPDxPS2EYleXpmm_c-7Xts_X7cEcn-KhMVP_SRUpukgsGZWkqSKmnIqriHatQ2WA4hKgDTAiCHhU
+BSijTQMq0FjiQK6oDAUUAIsXaLaR3KOhgG3Ty_gSkU1rKIBL5ziP582zVCiQuSfl6CshwaQ9GgqwQ7QL
+VD-uKhTI3Y8WgBg4JCxaA1o-LNq9p340aS2O8bxLzp3ppqEfm9EcErEC-7s_T8WKb-sk_1_3BdlbkRc=
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -1917,13 +1980,18 @@ The determinants of the
 
 \begin_layout Enumerate-Resume
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJy9kEFuwjAQRfdI3CFiExumVccmiSniCFl1WbFw
+UBdRA0YhQI_fbydNqA_AJrIy7_959s22IrUppVUq57OqcYdv5mSXHG3X1j9Ck6ZPhc-aCjK0IaaM8v2I
+qgjFEKAPMCIITKiOUEabAZSjscAPNaIqFtAAPJ6j2UeyCY0FfJsZ1heIPLTGAhgGx349P1xLxwLrcKUM
+fQUkmMyExgIcEBMCm3-uOhbIwovmgBg4JDxaAhoebD47t_WpE6XcJv1p8eGaa1e70_tC_k0vrrl9iaa-
+dMIuy9fW3cWbXFXDkeVLf1BSkqVKjl1P3fULl5Ojag==&lang=sage&interacts=eJyLjgUAARUAuQ=
+=}
 \backslash
  
 \end_layout
@@ -1967,13 +2035,16 @@ Make a conjecture about the connection between determinant and the possibility
 
 \begin_layout Enumerate-Resume
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJxtzzEOgzAMBdAdiTtkBOkvCSFOBhauwIgYOjIU
+IcTQ49c2lKFyRufZ355GN7j36zzWT1NQMAd0iOiRQPBcyKgr9_-IywVCPePE3EBep0SlxDRYqNMYmXBN
+jBYqDH5hmSlZKOva9OyVLBTvT3oiDdTrwlmpHOAtlLgs_RIa5L6lrav9WLezmcb2C5oxOOI=&lang=sa
+ge&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -1981,7 +2052,17 @@ sage
 \end_inset
 
 Can any of the 9 rows of the sudoku board be written as a linear combination
- of the other 8?
+ of the other 8? Apply your conjecture from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:end-row-lin-comb-det-connection"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to answer the question.
 \end_layout
 
 \begin_layout Standard
@@ -1999,166 +2080,6 @@ finishexercises
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\noindent
-You may 
-\begin_inset CommandInset href
-LatexCommand href
-name "follow this link"
-target "https://sagecell.sagemath.org/?z=eJzFzr0OwiAUBeC9Sd-BdAH02gjYqk3cXDs5GgeoHYgUDMXq44s_sYPubicn5958g_QESwxYYZomaXL22gaSKeOaE2IgqizWNdqgTgavb0SAgD2DNaxgASUUsIwFP9DP5bYNre-0lTZUGaA6P44FoeNu58wlaGfjqHdmaInRfSByUufeXcmcTtU7Mjp7BU4pSFDjj28wB_YTLCLzgS6BP-HFn8B33Slo5w==&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "false"
-
-\end_inset
-
- or copy and paste the following code into a SageCell to get started.
-\end_layout
-
-\begin_layout LyX-Code
-var('a','b')
-\end_layout
-
-\begin_layout LyX-Code
- 
-\end_layout
-
-\begin_layout LyX-Code
-print("block 1,3:")
-\end_layout
-
-\begin_layout LyX-Code
-M = matrix(3,3,[1,9,8,4,6,5,7,3,2])
-\end_layout
-
-\begin_layout LyX-Code
-print("Determinant:", M.determinant())
-\end_layout
-
-\begin_layout LyX-Code
-print("Solution:",solve(list(a*M.row(0)+b*M.row(1)-M.row(2)),a,b))
-\end_layout
-
-\begin_layout LyX-Code
-print()
-\end_layout
-
-\begin_layout LyX-Code
- 
-\end_layout
-
-\begin_layout LyX-Code
-print("block 2,1:")
-\end_layout
-
-\begin_layout LyX-Code
-M = matrix(3,3,[3,7,1,9,6,2,8,4,5])
-\end_layout
-
-\begin_layout LyX-Code
-print("Determinant:", M.determinant())
-\end_layout
-
-\begin_layout LyX-Code
-print("Solution:",solve(list(a*M.row(0)+b*M.row(1)-M.row(2)),a,b))
-\end_layout
-
-\begin_layout LyX-Code
-print()
-\end_layout
-
-\begin_layout Standard
-The output of this code is
-\end_layout
-
-\begin_layout LyX-Code
-block 1,3:
-\end_layout
-
-\begin_layout LyX-Code
-Determinant: 0
-\end_layout
-
-\begin_layout LyX-Code
-Solution: [
-\end_layout
-
-\begin_layout LyX-Code
-[a == -1, b == 2]
-\end_layout
-
-\begin_layout LyX-Code
-]
-\end_layout
-
-\begin_layout LyX-Code
- 
-\end_layout
-
-\begin_layout LyX-Code
-block 2,1:
-\end_layout
-
-\begin_layout LyX-Code
-Determinant:
-\end_layout
-
-\begin_layout LyX-Code
--149
-\end_layout
-
-\begin_layout LyX-Code
-Solution: [
-\end_layout
-
-\begin_layout LyX-Code
- 
-\end_layout
-
-\begin_layout LyX-Code
-]
-\end_layout
-
-\begin_layout Standard
-It shows the determinants of the 
-\begin_inset Formula $1,\!3$
-\end_inset
-
--block and the 
-\begin_inset Formula $2,\!1$
-\end_inset
-
--block: 
-\begin_inset Formula $0$
-\end_inset
-
- and 
-\begin_inset Formula $-149$
-\end_inset
-
-, respectively.
- Also, for each block the output shows an attempt to find a linear combination
- of the first two rows that equals the third.
- Just as in the calculations of the text (see page 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "sudoku_calculations"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) it shows a solution for the 
-\begin_inset Formula $1,\!3$
-\end_inset
-
--block but not for the 
-\begin_inset Formula $2,\!1$
-\end_inset
-
--block.
- The empty square brackets indicate no solution was found.
 \end_layout
 
 \begin_layout Subsection

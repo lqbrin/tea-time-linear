@@ -44,7 +44,7 @@ theorems-ams
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder false
-\pdf_colorlinks false
+\pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
@@ -676,7 +676,15 @@ length of a column vector
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- is 
+, denoted 
+\begin_inset Formula $\Vert\mathbf{v}\Vert$
+\end_inset
+
+, is the square root of the dot product of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with itself, 
 \begin_inset Formula $\sqrt{\mathbf{v}^{T}\mathbf{v}}$
 \end_inset
 
@@ -688,9 +696,12 @@ orthogonal Two vectors whose dot product is defined and zero are orthogonal.
 \end_layout
 
 \begin_layout Description
-distance The distance between two vectors is the length of their difference,
- 
-\begin_inset Formula $d(\mathbf{u},\mathbf{v})=\Vert\mathbf{u}-\mathbf{v}\Vert$
+distance The distance between two vectors, 
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})$
+\end_inset
+
+, is the length of their difference, 
+\begin_inset Formula $\Vert\mathbf{u}-\mathbf{v}\Vert$
 \end_inset
 
 .
@@ -1014,6 +1025,867 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\Vert\mathbf{u\Vert}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-7\\
+8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-11\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-10\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+14.3\\
+-13.7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+10\\
+2\\
+-3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+2\\
+-6\\
+12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+8\\
+-7\\
+5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+4.9\\
+0.4\\
+-2.5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-1\\
+7\\
+0\\
+2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+3\\
+-3\\
+7\\
+-2\\
+-8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-7\\
+8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-9\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-11\\
+3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-11\\
+13
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-10\\
+3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+14.3\\
+-13.7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+10.3\\
+2.9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+10\\
+2\\
+-3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-11\\
+3\\
+-10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+2\\
+-6\\
+12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-6\\
+-10\\
+4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+8\\
+-7\\
+5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+5\\
+-11\\
+-2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+4.9\\
+0.4\\
+-2.5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+3.6\\
+2.0\\
+-4.1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-1\\
+7\\
+0\\
+2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-7\\
+-5\\
+-4\\
+2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+3\\
+-3\\
+7\\
+-2\\
+-8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+-2\\
+3\\
+5\\
+-4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Are 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ orthogonal?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+5\\
+8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+5\\
+-3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-11\\
+7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+11\\
+13
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-10\\
+8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+4\\
+5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+14.5\\
+-17
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+10.2\\
+8.7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+10\\
+8\\
+-9
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-11\\
+3\\
+-9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+2\\
+-6\\
+12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-6\\
+-10\\
+-4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+8\\
+-7\\
+-11
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+5\\
+12\\
+-4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+4.9\\
+0.4\\
+-2.5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+3.6\\
+2.0\\
+-4.1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-1\\
+7\\
+0\\
+2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-7\\
+-5\\
+-4\\
+-2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+3\\
+-3\\
+7\\
+-3\\
+-8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+-2\\
+-1\\
+5\\
+-2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $k$
+\end_inset
+
+ so that the vectors are orthogonal.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+-3\\
+6
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-12\\
+k
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+15\\
+9
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+k\\
+7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+-2\\
+-6\\
+-3
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-7\\
+k\\
+-10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+7\\
+-10\\
+k
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+k\\
+-4\\
+6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+k\\
+k\\
+11\\
+3
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-7\\
+k\\
+3\\
+-7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+k\\
+2\\
+-14\\
+4\\
+6\\
+10\\
+-10\\
+8\\
+k
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+k\\
+12\\
+13\\
+9\\
+-1\\
+7\\
+5\\
+3\\
+8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Find the sum of the vectors.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.2in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/mechanics-length-03.pdf
+	lyxscale 15
+	width 2.7in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.2in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/mechanics-length-04.pdf
+	lyxscale 15
+	width 2.7in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.2in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/mechanics-length-05.pdf
+	lyxscale 15
+	width 2.7in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-6\\
+-12
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+9\\
+-5
+\end{array}\right]$
+\end_inset
+
+.
+ Find a column vector 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $d(\mathbf{u}+\mathbf{v},\mathbf{w})=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d(\mathbf{u}+\mathbf{v},\mathbf{w})=\sqrt{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d(\mathbf{u}+\mathbf{w},\mathbf{v})=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d(\mathbf{u}+\mathbf{w},\mathbf{v})=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+HINT: Make a sketch.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What conditions on 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ will make 
+\begin_inset Formula $\mathbf{u}^{T}\mathbf{u}$
+\end_inset
+
+ zero?
+\end_layout
+
+\begin_layout Enumerate
+Give an example of a 
+\begin_inset Formula $5\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $2\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that the length of 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ is less than the length of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
 Let 
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 u_{1}\\
@@ -1087,6 +1959,148 @@ Are
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are orthogonal.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Are 
+\begin_inset Formula $3\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $4\mathbf{v}$
+\end_inset
+
+ orthogonal?
+\end_layout
+
+\begin_layout Enumerate
+Are 
+\begin_inset Formula $-12.1\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $0.12\mathbf{v}$
+\end_inset
+
+ orthogonal?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxzUbBVyE0sKcqs0DDWMdGJ1jXSMTTQ0TXXsdAB
+Ms11DA1BHF0THVMdM6BMrCYvl7KCRqamQkFRZl6JQn5piUJJRioQZxalKBTllyvkpym48HJBVGEoS8ss
+Ki5RSM7PKc3NA6sEAAw3Izc=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+ Add code that will calculate the length of the third column of 
+\family typewriter
+D
+\family default
+.
+\begin_inset VSpace -12pt
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+D = matrix(3,4,[-2,10,-7,8,-2,7,
+\end_layout
+
+\begin_layout LyX-Code
+                11,-7,-4,5,6,10])
+\end_layout
+
+\begin_layout Standard
+What is the output of your code? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxlzMEKwjAMBuD7YO8Q8KKYhnXVrjt48jHEQ-2i
+E0oH2tbXt_Ukegk_-fMlwQEyu7g81idFIw7UozC0QyElGaT9J3QoxhIN6fOmbfKXEbIrbRlDoRKFJo0F
+6MLqvq_vpCJV3QqO1rvkbWSIM4PncIszLFdIbfNfT_dntMExXDi-mAMksGGC_HubtvkN19Q0gg==&lan
+g=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Add code that will calculate
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+u = vector([3.9,7.2,-8.4,-11.8,.5,
+\end_layout
+
+\begin_layout LyX-Code
+            -11.0,-9.5,8.6])
+\end_layout
+
+\begin_layout LyX-Code
+v = vector([-10.0,10.7,7.1,-6.6,
+\end_layout
+
+\begin_layout LyX-Code
+            11.6,-1.0,12.2,-13.3]) 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Vert\mathbf{u\Vert}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d(\mathbf{u},\mathbf{v})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}+\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What is the output of your code?
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -1101,6 +2115,10 @@ finishexercises
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Answers
 \end_layout
 
 \begin_layout Description

@@ -1427,6 +1427,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication"
+
+\end_inset
+
 Multiply if possible.
 \end_layout
 
@@ -1572,6 +1578,12 @@ Multiply if possible.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-1"
+
+\end_inset
+
 Multiply if possible.
 \end_layout
 
@@ -1770,6 +1782,234 @@ Multiply if possible.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-2"
+
+\end_inset
+
+Find the dot product 
+\begin_inset Formula $\mathbf{u}^{T}\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-7\\
+8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+9\\
+-3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-11\\
+3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+11\\
+13
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-10\\
+3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+14.3\\
+-13.7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+10.3\\
+2.9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+10\\
+2\\
+-3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-11\\
+3\\
+-10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+2\\
+-6\\
+12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-6\\
+-10\\
+-4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+8\\
+-7\\
+5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+5\\
+-11\\
+-8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+4.9\\
+0.4\\
+-2.5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+3.6\\
+2.0\\
+-4.1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-1\\
+7\\
+0\\
+2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-7\\
+-5\\
+-4\\
+-2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+3\\
+-3\\
+7\\
+-2\\
+-8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+-2\\
+-1\\
+5\\
+4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-3"
+
+\end_inset
+
+Redo question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:multiplication-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ calculating 
+\begin_inset Formula $\mathbf{v}^{T}\mathbf{u}$
+\end_inset
+
+ instead, and compare your answers.
+\end_layout
+
+\begin_layout Enumerate
 Suppose 
 \begin_inset Formula $A$
 \end_inset
@@ -1840,6 +2080,38 @@ Describe how to multiply two matrices, and explain how to determine whether
  the multiplication can be done.
 \end_layout
 
+\begin_layout Enumerate
+True or false? For any column vectors 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}^{T}\mathbf{v}=\mathbf{v}^{T}\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(\mathbf{u}+\mathbf{w})^{T}\mathbf{v}=\mathbf{u}^{T}\mathbf{v}+\mathbf{w}^{T}\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Find a pair of matrices 
 \begin_inset Formula $M$

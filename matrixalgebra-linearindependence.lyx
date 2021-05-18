@@ -613,6 +613,18 @@ No column of
 \end_layout
 
 \begin_layout Enumerate
+There is a matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ such that 
+\begin_inset Formula $LM=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -766,6 +778,10 @@ The following arguments demonstrate that (i)
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
+ (vii), (vii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
  (iii), and (iii) 
 \begin_inset Formula $\Rightarrow$
 \end_inset
@@ -795,6 +811,10 @@ The following arguments demonstrate that (i)
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
+ (vii) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
  (iii) 
 \begin_inset Formula $\Rightarrow$
 \end_inset
@@ -803,9 +823,9 @@ The following arguments demonstrate that (i)
 \begin_inset Formula 
 \[
 \begin{array}{ccccccc}
-\text{(i)} &  &  &  & \text{(iv)}\\
+\text{(i)} &  &  &  & \text{(iv)} & \Rightarrow & \text{(v)}\\
 \Downarrow & \Nwarrow &  & \Nearrow &  & \Searrow\\
-\text{(ii)} & \Leftarrow & \text{(iii)} & \Leftarrow & \text{(vi)} & \Leftarrow & \text{(v)}
+\text{(ii)} & \Leftarrow & \text{(iii)} & \Leftarrow & \text{(vii)} & \Leftarrow & \text{(vi)}
 \end{array}
 \]
 
@@ -933,17 +953,7 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(v) By definition, a free variable comes from a variable column without
- a pivot.
- Since all columns of 
-\begin_inset Formula $M$
-\end_inset
-
- have pivot postions, 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
- cannot have free variables.
+(v) Write this one.
 \end_layout
 
 \begin_layout Description
@@ -951,7 +961,15 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(vi) By theorem 
+(vi) Write this one.
+\end_layout
+
+\begin_layout Description
+(vi)
+\begin_inset Formula $\ \Rightarrow\ $
+\end_inset
+
+(vii) By theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:linear-system-existence-uniqueness"
@@ -971,7 +989,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Description
-(vi)
+(vii)
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
