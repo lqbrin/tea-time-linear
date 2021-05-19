@@ -285,7 +285,17 @@ noprefix "false"
 
 \end_inset
 
-) is an example of a system of linear equations, and the lists 
+) on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "eq:linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is an example of a system of linear equations, and the lists 
 \begin_inset Formula $1,1,\frac{3}{2}$
 \end_inset
 
@@ -689,9 +699,8 @@ creating a zero in the
  For row operations to make sense in the context of solving systems of equations
 , the entries in a single column must all be coefficients of the same variable
  or constants from the equations of the system.
- By convention, the rightmost column always holds the constants from the
- righthand sides of the equations and the remainder of the columns represent
- the coefficients of one variable each.
+ By convention, the rightmost column always holds the constants and the
+ remainder of the columns represent the coefficients of one variable each.
  The order of the columns of coefficients is flexible as long as the order
  is known.
 \end_layout
@@ -753,7 +762,7 @@ Any system of linear equations can be translated into a matrix and solved
  direction of these three operations.
  If that were the only purpose of row operations, they would be useful,
  but as the concepts of linear algebra unfold, the ideas laid out here will
- have much further reaching consequences.
+ have many further reaching consequences.
 \end_layout
 
 \begin_layout Subsection
@@ -1411,7 +1420,7 @@ name "exc:row-operations-5"
 
 \end_inset
 
-What elementary row operation will transform 
+What elementary row operation will transform the first matrix into the second?
 \end_layout
 
 \begin_deeper
@@ -1430,7 +1439,7 @@ name "exc:row-operations-6"
 \end{array}\right]$
 \end_inset
 
- into 
+, 
 \begin_inset Formula $\left[\begin{array}{cccc}
 1 & -4 & 4 & -9\\
 1 & 6 & -5 & 1\\
@@ -1438,7 +1447,7 @@ name "exc:row-operations-6"
 \end{array}\right]$
 \end_inset
 
-?
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1456,7 +1465,7 @@ name "exc:row-operations-7"
 \end{array}\right]$
 \end_inset
 
- into 
+, 
 \begin_inset Formula $\left[\begin{array}{cccc}
 -3 & 3 & 3 & -7\\
 -9 & -6 & 9 & -1\\
@@ -1464,7 +1473,7 @@ name "exc:row-operations-7"
 \end{array}\right]$
 \end_inset
 
-?
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1482,7 +1491,7 @@ name "exc:row-operations-8"
 \end{array}\right]$
 \end_inset
 
- into 
+, 
 \begin_inset Formula $\left[\begin{array}{cccc}
 -9 & -9 & 7 & -9\\
 2 & -6 & 3 & -5\\
@@ -1490,7 +1499,7 @@ name "exc:row-operations-8"
 \end{array}\right]$
 \end_inset
 
-?
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1508,7 +1517,7 @@ name "exc:row-operations-9"
 \end{array}\right]$
 \end_inset
 
- into 
+, 
 \begin_inset Formula $\left[\begin{array}{cccc}
 5 & -4 & 8 & 2\\
 0 & 48 & 79 & 16\\
@@ -1516,7 +1525,7 @@ name "exc:row-operations-9"
 \end{array}\right]$
 \end_inset
 
-?
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1534,7 +1543,7 @@ name "exc:row-operations-10"
 \end{array}\right]$
 \end_inset
 
- into 
+, 
 \begin_inset Formula $\left[\begin{array}{cccc}
 2 & 6 & -1 & -8\\
 -2 & 2 & -12 & 8\\
@@ -1542,7 +1551,7 @@ name "exc:row-operations-10"
 \end{array}\right]$
 \end_inset
 
-?
+
 \end_layout
 
 \end_deeper

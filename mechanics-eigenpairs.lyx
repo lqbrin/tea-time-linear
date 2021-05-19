@@ -38,7 +38,16 @@ figs-within-sections
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -230,7 +239,17 @@ A\left[\begin{array}{c}
 
 \end_inset
 
-Letting 
+Put yet another way,
+\begin_inset Formula 
+\[
+\begin{gathered}A\mathbf{v}_{1}=-3\mathbf{v}_{1}\qquad A\left(-\frac{2}{3}\mathbf{v}_{1}\right)=-3\left(-\frac{2}{3}\mathbf{v}_{1}\right)\\
+A\mathbf{v}_{2}=2\mathbf{v}_{2}\qquad A\left(-\frac{1}{2}\mathbf{v}_{2}\right)=2\left(-\frac{1}{2}\mathbf{v}_{2}\right)
+\end{gathered}
+\]
+
+\end_inset
+
+where 
 \begin_inset Formula $\mathbf{v}_{1}=\left[\begin{array}{c}
 4\\
 -1
@@ -244,17 +263,7 @@ Letting
 \end{array}\right]$
 \end_inset
 
-, these products can be rewritten as
-\begin_inset Formula 
-\[
-\begin{gathered}A\mathbf{v}_{1}=-3\mathbf{v}_{1}\qquad A\left(-\frac{2}{3}\mathbf{v}_{1}\right)=-3\left(-\frac{2}{3}\mathbf{v}_{1}\right)\\
-A\mathbf{v}_{2}=2\mathbf{v}_{2}\qquad A\left(-\frac{1}{2}\mathbf{v}_{2}\right)=2\left(-\frac{1}{2}\mathbf{v}_{2}\right)
-\end{gathered}
-\]
-
-\end_inset
-
-making the relationship between the matrix 
+, making the relationship between the matrix 
 \begin_inset Formula $A$
 \end_inset
 
@@ -269,20 +278,7 @@ making the relationship between the matrix
 \end_layout
 
 \begin_layout Standard
-There is nothing magical about the matrix 
-\begin_inset Formula $A$
-\end_inset
-
- nor the vectors 
-\begin_inset Formula $\mathbf{v}_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}_{2}$
-\end_inset
-
-.
- For example, 
+In fact, 
 \begin_inset Formula 
 \[
 A\left[\begin{array}{c}
@@ -302,7 +298,7 @@ A\left[\begin{array}{c}
 
 \end_inset
 
- but 
+and 
 \begin_inset Formula $\left[\begin{array}{c}
 10\\
 1
@@ -332,12 +328,25 @@ A\left[\begin{array}{c}
 \end_inset
 
 .
- Multiplying a vector by 
+ So multiplying a vector by 
 \begin_inset Formula $A$
 \end_inset
 
  does not always produce a multiple of the vector.
- Letting 
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ is not some special matrix that scales all vectors (that would be 
+\begin_inset Formula $\lambda I$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Letting 
 \begin_inset Formula $B=\left[\begin{array}{cc}
 3 & 0\\
 -1 & -2
@@ -372,36 +381,17 @@ A\left[\begin{array}{c}
 \end_inset
 
 .
- Similarly 
-\begin_inset Formula $B\mathbf{v}_{2}\neq\lambda\mathbf{v}_{2}$
-\end_inset
-
- for any 
-\begin_inset Formula $\lambda$
-\end_inset
-
-.
- It is not always the case that the product of a 
-\begin_inset Formula $2\times2$
-\end_inset
-
- matrix with 
+ So 
 \begin_inset Formula $\mathbf{v}_{1}$
 \end_inset
 
- is a multiple of 
-\begin_inset Formula $\mathbf{v}_{1}$
-\end_inset
-
-, and similarly for 
-\begin_inset Formula $\mathbf{v}_{2}$
-\end_inset
-
-.
+ is not some magical vector such that multiplying it by any matrix gives
+ a multiple.
+ That kind of vector does not exist.
 \end_layout
 
 \begin_layout Standard
-So 
+Evidently 
 \begin_inset Formula $A$
 \end_inset
 
@@ -541,7 +531,7 @@ eigenpair
 \series default
 .
  For each eigenvector there is an eigenvalue, and for each eigenvalue there
- is an eigenvector (at least, that would be nice!).
+ is an eigenvector (or is there?).
 \end_layout
 
 \begin_layout Standard
@@ -561,13 +551,13 @@ It is true, for any matrix
 \begin_inset Formula $\mathbf{0}$
 \end_inset
 
- is any vector with a zero for each entry, a so-called 
+ is the proper size vector with a zero for each entry, a so-called 
 \series bold
 zero vector
 \series default
 .
  Given the truth of this statement for all matrices, it does not tell us
- anything useful about any given matrix.
+ anything useful about a matrix.
  Moreover, if we allow 
 \begin_inset Formula $\mathbf{0}$
 \end_inset
@@ -945,13 +935,13 @@ noprefix "false"
 
 \end_inset
 
-On the other hand, we know that multiplication by a matrix's inverse undoes
- multiplication by that matrix, so 
+But multiplication by a matrix's inverse undoes multiplication by that matrix,
+ so 
 \begin_inset Formula $(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right)=\mathbf{v}$
 \end_inset
 
 .
- Since 
+ Now we have that 
 \begin_inset Formula $(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right)=\mathbf{0}$
 \end_inset
 
@@ -959,7 +949,7 @@ On the other hand, we know that multiplication by a matrix's inverse undoes
 \begin_inset Formula $(M-\lambda I)^{-1}\left((M-\lambda I)\mathbf{v}\right)=\mathbf{v}$
 \end_inset
 
-, we conclude 
+, so we conclude 
 \begin_inset Formula $\mathbf{v}=\mathbf{0}$
 \end_inset
 
@@ -984,7 +974,11 @@ On the other hand, we know that multiplication by a matrix's inverse undoes
 \end_inset
 
  gives eigenvalues and knowing eigenvalues gives eigenvectors.
- Given that the equation 
+ 
+\end_layout
+
+\begin_layout Standard
+Since
 \begin_inset Formula 
 \begin{equation}
 \det(M-\lambda I)=0\label{eq:eigenvalues}
@@ -1223,6 +1217,23 @@ print(M.charpoly())
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDRMdGJ1jU0NNLRNTLU0TU0
+1dE1NgdyLEyAHGMgtgRKWBrp8HIpoAFdYzOIEpAqQzMdINdcx1TH0MggVpOXq6AoM69Ew1fTWgHCQgjp
+pWamp-aVJeaUphZraOJWkJpckl9UHF-UmZ5Rgl1dckZiUUF-TiVQFgBKMjfV&lang=sage&interacts
+=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
 The output of the code is
 \end_layout
 
@@ -1329,7 +1340,7 @@ eigenvectors_right()
 \begin_inset Formula $4$
 \end_inset
 
- (and more) by listing the eigenvalue 
+ by listing the eigenvalue 
 \begin_inset Formula $4$
 \end_inset
 
@@ -1948,13 +1959,16 @@ Suppose matrix
 
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJxlzTEKwzAMBdC90DuYTDF8g2XZMSbkCD5B6NAx
+Q0sJofT4UWUKJVmExJO-qpnM476ty6ePiJhLgSNOUqSLlMEejge4gUCBUfzPcwQPRT3KnLK4v9nr5U3_
+mYRZFuHRLBwsSHESz6p8UCeonpTjmYNeB-V0-qvp9MXXujy3vqtm6uzYhmpH0zq7A-khPrk=&lang=sa
+ge&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -2021,79 +2035,38 @@ and use SageMath to determine which of the following vectors is an eigenvector
 \end_inset
 
 
-\begin_inset CommandInset href
-LatexCommand href
-name "Click here"
-target "https://sagecell.sagemath.org/?z=eJxlzT0KwzAMBeA9kDt4TOAJrB_beOgRcoKQoWOHLqWUHr9CpZCkHoTN56e3pEu6X5-P23syGNbeQazFh9-MGzSDtIIqg0UxDul0ev4lmkFrj4T5uzRP5G0ehxfvShir_0PGl-RI4oO8TgP1iOQWXELtTyWyElrOnbGat_kDGVQ2zg==&lang=sage&interacts=eJyLjgUAARUAuQ=="
-literal "false"
-
-\end_inset
-
- or copy and paste the following code into a SageCell to get started.
-\begin_inset VSpace -12pt
-\end_inset
-
-
 \end_layout
 
-\begin_deeper
-\begin_layout LyX-Code
-M = matrix(4,4,[99,-135,-199,417,
-\end_layout
-
-\begin_layout LyX-Code
-                30,-36,-61,123,
-\end_layout
-
-\begin_layout LyX-Code
-                90,-135,-174,369,
-\end_layout
-
-\begin_layout LyX-Code
-                30,-45,-57,120])
-\end_layout
-
-\begin_layout LyX-Code
-v1= matrix(4,1,[4,3,0,0])
-\end_layout
-
-\begin_layout LyX-Code
-v2= matrix(4,1,[2,1,-6,-3])
-\end_layout
-
-\begin_layout LyX-Code
-v3= matrix(4,1,[-1,-1,-6,5])
-\end_layout
-
-\begin_layout LyX-Code
-v4= matrix(4,1,[-1,2,-6,-2])
-\end_layout
-
-\begin_layout LyX-Code
-v5= matrix(4,1,[4,2,1,-1])
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDRMdGJtrTU0TU0NgUSQJaJ
+obmOsYGOrrGZjq6ZoY6hkbGOpQFM3txEx9jMEixvAuSbmgPlDWI1ebkKijLzSjSUfBVslTStIRxfTWsF
+CEsTALEaGqU=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
 
 \end_inset
 
-Use SageMath's 
+Use SageMath's
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+
 \family typewriter
 M.eigenvectors_right()
-\family default
- method to compute the eigenvectors of 
+\end_layout
+
+\begin_layout Standard
+method to compute the eigenvectors of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -2108,12 +2081,13 @@ noprefix "false"
 \end_inset
 
 .
- Notice that none of the eigenvectors from that question is listed as an
- eigenvector by SageMath, yet one of them is.
+ Notice that none of the vectors from that question is listed as an eigenvector
+ by SageMath, yet one of them is.
  Can you resolve this conundrum? Is it possible that linear combinations
  of eigenvectors are also eigenvectors?
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open

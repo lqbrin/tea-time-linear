@@ -475,8 +475,7 @@ dividing
 \end_inset
 
  both sides of an equation are valid steps in solving matrix equations,
- but better not to take it for granted on the back of a pair of examples
- where it works.
+ but better not to take it for granted on the back of a pair of examples.
  In adding a matrix to both sides of an equation (or subtracting a matrix
  from both sides of an equation) in an attempt to solve it, we are using
  the principle that for matrices 
@@ -809,7 +808,7 @@ TODO: Come back to decide whether this is true.
 
 \end_inset
 
- we wil be concerned with solving equations of the form 
+ we will be concerned with solving equations of the form 
 \begin_inset Formula 
 \begin{equation}
 M\mathbf{v}=\mathbf{b}\label{eq:Mv-equals-b}
@@ -1126,9 +1125,10 @@ The equation
 \end_layout
 
 \begin_layout Standard
-We are not quite ready to completely clarify the connection, but the pieces
- of the puzzle are falling into place, and taking a slightly different perspecti
-ve on matrix multiplication will add one more item to the list.
+We are not quite ready to prove the connection, but the pieces of the puzzle
+ are falling into place.
+ Taking a slightly different perspective on matrix multiplication will add
+ one more item to the list.
 \end_layout
 
 \begin_layout Standard
@@ -1420,7 +1420,7 @@ M & \mathbf{b}\end{array}\right]$
 
 ? Answer on page 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand pageref
 reference "ans:mv-equals-b-as-a-linear-system"
 plural "false"
 caps "false"
@@ -1447,7 +1447,7 @@ M & \mathbf{b}\end{array}\right]$
 
 \begin_layout Standard
 Wow.
- That seems to make six ways of understanding the same phenomenon.
+ Apparently there are six ways of understanding the same phenomenon.
 \end_layout
 
 \begin_layout Subsection
@@ -2493,7 +2493,7 @@ noprefix "false"
 Show that the converse of (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:addition-property-of-equality"
+reference "eq:multiplication-property-of-equality-part-1"
 plural "false"
 caps "false"
 noprefix "false"

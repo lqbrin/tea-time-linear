@@ -1003,6 +1003,10 @@ Step 2
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $A_{1,:}\leftrightarrow A_{3,:}$
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \left[\begin{array}{cccc}
@@ -2339,17 +2343,42 @@ Step 7
 \begin_layout Standard
 \noindent
 Notice that all three approaches produced the same reduced row echelon form.
+ This is not an accident and will be picked up again soon.
  Writing the linear system corresponding to this reduced row echelon form,
  we see
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
 \begin_inset Formula 
-\begin{align*}
-x_{1} & =\frac{1}{2}\\
-x_{2} & =\frac{3}{2}\\
-x_{3} & =-\frac{5}{2}
-\end{align*}
+\[
+x_{1}=\frac{1}{2};\quad x_{2}=\frac{3}{2};\quad x_{3}=-\frac{5}{2}.
+\]
 
 \end_inset
 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 The original system has this one solution.
 \end_layout
 
@@ -2559,8 +2588,8 @@ echelon
 \begin_inset space ~
 \end_inset
 
-form An arrangement of zero and nonzero entries in a matrix such that the
- first four steps of the row reduction algorithm do not force any changes.
+form An arrangement of the entries of a matrix following completion of the
+ first four steps of the row reduction algorithm.
 \end_layout
 
 \begin_layout Description
@@ -2576,8 +2605,8 @@ echelon
 \begin_inset space ~
 \end_inset
 
-form An arrangement of zero, one, and nonzero entries in a matrix such that
- the row reduction algorithm does not force any changes.
+form An arrangement of the entries of a matrix following completion of the
+ row reduction algorithm.
 \end_layout
 
 \begin_layout Standard
@@ -2658,7 +2687,7 @@ Reduce the matrix to row echelon form.
 \begin_layout Enumerate
 Reduce the matrix in question 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand ref
 reference "exc:row-reduction"
 plural "false"
 caps "false"

@@ -43,7 +43,7 @@ enumitem
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder false
-\pdf_colorlinks false
+\pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
@@ -112,6 +112,38 @@ Division
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Given a message such as 
+\begin_inset Quotes eld
+\end_inset
+
+Hello World!
+\begin_inset Quotes erd
+\end_inset
+
+, a system for converting letters and symbols to numbers can be used to
+ turn the message into a list of numbers.
+ These numbers can then be grouped into column vectors and multiplied by
+ an encoding matrix.
+ Ungrouping the products gives a new list of numbers, an encoded message!
+ The following list of numbers was created this way.
+\end_layout
+
+\begin_layout Standard
+\align center
+-199 -78 14 -273 -145 -13 -572 -294 -49 -245 -127 -7 -150 -84 -1
+\begin_inset Newline newline
+\end_inset
+
+-389 -174 -10 412 272 103 -142 -59 16 -231 -132 -33
+\end_layout
+
+\begin_layout Standard
+\noindent
+Learning how to decode a message like this is the topic of this section.
 \end_layout
 
 \begin_layout Standard
@@ -318,8 +350,8 @@ leaves the multiplicand (the matrix being multiplied by it) unchanged.
  of the matrix, the exact same property that made 1 the multiplicative identity
  and 0 the additive identity for real numbers.
  By extension, that makes these matrices identity matrices.
- They can each be multiplied with any other (as long as the product is defined)
- without changing the other's value.
+ They can each be multiplied with any other matrix (as long as the product
+ is defined) without changing the other's value.
  
 \end_layout
 
@@ -350,7 +382,7 @@ identity matrix
 \begin_inset Formula $n,\!n$
 \end_inset
 
--entry, and zeros everywhere else.
+-entry, and zeros elsewhere.
  In symbols, 
 \begin_inset Formula $I_{1,1}=I_{2,2}=\cdots=I_{n,n}=1$
 \end_inset
@@ -597,140 +629,31 @@ Suppose
 \end_inset
 
 .
- Because 
-\begin_inset Formula $A$
-\end_inset
-
- has 
-\begin_inset Formula $n$
-\end_inset
-
- columns and 
-\begin_inset Formula $LA=I$
-\end_inset
-
-, the identity matrix in this equation must also have 
-\begin_inset Formula $n$
-\end_inset
-
- columns.
- To be precise then, we have 
-\begin_inset Formula $LA=I_{n\times n}$
-\end_inset
-
-.
- Because 
-\begin_inset Formula $A$
-\end_inset
-
- has 
-\begin_inset Formula $m$
-\end_inset
-
- rows and 
-\begin_inset Formula $AR=I$
-\end_inset
-
-, the identity matrix in this equation must also have 
-\begin_inset Formula $m$
-\end_inset
-
- rows.
- To be precise then, we must have 
-\begin_inset Formula $AR=I_{m\times m}$
-\end_inset
-
-.
- Furthermore, for the proucts 
-\begin_inset Formula $LA$
-\end_inset
-
- and 
-\begin_inset Formula $AR$
-\end_inset
-
- to be defined, it must be that 
-\begin_inset Formula $L$
-\end_inset
-
- has 
-\begin_inset Formula $m$
-\end_inset
-
- columns and 
-\begin_inset Formula $R$
-\end_inset
-
- has 
-\begin_inset Formula $n$
-\end_inset
-
- rows.
- It follows that both products 
-\begin_inset Formula $L(AR)$
-\end_inset
-
- and 
-\begin_inset Formula $(LA)R$
-\end_inset
-
- are defined and
-\begin_inset Formula 
-\[
-L(AR)=LI_{m\times m}=L\quad\text{and}\quad(LA)R=I_{n\times n}R=R.
-\]
-
-\end_inset
-
-By the associative property for matrix multiplication (which we will encounter
- in section 
+ By theorems 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:operation-properties"
+reference "thm:Matrix-Characterization-1"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-), 
-\begin_inset Formula $L(AR)=(LA)R$
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
-, so we have 
-\begin_inset Formula $L=R$
-\end_inset
-
-.
  
-\begin_inset Formula $m$
-\end_inset
-
- must equal 
-\begin_inset Formula $n$
-\end_inset
-
- because 
-\begin_inset Formula $LA=I$
-\end_inset
-
- implies 
 \begin_inset Formula $A$
 \end_inset
 
- has a pivot position in each column and 
-\begin_inset Formula $AR=I$
-\end_inset
-
- implies 
-\begin_inset Formula $A$
-\end_inset
-
- has a pivot position in each row and the only way to have both is for 
-\begin_inset Formula $A$
-\end_inset
-
- to be square (see section 
+ must have a pivot position in every row and every column (see section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Row-Reduction"
@@ -740,18 +663,13 @@ noprefix "false"
 
 \end_inset
 
- for a definition of pivot position and the proof of theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:Invertible-Matrix-Theorem"
-plural "false"
-caps "false"
-noprefix "false"
-
+ for a definition of pivot position).
+ The only way that can happen is if 
+\begin_inset Formula $A$
 \end_inset
 
- for the rest).
- Thus invertibility only makes sense for square matrices.
+ is square.
+ Hence a matrix with left and right inverses must be square.
 \begin_inset ERT
 status open
 
@@ -764,6 +682,11 @@ end{digression}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 This is enough that we could define 
 \begin_inset Formula ${\displaystyle \frac{I}{A}}$
 \end_inset
@@ -973,7 +896,7 @@ undoes
 
 \end_inset
 
-for matrices much like 
+much like 
 \begin_inset Formula $(a\cdot b)\div b=a$
 \end_inset
 
@@ -1084,34 +1007,6 @@ noprefix "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Subsection
-Inverses
-\begin_inset space ~
-\end_inset
-
-and
-\begin_inset space ~
-\end_inset
-
-Cryptography
-\end_layout
-
-\begin_layout Standard
-\align center
--97 -40 17 -207 -185 -68 -416 -303 -97 -312 -178 -28 -143
-\begin_inset Newline newline
-\end_inset
-
--68 10 -190 -93 2 -305 -149 -7 102 134 83 -257 -194 -65
-\end_layout
-
-\begin_layout Standard
-\noindent
-The ability to undo multiplication by an invertible matrix makes it possible
- to use matrices and their inverses for encrypting and decrypting messages.
- 
 \begin_inset Float table
 wide false
 sideways false
@@ -1153,33 +1048,43 @@ ASCII (American Standard Code for Information Interchange) characters
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
+\begin_layout Subsection
+Inverses
+\begin_inset space ~
 \end_inset
 
- Given a messge, a system for converting letters to numbers turns the message
- into a list of numbers.
- These numbers are grouped into column vectors and multiplied by an encoding
- matrix, producing a new set of numbers, the encoded message.
- The list of numbers opening this subsection was created this way! Decoding
- the message then amounts to grouping the code into column vectors and multiplyi
-ng by the decoding matrix.
- As long as the parties on either end of the message transmission each have
- one of a given pair of inverse matrices, they can each encode and decode
- with their matrix, send their message securely, and decode received messages.
- The greatest weakness of this scheme is security of the coding/decoding
- matrix pair.
- If either matrix gets out, messages are no longer secure.
- Without knowledge of the coding or decoding matrix, the message above would
- be very difficult to decode!
+and
+\begin_inset space ~
+\end_inset
+
+Cryptography
 \end_layout
 
 \begin_layout Standard
-While a basic conversion from letters to numbers would have each letter
- of the alphabet assigned a number from 1-26 or 0-25, this leaves punctuation,
- symbols like spaces and hashtags, capitalization, and numbers out.
+\noindent
+The ability to undo multiplication by an invertible matrix makes it possible
+ to use matrices and their inverses for encrypting and decrypting messages.
+ Decoding messages like the one opening this section amounts to regrouping
+ the code into column vectors and multiplying by the decoding matrix—the
+ inverse of the coding matrix.
+ As long as the parties on either end of the message transmission have one
+ matrix of some pair of inverse matrices, they can each encode with their
+ matrix, send their message securely, and decode received messages.
+ Without knowledge of the coding or decoding matrix, an intercepted message
+ would be very difficult to decode!
+\end_layout
+
+\begin_layout Standard
+All we need now is a method for converting letters and symbols to numbers
+ and numbers back to letters and symbols.
+ While a basic conversion from letters to numbers would have each letter
+ of the alphabet assigned a number from 1-26 or 0-25, this would leave punctuati
+on, symbols like spaces and hashtags, capitalization, and numbers out.
  Since the early 1960's the American National Standards Institute has maintained
  a coding system for the electronic transmission of documents in English
  called ASCII (pronounced ass-kee) or US-ASCII.
@@ -1290,15 +1195,30 @@ The message matrix is multiplied by the coding matrix.
 101 & 111 & 111 & 100\\
 108 & 32 & 114 & 33
 \end{array}\right]=\left[\begin{array}{cccc}
-57 & -395 & -295 & -357\\
-51 & -156 & -145 & -255\\
-42 & 7 & -8 & -75
+15 & -359 & -48 & -390\\
+29 & -257 & -9 & -266\\
+36 & -76 & 27 & -75
 \end{array}\right]
 \]
 
 \end_inset
 
-This is a good place to use a calculator or SageMath!
+This is a good place to use a calculator or SageMath! 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxzVrBVyE0sKcqs0DDWMdaJ1jUHkkY6uiY6hiDK
+UMdAxzBWk5fLF1mdiU60uZGOoYGFjoU5mDI0MNQxNIRiAwOwmDFQhaGJjrExSHtBUWZeiYazpjWEARfx
+xRBx1vLVBAA6ViSz&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1308,7 +1228,7 @@ The coded message is extracted from the product:
 \begin_deeper
 \begin_layout Standard
 \align center
-57 51 42 -395 -156 7 -295 -145 -8 -357 -255 -75
+15 29 36 -359 -257 -76 -48 -9 27 -390 -266 -75
 \end_layout
 
 \end_deeper
@@ -1326,10 +1246,7 @@ noprefix "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\noindent
+ 
 \begin_inset ERT
 status open
 
@@ -1498,7 +1415,24 @@ print(B.inverse())
 \end_layout
 
 \begin_layout Standard
-The output of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxNjEEKgzAQRfeF3iHLCfwYp4moiAu9hlToIoss
+KmkMpcfvgEK7mJnP-8yb1Kiej5Ljhzw8Fg_TwzgYCQxGLSPBybnJPsvmrq-XlONWaKri9g55D6T1oA4m
+5TyeVidfy_7KhRoNkyK4A7e2g_PgfiW2wlO0HnUlKKztzz3_ub_6ECu3&lang=sage&interacts=eJy
+LjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+The output for 
 \begin_inset Formula $A^{-1}$
 \end_inset
 
@@ -1522,7 +1456,7 @@ The output of
 \end_layout
 
 \begin_layout Standard
-but the output of 
+but the output for 
 \begin_inset Formula $B^{-1}$
 \end_inset
 
@@ -2010,13 +1944,15 @@ For the remaining exercises, let
 
 \begin_layout Enumerate-Resume
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJxzVLBVyE0sKcqs0DDWMdaJNtfRNdXRNdLRBfEM
+QZSRjmGsJi-XE5pCQ6AECFromINUgXSZgtQpKzjn5xaUlqQqOMbpGmo4OgHFkEVBIiAZVFEnkFonR3S1
+QBGQDAB05SbN&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -2062,13 +1998,15 @@ Did you get what you expected?
 \end_deeper
 \begin_layout Enumerate-Resume
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJxzVLBVyE0sKcqs0DDWMdaJNtfRNdXRNdLRBfEM
+QZSRjmGsJi-XE5pCQ6AECFromINUgXSZgtQpKzjn5xaUlqQqaDg6acbpGvJyIQs6AkUUnDCEQSJgOQB-
+7SHf&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -2107,13 +2045,15 @@ What do you notice?
 \end_deeper
 \begin_layout Enumerate-Resume
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJxzVLBVyE0sKcqs0DDWMdaJNtfRNdXRNdLRBfEM
+QZSRjmGsJi-XE5pCQ6AECFromINUgXSZgtQpKzjn5xaUlqQq1DjW8HKhCDihCzhiiBhjaDJ2qgEA3xAp
+vA==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -2546,21 +2486,39 @@ Decoding is therefore done by multiplying
 2 & -5 & 6\\
 1 & -3 & 5
 \end{array}\right] & \left[\begin{array}{ccccccccc}
--97 & -207 & -416 & -312 & -143 & -190 & -305 & 102 & -257\\
--40 & -185 & -303 & -178 & -68 & -93 & -149 & 134 & -194\\
-17 & -68 & -97 & -28 & 10 & 2 & -7 & 83 & -65
+-199 & -273 & -572 & -245 & -150 & -389 & 412 & -142 & -231\\
+-78 & -145 & -294 & -127 & -84 & -174 & 272 & -59 & -132\\
+14 & -13 & -49 & -7 & -1 & -10 & 103 & 16 & -33
 \end{array}\right]\\
 = & \left[\begin{array}{ccccccccc}
-91 & 110 & 114 & 108 & 98 & 93 & 108 & 82 & 107\\
-76 & 101 & 32 & 103 & 114 & 32 & 8 & 111 & 115\\
-105 & 97 & 65 & 101 & 97 & 66 & 8 & 99 & 0
+91 & 110 & 114 & 108 & 98 & 93 & 8 & 99 & 33\\
+76 & 101 & 32 & 103 & 114 & 32 & 82 & 107 & 0\\
+105 & 97 & 65 & 101 & 97 & 83 & 111 & 115 & 0
 \end{array}\right]
 \end{align*}
 
 \end_inset
 
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtjrEOwjAMRPdK_YeOLTpLdZw0iRBb135BxcDY
+AYSqDv18LiAhBGS6nN_5PDan5nrZ1mVvDYZZIQYPBwkY8PyFc1dX0yeXMYvmDHHRCEbSzgeIhp6BlOGV
+lvrim6Kumq8nMZU5Iy57KhchqYjI6rIucLma-xPVgrHVk2CKF2oP7Q06sNvKrfd1uW3t2B1f4u1MP854
+mLoHy4Y21g==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
 and the numeric message is 91 76 105 110 101 97 114 32 65 108 103 101 98
- 114 97 93 32 66 108 8 8 82 111 99 107 115 0.
+ 114 97 93 32 83 8 82 111 99 107 115 33 0 0.
  The last step is to look these numbers up in the ASCII table.
 \end_layout
 

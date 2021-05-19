@@ -235,6 +235,18 @@ No row of
 \end_layout
 
 \begin_layout Enumerate
+There is a matrix 
+\begin_inset Formula $R$
+\end_inset
+
+ such that 
+\begin_inset Formula $MR=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
 \end_inset
 
@@ -263,11 +275,11 @@ The justification for this theorem proceeds by logically connecting the
 \begin_inset Formula 
 \[
 \begin{array}{ccccc}
- &  & \text{(v)}\\
+ &  & \text{(vi)}\\
  & \Swarrow &  & \Nwarrow\\
 \text{(i)} & \Rightarrow & \text{(ii)} & \Rightarrow & \text{(iii)}\\
- & \Searrow &  &  & \Uparrow\\
- &  & \text{(iv)} & \Rightarrow & \text{(vi)}
+\Downarrow &  &  &  & \Uparrow\\
+\text{(iv)} & \Rightarrow & \text{(vii)} & \Rightarrow & \text{(v)}
 \end{array}
 \]
 
@@ -378,7 +390,7 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(v) Since 
+(vi) Since 
 \begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
 \end_inset
 
@@ -414,7 +426,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Description
-(v)
+(vi)
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
@@ -490,7 +502,7 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(vi) Since 
+(vii) Since 
 \begin_inset Formula $M$
 \end_inset
 
@@ -526,36 +538,71 @@ noprefix "false"
 \end_layout
 
 \begin_layout Description
-(vi)
+(vii)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(v) Let 
+\begin_inset Formula $\mathbf{b}_{j}=(I_{m\times m})_{:,j}$
+\end_inset
+
+ for 
+\begin_inset Formula $j=1,2,\ldots,m$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has a solution for every 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, there is a vector 
+\begin_inset Formula $\mathbf{v}_{j}$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{v}_{j}=\mathbf{b}_{j}$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+\mathbf{v}_{1} & \mathbf{v}_{2} & \cdots & \mathbf{v}_{m}\end{array}\right]$
+\end_inset
+
+ we have 
+\begin_inset Formula $MR=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+(v)
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(iii) In particular, 
-\begin_inset Formula $M\mathbf{w}_{i}=\left(I_{n\times n}\right)_{:,i}$
+(iii) Suppose there is a matrix 
+\begin_inset Formula $R$
 \end_inset
 
- has at least one solution.
- Let 
-\begin_inset Formula $\mathbf{w}_{i}$
-\end_inset
-
- be such a solution for each 
-\begin_inset Formula $i$
+ such that 
+\begin_inset Formula $MR=I$
 \end_inset
 
 .
- It follows (by the matrix product as a linear combination of the columns)
- that for 
-\begin_inset Formula $R=\left[\begin{array}{cccc}
-\mathbf{w}_{1} & \mathbf{w}_{2} & \cdots & \mathbf{w}_{n}\end{array}\right]$
-\end_inset
-
-, 
-\begin_inset Formula $MR=I_{n\times n}$
-\end_inset
-
-.
- Supposing 
+ If 
 \begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
 \end_inset
 
@@ -571,11 +618,18 @@ noprefix "false"
 \end_inset
 
 Hence 
+\begin_inset Formula $\mathbf{w}^{T}=\mathbf{0}^{T}$
+\end_inset
+
+ (
+\begin_inset Formula $\mathbf{w}=\mathbf{0}$
+\end_inset
+
+) is the only solution of 
 \begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
 \end_inset
 
- has only the trivial solution.
- 
+.
 \end_layout
 
 \begin_layout Standard

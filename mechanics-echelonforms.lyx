@@ -36,7 +36,16 @@ theorems-ams
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -105,11 +114,11 @@ As augmented matrices,
 1 & 0 & 0\\
 0 & 2 & 3
 \end{array}\right],\quad\left[\begin{array}{ccc}
-1 & 2 & 3\\
-0 & 0 & 0
-\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
 1 & 2 & 0\\
 0 & 0 & 3
+\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+1 & 2 & 3\\
+0 & 0 & 0
 \end{array}\right]
 \]
 
@@ -137,33 +146,6 @@ which has exactly one solution:
  The second matrix represents the system
 \begin_inset Formula 
 \begin{align*}
-x+2y & =3\\
-0 & =0
-\end{align*}
-
-\end_inset
-
-which has infinitely many solutions, 
-\begin_inset Formula $x=3-2y$
-\end_inset
-
- with 
-\begin_inset Formula $y$
-\end_inset
-
- arbitrary.
- One example is 
-\begin_inset Formula $y=1$
-\end_inset
-
-, 
-\begin_inset Formula $x=1$
-\end_inset
-
-.
- The third matrix represents the system
-\begin_inset Formula 
-\begin{align*}
 x+2y & =0\\
 0 & =3
 \end{align*}
@@ -189,14 +171,41 @@ which has no solution.
 \end_inset
 
 .
+ The third matrix represents the system
+\begin_inset Formula 
+\begin{align*}
+x+2y & =3\\
+0 & =0
+\end{align*}
+
+\end_inset
+
+which has infinitely many solutions, 
+\begin_inset Formula $x=3-2y$
+\end_inset
+
+ with 
+\begin_inset Formula $y$
+\end_inset
+
+ arbitrary.
+ One example is 
+\begin_inset Formula $y=1$
+\end_inset
+
+, 
+\begin_inset Formula $x=1$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
 The three associated linear systems have different types of solution sets.
  The first set of solutions contains exactly one element.
- The second set of solutions contains infinitely many elements.
- The third set of solutions is empty.
- 
+ The second set of solutions is empty.
+ The third set of solutions contains infinitely many elements.
 \end_layout
 
 \begin_layout Standard
@@ -204,11 +213,11 @@ The three matrices
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
-7 & 0 & 0\\
-0 & 10 & -3
-\end{array}\right],\quad\left[\begin{array}{ccc}
 7 & 10 & -3\\
 0 & 0 & 0
+\end{array}\right],\quad\left[\begin{array}{ccc}
+7 & 0 & 0\\
+0 & 10 & -3
 \end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
 7 & 10 & 0\\
 0 & 0 & -3
@@ -237,7 +246,7 @@ noprefix "false"
 \begin_layout Standard
 Comparing the first set of three matrices to the second set of three matrices,
  you may notice that all six matrices have three 0 entries and three nonzero
- entries, one per column.
+ entries, one of each per column.
  Further, there are only three arrangements of the zeros.
  Using 
 \begin_inset Formula $\#$
@@ -249,18 +258,18 @@ Comparing the first set of three matrices to the second set of three matrices,
 \left[\begin{array}{ccc}
 \# & \# & \#\\
 0 & 0 & 0
-\end{array}\right],\quad,\left[\begin{array}{ccc}
-\# & 0 & 0\\
-0 & \# & \#
-\end{array}\right]\quad\text{and }\left[\begin{array}{ccc}
+\end{array}\right],\quad\left[\begin{array}{ccc}
 \# & \# & 0\\
 0 & 0 & \#
+\end{array}\right]\quad\text{and }\left[\begin{array}{ccc}
+\# & 0 & 0\\
+0 & \# & \#
 \end{array}\right]
 \]
 
 \end_inset
 
-in order from most to fewest solutions.
+corresponding to infinitely many solutions, no solution, and one solution.
  You can verify that each one is in row echelon form by applying the first
  4 steps of the row reduction algorithm.
  The nonzero numbers may change, but the form (arrangement of zeros and
@@ -294,16 +303,16 @@ any number
 0 & 0 & 0
 \end{array}\right],\quad\left[\begin{array}{ccc}
 \# & \star & \star\\
-0 & \# & \star
+0 & 0 & \#
 \end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
 \# & \star & \star\\
-0 & 0 & \#
+0 & \# & \star
 \end{array}\right].\label{eq:2by3echelonforms}
 \end{equation}
 
 \end_inset
 
-These more general forms also have infinitely many, one, and zero solutions,
+These more general forms also have infinitely many, zero, and one solution(s),
  respectively.
  Imagining the associated linear systems will help you verify the number
  of solutions, but how can you tell they are in row echelon form?
@@ -330,8 +339,8 @@ all rows beneath the pivot
 \[
 \left[\begin{array}{ccc}
 0 & 0 & 0\end{array}\right],\quad\left[\begin{array}{ccc}
-0 & \# & \star\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
-0 & 0 & \#\end{array}\right]
+0 & 0 & \#\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+0 & \# & \star\end{array}\right].
 \]
 
 \end_inset
@@ -355,10 +364,10 @@ noprefix "false"
 0 & 0 & 0
 \end{array}\right],\quad\left[\begin{array}{ccc}
 \boxed{\#} & \star & \star\\
-0 & \boxed{\#} & \star
+0 & 0 & \boxed{\#}
 \end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
 \boxed{\#} & \star & \star\\
-0 & 0 & \boxed{\#}
+0 & \boxed{\#} & \star
 \end{array}\right]
 \]
 
@@ -507,10 +516,8 @@ consistent
 inconsistent
 \series default
 .
- The corresponding augmented matrix in row echelon form makes telling the
- difference between the two straightforward.
- If the row echelon form matrix has a pivot in the last column, the linear
- system is inconsistent.
+ If a row echelon form of its augmented matrix has a pivot in the last column,
+ the linear system is inconsistent.
  Otherwise it is consistent.
  Indeed, a row containing a pivot in the last column has the form 
 \begin_inset Formula $\left[\begin{array}{ccccc}
@@ -529,11 +536,15 @@ inconsistent
 \begin_layout Standard
 The pivots can also be used to determine the number of solutions of a consistent
  system.
- If the row echelon form matrix has a pivot in each column (beside the rightmost
-), the linear system has exactly one solution.
+ If a row echelon form of an augmented matrix has a pivot in each column
+ (beside the rightmost), the linear system has exactly one solution.
  Otherwise it has infinitely many solutions.
- The second case is worth taking a closer look at.
- All of the following augmented matrices are in row echelon form and are
+ The second case is worth closer inspection.
+ 
+\end_layout
+
+\begin_layout Standard
+All of the following augmented matrices are in row echelon form and are
  pivot-free in the rightmost column plus at least one other column.
 \begin_inset Formula 
 \[
@@ -551,7 +562,11 @@ The pivots can also be used to determine the number of solutions of a consistent
 
 This is enough to know they all have infinitely many solutions, but writing
  down those solutions still takes a little work.
- The linear system represented by the first matrix is
+ 
+\end_layout
+
+\begin_layout Standard
+The linear system represented by the first matrix is
 \begin_inset Formula 
 \[
 x_{1}+3x_{2}=5,
@@ -861,16 +876,16 @@ general solution
 \series default
  of the linear system.
  See section 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Fill in reference.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Solution-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
- 
+.
 \begin_inset ERT
 status open
 
@@ -915,10 +930,9 @@ into reduced row echelon form will facilitate writing the solution of the
 (you should verify this) suggesting that the simplest way to write the solution
  is
 \begin_inset Formula 
-\begin{align*}
-x_{1} & =\frac{1}{3}+\frac{2}{3}x_{3}\\
-x_{2} & =\frac{4}{5}x_{3}
-\end{align*}
+\[
+x_{1}=\frac{1}{3}+\frac{2}{3}x_{3};\quad x_{2}=\frac{4}{5}x_{3}.
+\]
 
 \end_inset
 
@@ -1284,7 +1298,7 @@ M
 \family typewriter
 M.echelon_form()
 \family default
- returns a row echelon from and 
+ returns a row echelon form and 
 \family typewriter
 M.rref()
 \family default
@@ -1316,19 +1330,40 @@ M = matrix(5,5,[-480,-340,-110,-110,100,242,146,54,54,-60,-721,-673,-277,
 \end_layout
 
 \begin_layout LyX-Code
-print(M); print()
+print("M =");print(M); print()
 \end_layout
 
 \begin_layout LyX-Code
-print(M.echelon_form()); print()
+print("Row echelon form:");print(M.echelon_form()); print()
 \end_layout
 
 \begin_layout LyX-Code
-print(M.rref()) 
+print("Reduced row echelon form:");print(M.rref())  
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJx9jNEKgzAMRd8F_6H4pJCOpra2TvwEX_Y6xhha
+mTB1FMf2-YtTEMZYCJfk3pxUrGT9ZfLdK9ag4ciVFcBTRYK4CgoBUklAlYFWc_OMIiORBpMCl8ZAGLCv
+4qiJ0RryzIIVOaSYAeYESdT0WaQ5cGsl7XTwETTilITB3XfDFEcVK6OkWJYqKdgybflhfDJXX91tHFg7
+-n6_Xe9W_zz7cfILds2jdg3zf55471qC3_WrS68=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
 The output of the code is
+\end_layout
+
+\begin_layout LyX-Code
+M =
 \end_layout
 
 \begin_layout LyX-Code
@@ -1356,6 +1391,10 @@ The output of the code is
 \end_layout
 
 \begin_layout LyX-Code
+Row echelon form:
+\end_layout
+
+\begin_layout LyX-Code
 [  1  13  87 462  45]
 \end_layout
 
@@ -1377,6 +1416,10 @@ The output of the code is
 
 \begin_layout LyX-Code
  
+\end_layout
+
+\begin_layout LyX-Code
+Reduced row echelon form:
 \end_layout
 
 \begin_layout LyX-Code
@@ -1497,16 +1540,6 @@ echelon
 \end_inset
 
 form of a matrix is unique.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Include exercise(s) on this?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1869,6 +1902,96 @@ d system had a unique solution?
 \end_layout
 
 \begin_layout Enumerate
+Alex and Bianca are solving the same system of equations.
+ In reduced row echelon form, Alex got 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & \star & \star\\
+0 & 1 & \star & \star\\
+0 & 0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+and Bianca got
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & \star & 0 & \star\\
+0 & 0 & 1 & \star\\
+0 & 0 & 0 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is the system consistent according to Alex's solution? According to Bianca's?
+\end_layout
+
+\begin_layout Enumerate
+How many solutions does the system have according to Alex's solution? According
+ to Bianca's?
+\end_layout
+
+\begin_layout Enumerate
+How many free variables does the system have according to Alex's solution?
+ According to Bianca's?
+\end_layout
+
+\begin_layout Enumerate
+Can they both be right assuming the columns of their augmented matrices
+ both hold the coefficients of 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ in that order?
+\end_layout
+
+\begin_layout Enumerate
+Suppose the columns of Alex's augmented matrix hold the coefficients of
+ 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ in that order, but Bianca's columns hold the coefficients in the order
+ 
+\begin_inset Formula $x,z,y$
+\end_inset
+
+? Now can they both be right?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The reduced row echelon forms for the coefficient matrices of two linear
+ systems of three equations in three variables are
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & \star & 0\\
+0 & 0 & 1\\
+0 & 0 & 0
+\end{array}\right]\text{ and }\left[\begin{array}{ccc}
+1 & \star & \star\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+so both systems have infinitely many solutions.
+ Is it possible the systems are the same? Explain.
+\end_layout
+
+\begin_layout Enumerate
 A system of linear equations with fewer equations than unknowns is sometimes
  called underdetermined.
  Suppose such a system were consistent.
@@ -1884,13 +2007,17 @@ A system of linear equations with more equations than unknowns is sometimes
 
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJx1js-KAjEMxu-C7xDcywgpNGmbtixevc0TLHtw
+nS4O6MxSKvr4RhaFRTaHj_z5fUn6zWnX6njtAgb8YOszGh98QhOI7hIjimV377IgWQ6MmTQj7xIuF_An
+DDnOjEayj0ghKELRWxWxuo6tkEeFUkJOIi9-FoeOdGCc5Kj3YyIkTsSq-pAeZd2jRKTP9XLxU8epdase
+Nqv1-2_RPxIdv8F2nAbYQZ0vUPaHcpwn-J7rCbqvc4NpblDLcN6X4YVQ99PfDuVf7gZYxU8R&lang=sa
+ge&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -1905,7 +2032,7 @@ name "exc:echelonforms"
 \end_inset
 
 Use SageMath to find (i) a row echelon form (but not reduced row echelon
- form) and (ii) a reduced row echelon form of
+ form) and (ii) the reduced row echelon form of
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccccc}
@@ -1919,18 +2046,20 @@ Use SageMath to find (i) a row echelon form (but not reduced row echelon
 
 \end_inset
 
-Code to help you get started can be found at the end of the exercises.
+
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw0THTiTYy19E1NtPRNdEx0jHR
+MbXQMTTS0TUEChjpGAKFgNK8XAoowNAUKGkA02ECVG4MpKHqzWM1ebkKijLzSjSUfBVslTStIRxfGEMT
+AK2SG_w=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -1946,6 +2075,11 @@ name "exc:echelonforms-1"
 
 Use SageMath to find the reduced row echelon form of the augmented matrix,
  and write down the solution of the corresponding linear system.
+ Assume the columns represent the variables 
+\begin_inset Formula $x_{1},x_{2},x_{3},x_{4},x_{5}$
+\end_inset
+
+ in that order.
 \begin_inset Formula 
 \[
 \left[\begin{array}{cccccc}
@@ -1958,18 +2092,20 @@ Use SageMath to find the reduced row echelon form of the augmented matrix,
 
 \end_inset
 
-Code to help you get started can be found at the end of the exercises.
+
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw0THTiTYy19E1NtPRNdEx0jHR
+MbXQMTTS0TUEChjpGAKFgNK8XAoowNAUKGkA02ECVG4MpKHqzWM1ebkKijLzSjSUfBVslTStIRxfGEMT
+AK2SG_w=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -1993,8 +2129,12 @@ noprefix "false"
 
 \end_inset
 
- is the coefficient matrix of a homogeneous linear system and repeat the
- exercise.
+ is the coefficient matrix of a homogeneous linear system with variables
+ 
+\begin_inset Formula $x_{1},x_{2},x_{3},x_{4},x_{5},x_{6}$
+\end_inset
+
+ and repeat the exercise.
 \end_layout
 
 \begin_layout Standard
@@ -2011,73 +2151,6 @@ finishexercises
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\noindent
-SageMath code for exercise 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:echelonforms"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout LyX-Code
-M=matrix(5,5,[2049,-4548,-511,-5177,6023,-4526,10252,916,11438,
-\end_layout
-
-\begin_layout LyX-Code
-              -13292,-6947,15538,1740,17601,-20614,-1388,2866,
-\end_layout
-
-\begin_layout LyX-Code
-              263,3166,-3697,-5781,12812,1211,14321,-16671])
-\end_layout
-
-\begin_layout LyX-Code
-M.echelon_form()
-\end_layout
-
-\begin_layout Standard
-SageMath code for exercises 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:echelonforms-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:echelonforms-2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout LyX-Code
-M=matrix(4,6,[27,-36,-4,2,4,58,12,-16,-2,1,2,27,
-\end_layout
-
-\begin_layout LyX-Code
-              15,-20,-4,2,4,42,-3,4,-2,1,2,7])
-\end_layout
-
-\begin_layout LyX-Code
-M.rref()
 \end_layout
 
 \begin_layout Subsection
@@ -2104,24 +2177,21 @@ The three matrices
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
-7 & 0 & 0\\
-0 & 10 & -3\\
-0 & 0 & 0
-\end{array}\right],\quad,\left[\begin{array}{ccc}
-7 & 0 & 0\\
-0 & 10 & 0\\
-0 & 0 & -3
-\end{array}\right]\quad\text{and }\left[\begin{array}{ccc}
 7 & 10 & -3\\
-0 & 0 & 0\\
 0 & 0 & 0
+\end{array}\right],\quad\left[\begin{array}{ccc}
+7 & 0 & 0\\
+0 & 10 & -3
+\end{array}\right],\quad\text{and }\left[\begin{array}{ccc}
+7 & 10 & 0\\
+0 & 0 & -3
 \end{array}\right]
 \]
 
 \end_inset
 
-have associated linear systems with one solution, no solution, and infinitely
- many solutions, respectively.
+have associated linear systems with infinitely many solutions, one solution,
+ and no solution, respectively.
 \end_layout
 
 \begin_layout Description
