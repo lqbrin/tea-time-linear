@@ -533,8 +533,8 @@ Solving these equations for the
 \begin_inset Formula $I_{:,i}$
 \end_inset
 
- together—in effect, augmenting by the identity matrix—and reducing once
- (the algorithm presented in this section).
+ together—in effect, augmenting the identity matrix—and reducing once (the
+ algorithm presented in this section).
 \begin_inset ERT
 status open
 

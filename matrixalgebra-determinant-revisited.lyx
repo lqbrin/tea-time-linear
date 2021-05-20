@@ -236,49 +236,191 @@ In each case the row operation can be undone to recover the original matrix.
  corresponding to the six row operations (the row operations that gave the
  matrices above and the row operations used to recover the original matrices),
  in the order encountered are
-\begin_inset Formula 
-\[
-\begin{gathered}\text{operation }\quad\text{ recovery}\\
-\left[\begin{array}{ccc}
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+operation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+recovery
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{ccc}
 0 & 1 & 0\\
 1 & 0 & 0\\
 0 & 0 & 1
-\end{array}\right]\quad\left[\begin{array}{ccc}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{ccc}
 0 & 1 & 0\\
 1 & 0 & 0\\
 0 & 0 & 1
-\end{array}\right]\\
-\left[\begin{array}{ccc}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & 0\\
 0 & 1 & 0\\
 0 & 0 & 2
-\end{array}\right]\quad\left[\begin{array}{ccc}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & 0\\
 0 & 1 & 0\\
 0 & 0 & \frac{1}{2}
-\end{array}\right]\\
-\left[\begin{array}{ccc}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & 3\\
 0 & 1 & 0\\
 0 & 0 & 1
-\end{array}\right]\quad\left[\begin{array}{ccc}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & -3\\
 0 & 1 & 0\\
 0 & 0 & 1
-\end{array}\right]
-\end{gathered}
-\]
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 It must therefore be that each operation matrix is invertible and
 \begin_inset Formula 
-\[
-\begin{gathered}\left[\begin{array}{ccc}
+\begin{align*}
+\left[\begin{array}{ccc}
 0 & 1 & 0\\
 1 & 0 & 0\\
 0 & 0 & 1
-\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+\end{array}\right]^{-1} & =\left[\begin{array}{ccc}
 0 & 1 & 0\\
 1 & 0 & 0\\
 0 & 0 & 1
@@ -287,7 +429,7 @@ It must therefore be that each operation matrix is invertible and
 1 & 0 & 0\\
 0 & 1 & 0\\
 0 & 0 & 2
-\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+\end{array}\right]^{-1} & =\left[\begin{array}{ccc}
 1 & 0 & 0\\
 0 & 1 & 0\\
 0 & 0 & \frac{1}{2}
@@ -296,13 +438,12 @@ It must therefore be that each operation matrix is invertible and
 1 & 0 & 3\\
 0 & 1 & 0\\
 0 & 0 & 1
-\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+\end{array}\right]^{-1} & =\left[\begin{array}{ccc}
 1 & 0 & -3\\
 0 & 1 & 0\\
 0 & 0 & 1
-\end{array}\right]
-\end{gathered}
-\]
+\end{array}\right].
+\end{align*}
 
 \end_inset
 
@@ -418,6 +559,7 @@ It is easy enough to check that all four of these matrices have determinant
 \end_inset
 
 .
+ 
 \begin_inset ERT
 status open
 
@@ -503,7 +645,7 @@ choose formula
 \begin_inset Quotes erd
 \end_inset
 
- (a binomial coefficient) are
+ are
 \begin_inset Formula 
 \[
 \left(\begin{array}{c}
@@ -1107,7 +1249,7 @@ noprefix "false"
 \begin_inset Formula $(k+1)\times(k+1)$
 \end_inset
 
- matrix where rows 
+ swap matrix where rows 
 \begin_inset Formula $i$
 \end_inset
 
@@ -1129,16 +1271,7 @@ noprefix "false"
 \end_inset
 
 .
- In other words, 
-\begin_inset Formula $\ell\neq i$
-\end_inset
-
- and 
-\begin_inset Formula $\ell\neq j$
-\end_inset
-
-.
- Expanding the determinant of 
+ Then expanding the determinant of 
 \begin_inset Formula $S$
 \end_inset
 
@@ -1146,7 +1279,7 @@ noprefix "false"
 \begin_inset Formula $\ell$
 \end_inset
 
-,
+ yields
 \begin_inset Formula 
 \begin{align*}
 \det S & =(-1)^{\ell+1}S_{\ell,1}\det S_{\backslash\ell,1}+(-1)^{\ell+2}S_{\ell,2}\det S_{\backslash\ell,2}+\cdots+(-1)^{\ell+k+1}S_{\ell,k+1}\det S_{\backslash\ell,k+1}\\
@@ -1168,7 +1301,7 @@ because
 \end_inset
 
  whenever 
-\begin_inset Formula $\ell\neq m$
+\begin_inset Formula $m\neq\ell$
 \end_inset
 
 .
@@ -2496,7 +2629,7 @@ if
 \begin_inset Formula $B$
 \end_inset
 
- is the result of scaling a columns of a square matrix 
+ is the result of scaling a column of a square matrix 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2572,7 +2705,7 @@ If
 \begin_inset Formula $B$
 \end_inset
 
- is the result of scaling a rows of a square matrix 
+ is the result of scaling a row of a square matrix 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2591,7 +2724,7 @@ If
 \begin_layout Standard
 Can you justify this? Answer on page 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand pageref
 reference "ans:determinant-scaled-matrix"
 plural "false"
 caps "false"
@@ -2662,7 +2795,7 @@ noprefix "false"
 \end_inset
 
 , but it provides the right tools for the job.
- Besides the facts already noted, we learn from the proof that
+ Beside the facts already noted, we learn from the proof that
 \end_layout
 
 \begin_layout Itemize

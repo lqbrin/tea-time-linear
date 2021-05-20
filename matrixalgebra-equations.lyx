@@ -37,7 +37,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -475,8 +484,7 @@ dividing
 \end_inset
 
  both sides of an equation are valid steps in solving matrix equations,
- but better not to take it for granted on the back of a pair of examples
- where it works.
+ but better not to take it for granted on the back of a pair of examples.
  In adding a matrix to both sides of an equation (or subtracting a matrix
  from both sides of an equation) in an attempt to solve it, we are using
  the principle that for matrices 
@@ -799,17 +807,8 @@ The most important equation in linear algebra
 \end_layout
 
 \begin_layout Standard
-For essentialy the entire rest of this textbook, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Come back to decide whether this is true.
-\end_layout
-
-\end_inset
-
- we wil be concerned with solving equations of the form 
+For essentialy the entire rest of this textbook, we will be concerned with
+ solving equations of the form 
 \begin_inset Formula 
 \begin{equation}
 M\mathbf{v}=\mathbf{b}\label{eq:Mv-equals-b}
@@ -1126,9 +1125,10 @@ The equation
 \end_layout
 
 \begin_layout Standard
-We are not quite ready to completely clarify the connection, but the pieces
- of the puzzle are falling into place, and taking a slightly different perspecti
-ve on matrix multiplication will add one more item to the list.
+We are not quite ready to prove the connection, but the pieces of the puzzle
+ are falling into place.
+ Taking a slightly different perspective on matrix multiplication will add
+ one more item to the list.
 \end_layout
 
 \begin_layout Standard
@@ -1398,9 +1398,8 @@ noprefix "false"
 
 \end_inset
 
-) has exactly the same form as a system of linear equations with variables
- 
-\begin_inset Formula $A_{1,c},\ A_{2,c},\ldots,A_{n,c}$
+) has the form as a system of linear equations with variables 
+\begin_inset Formula $A_{1,c},A_{2,c},\ldots,A_{n,c}$
 \end_inset
 
 .
@@ -1420,7 +1419,7 @@ M & \mathbf{b}\end{array}\right]$
 
 ? Answer on page 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand pageref
 reference "ans:mv-equals-b-as-a-linear-system"
 plural "false"
 caps "false"
@@ -1447,7 +1446,7 @@ M & \mathbf{b}\end{array}\right]$
 
 \begin_layout Standard
 Wow.
- That seems to make six ways of understanding the same phenomenon.
+ Apparently there are six ways of understanding the same phenomenon.
 \end_layout
 
 \begin_layout Subsection
@@ -2493,7 +2492,7 @@ noprefix "false"
 Show that the converse of (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:addition-property-of-equality"
+reference "eq:multiplication-property-of-equality-part-1"
 plural "false"
 caps "false"
 noprefix "false"

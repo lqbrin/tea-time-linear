@@ -37,7 +37,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -151,11 +160,11 @@ Compare
 
 , neither column is a multiple of the other so neither column can be written
  as a linear combination of the other.
- However, the second column of 
+ In 
 \begin_inset Formula $A$
 \end_inset
 
- is 
+, the second column of is 
 \begin_inset Formula $-2$
 \end_inset
 
@@ -258,7 +267,7 @@ one column
  the second.
  The first column is a linear combination of the second, and the second
  column is a linear combination of the first.
- Neither one should take priority.
+ Neither one should take precedence.
 \end_layout
 
 \begin_layout Standard
@@ -321,7 +330,7 @@ The entire set of columns involved (with nonzero coefficient) in the linear
 \end_layout
 
 \begin_layout Standard
-In an atempt to emphasize that the 
+To emphasize that the 
 \shape italic
 set of columns
 \shape default
@@ -625,13 +634,6 @@ There is a matrix
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
- has no free variables.
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
 \end_inset
 
@@ -640,6 +642,13 @@ There is a matrix
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has no free variables.
 \end_layout
 
 \end_deeper
@@ -824,8 +833,8 @@ The following arguments demonstrate that (i)
 \[
 \begin{array}{ccccccc}
 \text{(i)} &  &  &  & \text{(iv)} & \Rightarrow & \text{(v)}\\
-\Downarrow & \Nwarrow &  & \Nearrow &  & \Searrow\\
-\text{(ii)} & \Leftarrow & \text{(iii)} & \Leftarrow & \text{(vii)} & \Leftarrow & \text{(vi)}
+\Downarrow & \Nwarrow &  & \Nearrow &  &  & \Downarrow\\
+\text{(ii)} & \Rightarrow & \text{(iii)} & \Leftarrow & \text{(vii)} & \Leftarrow & \text{(vi)}
 \end{array}
 \]
 
@@ -953,7 +962,67 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(v) Write this one.
+(v) Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be the reduced row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every column the first 
+\begin_inset Formula $m$
+\end_inset
+
+ rows of 
+\begin_inset Formula $R$
+\end_inset
+
+, 
+\begin_inset Formula $R_{1:m,:}$
+\end_inset
+
+, must be the 
+\begin_inset Formula $m\times m$
+\end_inset
+
+ identity matrix.
+ Because 
+\begin_inset Formula $R=E_{k}\cdots E_{2}E_{1}M$
+\end_inset
+
+ for some 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ elementary matrices 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}$
+\end_inset
+
+, we have 
+\begin_inset Formula $R=EM$
+\end_inset
+
+ where 
+\begin_inset Formula $E=E_{k}\cdots E_{2}E_{1}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $E_{1:m,:}M=R_{1:m,:}=I$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $L=E_{1:m,:}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -961,7 +1030,34 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(vi) Write this one.
+(vi) Suppose 
+\begin_inset Formula $LM=I$
+\end_inset
+
+ and 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $L(M\mathbf{v})=L\mathbf{b}\Rightarrow(LM)\mathbf{v}=L\mathbf{b}\Rightarrow I\mathbf{v}=L\mathbf{b}\Rightarrow\mathbf{v}=L\mathbf{b}$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has exactly one solution, 
+\begin_inset Formula $\mathbf{v}=L\mathbf{b}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ either has zero or one (in other words, at most one) solution.
 \end_layout
 
 \begin_layout Description
@@ -969,7 +1065,34 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(vii) By theorem 
+(vii) Suppose 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has a free variable (for every 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+) and let 
+\begin_inset Formula $\mathbf{b}=M_{:,1}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccccc}
+1 & 0 & 0 & \cdots & 0\end{array}\right]^{T}$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ so 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is consistent.
+ By theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:linear-system-existence-uniqueness"
@@ -979,13 +1102,7 @@ noprefix "false"
 
 \end_inset
 
- a linear system with no free variables is either inconsistent or has exactly
- one solution.
- Therefore 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
- has zero or one (in other words, at most one) solution.
+ a consistent linear system with free variables has infinitely many solutions.
 \end_layout
 
 \begin_layout Description
@@ -993,28 +1110,39 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(iii) 
-\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
-\end_inset
-
- is a special case of 
+(iii) Suppose 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
-, so if 
+ has no free variables (for any 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+).
+ Then 
 \begin_inset Formula $M\mathbf{v}=\mathbf{0}$
 \end_inset
 
- has a solution it is unique.
- The trivial solution, 
+ has no free variables and is consistent, having 
 \begin_inset Formula $\mathbf{v}=\mathbf{0}$
 \end_inset
 
-, being a solution of 
+ as a solution.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:linear-system-existence-uniqueness"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
 \begin_inset Formula $M\mathbf{v}=\mathbf{0}$
 \end_inset
 
- is therefore the only one.
+ has exactly one solution, the trivial solution.
 \end_layout
 
 \begin_layout Description
@@ -1033,7 +1161,7 @@ v_{1} & v_{2} & \cdots & v_{n}\end{array}\right]^{T}$
 \end_inset
 
  has only the trivial solution.
- By definition of linear indpendence, 
+ By definition of linear independence, 
 \begin_inset Formula $M_{:,1},M_{:,2},\cdots,M_{:,n}$
 \end_inset
 
@@ -1124,7 +1252,7 @@ independent
 \begin_inset space ~
 \end_inset
 
-set the set 
+set 
 \begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
 \end_inset
 
@@ -1144,7 +1272,7 @@ dependent
 \begin_inset space ~
 \end_inset
 
-set the set 
+set 
 \begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
 \end_inset
 
@@ -1612,7 +1740,7 @@ A
 \end_inset
 
  matrix has 5 pivot positions.
- What can you say about the linear indpendence of its columns?
+ What can you say about the linear independence of its columns?
 \end_layout
 
 \begin_layout Enumerate

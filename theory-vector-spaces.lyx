@@ -37,7 +37,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -159,15 +168,7 @@ The use of variables requires another intellectual leap.
 \end_inset
 
 .
- The unspecified quantities (variables 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
-) are abstractions of numbers.
+ The unspecified quantities are abstractions of numbers.
  Much like zero, they represent something that is not readily available
  to see or put in other concrete terms.
  The very idea of using unspecified quantities gives rise to an entire branch
@@ -381,8 +382,8 @@ We are so used to the basic properties of real numbers, such as associativity
 \end_layout
 
 \begin_layout Standard
-It is time to make explicit all the properties of matrices we have taking
- advantage of when discussing linear combinations.
+It is time to make explicit all the properties of matrices we have taken
+ for granted when discussing linear combinations.
  This exercise will provide an abstract footing from which to explore, revealing
  similarities between certain sets of objects that could otherwise easily
  go unnoticed.
@@ -578,7 +579,7 @@ noprefix "false"
 
 \end_inset
 
- of the same section; and the other four follow from properties of real
+ of the same section; and the other three follow from properties of real
  numbers.
  Property 7 is clear in 
 \begin_inset Formula $\mathbb{R}^{n}$
@@ -602,25 +603,11 @@ noprefix "false"
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
-, making 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
-
- the canonical vector space and allowing abstraction.
+.
 \end_layout
 
 \begin_layout Standard
-Elements of an arbitrary vector space 
-\begin_inset Formula $V$
-\end_inset
-
- are called 
-\series bold
-vectors
-\series default
- (even if they are functions, matrices, sequences, or some other type of
- object).
- In this abstract sense, even polynomials are vectors! The set 
+The set 
 \begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
 \end_inset
 
@@ -640,12 +627,27 @@ with the understanding that adding polynomials and multiplying polynomials
 \end_inset
 
 .
- Proof of this claim is mostly an exercise of 
+ We will verify this shortly by showing that this set satisfies the 10 propertie
+s of a vector space.
+ Proof that other sets form vector spaces will be requested in the exercises.
+ Elements of any vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ are called 
+\series bold
+vectors
+\series default
+ (even if they are matrices, sequences, or polynomials).
+ In this abstract sense, even functions are vectors! Proof that 
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+ is a vector space is mostly an exercise of 
 \shape italic
 observing
 \shape default
- that polynomials have the right properties (based on familiarity with polynomia
-ls) rather than 
+ that polynomials have the right properties rather than 
 \shape italic
 demonstrating
 \shape default
@@ -839,10 +841,10 @@ For any polynomial
 \end_layout
 
 \begin_layout Standard
-If the properties of polynomials were not so well known, each one would
- ned to be accompanied by reference to a theorem or axiom for support.
- Even with great familiarity, though, the same four properties that derived
- from properties of real numbers (1,4,5,6) require further attention.
+If the properties of polynomials were not so well known, each of these points
+ would need to be accompanied by reference to a theorem or axiom for support.
+ Even with great familiarity, the same four properties that derived from
+ properties of real numbers (1,4,5,6) require further attention.
  Closure (properties 1 and 6) cannot be taken for granted.
  These properties only follow because scalar multiplication and polynomial
  addition do not increase the degree of a polynomial.
@@ -1215,7 +1217,7 @@ span for vectors
 \begin_inset Formula $\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}$
 \end_inset
 
-, is the colection of all linear combinations of 
+, is the collection of all linear combinations of 
 \begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
 \end_inset
 
@@ -1323,7 +1325,7 @@ Some sets, each of which has a natural definition as a vector space, are
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Formula $Z$
+\begin_inset Formula $\mathbb{F}$
 \end_inset
 
  could actually be any field.
@@ -1424,31 +1426,1631 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Verify that various vector spaces are truly vector spaces.
+Verify that the set, with its well known operations of addition and scalar
+ multiplication, forms a vector space.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{M}_{m\times n}(\mathbb{R})$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Verify that various subsets are subspaces.
+\begin_inset Formula $F([0,1])$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Show that various subsets are not subspaces.
+\begin_inset Formula $C^{3}(\mathbb{R})$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Describe geometrically 
-\begin_inset Formula $\text{Span}\{\mathbf{v}\}$
+\begin_inset Formula $\mathbb{R}^{\mathbb{N}}$
+\end_inset
+
+ [The 
+\begin_inset Quotes eld
+\end_inset
+
+well known
+\begin_inset Quotes erd
+\end_inset
+
+ operations are done component-wise.]
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Verify that 
+\begin_inset Formula $S$
+\end_inset
+
+ is a subspace of the vector space 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ You do not have to verify that 
+\begin_inset Formula $V$
+\end_inset
+
+ is a vector space.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the first and third quadrants of the plane, including the axes
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $=\{(x,y):x\geq0\text{ and }y\geq0\}\cup\{(x,y):x\leq0\text{ and }y\leq0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the second and fourth quadrants of the plane, including the axes
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $=\{(x,y):x\leq0\text{ and }y\geq0\}\cup\{(x,y):x\geq0\text{ and }y\leq0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the line with slope 
+\begin_inset Formula $m$
+\end_inset
+
+ passing through the origin 
+\begin_inset Formula $=\{(x,y):y=mx\}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+; 
+\begin_inset Formula $V=\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of quadratic polynomials having 
+\begin_inset Formula $12$
+\end_inset
+
+ as a root 
+\begin_inset Formula $=\{p(x)=ax^{2}+bx+c:p(12)=0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of cubic polynomials with 
+\begin_inset Formula $-1$
+\end_inset
+
+, 
+\begin_inset Formula $3$
+\end_inset
+
+, and 
+\begin_inset Formula $18$
+\end_inset
+
+ as roots 
+\begin_inset Formula $=\{q(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}:q(-1)=q(3)=q(18)=0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{P}_{3}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of all functions on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ whose graphs pass through 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+; 
+\begin_inset Formula $V=F([0,1])$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of all real number sequences that converge to zero 
+\begin_inset Formula $=\{r_{1},r_{2},\ldots:\lim_{n\to\infty}r_{n}=0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{R}^{\mathbb{N}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of all real 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices with zero determinant; 
+\begin_inset Formula $\mathcal{M}_{3\times3}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $S$
+\end_inset
+
+ is not a subspace of the vector space 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ You do not have to verify that 
+\begin_inset Formula $V$
+\end_inset
+
+ is a vector space.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the first quadrant of the plane, including the axes
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $=\{(x,y):x\geq0\text{ and }y\geq0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the first and second quadrants of the plane, including the axes
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $=\{(x,y):x\geq0\text{ and }y\geq0\}\cup\{(x,y):x\leq0\text{ and }y\geq0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the closed disk of radius 5 with center at the origin 
+\begin_inset Formula $=\{(x,y):x^{2}+y^{2}\leq25\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of quadratic polynomials with 
+\begin_inset Formula $y$
+\end_inset
+
+-intercept 
+\begin_inset Formula $(0,-3)$
+\end_inset
+
+ 
+\begin_inset Formula $=\{p(x)=ax^{2}+bx+c:p(0)=-3\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of cubic polynomials such that 
+\begin_inset Formula $7$
+\end_inset
+
+ is not a root 
+\begin_inset Formula $=\{q(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}:q(7)\neq0\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{P}_{3}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of quartic polynomials such that all of its real roots are between
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $10$
+\end_inset
+
+ or is the zero polynomial 
+\begin_inset Formula $=\{q(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+a^{4}x^{4}:q(x_{0})=0\Rightarrow0\leq x_{0}\leq10\text{ or }q(x)=0\text{ for all }x\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{P}_{4}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of all real number sequences that converge to three 
+\begin_inset Formula $=\{r_{1},r_{2},\ldots:\lim_{n\to\infty}r_{n}=3\}$
+\end_inset
+
+; 
+\begin_inset Formula $V=\mathbb{R}^{\mathbb{N}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=$
+\end_inset
+
+ the set of all real 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices with determinant one; 
+\begin_inset Formula $\mathcal{M}_{3\times3}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describe 
+\begin_inset Formula $\text{span}S$
+\end_inset
+
+ geometrically.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+5\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+5\\
+1
+\end{array}\right],\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+5\\
+1
+\end{array}\right],\left[\begin{array}{c}
+-10\\
+2
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+2\\
+2\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describe 
+\begin_inset Formula $\text{span}S$
+\end_inset
+
+ in words.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left\langle 1,1,2,1,1,1,1,1,1,1,\ldots\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left\langle 1,2,3,4,5,6,7,8,9,10,\ldots\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ p(x)=x(1-x)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ p(x)=3\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right],\left[\begin{array}{cc}
+0 & -1\\
+0 & 0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set of all vectors of the form 
+\begin_inset Formula $\left[\begin{array}{c}
+s\\
+2s
+\end{array}\right]$
+\end_inset
+
+.
+ Find a set of vectors in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ whose span is 
+\begin_inset Formula $S$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-Describe geometrically 
-\begin_inset Formula $\text{Span}\{\mathbf{v}_{1},\mathbf{v}_{2}\}$
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set of all vectors of the form 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+-3t\\
+5t
+\end{array}\right]$
 \end_inset
 
 .
+ Find a set of vectors in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ whose span is 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set of all vectors of the form 
+\begin_inset Formula $\left[\begin{array}{c}
+3t\\
+-t\\
+5t
+\end{array}\right]$
+\end_inset
+
+.
+ Find a set of vectors in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ whose span is 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set of all vectors of the form 
+\begin_inset Formula $\left[\begin{array}{c}
+3t-2s\\
+-t+s\\
+5t+s
+\end{array}\right]$
+\end_inset
+
+.
+ Find a set of vectors in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ whose span is 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set of all vectors of the form 
+\begin_inset Formula $\left[\begin{array}{c}
+3t-4r\\
+-t+4r\\
+5t
+\end{array}\right]$
+\end_inset
+
+.
+ Find a set of vectors in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ whose span is 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the set of all vectors of the form 
+\begin_inset Formula $\left[\begin{array}{c}
+s+t\\
+2s-t
+\end{array}\right]$
+\end_inset
+
+.
+ Find a set of two vectors in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ whose span is 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $\text{span}\left\{ \left[\begin{array}{c}
+1\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]\right\} =S$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $\text{span}S$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+3\\
+2\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+7\\
+8\\
+9
+\end{array}\right],\left[\begin{array}{c}
+10\\
+2\\
+-6
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+2\\
+-3\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-10\\
+-24\\
+41
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+2\\
+-3\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-10\\
+-24\\
+41
+\end{array}\right],\left[\begin{array}{c}
+8\\
+1\\
+-2
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right],\left[\begin{array}{c}
+1\\
+1\\
+0
+\end{array}\right],\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+-\frac{2}{7}\\
+0\\
+0
+\end{array}\right],\left[\begin{array}{c}
+\frac{129}{1111}\\
+-3\\
+0
+\end{array}\right],\left[\begin{array}{c}
+\frac{122}{37}\\
+-\frac{37}{21}\\
+\frac{1}{8}
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $\text{span}\left\{ \sin^{2}\theta,\cos^{2}\theta\right\} $
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left(f(\theta)=3\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left(f(\theta)=\sin(2\theta)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left(f(\theta)=\cos(2\theta)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left(f(\theta)=\sin^{2}(\theta/2)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $\text{span}\left\{ \left\langle 1,2,3,4,5,\ldots\right\rangle ,\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left.\left\langle 0,4,0,0,0,\ldots\right\rangle ,\left\langle 1,1,1,1,1,\ldots\right\rangle \right\} $
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle 5,10,15,20,25,\ldots\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle 3,87,9,12,15,\ldots\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle 78,81,84,87,90,\ldots\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle 2,4,8,16,32,\ldots\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle -\frac{1}{2},-1,-\frac{3}{2},-2,-\frac{5}{2},\ldots\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle 0,32,4,6,8,\ldots\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in the span of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxzVLBVyE0sKcqs0DDWMdGJ1jWxtNTRNbKw0DEy
+NgIyTAx0dE2MTHV0Dc0MdQxBDBMDMx1jINY1NrHQMTQxBIoYmsVq8nIVFGXmlWgoOSrYKmlaQziOMAZQ
+WlnBs1ghSSEzT6EkI1WhuCAxTyE_DcxOzs8pzc0rBnF97QHQXCWv&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-240\\
+-406\\
+-416
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-499 & -288 & 232\\
+-425 & -161 & 125\\
+306 & -348 & 141
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw1iUEKwjAQAO-Cf1jqpYUNNLtLEpAiOXrwBeKh
+imKgTUsTwec3Kl6GGcZDB2Ofl_CuGQXPxBYVkStgKXAFIi0qawnZoBaDJIzKaELFxqDSzl6a7WZeQsx1
+5aGrmv0v_F_K3sExwRVChPy8Q5r7CNPj67dpeI0xffJ0WAG1hCWI&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-284\\
+146\\
+-187
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+237 & -228 & -234\\
+-440 & -772 & 36\\
+243 & -612 & -366
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw1i80KgkAUhfdB73CxjcIZcO6dHyUkXLboCaKF
+RZKQo6hBj99YtDl8H-ecmirqm2Xq3qmBxVlpXUAsVGmgtM9hCgf2PkquYUoHJbKGZYgw2EJKgXYGJj51
+wVAsAuE44jhiL5dsuxmnLixpUlOVZPuf1H-I9Y6OM12pC7Q87jSPTaCh_fJteL76MK96OnwAgnorWw==
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+486\\
+-352\\
+418\\
+273
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-118 & 35 & -94 & -170\\
+277 & -101 & 496 & -336\\
+332 & 25 & 393 & 164\\
+182 & -233 & 326 & -252
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw1jMEKwjAMhu-C7xDmZYMUmqZ1FhnSowefQDxM
+cThw3dgq-Pimiqd8X_L_CdDA0Ka5f5cWHZ4VMaOqa1TkGI32qLwsth7ZMFqvxXdILNOSR3LI2iEZyZHR
+uZWrAkYinP9Yri_VejXNfUxlEaApqv1Pwh_kvIHjAlfoI6THHZapjTB2X76Nz9cQl6ynwweYbitt&lan
+g=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-93\\
+130\\
+-120\\
+-437
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-133 & -77 & -153 & 209\\
+-69 & 323 & 490 & -98\\
+-419 & 15 & 305 & 129\\
+-157 & -10 & -230 & 377
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $\text{span}\left\{ \mathbf{u}_{1},\mathbf{u}_{2},\mathbf{u}_{3}\right\} $
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw1jHRidY1NNLRNTUz0NG10NE1
+NzEy0dE1MtAxMjUFYh1jA3MgDZQzNDAAiwMZZgaxmrxcBUWZeSUaSr4Ktkqa1hCOL4wBlFZW8CxWKFPI
+zFMoLkjMqy411Ck10ik1rrUHAFODH8Y=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-7424\\
+3075\\
+-1060
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
+-12\\
+-20\\
+20
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{2}=\left[\begin{array}{c}
+-560\\
+255\\
+-100
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{3}=\left[\begin{array}{c}
+-8\\
+25\\
+-20
+\end{array}\right]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw1jHRiTYy0NE1MtbRNbQEcg0N
+dYBI10zH0AAobGhmpqNrqmNormNsaQ5UZWoRq8nLVVCUmVeioeSrYKukaQ3h-MIYQGllBc9ihTKFzDyF
+4oLEvOpSQ51SI51S41p7AMC8HrQ=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+411\\
+-166\\
+-258
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
+20\\
+11\\
+-5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{2}=\left[\begin{array}{c}
+-23\\
+-6\\
+17
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{3}=\left[\begin{array}{c}
+-193\\
+100\\
+397
+\end{array}\right]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw0THRiTY00NE10bHQMdIxNATy
+dQ2NdHSNdQx1dC11dE11DC10dM3ByEzHxCRWk5eroCgzr0RDyVfBVknTGsLxhTGA0soKnsUKZQqZeQrF
+BYl51aWGOqVGOqXGtfYAnb0eXw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+-3\\
+18\\
+44
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
+10\\
+11\\
+1\\
+-7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{2}=\left[\begin{array}{c}
+-4\\
+4\\
+-9\\
+-7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{3}=\left[\begin{array}{c}
+8\\
+-12\\
+-5\\
+-6
+\end{array}\right]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw0THRiTbR0TU00NE11jG31NE1
+0tEFkhY6xsZAUSMdSx1zoAyQYWioo2sGFDLUMTYzi9Xk5Sooyswr0VDyVbBV0rSGcHxhDKC0soJnsUKZ
+QmaeQnFBYl51qaFOqZFOqXGtPQA21B-Q&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+79\\
+33\\
+-312\\
+366
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
+4\\
+-2\\
+-12\\
+11
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{2}=\left[\begin{array}{c}
+-10\\
+-9\\
+9\\
+-6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{u}_{3}=\left[\begin{array}{c}
+-3\\
+-8\\
+7\\
+-11
+\end{array}\right]$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+For each pair 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}S$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $S\cup\left\{ \mathbf{v}\right\} $
+\end_inset
+
+ is linearly dependent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-4\\
+4
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+2\\
+2
+\end{array}\right],\left[\begin{array}{c}
+-1\\
+3
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+18\\
+21
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+12\\
+-3
+\end{array}\right],\left[\begin{array}{c}
+6\\
+7
+\end{array}\right],\left[\begin{array}{c}
+8\\
+-1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=5t^{2}-9t+5$
+\end_inset
+
+; 
+\begin_inset Formula $S=\left\{ 1+t^{2},3t\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=5t^{2}-9t+5$
+\end_inset
+
+; 
+\begin_inset Formula $S=\left\{ 1,t,t^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle 0,0,0,0,0,\ldots\right\rangle $
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $S=\left\{ \left\langle 2,-3,4,5,1,\ldots\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left\langle 2,3,4,6,6,9,8,12,\ldots\right\rangle ;$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $S=\left\{ \left\langle 1,0,2,0,3,0,4,0,\ldots\right\rangle ,\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\phantom{S=\{}\left.\left\langle 0,1,0,2,0,3,0,4,\ldots\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Argue that (in general) if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}S$
+\end_inset
+
+, then 
+\begin_inset Formula $S\cup\left\{ \mathbf{v}\right\} $
+\end_inset
+
+ is linearly dependent.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $k$
+\end_inset
+
+ so that 
+\begin_inset Formula $kt^{2}+9t-8$
+\end_inset
+
+ is in
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{span}\left\{ 3t^{2}-4,4t^{2}-3t\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+2 & -3 & 5\\
+1 & 8 & 2
+\end{array}\right]$
+\end_inset
+
+.
+ Is the set of all 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{v}=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ a subspace of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+? of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+?
 \end_layout
 
 \begin_layout Enumerate
@@ -1612,6 +3214,101 @@ Suppose
 \end_inset
 
  and justify each equality in the string.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $V$
+\end_inset
+
+ is a vector space, 
+\begin_inset Formula $S$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+, and 
+\begin_inset Formula $H$
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Explain why 
+\begin_inset Formula $\text{span}H$
+\end_inset
+
+ must be a subset of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ This shows that 
+\begin_inset Formula $\text{span}H$
+\end_inset
+
+ is the smallest subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+ containing 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ be subspaces of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $S\cap T$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find subspaces 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $S\cup T$
+\end_inset
+
+ is not a subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

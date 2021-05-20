@@ -37,7 +37,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -135,7 +144,7 @@ how to solve equations
  of algebraic expressions involving real numbers and those governing the
  manipulation of expressions involving matrices, but there are significant
  differences, all worthy of recording.
- But first, a few words about the arithmetic of real numbers.
+ First, a few words about the arithmetic of real numbers.
 \end_layout
 
 \begin_layout Standard
@@ -1539,124 +1548,7 @@ by definition of matrix addition.
 \end_layout
 
 \begin_layout Standard
-In more words than symbols, the argument goes thus.
- The 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $A+B$
-\end_inset
-
- is the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $A$
-\end_inset
-
- plus the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $B$
-\end_inset
-
-.
- The 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $B+A$
-\end_inset
-
- is the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $B$
-\end_inset
-
- plus the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $A$
-\end_inset
-
-.
- But since the entries of 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $B$
-\end_inset
-
- are numbers, the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $A$
-\end_inset
-
- plus the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $B$
-\end_inset
-
- is the same as the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $B$
-\end_inset
-
- plus the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $A$
-\end_inset
-
-.
- Therefore the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $A+B$
-\end_inset
-
- is the same as the 
-\begin_inset Formula $i,\!j$
-\end_inset
-
--entry of 
-\begin_inset Formula $B+A$
-\end_inset
-
-.
- Hence 
-\begin_inset Formula $A+B=B+A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Using still fewer symbols, we might argue as follows.
+In more words than symbols, we might argue as follows.
  The 
 \begin_inset Formula $i,\!j$
 \end_inset
@@ -1691,7 +1583,7 @@ Using still fewer symbols, we might argue as follows.
 \end_layout
 
 \begin_layout Standard
-In yet a fourth way to see that theorem 
+In more symbols than words, a third way to see that theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:matrixproperties-part1"
@@ -1711,7 +1603,7 @@ noprefix "false"
 
 \end_inset
 
- is true, consider the following computation without words.
+ is true, consider the following computation.
 \begin_inset Formula 
 \begin{align*}
 A+B & =\left[\begin{array}{cccc}

@@ -99,7 +99,7 @@ Characterization of Square Matrices
 \end_layout
 
 \begin_layout Standard
-For square matrices, all twelve of the statements in theorems 
+For square matrices, all fourteen of the statements in theorems 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Matrix-Characterization-1"
@@ -143,7 +143,8 @@ noprefix "false"
 
 \end_inset
 
- plus a few that don't appear in those theorems are equivalent to invertibility.
+ plus a couple that don't appear in those theorems are equivalent to invertibili
+ty.
  Consider the following.
 \end_layout
 
@@ -193,30 +194,6 @@ name "enu:is-invertible"
  is invertible.
 \end_layout
 
-\begin_layout Enumerate
-There is a matrix 
-\begin_inset Formula $L$
-\end_inset
-
- such that 
-\begin_inset Formula $LM=I$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-There is a matrix 
-\begin_inset Formula $R$
-\end_inset
-
- such that 
-\begin_inset Formula $MR=I$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Standard
 You may or may not have considered these statements equivalent up to this
  point, and there is no harm done either way.
@@ -244,7 +221,7 @@ noprefix "false"
 .
  All this will be summarized in one last matrix characterization theorem,
  justified by the following narrative that shows 
-\begin_inset Formula $(1)\Rightarrow(2)\Rightarrow(3)\Rightarrow(4)\Rightarrow(5)\Rightarrow(\text{thm }\ref{thm:Matrix-Characterization-1})\Rightarrow(\text{thm }\ref{thm:Matrix-Characterization-2})\Rightarrow(6)\Rightarrow(\text{thm }\ref{thm:Matrix-Characterization-2})\Rightarrow(1)$
+\begin_inset Formula $(1)\Rightarrow(2)\Rightarrow(3)\Rightarrow(4)\Rightarrow(\text{thm }\ref{thm:Matrix-Characterization-1})\text{ and }(\text{thm }\ref{thm:Matrix-Characterization-2})\Rightarrow(1)$
 \end_inset
 
 .
@@ -370,7 +347,7 @@ Suppose
 
 .
  Because 
-\begin_inset Formula $\det R=\det(E_{k}\cdots E_{2}E_{1}R)=\det E_{k}\cdots\det E_{2}\cdot\det E_{1}\cdot\det M$
+\begin_inset Formula $\det R=\det(E_{k}\cdots E_{2}E_{1}M)=\det E_{k}\cdots\det E_{2}\cdot\det E_{1}\cdot\det M$
 \end_inset
 
  and 
@@ -382,9 +359,9 @@ Suppose
 \end_inset
 
  must also have nonzero determinant.
- But the only reduced row echelon form (of a square matrix) with nonzero
- determinant is the identity (all others have a row of zeros, putting a
- zero on the main diagonal).
+ But the only reduced row echelon form of a square matrix with nonzero determina
+nt is the identity (all others have a row of zeros, putting a zero on the
+ main diagonal).
  Therefore 
 \begin_inset Formula $M$
 \end_inset
@@ -458,74 +435,24 @@ Supposing
 \begin_inset Formula $M$
 \end_inset
 
- is invertible, there is a matrix 
+ is invertible, let 
+\begin_inset Formula $L=R=M^{-1}$
+\end_inset
+
+, proving the existence of matrices 
 \begin_inset Formula $L$
 \end_inset
 
- such that 
-\begin_inset Formula $LM=I$
-\end_inset
-
-.
- Let 
-\begin_inset Formula $L=M^{-1}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Suppose there is a matrix 
-\begin_inset Formula $L$
+ and 
+\begin_inset Formula $R$
 \end_inset
 
  such that 
-\begin_inset Formula $LM=I$
-\end_inset
-
-, and let 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
- have 
-\begin_inset Formula $n$
-\end_inset
-
- entries.
- Then, if 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
- has a solution, it must be 
-\begin_inset Formula $L\mathbf{b}$
-\end_inset
-
- since 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}\Rightarrow L(M\mathbf{v})=L\mathbf{b}\Rightarrow(LM)\mathbf{v}=L\mathbf{b}\Rightarrow\mathbf{v}=L\mathbf{b}$
+\begin_inset Formula $LM=I=MR$
 \end_inset
 
 .
- Hence 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
- has at most one solution for each 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Supposing 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
- has at most one solution for each 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
-, theorem 
+ By theorems 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Matrix-Characterization-1"
@@ -535,21 +462,7 @@ noprefix "false"
 
 \end_inset
 
- implies that 
-\begin_inset Formula $M$
-\end_inset
-
- has a pivot position in each column.
- Since 
-\begin_inset Formula $M$
-\end_inset
-
- is square, 
-\begin_inset Formula $M$
-\end_inset
-
- has a pivot position in each row, too.
- By theorem 
+ and 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Matrix-Characterization-2"
@@ -560,41 +473,10 @@ noprefix "false"
 \end_inset
 
 , 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\begin_inset Formula $M$
 \end_inset
 
- has at least one solution for each 
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
-.
- In particular, there are vectors 
-\begin_inset Formula $\mathbf{v}_{i}$
-\end_inset
-
- such that 
-\begin_inset Formula $M\mathbf{v}_{i}=I_{:,i}$
-\end_inset
-
- for each 
-\begin_inset Formula $i=1,2,\ldots,n$
-\end_inset
-
-.
- Letting 
-\begin_inset Formula $R=\left[\begin{array}{cccc}
-\mathbf{v}_{1} & \mathbf{v}_{2} & \cdots & \mathbf{v}_{n}\end{array}\right]$
-\end_inset
-
-, we have 
-\begin_inset Formula $R$
-\end_inset
-
- such that 
-\begin_inset Formula $MR=I$
-\end_inset
-
-.
+ has a pivot position in every row and column.
 \end_layout
 
 \begin_layout Standard
@@ -1813,18 +1695,10 @@ ing elementary matrices,
 
 \begin_deeper
 \begin_layout Standard
-Recording the elementary row operations as 
-\begin_inset Formula $\left[\begin{array}{ccc}
-6 & 3 & 6\\
--2 & 1 & -1\\
-3 & 4 & 6
-\end{array}\right]$
-\end_inset
-
- is reduced to row echelon form:
+Recording the elementary row operations during row reduction:
 \begin_inset Formula 
 \[
-\begin{gathered}\left[\begin{array}{ccc}
+\left[\begin{array}{ccc}
 6 & 3 & 6\\
 -2 & 1 & -1\\
 3 & 4 & 6
@@ -1832,8 +1706,15 @@ Recording the elementary row operations as
 6 & 3 & 6\\
 -6 & 3 & -3\\
 -6 & -8 & -12
-\end{array}\right]\stackrel[M_{3,:}\rightarrow M_{3,:}+M_{1,:}]{M_{2,:}\rightarrow M_{2,:}+M_{1,:}}{\longrightarrow}\\
-\left[\begin{array}{ccc}
+\end{array}\right]\stackrel[M_{3,:}\rightarrow M_{3,:}+M_{1,:}]{M_{2,:}\rightarrow M_{2,:}+M_{1,:}}{\longrightarrow}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{ccc}
 6 & 3 & 6\\
 0 & 6 & 3\\
 0 & -5 & -6
@@ -1841,13 +1722,11 @@ Recording the elementary row operations as
 6 & 3 & 6\\
 0 & 1 & -3\\
 0 & -5 & -6
-\end{array}\right]\stackrel{M_{3,:}\rightarrow M_{3,:}+5M_{2,:}}{\longrightarrow}\\
-\left[\begin{array}{ccc}
+\end{array}\right]\stackrel{M_{3,:}\rightarrow M_{3,:}+5M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
 6 & 3 & 6\\
 0 & 1 & -3\\
 0 & 0 & -21
-\end{array}\right]
-\end{gathered}
+\end{array}\right]\end{gathered}
 \]
 
 \end_inset
@@ -1869,11 +1748,10 @@ The determinant of
 \end_inset
 
 , which is 
-\begin_inset Formula $-126$
+\begin_inset Formula $6\cdot1\cdot-21=-126$
 \end_inset
 
-, times the determinants of the inverse elementary matrices (listed in reverse
- order):
+, times the determinants of the inverse elementary matrices:
 \begin_inset Formula 
 \begin{align*}
 \left|\begin{array}{ccc}
