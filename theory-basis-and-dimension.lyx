@@ -222,7 +222,10 @@ noprefix "false"
 \end_inset
 
 .
- In 
+\end_layout
+
+\begin_layout Standard
+In 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -231,10 +234,7 @@ noprefix "false"
 \end_inset
 
  form such a set.
-\end_layout
-
-\begin_layout Standard
-If 
+ If 
 \begin_inset Formula $M$
 \end_inset
 
@@ -281,7 +281,7 @@ In terms of linear combinations, every vector
 \begin_inset Formula $M$
 \end_inset
 
- provides for uniqueness (by theorem 
+ ensures uniqueness of solution (by theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Matrix-Characterization-1"
@@ -294,7 +294,10 @@ noprefix "false"
 ).
  These are the characteristics of the columns of an invertible matrix that
  makes it a special set—linear independence and span.
- Conveniently, the terms 
+\end_layout
+
+\begin_layout Standard
+Incidentally, the terms 
 \shape italic
 linear independence
 \shape default
@@ -311,10 +314,7 @@ any
 \end_inset
 
 , motivating the following definitions.
-\end_layout
-
-\begin_layout Standard
-A subset 
+ A subset 
 \begin_inset Formula $S$
 \end_inset
 
@@ -357,13 +357,22 @@ From the discussion that led to the definition of a basis, we can be sure
 \end_inset
 
  can be written as a unique linear combination of the basis vectors.
- However, this property does not automatically transfer to a basis of an
- arbitrary vector space.
+ However, theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which provided this property does not apply to arbitrary vector spaces.
  We will need to argue that if 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
- is a basis of a vector space 
+ is a basis of an arbitrary vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -391,7 +400,7 @@ Let
 \begin_inset Formula $\mathcal{B}=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{n}\}$
 \end_inset
 
- be a basis for a vector space 
+ be a basis (linearly independent spanning set) for a vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -647,7 +656,7 @@ To understand the implications of this theorem, let
 \begin_inset Formula $V$
 \end_inset
 
-—
+: 
 \begin_inset Formula $F$
 \end_inset
 
@@ -715,7 +724,7 @@ To understand the implications of this theorem, let
 \begin_inset Formula $V$
 \end_inset
 
- and therefore deserves a name.
+ and deserves a name.
  We call the number of elements in a basis the 
 \series bold
 dimension
@@ -816,6 +825,153 @@ name "par:standard-basis-of-PnR"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+On the flip side, if a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ has dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, then any subset of 
+\begin_inset Formula $V$
+\end_inset
+
+ containing fewer than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements does not span 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $S=\{\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{p}\}$
+\end_inset
+
+ be a subset of 
+\begin_inset Formula $V$
+\end_inset
+
+ with 
+\begin_inset Formula $p<n$
+\end_inset
+
+.
+ We have already argued that 
+\begin_inset Formula $S$
+\end_inset
+
+ cannot be a basis (linearly independent spanning set) since it does not
+ have 
+\begin_inset Formula $n$
+\end_inset
+
+ elements.
+ Because it is a spanning set but not a basis, 
+\begin_inset Formula $S$
+\end_inset
+
+ must be linearly dependent.
+ Therefore 
+\begin_inset Formula $S$
+\end_inset
+
+ has at least two elements (sets with zero or one element are linearly independe
+nt), one of which can be written as a linear combination of the others.
+ By rearranging the order of the elements in 
+\begin_inset Formula $S$
+\end_inset
+
+ if necessary, let 
+\begin_inset Formula $\mathbf{u}_{1}$
+\end_inset
+
+ be the element that can be written as a linear combination of the others
+ and write
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u}_{1}=c_{2}\mathbf{u}_{2}+c_{3}\mathbf{u}_{3}+\cdots c_{p}\mathbf{u}_{p}.\label{eq:lin-combo-0}
+\end{equation}
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\hat{S}=S\backslash\{\mathbf{u}_{1}\}=\{\mathbf{u}_{2},\mathbf{u}_{3},\ldots,\mathbf{u}_{p}\}$
+\end_inset
+
+ still spans 
+\begin_inset Formula $V$
+\end_inset
+
+: for arbitrary 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+, write
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=c_{1}\mathbf{u}_{1}+c_{2}\mathbf{u}_{2}+\cdots c_{p}\mathbf{u}_{p}\label{eq:lin-combo}
+\end{equation}
+
+\end_inset
+
+and substitute (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lin-combo-0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) into (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lin-combo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), thereby writing 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a linear combination of the elements of 
+\begin_inset Formula $\hat{S}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\hat{S}$
+\end_inset
+
+ is linearly dependent, repeat the process of removing an element that can
+ be written as a linear combination of the others, and continue until the
+ remaining set is linearly dependent (and still spanning).
+ This will happen when there is one element, if not sooner, so the process
+ is guaranteed to end.
+ At this point what is left is a basis with less than 
+\begin_inset Formula $n$
+\end_inset
+
+ elements, an impossibility.
+ It must be that 
+\begin_inset Formula $S$
+\end_inset
+
+ is not spanning.
 \end_layout
 
 \begin_layout Subsection
@@ -950,6 +1106,10 @@ spanning if a vector space
 .
 \end_layout
 
+\begin_layout Description
+bases all bases of a given vector space have the same number of elements.
+\end_layout
+
 \begin_layout Standard
 \noindent
 \begin_inset ERT
@@ -972,11 +1132,420 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Justify the claim.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension"
+
+\end_inset
+
+State the dimension of the vector space.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}^{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}^{12}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}_{5}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}_{12}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-1"
+
+\end_inset
+
+Explain why the set is not a basis of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-321\\
+238\\
+-250
+\end{array}\right],\left[\begin{array}{c}
+-15\\
+-298\\
+-64
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+384\\
+-391\\
+-339
+\end{array}\right],\left[\begin{array}{c}
+-78\\
+-262\\
+349
+\end{array}\right],\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-91\\
+412\\
+0
+\end{array}\right],\left[\begin{array}{c}
+147\\
+198\\
+0
+\end{array}\right],\left[\begin{array}{c}
+423\\
+-218\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-51\\
+165\\
+-136\\
+-34
+\end{array}\right],\left[\begin{array}{c}
+0\\
+414\\
+308\\
+-264
+\end{array}\right],\left[\begin{array}{c}
+491\\
+-37\\
+198\\
+36
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+115\\
+136\\
+111
+\end{array}\right],\left[\begin{array}{c}
+46\\
+90\\
+-131
+\end{array}\right],\left[\begin{array}{c}
+-101\\
+-122\\
+105
+\end{array}\right],\left[\begin{array}{c}
+-94\\
+-91\\
+-148
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-2"
+
+\end_inset
+
+Explain why the set is not a basis of 
+\begin_inset Formula $\mathbb{P}_{3}(\mathbb{R})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{168+217t-115t^{2}+383t^{3},60+349t+498t^{2}+243t^{3}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{-407+342t-94t^{2}-354t^{3},188-272t^{2}-18t^{3},117+114t-437t^{2}+493t^{3}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{-9+t,-4+9t-t^{2},7-2t^{2},-2+7t-6t^{2}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{0,t,t^{2},t^{3}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{t,t^{2},t^{3},t^{4}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{27-70t,-89t^{2}+52t^{3},1+58t,-27t^{2}-74t^{3},28-100t\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-3"
+
+\end_inset
+
+Each set is a subset of a vector space.
+ In each set, one vector is the sum of the other two.
+ (i) Name a vector space containing the set, and (ii) find a subset with
+ the same span.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+9\\
+12\\
+-7\\
+18
+\end{array}\right],\left[\begin{array}{c}
+18\\
+8\\
+0\\
+7
+\end{array}\right],\left[\begin{array}{c}
+9\\
+-4\\
+7\\
+-11
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{9-4t+7t^{2},-20+8t+17t^{2},-11+4t+24t^{2}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left\langle -4,-7,-10,-13,\ldots\right\rangle ,\left\langle 1,2,3,4,\ldots\right\rangle ,\left\langle -5,-9,-13,-17,\ldots\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{cc}
+-4 & -19\\
+14 & -13
+\end{array}\right],\left[\begin{array}{cc}
+-19 & -2\\
+14 & -1
+\end{array}\right],\left[\begin{array}{cc}
+-23 & -21\\
+28 & -14
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 3\sin\theta-2\cos\theta,8\sin\theta+2\cos\theta,5\sin\theta+4\cos\theta\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Redo part (ii) of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this time stating a different subset with the same span.
+ Is this subset a basis for the span of the set?
+\end_layout
+
+\begin_layout Enumerate
+Find the dimension of the span of the set.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+1\\
+1\\
+2\\
+2
+\end{array}\right],\left[\begin{array}{c}
+2\\
+2\\
+4\\
+4
+\end{array}\right],\left[\begin{array}{c}
+5\\
+5\\
+10\\
+10
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 3+2t^{2},1,1-t^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \cos^{2}\theta,\sin^{2}\theta,1\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right],\left[\begin{array}{c}
+3\\
+6\\
+9
+\end{array}\right],\left[\begin{array}{c}
+-2\\
+2\\
+-1
+\end{array}\right],\left[\begin{array}{c}
+4\\
+-4\\
+2
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Justify the claim that 
 \begin_inset Formula $\{1,t,\ldots,t^{n}\}$
 \end_inset
 
@@ -988,30 +1557,81 @@ Justify the claim.
 \end_layout
 
 \begin_layout Enumerate
-If a vector space 
-\begin_inset Formula $V$
+Suppose 
+\begin_inset Formula $\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}=\mathbb{P}_{3}(\mathbb{R})$
 \end_inset
 
- has dimension 
-\begin_inset Formula $n$
+.
+ Explain why 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}$
 \end_inset
 
-, any subset of 
-\begin_inset Formula $V$
-\end_inset
-
- with less than 
-\begin_inset Formula $n$
-\end_inset
-
- elements does not span 
-\begin_inset Formula $V$
+ is a basis of 
+\begin_inset Formula $\mathbb{P}_{3}(\mathbb{R})$
 \end_inset
 
 .
 \end_layout
 
-\end_deeper
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}$
+\end_inset
+
+ is a linearly independent set in 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+.
+ Explain why 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}$
+\end_inset
+
+ is a basis of 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $V$
+\end_inset
+
+ be a vector space with dimension 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Explain why a spanning set with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements must be a basis.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $V$
+\end_inset
+
+ be a vector space with dimension 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Explain why a linearly independent set with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements must be a basis.
+\end_layout
+
+\begin_layout Enumerate
+Span of column space questions (without using the term column space).
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

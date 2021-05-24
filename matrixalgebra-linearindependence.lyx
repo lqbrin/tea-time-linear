@@ -164,7 +164,7 @@ Compare
 \begin_inset Formula $A$
 \end_inset
 
-, the second column of is 
+, the second column is 
 \begin_inset Formula $-2$
 \end_inset
 
@@ -409,13 +409,13 @@ Let
 
  are 
 \series bold
-linearly independent
+linearly dependent
 \series default
  or that 
 \begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
 \end_inset
 
- is a linearly independent set if the only solution of 
+ is a linearly dependent set if there is a solution of 
 \begin_inset Formula 
 \begin{equation}
 x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=0\label{eq:linear-independence-definition}
@@ -423,10 +423,15 @@ x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=0\label{eq:linear-independence-definitio
 
 \end_inset
 
-is the trivial solution 
-\begin_inset Formula $x_{1}=x_{2}=\cdots=x_{n}=0$
+where not all the 
+\begin_inset Formula $x_{i}$
 \end_inset
 
+ are zero.
+ Such a solution is called a 
+\series bold
+nontrivial solution
+\series default
 .
  Otherwise the objects 
 \begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
@@ -434,13 +439,13 @@ is the trivial solution
 
  are 
 \series bold
-linearly dependent
+linearly independent
 \series default
  and 
 \begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
 \end_inset
 
- is a linearly dependent set.
+ is a linearly independent set.
  Note that the 
 \begin_inset Formula $0$
 \end_inset
@@ -455,11 +460,7 @@ noprefix "false"
 
 \end_inset
 
-) is the object 
-\begin_inset Formula $0$
-\end_inset
-
-, not necessarily the number 
+) is the additive identity, not necessarily the number 
 \begin_inset Formula $0$
 \end_inset
 
@@ -511,10 +512,11 @@ so the third column is a linear combination of the first two.
 
 \end_inset
 
-a nontrivial linear combination of the columns that sums to 0.
+a nontrivial linear combination (not all of the coefficients are zero) of
+ the columns that sums to 0.
  No fanfare.
  No notes of special cases.
- The definition of linear independence is clean and direct.
+ The definition of linear dependence is clean and direct.
 \end_layout
 
 \begin_layout Subsection
@@ -523,7 +525,7 @@ Matrix Characterization Part 1
 
 \begin_layout Standard
 Free variables, solution sets of linear systems, and pivot positions of
- matrices are all directly connected to the concept of linear independence.
+ matrices are all directly connected to the concept of linear dependence.
  
 \end_layout
 
@@ -879,22 +881,21 @@ noprefix "false"
 \end_inset
 
  has a nontrivial solution, 
-\begin_inset Formula $\mathbf{x}=\left[\begin{array}{cccc}
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cccc}
 x_{1} & x_{2} & \cdots & x_{n}\end{array}\right]^{T}$
 \end_inset
 
 .
  Then 
-\begin_inset Formula $M\mathbf{x}=x_{1}M_{:,1}+x_{2}M_{:,2}+\cdots+x_{n}M_{:,n}=\mathbf{0}$
+\begin_inset Formula $M\mathbf{v}=x_{1}M_{:,1}+x_{2}M_{:,2}+\cdots+x_{n}M_{:,n}=\mathbf{0}$
 \end_inset
 
-.
- Since 
-\begin_inset Formula $\mathbf{x}$
+, and since 
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
  is a nontrivial solution, one of the entries of 
-\begin_inset Formula $\mathbf{x}$
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
  is nonzero, say 
@@ -1217,7 +1218,15 @@ linearly
 \begin_inset space ~
 \end_inset
 
-dependent not linearly independent.
+dependent objects 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+ are linearly dependent whenever 
+\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
+\end_inset
+
+ is a linearly dependent set.
 \end_layout
 
 \begin_layout Description
@@ -1229,18 +1238,11 @@ independent objects
 \begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
 \end_inset
 
- are linearly independent whenever the trivial solution is the only solution
- of (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:linear-independence-definition"
-plural "false"
-caps "false"
-noprefix "false"
-
+ are linearly independent whenever 
+\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
 \end_inset
 
-).
+ is a linearly independent set.
 \end_layout
 
 \begin_layout Description
@@ -1252,15 +1254,7 @@ independent
 \begin_inset space ~
 \end_inset
 
-set 
-\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
-\end_inset
-
- is a linearly independent set whenever the objects 
-\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
-\end_inset
-
- are linearly independent.
+set a set that is not linearly dependent.
 \end_layout
 
 \begin_layout Description
@@ -1272,15 +1266,40 @@ dependent
 \begin_inset space ~
 \end_inset
 
-set 
-\begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
+set a set for which a nontrivial linear combination of its elements equals
+ the additive identity.
+\end_layout
+
+\begin_layout Description
+nontrivial
+\begin_inset space ~
 \end_inset
 
- is a linearly dependent set whenever the objects 
-\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+linear
+\begin_inset space ~
 \end_inset
 
- are linearly dependent.
+combination a linear combination in which not all the coefficients are zero.
+\end_layout
+
+\begin_layout Description
+nontrivial
+\begin_inset space ~
+\end_inset
+
+solution any solution 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ of the equation 
+\begin_inset Formula $x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=0$
+\end_inset
+
+ where not all the 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are zero.
 \end_layout
 
 \begin_layout Description
@@ -1296,7 +1315,7 @@ solution the solution
 \begin_inset Formula $x_{1}b_{1}+x_{2}b_{2}+\cdots+x_{n}b_{n}=0$
 \end_inset
 
- is called the trivial solution.
+.
 \end_layout
 
 \begin_layout Standard
@@ -1725,6 +1744,10 @@ Determine whether the set is linearly independent.
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Is the empty set linearly independent or linearly dependent?
+\end_layout
+
 \begin_layout Enumerate
 A 
 \begin_inset Formula $9\times6$

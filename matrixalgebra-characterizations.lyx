@@ -1250,7 +1250,7 @@ noprefix "false"
 
 \begin_layout Enumerate
 Show that the linear system has at least one solution for any values 
-\begin_inset Formula $b_{1},b_{2},b_{3},b_{4}$
+\begin_inset Formula $b_{1},b_{2},b_{3}$
 \end_inset
 
 .
