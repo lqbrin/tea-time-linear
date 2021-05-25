@@ -37,7 +37,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -849,7 +858,25 @@ On the flip side, if a vector space
 \end_inset
 
 .
- Let 
+ The statement is clearly true when 
+\begin_inset Formula $n=0$
+\end_inset
+
+ (there are no sets with less than 
+\begin_inset Formula $0$
+\end_inset
+
+ elements) and 
+\begin_inset Formula $n=1$
+\end_inset
+
+ (only the empty set has less than one element, but the empty set does not
+ span any vector space).
+ For 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+, let 
 \begin_inset Formula $S=\{\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{p}\}$
 \end_inset
 
@@ -1629,9 +1656,242 @@ Let
 \end_layout
 
 \begin_layout Enumerate
-Span of column space questions (without using the term column space).
+Do the columns of the matrix (considered as a set of vectors) form a basis
+ for 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+?
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+-11 & 8 & 18 & 15\\
+19 & 2 & 5 & -3\\
+17 & 11 & 20 & -2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+-13 & 19 & 19 & 16\\
+-17 & -16 & -16 & 14\\
+-19 & 5 & 5 & -10\\
+-14 & 15 & 15 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+-14 & 14 & 8\\
+-2 & 18 & -17\\
+-16 & 7 & -6\\
+12 & -18 & -4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+-17 & 18 & -12 & 9\\
+0 & -8 & 4 & 17\\
+0 & 0 & 12 & -9\\
+0 & 0 & 0 & -10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+-7 & 18 & 19 & -12\\
+0 & 0 & 8 & 2\\
+0 & 0 & 0 & -1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccccc}
+9 & 3 & 13 & 11 & -5 & -6\\
+-17 & 12 & -14 & 10 & -2 & -7\\
+-13 & 8 & 0 & 16 & -15 & 18\\
+-8 & 19 & -12 & 15 & 2 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Do the columns of the matrix (considered as a set of vectors) form a basis
+ for 
+\begin_inset Formula $\mathbb{R}^{6}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw9jk0KwkAMhfeCdyhddeAFmvlJZhCPMCcQFy67
+UKR04fF9gyAkkOR9eUmfrtPzcezbZzEYblIbqkGywxqkVogpJDoYrUDU0BI0JUhZoUzxhBKpkMnE4RW2
+omZkRVOyQ1SCGinStY060c_GjDsElRd9-Kvfw_n03rfXscyd783hMv3a_q_CFxY4KCs=&lang=sage&i
+nteracts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccccc}
+-89 & 86 & -47 & 69 & -88 & -61\\
+-27 & 27 & 95 & -16 & 93 & 133\\
+-50 & 150 & -73 & 52 & -17 & 24\\
+-6 & 78 & 60 & 84 & 41 & 91\\
+132 & -110 & -126 & 79 & -90 & -137\\
+96 & -124 & -41 & 147 & 75 & -117
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw9jrEKwzAMRPdC_8FkiuEMkWXZMSWf4C8IHTpm
+aCkhQz-_5xQKAt2dnoSaW9zzcezbZ8zIWAtCglUEMaQKy4hCUxA1IphBKnWiZt6xZNCZXbqJ9cy5kRVk
+OAzlLEYVMnUGQRWSKNmKkoq0My9Pd3-9vPftdYxD42ODv7mfbX_lvx6sJrk=&lang=sage&interacts
+=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccccc}
+7 & -4 & 59 & -15 & 49 & 56\\
+21 & -17 & 232 & -55 & 197 & 242\\
+-21 & 9 & -145 & 38 & -119 & -129\\
+-21 & 1 & -63 & 2 & -45 & -7\\
+-7 & -1 & -9 & 10 & -12 & -33\\
+14 & -13 & 173 & -42 & 148 & 190
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw9TksKAjEM3QveYZjVFF5h0qRpi3iEnkBcuJyF
+IsMsPL6vCEII75dH-nSdno9j3z6Lw3GLJoro1pAcsXBIMzVLcMdKDxVWadCUJDAIgSE2hStaGxGHCOpI
+GFdSwdBiGkqp0HV08EYqK3OBZr-H8-m9b69jmTufmsNl-tH-R-ELnwAmMQ==&lang=sage&interacts
+=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccccc}
+-413 & -649 & 26 & -7 & -73 & -513\\
+42 & 66 & 0 & -6 & 8 & 48\\
+-77 & -121 & 4 & 1 & -14 & -93\\
+63 & 99 & -6 & 6 & 11 & 87\\
+-147 & -231 & 6 & 6 & -27 & -178\\
+308 & 484 & -18 & 0 & 57 & 356
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw9TkEKwzAMuw_2h9JTCzLEqeMkjD0hLxg77NjD
+xig97PlVNtjBtiQsy224Ds_Hvq2fyeG4aXSIG6QaaoFYQKWSEiQWaAgsiCYUg1KRQloS1JSycnWJBGyq
+X4AFkulK3aYZMaNmHvFOA0q3WWUCM93Rncahep_Pp_e2vvZpbHxynC_Dj7Y_mg_brSkU&lang=sage&i
+nteracts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccccc}
+126 & -64 & -94 & 98 & -40 & 96\\
+-55 & -28 & 100 & 10 & -15 & 84\\
+128 & -80 & -85 & 141 & -116 & -32\\
+-132 & 112 & -13 & 3 & -70 & 150\\
+-117 & 27 & 97 & 106 & -110 & 81\\
+-149 & -54 & -66 & 132 & 46 & 111
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
