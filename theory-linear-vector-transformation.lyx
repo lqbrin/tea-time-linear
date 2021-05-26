@@ -670,7 +670,7 @@ On the other hand, suppose you know the images of the columns of
 \end_inset
 
  as a matrix product.
- In other words, all you know is 
+ All you know is 
 \begin_inset Formula 
 \[
 T(I_{:,1})=\mathbf{c}_{1},\ T(I_{:,2})=\mathbf{c}_{2},\ldots,T(I_{:,n})=\mathbf{c}_{n}
@@ -1056,7 +1056,7 @@ Notice that
 \begin_inset Formula $s\neq0$
 \end_inset
 
-.
+:
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -1651,7 +1651,7 @@ noprefix "false"
 .
  It must be that matrix multiplication corresponds to function composition!
  To facilitate the following discussion, which puts these words into symbols
- and expands from there, for any matrix 
+ and elaborates, for any matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1675,16 +1675,24 @@ Letting
 \begin_inset Formula $T_{A}$
 \end_inset
 
- and 
-\begin_inset Formula $T_{B}$
-\end_inset
-
- be arbitrary linear transformations from 
+ be an arbitrary linear transformation from 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
  to 
 \begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ an arbitrary linear transformation from 
+\begin_inset Formula $\mathbb{R}^{p}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
 , the following calculation encapsulates the idea that matrix multiplication
@@ -1765,7 +1773,10 @@ Finally, because the action of transformations defined by
 \end_inset
 
 .
- But what about 
+\end_layout
+
+\begin_layout Standard
+So what about 
 \begin_inset Formula $T_{M}$
 \end_inset
 
@@ -1888,7 +1899,24 @@ These matrices are called projection matrices.
 \begin_inset Formula $y$
 \end_inset
 
--axis, respectively, as shown below.
+-axis, respectively, as shown below acting on
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-8.png
+	lyxscale 20
+	width 7.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+as before.
  The brown line segment indicates the part of the axis in the image that
  is not covered by the vector.
 \end_layout

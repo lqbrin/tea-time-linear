@@ -1733,6 +1733,12 @@ Find the image of
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-5"
+
+\end_inset
+
 Relation 
 \begin_inset Formula $R=\left\{ \left(\left[\begin{array}{c}
 1\\
@@ -1762,6 +1768,12 @@ Relation
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-6"
+
+\end_inset
+
 For the transformation 
 \begin_inset Formula $T$
 \end_inset
@@ -1855,6 +1867,12 @@ Make a general statement about preimages and inverses.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-7"
+
+\end_inset
+
 Find the image of 
 \begin_inset Formula $\mathbf{a}$
 \end_inset
@@ -1945,19 +1963,158 @@ Find the image of
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset Note Note
-status open
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-8"
 
-\begin_layout Plain Layout
-TODO: Put some linear transformation questions here.
+\end_inset
+
+Show that 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ is not a linear transformation.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=e^{x}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula $f(x)=\ln x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=\sqrt{x-3}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-9"
+
+\end_inset
+
+Show that 
+\begin_inset Formula $T:\mathbb{R}^{m}\to\mathbb{R}^{n}$
+\end_inset
+
+ is a linear transformation.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T(x)=13x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]\right)=\left[\begin{array}{cc}
+1 & 3\\
+-2 & 5
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]\right)=\left[\begin{array}{cc}
+0 & 1\\
+-1 & -4\\
+4 & 2
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\right)=\left[\begin{array}{ccc}
+4 & -1 & -5\end{array}\right]\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-10"
+
+\end_inset
+
+Show that 
+\begin_inset Formula $L:\mathbb{P}_{m}(\mathbb{R})\to\mathbb{P}_{n}(\mathbb{R})$
+\end_inset
+
+ is a linear transformation.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L(ax+b)=\frac{1}{2}ax^{2}+bx+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L(ax^{2}+bx+c)=6ax+3b$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-11"
+
+\end_inset
+
 Perhaps ironically, what is known as a linear function in algebra is not
  necessarily a linear transformation.
  Verify that 
@@ -1989,6 +2146,242 @@ is not a linear transformation when
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-12"
+
+\end_inset
+
+Show that 
+\begin_inset Formula $\text{det}:\mathcal{M}_{2\times2}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+ is not linear.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-13"
+
+\end_inset
+
+
+\begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{3}$
+\end_inset
+
+ is linear, 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-1\\
+4
+\end{array}\right]\right)=\left[\begin{array}{c}
+-2\\
+5\\
+4
+\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]\right)=\left[\begin{array}{c}
+-3\\
+-5\\
+1
+\end{array}\right]$
+\end_inset
+
+.
+ Find
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-2\\
+8
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+6\\
+-3
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+1\\
+3
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-3\\
+5
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-14"
+
+\end_inset
+
+
+\begin_inset Formula $T:\mathbb{R}^{3}\to\mathbb{R}^{2}$
+\end_inset
+
+ is linear, 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-2\\
+0\\
+4
+\end{array}\right]\right)=\left[\begin{array}{c}
+-3\\
+-5
+\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+5\\
+-4\\
+-1
+\end{array}\right]\right)=\left[\begin{array}{c}
+-5\\
+1
+\end{array}\right]$
+\end_inset
+
+.
+ Find
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+4\\
+0\\
+-8
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+15\\
+-12\\
+-3
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+1\\
+-4\\
+7
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-7\\
+-4\\
+5
+\end{array}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Can you find a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ such that the transformation 
+\begin_inset Formula $T$
+\end_inset
+
+ of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula $T(\mathbf{x})=M\mathbf{x}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\right)=\left[\begin{array}{ccc}
+0 & -2 & 6\\
+-7 & -4 & 5\\
+1 & 2 & -5
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]$
+\end_inset
+
+.
+ Find the preimage of 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+-3\\
+-1
+\end{array}\right]$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $T$
+\end_inset
+
+ invertible? Explain.
+\end_layout
+
 \begin_layout Enumerate
 The range of the function 
 \begin_inset Formula $g:\mathbb{R}\to\mathbb{R}$

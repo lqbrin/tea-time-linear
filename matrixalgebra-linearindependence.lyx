@@ -2124,6 +2124,295 @@ Argue that if none of the objects of a set is a linear combination of the
 \end_layout
 
 \begin_layout Standard
+The key ingredient in the proof of the uniqueness of reduced row echelon
+ form (crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:UniquenessOfRREF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "dig:UniquenessOfRREF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is that 
+\shape italic
+row operations do not affect the linear dependence relationships among the
+ columns of a matrix
+\shape default
+.
+ To illustrate the claim, three matrices are given in exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+—
+\begin_inset Formula $M$
+\end_inset
+
+; 
+\begin_inset Formula $F$
+\end_inset
+
+, a row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+; and 
+\begin_inset Formula $R$
+\end_inset
+
+, the reduced row echelon form of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-independence-3"
+
+\end_inset
+
+Linear dependence is maintained.
+ (i) Find a nontrivial linear combination of (some of) the columns of 
+\begin_inset Formula $R$
+\end_inset
+
+ that sums to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+ (ii) Check that the same linear combination of columns of 
+\begin_inset Formula $F$
+\end_inset
+
+ sums to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+ (iii) Check that the same linear combination of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ sums to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+1 & 0 & -11/8 & 0\\
+0 & 1 & 9/8 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F=\left[\begin{array}{cccc}
+9 & 3 & -9 & 4\\
+0 & -8 & -9 & 10\\
+0 & 0 & 0 & 7\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+0 & 120 & 135 & -136\\
+-45 & -279 & -252 & 289\\
+0 & 56 & 63 & -63\\
+9 & 243 & 261 & -268
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+1 & -7/9 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F=\left[\begin{array}{cccc}
+-9 & 7 & -11 & -11\\
+0 & 0 & 10 & -3\\
+0 & 0 & 0 & 7\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+180 & -140 & 950 & -20\\
+-108 & 84 & -512 & -11\\
+-72 & 56 & -358 & 0\\
+-189 & 147 & -971 & 12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-independence-4"
+
+\end_inset
+
+Linear independence is maintained.
+ (i) Find two different pairs of linearly independent columns of 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ (ii) Check that the same two pairs of columns of 
+\begin_inset Formula $F$
+\end_inset
+
+ are linearly independent.
+ (iii) Check that the same two pairs of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate-Resume
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+1 & -6/11 & 0 & 3/11\\
+0 & 0 & 1 & 4\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F=\left[\begin{array}{cccc}
+11 & -6 & -2 & -5\\
+0 & 0 & 3 & 12\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-33 & 18 & 18 & 63\\
+-99 & 54 & 21 & 57\\
+1056 & -576 & -204 & -528\\
+253 & -138 & -49 & -127
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+1 & -1 & 0 & -89/56\\
+0 & 0 & 1 & -1/7\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F=\left[\begin{array}{cccc}
+-8 & 8 & 12 & 11\\
+0 & 0 & 7 & -1\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-64 & 64 & 166 & 78\\
+-264 & 264 & 543 & 342\\
+-392 & 392 & 826 & 505\\
+-136 & 136 & 288 & 175
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
 \begin_inset ERT
 status open
 
