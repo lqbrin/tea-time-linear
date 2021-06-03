@@ -134,21 +134,12 @@ noprefix "false"
  are all isomorphic.
  The essential ingredient of elements of each space is an ordered list of
  six real numbers.
- Their placement as coefficients or arrangement in a matrix can be tossed
- away without losing any information.
-\end_layout
-
-\begin_layout Standard
-Yet it might be nice to draw a distinction between odered lists of real
- numbers, polynomials, 
-\begin_inset Formula $2\times3$
-\end_inset
-
- matrices, and linear combinations of the elements of 
-\begin_inset Formula $G$
-\end_inset
-
-.
+ Elements of any of these vector spaces can be represented by such a list.
+ Addition and scalar multiplication in one can be accomplished just as well
+ in another.
+ Representation, addition, and scalar multiplication are not enough to distingui
+sh one from the other.
+ Yet it might be nice to be able to draw distinctions between them.
  After all, they are different types of objects.
  Polynomials and elements of 
 \begin_inset Formula $G$
@@ -171,11 +162,16 @@ One important feature of
 \end_inset
 
 .
- What if we could extend this idea to any vector space? We would need to
- write down the essential features of the dot product and hope that, as
- an abstract list of requirements, other vector spaces would admit similar
- operators.
- Representing elements of 
+ If we could extend the idea of the dot product to any vector space in such
+ a way that it may not be preserved under one-to-one and onto maps, it might
+ prove a useful distinguishing feature.
+ To do that, though, we would need to write down the essential features
+ of the dot product and hope that, as an abstract list of requirements,
+ other vector spaces would admit similar operators.
+\end_layout
+
+\begin_layout Standard
+Representing elements of 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -235,14 +231,19 @@ Thus
 
 \end_inset
 
-so 
+is, conveniently, the square of the magnitude of 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ In particular, 
 \begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}$
 \end_inset
 
  is nonnegative (the squares of real numbers are nonnegative and the sum
- of nonegative numbers is nonnegative).
- This seems like an important property of the dot product since it is what
- led to using the dot product to define magnitude.
+ of nonnegative numbers is nonnegative).
+ This seems like an important property of the dot product since square roots
+ of negative numbers are not magnitudes.
 \end_layout
 
 \begin_layout Standard
@@ -261,12 +262,22 @@ noprefix "false"
 \end_inset
 
  implying that the dot product is commutative.
- Commutativity is a fundamental property of addition and multiplication,
- so it seems like it is probably an important property of the dot product
- too.
- In fact, nonnegativity and commutativity are the only essential features
- of the dot product other than some sense of linearity, which follows from
- properties of real numbers.
+ Commutativity (or lack thereof) is a fundamental property of any operator.
+ Since the dot product is commutative it seems that any abstraction of the
+ dot product should be commutative too.
+\end_layout
+
+\begin_layout Standard
+Both nonnegativity (of 
+\begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}$
+\end_inset
+
+) and commutativity (of 
+\begin_inset Formula $\mathbf{u}\bcdot\mathbf{v}$
+\end_inset
+
+) follow directly from properties of the real numbers.
+ Another such property is a sense of linearity.
  For the dot product of elements of 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
@@ -281,7 +292,8 @@ noprefix "false"
 
 \end_inset
 
-Can you show these identities are true? Answer on page 
+Can you show these identities are true using properties of real numbers?
+ Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:dot-product-identities"
@@ -292,11 +304,15 @@ noprefix "false"
 \end_inset
 
 .
+ Since this property follows as a natural consequence of considering real
+ number scalars, it seems like it also ought to be a requirement of any
+ abstraction.
 \end_layout
 
 \begin_layout Standard
-One other subtle point about the dot product that cannot be proven from
- these four is that 
+One final point about the dot product that cannot be proven from these four
+ but is nonetheless a direct consequence of properties of the real numbers
+ is that 
 \begin_inset Formula 
 \[
 \mathbf{u}\bcdot\mathbf{u}=0\text{ if and only if }\mathbf{u}=\mathbf{0}.
@@ -306,7 +322,8 @@ One other subtle point about the dot product that cannot be proven from
 
 Though we did not discuss it before, this fact shows that the dot product
  can be used to determine when a vector is the zero vector.
- Can you argue that the equivalence is true? Answer on page 
+ Can you argue using properties of real numbers that the equivalence is
+ true? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:dot-product-zero"
@@ -320,8 +337,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-It turns out these are the five features of the dot product necessary for
- abstraction of the notion of a dot product.
+These five features form the foundation for a useful abstraction of the
+ dot product.
  Accordingly, we define an 
 \series bold
 inner product
@@ -356,7 +373,7 @@ name "enu:inner-product-positivity"
 \begin_inset Formula $V$
 \end_inset
 
-
+ (nonnegativity)
 \end_layout
 
 \begin_layout Enumerate
@@ -374,7 +391,7 @@ name "enu:inner-product-zero"
 \begin_inset Formula $\mathbf{u}=\mathbf{0}$
 \end_inset
 
-
+ (zero vector identity)
 \end_layout
 
 \begin_layout Enumerate
@@ -396,7 +413,7 @@ name "enu:inner-product-symmetry"
 \begin_inset Formula $V$
 \end_inset
 
-
+ (commutativity)
 \end_layout
 
 \begin_layout Enumerate
@@ -418,7 +435,7 @@ name "enu:inner-product-preserve-sum"
 \begin_inset Formula $V$
 \end_inset
 
-
+ (preservation of addition)
 \end_layout
 
 \begin_layout Enumerate
@@ -444,7 +461,7 @@ name "enu:inner-product-preserve-scalar-mult"
 \begin_inset Formula $c$
 \end_inset
 
-
+ (preservation of scalar multiplication)
 \end_layout
 
 \begin_layout Standard
@@ -454,13 +471,12 @@ Any real vector space on which an inner product is defined is called an
 inner product space
 \series default
 .
- Extending the ideas of magnitude, distance, and orthogonality is then a
- simple matter since, in 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
+ 
+\end_layout
 
-, they are all based on the dot product (of which the inner product is a
- generalization).
+\begin_layout Standard
+Extending the ideas of magnitude, distance, and orthogonality is then a
+ simple matter.
 \end_layout
 
 \begin_layout Standard
@@ -713,23 +729,42 @@ noprefix "false"
 \noindent
 One reason for using the words norm and orthogonal instead of magnitude
  and perpendicular is because magnitude and perpendicular have ingrained
- geometric meaning that does not readily transer to objects such as matrices
- and functions (vectors in vector spaces other than 
+ geometric meaning in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
- or 
+ and 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
-).
+ that does not readily transer to objects such as matrices and functions
+ or even 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ for 
+\begin_inset Formula $n>3$
+\end_inset
+
+.
  What would it mean for two polynomials to be perpendicular, for example?
- Is there some geometric way to visualize this? Likely you are coming up
- short on an answer.
+ Is there some geometric way to visualize this? What would the magnitude
+ (or size) of a matrix mean? Is there some way to visualize this geometrically?
+ Likely you are coming up short of answers.
  No matter.
  If we can come up with an inner product on the vector space of polynomials,
- then orthogonality of two vectors (polynomials) is defined by the requirement
- that their inner product be zero.
+ then orthogonality of two vectors (polynomials) is 
+\shape italic
+defined by
+\shape default
+ the requirement that their inner product be zero.
+ This is the power of mathematical abstraction.
+ A notion such as perpendicularity, which we can clearly see and grasp in
+ 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, can be extended to other sets where no analogous picture can be drawn.
 \end_layout
 
 \begin_layout Standard

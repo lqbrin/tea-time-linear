@@ -410,8 +410,8 @@ Formally, two sets are isomorphic if there exists an isomorphism between
  The set defines the elements of the vector space and the operations define
  the structure.
  An isomorphism between vector spaces maps each element of one vector space
- to exactly one element of the other and preserves vector addition and scalar
- multiplication.
+ to exactly one element of the other without missing any and preserves vector
+ addition and scalar multiplication.
  Such an isomorphism can be understood as the mathematical formalization
  allowing the free flow between one representation of a vector and another.
  It supplies the rigor behind using row vectors, column vectors, ordered
@@ -568,10 +568,6 @@ noprefix "false"
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -951,6 +947,281 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+Explain why the transformation 
+\begin_inset Formula $T:\mathbb{R}^{3}\to\mathbb{P}_{3}(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula $T\left(\left[\begin{array}{ccc}
+r_{1} & r_{2} & r_{3}\end{array}\right]\right)=(x-r_{1})(x-r_{2})(x-r_{3})$
+\end_inset
+
+ is 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+one-to-one.
+\end_layout
+
+\begin_layout Enumerate
+not onto.
+\end_layout
+
+\begin_layout Enumerate
+not an isomorphism.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explain why the transformation 
+\begin_inset Formula $T:\mathbb{R^{\mathbb{N}}}\to\mathbb{R}^{4}$
+\end_inset
+
+, 
+\begin_inset Formula $T\left(\left\langle s_{1},s_{2},s_{3},s_{4},s_{5},\ldots\right\rangle \right)=\left[\begin{array}{cccc}
+s_{1} & s_{2} & s_{3} & s_{4}\end{array}\right]$
+\end_inset
+
+ is
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+not one-to-one.
+\end_layout
+
+\begin_layout Enumerate
+onto.
+\end_layout
+
+\begin_layout Enumerate
+not an isomorphism.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is the transformation 
+\begin_inset Formula $\det:\mathcal{M}_{2\times2}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+one-to-one?
+\end_layout
+
+\begin_layout Enumerate
+onto?
+\end_layout
+
+\begin_layout Enumerate
+an isomorphism?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is the transformation 
+\begin_inset Formula $T:C([0,1])\to C([0,1])$
+\end_inset
+
+, 
+\begin_inset Formula $T(f)=e^{x}f(x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+one-to-one?
+\end_layout
+
+\begin_layout Enumerate
+onto?
+\end_layout
+
+\begin_layout Enumerate
+an isomorphism?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Is the transformation 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ (i) one-to-one? (ii) onto? (iii) an isomorphism?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]\right)=\left[\begin{array}{c}
+3x-4y\\
+-x+3y\\
+2x+2y
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\right)=\left[\begin{array}{c}
+2x-3y+7z\\
+-x+y-2z
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]\right)=\left[\begin{array}{cc}
+14 & -1\\
+-15 & 15\\
+12 & 9
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\right)=\left[\begin{array}{ccc}
+13 & -15 & -9\\
+0 & -3 & 10
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]\right)=\left[\begin{array}{cc}
+-5 & 11\\
+-14 & 0
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]\right)=\left[\begin{array}{cc}
+5 & -9\\
+-15 & 27
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+For what type of matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ an isomorphism?
+\end_layout
+
+\begin_layout Enumerate
+It is claimed that the vector spaces in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Isomorphism-Path"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are all isomorphic, and a formula for isomorphism 
+\begin_inset Formula $f$
+\end_inset
+
+ is provided in the text.
+ Provide a formula for the isomorphism
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $g$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Justify the claim.
 \end_layout
 
@@ -1125,8 +1396,8 @@ name "ans:first-isomorphism"
 \end_inset
 
 An isomorphism between vector spaces maps each element of one vector space
- to exactly one element of the other and preserves vector addition and scalar
- multiplication.
+ to exactly one element of the other without missing any and preserves vector
+ addition and scalar multiplication.
  The map 
 \begin_inset Formula $T:\mathbb{R}^{n}\to\mathcal{M}_{n\times1}(\mathbb{R})$
 \end_inset
@@ -1149,7 +1420,11 @@ does just that because
 
 \begin_deeper
 \begin_layout Enumerate
-the arbitrary element 
+the 
+\shape italic
+arbitrary
+\shape default
+ element 
 \begin_inset Formula $r_{1},r_{2},\ldots,r_{n}\in\mathbb{R}^{n}$
 \end_inset
 
@@ -1157,7 +1432,7 @@ the arbitrary element
 \begin_inset Formula $T$
 \end_inset
 
- to 
+ to (the specific element) 
 \begin_inset Formula $\left[\begin{array}{c}
 r_{1}\\
 r_{2}\\
@@ -1175,11 +1450,35 @@ r_{n}
 \end{array}\right]$
 \end_inset
 
+, so 
+\begin_inset Formula $T$
+\end_inset
+
+ maps each element of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ to exactly one element of 
+\begin_inset Formula $\mathcal{M}_{n\times1}(\mathbb{R})$
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Enumerate
-the arbitrary element 
+(the specific element) 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}\in\mathbb{R}^{n}$
+\end_inset
+
+ maps via 
+\begin_inset Formula $T$
+\end_inset
+
+ to the 
+\shape italic
+arbitrary
+\shape default
+ element 
 \begin_inset Formula $\left[\begin{array}{c}
 r_{1}\\
 r_{2}\\
@@ -1188,16 +1487,12 @@ r_{n}
 \end{array}\right]\in\mathcal{M}_{n\times1}(\mathbb{R})$
 \end_inset
 
- maps via 
-\begin_inset Formula $T^{-1}$
+, so 
+\begin_inset Formula $T$
 \end_inset
 
- to 
-\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}\in\mathbb{R}^{n}$
-\end_inset
-
- and only 
-\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}$
+ does not miss any elements of 
+\begin_inset Formula $\mathcal{M}_{n\times1}(\mathbb{R})$
 \end_inset
 
 .
@@ -1222,6 +1517,10 @@ s_{n}
 \end{array}\right]=T(r_{1},r_{2},\ldots,r_{n})+T(s_{1},s_{2},\ldots,s_{n})$
 \end_inset
 
+, so addition is preserved under 
+\begin_inset Formula $T$
+\end_inset
+
 .
 \end_layout
 
@@ -1237,6 +1536,10 @@ r_{2}\\
 \vdots\\
 r_{n}
 \end{array}\right]=cT(r_{1},r_{2},\ldots,r_{n})$
+\end_inset
+
+, so scalar multiplication is preserved under 
+\begin_inset Formula $T$
 \end_inset
 
 .
@@ -1435,17 +1738,6 @@ reference "sec:Functions-and-Transformations"
 plural "false"
 caps "false"
 noprefix "false"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: make sure reference to correct section once the exercise placement
- is finalized 
-\end_layout
 
 \end_inset
 
