@@ -116,27 +116,46 @@ Given a coefficient matrix
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
- exists and find it if it does, but we have no way to tell ahead of time
- whether a solution will exist.
- Nor do we have an efficient way of finding all the solutions when there
- are more than one.
- We can apply the lessons of sections 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: fill in section numbers.
- 
-\end_layout
+ exists and find it if it does (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Row-Reduction"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
- to address these shortcomings and generally better understand solution
- sets of linear systems.
+).
+ We even have an efficient way of finding all the solutions when there are
+ more than one (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:eigenvector-revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Being able to do this on a case-by-case basis is good, but a more critical
+ look at the patterns of free and basic variables leads to more complete
+ understanding of solution sets of linear systems.
 \end_layout
 
 \begin_layout Subsection*
-Definitions
+Observations
 \end_layout
 
 \begin_layout Standard
@@ -148,24 +167,33 @@ Let
 \begin_inset Formula $m\times n$
 \end_inset
 
- matrix and define 
-\begin_inset Formula $N=\{\mathbf{v}\in\mathbb{R}^{n}:M\mathbf{v}=\mathbf{0}\}$
+ matrix and set 
+\begin_inset Formula $C$
 \end_inset
 
- (the solutions set of 
-\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
-\end_inset
-
-) and 
-\begin_inset Formula $C=\{M\mathbf{v}:\mathbf{v}\in\mathbb{R}^{n}\}$
-\end_inset
-
- (the set of all linear combinations of the columns of 
+ as the set of all linear combinations of the columns of 
 \begin_inset Formula $M$
 \end_inset
 
-).
- Then 
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ as the solution set of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ That is,
+\begin_inset Formula 
+\begin{align*}
+C & =\{M\mathbf{v}:\mathbf{v}\in\mathbb{R}^{n}\}\\
+N & =\{\mathbf{v}\in\mathbb{R}^{n}:M\mathbf{v}=\mathbf{0}\}.
+\end{align*}
+
+\end_inset
+
+Now observe that 
 \begin_inset Formula $C$
 \end_inset
 
@@ -174,7 +202,7 @@ Let
 \end_inset
 
  are vector spaces.
- PROOF: Since 
+ For one, 
 \begin_inset Formula $C$
 \end_inset
 
@@ -182,16 +210,12 @@ Let
 \begin_inset Formula $M$
 \end_inset
 
-, 
+.
+ In other words, 
 \begin_inset Formula $C=\text{span}\{M_{:,1},M_{:,2},\ldots,M_{:,n}\}$
 \end_inset
 
-.
- Being the span of a set of vectors, 
-\begin_inset Formula $C$
-\end_inset
-
- is a vector space (see 
+ and is therefore a vector space (see 
 \begin_inset Quotes eld
 \end_inset
 
@@ -210,37 +234,52 @@ noprefix "false"
 \end_inset
 
 ).
- 
-\begin_inset Formula $C$
+ For the other, we need to check three things (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- is called the 
-\series bold
-column space
-\series default
- of 
-\begin_inset Formula $M$
+ pages 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:subspace-conditions"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
-.
- Since 
-\begin_inset Formula $N$
+ and 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "key:subspace-conditions"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- is a subset of 
-\begin_inset Formula $\mathbb{R}^{n}$
-\end_inset
+): 
+\end_layout
 
-, we need check three things: (1) 
-\begin_inset Formula $\mathbf{0}\in N$
-\end_inset
-
- since 
+\begin_layout Enumerate
 \begin_inset Formula $M\mathbf{0}=\mathbf{0}$
 \end_inset
 
+ so 
+\begin_inset Formula $\mathbf{0}\in N$
+\end_inset
+
 .
- (2) if 
+\end_layout
+
+\begin_layout Enumerate
+For any 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -252,16 +291,12 @@ column space
 \begin_inset Formula $N$
 \end_inset
 
- and 
-\begin_inset Formula $c$
-\end_inset
-
- scalar then 
-\begin_inset Formula $M(\mathbf{u}+c\mathbf{v})=M\mathbf{u}+M(c\mathbf{v})=\mathbf{0}+c(M\mathbf{v})=c\mathbf{0}=\mathbf{0}$
+, 
+\begin_inset Formula $M(\mathbf{u}+\mathbf{v})=M\mathbf{u}+M\mathbf{v}=\mathbf{0}+\mathbf{0}=\mathbf{0}$
 \end_inset
 
  so 
-\begin_inset Formula $\mathbf{u}+c\mathbf{v}$
+\begin_inset Formula $\mathbf{u}+\mathbf{v}$
 \end_inset
 
  is in 
@@ -269,7 +304,66 @@ column space
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Enumerate
+For any 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ in 
+\begin_inset Formula $N$
+\end_inset
+
+ and scalar 
+\begin_inset Formula $c$
+\end_inset
+
+, 
+\begin_inset Formula $M(c\mathbf{v})=c(M\mathbf{v})=c\mathbf{0}=\mathbf{0}$
+\end_inset
+
+ so 
+\begin_inset Formula $c\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The zero vector is in 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ is closed under vector addition and scalar multiplication.
+ Hence 
+\begin_inset Formula $N$
+\end_inset
+
+ is a vector space.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C$
+\end_inset
+
+ is called the 
+\series bold
+column space
+\series default
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
 \begin_inset Formula $N$
 \end_inset
 
@@ -294,8 +388,7 @@ rank
 \begin_inset Formula $M$
 \end_inset
 
-.
- The dimension of the null space of 
+ and the dimension of the null space of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -341,8 +434,8 @@ Implications
 
 \begin_layout Standard
 Row operations were defined to maintain the solution sets of linear systems.
- Solutions of row reduced linear systems are solutions of the original linear
- system.
+ Solutions of a row reduced linear system are solutions of the original
+ linear system.
  Using the matrix form for a linear system, this means given a particular
  vector 
 \begin_inset Formula $\mathbf{b}$
@@ -404,7 +497,10 @@ Row operations do not affect the null space of a matrix
 \end_inset
 
 .
- To rigrously prove this claim, let 
+\end_layout
+
+\begin_layout Standard
+To rigrously prove this claim, let 
 \begin_inset Formula $M$
 \end_inset
 
@@ -421,15 +517,15 @@ Row operations do not affect the null space of a matrix
 \end_inset
 
  elementary matrix.
- Then 
+ If 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- in the null space of 
+ is in the null space of 
 \begin_inset Formula $M$
 \end_inset
 
- implies 
+ then 
 \begin_inset Formula $M\mathbf{v}=\mathbf{0}$
 \end_inset
 
@@ -463,15 +559,15 @@ Row operations do not affect the null space of a matrix
 \begin_inset Formula $EM$
 \end_inset
 
-.] Furthermore, 
+.] On the other hand, if 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- in the null space of 
+ is in the null space of 
 \begin_inset Formula $EM$
 \end_inset
 
- implies 
+ then 
 \begin_inset Formula $(EM)\mathbf{v}=\mathbf{0}$
 \end_inset
 
@@ -509,7 +605,16 @@ Row operations do not affect the null space of a matrix
 \begin_inset Formula $M$
 \end_inset
 
-.] We have now established that the following two statements are equivalent
+.] Altogether this means the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ and the null space of 
+\begin_inset Formula $EM$
+\end_inset
+
+ contain exactly the same elements.
+ We have thus established that the following two statements are equivalent
  for any 
 \begin_inset Formula $m\times n$
 \end_inset
@@ -544,7 +649,7 @@ Row operations do not affect the null space of a matrix
 \end_layout
 
 \begin_layout Standard
-To further this implication, this means a certain set of columns of 
+To take it a step further, this means a certain set of columns of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -553,108 +658,78 @@ To further this implication, this means a certain set of columns of
 \end_inset
 
  are linearly dependent.
- This follows since 
-\begin_inset Quotes eld
-\end_inset
-
-a certain set of columns of 
-\begin_inset Formula $M$
-\end_inset
-
- are linearly dependent
-\begin_inset Quotes erd
-\end_inset
-
- means there is a linear combination of those columns that sums to 
-\begin_inset Formula $\mathbf{0}$
-\end_inset
-
-.
- To be rigorous, if 
-\begin_inset Formula $M$
-\end_inset
-
- is an 
-\begin_inset Formula $m\times n$
-\end_inset
-
- matrix, 
-\begin_inset Formula $E$
-\end_inset
-
- is an 
-\begin_inset Formula $n\times n$
-\end_inset
-
- elementary matrix, and 
-\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
-\end_inset
-
- is a set of indices, then the following are equivalent.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\{ M_{:,c_{1}},M_{:,c_{2}},\ldots,M_{:,c_{k}}\right\} $
-\end_inset
-
- is linearly dependent.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\{ (EM)_{:,c_{1}},(EM)_{:,c_{2}},\ldots,(EM)_{:,c_{k}}\right\} $
-\end_inset
-
- is linearly dependent.
 \end_layout
 
 \begin_layout Standard
-Assuming 1 holds, there are scalars 
-\begin_inset Formula $a_{1},a_{2},\ldots,a_{k}$
+Thinking of matrix-vector multiplication as taking a linear combination
+ of the columns of the matrix, any linear combination of the columns of
+ 
+\begin_inset Formula $M$
 \end_inset
 
-, not all zero, such that 
-\begin_inset Formula $a_{1}M_{:,c_{1}}+a_{2}M_{:,c_{2}}+\cdots+a_{k}M_{:,c_{k}}=\mathbf{0}$
+ can be expressed as 
+\begin_inset Formula $M\mathbf{v}$
+\end_inset
+
+ for some vector 
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
 .
- It follows that 
-\begin_inset Formula 
-\begin{align*}
-a_{1}(EM)_{:,c_{1}}+a_{2}(EM)_{:,c_{2}}+\cdots+a_{k}(EM)_{:,c_{k}} & =a_{1}\left(EM_{:,c_{1}}\right)+a_{2}\left(EM_{:,c_{2}}\right)+\cdots+a_{k}\left(EM_{:,c_{k}}\right)\\
- & =E\left(a_{1}M{}_{:,c_{1}}\right)+E\left(a_{2}M{}_{:,c_{2}}\right)+\cdots+E\left(a_{k}M{}_{:,c_{k}}\right)\\
- & =E\left(a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}}\right)\\
- & =E\mathbf{0}\\
- & =\mathbf{0}
-\end{align*}
-
+ To say that some set of columns of 
+\begin_inset Formula $M$
 \end_inset
 
-so 
-\begin_inset Formula $\left\{ (EM)_{:,c_{1}},(EM)_{:,c_{2}},\ldots,(EM)_{:,c_{k}}\right\} $
+ are linearly dependent is to say there is a nonzero vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+.
+ The nonzero entries of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ determine the set of columns.
+ Since 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $E(M\mathbf{v})=E\mathbf{0}$
+\end_inset
+
+ (because 
+\begin_inset Formula $E$
+\end_inset
+
+ is invertible) if and only if 
+\begin_inset Formula $(EM)\mathbf{v}=\mathbf{0}$
+\end_inset
+
+, a given set of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ is linearly dependent if and only if the corresponding set of columns of
+ 
+\begin_inset Formula $EM$
 \end_inset
 
  is linearly dependent.
- Assuming 2 holds, 1 can be proven in a similar manner.
- Can you provide the details? Answer on page 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "ans:linearly-dependent-columns"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
  Equivalently, a certain set of columns of 
 \begin_inset Formula $M$
 \end_inset
 
- is linearly independent if and only if the same set of columns of 
+ is linearly independent if and only if the corresponding set of columns
+ of 
 \begin_inset Formula $EM$
 \end_inset
 
- are linearly independent.
+ is linearly independent.
  
 \series bold
 Row operations do not affect the linear dependence relationships among the
@@ -767,59 +842,35 @@ Suppose
 \end_inset
 
 .
- If 
-\begin_inset Formula $A_{:,j}$
-\end_inset
-
- is to the left of all the pivot columns of 
-\begin_inset Formula $A$
-\end_inset
-
-, it must be a column of zeros.
- In this case, the same is true of 
-\begin_inset Formula $B_{:,j}$
-\end_inset
-
- so 
-\begin_inset Formula $A_{:,j}=B_{:,j}$
-\end_inset
-
-.
- Suppose 
-\begin_inset Formula $A_{:,j}$
-\end_inset
-
- is to the right of at least one pivot column of 
-\begin_inset Formula $A$
-\end_inset
-
-.
  Then 
 \begin_inset Formula $A_{:,j}$
 \end_inset
 
- is a linear combination of the pivot columns to its left, which is to say
- 
-\begin_inset Formula $A_{:,j}$
+ and the pivot columns to its left (if any) form a linearly dependent set.
+ A nontrivial linear combination of them sums to 
+\begin_inset Formula $\mathbf{0}$
 \end_inset
 
- is either a column of zeros or it is linear dependent on the pivot columns
- to its left.
+.
  Since 
 \begin_inset Formula $B_{:,j}$
 \end_inset
 
- has the same linear dependence relation to the pivot columns on its left
- (so must be zero if 
-\begin_inset Formula $A_{:,j}$
-\end_inset
-
- is zero and must be the 
+ has the same linear dependence relation with the pivot columns to its left,
+ the 
 \shape italic
 same
 \shape default
- linear combination of the pivot columns on its left if nonzero) and the
- pivot columns of 
+ (corresponding) linear combination of 
+\begin_inset Formula $B_{:,j}$
+\end_inset
+
+ and the pivot columns to its left sums to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+.
+ Since the pivot columns of 
 \begin_inset Formula $A$
 \end_inset
 
@@ -875,7 +926,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-If 
+In full detail, if 
 \begin_inset Formula $v_{f_{1}},v_{f_{2}},\ldots,v_{f_{k}}$
 \end_inset
 
@@ -883,38 +934,39 @@ If
 \begin_inset Formula $M\mathbf{v}=\mathbf{0}$
 \end_inset
 
-, then the row reduction algorithm leads to a solution of the form 
+, then the row reduction algorithm leads to a solution of the (parametric
+ vector) form 
 \begin_inset Formula 
 \[
 \mathbf{v}=v_{f_{1}}\left[\begin{array}{c}
-c_{1,1}\\
-c_{2,1}\\
+a_{1,1}\\
+a_{2,1}\\
 \vdots\\
-c_{n,1}
+a_{n,1}
 \end{array}\right]+v_{f_{2}}\left[\begin{array}{c}
-c_{1,2}\\
-c_{2,2}\\
+a_{1,2}\\
+a_{2,2}\\
 \vdots\\
-c_{n,2}
+a_{n,2}
 \end{array}\right]+\cdots+v_{f_{k}}\left[\begin{array}{c}
-c_{1,k}\\
-c_{2,k}\\
+a_{1,k}\\
+a_{2,k}\\
 \vdots\\
-c_{n,k}
+a_{n,k}
 \end{array}\right].
 \]
 
 \end_inset
 
-This form constitutes all of the solutions of the homogeneous equation,
- so the columns of the matrix
+This form constitutes all the solutions of the homogeneous equation, so
+ the columns of the matrix
 \begin_inset Formula 
 \[
-C=\left[\begin{array}{cccc}
-c_{1,1} & c_{1,2} & \cdots & c_{1,k}\\
-c_{2,1} & c_{2,2} & \cdots & c_{2,k}\\
+A=\left[\begin{array}{cccc}
+a_{1,1} & a_{1,2} & \cdots & a_{1,k}\\
+a_{2,1} & a_{2,2} & \cdots & a_{2,k}\\
 \vdots & \vdots & \ddots & \vdots\\
-c_{n,1} & c_{n,2} & \cdots & c_{n,k}
+a_{n,1} & a_{n,2} & \cdots & a_{n,k}
 \end{array}\right]
 \]
 
@@ -926,47 +978,30 @@ span the null space of
 
 .
  The algorithm also provides that 
-\begin_inset Formula $c_{f_{1},1}=1$
+\begin_inset Formula $a_{f_{1},1}=1$
 \end_inset
 
  while 
-\begin_inset Formula $c_{f_{1},2}=c_{f_{1},3}=\cdots=c_{f_{1},k}=0$
+\begin_inset Formula $a_{f_{1},2}=a_{f_{1},3}=\cdots=a_{f_{1},k}=0$
 \end_inset
 
 .
- To reiterate, 
-\begin_inset Formula $C_{f_{1},:}$
+ Similarly, the entries of 
+\begin_inset Formula $A_{f_{2},:}$
 \end_inset
 
- (row 
-\begin_inset Formula $f_{1}$
+ are all zero except the second; the entries of row 
+\begin_inset Formula $A_{f_{3},:}$
 \end_inset
 
- of 
-\begin_inset Formula $C$
-\end_inset
-
-) has a 
-\begin_inset Formula $1$
-\end_inset
-
- for its first entry and zeros elsewhere.
- The entries of 
-\begin_inset Formula $C_{f_{2},:}$
-\end_inset
-
- are all zero except the second, the entries of row 
-\begin_inset Formula $C_{f_{3},:}$
-\end_inset
-
- are all zero except the third, and so on.
+ are all zero except the third; and so on.
  Consequently the columns of 
-\begin_inset Formula $C$
+\begin_inset Formula $A$
 \end_inset
 
  are linearly independent.
  Hence the columns of 
-\begin_inset Formula $C$
+\begin_inset Formula $A$
 \end_inset
 
  (the vectors of the parametric form of the solution) are a linearly independent
@@ -978,7 +1013,7 @@ span the null space of
 \end_layout
 
 \begin_layout Standard
-Suppose 
+Now suppose 
 \begin_inset Formula $v_{b_{1}},v_{b_{2}},\ldots,v_{b_{\ell}}$
 \end_inset
 
@@ -995,7 +1030,11 @@ Suppose
 \begin_inset Formula $M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}$
 \end_inset
 
- form a basis for the column space.
+ form a basis (linearly independent spanning set) for the column space 
+\begin_inset Formula $C$
+\end_inset
+
+.
  To see that these columns are linearly independent, let 
 \begin_inset Formula $R$
 \end_inset
@@ -1030,12 +1069,21 @@ Suppose
 \end_inset
 
 .
- This is enough to show that 
+ This is clear since 
+\begin_inset Formula $R_{j,b_{j}}=1$
+\end_inset
+
+ while 
+\begin_inset Formula $R_{j,b_{1}}=R_{j,b_{2}}=\cdots=R_{j,b_{j-1}}=0$
+\end_inset
+
+.
+ This is sufficient to conclude that 
 \begin_inset Formula $R_{:,b_{1}},R_{:,b_{2}},\ldots,R_{:,b_{\ell}}$
 \end_inset
 
  are linearly independent.
- Can you provide the details? HINT: Show that the vectors 
+ Can you show that, in general, the vectors 
 \begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{p}$
 \end_inset
 
@@ -1059,7 +1107,7 @@ Suppose
  Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
-reference "ans:linear-dependence-part2"
+reference "ans:linear-dependence"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1067,6 +1115,11 @@ noprefix "false"
 \end_inset
 
 .
+ This completes the argument that 
+\begin_inset Formula $R_{:,b_{1}},R_{:,b_{2}},\ldots,R_{:,b_{\ell}}$
+\end_inset
+
+ are linearly independent.
  Because row operations do not affect the linear dependence relationships
  among the columns of a matrix, we have that 
 \begin_inset Formula $M_{:,b_{1}},M_{:,b_{2}},\ldots,M_{:,b_{\ell}}$
@@ -1242,7 +1295,7 @@ Hence
 \end_layout
 
 \begin_layout Standard
-The preceding dicussion justifies two general statements about any 
+The preceding discussion justifies two general statements about any 
 \begin_inset Formula $m\times n$
 \end_inset
 
@@ -1363,7 +1416,7 @@ Let
 \begin_inset Formula $\mathbf{v}_{p}$
 \end_inset
 
- be a particular solution of 
+ be a particular (any single) solution of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -1682,6 +1735,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces"
+
+\end_inset
+
 Is 
 \begin_inset Formula $\mathbf{b}$
 \end_inset
@@ -1690,31 +1749,245 @@ Is
 \begin_inset Formula $M$
 \end_inset
 
-?
+? 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Scrap comments after writing answers and solutions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-1"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-1 & 4\\
+-4 & 15
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+3\\
+10
+\end{array}\right]$
+\end_inset
+
+ (ind, yes)
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-2"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+14 & -12\\
+7 & -6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+ (no, dep)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-3"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-40 & -60\\
+32 & 48
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+15\\
+-12
+\end{array}\right]$
+\end_inset
+
+ (dep, yes)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-4"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+27 & 33\\
+9 & 11
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+6\\
+2
+\end{array}\right]$
+\end_inset
+
+ (dep, yes)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-5"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+2 & -6\\
+4 & -14
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+6\\
+10
+\end{array}\right]$
+\end_inset
+
+ (ind, yes)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-6"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+10 & 6\\
+-40 & -24
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+1\\
+-3
+\end{array}\right]$
+\end_inset
+
+ (no, dep)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-7"
+
+\end_inset
+
 Find a basis for the column space of 
 \begin_inset Formula $M$
 \end_inset
 
+ from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-8"
+
+\end_inset
+
 Find a basis for the null space of 
 \begin_inset Formula $M$
 \end_inset
 
+ from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-9"
+
+\end_inset
+
+
+\begin_inset Formula $R$
+\end_inset
+
+ is the reduced row echelon form of 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+.
+ (i) Is 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in the column space of 
 \begin_inset Formula $M$
 \end_inset
 
- reduces to 
-\begin_inset Formula $R$
+? (ii) Find a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ (iii) Find a basis for the null space of 
+\begin_inset Formula $M$
 \end_inset
 
 .
@@ -1722,23 +1995,341 @@ Find a basis for the null space of
 
 \begin_deeper
 \begin_layout Enumerate
-Find a basis for the column space of 
-\begin_inset Formula $M$
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-10"
+
 \end_inset
 
-.
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-20 & -90 & 6 & 153\\
+-6 & -27 & 2 & 45\\
+4 & 18 & -2 & -36
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 9/2 & 0 & 0 & 1\\
+0 & 0 & 1 & 0 & 6\\
+0 & 0 & 0 & 1 & -10/9
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Find a basis for the null space of 
-\begin_inset Formula $M$
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-11"
+
 \end_inset
 
-.
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-63 & 14 & 77 & 3\\
+-36 & 8 & 44 & 1\\
+54 & -12 & -66 & -2
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & -2/9 & -11/9 & 0 & 7/9\\
+0 & 0 & 0 & 1 & -9\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Verify that 
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-12"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccccc}
+-154 & -30 & -9 & -76 & 35\\
+121 & 20 & 9 & 56 & -28\\
+-33 & -5 & -3 & -14 & 7
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 0 & 0 & 8/11 & -7/11\\
+0 & 1 & 0 & -2/5 & 7/5\\
+0 & 0 & 1 & -8/3 & 7/3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-13"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+187 & 99 & -74 & -12\\
+0 & -11 & -5 & 4\\
+-33 & -22 & 11 & 4\\
+-154 & -77 & 63 & 12
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 0 & -7/11 & 0 & 0\\
+0 & 1 & 5/11 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-14"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+27 & 0 & -3 & 23\\
+-126 & 88 & 9 & -103\\
+45 & -33 & -3 & 37\\
+-117 & 77 & 6 & -102
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 0 & 0 & 10/9 & 0\\
+0 & 1 & 0 & 2/11 & 0\\
+0 & 0 & 1 & 7/3 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-15"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-12 & 6 & 22 & 11\\
+-36 & 15 & 58 & 33\\
+24 & -9 & -36 & -11\\
+60 & -30 & -110 & -33
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 0 & -1/2 & 0 & -1\\
+0 & 1 & 8/3 & 0 & -1/3\\
+0 & 0 & 0 & 1 & -9/11\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-16"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-12 & 32 & -36 & 8\\
+9 & -24 & 27 & -6\\
+-30 & 80 & -90 & 20\\
+-3 & 8 & -9 & 2\\
+24 & -64 & 72 & -16
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & -8/3 & 3 & -2/3 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-17"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-12 & -8 & 8 & -48\\
+-36 & -20 & 16 & -132\\
+24 & 24 & 24 & 156\\
+-24 & -8 & -16 & -84\\
+36 & 32 & -72 & 132
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 0 & 0 & 0 & 2/3\\
+0 & 1 & 0 & 0 & 1/2\\
+0 & 0 & 1 & 0 & 3/2\\
+0 & 0 & 0 & 1 & 11/12\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-18"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-108 & 54 & -63 & 40\\
+-120 & 60 & -70 & 5\\
+-60 & 30 & -35 & 50\\
+-24 & 12 & -14 & -10\\
+-48 & 24 & -28 & 5
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & -1/2 & 7/12 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-19"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccccc}
+-5 & -14 & -3 & 20 & -22\\
+3 & 7 & 0 & -20 & 22\\
+-13 & -21 & -24 & 90 & -77\\
+3 & 7 & -3 & -30 & 33\\
+10 & 21 & 6 & -80 & 77
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-20"
+
+\end_inset
+
+Make general statements about how the reduced row echelon form of 
+\begin_inset Formula $\left[\begin{array}{cc}
+M & \mathbf{b}\end{array}\right]$
+\end_inset
+
+ helps (i) determine whether 
 \begin_inset Formula $\mathbf{b}$
 \end_inset
 
@@ -1746,31 +2337,293 @@ Verify that
 \begin_inset Formula $M$
 \end_inset
 
+; (ii) find a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+; and (iii) find a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Enumerate
-Find the general solution of 
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-21"
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ row reduces to 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ (i) Verify that 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is in the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+ and (ii) find the general solution of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
 .
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-22"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccccc}
+-15 & -35 & -40 & -7 & -27\\
+27 & 63 & 72 & 42 & 15\\
+9 & 21 & 24 & 7 & 13
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & 7/3 & 8/3 & 0 & 7/3\\
+0 & 0 & 0 & 1 & -8/7\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-22\\
+69\\
+16
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-23"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccccc}
+14 & -49 & 3 & 54 & -35\\
+4 & -14 & 3 & 24 & -15\\
+-4 & 14 & -6 & -36 & 22
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{ccccc}
+1 & -7/2 & 0 & 3 & -2\\
+0 & 0 & 1 & 4 & -7/3\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+11\\
+1\\
+2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-24"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-91 & 104 & -2 & -18\\
+56 & -64 & 2 & 9\\
+-154 & 176 & -6 & -24
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+1 & -8/7 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-8\\
+-1\\
+6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-25"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+3 & -21 & -12 & 18\\
+9 & -56 & -32 & 50\\
+-6 & 35 & 20 & -30
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 4/7 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+3\\
+8\\
+-5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-26"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+21 & -35 & 15 & -84\\
+6 & -10 & 5 & -25\\
+-18 & 30 & -10 & 68
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\left[\begin{array}{cccc}
+1 & -5/3 & 0 & -3\\
+0 & 0 & 1 & -7/5\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-3\\
+-1\\
+2
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Is the solution set of 
-\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-27"
+
 \end_inset
 
-, 
+Given an arbitrary 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and a vector 
 \begin_inset Formula $\mathbf{b}\neq\mathbf{0}$
 \end_inset
 
- be a vector space?
+, is the solution set of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ a vector space? Explain.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-28"
+
+\end_inset
+
 Columns 
 \begin_inset Formula $2$
 \end_inset
@@ -1779,7 +2632,7 @@ Columns
 \begin_inset Formula $5$
 \end_inset
 
- of 
+ of matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1792,48 +2645,113 @@ Columns
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
- (give 
-\begin_inset Formula $M$
+ is consistent.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $M=\left[\begin{array}{ccccc}
+90 & 240 & -120 & 240 & -40\\
+3 & 8 & -4 & 8 & 0\\
+-48 & -128 & 64 & -128 & 20\\
+-108 & -288 & 144 & -288 & 45
+\end{array}\right]$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{b}$
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+200\\
+16\\
+-116\\
+-261
+\end{array}\right]$
 \end_inset
 
-) is consistent.
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a 
+\begin_inset Formula $4\times5$
+\end_inset
+
+ matrix with columns 2,3, and 4 representing free variables.
+ Argue that the set containing the fifth column of 
+\begin_inset Formula $M$
+\end_inset
+
+ and any one of the first four form a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-Let 
-\begin_inset Formula $M=$
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-29"
+
 \end_inset
 
- (fill it in).
+Let 
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+3 & 10 & 4 & 7\\
+9 & 45 & 18 & 7\\
+9 & 25 & 10 & 28
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+10\\
+45\\
+25
+\end{array}\right]$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-30"
+
+\end_inset
+
 Solve 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
- by inspection (
-\begin_inset Formula $\mathbf{b}$
-\end_inset
-
- is just one of the columns of 
-\begin_inset Formula $M$
-\end_inset
-
-).
+ by inspection.
+ (Row reduce or use SageMath if you don't see it, but then reflect on why
+ you did not see it.)
 \end_layout
 
 \begin_layout Enumerate
-Use the fact that 
-\begin_inset Formula $\{\ldots\}$
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-31"
+
 \end_inset
 
- (fill in) is a basis for the null space of 
+Use the fact that 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+0\\
+-2\\
+5\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+ is a basis for the null space of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1845,6 +2763,12 @@ Use the fact that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-32"
+
+\end_inset
+
 Write down three distinct solutions of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
@@ -1854,36 +2778,26 @@ Write down three distinct solutions of
 
 \end_deeper
 \begin_layout Enumerate
-Use the fact that row operations were used to reduce 
-\begin_inset Formula $A=$
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-33"
+
 \end_inset
 
- to 
-\begin_inset Formula $B=$
-\end_inset
-
- to find a set of columns of 
-\begin_inset Formula $A$
-\end_inset
-
- that are linearly independent.
-\end_layout
-
-\begin_layout Enumerate
 Let 
-\begin_inset Formula $A=$
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+4 & 5 & -5 & -12\\
+2 & 5 & -5 & -3\\
+0 & -15 & 15 & -15
+\end{array}\right]$
 \end_inset
 
- (has a parameter 
-\begin_inset Formula $k$
-\end_inset
-
- in it), 
-\begin_inset Formula $B=$
-\end_inset
-
-, and 
-\begin_inset Formula $\mathbf{v}=$
+ and 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+24\\
+6\\
+30
+\end{array}\right]$
 \end_inset
 
 .
@@ -1891,6 +2805,232 @@ Let
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-34"
+
+\end_inset
+
+Solve 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ by inspection.
+ (Row reduce or use SageMath if you don't see it, but then reflect on why
+ you did not see it.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-35"
+
+\end_inset
+
+Use the fact that 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+0\\
+1\\
+1\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+ is a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ to write down all the solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ in parametric vector form.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-36"
+
+\end_inset
+
+Write down three distinct solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ all different from the solution in (a).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-37"
+
+\end_inset
+
+Let 
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+154 & 242 & 15 & -9\\
+63 & 99 & 5 & -3\\
+-112 & -176 & -10 & 6
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+396\\
+162\\
+-288
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-38"
+
+\end_inset
+
+Solve 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ by inspection.
+ (Row reduce or use SageMath if you don't see it, but then reflect on why
+ you did not see it.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-39"
+
+\end_inset
+
+Use the fact that 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-11\\
+7\\
+0\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+0\\
+3\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+ is a basis for the null space of 
+\begin_inset Formula $M$
+\end_inset
+
+ to write down all the solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ in parametric vector form.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-40"
+
+\end_inset
+
+Write down three distinct solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ all different from the solution in (a).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-41"
+
+\end_inset
+
+Use the fact that row operations were used to reduce 
+\begin_inset Formula $A=\left[\begin{array}{cccccc}
+-16 & 72 & -15 & -91 & -182 & -6\\
+6 & -27 & 5 & 33 & 63 & 3\\
+2 & -9 & 5 & 17 & 14 & 6\\
+-10 & 45 & -5 & -49 & -91 & -6
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $B=\left[\begin{array}{cccccc}
+2 & -9 & 0 & 8 & 0 & 0\\
+0 & 0 & 5 & 9 & 0 & 0\\
+0 & 0 & 0 & 0 & 7 & 0\\
+0 & 0 & 0 & 0 & 0 & 3
+\end{array}\right]$
+\end_inset
+
+ to find a set of three columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ that are linearly independent.
+ Are there other such sets?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-42"
+
+\end_inset
+
+Let 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+8 & -16 & -18\\
+16 & k & -45\\
+8 & -32 & -36
+\end{array}\right]$
+\end_inset
+
+ (has a parameter 
+\begin_inset Formula $k$
+\end_inset
+
+ in it), 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+8 & 0 & 0\\
+0 & 8 & 9\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+9\\
+-8
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-43"
+
+\end_inset
+
 Verify that 
 \begin_inset Formula $B\mathbf{v}=\mathbf{0}$
 \end_inset
@@ -1899,15 +3039,21 @@ Verify that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-44"
+
+\end_inset
+
 Given that 
 \begin_inset Formula $A$
 \end_inset
 
- and 
+ row reduces to 
 \begin_inset Formula $B$
 \end_inset
 
- are row equivalent, find 
+, find 
 \begin_inset Formula $k$
 \end_inset
 
@@ -1916,11 +3062,162 @@ Given that
 
 \end_deeper
 \begin_layout Enumerate
-Eigenspace questions.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-45"
+
+\end_inset
+
+What is the dimension of the eigenspace corresponding to (the eigenvalue)
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-46"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+3 & 15 & -12\\
+3 & 7 & 4\\
+6 & -10 & 20
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=6$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-47"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+47 & 45 & -75\\
+5 & 31 & -15\\
+15 & 27 & -23
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=22$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-48"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+18 & 6 & -4\\
+-10 & -1 & 10\\
+-4 & -6 & 18
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=14$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-49"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & -20 & 12\\
+16 & 42 & -12\\
+20 & 25 & 7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=11$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-50"
+
+\end_inset
+
+Find a basis for the eigenspace corresponding to (the eigenvalue) 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-45"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-51"
+
+\end_inset
+
 What is the rank of a matrix of all zeros?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-52"
+
+\end_inset
+
+What is the rank of a matrix of all ones?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:solutions-spaces-53"
+
+\end_inset
+
+What is the rank of a matrix of all twos?
 \end_layout
 
 \begin_layout Enumerate
@@ -2154,76 +3451,14 @@ Answers
 \end_layout
 
 \begin_layout Description
-linearly
-\begin_inset space ~
-\end_inset
-
-dependent
-\begin_inset space ~
-\end_inset
-
-columns 
-\begin_inset CommandInset label
-LatexCommand label
-name "ans:linearly-dependent-columns"
-
-\end_inset
-
-Assuming 
-\begin_inset Formula $\left\{ (EM)_{:,c_{1}},(EM)_{:,c_{2}},\ldots,(EM)_{:,c_{k}}\right\} $
-\end_inset
-
- is linearly dependent for the set of indices 
-\begin_inset Formula $\{c_{1},c_{2},\ldots,c_{k}\}$
-\end_inset
-
-., there are scalars 
-\begin_inset Formula $a_{1},a_{2},\ldots,a_{k}$
-\end_inset
-
-, not all zero, such that 
-\begin_inset Formula $a_{1}(EM)_{:,c_{1}}+a_{2}(EM)_{:,c_{2}}+\cdots+a_{k}(EM)_{:,c_{k}}=\mathbf{0}$
-\end_inset
-
-.
- It follows that 
-\begin_inset Formula 
-\begin{align*}
-a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}} & =(E^{-1}E)\left(a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}}\right)\\
- & =E^{-1}\left(E\left(a_{1}M{}_{:,c_{1}}+a_{2}M{}_{:,c_{2}}+\cdots+a_{k}M{}_{:,c_{k}}\right)\right)\\
- & =E^{-1}\left(E\left(a_{1}M{}_{:,c_{1}}\right)+E\left(a_{2}M{}_{:,c_{2}}\right)+\cdots+E\left(a_{k}M{}_{:,c_{k}}\right)\right)\\
- & =E^{-1}\left(a_{1}\left(EM_{:,c_{1}}\right)+a_{2}\left(EM_{:,c_{2}}\right)+\cdots+a_{k}\left(EM_{:,c_{k}}\right)\right)\\
- & =E^{-1}\left(a_{1}(EM)_{:,c_{1}}+a_{2}(EM)_{:,c_{2}}+\cdots+a_{k}(EM)_{:,c_{k}}\right)\\
- & =E^{-1}\mathbf{0}\\
- & =\mathbf{0}
-\end{align*}
-
-\end_inset
-
-so 
-\begin_inset Formula $\left\{ M_{:,c_{1}},M_{:,c_{2}},\ldots,M_{:,c_{k}}\right\} $
-\end_inset
-
- is linearly dependent.
-\end_layout
-
-\begin_layout Description
 linear
 \begin_inset space ~
 \end_inset
 
-dependence
-\begin_inset space ~
-\end_inset
-
-part
-\begin_inset space ~
-\end_inset
-
-2 
+dependence 
 \begin_inset CommandInset label
 LatexCommand label
-name "ans:linear-dependence-part2"
+name "ans:linear-dependence"
 
 \end_inset
 

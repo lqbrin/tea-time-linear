@@ -744,6 +744,12 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "par:eigenvector-revisited"
+
+\end_inset
+
 Another place where row reduction could help ease an earlier burden is finding
  eigenvectors.
  Unless you happened to work through exercise 

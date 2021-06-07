@@ -986,7 +986,14 @@ noprefix "false"
 \end_inset
 
 .
- Hence a subset of a vector space is a vector space itself if it satisfies
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "par:subspace-conditions"
+
+\end_inset
+
+Hence a subset of a vector space is a vector space itself if it satisfies
  properties 1, 4, and 6 (closure and containment of the zero vector).
 \end_layout
 
@@ -1242,7 +1249,14 @@ subspace
 \begin_inset space ~
 \end_inset
 
-conditions a subset of a vector space is a subspace if it contains 
+conditions 
+\begin_inset CommandInset label
+LatexCommand label
+name "key:subspace-conditions"
+
+\end_inset
+
+a subset of a vector space is a subspace if it contains 
 \begin_inset Formula $\mathbf{0}$
 \end_inset
 
