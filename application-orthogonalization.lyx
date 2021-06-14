@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -100,8 +109,9 @@ Orthogonalization []
 \end_layout
 
 \begin_layout Standard
-Determining the linear combination of basis vectors that sums to a given
- vector is big business in engineering and the sciences.
+As it is in linear algebra, determining the linear combination of basis
+ vectors that sums to a given vector is big business in engineering and
+ the sciences.
 \begin_inset Note Note
 status open
 
@@ -174,8 +184,8 @@ noprefix "false"
 
 \end_inset
 
-) into a linear system, but in neither case does the generated linear system
- shed light on simplifying the process.
+) into a linear system, but doing so does not shed light on simplifying
+ the process.
  Since 
 \begin_inset Formula $V$
 \end_inset
@@ -213,7 +223,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Taking the inner product with each basis vector on both sides of (
+Taking the inner product of both sides of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:the-coefficient-problem"
@@ -223,7 +233,19 @@ noprefix "false"
 
 \end_inset
 
-) produces the following linear system.
+) with 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ and then 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset
+
+, and so on through 
+\begin_inset Formula $\mathbf{b}_{n}$
+\end_inset
+
+ produces the following linear system.
 \begin_inset Formula 
 \begin{align}
 \langle\mathbf{v},\mathbf{b}_{1}\rangle & =\langle a_{1}\mathbf{b}_{1}+a_{2}\mathbf{b}_{2}+\cdots+a_{n}\mathbf{b}_{n},\mathbf{b}_{1}\rangle\nonumber \\
@@ -234,7 +256,7 @@ noprefix "false"
 
 \end_inset
 
-and by inner product space properties 
+By inner product space properties 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "enu:inner-product-preserve-sum"
@@ -254,7 +276,7 @@ noprefix "false"
 
 \end_inset
 
-,
+, we have
 \begin_inset Formula 
 \begin{align*}
 \langle\mathbf{v},\mathbf{b}_{1}\rangle & =a_{1}\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle+a_{2}\langle\mathbf{b}_{2},\mathbf{b}_{1}\rangle+\cdots+a_{n}\langle\mathbf{b}_{n},\mathbf{b}_{1}\rangle\\
@@ -265,7 +287,7 @@ noprefix "false"
 
 \end_inset
 
-and in matrix format
+which in matrix format is
 \begin_inset Formula 
 \begin{equation}
 \left[\begin{array}{cccc}
@@ -294,9 +316,9 @@ No matter the vector and no matter the basis, this problem is reduced to
 \end_layout
 
 \begin_layout Standard
-If that were all there were to it, though, this method would hardly be better
+If that were all there were to it, though, this method would be no better
  than using coordinate vectors.
- Either way, we can turn (
+ As noted, (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:the-coefficient-problem"
@@ -306,8 +328,27 @@ noprefix "false"
 
 \end_inset
 
-) into a linear system.
- This section began by suggesting that careful choice of basis would help.
+) is a linear system of 
+\begin_inset Formula $n$
+\end_inset
+
+ equations in 
+\begin_inset Formula $n$
+\end_inset
+
+ unknowns, and so is (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ However, this section began by suggesting that careful choice of basis
+ would help.
  Since the process of row reduction involves producing zeros above and below
  the pivots, starting with some zeros in the coefficient matrix of (
 \begin_inset CommandInset ref
@@ -570,12 +611,12 @@ noprefix "false"
 \end_inset
 
 .
- The first vector of the orthogonal basis is taken as the first vector of
- the original basis.
- The second vector of the orthogonal basis is taken as the second vector
- of the original basis minus a particular vector.
- The third vector of the orthogonal basis is taken as the third vector of
- the original basis minus two particular vectors.
+ The first vector of the original basis is taken as the first vector of
+ the orthogonal basis.
+ The second vector of the original basis minus a particular vector is taken
+ as the second vector of the orthogonal basis.
+ The third vector of the original basis minus two particular vectors is
+ taken as the third vector of the orthogonal basis.
  But what vectors ought to be subtracted? A clever observation will answer
  the question.
 \end_layout
@@ -1496,10 +1537,232 @@ startexercises
 Exercises
 \end_layout
 
-\begin_layout Enumerate
-P
+\begin_layout Standard
+For all exercises, the inner product space is the dot product on 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ unless specified otherwise.
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization"
+
+\end_inset
+
+Is 
+\begin_inset Formula $S$
+\end_inset
+
+ an orthogonal set? an orthonormal set?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+\\
+\\
+\end{array}\right],\left[\begin{array}{c}
+\\
+\\
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Repeat question in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ with inner product
+\begin_inset Formula 
+\[
+\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}\\
+\vdots\\
+u_{n}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}
+\end{array}\right]\right\rangle =u_{1}v_{1}+2u_{2}v_{2}+\cdots+nu_{n}v_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Is it possible for a pair of nonzero vectors to be orthogonal in multiple
+ inner product spaces?
+\end_layout
+
+\begin_layout Enumerate
+Verify that the operator is an inner product.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-6"
+
+\end_inset
+
+
+\begin_inset Formula $\langle,\rangle:\mathbb{R}^{2}\times\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =2u_{1}v_{1}+3u_{2}v_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-1-1"
+
+\end_inset
+
+
+\begin_inset Formula $\langle,\rangle:\mathbb{R}^{2}\times\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =\left[\begin{array}{cc}
+u_{1} & u_{2}\end{array}\right]\left[\begin{array}{cc}
+5 & 0\\
+0 & 3
+\end{array}\right]\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-2-1"
+
+\end_inset
+
+
+\begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle p,q\right\rangle =p(0)q(0)+p(1)q(1)+p(2)q(2)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-3-1"
+
+\end_inset
+
+
+\begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\left\langle p,q\right\rangle  & =p(0)q(0)+p(1)q(1)\\
+ & \phantom{=}\ +p(2)q(2)+p(3)q(3)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-4-1"
+
+\end_inset
+
+
+\begin_inset Formula $\langle,\rangle:C([0,1])\times C([0,1])\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle f,g\right\rangle =\int_{0}^{1}f(x)g(x)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-5-1"
+
+\end_inset
+
+
+\begin_inset Formula $\langle,\rangle:C([0,2\pi])\times C([0,2\pi])\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle f,g\right\rangle =\frac{1}{2\pi}\int_{0}^{2\pi}f(x)g(x)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -1749,10 +2012,6 @@ violation
 LatexCommand label
 name "ans:P2R-violation"
 
-\end_inset
-
-
-\begin_inset Formula $\frac{2}{5}p_{2}q_{2}+\frac{2}{3}p_{0}q_{2}+\frac{2}{3}p_{1}q_{1}+\frac{2}{3}p_{2}q_{0}+2p_{0}q_{0}$
 \end_inset
 
  Violations are easy to come by.

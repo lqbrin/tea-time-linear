@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -110,72 +119,22 @@ noprefix "false"
 
 \end_inset
 
- it was noted that given a basis 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
- for a vector space 
-\begin_inset Formula $V$
-\end_inset
-
-, each vector in 
-\begin_inset Formula $V$
-\end_inset
-
- has a unique (exactly one) representation as a linear combination of the
- vectors in 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
-.
- In other words, there is a one-to-one correspondence between elements of
+ it was noted that given a basis for a vector space, each vector has a unique
+ (exactly one) representation as a linear combination of the vectors in
+ the basis.
+ That means there is a one-to-one correspondence between elements in the
+ vector space and linear combinations of vectors in the basis.
+ Each vector in the vector space can be identified by its corresponding
+ linear combination, or more succinctly, by the list of coefficients in
+ that linear combination.
+ These coefficient lists serve as unique identifiers for the vectors much
+ the same way social security numbers serve as unique identifiers for people.
+ Each vector/person is associated with exactly one string of numbers.
+ The difference is each vector actually has a different unique identifiers
+ for each basis, somewhat analogous to a person having a different social
+ security number for each country on the planet.
+ One SSN is useful in France while another is useful in Mali.
  
-\begin_inset Formula $V$
-\end_inset
-
- and linear combinations of vectors in 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
-.
- Every linear combination of vectors in 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
- corresponds to exactly one vector in 
-\begin_inset Formula $V$
-\end_inset
-
-, and every vector in 
-\begin_inset Formula $V$
-\end_inset
-
- corresponds to exactly one linear combination of vectors in 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
-.
- To provide an analogy, linear combinations of vectors in 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
- serve as unique identifiers for the vectors of 
-\begin_inset Formula $V$
-\end_inset
-
- much the same way social security numbers serve as unique identifiers for
- citizens of the United States (and other countries with a social security
- system.
- The column matrix formed from the coefficients of such a linear combination
- is called the 
-\series bold
-coordinate vector
-\series default
- with respect to 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -205,7 +164,7 @@ is a basis for the vector space
 \begin_inset Formula $n\times1$
 \end_inset
 
- matrices with real coefficients), also known as 
+ matrices with real coefficients), better known as 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -238,65 +197,82 @@ noprefix "false"
 \end_inset
 
 .
- In fact, 
-\begin_inset Formula $n\times1$
-\end_inset
-
- matrices as we have been using them all along are coordinate vectors with
- respect to this basis (called the standard basis of 
+ Writing a vector in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
-).
+ as a linear combination of these basis elements is a simple matter:
 \begin_inset Formula 
 \[
-\left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]=v_{1}I_{:,1}+v_{2}I_{:,2}+\cdots+v_{n}I_{:,n}
+\langle x_{1},x_{2},\ldots,x_{n}\rangle=x_{1}I_{:,1}+x_{2}I_{:,2}+\cdots+x_{n}I_{:,n},
 \]
 
 \end_inset
 
-(and this is the only such linear combination) so 
-\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
+and this is the only such linear combination.
+ If we write the coefficients as a column vector decorated with the name
+ of the basis as in 
+\begin_inset Formula $\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
 \vdots\\
-v_{n}
-\end{array}\right]}$
+x_{n}
+\end{array}\right]_{\mathcal{E}}$
 \end_inset
 
- is the coordinate vector of 
-\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]}$
+, we have what is known as a 
+\series bold
+coordinate vector
+\series default
+.
+ Given a different basis 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{n}\}$
 \end_inset
 
- with respect to 
-\begin_inset Formula $\mathcal{E}=\{I_{:,1},I_{:,2},\ldots,I_{:,n}\}$
+, writing 
+\begin_inset Formula $\langle x_{1},x_{2},\ldots,x_{n}\rangle$
+\end_inset
+
+ as a linear combination would require different coefficients:
+\begin_inset Formula 
+\[
+\langle x_{1},x_{2},\ldots,x_{n}\rangle=c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{n}\mathbf{v}_{n}
+\]
+
+\end_inset
+
+and would result in a different coordinate vector, 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+c_{1}\\
+c_{2}\\
+\vdots\\
+c_{n}
+\end{array}\right]_{\mathcal{B}}}$
+\end_inset
+
+, read as the coordinate vector with respect to 
+\begin_inset Formula $\mathcal{B}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-In the context of coordinate vectors, the vectors of a basis must be ordered,
- and the entries in the coordinate vector must correspond to this ordering.
+It should be noted that the order of the elements in a basis matters, and
+ that the entries in the coordinate vector must correspond to this ordering.
  The first entry of the coordinate vector corresponds with the first vector
  in the basis.
  The second entry of the coordinate vector corresponds with the second vector
  in the basis.
  And so on.
  This correspondence is required to maintain the uniqueness of representation.
- Therefore different orderings of the same basis may provide different coordinat
-e vectors for a single given vector.
- The basis 
+ Different orderings of the same basis may provide different coordinate
+ vectors for certain vectors.
+ 
+\end_layout
+
+\begin_layout Standard
+The basis 
 \begin_inset Formula $\mathcal{B}=\{I_{:,2},I_{:,1},\ldots,I_{:,n}\}$
 \end_inset
 
@@ -316,123 +292,49 @@ e vectors for a single given vector.
  Of course, it is still true that
 \begin_inset Formula 
 \[
-\left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]=v_{1}I_{:,1}+v_{2}I_{:,2}+\cdots+v_{n}I_{:,n}
+\langle x_{1},x_{2},\ldots,x_{n}\rangle=x_{1}I_{:,1}+x_{2}I_{:,2}+\cdots+x_{n}I_{:,n}.
 \]
 
 \end_inset
 
-but this means 
+This is simply how we understand the notations.
+ But this means 
 \begin_inset Formula ${\displaystyle \left[\begin{array}{c}
-v_{2}\\
-v_{1}\\
+x_{2}\\
+x_{1}\\
 \vdots\\
-v_{n}
-\end{array}\right]}$
+x_{n}
+\end{array}\right]_{\mathcal{B}}}$
 \end_inset
 
  is the coordinate vector of 
-\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]}$
+\begin_inset Formula $\langle x_{1},x_{2},\ldots,x_{n}\rangle$
 \end_inset
 
  with respect to 
-\begin_inset Formula $\mathcal{B}=\{I_{:,2},I_{:,1},\ldots,I_{:,n}\}$
-\end_inset
-
-.
- To keep the various coordinate vectors straight, the coordinate vector
- with respect to a basis 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
- will be subscripted with a 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
- as in 
-\begin_inset Formula 
-\[
-{\displaystyle \left[\begin{array}{c}
-v_{2}\\
-v_{1}\\
-\vdots\\
-v_{n}
-\end{array}\right]}_{\mathcal{B}}={\displaystyle \left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Given that there is essentially no difference between a vector and its represent
-ation with respect to the standard basis— 
-\begin_inset Formula 
-\[
-{\displaystyle \left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]}={\displaystyle \left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]}_{\mathcal{E}}
-\]
-
-\end_inset
-
-for example—all vectors in the remainder of this section will be subscripted
- to help avoid confusion.
- In general, 
-\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
-\end_inset
-
- means the coordinate vector of 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- with respect to the basis 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
 .
- In this vein we have 
+ Hence
 \begin_inset Formula 
 \[
-{\displaystyle \left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
 \vdots\\
-v_{n}
-\end{array}\right]}_{\mathcal{E}}={\displaystyle \left[\begin{array}{c}
-v_{2}\\
-v_{1}\\
+x_{n}
+\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+x_{2}\\
+x_{1}\\
 \vdots\\
-v_{n}
-\end{array}\right]}_{\mathcal{B}}.
+x_{n}
+\end{array}\right]_{\mathcal{B}}.
 \]
 
 \end_inset
 
-Letting 
+ Letting 
 \begin_inset Formula ${\displaystyle \mathcal{C}=\left\{ \left[\begin{array}{c}
 1\\
 0\\
@@ -554,7 +456,7 @@ In general, if
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- with its vectors written with respect to the standard basis, and 
+ and 
 \begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
 \end_inset
 
@@ -565,31 +467,42 @@ In general, if
 , respecting order, then
 \begin_inset Formula 
 \begin{equation}
-\left[\mathbf{v}\right]_{\mathcal{E}}=\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}.\label{eq:to-standard-basis}
+\left[\mathbf{v}\right]_{\mathcal{E}}=\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathbf{v}\right]_{\mathcal{B}}\label{eq:to-standard-basis}
 \end{equation}
 
 \end_inset
 
+where 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{D}}$
+\end_inset
 
+ denotes the coordinate vector of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to the basis 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-But there is nothing terribly special about the standard basis beyond the
- fact that it is the most familiar.
- If the basis 
+But there is nothing special about the standard basis beyond the fact that
+ it is the most familiar.
+ If the vectors in basis 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
- is written with respect to the basis 
+ are written with respect to the basis 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
- (and 
+ and 
 \begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
 \end_inset
 
- is the matrix whose columns are these vectors, respecting order), then
- 
+ is the matrix whose columns are these vectors, respecting order, then 
 \begin_inset Formula 
 \begin{equation}
 \left[\mathbf{v}\right]_{\mathcal{C}}=\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}.\label{eq:change-of-basis}
@@ -919,29 +832,37 @@ coordinate
 \begin_inset space ~
 \end_inset
 
-vector of 
-\begin_inset Formula $\mathbf{v}$
-\end_inset
-
- with respect to basis 
+vector If 
 \begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
 \end_inset
 
- is the vector 
+ is a basis for a vector space and 
+\begin_inset Formula $\mathbf{v}=c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}$
+\end_inset
+
+, then 
 \begin_inset Formula 
 \[
-\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
+\left[\begin{array}{c}
+c_{1}\\
+c_{2}\\
 \vdots\\
-v_{n}
+c_{n}
 \end{array}\right]_{\mathcal{B}}
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula $\mathbf{v}=v_{1}\mathbf{b}_{1}+v_{2}\mathbf{b}_{2}+\cdots+v_{n}\mathbf{b}_{n}$
+is the coordinate vector of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+, and is also denoted 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
 \end_inset
 
 .
@@ -1005,7 +926,1885 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-I
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}=3-4t+5t^{2}$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ 3-4t,t^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ 1,t,t^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ t^{2},t,1\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ 1,t,t^{2},t^{3}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ 3,-4t,5t^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ 3-4t+5t^{2},1-t+8t^{2},14-5t+6t^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-1"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+1 & 2\\
+3 & 4
+\end{array}\right]$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 4
+\end{array}\right],\left[\begin{array}{cc}
+0 & 2\\
+3 & 0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{cc}
+1 & 2\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+9 & 12
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 1\\
+0 & 2
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 2\\
+3 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right]\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\phantom{\hspace{2.2em}}\left.,\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{cc}
+3 & 8\\
+-2 & 9
+\end{array}\right],\left[\begin{array}{cc}
+2 & 6\\
+-5 & 4
+\end{array}\right]\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\phantom{\hspace{2.2em}}\left.,\left[\begin{array}{cc}
+1 & 2\\
+3 & 4
+\end{array}\right],\left[\begin{array}{cc}
+-3 & 7\\
+5 & 4
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-2"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}=\langle6,3,-4\rangle$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\{\langle2,1,0\rangle,\langle0,0,1\rangle\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\{\langle1,0,0\rangle,\langle0,3,-4\rangle\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\{\langle1,0,0\rangle,\langle0,1,0\rangle,\langle0,0,1\rangle\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\{\langle6,0,0\rangle,\langle0,3,0\rangle,\langle0,0,-4\rangle\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\{\langle2,-1,9\rangle,\langle6,3,-4\rangle,\langle-8,1,1\rangle\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left\langle \frac{1}{2},\frac{1}{4},-\frac{1}{3}\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-3"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+1\\
+-2
+\end{array}\right],\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]\right\} $
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+-12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-4"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+6\\
+3
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+-8
+\end{array}\right]\right\} $
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+17\\
+14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-8\\
+7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-5"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+6\\
+3
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+-8
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+17\\
+14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-8\\
+7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-6"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+1\\
+9
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+17\\
+15
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-3\\
+19
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-7"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-4\\
+7\\
+3
+\end{array}\right],\left[\begin{array}{c}
+9\\
+4\\
+3
+\end{array}\right],\left[\begin{array}{c}
+-3\\
+5\\
+4
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+17 & 10 & 5\end{array}\right]^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+8 & 5 & 9\end{array}\right]^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+19 & 6 & 7\end{array}\right]^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-8"
+
+\end_inset
+
+Write the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ as a coordinate vector with respect to the basis 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+3\\
+1\\
+4
+\end{array}\right],\left[\begin{array}{c}
+2\\
+-1\\
+9
+\end{array}\right],\left[\begin{array}{c}
+6\\
+4\\
+-9
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ [
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is linearly independent and therefore a basis for its span, and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+11 & 4 & 4\end{array}\right]^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+6 & -1 & 10\end{array}\right]^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+16 & 8 & -17\end{array}\right]^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-9"
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ for the basis in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Multiply 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ and compare your answer to that from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-10"
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ for the basis in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Multiply 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ and compare your answer to that from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-11"
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ for the basis in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Multiply 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ and compare your answer to that from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-12"
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ for the basis in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Multiply 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ and compare your answer to that from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-13"
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ for the basis in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Multiply 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ and compare your answer to that from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-14"
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ for the basis in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Multiply 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ by 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ and compare your answer to that from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-15"
+
+\end_inset
+
+Given bases 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-8\\
+7
+\end{array}\right],\left[\begin{array}{c}
+5\\
+-6
+\end{array}\right]\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\left\{ \left[\begin{array}{c}
+3\\
+7
+\end{array}\right],\left[\begin{array}{c}
+2\\
+4
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-16"
+
+\end_inset
+
+Given bases 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+2\\
+-1
+\end{array}\right],\left[\begin{array}{c}
+-3\\
+2
+\end{array}\right]\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\left\{ \left[\begin{array}{c}
+6\\
+1
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+7
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-17"
+
+\end_inset
+
+Given bases 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-7\\
+6
+\end{array}\right],\left[\begin{array}{c}
+6\\
+3
+\end{array}\right]\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\left\{ \left[\begin{array}{c}
+6\\
+-2
+\end{array}\right],\left[\begin{array}{c}
+-3\\
+6
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-18"
+
+\end_inset
+
+Given bases 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+3\\
+7
+\end{array}\right],\left[\begin{array}{c}
+5\\
+9
+\end{array}\right]\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\left\{ \left[\begin{array}{c}
+-9\\
+1
+\end{array}\right],\left[\begin{array}{c}
+6\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxNzssKglAQBuC94DsMtlEYxWsK0cq1TyAtvEx1
+ID02HqvHbzIomc3PNz_D7KDUw3QjQ2CuBJ3uJWhoxvlJvNJ9odkoPQa2VcIRhsawerkJJliHWGAss0c_
+k1ign58822oj6T2oM5rdOpV9uGq8UT_HHNOVky0Xcjb7cCVaBs1yGWg0bhsJTawkVt4Bvslh6peOZvnX
+-a8DZjpL61fz3iUCQQ4=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-19"
+
+\end_inset
+
+Given bases
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+4\\
+2\\
+0
+\end{array}\right],\left[\begin{array}{c}
+-7\\
+7\\
+4
+\end{array}\right],\left[\begin{array}{c}
+-8\\
+3\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+ and
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{C}=\left\{ \left[\begin{array}{c}
+0\\
+2\\
+8
+\end{array}\right],\left[\begin{array}{c}
+8\\
+6\\
+8
+\end{array}\right],\left[\begin{array}{c}
+2\\
+-5\\
+-7
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxNzs8KgkAQx_G74DsMdlEYJd3UIjp59gmkg3_G
+EtK1ca0ev8mgZC8_PvM97AYy3Y83MgTmSlDrRoaGcpiexAvdZ5pMp4fAtjI4QV8a7l6uQoVFgiGm8hI8
+oK8wwu3Zs60qlOxBtdHsFjHG6O8Wjla8lzhdVK00EvXjD-eiWVDOl54G41ah0MidzNw7wnc5TM1c0yTf
+df7ngJlaqX6Z9wbwf0Dc&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-20"
+
+\end_inset
+
+Given bases
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+5\\
+5\\
+-4
+\end{array}\right],\left[\begin{array}{c}
+8\\
+2\\
+7
+\end{array}\right],\left[\begin{array}{c}
+2\\
+2\\
+-5
+\end{array}\right]\right\} $
+\end_inset
+
+ and
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{C}=\left\{ \left[\begin{array}{c}
+6\\
+7\\
+-3
+\end{array}\right],\left[\begin{array}{c}
+1\\
+6\\
+2
+\end{array}\right],\left[\begin{array}{c}
+7\\
+9\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-21"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+-4
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be as in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Using your answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, calculate 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and verify that it equals 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-22"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+3\\
+-9
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be as in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Using your answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, calculate 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and verify that it equals 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-23"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+5\\
+4
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be as in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Using your answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, calculate 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and verify that it equals 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-24"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+8\\
+-1
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be as in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Using your answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, calculate 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and verify that it equals 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdjssKglAQQPeC_zDYRmGumI8Uok2u_QJpITqV
+kF4br9bnN7egoN2ZM2dgNlDqYbqRITBXglZ3AhqacX4Qv9V9odn0egxd5wgHGBrD_dNPMME6RZWjKjDG
+XMYIU8xOgeuUf1mENolxhyoTLOTKZqtkK7VGs18nst5aWYksw2a5DDQafxUzcS9UBXv4kMfULS3N8qb3
+W4fMdJbqmwUvjiE9ww==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-25"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+3\\
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be as in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use your answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to calculate 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and verify that it equals 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdjsEKglAQRfeC_zDYRmGU8vW0iDa69gukhehU
+QvpsfFqf31hQ0GLgcu65MCvITTfcyBLYK0FtGgkGqn58EL_RfaLRtqaPXCeDI3SV5fbpK1RYatxhjFou
+xnCLKYb6FLhO_qcluJEuxQT3GCpx14s1izVTbQ37pSwTVAsthGZRNV066q0_Cxm4lVQEB_gkj6mZahrl
+Te9XR8x0FuurBS-Rjz3H&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-26"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+-6\\
+3
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be as in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use your answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to calculate 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and verify that it equals 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-27"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\{\mathbf{c}_{1},\mathbf{c}_{2},\mathbf{c}_{3}\}$
+\end_inset
+
+ be bases for a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ and suppose 
+\begin_inset Formula $\mathbf{v}=2\mathbf{b}_{1}+5\mathbf{b}_{2}-6\mathbf{b}_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{b}_{1}=3\mathbf{c}_{1}-8\mathbf{c}_{2}+5\mathbf{c}_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{b}_{2}=6\mathbf{c}_{1}-2\mathbf{c}_{2}+9\mathbf{c}_{3}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{b}_{3}=7\mathbf{c}_{1}3\mathbf{c}_{2}-\mathbf{c}_{3}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-28"
+
+\end_inset
+
+Given basis 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+3\\
+7
+\end{array}\right],\left[\begin{array}{c}
+5\\
+9
+\end{array}\right]\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ and change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\begin{array}{cc}
+3 & 2\\
+-3 & 7
+\end{array}\right]$
+\end_inset
+
+, find the basis 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-29"
+
+\end_inset
+
+Given basis 
+\begin_inset Formula $\mathcal{B}=\{5+9t,2-5t\}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{P}_{1}\{\mathbb{R}\}$
+\end_inset
+
+ and change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\begin{array}{cc}
+1 & 8\\
+-7 & 1
+\end{array}\right]$
+\end_inset
+
+, find the basis 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{enumigrab}{
+\backslash
+value{enumi}}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1019,6 +2818,337 @@ status open
 finishexercises 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The last few exercises connect the algebra with the geometry of coordinate
+ systems in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ The geometry and algebra of coordinates in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ are connected similarly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate} 
+\backslash
+setcounter{enumi}{
+\backslash
+value{enumigrab}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-30"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\{\mathbf{c}_{1},\mathbf{c}_{2}\}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/coordinate-vectors-01.pdf
+	lyxscale 25
+	width 6.4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-31"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\{\mathbf{c}_{1},\mathbf{c}_{2}\}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/coordinate-vectors-02.pdf
+	lyxscale 25
+	width 6.4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:coordinate-vectors-32"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{C}=\{\mathbf{c}_{1},\mathbf{c}_{2}\}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/coordinate-vectors-03.pdf
+	lyxscale 25
+	width 6.4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+ and verify that 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{C}\right]_{\mathcal{B}}$
+\end_inset
+
+ and verify that 
+\begin_inset Formula $\left[\mathcal{C}\right]_{\mathcal{B}}\left[\mathbf{v}\right]_{\mathcal{C}}=\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Find the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+ and verify that 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -1044,12 +3174,97 @@ name "ans:equivalent-coordinate-vectors"
 
 \end_inset
 
-Remember, any vector subscripted with an 
+Converting between linear combinations and coordinate vectors, 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+7\\
+-3
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+ 
+\shape italic
+means
+\shape default
+ 
+\begin_inset Formula $2$
+\end_inset
+
+ times the first vector of 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ plus 
+\begin_inset Formula $7$
+\end_inset
+
+ times the second vector of 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ minus 3 times the third vector of 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, 
+\begin_inset Formula $2\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]_{\mathcal{E}}+7\left[\begin{array}{c}
+1\\
+1\\
+0
+\end{array}\right]_{\mathcal{E}}-3\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]_{\mathcal{E}}$
+\end_inset
+
+.
+ On the other hand 
+\begin_inset Formula $6I_{:,1}+4I_{:,2}-3I_{:,3}$
+\end_inset
+
+ 
+\shape italic
+is
+\shape default
+ 
+\begin_inset Formula $6$
+\end_inset
+
+ times the first vector of 
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- is the same as the vectors we have been writing all along without subscripts,
- so they should be treated as if the subscript were not there.
+ plus 
+\begin_inset Formula $4$
+\end_inset
+
+ times the second vector of 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ minus 
+\begin_inset Formula $3$
+\end_inset
+
+ times the third vector of 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+, the precise meaning of 
+\begin_inset Formula $\left[\begin{array}{c}
+6\\
+4\\
+-3
+\end{array}\right]_{\mathcal{E}}$
+\end_inset
+
+.
+ In full detail,
 \begin_inset Formula 
 \begin{align*}
 \left[\begin{array}{c}
@@ -1068,11 +3283,10 @@ Remember, any vector subscripted with an
 1\\
 1\\
 1
-\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
-2+7-3\\
-7-3\\
--3
-\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+\end{array}\right]_{\mathcal{E}}\\
+ & =2I_{:,1}+7(I_{:,1}+I_{:2})-3(I_{:,1}+I_{:,2}+I_{:,3})\\
+ & =(2+7-3)I_{:,1}+(7-3)I_{:,2}-3I_{:,3}\\
+ & =6I_{:,1}+4I_{:,2}-3I_{:,3}=\left[\begin{array}{c}
 6\\
 4\\
 -3
@@ -1081,23 +3295,11 @@ Remember, any vector subscripted with an
 4\\
 6\\
 -3
-\end{array}\right]_{\mathcal{B}} & =4I_{:,2}+6I_{:,1}-3I_{:,3}=4\left[\begin{array}{c}
-0\\
-1\\
-0
-\end{array}\right]_{\mathcal{E}}+6\left[\begin{array}{c}
-1\\
-0\\
-0
-\end{array}\right]_{\mathcal{E}}-3\left[\begin{array}{c}
-0\\
-0\\
-1
-\end{array}\right]_{\mathcal{E}}=\left[\begin{array}{c}
+\end{array}\right]_{\mathcal{B}} & =4I_{:,2}+6I_{:,1}-3I_{:,3}=6I_{:,1}+4I_{:,2}-3I_{:,3}=\left[\begin{array}{c}
 6\\
 4\\
 -3
-\end{array}\right]_{\mathcal{E}}.
+\end{array}\right]_{\mathcal{E}}
 \end{align*}
 
 \end_inset
