@@ -197,7 +197,8 @@ noprefix "false"
 \begin_inset Formula $M_{:j}=T(I_{:,j}),\,j=1,2$
 \end_inset
 
-, so if we knew the images of the standard basis, we would know 
+, so if we knew the images of the standard basis elements, we would know
+ 
 \begin_inset Formula $M$
 \end_inset
 
@@ -234,13 +235,15 @@ There is another way.
 \begin_inset Formula $\ell$
 \end_inset
 
- would be back where it started and all vectors/points/sets and their reflection
-s would maintain their relative positions across 
+ would be back where it started.
+ All vectors/points/sets and their reflections would maintain their relative
+ positions across 
 \begin_inset Formula $\ell$
 \end_inset
 
 .
- In the end, images would be reflected about line 
+ In the end it would be as though the vectors/points/sets were simply reflected
+ about line 
 \begin_inset Formula $\ell$
 \end_inset
 
@@ -248,12 +251,13 @@ s would maintain their relative positions across
 \end_layout
 
 \begin_layout Standard
-This composition is easy enough to write down.
+The composition of the two rotations and the reflection is easy enough to
+ write down as a matrix transformation.
  Using the standard matrix for reflection about the 
 \begin_inset Formula $x$
 \end_inset
 
--axis given in the discussion of section 
+-axis (given in the discussion of section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Linear-Transformations-on-Vectors"
@@ -263,7 +267,7 @@ noprefix "false"
 
 \end_inset
 
- and the standard matrix for counterclockwise rotation about the origin
+) and the standard matrix for counterclockwise rotation about the origin
  (from exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -583,7 +587,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Generalizing, we have the standard matrix 
+Summarizing, supppose we have the standard matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -595,7 +599,11 @@ Generalizing, we have the standard matrix
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- and we want to find a matrix 
+ and we want to better understand 
+\begin_inset Formula $M$
+\end_inset
+
+ by finding a matrix 
 \begin_inset Formula $P$
 \end_inset
 
@@ -650,7 +658,7 @@ The columns of
 \begin_inset Formula $P$
 \end_inset
 
- are eigenvectors of 
+ must be eigenvectors of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -658,12 +666,15 @@ The columns of
 \begin_inset Formula $D$
 \end_inset
 
- are the corresponding eigenvalues!
+ the corresponding eigenvalues!
 \end_layout
 
 \begin_layout Standard
 In the particular case of 
-\begin_inset Formula $S$
+\begin_inset Formula $S(\mathbf{u})=\left[\begin{array}{cc}
+-7 & -4\\
+6 & 7
+\end{array}\right]\mathbf{u}$
 \end_inset
 
 , the eigenvalues are 
@@ -700,7 +711,7 @@ noprefix "false"
 \end_inset
 
 .
- It folows that
+ It follows that
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -949,12 +960,19 @@ They are the same point in the plane! Coordinates with respect to
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
- make it easy to trace its action under 
+ make it easy to trace the action under 
 \begin_inset Formula $S$
 \end_inset
 
 .
- It is first reflected about the second basis vector, making its coordinates
+ 
+\begin_inset Formula ${\color{violet}\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]_{\mathcal{C}}}$
+\end_inset
+
+ is first reflected about the second basis vector, making its coordinates
  
 \color violet
 
@@ -1546,23 +1564,22 @@ While that may not be the most pleasant computation, it certainly beats
 directly.
  This property of similar matrices is at the heart of the power method for
  estimating eigenvalues (section 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Add reference.
- 
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Power-Method"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
 ), which is at the heart of Markov chain problems (section 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Add reference.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Markov-Chains"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -1863,6 +1880,10 @@ startexercises
 
 \begin_layout Subsection
 Exercises
+\end_layout
+
+\begin_layout Enumerate
+a
 \end_layout
 
 \begin_layout Enumerate

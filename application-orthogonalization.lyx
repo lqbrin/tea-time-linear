@@ -1436,7 +1436,14 @@ normalize scale a vector to meet a certain criterion.
 \begin_inset space ~
 \end_inset
 
-orthogonalzation given a linearly independent set 
+orthogonalzation 
+\begin_inset CommandInset label
+LatexCommand label
+name "key:orthogonalization"
+
+\end_inset
+
+given a linearly independent set 
 \begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
 \end_inset
 
@@ -1453,29 +1460,21 @@ orthogonalzation given a linearly independent set
 
 \end_inset
 
-has the following properties for 
+has the property that, for 
 \begin_inset Formula $j=1,2,\ldots,n$
 \end_inset
 
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
+, 
 \begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
 \end_inset
 
- is an orthogonal set.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+ is an orthogonal basis for 
+\begin_inset Formula $\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
 \end_inset
 
 .
 \end_layout
 
-\end_deeper
 \begin_layout Description
 orthogonality
 \begin_inset space ~
@@ -1548,25 +1547,230 @@ For all exercises, the inner product space is the dot product on
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:orthogonalization"
+name "exc:orthogonalization-6"
 
 \end_inset
 
 Is 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ a unit vector? If not, normalize it.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+\frac{3}{5} & \frac{4}{5}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+\frac{1}{\sqrt{6}} & -\frac{2}{\sqrt{6}}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+\frac{15}{19} & \frac{8}{19}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+\frac{1}{20} & -\frac{9}{80} & -\frac{5}{16}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+-\frac{2}{3} & \frac{2}{3} & -\frac{1}{3}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cccc}
+\frac{1}{6} & \frac{1}{2} & -\frac{1}{2} & \frac{2}{3}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cccc}
+\frac{2}{9} & \frac{5}{9} & \frac{2}{3} & \frac{4}{9}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization"
+
+\end_inset
+
+Determine whether 
 \begin_inset Formula $S$
 \end_inset
 
- an orthogonal set? an orthonormal set?
+ is orthogonal.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $S=\left\{ \left[\begin{array}{c}
-\\
-\\
+-2\\
+9
 \end{array}\right],\left[\begin{array}{c}
-\\
-\\
+18\\
+4
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+7\\
+7
+\end{array}\right],\left[\begin{array}{c}
+-8\\
+4
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+8\\
+-5
+\end{array}\right],\left[\begin{array}{c}
+-10\\
+-16
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+-7\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-10\\
+-14
+\end{array}\right],\left[\begin{array}{c}
+15\\
+21
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+6\\
+-1\\
+3
+\end{array}\right],\left[\begin{array}{c}
+-4\\
+-9\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+15\\
+-5\\
+3
+\end{array}\right],\left[\begin{array}{c}
+1\\
+6\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+2\\
+3\\
+4
+\end{array}\right],\left[\begin{array}{c}
+-\frac{1}{2}\\
+-5\\
+4
+\end{array}\right],\left[\begin{array}{c}
+16\\
+-5\\
+-\frac{17}{4}
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+-2\\
+9\\
+6
+\end{array}\right],\left[\begin{array}{c}
+3\\
+-2\\
+4
+\end{array}\right],\left[\begin{array}{c}
+24\\
+13\\
+-11
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+-7\\
+0\\
+9
+\end{array}\right],\left[\begin{array}{c}
+9\\
+8\\
+7
+\end{array}\right],\left[\begin{array}{c}
+4\\
+-8\\
+4
+\end{array}\right],\left[\begin{array}{c}
+18\\
+10\\
+2
 \end{array}\right]\right\} $
 \end_inset
 
@@ -1575,63 +1779,309 @@ Is
 
 \end_deeper
 \begin_layout Enumerate
-Repeat question in 
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-1"
+
+\end_inset
+
+Repeat question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
  with inner product
 \begin_inset Formula 
 \[
-\left\langle \left[\begin{array}{c}
-u_{1}\\
-u_{2}\\
-\vdots\\
-u_{n}
-\end{array}\right],\left[\begin{array}{c}
-v_{1}\\
-v_{2}\\
-\vdots\\
-v_{n}
-\end{array}\right]\right\rangle =u_{1}v_{1}+2u_{2}v_{2}+\cdots+nu_{n}v_{n}
+\left\langle \mathbf{u},\mathbf{v}\right\rangle =u_{1}v_{1}+2u_{2}v_{2}+\cdots+nu_{n}v_{n}
 \]
 
 \end_inset
 
+where 
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{cccc}
+u_{1} & u_{2} & \cdots & u_{n}\end{array}\right]$
+\end_inset
 
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cccc}
+v_{1} & v_{2} & \cdots & v_{n}\end{array}\right]$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-2"
+
+\end_inset
+
+Find an orthogonal set in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and normalize each vector so it becomes an orthonormal set.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-3"
+
+\end_inset
+
+Find an orthogonal set in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ relative to the inner product of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and normalize each vector so it becomes an orthonormal set.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-4"
+
+\end_inset
+
 Is it possible for a pair of nonzero vectors to be orthogonal in multiple
  inner product spaces?
 \end_layout
 
 \begin_layout Enumerate
-Verify that the operator is an inner product.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-5"
+
+\end_inset
+
+In the inner product space 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+, with inner product 
+\begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle p,q\right\rangle =p(0)q(0)+p(1)q(1)+p(2)q(2),
+\]
+
+\end_inset
+
+which of the following polynomials are orthogonal to 
+\begin_inset Formula $t^{2}-2t$
+\end_inset
+
+?
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:inner-product-6"
-
+\begin_inset Formula $t^{2}+6t-7$
 \end_inset
 
 
-\begin_inset Formula $\langle,\rangle:\mathbb{R}^{2}\times\mathbb{R}^{2}\to\mathbb{R}$
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $3t^{2}-t-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $6t^{2}-11t+5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $4t^{2}-8t+3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2t^{2}-t-3$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-7"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{cc}
+2 & 3\end{array}\right]$
 \end_inset
 
 , 
-\begin_inset Formula 
-\[
-\left\langle \left[\begin{array}{c}
-u_{1}\\
-u_{2}
-\end{array}\right],\left[\begin{array}{c}
-v_{1}\\
-v_{2}
-\end{array}\right]\right\rangle =2u_{1}v_{1}+3u_{2}v_{2}
-\]
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+4 & -3\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{w}=\left[\begin{array}{cc}
+-6 & 4\end{array}\right]$
+\end_inset
+
+.
+ Find the orthogonal projection.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{proj}_{\mathbf{v}}\mathbf{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{proj}_{\mathbf{w}}\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{proj}_{\mathbf{v}}\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{proj}_{\mathbf{w}}\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-8"
+
+\end_inset
+
+Sketch the projection of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the two vectors involved in the projection on the same set of axes.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-9"
+
+\end_inset
+
+Approximate 
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-3.5cm}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-01.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -1639,34 +2089,34 @@ v_{2}
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:inner-product-1-1"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-3.5cm}{
+\end_layout
 
 \end_inset
 
 
-\begin_inset Formula $\langle,\rangle:\mathbb{R}^{2}\times\mathbb{R}^{2}\to\mathbb{R}$
+\begin_inset Graphics
+	filename figures/orthogonalization-02.pdf
+	lyxscale 33
+	width 2.5in
+
 \end_inset
 
-, 
-\begin_inset Formula 
-\[
-\left\langle \left[\begin{array}{c}
-u_{1}\\
-u_{2}
-\end{array}\right],\left[\begin{array}{c}
-v_{1}\\
-v_{2}
-\end{array}\right]\right\rangle =\left[\begin{array}{cc}
-u_{1} & u_{2}\end{array}\right]\left[\begin{array}{cc}
-5 & 0\\
-0 & 3
-\end{array}\right]\left[\begin{array}{c}
-v_{1}\\
-v_{2}
-\end{array}\right]
-\]
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -1674,21 +2124,34 @@ v_{2}
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:inner-product-2-1"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-3.5cm}{
+\end_layout
 
 \end_inset
 
 
-\begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
+\begin_inset Graphics
+	filename figures/orthogonalization-03.pdf
+	lyxscale 33
+	width 2.5in
+
 \end_inset
 
-, 
-\begin_inset Formula 
-\[
-\left\langle p,q\right\rangle =p(0)q(0)+p(1)q(1)+p(2)q(2)
-\]
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -1696,66 +2159,34 @@ name "exc:inner-product-2-1"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:inner-product-3-1"
+\begin_inset ERT
+status open
 
-\end_inset
-
-
-\begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
-\end_inset
-
-, 
-\begin_inset Formula 
-\begin{align*}
-\left\langle p,q\right\rangle  & =p(0)q(0)+p(1)q(1)\\
- & \phantom{=}\ +p(2)q(2)+p(3)q(3)
-\end{align*}
-
-\end_inset
+\begin_layout Plain Layout
 
 
+\backslash
+raisebox{-3.5cm}{
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:inner-product-4-1"
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-04.pdf
+	lyxscale 33
+	width 2.5in
 
 \end_inset
 
 
-\begin_inset Formula $\langle,\rangle:C([0,1])\times C([0,1])\to\mathbb{R}$
-\end_inset
+\begin_inset ERT
+status open
 
-, 
-\begin_inset Formula 
-\[
-\left\langle f,g\right\rangle =\int_{0}^{1}f(x)g(x)\,dx
-\]
+\begin_layout Plain Layout
 
-\end_inset
-
-
+}
 \end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:inner-product-5-1"
-
-\end_inset
-
-
-\begin_inset Formula $\langle,\rangle:C([0,2\pi])\times C([0,2\pi])\to\mathbb{R}$
-\end_inset
-
-, 
-\begin_inset Formula 
-\[
-\left\langle f,g\right\rangle =\frac{1}{2\pi}\int_{0}^{2\pi}f(x)g(x)\,dx
-\]
 
 \end_inset
 
@@ -1763,6 +2194,842 @@ name "exc:inner-product-5-1"
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-10"
+
+\end_inset
+
+Redo question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ approximating 
+\begin_inset Formula $\text{proj}_{\mathbf{v}}\mathbf{u}$
+\end_inset
+
+ instead.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-11"
+
+\end_inset
+
+True or false?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In any vector space, a pair of orthogonal vectors is also perpendicular.
+\end_layout
+
+\begin_layout Enumerate
+If two vectors in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ are orthogonal relative to one inner product, then they are orthogonal
+ relative to all inner products.
+\end_layout
+
+\begin_layout Enumerate
+The zero vector is orthogonal to all vectors.
+\end_layout
+
+\begin_layout Enumerate
+Any five vectors in 
+\begin_inset Formula $\mathbb{R}^{6}$
+\end_inset
+
+ can be orthogonalized (to form a set of five orthogonal vectors).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-12"
+
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is an orthogonal basis of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-9\\
+6
+\end{array}\right],\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+1\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-2\\
+-5
+\end{array}\right],\left[\begin{array}{c}
+5\\
+-2
+\end{array}\right]\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+8\\
+9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+1\\
+-3
+\end{array}\right],\left[\begin{array}{c}
+6\\
+2
+\end{array}\right]\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-15\\
+8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+3\\
+8\\
+5
+\end{array}\right],\left[\begin{array}{c}
+25\\
+-15\\
+9
+\end{array}\right],\left[\begin{array}{c}
+3\\
+2\\
+-5
+\end{array}\right]\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+18\\
+5\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-3\\
+3\\
+0
+\end{array}\right],\left[\begin{array}{c}
+2\\
+2\\
+2
+\end{array}\right],\left[\begin{array}{c}
+1\\
+1\\
+-2
+\end{array}\right]\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+8\\
+3\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-17"
+
+\end_inset
+
+Orthogonalize
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+1\\
+-1
+\end{array}\right],\left[\begin{array}{c}
+5\\
+-7
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-1\\
+3
+\end{array}\right],\left[\begin{array}{c}
+4\\
+6
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+8\\
+-9
+\end{array}\right],\left[\begin{array}{c}
+9\\
+3
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-7\\
+3
+\end{array}\right],\left[\begin{array}{c}
+3\\
+-5
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-1\\
+2\\
+1
+\end{array}\right],\left[\begin{array}{c}
+5\\
+-4\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+5\\
+-4\\
+1
+\end{array}\right],\left[\begin{array}{c}
+-1\\
+2\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+2\\
+1\\
+4
+\end{array}\right],\left[\begin{array}{c}
+-1\\
+1\\
+-5
+\end{array}\right],\left[\begin{array}{c}
+10\\
+2\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdj8FqwzAQRO-B_MNiXywjUyTREFp68ge099KD
+cYTtVrWMsoro31crx41SdBDMm92ZLaG134vRqAFHDb096f3OC3iBi-7Ruuq9EY-8kVweP1gkMiNCcXng
+q67uJo5ccXEgUMKbm2aEYbro-eo473cLiVVBQQX3gt0UmRSZKSopij3DqkQUqKAX5LGfXqRWlZd13PRQ
+eUF_TTgQiLSBzUiN2s703nTx5KBg1C5eTK-EV4-LR3D67A3eWobUMmQtQ2oZZDpw01LPoNi6qx11_wXW
+4WgHO3dmwp9t_O-SIpmmebj3PRUszz5ZhGugqNfMf1BtUOVQ5lAS_AXWaIsS&lang=sage&interacts
+=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-15\\
+-2\\
+28
+\end{array}\right],\left[\begin{array}{c}
+13\\
+26\\
+8
+\end{array}\right],\left[\begin{array}{c}
+-18\\
+3\\
+16
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtkE1rhDAQhu8L-x8GvahESj6gbEtP_oD2XnoQ
+DautNeImG_rvmxnXbpTiQXiemeF9k0JlvqdBWw2209CYVh8PjsMLXHVjzZy9l4KVij0y-ZEHIyLDmWSc
+ceIy4mFBsBM7kVAbgbxUKFJ4m_vRwrm_6vE2cTkeJoRZggkS5nh-J4KIiIgkIiOiiKj8GRYSlMcujuOM
+-XScCmROFOH2Q-Y4_gvUHkWwJayDmLGqh8YNdXgdL6EeW_AKOj2HN8IvhVdnJ2dh1hc32Ht8T_F9FN9T
+fC-o-cqogJcbRhW8ypf7VaebLzCz7czZjPXQ25_15F_JhIb68byde0ryOE9rLNxC8GLJsZNylfIfqVap
+YiniTbHbFPGm2G3KWEqUv3kutLs=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-2\\
+-4\\
+7\\
+3
+\end{array}\right],\left[\begin{array}{c}
+1\\
+3\\
+1\\
+1
+\end{array}\right],\left[\begin{array}{c}
+2\\
+-2\\
+9\\
+9
+\end{array}\right],\left[\begin{array}{c}
+2\\
+2\\
+9\\
+-4
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Orthonormalize (normalize the vectors of the orthogonalization process as
+ they are computed).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+3\\
+4
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+10
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+12\\
+5
+\end{array}\right],\left[\begin{array}{c}
+7\\
+17
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJyFkE1ugzAQhfeRcocRbACBUo_bTauuOEC7r7pA
+xAJSB1Njx-rtaxuTOKhSZXnzvfl5b1KoxXniTDFQPYNWHNl-pwm8woW1SsjsA0tSPn7mlmJEK2Jx9eQ5
+jTh5KLH0OIV3OYwKuuHCxqDP-93kYJa4FUmpSX4j6AlGhHpC8xdYiJWMs6bJYf6WKtOkCBPESRPvL9Po
+2CFo9tseJ1i1grUwMIPLHIOFQW-5bnireWOvYSj0TNpjuJfCm1aTViDZrLm6xTA-holiGB8jjFuZD2Jo
+vsyqe9Z-gZCqF50YGz6on7X9GjXxRcPY3dc9J3m8-ygUhIUkRNiIdBVpLGIsYrFxNgp5_s_VteYvR2Rd
+en-XyC1u3NLYEHWGfgGq1r3b&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+2\\
+1\\
+4
+\end{array}\right],\left[\begin{array}{c}
+-1\\
+1\\
+-5
+\end{array}\right],\left[\begin{array}{c}
+10\\
+2\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJyFkM1OhDAUhfeTzDvcwAZIyaRtVNS44gF0b1wQ
+pgGUoVjaaXx729LOdIiJabr5zv0556ZQ89M8MslA9gxafmT7ncLwAmfWSi6y97JC5SOqPnLDScQr9ICo
+ozSi94iiO0tTeBPDJKEbzmzy8rLfzRZmid2QIIXzKyGOkIhQR2j-DCsxkrbOFD4s30JmChd-Av9U2JnL
+FLHs4DXzTY8VjFpCKPRMk3WOJoUmznLdjK0aG3MMTaFnwtzCvhRelZyVBMEWNcprDO1i6CiGdjH8uMBc
+EE3zdVbds_YLuJA97_jUjIP8Ce2XqIkrGqbutu4pyePdRy7BL8Q-wkakQaSxSGKRFBtnExen_1xdav5y
+hMPS27tEbsnGLY0NUWvoF3ZFvc4=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-8\\
+-9\\
+8
+\end{array}\right],\left[\begin{array}{c}
+8\\
+7\\
+3
+\end{array}\right],\left[\begin{array}{c}
+6\\
+3\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-18"
+
+\end_inset
+
+Is the orthogonal set from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ a basis for 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ (for any 
+\begin_inset Formula $n$
+\end_inset
+
+)?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-19"
+
+\end_inset
+
+Scale the vectors in the orthogonalization of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to find an orthonormal set.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-20"
+
+\end_inset
+
+The set 
+\begin_inset Formula $S$
+\end_inset
+
+ is linearly dependent so we should not expect orthogonalization to lead
+ to the property that, for 
+\begin_inset Formula $j=1,2,\ldots,n$
+\end_inset
+
+, 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
+\end_inset
+
+ is an orthogonal basis for 
+\begin_inset Formula $\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+\end_inset
+
+ (as described on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "key:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Orthogonalize anyway and explain what happens.
+ For which 
+\begin_inset Formula $j$
+\end_inset
+
+ is the set 
+\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
+\end_inset
+
+ an orthogonal basis for 
+\begin_inset Formula $\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+2\\
+3
+\end{array}\right],\left[\begin{array}{c}
+6\\
+9
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+2\\
+3
+\end{array}\right],\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right],\left[\begin{array}{c}
+3\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
+1\\
+2\\
+1
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+7\\
+-3
+\end{array}\right],\left[\begin{array}{c}
+7\\
+-3\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+-6\\
+7
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-13"
+
+\end_inset
+
+Orthogonalize 
+\begin_inset Formula $\left\{ 1,t,t^{2}\right\} $
+\end_inset
+
+ relative to the inner product 
+\begin_inset Formula $\langle,\rangle:\mathbb{P}_{n}(\mathbb{R})\times\mathbb{P}_{n}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle f,g\right\rangle =\int_{-1}^{1}f(x)g(x)\,dx.
+\]
+
+\end_inset
+
+These are the first three Legendre polynomials.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-16"
+
+\end_inset
+
+Orthogonalize 
+\begin_inset Formula $\left\{ 1,t,t^{2}\right\} $
+\end_inset
+
+ relative to the inner product 
+\begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle p,q\right\rangle =p(0)q(0)+p(1)q(1)+p(2)q(2).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-14"
+
+\end_inset
+
+Explain why an orthogonal set is a basis for its span.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-15"
+
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ \sin t,\sin2t,\sin3t,\sin4t\right\} $
+\end_inset
+
+ is an orthogonal set relative to the inner product 
+\begin_inset Formula $\langle,\rangle:C([-\pi,\pi])\times C([-\pi,\pi])\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle f,g\right\rangle =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)g(x)\,dx
+\]
+
+\end_inset
+
+(and is therefore a basis for its span).
+ Even though the function 
+\begin_inset Formula $h(t)=t$
+\end_inset
+
+ is not in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+, the projections of 
+\begin_inset Formula $h$
+\end_inset
+
+ onto the elements of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ can still be calculated since 
+\begin_inset Formula $h$
+\end_inset
+
+ is in 
+\begin_inset Formula $C([-\pi,\pi])$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\text{proj}_{\sin kt}h$
+\end_inset
+
+ for 
+\begin_inset Formula $k=1,2,3,4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Graph 
+\begin_inset Formula $h$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{proj}_{\sin t}h+\text{proj}_{\sin2t}h+\text{proj}_{\sin3t}h+\text{proj}_{\sin4t}h$
+\end_inset
+
+ on the same set of axes.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Repeat question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with 
+\begin_inset Formula 
+\begin{align*}
+h(t) & =\begin{cases}
+-1 & t<0\\
+1 & t\geq0
+\end{cases}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
