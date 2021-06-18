@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -1737,7 +1746,7 @@ matrices matrices
 \end_inset
 
  (equivalently 
-\begin_inset Formula $PAP^{-}1=B$
+\begin_inset Formula $PAP^{-1}=B$
 \end_inset
 
  or 
@@ -1883,10 +1892,1059 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-a
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity"
+
+\end_inset
+
+Find a matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ that diagonalizes 
+\begin_inset Formula $M$
+\end_inset
+
+ and calculate (the diagonal matrix) 
+\begin_inset Formula $P^{-1}MP$
+\end_inset
+
+.
+ Eigenvectors of 
+\begin_inset Formula $M$
+\end_inset
+
+ are given.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+5 & 4\\
+20 & 7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+5
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+26 & 32\\
+-21 & -26
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+8\\
+-7
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+4\\
+-3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+1 & -2\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-17 & 6\\
+2 & -18
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+-2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-20 & -0 & -0\\
+7 & -24 & -8\\
+-19 & 16 & -0
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+-1\\
+2
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+4\\
+1\\
+3
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+-1\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-12 & 100 & 30\\
+75 & 13 & 30\\
+-75 & -100 & -117
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+-3\\
+5
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+0\\
+-5
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+1\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+11 & -20 & 30\\
+8 & -17 & 30\\
+4 & -10 & 18
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+2\\
+0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+-5\\
+1\\
+2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-17 & 10 & 6\\
+-7 & 2 & 3\\
+-7 & 5 & 0
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+3\\
+2
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+1\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-39 & -28 & -52 & -20\\
+-102 & -91 & -171 & -48\\
+68 & 56 & 107 & 32\\
+62 & 56 & 99 & 37
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+3\\
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+3\\
+-2\\
+-2
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+1\\
+-2\\
+-1
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+-3\\
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-1"
+
+\end_inset
+
+Find the eigenvalue(s) of the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-2"
+
+\end_inset
+
+Is 
+\begin_inset Formula $M$
+\end_inset
+
+ diagonalizable? All of its eigenvalues are given.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+25 & 4\\
+-1 & 29
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $27$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+4 & -6\\
+-9 & -11
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $7,-14$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+18 & -8 & 14\\
+-8 & 6 & -7\\
+-32 & 16 & -26
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $-6,2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+4 & -18 & -13\\
+6 & 28 & 15\\
+-8 & -24 & -10
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $10,6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-52 & -5 & 5\\
+68 & -78 & 106\\
+76 & -32 & 60
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $28,-42,-56$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-298 & 79 & 359 & -32\\
+864 & -791 & -1797 & 726\\
+-800 & 631 & 1557 & -590\\
+-464 & 346 & 926 & -616
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $-74,370,-296,-148$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-3"
+
+\end_inset
+
+Matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are similar.
+ Find 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+12 & 5\\
+-11 & 10
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+767 & k\\
+-146 & -745
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+11 & 8\\
+k & -3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+4 & k\\
+6 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-4"
+
+\end_inset
+
+Find 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $PA=BP$
+\end_inset
+
+ for the matrices of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-5"
+
+\end_inset
+
+Matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are similar.
+ Find 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{cc}
+j & -70\\
+k & 38
+\end{array}\right];\ B=\left[\begin{array}{cc}
+-3 & -4\\
+1 & -8
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-6"
+
+\end_inset
+
+Find 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $PAP^{-1}=B$
+\end_inset
+
+ for the matrices of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-7"
+
+\end_inset
+
+Explain why 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are not similar.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-6 & -1\\
+11 & -2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+5 & -10\\
+-4 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-2 & -8\\
+5 & -1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+-4 & -2\\
+7 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-8"
+
+\end_inset
+
+What does the SageMath code do?
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+# Variables
+\end_layout
+
+\begin_layout LyX-Code
+var('a,b,c,d')
+\end_layout
+
+\begin_layout LyX-Code
+# Similar matrices
+\end_layout
+
+\begin_layout LyX-Code
+A = matrix(2,2,[9,-6,5,-8])
+\end_layout
+
+\begin_layout LyX-Code
+B = matrix(2,2,[106,-132,84,-105])
+\end_layout
+
+\begin_layout LyX-Code
+# Unknown matrix
+\end_layout
+
+\begin_layout LyX-Code
+P = matrix(2,2,[a,b,c,d])
+\end_layout
+
+\begin_layout LyX-Code
+print(A);print()
+\end_layout
+
+\begin_layout LyX-Code
+print(B);print()
+\end_layout
+
+\begin_layout LyX-Code
+# Solve for P and print solution
+\end_layout
+
+\begin_layout LyX-Code
+print(solve((A*P-P*B).coefficients(),[a,b,c,d]))
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-9"
+
+\end_inset
+
+Find all matrices 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $A=PBP^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxTVnDOzy3ISS1JVSjJSFVIzk9J5eUqSyzSUE_U
+SdJJ1klR1-TlclSwVchNLCnKrNAw0jHSidY11rEEQl2jWKCkE7qkkY6hjoWhjq4xSDYATRZqKkiqoCgz
+r0TDUdNaAcKCCzkhhAB1UStC&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-3 & 9\\
+9 & -2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+-2 & 1\\
+81 & -3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxTVnDOzy3ISS1JVSjJSFVIzk9J5eUqSyzSUE_U
+SdJJ1klR1-TlclSwVchNLCnKrNAw0jHSiTbSMdTRNdcxigXKOaHLGZvrmJno6FqYGevoGhkbg9QEoKmB
+Gg2SKijKzCvRcNS0VoCw4EJOCCEANwosSg==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A=\left[\begin{array}{cc}
+2 & 1\\
+-7 & 2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+237 & 64\\
+-863 & -233
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxljs0KglAQRveC73ChhQqf4P1x9BIttBdoHy3M
+bilkilyix28kKDBmYIZvDofZiP04THfnnfCdE-14cWHwbOY4anBGiwscrrihQx8lYVCJnRgaP_evWEPj
+mINQcKXcBAPJ48RcveLKkhQkZXzXWhlijLRBKmUhoYzNLVSWM1oodpG1i-Swkvx9tEDT3D98XCVb8dm-
+Uf2L3laTOuE=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+5 & 6 & 7\\
+7 & -7 & -6\\
+4 & 1 & -6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+8862 & 1601 & -33246\\
+-6634 & -1171 & 24959\\
+2053 & 372 & -7699
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxljsEKgkAURfeC_zDQQoU7oPNmRoZoof1A-2hh
+OuVApsgQfX5jQYHBWzzuPefxNmw_DtPNest8b1k7djaOHs2cJg3OaNHB4oIrergki6OK7djQ-Nk9UwLh
+yAk5SmhwsYxCAa5PAaxXoBBkQlVqFJoEgSsNGTQpcnAqFIwMB4R5y4eV_PfKAk2zu_u0yrbss32j-he9
+ANdWOU8=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+-3 & 0 & 7\\
+6 & -2 & -2\\
+5 & 1 & -6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+2239 & -676 & 16323\\
+-56 & 46 & -420\\
+-315 & 94 & -2296
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-10"
+
+\end_inset
+
+What is the dimension of the solution space in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-11"
+
+\end_inset
+
+Describe the action of the transformation 
+\begin_inset Formula $T(\mathbf{v})=P^{-1}MP\mathbf{v}$
+\end_inset
+
+ as simply as you can in geometric terms.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+\cos\alpha & \sin\alpha\\
+-\sin\alpha & \cos\alpha
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+1 & 0\\
+-\frac{1}{2} & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+2 & 0\\
+0 & 3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+\cos\alpha & \sin\alpha\\
+-\sin\alpha & \cos\alpha
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+1 & 3\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-12"
+
+\end_inset
+
+Calculate 
+\begin_inset Formula $M^{7}$
+\end_inset
+
+ using a diagonalization process.
+ Eigenvalues of the matrix are given.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-\frac{17}{6} & -\frac{11}{6}\\
+\frac{11}{3} & \frac{8}{3}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\frac{5}{6},1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+0 & 5\\
+1 & 4
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $-1,5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-7 & -10\\
+5 & 8
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $-2,3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+\frac{17}{20} & -\frac{1}{20}\\
+-\frac{7}{20} & \frac{23}{20}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\frac{4}{5},\frac{6}{5}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-13"
+
+\end_inset
+
 Justify the claim.
 \end_layout
 
