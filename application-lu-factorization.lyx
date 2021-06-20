@@ -108,35 +108,43 @@ LU Factorization []
 \end_layout
 
 \begin_layout Standard
-Computers, as the name would suggest, are famously adept at computation.
+Humans and computers bring very different skills to task.
+ Computers, as the name would suggest, are famously adept at computing.
  Handling fractions, square roots, irrational constants, and 
 \begin_inset Formula $1+2$
 \end_inset
 
  are all the same to a computer.
- Ask a human to execute five, six, or twenty numerical operations to solve
- a single problem and they might think you're simply asking too much.
+ Humans tend to balk at non-integer computations and lengthy ones too.
+ Ask a human to execute five, six, or twenty numerical operations, even
+ integer operations, to solve a single problem and they might think you
+ were simply asking too much.
  Ask a computer to do the same and you'll have your answer in just a few
  milliseconds.
- Humans and computers bring very different skills to task.
+\end_layout
+
+\begin_layout Standard
+Computers supply speed and accuracy to what would be tedious and error prone
+ for a human.
+ Computers make the otherwise impractical practical.
+ Linear systems with a hundred, thousand, or even a hundred thousand equations
+ are easily within the practical limits of computers.
+ Even a home computer can handle a few hundred equations.
+ However, at that size, efficiency plays a major role in practicality.
+ An efficient algorithm may be able to handle a certain computation in a
+ few seconds while an inefficient one may take a few days for the same.
+ Humans provide appropriate and fast algorithms that would, at least until
+ AI makes some huge advances, be impossible for a computer.
  
 \end_layout
 
 \begin_layout Standard
-Humans provide the algorithms and instructions for the computer and the
- computer grinds out the computations with amazing speed.
- The speed and accuracy of computer calculations make the otherwise impractical
- practical.
- Linear systems with a hundred, thousand, or even a hundred thousand equations
- are within the practical limits of computers.
- But at that size, efficiency plays a major role in practicality.
- An efficient algorithm may be able to handle a computation in a few seconds
- while an inefficient one may take a few days for the same result.
-\end_layout
-
-\begin_layout Standard
-The efficiency of an algorithm is calculated by comparing the number of
- computations needed with common functions such as 
+What makes a good algorithm is first and foremost accuracy.
+ If the algorithm does not conclude with the correct answer, it is of no
+ use at all.
+ What makes one correct algorithm better than another is speed, measured
+ by comparing the number of computations needed to complete the computation
+ with common functions such as 
 \begin_inset Formula $n^{2}$
 \end_inset
 
@@ -157,13 +165,14 @@ size
 \end_inset
 
  of the problem.
- This way, we have a good idea how the time it takes to solve a problem
+ Such a function gives a good idea how the time it takes to solve a problem
  grows as the size grows.
- In solving linear systems 
+ To get a sense of the computer's speed in solving a linear system, let
+ 
 \begin_inset Formula $n$
 \end_inset
 
- represents the number of equations to be solved.
+ represent the number of equations to be solved.
  The row reduction algorithm of section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -813,8 +822,8 @@ total
 
 \end_inset
 
- lists the number of arithmetic operations required to execute reduction
- to reduced row echelon form for a general linear system with 
+ lists the number of arithmetic operations required to compute reduced row
+ echelon form for a general linear system with 
 \begin_inset Formula $n$
 \end_inset
 
@@ -824,12 +833,19 @@ total
 
  unknowns.
  For a human with a handheld calculator, systems with 2 or 3 variables are
- doable.
+ doable (
+\begin_inset Formula $n=2$
+\end_inset
+
+ or 
+\begin_inset Formula $n=3$
+\end_inset
+
+).
  Systems with 4 variables would be tedious in general, but practical with
- a few strategically placed zeros (which can dramatically reduce the number
- of computations required).
- However, even 9 equations in 9 unknowns would be a bit much for a person.
- 
+ a few strategically placed zeros.
+ However, somewhere between 5 and 10 equations we find the limit of human
+ practicality for general systems.
 \end_layout
 
 \begin_layout Standard
@@ -867,12 +883,12 @@ You might well ask whether systems of 500 equations in 500 unknowns are
  unknowns.
  Of course faster computers or clusters of computers could be put to the
  task to speed up the computation, but no matter how much computing power
- is supplied, there will always be a size outside its practical limits.
- 
+ is supplied, there will always be a less-than-astronomical size outside
+ its practical limits.
 \end_layout
 
 \begin_layout Standard
-A better option is to streamline the algorithm.
+A better option than more computing power is to streamline the algorithm.
  The numerical 
 \begin_inset Quotes eld
 \end_inset
@@ -991,7 +1007,8 @@ only
 
 \begin_layout Standard
 Now imagine you have to solve the system multiple times for multiple sets
- of constants, but the same coefficient matrix.
+ of constants, but the same coefficient matrix, something that happens frequentl
+y in industrial applications.
  7.5 days is preferable to 75 days for solving the system with ten different
  sets of constants.
  This is the approximate effect and purpose of using 
@@ -1046,20 +1063,25 @@ to see that it takes 26 arithmetic operations—still not terribly appealing
 \begin_inset Formula $LU$
 \end_inset
 
- factorization (upper-lower factorization) algorithm.
+ factorization (lower-upper factorization) algorithm.
  It requires many fewer computations to solve two linear systems, one with
  an upper triangular coefficient matrix and the other with a lower triangular
  coefficient matrix, than it does to solve a single general linear system.
- In general, solving a system with either upper triangular or lower triangular
- coefficient matrix can be done in 
+ In general, solving a system with either an upper triangular or lower triangula
+r coefficient matrix can be done in 
 \begin_inset Formula $O(n^{2})$
 \end_inset
 
  time.
+ The number of computations needed is approximately proportional to 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-If we could factor a general coefficient matrix 
+To review, if we could factor a general coefficient matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1118,7 +1140,7 @@ The process for factoring
 \end_inset
 
  essentially amounts to saving your progress in executing Gaussian elimination
- at the point where 
+ to the point where 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1533,7 +1555,7 @@ or
 \end_inset
 
 .
- Can you verify this? 
+ Can you verify this? Answer on page .
 \end_layout
 
 \begin_layout Standard
@@ -1731,7 +1753,740 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-I
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition"
+
+\end_inset
+
+Provide an 
+\begin_inset Formula $LU$
+\end_inset
+
+ factorization of 
+\begin_inset Formula $M$
+\end_inset
+
+ (no row swaps during row reduction).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+3 & 5\\
+-9 & -14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+5 & -6\\
+-10 & 14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-2 & -6\\
+5 & 35
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+21 & -7\\
+3 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+4 & 24 & 24\\
+1 & -30 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-18 & -36 & -12\\
+12 & 29 & -12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-25 & 10\\
+-20 & -13\\
+5 & -8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-42 & -7\\
+24 & 16\\
+-24 & 26
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-6 & 8 & 4\\
+6 & 4 & -4\\
+-9 & -6 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+21 & -7 & -35\\
+-3 & 37 & 11\\
+-3 & -41 & -10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-1"
+
+\end_inset
+
+Find a permutation matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ and an 
+\begin_inset Formula $LU$
+\end_inset
+
+ factorization of 
+\begin_inset Formula $PM$
+\end_inset
+
+.
+ Use partial pivoting (at least one row swap during row reduction).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-4 & -3\\
+1 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-10 & -9\\
+1 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-7 & 3\\
+6 & -10\\
+8 & -5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+4 & -7\\
+8 & -2\\
+-6 & 12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+8 & -10 & -4\\
+-1 & 2 & 0\\
+-12 & 12 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+10 & 1 & -10\\
+-7 & 3 & -4\\
+5 & -1 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-2"
+
+\end_inset
+
+Use the 
+\begin_inset Formula $LU$
+\end_inset
+
+ decomposition to calculate the determinant of 
+\begin_inset Formula $M$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-3"
+
+\end_inset
+
+Use the 
+\begin_inset Formula $LU$
+\end_inset
+
+ decomposition to calculate the determinant of 
+\begin_inset Formula $M$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-4"
+
+\end_inset
+
+
+\begin_inset Formula $LU$
+\end_inset
+
+ factorizations are not unique.
+ Redo question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ without using row swaps or row scaling, thus producing a factorization
+ where 
+\begin_inset Formula $L$
+\end_inset
+
+ has 
+\begin_inset Formula $1$
+\end_inset
+
+s on its diagonal.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-5"
+
+\end_inset
+
+
+\begin_inset Formula $LU$
+\end_inset
+
+ factorizations are not unique.
+ Redo question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (without using row swaps) but use row scaling so that all the nonzero diagonal
+ entries of 
+\begin_inset Formula $U$
+\end_inset
+
+ are 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-6"
+
+\end_inset
+
+Use the fact that 
+\begin_inset Formula $M=LU$
+\end_inset
+
+ to help solve the system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+6 & -6\\
+42 & -35
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+7 & 1
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $U=\left[\begin{array}{cc}
+6 & -6\\
+0 & 7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-6\\
+-21
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-5 & 1\\
+-20 & -2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+4 & 1
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $U=\left[\begin{array}{cc}
+-5 & 1\\
+0 & -6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-23\\
+-14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+4 & 7\\
+4 & 2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+1 & 1
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $U=\left[\begin{array}{cc}
+4 & 7\\
+0 & -5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-2\\
+8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+3 & -7 & -2\\
+-12 & 35 & 7\\
+-6 & 28 & 4
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+-4 & 1 & 0\\
+-2 & 2 & 1
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+3 & -7 & -2\\
+0 & 7 & -1\\
+0 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+0\\
+6\\
+14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-7 & -3 & -5\\
+-7 & -6 & 0\\
+-21 & 6 & -39
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+1 & 1 & 0\\
+3 & -5 & 1
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+-7 & -3 & -5\\
+0 & -3 & 5\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+14\\
+10\\
+63
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+2 & -7 & -4\\
+-4 & 7 & 8\\
+4 & -63 & -6
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+-2 & 1 & 0\\
+2 & 7 & 1
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+2 & -7 & -4\\
+0 & -7 & 0\\
+0 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+5\\
+-17\\
+-43
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-7"
+
+\end_inset
+
+Redo question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ solving 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ directly (without using 
+\begin_inset Formula $L$
+\end_inset
+
+ or 
+\begin_inset Formula $U$
+\end_inset
+
+) instead.
+ Compare the labor involved in the two methods.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-8"
+
+\end_inset
+
+Find the inverse of the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by computing 
+\begin_inset Formula $U^{-1}L^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with decomposition 
+\begin_inset Formula $LU$
+\end_inset
+
+ where 
+\begin_inset Formula $L$
+\end_inset
+
+ has 
+\begin_inset Formula $1$
+\end_inset
+
+s on its diagonal.
+ Compute precisely the number of arithmetic operations (additions, subtractions,
+ multiplications, and divisions) needed to solve the system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ using the 
+\begin_inset Formula $LU$
+\end_inset
+
+ decomposition.
+ It will be a quadratic function of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Rank factorization.
+ Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix of rank 
+\begin_inset Formula $k\leq\min\{m,n\}$
+\end_inset
+
+.
+ Argue that there are matrices 
+\begin_inset Formula $P,C,F$
+\end_inset
+
+ where 
+\begin_inset Formula $PM=CF$
+\end_inset
+
+; 
+\begin_inset Formula $P$
+\end_inset
+
+ is a permutation matrix; 
+\begin_inset Formula $C$
+\end_inset
+
+ is 
+\begin_inset Formula $m\times k$
+\end_inset
+
+; and 
+\begin_inset Formula $F$
+\end_inset
+
+ is 
+\begin_inset Formula $k\times n$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1755,7 +2510,87 @@ Answers
 \end_layout
 
 \begin_layout Description
-e
+LU-factorization
+\begin_inset space ~
+\end_inset
+
+verified 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-verified"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+PM=\left[\begin{array}{cccc}
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0\\
+1 & 0 & 0 & 0
+\end{array}\right]\left[\begin{array}{cccc}
+18 & -35 & -4 & -56\\
+-14 & 21 & 4 & 42\\
+6 & -7 & -1 & -23\\
+6 & -9 & -2 & -18
+\end{array}\right]=\left[\begin{array}{cccc}
+6 & -9 & -2 & -18\\
+6 & -7 & -1 & -23\\
+-14 & 21 & 4 & 42\\
+18 & -35 & -4 & -56
+\end{array}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+LU=\left[\begin{array}{cccc}
+3 & 0 & 0 & 0\\
+3 & 1 & 0 & 0\\
+-7 & 0 & 1 & 0\\
+9 & -4 & -9 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\\
+0 & 2 & 1 & -5\\
+0 & 0 & -\frac{2}{3} & 0\\
+0 & 0 & 0 & -22
+\end{array}\right]
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{align*}
+(LU)_{1,:} & =3\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\end{array}\right]=\left[\begin{array}{cccc}
+6 & -9 & -2 & -18\end{array}\right]\\
+(LU)_{2,:} & =3\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\end{array}\right]+1\left[\begin{array}{cccc}
+0 & 2 & 1 & -5\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+6 & -7 & -1 & -23\end{array}\right]\\
+(LU)_{3,:} & =-7\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\end{array}\right]+1\left[\begin{array}{cccc}
+0 & 0 & -\frac{2}{3} & 0\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+-14 & 21 & 4 & 42\end{array}\right]\\
+(LU)_{4,:} & =9\left[\begin{array}{cccc}
+2 & -3 & -\frac{2}{3} & -6\end{array}\right]-4\left[\begin{array}{cccc}
+0 & 2 & 1 & -5\end{array}\right]\\
+ & \phantom{=}-9\left[\begin{array}{cccc}
+0 & 0 & -\frac{2}{3} & 0\end{array}\right]+1\left[\begin{array}{cccc}
+0 & 0 & 0 & -22\end{array}\right]\\
+ & =\left[\begin{array}{cccc}
+18 & -35 & -4 & -56\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
