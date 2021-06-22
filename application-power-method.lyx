@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -100,76 +109,158 @@ The Power Method []
 \end_layout
 
 \begin_layout Standard
-A great deal of numerical methods are concerned with approximating numbers
- when those numbers cannot be computed exactly.
- The roots of the modest-looking function 
-\begin_inset Formula $f(x)=x^{5}-x-1$
+Students typically learn about the quadratic formula in high school if not
+ earlier.
+ It gives a formula for the solutions of the equation
+\begin_inset Formula 
+\[
+ax^{2}+bx+c=0
+\]
+
 \end_inset
 
- is an example.
- It is a result of Galois theory that there are unsolvable fifth degree
- polynomials, and 
-\begin_inset Formula $f$
+(the roots of 
+\begin_inset Formula $f(x)=ax^{2}+bx+c$
 \end_inset
 
- is one such quintic.
- However, being a fifth degree polynomial with rational coefficients, it
- must have at least one real root.
- We just can't write down an exact expression for it.
- On the other hand, there are a host of numerical methods that can approximate
- the root to any desired precision.
- For example, if we set 
-\begin_inset Formula $x_{0}=1$
-\end_inset
-
- and let 
-\begin_inset Formula $x_{i+1}=x_{i}-\frac{f(x_{i})}{5x_{i}^{4}-1}$
-\end_inset
-
-, we can generate a sequence of approximations.
- 
-\begin_inset Formula $x_{1}=x_{0}-\frac{f(x_{0})}{5x_{0}^{4}-1}=1-\frac{f(1)}{5(1)^{4}-1}=\frac{5}{4}$
+) for any values of 
+\begin_inset Formula $a,b,$
 \end_inset
 
  and 
-\begin_inset Formula $x_{2}=x_{1}-\frac{f(x_{1})}{5x_{1}^{4}-1}\approx1.17846$
+\begin_inset Formula $c$
 \end_inset
 
 .
- Rounded to five decimal places, the sequence 
+ You may remember it as 
+\begin_inset Formula 
+\[
+x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}.
+\]
+
+\end_inset
+
+The formula can also be written as
+\begin_inset Formula 
+\[
+x=\frac{-b\pm\left(b^{2}-4ac\right)^{\frac{1}{2}}}{2a},
+\]
+
+\end_inset
+
+which combines the coefficients of the equation using addition, subtraction,
+ multiplication, division, and rational exponentiation.
+ There are more elaborate formulas for solving the general cubic,
+\begin_inset Formula 
+\[
+a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}=0
+\]
+
+\end_inset
+
+ and the general quartic,
+\begin_inset Formula 
+\[
+a_{4}x^{4}+a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}=0,
+\]
+
+\end_inset
+
+but each one uses nothing more than addition, subtraction, multiplication,
+ division, and radical exponentiation.
+ In other words, any solution of any polynomial equation up to degree four
+ can be written down explicitly and exactly.
+\end_layout
+
+\begin_layout Standard
+A famous result of Galois theory is that there are unsolvable quintics,
+ fifth degree polynomials, and unsolvable polynomials of all higher degrees
+ as well.
+ Their roots have no closed form expression using addition, subtraction,
+ multiplication, division, and rational exponentiation of its coefficients.
+ Their values cannot be written down exactly using traditional operations.
+ The modest-looking 
+\begin_inset Formula $f(x)=x^{5}-10x+2$
+\end_inset
+
+ is a classic example.
+ However, being a fifth degree polynomial with real coefficients, it must
+ have at least one real root.
+ If there is no formula for the root, how can we locate it?
+\end_layout
+
+\begin_layout Standard
+The key is to give up on writing it down explicitly and exactly and to settle
+ for an approximation, and there are a host of numerical methods for doing
+ this.
+ For example, if we set 
+\begin_inset Formula $x_{0}=2$
+\end_inset
+
+ and let 
+\begin_inset Formula $x_{i+1}=x_{i}-\frac{f(x_{i})}{5x_{i}^{4}-10}$
+\end_inset
+
+, we can generate a sequence of approximations that get more and more accurate
+ as we go.
+ 
+\begin_inset Formula $x_{1}=x_{0}-\frac{f(x_{0})}{5x_{0}^{4}-10}=2-\frac{f(2)}{5(2)^{4}-10}=\frac{9}{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}=x_{1}-\frac{f(x_{1})}{5x_{1}^{4}-1}=\frac{9}{5}-\frac{f\left(\frac{9}{5}\right)}{5\left(\frac{9}{5}\right)^{4}-1}\approx1.731847$
+\end_inset
+
+.
+ Rounded to six decimal places each, the sequence 
 \begin_inset Formula $x_{0},x_{1},\ldots$
 \end_inset
 
  begins
 \begin_inset Formula 
 \[
-1,\ 1.25,\ 1.17846,\ 1.16754,\ 1.16730
+2,\ 1.8,\ 1.731847,\ 1.724390,\ 1.724306
 \]
 
 \end_inset
 
 and 
-\begin_inset Formula $1.16730$
+\begin_inset Formula $1.724306$
 \end_inset
 
  is a root of 
 \begin_inset Formula $f$
 \end_inset
 
- accurate to 5 decimal places.
- You may recognize this as Newton's method.
- There is a formula that is applied to some starting value, the output of
- which is then input to the formula, the output of which is then input to
- the formula, and so on, each time feeding the output of the formula into
- the formula as input.
- As the iterations proceed, the output gets closer and closer (we hope!)
- to the desired quantity.
- Such methods are called iterative methods, and there are a number of them
- for linear algebra problems too.
+ accurate to six decimal places.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+You may recognize this as Newton's method.
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
-Let 
+This is an example of an iterative routine.
+ A starting value is given (2 in this case) and a recursive formula 
+\begin_inset Formula $\left(x_{i+1}=x_{i}-\frac{f(x_{i})}{5x_{i}^{4}-10}\right)$
+\end_inset
+
+ is applied to generate the rest of the list.
+ The output of one iteration is input into the formula to calculate the
+ next.
+ As more and more iterations are calculated, the output approaches (we hope!)
+ the desired quantity.
+ There are a number of iterative routines for linear algebra problems too.
+\end_layout
+
+\begin_layout Standard
+For example, let 
 \begin_inset Formula 
 \[
 M=\left[\begin{array}{cc}
@@ -190,7 +281,15 @@ M=\left[\begin{array}{cc}
 \end_inset
 
 .
- Then
+ With the initial value 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ and recursive formula, 
+\begin_inset Formula $\mathbf{v}_{i+1}=M\mathbf{v}_{i}$
+\end_inset
+
+, we can compute a sequence of vectors:
 \begin_inset Formula 
 \begin{align*}
 \mathbf{v}_{1} & =M\mathbf{v}_{0}=\left[\begin{array}{cc}
@@ -298,13 +397,13 @@ noprefix "false"
 \begin_inset Formula $\mathbf{v}_{i}$
 \end_inset
 
- is marked with a point, but 
+ is marked with a point though it is difficult to see since 
 \begin_inset Formula $\mathbf{v}_{0},\mathbf{v}_{1},\ldots,\mathbf{v}_{6}$
 \end_inset
 
  are nearly on top of one another.
- Nonetheless, the figure ilustrates what is happening.
- The slopes of the lines are converging.
+ Nonetheless, the figure illustrates what is happening.
+ The slopes of the lines are converging (approaching a particular value).
  The last three lines, 
 \begin_inset Formula $\{r\mathbf{v}_{8}:r\in\mathbb{R}\}$
 \end_inset
@@ -317,7 +416,7 @@ noprefix "false"
 \begin_inset Formula $\{r\mathbf{v}_{10}:r\in\mathbb{R}\}$
 \end_inset
 
- all seem to more or less lie on the line 
+ all seem to lie more or less on the line 
 \begin_inset Formula $y=-\frac{1}{2}x$
 \end_inset
 
@@ -334,7 +433,10 @@ noprefix "false"
 
  if you prefer).
  Further iteration will reveal more of the same.
- What if 
+\end_layout
+
+\begin_layout Standard
+What if 
 \begin_inset Formula $\mathbf{v}_{0}$
 \end_inset
 
@@ -348,7 +450,12 @@ noprefix "false"
 -2 & 1\end{array}\right]^{T}$
 \end_inset
 
- too? Answers on page 
+ too? Answers with 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{cc}
+1 & 1\end{array}\right]^{T}$
+\end_inset
+
+ on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:different-v0"
@@ -489,27 +596,36 @@ or in short
 
 \begin_layout Standard
 Sit back and think about this for a moment.
- We started with a seemingly arbitrary matrix and a (pretty shabby) approximatio
-n of one of its eigenvectors.
- We then proceeded to multiply this vector (and its products) by 
+ We started with a seemingly arbitrary matrix and a pretty shabby approximation
+ of one of its eigenvectors.
+ We then proceeded to multiply the (shabby) approximation by 
 \begin_inset Formula $M$
 \end_inset
 
-, the result of which was a very good approximation of an eigenvector of
- 
+, the resulting product by 
+\begin_inset Formula $M$
+\end_inset
+
+ again, the resulting product by 
+\begin_inset Formula $M$
+\end_inset
+
+ again, and so on, the final result of which was a very good approximation
+ of an eigenvector of 
 \begin_inset Formula $M$
 \end_inset
 
 .
  With a computer at hand to do the calculation, this is a whole lot easier
  than solving a characteristic equation.
- More importantly, though, as noted earlier, general polynomials of degree
- five or higher cannot be solved exactly.
+ More importantly, though, remember general polynomials of degree five or
+ higher cannot be solved exactly.
  This means eigenpairs for square matrices of size 
 \begin_inset Formula $5\times5$
 \end_inset
 
- and up canonot generally be found exactly.
+ and up cannot generally be found exactly as their characteristic polynomials
+ are fifth degree or higher.
  Numerical methods must be used!
 \end_layout
 
@@ -686,7 +802,11 @@ On a practical note, implementation of the method will include scaling
 \end_inset
 
  will be scaled by 
-\begin_inset Formula $\max\{|(\mathbf{v}_{k})_{j,1}|:j=1,2,\ldots,n\}$
+\begin_inset Formula 
+\begin{equation}
+\max\{|(\mathbf{v}_{k})_{j,1}|:j=1,2,\ldots,n\}\label{eq:scale-factor}
+\end{equation}
+
 \end_inset
 
  so that the magnitude of the greatest (or least) entry of 
@@ -943,194 +1063,1451 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Find the dominant eigenvalue.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method"
+
+\end_inset
+
+Find the dominant eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+11 & -4\\
+-6 & 9
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-4 & 2\\
+-3 & -9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+5 & 2\\
+1 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+5 & 1\\
+2 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-27 & -29 & 39\\
+30 & 32 & -45\\
+4 & 4 & -7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-25 & 129 & -72\\
+1 & -17 & 8\\
+9 & -69 & 36
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwNxyEOgDAMQNGrTELyJ7p2bREcgRMQBBKBIQiO
+z8xL3lbWcp_vc32TYeySnXAWnNpDqU1tEFRJoiktExXGTAJxRzpix_wDgZkQBA==&lang=sage&inter
+acts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+185 & 76 & 9 & 6\\
+-573 & -234 & -27 & -18\\
+723 & 288 & 31 & 18\\
+417 & 166 & 15 & 14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDRMdGJ1rXQ0TU30gEiXQMd
+XWNLHV1DQwMdCwsdYyjPyEzH0MAEyDUC0kDFII6uoUWsJgB5OQ_D&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-8 & -72 & 72 & -0\\
+-39 & -110 & 88 & 3\\
+-39 & -126 & 104 & 3\\
+2 & 108 & -104 & -18
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-1"
+
+\end_inset
+
 Does the matrix have a dominant eigenvalue?
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-Here are the first 6 terms of 
+\begin_inset Formula $\left[\begin{array}{cc}
+-3 & 5\\
+-1 & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+19 & 12\\
+-28 & -19
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJNjMx1DEyMtXRNTU2
+0NE1NwayjMwtdcyAPGMzAx1DI6CosaVZrCYAjDkMrw==&lang=sage&interacts=eJyLjgUAARUAuQ=
+=}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+641 & 225 & -530\\
+-735 & -279 & 630\\
+360 & 120 & -396
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJ1jU21dE11TE00NE1
+NDbXMdQxtdDRNTfTsdAxNInVBAALEgp8&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+-35 & -5 & 10\\
+-137 & 1 & 58\\
+-76 & 8 & 14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJ1jXT0TU01NE1NtIx
+N9LRNbMAco1AhIUOUNgiVhMAKroLBw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+-6 & -11 & -32\\
+72 & -68 & -128\\
+-18 & 11 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJw1izEOAkEMA79yJUiOtE68yV3BE3gBoqCkoEEU
+PJ9sQWePx9ftsr0en_fze5qYuFlqQjFgqgD9gMVesDkTymxMh_VMqSmJzAZSNGqbWjIL5Ej46P--2kre
+tjEEr_rbx_38A0HvGu0=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccccc}
+-645 & 430 & -473 & 129 & -387\\
+-556 & 466 & -412 & -0 & -144\\
+-511 & 662 & -443 & -129 & 147\\
+-517 & 1106 & 209 & -817 & 1209\\
+211 & -134 & 277 & -129 & 149
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-2"
+
+\end_inset
+
+The sixth term of the sequence defined by an initial vector, 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+, and the recurrence 
 \begin_inset Formula $\mathbf{v}_{k}=M\mathbf{v}_{k-1}$
 \end_inset
 
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Create examples and rephrase.
- 
-\end_layout
-
-\end_inset
-
- Estimate an eigenpair.
-\end_layout
-
-\begin_layout Enumerate
-Here are the first 6 terms of 
-\begin_inset Formula $\mathbf{v}_{k}=\frac{M\mathbf{v}_{k-1}}{\Vert M\mathbf{v}_{k-1}\Vert_{\infty}}$
+ is given.
+ Use this information to estimate an eigenpair of 
+\begin_inset Formula $M$
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Create examples and rephrase of first 6 terms of the power method.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-12 & -5\\
+16 & 6
+\end{array}\right]$
 \end_inset
 
- Estimate an eigenpair.
+; 
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+-467\\
+742
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset ERT
-status open
+\begin_inset Formula $M=\left[\begin{array}{cc}
+13 & 9\\
+-3 & 1
+\end{array}\right]$
+\end_inset
 
-\begin_layout Plain Layout
+; 
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+9311\\
+-3061
+\end{array}\right]$
+\end_inset
 
 
-\backslash
-sage
-\backslash
- 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-11 & 30\\
+-5 & 14
+\end{array}\right]$
 \end_inset
 
-Find 
-\begin_inset Formula $\mathbf{v}_{10}$
+; 
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+4099\\
+2049
+\end{array}\right]$
 \end_inset
 
- and 
-\begin_inset Formula $M\mathbf{v}_{10}$
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+19 & 3 & -36\\
+-57 & 15 & 148\\
+18 & -2 & -42
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+-27787\\
+46793\\
+-18613
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+44 & 27 & -4\\
+0 & 86 & -16\\
+0 & -30 & 90
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+128272\\
+177760\\
+-52800
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-128 & 215 & -40\\
+-90 & 177 & -40\\
+-400 & 394 & 65
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+-9793\\
+-9793\\
+7499
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-3"
+
+\end_inset
+
+Calculate 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{v}_{11}$
 \end_inset
 
  of the power method.
- Does it seem that the method will converge? You may use the code at 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Provide link 
+ Does it seem that the method will converge?
 \end_layout
 
-\end_inset
-
-.
-\end_layout
-
+\begin_deeper
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-sage
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJNjLWMdExNtAxMozV
+5OUqA8qWpSaX5BdpRBsaamnpWuhAKJBkWn6RQqZCZp5CUWJeeqqGoaGmFS-XAhCAdPlqlUE4BUWZeSUa
+ZZoAc-caCg==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
 
 \end_inset
 
-Redo question 3 find 
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+23 & 4\\
+30 & 21
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+11^{-8}\\
+11^{-8}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJNtIx1DHR0TWM1eTl
+KgPKlaUml-QXaQDFTUFCaflFCpkKmXkKRYl56akahoaaVrxcCkAAUuurVQbhFBRl5pVolGkCAHDQF9E=
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+2 & 1\\
+4 & -1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+2\\
+5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJNjTXMTbQ0bXQ0TU0
+j9Xk5SoDypelJpfkF2lEm2tpASUMQMJp-UUKmQqZeQpFiXnpqRqGhppWvFwKQABS76tVBuEUFGXmlWiU
+aQIAGgYZWg==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+17 & 30\\
+-8 & -17
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+7^{-8}\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJ1jXR0TXWMdUxidXk
+5SoDSpalJpfkF2lEG-sYgYTS8osUMhUy8xSKEvPSUzUMDTWteLkUgACk1lerDMIpKMrMK9Eo0wQAhQAY
+BA==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-4 & -3\\
+5 & 4
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+3\\
+2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJ1jUy1DEy0NE1BGJj
+Ax0TQx1dI1MgNtExAYoYWcZq8nKVAfWUpSaX5BdpRFtqaela6CCRIAVp-UUKmQqZeQpFiXnpqRqGhppW
+vFwKQADS6atVBuEUFGXmlWiUaQIA5Rse7Q==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-21 & 20 & -10\\
+-30 & 41 & -25\\
+-24 & 40 & -29
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+9^{-8}\\
+9^{-8}\\
+9^{-8}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJNjTU0TXRMTTQMdMx
+BFG6xjpGOgaxmrxcZUCVZanJJflFGtGG-qY6uiACiEFyaflFCpkKmXkKRYl56akahoaaVrxcCkAA0uSr
+VQbhFBRl5pVolGkCAGa8HBk=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+11 & -4 & 10\\
+6 & 1 & 10\\
+-3 & 2 & 0
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+\frac{1}{5}\\
+-\frac{1}{5}\\
+\frac{1}{5}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwli0EKgzAQRfeCd5hlEn4g42CkBY_gCaQLKbZk
+0ViGEHr8Rnyr__i8hWb6bEXTzwgEq4-CCUOA5wg_RnBoe8QAL9PD9l1tQd2f5VCzBrA4528I5_M6lBKl
+TLrl926Y7b3vqHEmi6uXfDXlYqr9A-DPHRQ=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-63 & 7 & 20\\
+-16 & -56 & 100\\
+-5 & 2 & -37
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+0\\
+13^{-9}\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJ1jXRMQJCEyBb11BH
+1wLINovV5OUqA6orS00uyS_SiDYEChqDBNPyixQyFTLzFIoS89JTNQwNNa14uRSAAKTaV6sMwikoyswr
+0SjTBACRSxps&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-4 & 2 & 2\\
+4 & 3 & -1\\
+-8 & 2 & 6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-5"
+
+\end_inset
+
+Calculate 
+\begin_inset Formula $\mathbf{v}_{6}$
+\end_inset
+
+ through 
 \begin_inset Formula $\mathbf{v}_{100}$
 \end_inset
 
- and 
-\begin_inset Formula $M\mathbf{v}_{100}$
+ for the matrix and vector 
+\begin_inset Formula $\mathbf{v}_{5}$
 \end_inset
 
- instead.
- Does it seem that the method will converge? You may use the code at 
-\begin_inset Note Note
-status open
+ of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-2"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Plain Layout
-TODO: Provide link
+\end_inset
+
+, implementing the scaling procedure suggested in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:scale-factor"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Use this information to find an eigenpair of 
+\begin_inset Formula $M$
+\end_inset
+
+ exactly.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxFi0EKgzAQRfeCdwhZTdqxNcFGEHqALjyBSJGi
+ZUCTMg1De_sqXfh37z1-q65qGRLTBxw67ArrsLig9eh7k2eyZhkfKTJ0ReVrrCu3-SmyIkVB8RCeI3i0
+pTVNnql126c9yA5yllOIvMAtTBQofc2_vZhCAi13fXwnBjKoGwUapzkOCaQr-9XgznZjo80PXzwvFg==
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxFy8EKgkAQxvG74DsMe5qtqRwFQaEH6OATiISE
+xkDuxrQs9fatdXBu__nxdXCGZQwqbyyppJ4rauhQEQ82z2LCON2CV-ybijlBUf9k9goC4kBHd5-wJi7Y
+tnkG6dZVt4tbxFM8Oq8LXtwsTsLH_u2p4gKaeDX7V1AUS6YFNDQ__Bgw9sWQPrQ1r22N_QJfQi8P&lan
+g=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxFi0EKwjAQRfdC7zBkNdGpJrUKLXgAFz1BKVKk
+lQGbyBgGvb0tLvp37z9eAxeY-iT8wYIKanPv6egoP5EvO5ttdPY63FMUbEtXVVS4slrEGAUYOID04THg
+mbzzts42MG-Jmq2uoAfdhygTXsPIgdPX_t1LOCQ0ejO7dxJkS6YGNDQ-Y59QW9fND63sF7bG_gCpzS96
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdi0EKwjAQRfdC7xCySnSinaRt0oIHcNETlCJF
+WgnYVGIIentTXBScxYf3_7yWnMk8BG_fTIGCDuuUQlUgSg1YAhYG0ICQIArZ82wXkxDHW1g864TU2mgo
+Kl0nCU2Fan2ZFk8ssY74wd1HVgHmyJtsR9KteruPG8RTPLrFz-ziJuts-PDf9vTWBUbjlR5ewTPLgTaE
+UZgeyxBY7PI-NbAx_rFcmVP-BWntOVg=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdjUEKwjAQRfeF3iFkNdGpJmlNasEDuOgJikiR
+tgRsIjEEvb2pLgrO6j_--0xLTmTugzcvKLHErqpQaiwq5FgrLIRKoSg5HvmF5VlMdhxuwXnohKyllii0
+1io5B1nzrzM6TwwxlvjeTgMoFFywJs9IumXfbuIKcR931vkZznY01oQ3-3UPb2wAGq90-wweDEPaEKA4
+3l0fIHbpE1JcWfyxXJhR9gEDvjjg&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdi0EKwjAURPdC7xCy-tEfTdq0MQUP4KInKEWK
+tBKwicQQ9Pa2dFFwFsO8GaYhFzL1MdgPFFhgy2V-xlyWyJVAbgRKrdeshMDCKKzKjmW7NP_ScI8-QMuN
+NgWurpUxyz76QCyxjoTePQaoUArJ6mxHZi3fZp82SKd0dD5McHWjdTZ-2bq9gnURaLrRwzsGsAxpTYDi
+-PR9hNSKbm5wY_nH-cKMsh8e7Don&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-6"
+
+\end_inset
+
+The algebraic multiplicity of an eigenvalue is its multiplicity as a root
+ of the characteristic polynomial.
+ The geometric multiplicity of an eigenvalue is the dimension of its eigenspace.
+ They are equal when the algebraic multiplicity is one, and the geometric
+ multiplicity is always less than or equal to the algebraic multiplicity.
+ Given are the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, its characteristic polynomial 
+\begin_inset Formula $p$
+\end_inset
+
+, and the geometric multiplicity, 
+\begin_inset Formula $g$
+\end_inset
+
+ of the dominant eigenvalue.
+ (i) State the dominant eigenvalue of 
+\begin_inset Formula $M$
 \end_inset
 
 .
- Compare your answer to your answer in question 3.
+ (ii) State the algebraic multiplicity of the dominant eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ (iii) Apply the power method.
+ Does it produce an (approximate) eigenvector? (iv) Apply the power method
+ with a different initial vector.
+ Does it produce an (approximate) eigenvector? Is this the same result as
+ before?
 \end_layout
 
-\begin_layout Standard
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
 
-\series bold
-Dominant eigenvalue has multi-dimensional eigenspace
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxljt1qwjAYhs8F7yHkKNE3W_7aTsEL2IFXUIoU
+sRKY6chC2O5-31odBQOB5_3h5TuyA7v1OYVv4eHRKmuh_BvUTtPfQTnSVQ3fwNdE5Ho9OcpVaCwM5bWj
+ru_kelVorlzOeUyiNbBwmOxhTCywEFnq4_Uimkru1ytG769_3JTnRg2jzVPrIcpreYljuon3OIQY8o-8
+Z8PH2OfFDZMWpdWdxIPNgu2CXSe7-85nCjELXk58-5WTCBJ8zzGvU2WO_4HTbSejNTtwEM6tX_6eW7U=
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-22 & -48 & -90 & -99\\
+-32 & -56 & 47 & 46\\
+-50 & -40 & -56 & -35\\
+72 & 12 & -63 & -94
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p(\lambda)=(\lambda+76)^{2}(\lambda+57)(\lambda+19)$
+\end_inset
+
+; 
+\begin_inset Formula $g=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxljtGKwjAQRd8F_yHkKVlv10zapij4AfvgF5Qi
+ZbES0HTJhqB_v-NWpWBgwpm5h2H2YicufYr-qipUaIkI5DYoSi6yNYNBUTVwsBa0qVESDxqLwnJSsoTC
+8e86vVxk3paP32mMqiVYjqv7eBij8MIHEftwOqqm1tvlQvC7-_uP_G44kKE369nkdf4MY7yorzD44NNN
+P7LhPPZpdsN_r3JrOo0n04ztjMtOd489P9GHpGQ-yNVvispryK3EtJ2VKX6B5NsOZIzYSTBO1h-m4ltx
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+111 & 169 & -39 & -125\\
+-30 & -47 & 6 & 22\\
+195 & 310 & -72 & -230\\
+3 & -1 & -6 & -16
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p(\lambda)=(\lambda+12)^{2}(\lambda+3)(\lambda-3)$
+\end_inset
+
+; 
+\begin_inset Formula $g=1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-7"
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ is not diagonalizable (does not admit 4 linearly independent eigenvectors—see
+ section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Similarity-and-Diagonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) but has a dominant eigenvalue with a 1-dimensional eigenspace.
+ Apply the power method anyway.
+ Does it work?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxljkFqwzAQRfeB3EFoJbVfrTSWFSeQA3SRExgT
+TImDoJGDIkR7-8p1UgyZ1Zt5n88c2J5d-hT9t7CwaJWpHMhqKGsbVDWhaaCMIVDtoEg3ILJQk3EbgqqL
+MtW2KHKwRSvauk6uV7k059NnGqNoDQgV7HQexsg884HFPpxPYlPL3XrFykz5w0t-TjgYbZ5SjyW_57cw
+xov4CIMPPv3Iuxu-xj4tfvjbRW51J_Fgs2BacNXJ7t5zjT4kwfORv95SFF6C7zjm9hKZ9T_w8tvRaM32
+HAXn1C8eFF31&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+-136 & 240 & -448 & 352\\
+88 & -112 & 256 & -208\\
+224 & -352 & 672 & -512\\
+139 & -226 & 408 & -296
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxljtEKwjAMRd8F_6H0qdWoTde6KfgBPvgFY8iQ
+TQraSS1F_97MqQwMJNyTXC45sB271jG4hzBgoEQDC8xoUNsNYEH43hFaMIQWNSzWBWiCnjNLbBRgris5
+nSQKTM0pdkGUCBoyMP267QJzzHkWan9uRG7ldjphVL3_MEv_jjWgwj_XF9IqLX0XrmLvW-ddfMrPrb10
+dRz98GaRSlVJ-GocaT3SWSWrT84tOB8FT0c-v8cgnAS-5TCkk2U4_wSn346oFNtxIDm4XpiCXCc=&lan
+g=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+14 & -134 & -34 & 59\\
+18 & -114 & -14 & 55\\
+48 & -512 & -68 & 248\\
+48 & -352 & -40 & 172
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-8"
+
+\end_inset
+
 The dominant eigenvalue of 
 \begin_inset Formula $M$
 \end_inset
 
- has a 2-dimensional eigenspace (algebraic multiplicity = geometric multiplicity
- = 2).
- Apply the power method anyway.
- Does it work?
+ has algebraic multiplicity 2 but only a 1-dimensional eigenspace.
+ 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+1528 & 876 & 736 & -436\\
+-1530 & -870 & -1080 & 360\\
+-431 & -267 & 124 & 197\\
+782 & 618 & 500 & 76
+\end{array}\right]
+\]
+
+\end_inset
+
+The entrywise quotient of 
+\begin_inset Formula $M^{65537}$
+\end_inset
+
+ by 
+\begin_inset Formula $M^{65536}$
+\end_inset
+
+ is (approximately)
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+390 & 390 & 390 & 390\\
+390 & 390 & 390 & 390\\
+390 & 390 & 390 & 390\\
+390 & 390 & 390 & 390
+\end{array}\right].
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-Matrix not diagonalizable
-\end_layout
-
-\begin_layout Enumerate-Resume
+\begin_deeper
+\begin_layout Enumerate
+What does this say about the eigenvalues of 
 \begin_inset Formula $M$
 \end_inset
 
- is not diagonalizable but has a dominant eigenvalue with multiplicity 1
- (1-dimensional eigenspace).
- Apply the power method anyway.
- Does it work?
+?
+\end_layout
+
+\begin_layout Enumerate
+What does this say about the eigenvectors of 
+\begin_inset Formula $M$
+\end_inset
+
+? HINT: think about the columns of 
+\begin_inset Formula $M^{65536}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What does this say about the power method applied to 
+\begin_inset Formula $M$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtT71uwyAQ3iPlHU6ZoDocMBCniTp08NAhS9eo
+iqwYWwzGFXJo-_Y9msitonI64I77fjjAEwzNFP0nM2jwqEpUFepHFNaiRNqMRUFpJCqNpUaxqXJht1hJ
+FEqZN75cJKJJ7jyNkR1VQaM58kM3RvDgA8Qm9I4pKfluuQBaGXJ4SL9FWqcijHFgL6HzwU9fBH-PPkxs
+lU4E3K3mRqJbfe-cZC2WFBI1pbDkQRjq6R879J1sqG4uPSHrgs7BEdfMoTDxWYHv4ab9fJ1zLTjfu3D9
+5U35j6XM-w_6dfyA6NrL2bV3w0WMrmOcfwMW4mh9&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-9"
+
+\end_inset
+
+The eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ are 
+\begin_inset Formula $-4,-20,-28,$
+\end_inset
+
+ and 
+\begin_inset Formula $28$
+\end_inset
+
+ so 
+\begin_inset Formula $M$
+\end_inset
+
+ does not have a dominant eigenvalue.
+ It has two different eigenvalues with maximum magnitude.
+ Running the power method with scaling as in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:scale-factor"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) with the given 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ anyway gives 
+\begin_inset Formula $\mathbf{v}_{100}$
+\end_inset
+
+ as shown.
+ Express 
+\begin_inset Formula $\mathbf{v}_{100}$
+\end_inset
+
+ as a linear combination of the eigenvectors 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+3\\
+-4\\
+1
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+0\\
+5\\
+5
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+-5\\
+3\\
+0
+\end{array}\right]$
+\end_inset
+
+ (corresponding to the eigenvalues 
+\begin_inset Formula $-4,-20,-28,28$
+\end_inset
+
+ in that order) of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cccc}
+12 & 17 & 39 & -55\\
+0 & 55 & 45 & -45\\
+40 & 13 & 23 & -67\\
+40 & 58 & 70 & -114
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+1\\
+1\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{100}\approx\left[\begin{array}{c}
+-0.477419\\
+0.483871\\
+-1\\
+-0.709677
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+What does this say about 
+\begin_inset Formula $\mathbf{v}_{100}$
+\end_inset
+
+.
+ What does this say about the power method applied to 
+\begin_inset Formula $M$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-4"
+
+\end_inset
+
+Find the eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Use the information to supply an explanation of why the power method did/did
+ not seem to converge.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Failure
-\end_layout
+Exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-10"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Enumerate-Resume
-Dominant eigenvalue with algebraic mult greater than geom multiplicity (dim
- of nullspace of 
-\begin_inset Formula $M-\lambda I$
 \end_inset
 
-).
- Compute 
-\begin_inset Formula $M^{\text{high power}}$
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-13"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- and look at columns.
- Is there an eigenvector?
+ describe the inverse power method and supply one example.
 \end_layout
 
 \begin_layout Enumerate-Resume
-Two eigenvalues with the same modulus/absolute value (alg mult 1 each).
- Run the method anyway.
- Do you get a linear combination of the two eigenvectors?
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-10"
 
-\begin_layout Standard
+\end_inset
 
-\series bold
-The inverse power method
-\end_layout
-
-\begin_layout Enumerate-Resume
 Show that if 
 \begin_inset Formula $\lambda,\mathbf{v}$
 \end_inset
@@ -1155,6 +2532,12 @@ Show that if
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-11"
+
+\end_inset
+
 Show that if 
 \begin_inset Formula $\lambda,\mathbf{v}$
 \end_inset
@@ -1175,6 +2558,12 @@ Show that if
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-12"
+
+\end_inset
+
 Combine 11 and 12 to show that if 
 \begin_inset Formula $\lambda,\mathbf{v}$
 \end_inset
@@ -1203,16 +2592,41 @@ Combine 11 and 12 to show that if
 \end_layout
 
 \begin_layout Enumerate-Resume
-2 is a good estimate of one of the non-dominant eigenvalues of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxNjsFuwyAMQO-V-g9WTxCZDAxJmk475NhDvqDq
+pqqjE4eSiiK0_f0cLVsHkmU_2w9GeIHrKafwKRw6PDTbBlVjUVnNYUsdEhm0PSrTtaiotWjahrjPVe8c
+I9Jz7OeuQ9MT2lYf5Xo1sFqMoIA0VMsjdXj3MYf8JZyUdYjFp7sXPHxLIWaxEaMivZevysBuI5_hBw9_
+GU8W1hZ_zlMSB1NrNPM9PhTlTfMuFiaXKUGAECGd4ocXndytV8BnVgxVeRTlqdRxSlexj5cQ-Xv_dd2v
+biFjtTBO5DfLwFE_&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-13"
+
+\end_inset
+
+20 is a good estimate of one of the non-dominant eigenvalues of 
 \begin_inset Formula $M$
 \end_inset
 
 .
  Apply the power method to 
-\begin_inset Formula $(M-2I)^{-1}$
+\begin_inset Formula $(M-20I)^{-1}$
 \end_inset
 
- to find the eigenvalue and an associated eigenvector.
+ to find approximations of the eigenvalue and an associated eigenvector.
 \end_layout
 
 \begin_layout Standard
