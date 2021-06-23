@@ -111,7 +111,7 @@ Intuitively, we might think of area as the amount of paint needed in painting
 \end_layout
 
 \begin_layout Standard
-Calculating the areas of a shapes (assigning numbers to areas) is another
+Calculating the areas of shapes (assigning numbers to areas) is another
  story.
  We certainly are not going to require that to find the area of an object
  it needs to be painted and the amount of paint used measured.
@@ -121,12 +121,11 @@ Calculating the areas of a shapes (assigning numbers to areas) is another
  a rather undesirable situation.
  The area of a shape should be uniquely determined.
  A single shape has but a single size, and so it must have but a single
- measure of its size.
+ measure of its size—like the area formulas presented in grammar school.
 \end_layout
 
 \begin_layout Standard
-A number of area formulas are presented in grammar school.
- The area of a rectangle is its length times width.
+The area of a rectangle is its length times width.
  The area of a triangle is one half its base times height.
  The area of a circle is 
 \begin_inset Formula $\pi$
@@ -135,11 +134,9 @@ A number of area formulas are presented in grammar school.
  times the square of its radius.
  Trapezoids, parallelograms, regular polygons, and unions of such shapes
  have calculable areas.
- Doesn't that pretty much cover it? As you might have imagined by now, the
- answer is no.
- For a simple example, take an arbitrary nonempty overlap between a square
- and circle where neither is the circle contained within the square nor
- is the square contained within the circle.
+ But what about more complex shapes? For example, take an arbitrary nonempty
+ overlap between a square and circle where neither is the circle contained
+ within the square nor is the square contained within the circle.
  See figure 
 \begin_inset Float figure
 wide false
@@ -203,7 +200,7 @@ noprefix "false"
  and adding up the areas of those rectangles, the area can be approximated
  more and more accurately.
  The limit of these areas as the widths of the approximating rectangles
- aproaches zero is the area of the overlap.
+ approach zero is the area of the overlap.
  If you've taken calculus, that probably reminds you of integration, and
  it should! If you have not taken calculus, that probably sounds rather
  confusing and complicated, and it should! That is really the point.
@@ -444,7 +441,7 @@ In general, the image of a set
 \end_inset
 
 .
- This definition typical in all of mathematics, not just linear algebra,
+ This definition is typical in all of mathematics, not just linear algebra,
  and applies no matter the sets 
 \begin_inset Formula $A$
 \end_inset
@@ -454,7 +451,6 @@ In general, the image of a set
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -474,7 +470,7 @@ To understand how the linear transformation
 \begin_inset Formula $A=E_{p}\cdots E_{2}E_{1}$
 \end_inset
 
-, as we have done before assuming 
+, as we have done before, assuming 
 \begin_inset Formula $A$
 \end_inset
 
@@ -922,7 +918,17 @@ The determinant and eigenvalues of
 \begin_inset Formula $P$
 \end_inset
 
-.
+ (see theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:similar-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Enumerate
@@ -946,11 +952,21 @@ For any
 \begin_inset Formula $P^{-1}AP$
 \end_inset
 
- is upper triangular.
+ is upper triangular (see crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:triangularization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
-Assuming these facts true for a moment, if 
+Given these two facts, if 
 \begin_inset Formula $U=P^{-1}AP$
 \end_inset
 
@@ -966,7 +982,17 @@ Assuming these facts true for a moment, if
 \begin_inset Formula $U$
 \end_inset
 
- by fact 1.
+ by fact 1 (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:similar-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  Now if 
 \begin_inset Formula $P$
 \end_inset
@@ -1001,73 +1027,6 @@ Assuming these facts true for a moment, if
 \end_layout
 
 \begin_layout Standard
-Justification of fact 2 takes a bit of work (see crumpet 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "dig:triangularization"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), but fact 1 can be justified in reasonably short order.
- To show that the eigenvalues of 
-\begin_inset Formula $P^{-1}AP$
-\end_inset
-
- are the same as the eigenvalues of 
-\begin_inset Formula $A$
-\end_inset
-
- is a matter of a calculation.
- For any value 
-\begin_inset Formula $\lambda$
-\end_inset
-
-,
-\begin_inset Formula 
-\begin{align*}
-\det(P^{-1}AP-\lambda I) & =\det(P^{-1}AP-P^{-1}(\lambda I)P)\\
- & =\det(P^{-1}(A-\lambda I)P)\\
- & =\det(P^{-1})\cdot\dot{\det(A-\lambda I)}\cdot\det P\\
- & =\det(A-\lambda I)
-\end{align*}
-
-\end_inset
-
-so the characteristic equations of 
-\begin_inset Formula $P^{-1}AP$
-\end_inset
-
- and 
-\begin_inset Formula $A$
-\end_inset
-
- are equal making the eigenvalues of 
-\begin_inset Formula $P^{-1}AP$
-\end_inset
-
- and 
-\begin_inset Formula $A$
-\end_inset
-
- equal.
- Can you show that 
-\begin_inset Formula $\det(P^{-1}AP)=\det A$
-\end_inset
-
-? Answer on page 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "ans:equal-determinants"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
 \begin_inset ERT
 status open
 
@@ -1129,7 +1088,7 @@ For a square matrix
 \end_inset
 
  matrix for some 
-\begin_inset Formula $k\geq1$
+\begin_inset Formula $k\geq2$
 \end_inset
 
 , and let 
@@ -1297,10 +1256,14 @@ is upper triangular.
 \begin_inset Formula $A$
 \end_inset
 
+ and we set 
+\begin_inset Formula $P=Q\hat{Q}$
+\end_inset
+
 .
  This result suffices for our purposes, but the result can be strengthened
  to specify that 
-\begin_inset Formula $(Q\hat{Q})$
+\begin_inset Formula $Q\hat{Q}$
 \end_inset
 
  have a certain property, a so-called Schur decomposition.
@@ -1493,6 +1456,92 @@ end{digression}
 
 \end_layout
 
+\begin_layout Subsection*
+Affine Transformations
+\end_layout
+
+\begin_layout Standard
+Translations, transformations of the form 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+T(\mathbf{x})=\mathbf{x}+\mathbf{c},
+\]
+
+\end_inset
+
+are not linear for any 
+\begin_inset Formula $\mathbf{c}\neq\mathbf{0}$
+\end_inset
+
+.
+ Can you provide a justification? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:translations-not-linear"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ But because their geometric effect is to simply displace all points by
+ the same distance and direction, they do not change the shapes of figures
+ and therefore do not change areas or volumes of figures.
+ For a translation 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $\text{area}(T(S))=\text{area}(S)$
+\end_inset
+
+ for any set 
+\begin_inset Formula $S$
+\end_inset
+
+ with measurable area.
+\end_layout
+
+\begin_layout Standard
+Affine transformations, compositions of linear transformations with translations
+, are consequently not linear either, and their effect on areas is predictable.
+ They scale areas in exactly the same manner as their linear parts.
+ For an affine transformation 
+\begin_inset Formula $F:\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+F(\mathbf{x})=A\mathbf{x}+\mathbf{c}
+\]
+
+\end_inset
+
+for some matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ and vector 
+\begin_inset Formula $\mathbf{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{area}(F(S))=\left|\det A\right|\cdot\text{area}(S)$
+\end_inset
+
+ for any set 
+\begin_inset Formula $S$
+\end_inset
+
+ with measurable area.
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
@@ -1549,7 +1598,7 @@ area For any linear transformation
  with measurable area, 
 \begin_inset Formula 
 \[
-\text{area}(T_{A}(S))=|\det A|\cdot\text{area}(S)
+\text{area}(T_{A}(S))=\left|\det A\right|\cdot\text{area}(S)
 \]
 
 \end_inset
@@ -1578,10 +1627,10 @@ volume For any linear transformation
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- with measurable volume, 
+ with measurable volume, r
 \begin_inset Formula 
 \[
-\text{volume}(T_{A}(S))=|\det A|\cdot\text{volume}(S)
+\text{volume}(T_{A}(S))=\left|\det A\right|\cdot\text{volume}(S)
 \]
 
 \end_inset
@@ -1618,6 +1667,14 @@ triangularization For any square matrix
  is upper triangular.
 \end_layout
 
+\begin_layout Description
+affine
+\begin_inset space ~
+\end_inset
+
+transformation The composition of a linear transformation with a translation.
+\end_layout
+
 \begin_layout Standard
 \noindent
 \begin_inset ERT
@@ -1646,6 +1703,931 @@ name "exc:det-eig-area"
 
 \end_inset
 
+Find the area of the parallelogram with vertices
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(2,3)$
+\end_inset
+
+, 
+\begin_inset Formula $(5,-1)$
+\end_inset
+
+, 
+\begin_inset Formula $(3,-4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,8)$
+\end_inset
+
+, 
+\begin_inset Formula $(-1,5)$
+\end_inset
+
+, 
+\begin_inset Formula $(-2,-3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(-5,6)$
+\end_inset
+
+, 
+\begin_inset Formula $(7,18)$
+\end_inset
+
+, 
+\begin_inset Formula $(12,12)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(4,5)$
+\end_inset
+
+, 
+\begin_inset Formula $(8,11)$
+\end_inset
+
+, 
+\begin_inset Formula $(16,12)$
+\end_inset
+
+, 
+\begin_inset Formula $(12,6)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(-1,3)$
+\end_inset
+
+, 
+\begin_inset Formula $(3,-1)$
+\end_inset
+
+, 
+\begin_inset Formula $(9,-4)$
+\end_inset
+
+, 
+\begin_inset Formula $(5,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(4,-2)$
+\end_inset
+
+, 
+\begin_inset Formula $(11,-5)$
+\end_inset
+
+, 
+\begin_inset Formula $(9,-10)$
+\end_inset
+
+, 
+\begin_inset Formula $(2,-7)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-1"
+
+\end_inset
+
+Use the fact that 
+\begin_inset Formula $\text{area}(T_{A}(S))=\left|\det A\right|\cdot\text{area}(S)$
+\end_inset
+
+ to justify the claim that the area of the parallelogram determined by the
+ columns of a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $\left|\det A\right|$
+\end_inset
+
+.
+ Alternatively, justify the claim that the area of the parallelogram determined
+ by two vectors (anchored at the origin) is the determinant of the matrix
+ whose columns are the two vectors.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-2"
+
+\end_inset
+
+Calculate the area of the triangle as half of a determinant.
+ See exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for a hint.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.6in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/det-eig-area-01.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.6in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/det-eig-area-02.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.6in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/det-eig-area-03.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.6in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/det-eig-area-04.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-3"
+
+\end_inset
+
+The image of the hexagon with adjacent vertices 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(2,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(2,1)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,2)$
+\end_inset
+
+, 
+\begin_inset Formula $(0,2)$
+\end_inset
+
+ under the transformation 
+\begin_inset Formula $T(\mathbf{x})=A\mathbf{x}$
+\end_inset
+
+ where 
+\begin_inset Formula $A$
+\end_inset
+
+ is a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix.
+ What is the determinant of 
+\begin_inset Formula $A$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/det-eig-area-05.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-4"
+
+\end_inset
+
+What are the eigenvalues of the matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-8"
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ factors as shown.
+ Use the information to find (i) 
+\begin_inset Formula $\det M$
+\end_inset
+
+ and (ii) the eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+12 & -10\\
+10 & 4
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+-4 & -9\\
+0 & 5
+\end{array}\right]\left[\begin{array}{cc}
+12 & -10\\
+10 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-12 & 10\\
+-7 & 8
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+-6 & 12\\
+0 & -8
+\end{array}\right]\left[\begin{array}{cc}
+-12 & 10\\
+-7 & 8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+4 & 9 & 11\\
+-5 & 1 & -6\\
+-7 & -3 & 6
+\end{array}\right]^{-1}\left[\begin{array}{ccc}
+-11 & -4 & -7\\
+0 & 0 & -12\\
+0 & 0 & 12
+\end{array}\right]\left[\begin{array}{ccc}
+4 & 9 & 11\\
+-5 & 1 & -6\\
+-7 & -3 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+12 & 8 & -12\\
+-6 & -10 & 1\\
+6 & -11 & 4
+\end{array}\right]^{-1}\left[\begin{array}{ccc}
+-11 & 4 & 11\\
+0 & -5 & -2\\
+0 & 0 & 3
+\end{array}\right]\left[\begin{array}{ccc}
+12 & 8 & -12\\
+-6 & -10 & 1\\
+6 & -11 & 4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-7"
+
+\end_inset
+
+Use SageMath to verify your answers in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by calculating 
+\begin_inset Formula $M$
+\end_inset
+
+ and having SageMath compute the determinant and eigenvalues.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxTVnDOzy3ISS1JVSjJSFVIzk9J5eUKULBVyE0s
+Kcqs0DDSMdKJNjTS0TU00AEik1hNXq5QNGldEx1dSx0DHVOQpC9QMkAvM68stag4VUNTK1QrAABvMhp5
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxTVnDOzy3ISS1JVSjJSFVIzk9J5eUKULBVyE0s
+Kcqs0DDSMdKJ1jU00jE00NE117GI1eTlCkWXNtMBKgDKg2V9gbIBepl5ZalFxakamlqhWgEAiVkarw==
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxTVnDOzy3ISS1JVSjJSFVIzk9J5eUKULBVyE0s
+Kcqs0DDWMdaJNtGx1DE01NE11QESZjq65jq6xjpmsZq8XKFoKnVBykxAKgyAUNfQCEwbGoHU-gLVBuhl
+5pWlFhWnamhqhWoFAAAgCh9J&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxTVnDOzy3ISS1JVSjJSFVIzk9J5eUKULBVyE0s
+Kcqs0DDWMdaJNjTSsdDRBZK6ZkDKQMdQB0Qb6pjEavJyhaIpBkvoAAkDHV1THV0jIG2gYwxS6QtUGaCX
+mVeWWlScqqGpFaoVAAA2_x9y&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-5"
+
+\end_inset
+
+Use the fact that 
+\begin_inset Formula $\text{volume}(T_{A}(S))=\left|\det A\right|\cdot\text{volume}(S)$
+\end_inset
+
+ to justify the claim that the volume of the parallelepiped determined by
+ the columns of a 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $\det A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-9"
+
+\end_inset
+
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the unit square with opposite corners 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+.
+ Sketch the image of 
+\begin_inset Formula $S$
+\end_inset
+
+ under the affine transformation 
+\begin_inset Formula $T(\mathbf{x})=A\mathbf{x}+\mathbf{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1/2 & 0\\
+0 & 1/2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{c}=\left[\begin{array}{c}
+1/2\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+0 & -1/2\\
+1/2 & 0
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{c}=\left[\begin{array}{c}
+1\\
+1/2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+0 & 1/2\\
+-1/2 & 0
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{c}=\left[\begin{array}{c}
+0\\
+1/2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-6"
+
+\end_inset
+
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be the triangle with vertices 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ and suppose 
+\begin_inset Formula $F$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+ are affine transformations such that 
+\begin_inset Formula $F(S)$
+\end_inset
+
+ is the triangle with vertices 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+; and 
+\begin_inset Formula $G(S)$
+\end_inset
+
+ is the triangle with vertices 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+.
+ Draw 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $F(S)$
+\end_inset
+
+, and 
+\begin_inset Formula $G(S)$
+\end_inset
+
+ and use your sketch to determine the determinants of the matrix parts of
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:triangularization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ outlines a recursive procedure for diagonalizing any matrix.
+ It is constructive, giving an algorithm for finding the diagonalizing matrix
+ 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Use it to find 
+\begin_inset Formula $P$
+\end_inset
+
+ such that 
+\begin_inset Formula $P^{-1}MP$
+\end_inset
+
+ is upper triangular.
+ One eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+ is given.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+13 & -8\\
+20 & -13
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+22 & -7\\
+28 & -13
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=-6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+11 & -8\\
+2 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-9 & 7 & 28\\
+-11 & -27 & -28\\
+8 & 8 & 12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=12$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+-34 & -50 & -24\\
+37 & 53 & 24\\
+-26 & -35 & -14
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+78 & -50 & -54\\
+-167 & 135 & 186\\
+201 & -150 & -193
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\lambda=5$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Prove that any square matrix 
 \begin_inset Formula $M$
 \end_inset
@@ -1660,48 +2642,6 @@ Prove that any square matrix
 
  and upper triangular matrix 
 \begin_inset Formula $U$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Use the fact that 
-\begin_inset Formula $\text{area}(T_{A}(S))=|\det A|\cdot\text{area}(S)$
-\end_inset
-
- to justify the claim that the area of the parallelogram determined by the
- columns of a 
-\begin_inset Formula $2\times2$
-\end_inset
-
- matrix 
-\begin_inset Formula $A$
-\end_inset
-
- is 
-\begin_inset Formula $\det A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Use the fact that 
-\begin_inset Formula $\text{volume}(T_{A}(S))=|\det A|\cdot\text{volume}(S)$
-\end_inset
-
- to justify the claim that the volume of the parallelepiped determined by
- the columns of a 
-\begin_inset Formula $3\times3$
-\end_inset
-
- matrix 
-\begin_inset Formula $A$
-\end_inset
-
- is 
-\begin_inset Formula $\det A$
 \end_inset
 
 .
@@ -1774,26 +2714,51 @@ which is the paralelogram determined by
 \end_layout
 
 \begin_layout Description
-equal
+translations
 \begin_inset space ~
 \end_inset
 
-determinants 
+are
+\begin_inset space ~
+\end_inset
+
+not
+\begin_inset space ~
+\end_inset
+
+linear 
 \begin_inset CommandInset label
 LatexCommand label
-name "ans:equal-determinants"
+name "ans:translations-not-linear"
 
 \end_inset
 
-
+On the one hand, 
 \begin_inset Formula 
 \[
-\det(P^{-1}AP)=\det(P^{-1})\cdot\det A\cdot\det P=\frac{1}{\det P}\cdot\det A\cdot\det P=\det A
+T(\mathbf{x}+\mathbf{y})=\mathbf{x}+\mathbf{y}+\mathbf{c}
 \]
 
 \end_inset
 
+and on the other hand,
+\begin_inset Formula 
+\begin{align*}
+T(\mathbf{x})+T(\mathbf{y}) & =(\mathbf{x}+\mathbf{c})+(\mathbf{y}+\mathbf{c})\\
+ & =\mathbf{x}+\mathbf{y}+2\mathbf{c}
+\end{align*}
 
+\end_inset
+
+so 
+\begin_inset Formula $T(\mathbf{x}+\mathbf{y})\neq T(\mathbf{x})+T(\mathbf{y})$
+\end_inset
+
+ whenever 
+\begin_inset Formula $\mathbf{c}\neq\mathbf{0}$
+\end_inset
+
+.
 \end_layout
 
 \end_body

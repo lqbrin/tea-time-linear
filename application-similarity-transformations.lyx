@@ -1212,6 +1212,12 @@ similar
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:similar-matrices"
+
+\end_inset
+
 If matrices 
 \begin_inset Formula $A$
 \end_inset
@@ -1286,61 +1292,39 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\noindent
-If 
-\begin_inset Formula $\lambda,\mathbf{v}$
+For any value 
+\begin_inset Formula $\lambda$
 \end_inset
 
- is an eigenpair of 
-\begin_inset Formula $B$
-\end_inset
-
- then 
+,
 \begin_inset Formula 
 \begin{align*}
-B\mathbf{v}=\lambda\mathbf{v} & \Rightarrow(P^{-1}AP)\mathbf{v}=\lambda\mathbf{v}\\
- & \Rightarrow P^{-1}A(P\mathbf{v})=\lambda\mathbf{v}\\
- & \Rightarrow A(P\mathbf{v})=\lambda(P\mathbf{v})
+\det(B-\lambda I) & =\det(P^{-1}AP-\lambda I)\\
+ & =\det(P^{-1}AP-P^{-1}(\lambda I)P)\\
+ & =\det(P^{-1}(A-\lambda I)P)\\
+ & =\det(P^{-1})\cdot\dot{\det(A-\lambda I)}\cdot\det P\\
+ & =\det(A-\lambda I)
 \end{align*}
 
 \end_inset
 
-so 
-\begin_inset Formula $\lambda$
-\end_inset
-
- is an eigenvalue of 
-\begin_inset Formula $A$
-\end_inset
-
-.
- Similarly, if 
-\begin_inset Formula $\lambda,\mathbf{w}$
-\end_inset
-
- is an eigenpair of 
-\begin_inset Formula $A$
-\end_inset
-
- then
-\begin_inset Formula 
-\begin{align*}
-A\mathbf{w}=\lambda\mathbf{w} & \Rightarrow(PBP^{-1})\mathbf{w}=\lambda\mathbf{w}\\
- & \Rightarrow PB(P^{-1}\mathbf{w})=\lambda\mathbf{w}\\
- & \Rightarrow B(P^{-1}\mathbf{w})=\lambda(P^{-1}\mathbf{w})
-\end{align*}
-
-\end_inset
-
-so 
-\begin_inset Formula $\lambda$
-\end_inset
-
- is an eigenvalue of 
+so the characteristic equations of 
 \begin_inset Formula $B$
 \end_inset
 
-.
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ are equal making the eigenvalues of 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ equal.
 \end_layout
 
 \begin_layout Enumerate
