@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -144,15 +153,8 @@ no solution
 \end_inset
 
 .
- Full disclosure, what was meant by 
-\begin_inset Quotes eld
-\end_inset
-
-no solution
-\begin_inset Quotes erd
-\end_inset
-
- was 
+ Full disclosure, if your instructor or textbook claimed equations such
+ as these had no solution, what they meant was 
 \shape italic
 no real number solution
 \shape default
@@ -339,7 +341,7 @@ noprefix "false"
 
 \end_inset
 
-), but it makes its two sides as close as possible (using integers).
+), but it makes its two sides as close as possible using integers.
  That is,
 \begin_inset Formula 
 \[
@@ -353,25 +355,12 @@ for all integer pairs
 \end_inset
 
 .
- We could use calculus to seek best real number approximations of 
-\begin_inset Formula $x^{2}+1=0$
-\end_inset
-
-, 
-\begin_inset Formula $\sin\theta=2$
-\end_inset
-
-, and 
-\begin_inset Formula $\frac{1}{2+e^{t}}=3$
-\end_inset
-
-, but the point is made.
  Even when an equation has no solution, it may have a best approximation.
 \end_layout
 
 \begin_layout Standard
 Using this discussion as a model for linear systems with no solution, we
- ask whether 
+ ask whether inconsistent systems
 \begin_inset Formula 
 \[
 M\mathbf{v}=\mathbf{b}
@@ -379,7 +368,7 @@ M\mathbf{v}=\mathbf{b}
 
 \end_inset
 
-has a best approximation when inconsistent.
+have a best approximation.
  That is, can we find 
 \begin_inset Formula $\hat{\mathbf{v}}$
 \end_inset
@@ -465,7 +454,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-In fact, we have done this to some extent already! 
+Actually, we have done this to some extent already! 
 \begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
 3\\
 4
@@ -525,8 +514,8 @@ In fact, we have done this to some extent already!
 \noindent
 We know the shortest distance between a point and a line is measured perpendicul
 arly.
- The point on the line where this shortest distance occurs marks exactly
- the (orthogonal) projection of 
+ The point on the line where this shortest distance occurs coincides exactly
+ with the (orthogonal) projection of 
 \begin_inset Formula $\mathbf{b}$
 \end_inset
 
@@ -551,8 +540,8 @@ arly.
 
 \begin_layout Standard
 \noindent
-Helpful to this discussion is to then see orthogonal projection as projecting
- a vector onto a subspace (rather than another vector).
+Helpful to this discussion is to see orthogonal projection as projecting
+ a vector onto a subspace (rather than a vector).
  The line determined by 
 \begin_inset Formula $M_{:,1}$
 \end_inset
@@ -566,8 +555,11 @@ Helpful to this discussion is to then see orthogonal projection as projecting
 \end_inset
 
 .
- In three dimensions, there is a point in a plane nearest any point/vector
- not in the plane.
+\end_layout
+
+\begin_layout Standard
+In three dimensions, there is a point in a plane nearest any point/vector
+ not in that plane.
  That point occurs exactly at the projection of the vector onto the plane
  (and that plane is a subspace of 
 \begin_inset Formula $\mathbb{R}^{3}$
@@ -579,8 +571,8 @@ Helpful to this discussion is to then see orthogonal projection as projecting
 
 \begin_layout Standard
 With this in mind, we have to address the questions of (i) how to project
- a vector onto a subspace and (ii) whether that projection is always the
- nearest point/vector within the subspace.
+ a vector onto a subspace of dimension greater than one and (ii) whether
+ that projection is always the nearest point/vector within the subspace.
  A lot of this work has already been done, but there is a bit more to do
  now.
 \end_layout
@@ -1206,20 +1198,21 @@ name "thm:best-approximation-linear-system"
 \begin_inset Formula $\mathbb{R}^{m}$
 \end_inset
 
-, 
+, let 
+\begin_inset Formula $W$
+\end_inset
+
+ be the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Then 
 \begin_inset Formula $\hat{\mathbf{v}}=\text{proj}_{W}\mathbf{b}$
 \end_inset
 
  is the best approximation to a solution of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
-\end_inset
-
-, where 
-\begin_inset Formula $W$
-\end_inset
-
- is the column space of 
-\begin_inset Formula $M$
 \end_inset
 
 .
@@ -1788,9 +1781,1711 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-P
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation"
+
+\end_inset
+
+What multiple of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ lands closest to the point (is a best approximation)?
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+10\\
+11
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(5,-5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+-6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(12,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+10\\
+6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(1,5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+1\\
+5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(0,-7,12)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-5\\
+5\\
+-7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(0,-1,3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+12\\
+2\\
+-11
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(-4,9,-12)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+-11\\
+0\\
+-3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(0,-9,7,-4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-1\\
+-7\\
+11\\
+12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(-10,6,3,-4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+8\\
+-5\\
+-6\\
+-9
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $(-1,12,-8,-2)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-1"
+
+\end_inset
+
+Use orthogonal projection to find the distance between the point and the
+ line 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(-10,12)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell(x)=-\frac{11}{10}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(-3,-4)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell(x)=\frac{1}{5}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(-8,9)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell(x)=8x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(8,11)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell=\left\{ r\left[\begin{array}{c}
+-3\\
+0
+\end{array}\right]:r\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(5,-10)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell=\left\{ r\left[\begin{array}{c}
+-1\\
+1
+\end{array}\right]:r\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(6,-7,5)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell=\left\{ r\left[\begin{array}{c}
+-3\\
+-11\\
+0
+\end{array}\right]:r\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(-4,1,12)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell=\left\{ r\left[\begin{array}{c}
+5\\
+0\\
+9
+\end{array}\right]:r\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(-2,0,2,-1)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell=\left\{ r\left[\begin{array}{c}
+-4\\
+-11\\
+-8\\
+0
+\end{array}\right]:r\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(6,11,5,-8)$
+\end_inset
+
+; 
+\begin_inset Formula $\ell=\left\{ r\left[\begin{array}{c}
+5\\
+-12\\
+-8\\
+2
+\end{array}\right]:r\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-2"
+
+\end_inset
+
+Find the orthogonal projection of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is an orthogonal set.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-8\\
+-9
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+10\\
+-6
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-1\\
+-7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+4\\
+8
+\end{array}\right],\left[\begin{array}{c}
+-2\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-4\\
+-6\\
+9
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+4\\
+0\\
+-10
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+12\\
+5\\
+-10
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-7\\
+10\\
+2
+\end{array}\right],\left[\begin{array}{c}
+-6\\
+-4\\
+-1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+9\\
+-12\\
+5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-1\\
+-4\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-3\\
+2\\
+1
+\end{array}\right],\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+11\\
+-12\\
+4\\
+12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+7\\
+8\\
+-10\\
+11
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+11\\
+0\\
+-12\\
+5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+12\\
+1\\
+-4\\
+3
+\end{array}\right],\left[\begin{array}{c}
+6\\
+-11\\
+10\\
+-7
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+8\\
+-4\\
+10\\
+9
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-7\\
+-8\\
+11\\
+5
+\end{array}\right],\left[\begin{array}{c}
+4\\
+12\\
+9\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-624\\
+307\\
+-362\\
+414
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-3"
+
+\end_inset
+
+Find the orthogonal projection of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is not an orthogonal set.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+4\\
+-1
+\end{array}\right],\left[\begin{array}{c}
+-12\\
+3
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+-7\\
+9
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+0\\
+-9\\
+-6
+\end{array}\right],\left[\begin{array}{c}
+6\\
+-16\\
+2
+\end{array}\right],\left[\begin{array}{c}
+6\\
+-7\\
+8
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+8\\
+9\\
+-9
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-8\\
+-5\\
+12
+\end{array}\right],\left[\begin{array}{c}
+-11\\
+-10\\
+-9
+\end{array}\right],\left[\begin{array}{c}
+7\\
+5\\
+11
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-8\\
+-1\\
+8\\
+5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+9\\
+-5\\
+-10\\
+10
+\end{array}\right],\left[\begin{array}{c}
+-12\\
+-2\\
+12\\
+-9
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+4\\
+5\\
+3\\
+-8
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-5\\
+1\\
+11\\
+5
+\end{array}\right],\left[\begin{array}{c}
+4\\
+12\\
+7\\
+11
+\end{array}\right],\left[\begin{array}{c}
+-3\\
+9\\
+-6\\
+7
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+6\\
+10\\
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+-5\\
+9\\
+-10\\
+-11
+\end{array}\right],\left[\begin{array}{c}
+1\\
+4\\
+5\\
+8
+\end{array}\right],\left[\begin{array}{c}
+-9\\
+-4\\
+-12\\
+-7
+\end{array}\right],\left[\begin{array}{c}
+10\\
+-2\\
+-12\\
+-11
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-4"
+
+\end_inset
+
+Is 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-1\\
+-5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+-4\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+-8\\
+6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+-7\\
+0\\
+0
+\end{array}\right],\left[\begin{array}{c}
+8\\
+-3\\
+-4
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-12\\
+11\\
+-1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+5\\
+11\\
+61
+\end{array}\right],\left[\begin{array}{c}
+-3\\
+2\\
+-11
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+7\\
+12
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+6\\
+1\\
+-4
+\end{array}\right],\left[\begin{array}{c}
+-4\\
+-7\\
+6
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-5"
+
+\end_inset
+
+For 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, find the orthogonal decomposition of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ relative to 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-6"
+
+\end_inset
+
+Solve the system.
+ If it is inconsistent, find the best approximation of a solution.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdGJ1jXTMdbRNTTVMdcx
+NNHRNdcxNtUxBApY6Fjq6JqY6pjFavJyFRRl5pVo-GpaK0BYmgBRnhEk&lang=sage&interacts=eJy
+LjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+-6x & + & 3y & - & 15z & = & 7\\
+14x & - & 7y & + & 35z & = & 1\\
+-18x & + & 9y & - & 45z & = & 6
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdGJNjQBkkY6ljrGOrqG
+OmY6hjq6piBkaKBjEavJy1VQlJlXouGraa0AYWkCAAd4ECA=&lang=sage&interacts=eJyLjgUAARU
+AuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+14x & + & 4y & + & 2z & = & 9\\
+3x & - & y & + & 6z & = & 1\\
+-5x & - & 5y & + & 10z & = & 8
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdGJNtcxNNQxNNLRNdMx
+1dG10NE10dE11DEASuma6-gaxWrychUUZeaVaPhqWitAWJoAMQEQpg==&lang=sage&interacts=eJy
+LjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+7x & + & 11y & + & 12z & = & -6\\
+5x & - & 8y & - & 4z & = & -1\\
+ & + & 4y & - & 7z & = & -2
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdGJ1jXRMdLRNTQAYkMd
+Cx0Q10DHDCymY6qjax6ryctVUJSZV6Lhq2mtAGFpAgA98BDR&lang=sage&interacts=eJyLjgUAARU
+AuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+-4x & + & 2y & - & 10z & = & -11\\
+8x & - & 4y & + & 20z & = & 6\\
+2x & - & y & + & 5z & = & -7
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdGJ1jXW0TXTARKGRiDS
+CMiwBHNALEMdXWMgbWweq8nLVVCUmVei4atprQBhaQIAmLQR8A==&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+-3x & - & 6y & + & 3z & = & -12\\
+3x & - & 2y & - & 19z & = & -12\\
+2x & - & 11y & - & 32z & = & -37
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdGJNtXRNdYx1NE10dE1
+NNAx09E10rHQMTIA8ox0QGJmsZq8XAVFmXklGr6a1goQliYATPIRAw==&lang=sage&interacts=eJy
+LjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+5x & - & 3y & + & z & = & -4\\
+-10x & + & 6y & - & 2z & = & 8\\
+20x & - & 12y & + & 4z & = & -16
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdGJNtTRtdAx1jE00NE1
+NNQx19E1A4rqWgKFdE10LGM1ebkKijLzSjR8Na0VICxNACM1EIE=&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+x & - & 8y & + & 3z & = & 10\\
+-11x & + & 7y & - & 6z & = & 4\\
+-9x & + & 3y & - & 4z & = & 9
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-7"
+
+\end_inset
+
+Find a basis for 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+10\\
+5\\
+-4
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+7\\
+11\\
+12
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+-1\\
+-5\\
+3
+\end{array}\right],\left[\begin{array}{c}
+9\\
+-8\\
+-1
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+5\\
+-3\\
+-9
+\end{array}\right],\left[\begin{array}{c}
+-2\\
+-11\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-8"
+
+\end_inset
+
+Argue that for any subspace 
+\begin_inset Formula $W$
+\end_inset
+
+ of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $\dim W+\dim W^{\perp}=\dim V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-9"
+
+\end_inset
+
+Argue that for any subspace 
+\begin_inset Formula $W$
+\end_inset
+
+ of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+, if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+, then 
+\begin_inset Formula $\text{proj}_{W}\mathbf{v}=\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-10"
+
+\end_inset
+
+Argue that for any subspace 
+\begin_inset Formula $W$
+\end_inset
+
+ of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+, the orthogonal decomposition of 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbf{0}+\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-11"
+
+\end_inset
+
+Let 
+\begin_inset Formula $W$
+\end_inset
+
+ be a subspace of an inner product space 
+\begin_inset Formula $V$
+\end_inset
+
+, and let 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ be a basis of 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Argue that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to each vector in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The remainder of the exercises are set within the inner product space 
+\begin_inset Formula $\mathbb{P}_{3}(\mathbb{R})$
+\end_inset
+
+ with inner product
+\begin_inset Formula 
+\[
+\left\langle p,q\right\rangle =p(-1)q(-1)+p(0)q(0)+p(1)q(1).
+\]
+
+\end_inset
+
+You may find the SageMath cell at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxljsEOgjAQRO8k_MMGL4AlaeHgRb35FQaNwe7a
+SzGVA59v15JK9bKdzM7b6QZOdtIOhlEjmsFoO71gREC42TsQPLTTkGcbMBbmSyf8aP0QoGB0d-3yDK8J
+e4CzFE0nOtGoPs_ob9vshPRbxVtPD95LT3iITfoxsZwrzg5n2df-K7BlrVi3QbdeB9Vxc8jTKk-rPMU8
+hXyePZ2xU1mEokLwW0WXFpcSd4-CjiHcqKomnlssJUvJ6mOqlMAVgV8CI4EpQUsHrToodlDseAMMo3r2
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ helpful.
+ It computes this inner product for arbitrary third degree polynomials.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-12"
+
+\end_inset
+
+What multiple of 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ lands closest to 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ (is a best approximation)?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=7x^{2}-10x-5$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{q}=3x^{2}+12x+6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=-10x^{2}+5x+4$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{q}=3x^{3}+8x^{2}-x-7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=x^{3}-11x^{2}-9x+10$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{q}=12x^{3}-x-5$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-13"
+
+\end_inset
+
+How far off is the best approximation in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-14"
+
+\end_inset
+
+Find the orthogonal projection of 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is an orthogonal set.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=x^{3}+3x^{2}-6x+4$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ -6x^{2}+2x-1\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=8x^{2}-x-12$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ x^{3}+2x^{2}-2x+8\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=2x^{3}-9x^{2}+9x-6$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ 11x^{2}+3x-1,-4x^{3}+8x^{2}+9x-10\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=11x^{3}+9x-10$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ 5x^{3}-45x^{2}-5x-10,\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\phantom{\mathcal{B}=}\left.-4x^{3}-12x^{2}-5x+11\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=-2x^{3}-5x^{2}+5x-11$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ 5x^{2}-11x+14,8x^{2}+2x-5\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-15"
+
+\end_inset
+
+Find the orthogonal projection of 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is an orthogonal set.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=2x^{3}+x^{2}-x-3$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ 8x^{3}+11x^{2}-6x,9x^{3}-7x-9\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=x^{3}-5x^{2}+12x-7$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ -3x^{2}+3x-1,-7x^{3}+3x+11\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=-10x^{3}+10x^{2}+11x+12$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{B}=\left\{ 9x^{3}-9x,-6x^{2}-1\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-16"
+
+\end_inset
+
+Is 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=5x^{3}-x^{2}+3x+2$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $W=\text{span}\left\{ 7x^{3}+8x^{2}-8x-1\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=5x^{3}-8x^{2}-11x+6$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $W=\text{span}\left\{ 5x^{3}+3x^{2}+36,4x^{2}-x+2\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{p}=x^{3}+10x^{2}-2x-4$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $W=\text{span}\left\{ -4x^{3}+3x^{2}-2x-6,3x^{3}+5x^{2}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-17"
+
+\end_inset
+
+For 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, find the orthogonal decomposition of 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ relative to 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:approximation-18"
+
+\end_inset
+
+Find a basis for 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $W=\text{span}\left\{ 1,x,x^{2}-\frac{2}{3}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $W=\text{span}\left\{ x+1,x^{2}-\frac{2}{5}x-\frac{2}{5}\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
