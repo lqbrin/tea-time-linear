@@ -190,10 +190,30 @@ The following chart was processed from real Capital Bikeshare data for the
 \end_layout
 
 \begin_layout Standard
+\noindent
 From these data, linear algebra can be applied to estimate the distribution
  of bicycles among the stations.
- The method begins by dividing each column of the chart by the total number
- of rides in the column.
+ Such information could be used to decide which stations to expand or reduce,
+ where another station might be needed, the most likely place to find a
+ free bike, and so on.
+\end_layout
+
+\begin_layout Standard
+The method is one of prediction over time based on percentages.
+ Given the distribution of bikes among the stations (as percentages) at
+ some time, it uses the data to predict the distribution of bikes at some
+ fixed amount of time later.
+ Assuming the annual data on bicycle movement is reflected monthly, we will
+ use one month for the time step.
+\end_layout
+
+\begin_layout Standard
+Because the method works with percentages, we do not need to know how many
+ bikes are in the neighborhood.
+ It could be 25 or 250.
+ No matter.
+ We begin by dividing each column of the chart by the total number of rides
+ in that column.
  The first column is divided by 1221, the second column by 2010, and so
  on, resulting in a table whose columns all sum to 1.
  Accurate to five decimal places, this normalized chart is collected in
@@ -226,15 +246,22 @@ M=\left[\begin{array}{cccccccc}
 \end_inset
 
  thereby represents the percentage of rides starting at the station represented
- by the column that end at the station represented by the row.
+ by the column that end at the station represented by the row 
+\series bold
+one
+\series default
+ month later.
  For example, the 
 \begin_inset Formula $0.06937$
 \end_inset
 
- in the first row, third column means that 6.937% of rides starting at station
- number 31043 ended at station number 31041.
+ in the first row, third column means that 6.937% of the bikes at station
+ number 31043 will be at station number 31041 in a month.
  Empirically speaking, about 7% of the bikes at station number 31043 are
- destined for station number 31041.
+ destined for station number 31041 over the course of the month.
+ We know this, in fact, was the case over the whole of 2018, and we are
+ assuming it makes a good estimate of the monthly migration of bikes within
+ the neighborhood.
 \end_layout
 
 \begin_layout Standard
@@ -243,32 +270,38 @@ Multiplying
 \end_inset
 
  then represents the percentage of bikes at the station of column 5 (31045)
- that are destined for the station of column 2 (31042) after being dropped
- at the station of column 1 (31041).
+ that head for the station of column 1 (31041) first and then to the station
+ of column 2 (31042).
+ In other words, it is the percentage of bikes at station 31045 that can
+ be expected to be at station 31042 
+\series bold
+two
+\series default
+ months later.
  Similarly, 
 \begin_inset Formula $M_{2,2}M_{2,5}$
 \end_inset
 
  represents the percentage of bikes at station 31045 that are destined for
  station 31042 via station 31042 (the second ride is from station 31042
- back to station 31042); 
+ back to station 31042) over the course of two months; 
 \begin_inset Formula $M_{2,3}M_{3,5}$
 \end_inset
 
  represents the percentage of bikes at station 31045 that are destined for
- station 31042 via station 31043; and so on.
+ station 31042 after being dropped at station 31043; and so on.
  The sum 
-\begin_inset Formula $M_{2,1}M_{1,5}+M_{2,2}M_{2,5}+\cdots+M_{8,2}M_{8,5}$
+\begin_inset Formula $M_{2,1}M_{1,5}+M_{2,2}M_{2,5}+\cdots+M_{2,8}M_{8,5}$
 \end_inset
 
- therefore represents the total percentage of bikes at station 31045 that
- will end up at station 31042 
+ therefore represents the total percentage of the bikes at station 31045
+ that can be expected to be at station 31042 
 \shape italic
-after two rides
+after two months
 \shape default
 .
- Notice that's just a row-column product (row 2 times column 5), which is
- the 
+ Notice that sum is just a row-column product (row 2 times column 5), which
+ is the 
 \begin_inset Formula $2,5$
 \end_inset
 
@@ -310,7 +343,7 @@ holds the percentage of bikes starting at station
 \begin_inset Formula $3104i$
 \end_inset
 
- after two rides.
+ after two months.
  Likewise, the 
 \begin_inset Formula $i,j$
 \end_inset
@@ -331,7 +364,7 @@ holds the percentage of bikes starting at station
 \begin_inset Formula $k$
 \end_inset
 
- rides.
+ months.
  Multiplying 
 \begin_inset Formula $M^{2}$
 \end_inset
@@ -427,7 +460,7 @@ Notice that (i) accurate to five decimal places,
 \end_layout
 
 \begin_layout Standard
-This means that after 16 rides each, about 
+This means that after 16 months, about 
 \begin_inset Formula $18.89$
 \end_inset
 
@@ -442,6 +475,11 @@ This means that after 16 rides each, about
 \end_inset
 
 % of bikes from station 31043 will end up at station 31041.
+ In fact, about 
+\begin_inset Formula $18.89$
+\end_inset
+
+% of bikes from each station will end up at station 31041.
  Altogether, then, about 
 \begin_inset Formula $18.89$
 \end_inset
@@ -457,7 +495,7 @@ This means that after 16 rides each, about
 
 % at station 3, and so on.
  No matter how the bikes are initially distributed, they will end up distributed
- this way after a short time, and stay that way (so long as the empirical
+ this way after some time, and stay that way (so long as the empirical migration
  percentages hold).
 \begin_inset ERT
 status open
@@ -920,8 +958,8 @@ end{digression}
 
 \begin_layout Standard
 \noindent
-Suppose Capital Bikeshare supplies each station with the same number of
- bicycles.
+For example, suppose Capital Bikeshare supplies each station with the same
+ number of bicycles to begin.
  That information can be recorded in a column vector with length eight and
  each entry equal to 
 \begin_inset Formula $\frac{1}{8}$
@@ -1152,13 +1190,17 @@ This means the distribution of bicycles in the long-run is given by this
 \begin_inset Formula $M$
 \end_inset
 
- corresponding with eigenvalue 1.
+ corresponding to eigenvalue 1.
  This distribution is called the steady-state distribution because if reached,
  it never deviates: 
 \begin_inset Formula $M\mathbf{v}=\mathbf{v}$
 \end_inset
 
-.
+, so 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ remains steady over time.
  We would expect to see the bicycles distributed among the stations in these
  proportions after adequate time.
 \end_layout
@@ -1254,9 +1296,10 @@ gambling (the states are the amounts of money the gambler could have, the
 \end_layout
 
 \begin_layout Enumerate
-a single server queue (the states are the possible sizes of the queue, the
- object is the queue, and the likelihoods of increasing or decreasing the
- size of the queue by certain amounts provide the transition probabilities).
+arrival or service times in a single server queue (the states are the possible
+ sizes of the queue, the object is the queue, and the likelihoods of increasing
+ or decreasing the size of the queue by certain amounts provide the transition
+ probabilities).
 \end_layout
 
 \begin_layout Subsection
@@ -1268,7 +1311,7 @@ transition
 \begin_inset space ~
 \end_inset
 
-matrix a matrix 
+matrix a square matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1472,7 +1515,849 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-I
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains"
+
+\end_inset
+
+Is 
+\begin_inset Formula $M$
+\end_inset
+
+ a transition matrix?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.492 & 0.118 & 0.516\\
+0.346 & 0.819 & 0.361\\
+0.472 & 0.063 & 0.123
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.09 & 0.686 & 0.168\\
+0.908 & 0.036 & 0.807\\
+0.002 & 0.278 & 0.485
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+0.409 & 0.696\\
+0.179 & 0.156\\
+0.412 & 0.148
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.826 & 0.006 & 0.235\\
+0.104 & 0.122 & 0.609\\
+0.07 & -0.72 & 0.156
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.485 & 0.145 & -0.58\\
+0.302 & 0.46 & -0.22\\
+0.213 & 0.395 & -0.20
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.341 & 0.104 & 0.217\\
+0.525 & 0.592 & 0.249\\
+0.134 & 0.304 & 0.534
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-1"
+
+\end_inset
+
+Given transition matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and initial distribution vector 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+, (a) calculate 
+\begin_inset Formula $\mathbf{v}_{3}$
+\end_inset
+
+; (b) determine the probability of transitioning from state 1 to state 2
+ over the course of one time step, two time steps, and three time steps;
+ and (c) the probability of being in state 2 after three time steps.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJ1rO0MNbRMzS21NEz
+MDTX0bMwM4zV5OUqM0BWZwhUZ2JhoqNnamgGki0oyswr0VDyVbBV0rRWgPB84SyEApApCBVlBgglABq7
+I-Y=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+0.983 & 0.139\\
+0.017 & 0.861
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+0.484\\
+0.516
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJ1jMwNdbRszAx09Gz
+NDHX0TM0NYnV5OUqM0BWZwhUZwZSZ2xiDpItKMrMK9FQ8lWwVdK0VoDwfOEshAKQKQgVZQYIJQAaayPm
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+0.053 & 0.846\\
+0.947 & 0.154
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+0.653\\
+0.347
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJ1jOxMNHRMzM11tEz
+NTTT0TM2MY_V5OUqM0BWZ6gTbahnoGMAkikoyswr0VDyVbBV0rRWgPB84SyEApAJCBVlBgglAKGcIw0=
+&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+0.484 & 0.653\\
+0.516 & 0.347
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxNjDEKgDAQBHvBPwQrheO48xKjiE_IC8TC0kIR
+EfH5JhGMzbC7DOvUoNb5PJa7FBAYCTUJEIqxnlRrT60bT-bAOLBhT1MHxUozVXl20f-IYUQmA0jcAbY2
+KvuxbGdZODUUVa_e5r6UhHCVjIuS8gC1VSsT&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.403 & 0.357 & 0.024\\
+0.446 & 0.116 & 0.24\\
+0.151 & 0.527 & 0.736
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+0.105\\
+0.019\\
+0.876
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJNtAzNDXUMdAzNjUF
+koZmxkDSCCRgZmwOJE3NwExLIGlgYAGSMzeP1eTlKjNANscQaI6OoZ6BjgFIrqAoM69EQ8lXwVZJ01oB
+wvOFsxAKQGYgVJQZIJQAAJgVKXw=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.151 & 0.355 & 0.163\\
+0.21 & 0.637 & 0.56\\
+0.639 & 0.008 & 0.277
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJNtAztjDVAZJAbGJk
+CSQNTECkmakhSNTcAkiampnBxQ0tjWM1ebnKDJDNMdSJ1jMFKtUzMrPU0TM0BSspKMrMK9FQ8lWwVdK0
+VoDwfOEshAKQUQgVZQYIJQCkQSsH&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+0.385 & 0.3 & 0.429\\
+0.049 & 0.651 & 0.378\\
+0.566 & 0.049 & 0.193
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
+0.578\\
+0.269\\
+0.153
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-2"
+
+\end_inset
+
+For any square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, explain why 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ have the same eigenvalues.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-3"
+
+\end_inset
+
+Every transition matrix is guaranteed to have 1 as an eigenvalue (
+\begin_inset Formula $M^{T}$
+\end_inset
+
+ has 1 as an eigenvalue since 
+\begin_inset Formula $M^{T}\mathbf{1}=\mathbf{1}$
+\end_inset
+
+).
+ Find the eigenspace of 
+\begin_inset Formula $1$
+\end_inset
+
+ for the transition matrix in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-4"
+
+\end_inset
+
+Calculate 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+ for the transition matrix of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and compare it to your answer in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-5"
+
+\end_inset
+
+Find the steady-state distribution for the transition matrix in question
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-6"
+
+\end_inset
+
+For the simplified Snakes and Ladders board
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Snake, ladder, start, and goal clipart from 
+\begin_inset CommandInset href
+LatexCommand href
+name "PublicDomainVectors.org"
+target "https://publicdomainvectors.org"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+, a 6-sided die with only the numbers 1,2, and 3 on it is used (two of each,
+ making rolling a 1,2, or 3 equally likely).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/markov-chain-01.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The rules for Snakes and Ladders can be found at 
+\begin_inset CommandInset href
+LatexCommand href
+name "GameRules.com"
+target "https://gamerules.com/rules/snakes-and-ladders/"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Create a 
+\begin_inset Formula $5\times5$
+\end_inset
+
+ transition matrix.
+ Each block on the board represents one state (location of the playing piece).
+ It is impossible to move onto spaces 3,4,5, or 8 since the playing piece
+ immediately slides up or down from there, so only the other 5 states need
+ to be included.
+ Transitioning from state 9 is represented by a column with 4 zeros and
+ a one, indicating that once square 9 is reached the playing piece never
+ leaves! Mathematically, state 9 is called an 
+\series bold
+absorbing state
+\series default
+ (a state that once entered cannot be left).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+What is the likelihood of reaching the goal (square 9) in one roll? two
+ rolls? three rolls? ten rolls?
+\end_layout
+
+\begin_layout Enumerate
+Assuming the columns (and rows) of the transition matrix represent states
+ 1,2,6,7,9 in that order, the eigenvector corresponding to the eigenvalue
+ 1 is 
+\begin_inset Formula $\left[\begin{array}{ccccc}
+0 & 0 & 0 & 0 & 1\end{array}\right]^{T}$
+\end_inset
+
+.
+ What does this mean in the context of the game?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-7"
+
+\end_inset
+
+Create your own Snakes and Ladders board and repeat the analysis of question
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-8"
+
+\end_inset
+
+The Leontief model for a closed economy is a Markov chain where each column
+ of the transition matrix represents a sector's consumption of each commodity
+ in the economy.
+ Consequently the matrix is commonly called a consumption matrix rather
+ than a transition matrix.
+ Suppose an economy has three industries, farming, building, and clothing.
+ For every dollar of food produced, the farmers use $0.375, the builders
+ use $0.35, and the tailors use $0.275.
+ For every dollar of building, the builders use $0.286, the farmers use $0.214,
+ and the tailors use $0.5.
+ For every dollar of clothing produced, the tailors use $0.348, the builders
+ use $0.326, and the farmers use $0.326.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+All of the production of these three sectors is consumed by the three sectors
+ themselves, thus this is a closed economy (as opposed to an open economy
+ where some amount of external demand can be satisfied).
+ Thus the consumption matrix has columns that sum to 1.
+ Write down the consumption matrix for this economy.
+\end_layout
+
+\begin_layout Enumerate
+A production vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ represents the production of each sector in dollars.
+ What does the vector 
+\begin_inset Formula $M\mathbf{v}$
+\end_inset
+
+ represent?
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+10 & 57 & 33\end{array}\right]^{T}$
+\end_inset
+
+ and calculate 
+\begin_inset Formula $M\mathbf{v}$
+\end_inset
+
+.
+ At these production levels (which are in thousands of dollars), is there
+ a sector that consumes more than it produces? How about a sector that produces
+ more than it consumes?
+\end_layout
+
+\begin_layout Enumerate
+How do you know there is an 
+\begin_inset Quotes eld
+\end_inset
+
+everybody is happy
+\begin_inset Quotes erd
+\end_inset
+
+ production vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+, one such that 
+\begin_inset Formula $M\mathbf{v}=\mathbf{v}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Calculate the 
+\begin_inset Quotes eld
+\end_inset
+
+everybody is happy
+\begin_inset Quotes erd
+\end_inset
+
+ production vector.
+ In terms of the economy, why might it be referred to as such?
+\end_layout
+
+\begin_layout Enumerate
+Any solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{v}$
+\end_inset
+
+ is, mathematically, called an equilibrium vector? Explain in terms of the
+ economy what is in equilibrium at production levels in such a 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-9"
+
+\end_inset
+
+Quito, the capital of Ecuador, is located essentially on the equator, and
+ therefore does not experience seasons.
+ The weather is more or less the same year round—average low temperature
+ about 50
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+F and average high temperature about 68
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+F all 12 months of the year.
+ Clouds and rain are similarly predictable.
+ Suppose a friend of yours claims it rains there one quarter of the time,
+ so you do some research.
+ For the past two months, you have noticed that on a rainy day there is
+ a 
+\begin_inset Formula $\frac{3}{14}$
+\end_inset
+
+ chance it will be rainy again the next day and on a dry day there is a
+ 
+\begin_inset Formula $\frac{5}{7}$
+\end_inset
+
+ chance it will be dry again the next day.
+ Are your observations consistent with your friend's claim? Create a Markov
+ chain model of the weather and use it to answer the question.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-10"
+
+\end_inset
+
+In a very simple gambling game, you win one dollar with probability 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+ and lose one dollar with probability 
+\begin_inset Formula $\frac{4}{5}$
+\end_inset
+
+.
+ You start with one dollar, and the games ends when you either go broke
+ or win 3 dollars (have 4 dollars).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Model the playing of this game with a Markov chain.
+ The states are the numbers of dollars you can have and the transition matrix
+ if formed from the probabilities of going from one amount of money to another.
+ What is the transition matrix, 
+\begin_inset Formula $M$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+What is the probability the game will last more than 10 rounds? That is,
+ with what probability will you have neither $0 nor $4 after 10 rounds?
+\end_layout
+
+\begin_layout Enumerate
+After 10 rounds, what is the probability you have gone broke?
+\end_layout
+
+\begin_layout Enumerate
+After 10 rounds, what is the probability you have won $3?
+\end_layout
+
+\begin_layout Enumerate
+Should you play this game?
+\end_layout
+
+\begin_layout Enumerate
+Find basis vectors for the eigenspace of eigenvalue 1.
+\end_layout
+
+\begin_layout Enumerate
+Compare the basis vectors to the columns of 
+\begin_inset Formula $M^{64}$
+\end_inset
+
+.
+ What do you notice?
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $p$
+\end_inset
+
+ be the probability of winning one dollar.
+ What value of 
+\begin_inset Formula $p$
+\end_inset
+
+ gives you a 
+\begin_inset Formula $50$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+%
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ chance of winning $3 within 10 rounds?
+\end_layout
+
+\begin_layout Enumerate
+How does 
+\begin_inset Formula $p$
+\end_inset
+
+ change if the game ends only when you either go broke or win $4 instead?
+ Is the necessary probability of winning greater or less than before?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Redo the bikeshare analysis for 2020.
+ Data can be retrieved at 
+\begin_inset CommandInset href
+LatexCommand href
+name "the ancillary website"
+target "https://lqbrin.github.io/tea-time-linear/ancillaries.html#section7.2"
+literal "false"
+
+\end_inset
+
+.
+ Can you think of a reason the data are likely to be very different from
+ the 2018 data? How different is the expected bike distribution in 2020?
+\end_layout
+
+\begin_layout Enumerate
+Redo the bikeshare analysis for 2018 in a different neighborhood.
+ Data can be retrieved at 
+\begin_inset CommandInset href
+LatexCommand href
+name "the ancillary website"
+target "https://lqbrin.github.io/tea-time-linear/ancillaries.html#section7.2"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1489,14 +2374,6 @@ finishexercises
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Answers
-\end_layout
-
-\begin_layout Description
-l
 \end_layout
 
 \end_body
