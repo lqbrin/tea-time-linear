@@ -106,25 +106,47 @@ Sound is the perception of pressure variation.
  One common way to create pressure variation is through physical vibration.
  Tuning forks, speakers, the strings of stringed instruments, and vocal
  cords all use this technique.
- Their vibrations cause alternating moments of compression (increased pressure)
- and rarefaction (reduced pressure) in the air.
+ Their vibrations cause alternating moments of 
+\series bold
+compression
+\series default
+ (increased pressure) and 
+\series bold
+rarefaction
+\series default
+ (reduced pressure) in the air.
 \end_layout
 
 \begin_layout Standard
-The greater the difference in high and low pressures, the louder the sound.
- Sometimes the pressure difference (volume or intensity) is so great, our
- whole bodies vibrate.
+The greater the difference between high and low pressures, the louder the
+ sound.
+ Sometimes the pressure difference, called 
+\series bold
+volume
+\series default
+ or 
+\series bold
+intensity
+\series default
+, is so great, our whole bodies vibrate.
  Thunder, subwoofers, fireworks, and helicopters can do this, but for most
  sounds it is only our eardrums that perceive the pressure variation.
 \end_layout
 
 \begin_layout Standard
 The faster the pressure alternates between high and low, the higher the
- pitch.
+ 
+\series bold
+pitch
+\series default
+.
  Middle C, for example, is the result of pressure varying from neutral to
  high to low and back to neutral approximately 261.6 times per second.
- Each variation through neutral, high, low and back to neutral is one cycle,
- so we also say that middle C has a frequency of 261.6 cycles per second.
+ Each variation through neutral, high, low and back to neutral is one 
+\series bold
+cycle
+\series default
+, so we also say that middle C has a frequency of 261.6 cycles per second.
  One Hertz, abreviated Hz, equals one cycle per second, so we also say middle
  C has a frequency of 261.6 Hz.
  The highest note on a piano, B
@@ -138,10 +160,10 @@ The faster the pressure alternates between high and low, the higher the
 \begin_layout Standard
 The human ear is capable of perceiving frequencies between about 20 Hz and
  20,000 Hz.
- Air pressure can certainly alternate between high and low slower than 20
- cycles per second and faster than 20,000 cycles per second.
+ Air pressure can certainly alternate between high and low pressures slower
+ than 20 cycles per second and faster than 20,000 cycles per second.
  Our ears just won't pick up those vibrations.
- Dog whistles ideally emit sound between 23,000 Hz and 54,000 Hz
+ Dog whistles emit sound between 23,000 Hz and 54,000 Hz
 \begin_inset CommandInset citation
 LatexCommand cite
 key "coile"
@@ -149,7 +171,7 @@ literal "false"
 
 \end_inset
 
-, above the range of human hearing but within the range of canine hearing.
+, all above the range of human hearing but within the range of canine hearing.
  Elephants were the first land animals to be observed to produce sound below
  the range of human hearing
 \begin_inset CommandInset citation
@@ -163,11 +185,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-A sound wave, therefore can be modeled by a record of the pressure it causes
- on a receiver such as a microphone or eardrum over time.
- The simplest type of sound waves are simple harmonic vibrations–one intensity
- and one frequency, shifting from high to low pressure smoothly, like a
- sine curve.
+A sound wave can be modeled by a record of the pressure it causes on a receiver
+ such as a microphone or eardrum over time.
+ The simplest type of sound waves are 
+\series bold
+simple harmonic
+\series default
+ vibrations–one intensity, one frequency, shifting from high to low pressure
+ smoothly as a sine curve.
  Until the advent of electronics, the closest approximation to a simple
  harmonic vibration was the sound of a tuning fork.
  Over the course of a second or so, neither the frequency nor the intensity
@@ -241,17 +266,8 @@ Naturally produced sounds are not so neat.
  Wind and percussion instruments are the same.
  The richness of their sound comes from a variable intensity patchwork of
  many frequencies.
- The graph of two cycles of an actual recording of a 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: get type of drum
-\end_layout
-
-\end_inset
-
- drum are shown in figure 
+ The graph of two cycles of an actual recording of a singing drum are shown
+ in figure 
 \begin_inset Float figure
 wide false
 sideways false
@@ -428,13 +444,14 @@ Similarly examining a full 2 seconds of the audio reveals that the overall
 \begin_inset Formula $_{4}$
 \end_inset
 
-, equivalent to the D string on a violin or viola played open.
+, whose frequency is 293.66 Hz, equivalent to the D string on a violin or
+ viola played open.
  
 \end_layout
 
 \begin_layout Standard
-But how do we know which frequencies and intensities to use? In principle,
- the answer is simple.
+But how do we know which frequencies and intensities to use in approximation?
+ In principle, the answer is simple.
  Theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -455,74 +472,46 @@ noprefix "false"
 
 \end_inset
 
- provides the answer.
+ provides the guidance.
  Orthogonal projection of the function gives the right intensities.
  All we need are an appropriate inner product space and a basis for some
  subspace.
  Except in extreme cases, pressure waves, and therefore sound waves, vary
  continuously, so it makes sense to consider the vector space of continuous
  functions over some interval.
- In particular, let 
-\begin_inset Formula $V_{[0,L]}=\{f(x):f\text{ is continuous over }[0,L]\}$
+ In particular, we will consider subspaces of 
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
-.
- In an analysis class, this space would likely be denoted 
-\begin_inset Formula $C[0,L]$
-\end_inset
-
-.
- 
-\begin_inset Formula $C[0,L]=V_{[0,L]}$
-\end_inset
-
- is the set of all functions which are continuous on the closed interval
- 
+, the set of all functions which are continuous on the closed interval 
 \begin_inset Formula $[0,L]$
 \end_inset
 
 .
- Much like the justification that 
-\begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
-\end_inset
-
- is a vector space from section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Vector-Spaces-and-Span"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, it is a short exercise to note that 
-\begin_inset Formula $V_{[0,L]}$
-\end_inset
-
- is a vector space (exercise 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:fourier-series"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-).
 \end_layout
 
 \begin_layout Standard
-Much like the formulation of the inner product 
-\begin_inset Formula $\langle p,q\rangle=\int_{-1}^{1}p(x)q(x)\,dx$
+Much like the inner products of exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- on 
-\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- from section 
+ of section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Inner-Product-Spaces"
@@ -537,7 +526,7 @@ noprefix "false"
 \end_inset
 
  defines an inner product on 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
 .
@@ -557,7 +546,7 @@ noprefix "false"
 
 \begin_layout Standard
 Vectors in 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
  are continuous functions, so a basis for any subspace will have to be a
@@ -566,8 +555,9 @@ Vectors in
 \end_inset
 
 .
- Collections of trigonometric functions provide convenient bases because
- for all 
+ As suggested by their use earlier, collections of trigonometric functions
+ provide convenient bases.
+ For all 
 \begin_inset Formula $m=1,2,\ldots$
 \end_inset
 
@@ -715,7 +705,7 @@ noprefix "false"
 
 .
  And now we have our candidates for a vector space, 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
 , and basis elements, 
@@ -738,10 +728,9 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-When the function you are trying to approximate takes the value zero at
- both endpoints of the interval of interest, as is the case for the sound
- waves we have looked at, it makes best sense to use sine functions for
- a basis.
+When the function of interest takes the value zero at both endpoints of
+ the interval, as is the case for the sound waves we have looked at, it
+ makes best sense to use sine functions for a basis.
  Every sine function of the form 
 \begin_inset Formula $\sin\left(\frac{m\pi}{L}t\right)$
 \end_inset
@@ -1090,6 +1079,8 @@ The graphs of
 \end_inset
 
  are shown below with the area between the two shaded.
+ As the distance calculation suggests, this approximation is closer than
+ the last.
 \end_layout
 
 \begin_layout Standard
@@ -1164,7 +1155,7 @@ The graphs of
 \begin_inset Formula $[0,2]$
 \end_inset
 
- is imperceptible as the distance calculation might suggest.
+ is essentially imperceptible.
 \end_layout
 
 \begin_layout Standard
@@ -1244,7 +1235,7 @@ For a function
 , the (infinite) series
 \begin_inset Formula 
 \[
-b_{1}\sin\left(\frac{\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{\pi}{L}x\right)+\cdots
+b_{1}\sin\left(\frac{\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{\pi}{L}x\right)+b_{3}\sin\left(3\cdot\frac{\pi}{L}x\right)+\cdots
 \]
 
 \end_inset
@@ -1326,7 +1317,7 @@ Fourier coefficients
 \end_inset
 
 .
- In general though, any piecewise continuous functions can be approximated
+ In general though, any piecewise continuous function can be approximated
  arbitrarily closely using a finite number of terms of either the Fourier
  sine series, as we have done, 
 \shape italic
@@ -1468,12 +1459,12 @@ ly closely using a finite number of terms from any one of the Fourier series.
 \begin_inset Formula $f(0)=f(L)$
 \end_inset
 
- (for sine or cosine series).
+ (for sine series).
 \end_layout
 
 \begin_layout Standard
 It is not only functions that show some regularity or symmetry that can
- be approximated by Fourier series.
+ be approximated by Fourier series, however.
  The real power of Fourier analysis is to suss out the most important frequencie
 s when none are apparent.
  Circling back to sound waves, figure 
@@ -1521,33 +1512,6 @@ linear algebra rules
 
 \begin_layout Standard
 The first 16,095 Fourier sine series coefficients were calculated.
- Using the dominant 1, 74, 637, and 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-16095
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- harmonics, best approximations were calculated.
  The following graphs of the 
 \begin_inset Quotes eld
 \end_inset
@@ -1614,11 +1578,10 @@ linear algebra rules
 F16095 is barely visible beneath the original curve, suggesting that the
  approximation is very good (which should probably be expected having used
  so many terms).
- However, the distance between F16095 and the original wave is about 254.4,
- a number that may seem large.
+ It may be surprising then that the distance between F16095 and the original
+ wave is about 254.4, a number that may seem large.
  Distances are relative to the function being approximated, though.
- The norm of the original is 3493.5.
- 
+ The norm of the original sound wave is 3493.5, so 
 \begin_inset Formula $d(\text{f16095},\text{original})$
 \end_inset
 
@@ -1626,22 +1589,21 @@ F16095 is barely visible beneath the original curve, suggesting that the
  bad.
  On the other hand, the distances between the original and F1, F74, and
  F637 are 3479.5, 3032.0, and 2084.8, respectively.
- As their distances are similar in magnitude to the norm of the original,
- it should be expected that they do a poor job approximating the original
- sound wave.
+ As their distances are similar in magnitude to the norm of the sound wave
+ itself, it should be expected that they do a poor job approximating the
+ original sound wave.
  This expectation is born out by the graphs.
 \end_layout
 
 \begin_layout Standard
 In the end, though, the sound of the reproduction should be the judge of
  the quality of the approximation.
- The ancillary website 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: insert website
-\end_layout
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "The ancillary website"
+target "https://lqbrin.github.io/tea-time-linear/ancillaries.html#section7.3"
+literal "false"
 
 \end_inset
 
@@ -1865,18 +1827,20 @@ name "exc:fourier-series"
 \end_inset
 
 Argue that 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
  is a vector space.
 \end_layout
 
 \begin_layout Enumerate
-Heat equation stuff.
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-1"
 
-\begin_layout Enumerate
-Show (
+\end_inset
+
+Justify (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:cosine-product"
@@ -1890,32 +1854,28 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-Why is 
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-2"
+
+\end_inset
+
+Why do we not include the case 
 \begin_inset Formula $m=0$
 \end_inset
 
- not included in the family of harmonics for Fourier series?
+ in the family of harmonics for Fourier sine series?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-3"
+
+\end_inset
+
 Show that, in the inner product space 
-\begin_inset Formula $V_{[0,L]}$
-\end_inset
-
-, 
-\begin_inset Formula $\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle =\frac{L}{2}$
-\end_inset
-
- for 
-\begin_inset Formula $m=1,2,\ldots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Show that, in the inner product space 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
 ,
@@ -1938,6 +1898,383 @@ Show that, in the inner product space
 \end_inset
 
 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle =\frac{L}{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $m=1,2,\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-4"
+
+\end_inset
+
+Find the Fourier sine series for 
+\begin_inset Formula $f$
+\end_inset
+
+ over the given interval.
+ Use symmetry whenever possible to help with the calculations.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=1$
+\end_inset
+
+; 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+; 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=\begin{cases}
+x & x\leq1/2\\
+1-x & x>1/2
+\end{cases}$
+\end_inset
+
+; 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=e^{x}$
+\end_inset
+
+; 
+\begin_inset Formula $[0,\ln2]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-5"
+
+\end_inset
+
+Find the Fourier cosine series for 
+\begin_inset Formula $f$
+\end_inset
+
+ over the given interval.
+ Use symmetry whenever possible to help with the calculations.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=\frac{1}{2}-x$
+\end_inset
+
+; 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+; 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=\begin{cases}
+x & x\leq1/2\\
+1-x & x>1/2
+\end{cases}$
+\end_inset
+
+; 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=e^{x}$
+\end_inset
+
+; 
+\begin_inset Formula $[0,\ln2]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-10"
+
+\end_inset
+
+Find the Fourier series for 
+\begin_inset Formula $f$
+\end_inset
+
+ over the interval 
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x)=e^{x}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+geogebra
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-6"
+
+\end_inset
+
+Create graphs of 
+\begin_inset Formula $f$
+\end_inset
+
+ and the Fourier series of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+geogebra
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-7"
+
+\end_inset
+
+Create graphs of 
+\begin_inset Formula $f$
+\end_inset
+
+ and the Fourier series of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+geogebra
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-11"
+
+\end_inset
+
+Create graphs of 
+\begin_inset Formula $f$
+\end_inset
+
+ and the Fourier series of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-8"
+
+\end_inset
+
+Reproduce a sound wave.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Download one of the data spreadsheets of the sounds on 
+\begin_inset CommandInset href
+LatexCommand href
+name "the ancillary website"
+target "https://lqbrin.github.io/tea-time-linear/ancillaries.html#section7.3"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sort the Fourier sine series coefficients by decreasing magnitude.
+\end_layout
+
+\begin_layout Enumerate
+Using the twenty harmonics with greatest magnitude coefficients, reproduce
+ the sound wave as a sum of these twenty sine functions.
+\end_layout
+
+\begin_layout Enumerate
+Graph the original sound wave and its reproduction on the same set of axes.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-9"
+
+\end_inset
+
+Reproduce a sound wave, advanced.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Grab about 600 samples (6/441 sec) from one of the data spreadsheets of
+ the sounds on 
+\begin_inset CommandInset href
+LatexCommand href
+name "the ancillary website"
+target "https://lqbrin.github.io/tea-time-linear/ancillaries.html#section7.3"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute the Fourier cosine series coefficients for the first 100 harmonics.
+ You will need to write a computer program that implements a numerical integrati
+on technique.
+ The trapezoidal rule will suffice, for example.
+\end_layout
+
+\begin_layout Enumerate
+Using the twenty harmonics with greatest magnitude coefficients, reproduce
+ the sound wave as a sum of cosine functions.
+\end_layout
+
+\begin_layout Enumerate
+Graph the original sound wave and its reproduction on the same set of axes.
 \end_layout
 
 \end_deeper
