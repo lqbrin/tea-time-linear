@@ -111,7 +111,7 @@ You have just finished chopping, slicing, mixing, blending, marinating,
 
 \begin_layout Standard
 Next time you bake brownies, you might try this experiment.
- It requires an over thermometer with a probe that can be inserted into
+ It requires an oven thermometer with a probe that can be inserted into
  the brownie mix, preferably connected to a console that sits outside the
  oven, displaying the inside temperature.
  First, gather the preheating characteristics of the oven.
@@ -141,17 +141,16 @@ status collapsed
 
 \begin_layout Plain Layout
 Data, graphs, and calculations for this entire discussion are available
- in a spreadsheet at the ancillary site.
-\end_layout
+ in a spreadsheet at 
+\begin_inset CommandInset href
+LatexCommand href
+name "the ancillary website"
+target "https://lqbrin.github.io/tea-time-linear/ancillaries.html#section7.4"
+literal "false"
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Make data available, insert URL here.
+.
 \end_layout
 
 \end_inset
@@ -786,11 +785,8 @@ recurrence
 \series bold
 recurrence relation
 \series default
- and determines all of the terms of the sequence except 
-\begin_inset Formula $\mathbf{x}_{0}$
-\end_inset
-
-, which must be supplied separately.
+ and determines all of the terms of the sequence except the first, which
+ must be supplied separately.
  For purpose of our study of linear algebra, 
 \begin_inset Formula $\mathbf{x}_{k}$
 \end_inset
@@ -921,10 +917,6 @@ affine
 \end_inset
 
 
-\begin_inset Formula $\mathbf{f}$
-\end_inset
-
- is an affine map.
 \end_layout
 
 \begin_layout Standard
@@ -1102,7 +1094,7 @@ accurate to 3 decimal places.
 , which have just been calculated (using this 
 \begin_inset CommandInset href
 LatexCommand href
-name "SageMath SageCell"
+name "SageCell"
 target "https://sagecell.sagemath.org/?z=eJxFi00KwjAQhfeF3iFkleok5MeRWugReoLiopUqWTSVIUiOb0JA32J48z2-adyXSD4JBw5mqZVBkEa5cm65KkQwqgdXhv9olcV71zbr-Nke8SAxW5AIl8KS_sG-wGuBb_IhCq7ZwCHpDJ4HMc98YLSE1yYMYDe0DcvJ_nRK-rzWt5oeeDW_1GErEA==&lang=sage&interacts=eJyLjgUAARUAuQ=="
 literal "false"
 
@@ -1260,7 +1252,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The first few iterates of an orbit are often not the ultimate goal.
+The first few iterates of an orbit are often not the ultimate goal, however.
  For many applications, the point of interest is the long run.
  How can the 
 \begin_inset Formula $1000^{th}$
@@ -1345,37 +1337,50 @@ accurate to 3 decimal places.
 \end_inset
 
  do not change much.
- When the iterates of a dynamical system settle down this way, we say that
- the orbit approaches a particular vector.
- But what vector, and can we predict it without computing large numbers
- of iterates?
-\end_layout
+ When the iterates of a dynamical system settle down this way for all initial
+ values in some neighborhood, we say that the vector it is settling on is
+ an 
+\series bold
+attractor
+\series default
+.
+ It 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Standard
-By definition, 
+pulls
+\begin_inset Quotes erd
+\end_inset
+
+ orbits toward it.
+ But what vector is the attractor, and can we predict it without computing
+ large numbers of iterates? By definition, 
 \begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})$
 \end_inset
 
-, so when a dynamical system settles on a particular vector, we have 
+, so when a dynamical system has an attractor, it means 
 \begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})\approx\mathbf{x}_{k}$
 \end_inset
 
-.
+ and the approximation improves as 
+\begin_inset Formula $k$
+\end_inset
+
+ increases.
  Therein lies the answer to the mystery.
  
 \end_layout
 
 \begin_layout Standard
-The iterates are getting closer and closer to satisfying the equation 
-\begin_inset Formula $\mathbf{f}(\mathbf{x}_{k})=\mathbf{x}_{k}$
+The iterates are getting closer and closer to satisfying the equation
+\begin_inset Formula 
+\begin{equation}
+\mathbf{f}(\mathbf{x})=\mathbf{x}.\label{eq:fixed-pt-equation}
+\end{equation}
+
 \end_inset
 
-.
- Any solution of the equation 
-\begin_inset Formula $\mathbf{f}(\mathbf{x}^{*})=\mathbf{x}^{*}$
-\end_inset
-
- is called a 
+Any solution of this equation is called a 
 \series bold
 fixed point
 \series default
@@ -1388,19 +1393,19 @@ fixed point
 \end_inset
 
  were such a value, we would have 
-\begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})=\mathbf{f}(\mathbf{x}^{*})=\mathbf{x}^{*}=\mathbf{x}_{k}$
+\begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})=\mathbf{x}_{k}$
 \end_inset
 
 .
  The sequence would be fixed forever more at the value 
-\begin_inset Formula $\mathbf{x}^{*}$
+\begin_inset Formula $\mathbf{x}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-In the case of (
+For example, a fixed point of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:recurrence-example1"
@@ -1410,22 +1415,18 @@ noprefix "false"
 
 \end_inset
 
-) a fixed point of 
-\begin_inset Formula $\mathbf{f}$
-\end_inset
-
- satisfies
+) satisfies
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
 -.15 & -1.3 & -1.95\\
 -.55 & 1.8 & 3.15\\
 .15 & -1.3 & -2.25
-\end{array}\right]\mathbf{x}^{*}+\left[\begin{array}{c}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
 2\\
 -5\\
 4
-\end{array}\right]=\mathbf{x}^{*},
+\end{array}\right]=\mathbf{x},
 \]
 
 \end_inset
@@ -1437,7 +1438,7 @@ an equation we can solve:
 -.15 & -1.3 & -1.95\\
 -.55 & 1.8 & 3.15\\
 .15 & -1.3 & -2.25
-\end{array}\right]\mathbf{x}^{*}-\mathbf{x}^{*} & =-\left[\begin{array}{c}
+\end{array}\right]\mathbf{x}-\mathbf{x} & =-\left[\begin{array}{c}
 2\\
 -5\\
 4
@@ -1446,7 +1447,7 @@ an equation we can solve:
 -.15 & -1.3 & -1.95\\
 -.55 & 1.8 & 3.15\\
 .15 & -1.3 & -2.25
-\end{array}\right]-I\right)\mathbf{x}^{*} & =-\left[\begin{array}{c}
+\end{array}\right]-I\right)\mathbf{x} & =-\left[\begin{array}{c}
 2\\
 -5\\
 4
@@ -1467,7 +1468,7 @@ literal "false"
 ), it turns out
 \begin_inset Formula 
 \[
-\mathbf{x}^{*}=\frac{1}{117}\left[\begin{array}{c}
+\mathbf{x}=\frac{1}{117}\left[\begin{array}{c}
 130\\
 -400\\
 310
@@ -1484,16 +1485,29 @@ It seems clear enough the orbit is
 \series bold
 approaching the fixed point
 \series default
-.
- When this happens, we say 
-\begin_inset Formula $\mathbf{x}^{*}$
+, so we have that 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1.111111111\\
+-3.418803419\\
+2.649572650
+\end{array}\right]
+\]
+
 \end_inset
 
- is an attracting fixed point or, simply, an 
-\series bold
-attractor
-\series default
-.
+is an attractor of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:recurrence-example1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -1630,7 +1644,8 @@ Though it is likely not at all clear from this short list nor the SageMath
 
 \begin_layout Standard
 \noindent
-It appears there are only 24 iterations, but that is because they repeat.
+It appears there are only 24 iterations (points on the graph), but that
+ is because they repeat.
  As indicated, 
 \begin_inset Formula $\mathbf{x}_{0}=\mathbf{x}_{24}=\mathbf{x}_{48}=\cdots$
 \end_inset
@@ -2287,7 +2302,8 @@ term
 \begin_inset space ~
 \end_inset
 
-behavior a qualitative description of the orbit of a dynamical system.
+behavior a quantitative or qualitative description of the orbit of a dynamical
+ system.
  The phrases 
 \begin_inset Quotes eld
 \end_inset
@@ -2330,7 +2346,7 @@ fixed
 \end_inset
 
 point a solution of the equation 
-\begin_inset Formula $\mathbf{f}(\mathbf{x}^{*})=\mathbf{x}^{*}$
+\begin_inset Formula $\mathbf{f}(\mathbf{x})=\mathbf{x}$
 \end_inset
 
 .
@@ -2358,62 +2374,880 @@ startexercises
 
 \end_layout
 
-\begin_layout Standard
-Useful results of search 
-\begin_inset Quotes eld
-\end_inset
-
-real applications of discrete dynamical systems
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-name "https://www.math.colostate.edu/~gerhard/MATH331/index.html"
-target "https://www.math.colostate.edu/~gerhard/MATH331/index.html"
-literal "false"
-
-\end_inset
-
- (Non-Newtonian fish heating)
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-name "https://www.researchgate.net/publication/344193230_Discrete_Dynamical_Systems_With_Applications_in_Biology"
-target "https://www.researchgate.net/publication/344193230_Discrete_Dynamical_Systems_With_Applications_in_Biology"
-literal "false"
-
-\end_inset
-
- (Biology—parasites)
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-name "https://www.math.umd.edu/~tjp/131%2014.0%20Discrete%20Dynamical%20Systems.pdf"
-target "https://www.math.umd.edu/~tjp/131%2014.0%20Discrete%20Dynamical%20Systems.pdf"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Exercises
 \end_layout
 
 \begin_layout Enumerate
-A
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems"
+
+\end_inset
+
+Calculate the first four iterates of the dynamical system defined by 
+\begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{x}_{0}=\mathbf{0}$
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{2}\left[\begin{array}{cc}
+-7 & -10\\
+4 & 6
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+-3
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{20}\left[\begin{array}{cc}
+40 & -36\\
+63 & -56
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+3/5\\
+-7/10
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{6}\left[\begin{array}{cc}
+-3 & 3\\
+3 & 5
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+-1\\
+1/2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{40}\left[\begin{array}{ccc}
+155 & 64 & -55\\
+-192 & -76 & 72\\
+147 & 64 & -47
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+3/5\\
+3/8\\
+-7/10
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{18}\left[\begin{array}{ccc}
+82 & 57 & -29\\
+-16 & -3 & 41\\
+8 & -3 & 65
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+5/6\\
+7/3\\
+1/18
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{28}\left[\begin{array}{ccc}
+153 & 500 & 100\\
+-48 & -164 & -37\\
+40 & 160 & 53
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+1/7\\
+2/7\\
+3/7
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-1"
+
+\end_inset
+
+Find the fixed point(s) of the dynamical system in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-2"
+
+\end_inset
+
+Find the eigenvalues of the square matrix in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-3"
+
+\end_inset
+
+Based on the information from questions 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, does the dynamical system have an attractor?
+\end_layout
+
+\begin_layout Enumerate
+Describe the long term behavior of the dynamical system in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Calculate more iterates if needed.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-4"
+
+\end_inset
+
+Picturing an attractor, part 1.
+ Let 
+\begin_inset Formula ${\displaystyle M=\frac{1}{50}\left[\begin{array}{cc}
+24 & -8\\
+-3 & 26
+\end{array}\right]}$
+\end_inset
+
+.
+ The fixed point of 
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\left[\begin{array}{c}
+-4\\
+-6
+\end{array}\right];\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+4\\
+12
+\end{array}\right]}$
+\end_inset
+
+ and the eigenpairs of 
+\begin_inset Formula $M$
+\end_inset
+
+ are 
+\begin_inset Formula ${\displaystyle \frac{3}{5},\left[\begin{array}{c}
+4\\
+-3
+\end{array}\right]}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle \frac{2}{5},\left[\begin{array}{c}
+2\\
+1
+\end{array}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verify that the spectral radius of 
+\begin_inset Formula $M$
+\end_inset
+
+ is less than 1 (and therefore the fixed point is an attractor).
+\end_layout
+
+\begin_layout Enumerate
+On a set of axes, plot the fixed point with the eigenvectors emanating from
+ it.
+\end_layout
+
+\begin_layout Enumerate
+Pick several random points approximately 10 units away from the fixed point.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the first 4 iterations of the orbits of each point from part (c)
+ and plot them on the same set of axes.
+\end_layout
+
+\begin_layout Enumerate
+Connect each orbit with a single smooth arrow through its points in the
+ order in which they occur.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-5"
+
+\end_inset
+
+Picturing an attractor, part 2.
+ Let 
+\begin_inset Formula ${\displaystyle M=\frac{1}{3}\left[\begin{array}{cc}
+\sqrt{2} & -\sqrt{2}\\
+\sqrt{2} & \sqrt{2}
+\end{array}\right]}$
+\end_inset
+
+.
+ The fixed point of 
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\left[\begin{array}{c}
+-\sqrt{2}\\
+\frac{17}{3}\sqrt{2}
+\end{array}\right];\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+ is 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+7\\
+10
+\end{array}\right]}$
+\end_inset
+
+ and the eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ are 
+\begin_inset Formula $\frac{\sqrt{2}}{3}(1\pm i)$
+\end_inset
+
+.
+ The eigenvectors are thus complex as well.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verify that the spectral radius of 
+\begin_inset Formula $M$
+\end_inset
+
+ is less than 1 (and therefore the fixed point is an attractor).
+\end_layout
+
+\begin_layout Enumerate
+On a set of axes, plot the fixed point.
+\end_layout
+
+\begin_layout Enumerate
+Pick several random points approximately 8 units away from the fixed point.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the first 4 iterations of the orbits of each point from part (c)
+ and plot them on the same set of axes.
+\end_layout
+
+\begin_layout Enumerate
+Connect the orbits by drawing a smooth arrow through them in the order in
+ which they occur.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-6"
+
+\end_inset
+
+Picturing a repeller, part 1.
+ Let 
+\begin_inset Formula ${\displaystyle M=\frac{1}{15}\left[\begin{array}{cc}
+24 & -8\\
+-3 & 26
+\end{array}\right]}$
+\end_inset
+
+.
+ The fixed point of 
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\frac{1}{3}\left[\begin{array}{c}
+-64\\
+58
+\end{array}\right];\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+-10\\
+10
+\end{array}\right]}$
+\end_inset
+
+ and the eigenpairs of 
+\begin_inset Formula $M$
+\end_inset
+
+ are 
+\begin_inset Formula ${\displaystyle 2,\left[\begin{array}{c}
+4\\
+-3
+\end{array}\right]}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle \frac{4}{3},\left[\begin{array}{c}
+2\\
+1
+\end{array}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Note that all the eigenvalues have magnitude greater than 1 (and therefore
+ the fixed point is a repeller).
+\end_layout
+
+\begin_layout Enumerate
+On a set of axes, plot the fixed point with the eigenvectors emanating from
+ it.
+\end_layout
+
+\begin_layout Enumerate
+Pick several random points about one unit from the fixed point.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the first 4 iterations of the orbits of each point from part (c)
+ and plot them on the same set of axes.
+\end_layout
+
+\begin_layout Enumerate
+Connect each orbit with a single smooth arrow through its points in the
+ order in which they occur.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-7"
+
+\end_inset
+
+Picturing a repeller, part 2.
+ Let 
+\begin_inset Formula ${\displaystyle M=\frac{4}{3}\left[\begin{array}{cc}
+\sqrt{2} & -\sqrt{2}\\
+\sqrt{2} & \sqrt{2}
+\end{array}\right]}$
+\end_inset
+
+.
+ The fixed point of 
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\left[\begin{array}{c}
+\frac{28}{3}\sqrt{2}\\
+4\sqrt{2}
+\end{array}\right];\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+5\\
+-2
+\end{array}\right]}$
+\end_inset
+
+ and the eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ are 
+\begin_inset Formula $\frac{4\sqrt{2}}{3}(1\pm i)$
+\end_inset
+
+.
+ The eigenvectors are thus complex as well.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verify that all the eigenvalues have magnitude greater than 1 (and therefore
+ the fixed point is a repeller).
+\end_layout
+
+\begin_layout Enumerate
+On a set of axes, plot the fixed point.
+\end_layout
+
+\begin_layout Enumerate
+Pick several random points approximately 8 units away from the fixed point.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the first 4 iterations of the orbits of each point from part (c)
+ and plot them on the same set of axes.
+\end_layout
+
+\begin_layout Enumerate
+Connect the orbits by drawing a smooth arrow through them in the order in
+ which they occur.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-8"
+
+\end_inset
+
+Let 
+\begin_inset Formula $M-I$
+\end_inset
+
+ be an invertible matrix and suppose the fixed point of the affine dynamical
+ system
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=M\mathbf{x}+\mathbf{c};\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is an attractor for any initial value 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ Argue that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+the fixed point is unique; and
+\end_layout
+
+\begin_layout Enumerate
+the fixed point of the dynamical system 
+\begin_inset Formula 
+\[
+\mathbf{z}_{k+1}=M^{-1}(\mathbf{z}_{k}-\mathbf{c});\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is unique and is a repeller.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-9"
+
+\end_inset
+
+Let 
+\begin_inset Formula $M-I$
+\end_inset
+
+ be an invertible matrix and suppose the fixed point of the affine dynamical
+ system
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=M\mathbf{x}+\mathbf{c};\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is a repeller for any initial value 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ Argue that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+the fixed point is unique; and
+\end_layout
+
+\begin_layout Enumerate
+the fixed point of the dynamical system 
+\begin_inset Formula 
+\[
+\mathbf{z}_{k+1}=M^{-1}(\mathbf{z}_{k}-\mathbf{c});\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is unique and is an attractor.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-10"
+
+\end_inset
+
+Picturing a saddle point.
+ Let 
+\begin_inset Formula ${\displaystyle M=\frac{1}{6}\left[\begin{array}{cc}
+7 & -3\\
+-1 & 5
+\end{array}\right]}$
+\end_inset
+
+.
+ The fixed point of 
+\begin_inset Formula 
+\[
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\frac{1}{6}\left[\begin{array}{c}
+37\\
+-19
+\end{array}\right];\ \mathbf{x}_{0}=\mathbf{v}
+\]
+
+\end_inset
+
+is 
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+4\\
+-3
+\end{array}\right]}$
+\end_inset
+
+ and the eigenpairs of 
+\begin_inset Formula $M$
+\end_inset
+
+ are 
+\begin_inset Formula ${\displaystyle \frac{4}{3},\left[\begin{array}{c}
+3\\
+-1
+\end{array}\right]}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle \frac{2}{3},\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Notice that one eigenvalue has magnitude greater than 1 while the other
+ has magnitude less than 1 (and therefore the fixed point is neither an
+ attractor nor repeller).
+\end_layout
+
+\begin_layout Enumerate
+On a set of axes, plot the fixed point with the eigenvectors emanating from
+ it.
+\end_layout
+
+\begin_layout Enumerate
+Pick several random points closer to the line defined by the eigenvector
+ whose corresponding eigenvalue has magnitude greater than 1 than they are
+ to the line defined by the other eigenvector.
+\end_layout
+
+\begin_layout Enumerate
+Calculate the first 4 iterations of the orbits of each point from part (c)
+ and plot them on the same set of axes.
+\end_layout
+
+\begin_layout Enumerate
+Connect each orbit with a single smooth arrow through its points in the
+ order in which they occur.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:discrete-dynamical-systems-11"
+
+\end_inset
+
+Host Parasite Interaction.
+ Let 
+\begin_inset Formula $H$
+\end_inset
+
+ be the population of a host prone to parasite population 
+\begin_inset Formula $P$
+\end_inset
+
+ and suppose the populations evolve according to the discrete dynamical
+ system
+\begin_inset Formula 
+\begin{align}
+H_{n+1} & =\gamma H_{n}e^{-aP_{n}}\nonumber \\
+P_{n+1} & =H_{n}\left(1-e^{-aP_{n}}\right)\label{eq:host-parasite}
+\end{align}
+
+\end_inset
+
+for some positive values of the parameters 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset href
+LatexCommand href
+name "Discrete Dynamical Systems: With Applications in Biology"
+target "https://www.researchgate.net/publication/344193230_Discrete_Dynamical_Systems_With_Applications_in_Biology"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the fixed point of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:host-parasite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $0<\gamma<1$
+\end_inset
+
+, argue that the fixed point of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:host-parasite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) has a negative coordinate (and therefore is an unattainable state for
+ the physical system—populations cannot be negative).
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+, argue that the parasite population is zero according to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:host-parasite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+The linear dynamical system
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+H\\
+P
+\end{array}\right]_{k+1}=\left[\begin{array}{cc}
+1 & \frac{\gamma\ln\gamma}{1-\gamma}\\
+\frac{\gamma-1}{\gamma} & \frac{\ln\gamma}{\gamma-1}
+\end{array}\right]\left[\begin{array}{c}
+H\\
+P
+\end{array}\right]_{k},\label{eq:linearization}
+\end{equation}
+
+\end_inset
+
+called a linearization of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:host-parasite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), is an excellent approximation of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:host-parasite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) near its fixed point.
+ For 
+\begin_inset Formula $\gamma>1$
+\end_inset
+
+, argue that the fixed point of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linearization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is a repeller (and therefore is an unstable state for the physical system—popu
+lations will tend away from the fixed point).
+ This is enough to show that the same happens for (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:host-parasite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Is this a good model for host/parasite populations that can live in equilibrium
+ (constant populations each)? Explain.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open

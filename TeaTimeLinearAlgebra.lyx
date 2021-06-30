@@ -398,6 +398,30 @@ mainmatter
 status open
 
 \begin_layout Plain Layout
+UNIFORMIZATION TODO
+\end_layout
+
+\begin_layout Itemize
+Reduce occurences of 
+\begin_inset Quotes eld
+\end_inset
+
+SageMath SageCell
+\begin_inset Quotes erd
+\end_inset
+
+ to just 
+\begin_inset Quotes eld
+\end_inset
+
+SageCell
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 UNIFORMIZATION COMPLETED
 \end_layout
 
