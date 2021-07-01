@@ -339,7 +339,7 @@ g general polygons is lacking.
 After building a larger replica of a rep-tile, one can switch perspecives
  and look at the construction as a dissection of the larger rep-tile.
  From this viewpoint, rep-tiles are plane figures that tessellate the plane
- and can be dissected into finitely many similar copies.
+ and can be dissected into finitely many similar copies of themselves.
  All the figures of the previous diagram can be seen from this vantage.
  The large square is made up of four smaller squares.
  The large triangle is broken up into four similar triangles.
@@ -681,7 +681,7 @@ dilation
 \end_layout
 
 \begin_layout Standard
-More generally, let 
+Let 
 \begin_inset Formula $\mathscr{C}=\{C_{1},C_{2},\ldots,C_{p}\}$
 \end_inset
 
@@ -1114,11 +1114,11 @@ noprefix "false"
 
 \begin_layout Standard
 The following diagram illustrates three things.
- The dissection of a reptile is not unique (two different dissections are
- shown for the same right triangle).
- The number of parts in a dissection of a rep-tile is not always four.
- The parts of a dissection need not be congruent to one another (they only
- need be similar to the whole).
+ One, the dissection of a reptile is not unique (two different dissections
+ are shown for the same right triangle).
+ Two, the number of parts in a dissection of a rep-tile is not always four.
+ Three, the parts of a dissection need not be congruent to one another (they
+ only need be similar to the whole).
 \end_layout
 
 \begin_layout Standard
@@ -1749,6 +1749,381 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+Build a larger copy of the figure from similar copies of itself, thereby
+ showing the figure is a rep-tile.
+ Appropriate sizes and number of copies can be found on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:rep-tile-pieces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-01.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-03.pdf
+	lyxscale 25
+	height 1in
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-05.pdf
+	lyxscale 25
+	height 0.75in
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-07.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-09.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-11.pdf
+	lyxscale 25
+	height 1.3in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-17.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-13.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-15.pdf
+	lyxscale 25
+	height 1in
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-19.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Show that the 
 \begin_inset Formula $1,2,\sqrt{5}$
 \end_inset
@@ -2220,5 +2595,165 @@ which simplify as
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "par:rep-tile-pieces"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-02.pdf
+	lyxscale 33
+	width 6in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-04.pdf
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-06.pdf
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-08.pdf
+	lyxscale 33
+	height 1in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-10.pdf
+	lyxscale 33
+	height 1in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-18.pdf
+	lyxscale 33
+	width 6in
+
+\end_inset
+
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-14.pdf
+	lyxscale 33
+	width 3.6in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-16.pdf
+	lyxscale 33
+	width 2.4in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-12.pdf
+	lyxscale 33
+	height 1.4in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-20.pdf
+	lyxscale 33
+	height 1.4in
+
+\end_inset
+
+ 
+\end_layout
+
 \end_body
 \end_document
