@@ -1,0 +1,23 @@
+/tmp/tiles/fr01-mono.png
+---------------
+horizontal center,radius: 4.973590101869776,2.9218531027838632
+  vertical center,radius: -1.9739667361670983,1.9737548661597213
+horizontal extent: 2.051736999085913 --> 7.89544320465364
+  vertical extent: -3.9477216023268196 --> -0.0002118700073769908
+
+
+Transformations
+---------------
+(Reflection,Scale ratio,Rotation,Horizontal translation,Vertical translation),Scale factor
+(0, 1, -90, 4.0, 0.0),0.5
+(2, 1, 90, 4.0, 0.0),0.5
+(2, 1.4142135623730951, -135, 4.0, -4.0),0.7071067811865476
+NOTE: Reflection 0 = none, 1 = x-axis, 2 = y-axis
+
+
+IFS matrix(2,2,[a,b,c,d]) * vector([x,y]) + vector([e,f])
+---------------
+(a,   b,   c,   d,   e,   f,   probability)
+[3.061616997868383e-17, 0.5, -0.5, 3.061616997868383e-17, 4.0, 0.0, 0.25]
+[-3.061616997868383e-17, -0.5, -0.5, 3.061616997868383e-17, 4.0, 0.0, 0.25]
+[0.5, 0.5000000000000001, 0.5000000000000001, -0.5, 4.0, -4.0, 0.5000000000000001]

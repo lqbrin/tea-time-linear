@@ -1,0 +1,3028 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input $HOME/Documents/scsu/Book-Linear/preamble
+\end_preamble
+\options svgnames
+\use_default_options true
+\begin_modules
+theorems-ams
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 1.9cm
+\rightmargin 1.5cm
+\bottommargin 1.9cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Rep-tiles"
+
+\end_inset
+
+Rep-tiles []
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: get permission for the Escher.
+ Add information about copyright.
+ requested from www.mcescher.com
+\end_layout
+
+\end_inset
+
+The floors of kitchens, bathrooms, museums, and other spaces are more often
+ than not tiled in some fashion.
+ Flat ceramic or natural stone tiles are placed together in a regular pattern,
+ sometimes more artistically than others.
+ In any case, the tiles are laid flat, covering the whole floor without
+ overlapping.
+ Perhaps the most common tile shape for this purpose is the square.
+ It is easy to design a covering of a floor using squares of the same size.
+ Squares are flexible and simple this way.
+ More fanciful floor coverings are made of rectangular, triangular, hexagonal,
+ and octagonal tiles.
+ Fitting these various shapes together to cover a floor can be an artistic
+ endeavor, limited mostly by imagination.
+\end_layout
+
+\begin_layout Standard
+Tessellations are the mathematical equivalent of floor tiling.
+ Any piecing together of a set of shapes, covering a flat surface without
+ overlapping is called a tiling or tessellation.
+ As with floors, perhaps the simplest way to tile, or tessellate, the plane
+ is with squares.
+ Any flat surface can be covered by fitting squares of the same size together
+ at their corners, maintaining parallel sides, just like the pattern seen
+ on graph paper.
+ The same can be done with equilateral triangles and regular hexagons.
+ These coverings are called regular tesselations, samples shown here.
+ Each one can be extended indefinitely in any direction.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-01.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Irregular polygons tile the plane just as well.
+ Parallelograms, pentagons, convex and concave, can all be fitted to tessellate,
+ samples shown here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-02.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+M.C.
+ Escher famously made tessellation an artform.
+ Tilings with irregularly shaped birds, fish, human figures, and other natural
+ shapes appear in many of his most famous creations.
+ See figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:escher"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, for example.
+ One way to create Escher-esque tessellations is to start with a regular
+ tile and modify its perimeter in a symmetric way, preserving its tessellating
+ nature.
+ The third tessellation of the diagram above is created from squares where
+ each side is replaced by a zig-zag.
+ Among the infinite possibilities for tiles created this way are the two
+ shown here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-03.pdf
+	lyxscale 44
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Each side of each tile is given 180 degree rotational symmetry.
+ The tile created from the equilateral triangle is then given 120 degree
+ rotational symmetry on the whole, and the tile created from the square
+ is given 90 degree rotational symmetry on the whole.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:escher"
+
+\end_inset
+
+M.C.
+ Escher's System X(e)
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/escher-systemXe.png
+	lyxscale 50
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Elaborate in a different way, some tiles are doubly tiling.
+ Not only can they be fitted to tile the plane, but they can also be fitted
+ to tile larger copies of themselves! These tiles are called 
+\series bold
+rep-tiles
+\series default
+, short for self-replicating tiles.
+ Again, the square provides an immediate example.
+ Four congruent squares fitted together at a corner, sides parallel to one
+ another form a square with side length twice the original (and four times
+ the area).
+ Equilateral triangles, and in fact all triangles, are rep-tiles.
+ Four congruent copies can be pieced together, three in the same orientation
+ and the fourth rotated 180 degrees, to form a larger copy.
+ Regular hexagons are not rep-tiles as no finite number of copies of a hexagon
+ can be fitted together (as tiles, without overlap) to form a hexagon.
+ However, there are irregular hexagons that are rep-tiles.
+ One such hexagon has a symmetric L shape—three squares glued together in
+ an ell.
+ To see that they are self-replicating, the following diagram shows four
+ of each shape fitted together to form a larger replica.
+ We have already seen that these shapes tessellate the plane, so they are
+ indeed rep-tiles.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-04.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As these rep-tiles are polygons, rigorous mathematical descriptions of each
+ are easily within reach.
+ A square is described as a quadrilateral with four congruent sides and
+ four congruent interior angles.
+ With this description and the location of one pair of opposite vertices,
+ exactly one square is determined and it can be sketched from this information.
+ A triangle is a three-sided polygon.
+ With this description and the locations of its vertices, exactly one triangle
+ is determined and it can be sketched from this information.
+ The L-shaped tile is harder to describe and harder still to provide sufficient
+ information for drawing a particular such tile.
+ Phrases like 
+\begin_inset Quotes eld
+\end_inset
+
+three squares glued together
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+a square with one missing quadrant
+\begin_inset Quotes erd
+\end_inset
+
+ are perhaps adequate, but general and flexible language for precisely describin
+g general polygons is lacking.
+ As we explore more and more rep-tiles, the language of plane geometry becomes
+ less and less satisfying.
+ Linear algebra provides a common language to describe all rep-tiles, polygons
+ and non-polygons alike—transformations.
+\end_layout
+
+\begin_layout Standard
+After building a larger replica of a rep-tile, one can switch perspecives
+ and look at the construction as a dissection of the larger rep-tile.
+ From this viewpoint, rep-tiles are plane figures that tessellate the plane
+ and can be dissected into finitely many similar copies of themselves.
+ All the figures of the previous diagram can be seen from this vantage.
+ The large square is made up of four smaller squares.
+ The large triangle is broken up into four similar triangles.
+ The large L-shape is likewise divided into four smaller copies of itself.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Solomon Golomb}
+\end_layout
+
+\end_inset
+
+Solomon Golomb is credited with coining the term 
+\shape italic
+rep-tile
+\shape default
+, but his original paper
+\begin_inset CommandInset citation
+LatexCommand cite
+key "golomb"
+literal "false"
+
+\end_inset
+
+ only uses the term 
+\begin_inset Quotes eld
+\end_inset
+
+rep-
+\begin_inset Formula $k$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, short for 
+\shape italic
+replicating of order 
+\begin_inset Formula $k$
+\end_inset
+
+
+\shape default
+.
+ To quote Golomb, a plane figure is called rep-
+\begin_inset Formula $k$
+\end_inset
+
+ if 
+\begin_inset Quotes eld
+\end_inset
+
+it can be dissected into 
+\begin_inset Formula $k$
+\end_inset
+
+ `replicas', each congruent to the others and similar to the original
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Curiously, Martin Gardner
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardner"
+literal "false"
+
+\end_inset
+
+ credits Golomb with laying the foundation for the study of rep-tiles and
+ inventing the term in a series of private papers, all in his article appearing
+ more than a year earlier than Golomb's!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By imposing a set of axes on any of these figures, rigorous mathematical
+ descriptions of the figures are available as sets of affine transformations—com
+positions of linear transformations and translations.
+ Any placement of the axes—or from the perspective of the square, putting
+ it anywhere in the plane—will do.
+ We only need a frame of reference.
+ For simplicity, if we arrange for opposite corners of the square to coincide
+ with 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+, the following diagram shows the transformations that determine the square.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-05.pdf
+	lyxscale 44
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each transformation maps the whole square (the one with opposite corners
+ 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+) to one of the parts of its dissection.
+ You should recognize the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices as scaling by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ in both horizontal and vertical directions.
+ The addition of 
+\begin_inset Formula $2\times1$
+\end_inset
+
+ vectors provide translations.
+ In words, 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ can be described as scaling by 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ horizontally and vertically followed by translation (shifting) 1 unit horizonta
+lly.
+ 
+\begin_inset Formula $T_{4}\left(\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]\right)=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{4}\left(\left[\begin{array}{c}
+2\\
+2
+\end{array}\right]\right)=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]+\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+, for example.
+ More importantly, the image of the 
+\begin_inset Formula $2$
+\end_inset
+
+ by 
+\begin_inset Formula $2$
+\end_inset
+
+ square under 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ is the purple square: contracting the 
+\begin_inset Formula $2$
+\end_inset
+
+ by 
+\begin_inset Formula $2$
+\end_inset
+
+ square by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ and then translating the contracted copy right 1 unit lands the image of
+ the larger square (well, squarely) on top of the purple square—the bottom
+ right square of the dissection.
+ Letting 
+\begin_inset Formula $S$
+\end_inset
+
+ be the 
+\begin_inset Formula $2$
+\end_inset
+
+ by 
+\begin_inset Formula $2$
+\end_inset
+
+ square with opposite corners at 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+, we thereby have 
+\begin_inset Formula $T_{4}(S)=\text{the purple square}$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula $T_{1}(S)=\text{the orange square}$
+\end_inset
+
+ (the bottom left square of the dissection); 
+\begin_inset Formula $T_{2}(S)=\text{the blue square}$
+\end_inset
+
+ (the top left square of the dissection); and 
+\begin_inset Formula $T_{3}(S)=\text{the green square}$
+\end_inset
+
+ (the top right square of the dissection).
+ The union of the four images is the original square.
+ In the form of an equation,
+\begin_inset Formula 
+\begin{equation}
+T_{1}(S)\cup T_{2}(S)\cup T_{3}(S)\cup T_{4}(S)=S.\label{eq:hutchinson-square}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A theorem of Hutchinson
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hutchinson"
+literal "false"
+
+\end_inset
+
+ asserts that 
+\begin_inset Formula $S$
+\end_inset
+
+ is the only compact set that satisfies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hutchinson-square"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) with the given transformations.
+ In other words, 
+\begin_inset Formula $T_{1},T_{2},T_{3},T_{4}$
+\end_inset
+
+ determine 
+\begin_inset Formula $S$
+\end_inset
+
+ via equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hutchinson-square"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ These four transformations provide a precise description of the square
+ with opposite corners at 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+.
+ Incidentally, each transformation 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+ is a 
+\series bold
+similitude
+\series default
+—a rigid transformation (rotation, reflection, translation, or composition
+ thereof) composed with 
+\series bold
+dilation
+\series default
+ (scaling by the same scale factor in all directions).
+ Similitudes preserve shape but not necessarily size, exactly the type of
+ transformation needed to map a shape onto one of the (similar) parts of
+ its dissection.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathscr{C}=\{C_{1},C_{2},\ldots,C_{p}\}$
+\end_inset
+
+ be a set of similitudes in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ with scale factors less than one, and define
+\begin_inset Formula 
+\begin{equation}
+\mathcal{H}_{\mathscr{C}}(A)=C_{1}(A)\cup C_{2}(A)\cup\cdots\cup C_{p}(A)\label{eq:hutchinson-operator}
+\end{equation}
+
+\end_inset
+
+for any subset 
+\begin_inset Formula $A$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ 
+\series bold
+Hutchinson's theorem
+\series default
+ concludes that there is exactly one compact set 
+\begin_inset Formula $K$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathcal{H}_{\mathscr{C}}(K)=K$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula 
+\begin{equation}
+\lim_{k\to\infty}\mathcal{H}_{\mathscr{C}}^{\circ k}(A)=K\label{eq:hutchinson-limit}
+\end{equation}
+
+\end_inset
+
+for any compact set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Not only does the theorem assert the existence and uniqueness of the set
+ 
+\begin_inset Formula $K$
+\end_inset
+
+, it gives a way to construct it from the similitudes.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Hutchinson}
+\end_layout
+
+\end_inset
+
+The original theorem of Hutchinson and its proof lie along the fence between
+ real analysis and topology.
+ 
+\shape italic
+Let 
+\begin_inset Formula $X=(X,d)$
+\end_inset
+
+ be a complete metric space and 
+\begin_inset Formula $\mathscr{S}=\{S_{1},\ldots,S_{N}\}$
+\end_inset
+
+ be a finite set of contraction maps on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Then there exists a unique closed bounded set 
+\begin_inset Formula $K$
+\end_inset
+
+ such that 
+\begin_inset Formula $K=\bigcup_{i=1}^{N}S_{i}K$
+\end_inset
+
+.
+ Furthermore, 
+\begin_inset Formula $K$
+\end_inset
+
+ is compact and is the closure of the set of fixed points 
+\begin_inset Formula $s_{i_{1}\cdots i_{p}}$
+\end_inset
+
+ of finite compositions 
+\begin_inset Formula $S_{i_{1}}\circ\ldots\circ S_{i_{p}}$
+\end_inset
+
+ of members of 
+\begin_inset Formula $\mathscr{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+For arbitary 
+\begin_inset Formula $A\subset X$
+\end_inset
+
+ let 
+\begin_inset Formula $\mathscr{S}(A)=\bigcup_{i=1}^{N}S_{i}A$
+\end_inset
+
+, 
+\begin_inset Formula $\mathscr{S}^{P}(A)=\mathscr{S}(\mathscr{S}^{P-1}(A))$
+\end_inset
+
+.
+ Then for closed bounded 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $\mathscr{S}^{P}(A)\to K$
+\end_inset
+
+ in the Hausdorff metric.
+\shape default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying this theorem to the set 
+\begin_inset Formula $\mathscr{T}=\{T_{1},T_{2},T_{3},T_{4}\}$
+\end_inset
+
+, we do not have to know anything about the origin of the transformations
+ 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+.
+ All the work of dissecting the square, placing it in the plane, and deriving
+ the transformations in 
+\begin_inset Formula $\mathscr{T}$
+\end_inset
+
+ can be forgotten.
+ All we need is a compact set 
+\begin_inset Formula $A$
+\end_inset
+
+ (and a lot of patience!) to recover the square.
+ It is the limit of the sequence 
+\begin_inset Formula $\mathcal{H}_{\mathscr{T}}(A),\mathcal{H}_{\mathscr{T}}\left(\mathcal{H}_{\mathscr{T}}(A)\right),\mathcal{H}_{\mathscr{T}}\left(\mathcal{H}_{\mathscr{T}}\left(\mathcal{H}_{\mathscr{T}}(A)\right)\right),\ldots$
+\end_inset
+
+, the iteration of 
+\begin_inset Formula $\mathcal{H}_{\mathscr{T}}$
+\end_inset
+
+ on 
+\shape italic
+any
+\shape default
+ compact set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ The first few terms of this sequence are shown below, where 
+\begin_inset Formula $A$
+\end_inset
+
+ takes the shape of a kitty
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kitty image downloaded from 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://openclipart.org/detail/292277/cute-cat"
+target "https://openclipart.org/detail/292277/cute-cat"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathscr{T}}(A)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathscr{T}}\left(\mathcal{H}_{\mathscr{T}}(A)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathscr{T}}\left(\mathcal{H}_{\mathscr{T}}\left(\mathcal{H}_{\mathscr{T}}(A)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-06.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-07.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-08.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-09.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The following set of similitudes determines an L-shaped rep-tile within
+ the square with opposite vertices 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\begin{gathered}L_{1}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}\qquad L_{2}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{1}{2}\\
+\frac{1}{2}
+\end{array}\right]\\
+L_{3}(\mathbf{x})=\left[\begin{array}{cc}
+0 & -\frac{1}{2}\\
+\frac{1}{2} & 0
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]\qquad L_{4}(\mathbf{x})=\left[\begin{array}{cc}
+0 & \frac{1}{2}\\
+-\frac{1}{2} & 0
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+0\\
+2
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+Can you generate the L-shaped rep-tile by applying (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hutchinson-limit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) to 
+\begin_inset Formula $\mathscr{C}=\{L_{1},L_{2},L_{3},L_{4}\}$
+\end_inset
+
+ (and some set 
+\begin_inset Formula $A$
+\end_inset
+
+ of your own creation)? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:L-shape"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The following diagram illustrates three things.
+ One, the dissection of a reptile is not unique (two different dissections
+ are shown for the same right triangle).
+ Two, the number of parts in a dissection of a rep-tile is not always four.
+ Three, the parts of a dissection need not be congruent to one another (they
+ only need be similar to the whole).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-14.pdf
+	lyxscale 44
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Can you find the similitudes associated with these dissections (note there
+ will be four similitudes associated with the first dissection and two similitud
+es associated with the second)? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:dissecting-the-triangle"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the second dissection, the two scale factors are 
+\begin_inset Formula $\frac{1}{\sqrt{5}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{2}{\sqrt{5}}$
+\end_inset
+
+.
+ Not coincidentally 
+\begin_inset Formula $\left(\frac{1}{\sqrt{5}}\right)^{2}+\left(\frac{2}{\sqrt{5}}\right)^{2}=1$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathscr{C}=\{T_{1},T_{2},\ldots,T_{p}\}$
+\end_inset
+
+ is the set of similitudes that determine a rep-tile 
+\begin_inset Formula $R$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+T_{1}(R)\cup T_{2}(R)\cup\cdots\cup T_{p}(R)=R
+\]
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{equation}
+\text{area}\left(T_{1}(R)\right)+\text{area}\left(T_{2}(R)\right)+\cdots+\text{area}\left(T_{p}(R)\right)=\text{area}(R).\label{eq:reptile-area}
+\end{equation}
+
+\end_inset
+
+But we know from section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Determinants-Eigenvalues-Area"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that 
+\begin_inset Formula $\text{area}\left(T_{k}(R)\right)=|\det L_{k}|\cdot\text{area}(R)$
+\end_inset
+
+ where 
+\begin_inset Formula $L_{k}$
+\end_inset
+
+ is the matrix of the linear part of similitude 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+.
+ We also know from section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that the determinant of a product is the product of the determinants and
+ from section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that multiplying a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix by scalar 
+\begin_inset Formula $c$
+\end_inset
+
+ multiplies its determinant by 
+\begin_inset Formula $c^{2}$
+\end_inset
+
+.
+ Combined with the facts that the determinants of reflections and rotations
+ are 
+\begin_inset Formula $-1$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ respectively, the determinant of any matrix of a similitude is 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $s$
+\end_inset
+
+ is its scale factor.
+ By extension, a similitude scales the area of a figure by a factor of 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+ as well.
+ Applying this information to equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reptile-area"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
+\begin_inset Formula 
+\[
+s_{1}^{2}\text{area}(R)+s_{2}^{2}\text{area}(R)+\cdots+s_{p}^{2}\text{area}(R)=\text{area}(R)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ is the scale factor of similitude 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Hence
+\begin_inset Formula 
+\begin{equation}
+s_{1}^{2}+s_{2}^{2}+\cdots+s_{p}^{2}=1.\label{eq:reptile-scale-factors}
+\end{equation}
+
+\end_inset
+
+The square, the L-shape, and the triangle were all dissected into four parts,
+ each of which was a 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ scale replica of the whole.
+ By equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reptile-scale-factors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) it must be that 
+\begin_inset Formula $\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{2}\right)^{2}=1$
+\end_inset
+
+, an equality that is not hard to verify.
+ As a matter of vocabulary, the set of similitudes associated with a rep-tile
+ is an 
+\series bold
+iterated function system
+\series default
+, or 
+\series bold
+IFS
+\series default
+.
+ Hence, if 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{p}$
+\end_inset
+
+ are the scale factors of the similitudes of the IFS of a rep-tile, then
+ 
+\begin_inset Formula $s_{1}^{2}+s_{2}^{2}+\cdots+s_{p}^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+That was a lot of work to be able to describe these special polygon-shaped
+ rep-tiles, and if rep-tiles did not come in more exotic shapes, it would
+ probably not have been worth the effort.
+ To justify the work, try to imagine how else you might describe these rep-tiles
+,
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-reptiles-15.png
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/application-reptiles-17.png
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/application-reptiles-16.png
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dissections of which are shown here.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-reptiles-18.png
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/application-reptiles-19.png
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/application-reptiles-20.png
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Key Concepts
+\end_layout
+
+\begin_layout Description
+rep-tile a plane figure that tessellates the plane and can be dissected
+ into finitely many similar copies.
+ Equivalently, a plane figure that tiles the plane and tiles an enlarged
+ replica of itself.
+\end_layout
+
+\begin_layout Description
+Hutchinson's
+\begin_inset space ~
+\end_inset
+
+theorem
+\begin_inset space ~
+\end_inset
+
+(a
+\begin_inset space ~
+\end_inset
+
+special
+\begin_inset space ~
+\end_inset
+
+case) Let 
+\begin_inset Formula $\mathscr{C}=\{C_{1},C_{2},\ldots,C_{n}\}$
+\end_inset
+
+ be a set of similitudes in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ with scale factors less than one, and define
+\begin_inset Formula 
+\begin{equation}
+\mathcal{H}_{\mathscr{C}}(A)=C_{1}(A)\cup C_{2}(A)\cup\cdots\cup C_{n}(A)\label{eq:hutchinson-operator-1}
+\end{equation}
+
+\end_inset
+
+for any subset 
+\begin_inset Formula $A$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Then there is exactly one compact set 
+\begin_inset Formula $K$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathcal{H}_{\mathscr{C}}(K)=K$
+\end_inset
+
+.
+ Moreover, 
+\begin_inset Formula 
+\begin{equation}
+\lim_{k\to\infty}\mathcal{H}_{\mathscr{C}}^{\circ k}(A)=K\label{eq:hutchinson-limit-1}
+\end{equation}
+
+\end_inset
+
+for any compact set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+similitude a rigid transformation composed with a dilation.
+ Similitudes preserve shape but not necessarily size
+\end_layout
+
+\begin_layout Description
+rigid
+\begin_inset space ~
+\end_inset
+
+transformation a rotation, reflection, or translation.
+\end_layout
+
+\begin_layout Description
+dilation a map of the form 
+\begin_inset Formula $T(\mathbf{x})=r\mathbf{x}$
+\end_inset
+
+ for some real number 
+\begin_inset Formula $r\geq0$
+\end_inset
+
+—scaling by the same factor in all directions.
+\end_layout
+
+\begin_layout Description
+compact
+\begin_inset space ~
+\end_inset
+
+set a subset 
+\begin_inset Formula $S$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is compact if it is closed and bounded.
+\end_layout
+
+\begin_layout Description
+closed
+\begin_inset space ~
+\end_inset
+
+set a subset 
+\begin_inset Formula $S$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is closed if the limit of every convergent sequence of points in 
+\begin_inset Formula $S$
+\end_inset
+
+ is also in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Alternatively, 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed if it contains all of its limit points.
+\end_layout
+
+\begin_layout Description
+bounded
+\begin_inset space ~
+\end_inset
+
+set a subset 
+\begin_inset Formula $S$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is bounded if there exists a real number 
+\begin_inset Formula $M$
+\end_inset
+
+ such that 
+\begin_inset Formula $S\subseteq\{\mathbf{x}\text{ in }\mathbb{R}^{n}:\Vert\mathbf{x}\Vert<M\}$
+\end_inset
+
+.
+ Alternatively, 
+\begin_inset Formula $S$
+\end_inset
+
+ is bounded if it is contained within some ball centered at the origin.
+\end_layout
+
+\begin_layout Description
+iterated
+\begin_inset space ~
+\end_inset
+
+function
+\begin_inset space ~
+\end_inset
+
+system a set of contraction mappings.
+\end_layout
+
+\begin_layout Description
+contraction
+\begin_inset space ~
+\end_inset
+
+mapping a map 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+ is a contraction (mapping) if for every distinct pair of points 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ there exists a real number 
+\begin_inset Formula $s<1$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\frac{d(T(\mathbf{x}),T(\mathbf{y}))}{d(\mathbf{x},\mathbf{y})}\leq s.
+\]
+
+\end_inset
+
+A contraction mapping scales down the distance between every pair of distinct
+ points.
+ A similitude with scale factor less than one is a contraction mapping.
+\end_layout
+
+\begin_layout Description
+IFS iterated function system.
+\end_layout
+
+\begin_layout Description
+scale
+\begin_inset space ~
+\end_inset
+
+factors
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+IFS
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+rep-tile if 
+\begin_inset Formula $s_{1},s_{2},\ldots,s_{p}$
+\end_inset
+
+ are the scale factors of the similitudes of the IFS of a rep-tile, then
+ 
+\begin_inset Formula $s_{1}^{2}+s_{2}^{2}+\cdots+s_{p}^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+startexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles"
+
+\end_inset
+
+Build a larger copy of the figure from similar copies of itself, thereby
+ showing the figure is a rep-tile.
+ Appropriate sizes and number of copies can be found on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:rep-tile-pieces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-01.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-03.pdf
+	lyxscale 25
+	height 1in
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-05.pdf
+	lyxscale 25
+	height 0.75in
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-07.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-09.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-11.pdf
+	lyxscale 25
+	height 1.3in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-17.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-13.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-15.pdf
+	lyxscale 25
+	height 1in
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-19.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-1"
+
+\end_inset
+
+The 3-4-5 right triangle is a rep-tile that can be dissected into two parts
+ as shown.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-23.pdf
+	lyxscale 25
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Use similar triangles to calculate the scale factors of the two similitudes,
+ 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+, of its IFS.
+\end_layout
+
+\begin_layout Enumerate
+Verify that 
+\begin_inset Formula $s_{1}^{2}+s_{2}^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-2"
+
+\end_inset
+
+Find a dissection of the 30-60-90 triangle into three congruent parts.
+ Equivalently, build a 30-60-90 triangle
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A 30-60-90 triangle is one whose interior angles measure 30, 50, and 90
+ degrees.
+\end_layout
+
+\end_inset
+
+ out of three congruent 30-60-90 triangles.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-3"
+
+\end_inset
+
+The right triangle with side lengths 
+\begin_inset Formula $1,2,$
+\end_inset
+
+ and 
+\begin_inset Formula $\sqrt{5}$
+\end_inset
+
+ can be dissected into five congruent parts two different ways.
+ Find one of them.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-4"
+
+\end_inset
+
+What are the scale factors of the IFS for the triangle in question
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-6"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-7"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-8"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-9"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-10"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-12"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-13"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-14"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-15"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-16"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-17"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-18"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-19"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Trapezoids.
+\end_layout
+
+\begin_layout Enumerate
+(i) Fixed points of affine transformations; and (ii) using them to help
+ determine rep-tiles of an IFS.
+\end_layout
+
+\begin_layout Enumerate
+Find IFS of dragon–put three line segments and a set of axes to help.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finishexercises 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Answers
+\end_layout
+
+\begin_layout Description
+generating
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+L-shape 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:L-shape"
+
+\end_inset
+
+Letting 
+\begin_inset Formula $A$
+\end_inset
+
+ take the shape of a pumpkin
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Pumpkin image downloaded from 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://openclipart.org/detail/86665/plain-pumpkin"
+target "https://openclipart.org/detail/86665/plain-pumpkin"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+, the L-shape appears rather plainly after only three iterations:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathscr{C}}(A)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathscr{C}}\left(\mathcal{H}_{\mathscr{C}}(A)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{H}_{\mathscr{C}}\left(\mathcal{H}_{\mathscr{C}}\left(\mathcal{H}_{\mathscr{C}}(A)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-10.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-11.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-12.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figures/application-reptiles-13.pdf
+	lyxscale 20
+	width 1.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+dissecting
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+triangle 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:dissecting-the-triangle"
+
+\end_inset
+
+For the first dissection, the four transformations mapping the whole triangle
+ to the four parts are, in words,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+scale by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+scale by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ and then translate 1 unit right,
+\end_layout
+
+\begin_layout Enumerate
+scale by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ and then translate 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ unit up, and
+\end_layout
+
+\begin_layout Enumerate
+scale by a factor of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, rotate (about the origin) by 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+, and then translate 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ unit up and one unit right.
+\end_layout
+
+\begin_layout Standard
+As affine transformations, the mappings are
+\begin_inset Formula 
+\[
+\begin{gathered}\mathbf{x}\mapsto\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x};\qquad\mathbf{x}\mapsto\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+1\\
+0
+\end{array}\right];\\
+\mathbf{x}\mapsto\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+0\\
+\frac{1}{2}
+\end{array}\right];\qquad\mathbf{x}\mapsto\left[\begin{array}{cc}
+-\frac{1}{2} & 0\\
+0 & -\frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{1}{2}\\
+1
+\end{array}\right].
+\end{gathered}
+\]
+
+\end_inset
+
+For the second dissection, remember all the triangles are similar, so correspond
+ing parts are in proportion.
+ In particular, the smallest triangle is a 
+\begin_inset Formula $\frac{1}{\sqrt{5}}$
+\end_inset
+
+ scaled version of the whole and the remaining part is a 
+\begin_inset Formula $\frac{2}{\sqrt{5}}$
+\end_inset
+
+ scaled version.
+ Getting a little ahead of ourselves, transformations mapping the whole
+ triangle to the two parts are, in words,
+\end_layout
+
+\begin_layout Enumerate
+scale by a factor of 
+\begin_inset Formula $\frac{1}{\sqrt{5}}$
+\end_inset
+
+, reflect about the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis, rotate by angle 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (counterclockwise about the origin), then translate along line segment
+ 
+\begin_inset Formula $x$
+\end_inset
+
+; and
+\end_layout
+
+\begin_layout Enumerate
+scale by a factor of 
+\begin_inset Formula $\frac{2}{\sqrt{5}}$
+\end_inset
+
+, reflect about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis, rotate by angle 
+\begin_inset Formula $-\theta$
+\end_inset
+
+ (clockwise about the origin), then translate along line segment 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To quantify the rotations and translations, we need to calculate 
+\begin_inset Formula $x$
+\end_inset
+
+ and the sines and cosines of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Using the Pythagorean theorem, 
+\begin_inset Formula $1^{2}=x^{2}+\left(\frac{x}{2}\right)^{2}$
+\end_inset
+
+ so 
+\begin_inset Formula $x=\frac{2}{\sqrt{5}}$
+\end_inset
+
+, and the coordinates of 
+\begin_inset Formula $P$
+\end_inset
+
+ are 
+\begin_inset Formula $\left(x\cos\beta,x\sin\beta\right)$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $\cos\beta=\frac{1}{\sqrt{5}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sin\beta=\frac{2}{\sqrt{5}}$
+\end_inset
+
+.
+ Finally 
+\begin_inset Formula $\cos\theta=\frac{2}{\sqrt{5}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sin\theta=\frac{1}{\sqrt{5}}$
+\end_inset
+
+, so the mappings are
+\begin_inset Formula 
+\[
+\mathbf{x}\mapsto\frac{1}{\sqrt{5}}\left[\begin{array}{cc}
+\cos\beta & -\sin\beta\\
+\sin\beta & \cos\beta
+\end{array}\right]\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{2}{5}\\
+\frac{4}{5}
+\end{array}\right];\ \mathbf{x}\mapsto\frac{2}{\sqrt{5}}\left[\begin{array}{cc}
+\cos\theta & \sin\theta\\
+-\sin\theta & \cos\theta
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{2}{5}\\
+\frac{4}{5}
+\end{array}\right]
+\]
+
+\end_inset
+
+which simplify as
+\begin_inset Formula 
+\[
+\mathbf{x}\mapsto\left[\begin{array}{cc}
+-\frac{1}{5} & -\frac{2}{5}\\
+-\frac{2}{5} & \frac{1}{5}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{2}{5}\\
+\frac{4}{5}
+\end{array}\right];\qquad\mathbf{x}\mapsto\left[\begin{array}{cc}
+\frac{4}{5} & -\frac{2}{5}\\
+-\frac{2}{5} & -\frac{4}{5}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{2}{5}\\
+\frac{4}{5}
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "par:rep-tile-pieces"
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-02.pdf
+	lyxscale 33
+	width 6in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-04.pdf
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-06.pdf
+	lyxscale 33
+	height 1.5in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-08.pdf
+	lyxscale 33
+	height 1in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-10.pdf
+	lyxscale 33
+	height 1in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-18.pdf
+	lyxscale 33
+	width 6in
+
+\end_inset
+
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-14.pdf
+	lyxscale 33
+	width 3.6in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-16.pdf
+	lyxscale 33
+	width 2.4in
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-12.pdf
+	lyxscale 33
+	height 1.4in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-20.pdf
+	lyxscale 33
+	height 1.4in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

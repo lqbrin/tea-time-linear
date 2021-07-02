@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -1368,7 +1377,7 @@ That was a lot of work to be able to describe these special polygon-shaped
 \begin_inset Graphics
 	filename figures/application-reptiles-15.png
 	lyxscale 33
-	height 1.5in
+	height 1.4in
 
 \end_inset
 
@@ -1380,7 +1389,7 @@ That was a lot of work to be able to describe these special polygon-shaped
 \begin_inset Graphics
 	filename figures/application-reptiles-17.png
 	lyxscale 33
-	height 1.5in
+	height 1.4in
 
 \end_inset
 
@@ -1392,7 +1401,7 @@ That was a lot of work to be able to describe these special polygon-shaped
 \begin_inset Graphics
 	filename figures/application-reptiles-16.png
 	lyxscale 33
-	height 1.5in
+	height 1.4in
 
 \end_inset
 
@@ -1417,7 +1426,7 @@ dissections of which are shown here.
 \begin_inset Graphics
 	filename figures/application-reptiles-18.png
 	lyxscale 33
-	height 1.5in
+	height 1.4in
 
 \end_inset
 
@@ -1429,7 +1438,7 @@ dissections of which are shown here.
 \begin_inset Graphics
 	filename figures/application-reptiles-19.png
 	lyxscale 33
-	height 1.5in
+	height 1.4in
 
 \end_inset
 
@@ -1441,7 +1450,7 @@ dissections of which are shown here.
 \begin_inset Graphics
 	filename figures/application-reptiles-20.png
 	lyxscale 33
-	height 1.5in
+	height 1.4in
 
 \end_inset
 
@@ -1749,8 +1758,14 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles"
+
+\end_inset
+
 Build a larger copy of the figure from similar copies of itself, thereby
- showing the figure is a rep-tile.
+ showing that it has one feature of a rep-tile.
  Appropriate sizes and number of copies can be found on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
@@ -2124,30 +2139,1016 @@ status open
 
 \end_deeper
 \begin_layout Enumerate
-Show that the 
-\begin_inset Formula $1,2,\sqrt{5}$
+Show that the shape in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- triangle is rep-5 two different ways (pinwheel tiling and not).
+ tessellates the plane.
+ This completes a demonstration that the shape is a rep-tile.
 \end_layout
 
 \begin_layout Enumerate
-Show that the 30-60-90 triangle is rep-3.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-1"
+
+\end_inset
+
+The 3-4-5 right triangle is a rep-tile that can be dissected into two parts
+ as shown.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-23.pdf
+	lyxscale 25
+	width 1.5in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Trapezoids.
+Use similar triangles to calculate the scale factors of the two similitudes,
+ 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+, of its IFS.
 \end_layout
 
 \begin_layout Enumerate
-(i) Fixed points of affine transformations; and (ii) using them to help
- determine rep-tiles of an IFS.
+Verify that 
+\begin_inset Formula $s_{1}^{2}+s_{2}^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-2"
+
+\end_inset
+
+Find a dissection of the 30-60-90 triangle into three congruent parts, showing
+ that the triangle is a rep-tile.
+ Equivalently, build a 30-60-90 triangle
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A 30-60-90 triangle is one whose interior angles measure 30, 50, and 90
+ degrees.
+\end_layout
+
+\end_inset
+
+ out of three congruent 30-60-90 triangles.
 \end_layout
 
 \begin_layout Enumerate
-Find IFS of dragon–put three line segments and a set of axes to help.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-3"
+
+\end_inset
+
+The right triangle with side lengths 
+\begin_inset Formula $1,2,$
+\end_inset
+
+ and 
+\begin_inset Formula $\sqrt{5}$
+\end_inset
+
+ can be dissected into five congruent parts two different ways.
+ Find one of them.
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-4"
+
+\end_inset
+
+What are the scale factors of the IFS for the triangle in question
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-5"
+
+\end_inset
+
+A rectangle can be dissected into three congruent parts, making it a rep-tile.
+ Equivalently, three congruent copies of this rectangle can be fitted together
+ to form a (larger) similar copy.
+ What is the ratio of its side lengths?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-6"
+
+\end_inset
+
+Find the IFS of the rep-tile suggested by the dissection.
+ Impose your own set of axes where not supplied.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-25.pdf
+	lyxscale 25
+	width 2.3in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.875in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-26.pdf
+	lyxscale 25
+	width 2.3in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-28.pdf
+	lyxscale 25
+	width 2.3in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-27.pdf
+	lyxscale 25
+	width 2.3in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-30.pdf
+	lyxscale 25
+	width 2.3in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The images of the line segment under the similtudes of the IFS are the line
+ segments from 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ to 
+\begin_inset Formula $(0,5)$
+\end_inset
+
+ and from 
+\begin_inset Formula $(5,0)$
+\end_inset
+
+ to 
+\begin_inset Formula $(5,5)$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-29.pdf
+	lyxscale 25
+	width 2.3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.65in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-31.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.65in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-32.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.45in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-33.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.45in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-34.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-35.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-36.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.4in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-37.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.4in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-38.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.2in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-39.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.2in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-40.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-41.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.85in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-42.png
+	lyxscale 25
+	width 1.2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-7"
+
+\end_inset
+
+Check your answers for question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with the 
+\begin_inset CommandInset href
+LatexCommand href
+name "rep-tile designer"
+target "https://lqbrin.github.io/tea-time-linear/rep-tile-designer.html"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://lqbrin.github.io/tea-time-linear/rep-tile-designer.html"
+target "https://lqbrin.github.io/tea-time-linear/rep-tile-designer.html"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ It will be helpful to have your similitudes written in terms of the designer's
+ format.
+ Each similitude should be expressed as a composition of
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=(
+\backslash
+roman{enumii})
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a reflection (across the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis, 
+\begin_inset Formula $y$
+\end_inset
+
+-axis or neither)
+\end_layout
+
+\begin_layout Enumerate
+a scaling (scale factor)
+\end_layout
+
+\begin_layout Enumerate
+a rotation (in degrees about the origin)
+\end_layout
+
+\begin_layout Enumerate
+a horizontal translation
+\end_layout
+
+\begin_layout Enumerate
+a vertical translation
+\end_layout
+
+\begin_layout Standard
+in that order.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-8"
+
+\end_inset
+
+Find the three scale factors of the IFS suggested by the dissection.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-22.pdf
+	lyxscale 33
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-9"
+
+\end_inset
+
+Find an expression for 
+\begin_inset Formula $c$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ HINT: Write down three equations involving the three scale factors of the
+ IFS suggested by the dissection.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-24.pdf
+	lyxscale 33
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
