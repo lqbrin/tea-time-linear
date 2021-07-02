@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Tea Time Linear Algebra Rep-tile Designer" />
+		<title>Tea Time Linear Algebra Rep-tile Designer</title>
+		<style>
+			table {
+				border-spacing: 0;
+				border-collapse: collapse;
+			}
+			table th {
+				background-color: Gainsboro;
+			}
+			table td {
+				background-color: beige;
+			}
+			table tr td:nth-child(1) {
+				position: sticky;
+				left: 0;
+				z-index: 1;
+				font-weight:bold;
+				text-align:right;
+				background-color: Gainsboro;
+				padding: 0px 10px 0px 0px;
+				border-top: 1px solid black;
+			}
+			table tr th:nth-child(1) {
+				position: sticky;
+				left: 0;
+				z-index: 1;
+				background-color: Gainsboro;
+			}
+		</style>
+	</head>
+	
+	<script>
+	MathJax = {
+		loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
+	};
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
+  
+	<body style="background-color:beige;">
+		<center><h2 id="title">Rep-Tile Designer</h2></center>
+		<div id="ifs" style="overflow-x:auto;">
+		<table>
+			<tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr>
+			<tr><td>Reflection:</td>
+				<td><select name="f1" id="f1"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f2" id="f2"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f3" id="f3"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f4" id="f4"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f5" id="f5"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f6" id="f6"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f7" id="f7"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f8" id="f8"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f9" id="f9"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f10" id="f10"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f11" id="f11"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+				<td><select name="f12" id="f12"><option value="0">none</option><option value="1">`x`-axis</option><option value="2">`y`-axis</option></select></td>
+			</tr>
+			<tr><td>Scale ratio: </td>
+				<td><input type="number" id="sr1" name="sr1" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr2" name="sr2" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr3" name="sr3" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr4" name="sr4" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr5" name="sr5" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr6" name="sr6" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr7" name="sr7" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr8" name="sr8" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr9" name="sr9" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr10" name="sr10" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr11" name="sr11" min="0" max="1" step="0.001" size="5"></td>
+				<td><input type="number" id="sr12" name="sr12" min="0" max="1" step="0.001" size="5"></td>
+			</tr>
+			<tr><td>Scale factor: </td>
+				<td id="sf1"></td>
+				<td id="sf2"></td>
+				<td id="sf3"></td>
+				<td id="sf4"></td>
+				<td id="sf5"></td>
+				<td id="sf6"></td>
+				<td id="sf7"></td>
+				<td id="sf8"></td>
+				<td id="sf9"></td>
+				<td id="sf10"></td>
+				<td id="sf11"></td>
+				<td id="sf12"></td>
+			</tr>
+			<tr><td>Rotation: </td>
+				<td><input type="number" id="r1" name="r1" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r2" name="r2" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r3" name="r3" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r4" name="r4" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r5" name="r5" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r6" name="r6" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r7" name="r7" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r8" name="r8" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r9" name="r9" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r10" name="r10" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r11" name="r11" min="-180" max="180" step="0.1" size="5"></td>
+				<td><input type="number" id="r12" name="r12" min="-180" max="180" step="0.1" size="5"></td>
+			</tr>
+			<tr><td>Horizontal Translation: </td>
+				<td><input type="number" id="h1" name="h1" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h2" name="h2" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h3" name="h3" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h4" name="h4" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h5" name="h5" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h6" name="h6" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h7" name="h7" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h8" name="h8" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h9" name="h9" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h10" name="h10" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h11" name="h11" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="h12" name="h12" min="-50" max="50" step="0.001" size="5"></td>
+			</tr>
+			<tr><td>Vertical Translation: </td>
+				<td><input type="number" id="v1" name="v1" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v2" name="v2" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v3" name="v3" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v4" name="v4" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v5" name="v5" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v6" name="v6" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v7" name="v7" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v8" name="v8" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v9" name="v9" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v10" name="v10" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v11" name="v11" min="-50" max="50" step="0.001" size="5"></td>
+				<td><input type="number" id="v12" name="v12" min="-50" max="50" step="0.001" size="5"></td>
+			</tr>
+		</table>
+		</div>
+		
+		<center>
+			<label for="dl">Dissection level:</label>
+			<select name="dl" id="dl">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+			</select>
+			<label for="fp">Fixed points:</label>
+			<select name="fp" id="fp">
+				<option value="0">off</option>
+				<option value="1">on</option>
+			</select>
+			<br>
+			<canvas id="c">Pixel manipulation here.</canvas>
+		</center>
+		
+		<script>
+			var canvas = document.getElementById("c");
+			var timeoutID;
+			if (canvas.getContext){
+				var transformations = 12;
+				var dissectionLevel = 0;
+				var showFixedPoints = 0;
+				var rgb = Array.from({length:transformations+1}, (_,i) => 0);
+				var ctx = canvas.getContext("2d");
+				var ifs = Array.from({length:transformations}, (_,i) => [0,0,0,0,0,0]);
+				var palette = [[20,0,0],[0,20,0],[0,0,20],[20,10,0],[10,20,0],[10,0,20],[20,0,10],[0,20,10],[0,10,20],[20,20,0],[20,0,20],[0,20,20]];
+				var X, img, w, h, xmax, xmin, ymax, ymin, dx, dy, hAvail, wAvail;
+				// IFS: reflection, scale ratio, scale factor, rotate, x-translation, y-translation
+				function ifs_good(j){
+					return (isNaN(ifs[j][1])==false) && (isNaN(ifs[j][3])==false) && (isNaN(ifs[j][4])==false) && (isNaN(ifs[j][5])==false);
+				}
+				function ifs_data(i){
+					var found = 0;
+					for (let j=0; j<transformations; j++){
+						if (ifs_good(j)) { found++; }
+						if (found>i) { return ifs[j]; }
+					}
+				}
+				function ifs_size(){
+					res = 0;
+					for (let i=0; i<transformations; i++){
+						if (ifs_good(i)) { res++; }
+					}
+					return res;
+				}
+				function shuffle_colors(){
+					var colors = palette.length;
+					var temp, back, choice;
+					var ind = Array.from({length:colors}, (_,i) => i);
+					for (let back=colors-1; back>=0; back--){
+						choice = Math.floor(back*Math.random());
+						temp = ind[back];
+						ind[back] = ind[choice];
+						ind[choice] = temp;
+					}
+					for (let j=0; j<transformations; j++){
+						rgb[j] = palette[ind[j]];
+					}
+					rgb[transformations] = [255,255,255];
+					//alert("ind = "+ind+"\nrgb = "+rgb);
+				}
+				function erase() {
+					var last = w*h*4;
+					for (let i=0; i<last; i++) { img.data[i]=0; }
+					last = w*h;
+					for (let i=0; i<last; i++) { img.data[4*i+3]=255; }
+				}
+				function normalize_ifs(){
+					// IFS: reflection, scale ratio, scale factor, rotate, x-translation, y-translation
+					var s, t = 0;
+					for (let i=0; i<ifs_size(); i++){
+						t += (ifs_data(i)[1])**2;
+					}
+					t = Math.sqrt(t);
+					for (let j=0; j<ifs_size(); j++){
+						s = ifs_data(j);
+						s[2] = s[1]/t;
+					}
+					// update form values
+					for (let j=0; j<transformations; j++){
+						// Scale factors
+						if (ifs_good(j)) {
+							document.getElementById("sf"+(j+1)).innerHTML = ifs[j][2].toPrecision(6);
+						} else {
+							document.getElementById("sf"+(j+1)).innerHTML = "";
+						}
+					}
+				}
+				function set_max_min(xma,xmi,yma,ymi){
+					var radius, avgx, avgy;
+					radius = 0.6*Math.max(xma-xmi, yma-ymi);
+					avgx = (xmi+xma)/2;
+					avgy = (ymi+yma)/2;
+					ymin = avgy-radius;
+					ymax = avgy+radius;
+					xmin = avgx-radius;
+					xmax = avgx+radius;
+					dx = xmax-xmin;
+					dy = ymax-ymin;
+				}
+				function set_canvas(){
+					wAvail = Math.floor(3*window.innerWidth/4);
+					hAvail = window.innerHeight - document.getElementById("ifs").clientHeight - document.getElementById("title").clientHeight - document.getElementById("dl").clientHeight - 75;
+					//alert("Available: ("+wAvail+","+hAvail+")");
+					w = Math.min(wAvail,hAvail);
+					h = w;
+					ctx.canvas.width  = w;
+					ctx.canvas.height = h;
+					img = ctx.getImageData(0,0,w,h);
+				}
+				function setup_timer(){
+					var ms = 1500;
+					this.addEventListener("mouseup", reset_timer, ms);
+					this.addEventListener("keypress", reset_timer, ms);
+					this.addEventListener("wheel", reset_timer, ms);
+					this.addEventListener("touchstart", reset_timer, ms);
+					start_timer(ms);
+				}
+				function start_timer(ms){
+					timeoutID = window.setTimeout(start_chaos, ms);
+				}
+				function reset_timer(ms) {
+					window.clearTimeout(timeoutID);
+					start_timer(ms);
+				}
+				function start_chaos(){
+					// Get data from page
+					// IFS: reflection, scale ratio, scale factor, rotate, x-translation, y-translation
+					var refEl;
+					for (let j=0; j<transformations; j++){
+						// Reflection
+						ifs[j][0] = parseInt(document.getElementById("f"+(j+1)).value);
+						// Scale ratio
+						ifs[j][1] = parseFloat(document.getElementById("sr"+(j+1)).value);
+						// Rotations
+						ifs[j][3] = parseFloat(document.getElementById("r"+(j+1)).value)*Math.PI/180;
+						// Horizontal Translations
+						ifs[j][4] = parseFloat(document.getElementById("h"+(j+1)).value);
+						// Vertical Translations
+						ifs[j][5] = parseFloat(document.getElementById("v"+(j+1)).value);
+					}
+					dissectionLevel = parseInt(document.getElementById("dl").value);
+					showFixedPoints = parseInt(document.getElementById("fp").value);
+					//alert("ifs = "+ifs);
+					if (ifs_size()>1) {
+						set_canvas();
+						erase();
+						ctx.putImageData(img,0,0);
+						shuffle_colors();
+						normalize_ifs();
+						//alert("ifs = "+ifs);
+						//alert("ifs_size = "+ifs_size());
+						X = [0,0];
+						for (let i=0; i<50; i++){
+							X = apply_map(pick_map(),X);
+						}
+						xmax = X[0]; xmin = X[0];
+						ymax = X[1]; ymin = X[1];
+						for (let i=0; i<5000; i++){
+							X = apply_map(pick_map(),X);
+							if (X[0]<xmin) { xmin=X[0]; }
+							if (X[0]>xmax) { xmax=X[0]; }
+							if (X[1]<ymin) { ymin=X[1]; }
+							if (X[1]>ymax) { ymax=X[1]; }
+						}
+						set_max_min(xmax,xmin,ymax,ymin);
+						//alert(xmin+" "+xmax+" "+ymin+" "+ymax+" "+dx+" "+dy);
+						if (showFixedPoints==1){
+							ctx.fillStyle = "#ffffff";
+							for (let i=0; i<ifs_size(); i++){
+								for (let j=0; j<100; j++){
+									X = apply_map(i,X)
+								}
+								var col = Math.round(w*(X[0]-xmin)/dx);
+								var row = h-1-Math.round(h*(X[1]-ymin)/dy);
+								//alert("Plotting ("+col+","+row+")");
+								ctx.beginPath();
+								ctx.arc(col, row, 2, 0, Math.PI * 2, true);
+								ctx.fill();
+							}
+						}
+						img = ctx.getImageData(0,0,w,h);
+						reset_timer(30000);
+						chaos();
+					}
+				}
+				function apply_map(i,C){
+					var newx, newy;
+					var xf = 1, yf = 1;
+					var map = ifs_data(i);
+					// IFS: reflection, scale ratio, scale factor, rotate, x-translation, y-translation
+					if (map[0]==1) { xf = -1; }
+					if (map[0]==2) { yf = -1; }
+					newx = map[2]*(yf*C[0]*Math.cos(map[3]) - xf*C[1]*Math.sin(map[3])) + map[4];
+					newy = map[2]*(yf*C[0]*Math.sin(map[3]) + xf*C[1]*Math.cos(map[3])) + map[5];
+					return [newx,newy];
+				}
+				function pick_map(){
+					var ind = 0;
+					var sum = ifs_data(0)[2]**2;
+					var ran = Math.random();
+					while ((sum<ran) && (ind<ifs_size()-1)) {
+						ind++;
+						sum+=ifs_data(ind)[2]**2;
+					}
+					return ind;
+				}
+				function image_data_index(Xloc){
+					var col = Math.round(w*(Xloc[0]-xmin)/dx);
+					var row = h-1-Math.round(h*(Xloc[1]-ymin)/dy);
+					if (col>=w) { col=w-1; }
+					if (col<0) { col=0; }
+					if (row>=h) { row=h-1; }
+					if (row<0) { row=0; }
+					return row*w+col;
+				}
+				function plot(i,lev,Xloc){
+					var ind, newr, newg, newb, Xnew;
+					if (lev<2){
+						if (dissectionLevel==0) { i=transformations; }
+						ind = image_data_index(Xloc);
+						newr = img.data[4*ind]+rgb[i][0];
+						newg = img.data[4*ind+1]+rgb[i][1];
+						newb = img.data[4*ind+2]+rgb[i][2];
+						if (newr<256 && newg<256 && newb<256){
+							img.data[4*ind] = newr;
+							img.data[4*ind+1] = newg;
+							img.data[4*ind+2] = newb;
+						}
+					} else {
+						for (let k=0; k<ifs_size(); k++) {
+							Xnew = apply_map(k,Xloc);
+							plot(i,lev-1,Xnew);
+						}
+					}
+				}
+				function chaos(){
+					var ind;
+					var pix = Math.floor(h*w/250);
+					if (dissectionLevel>0) {
+						pix = Math.floor(pix/ifs_size()**dissectionLevel);
+					}
+					for (let i=0; i<pix; i++) {
+						ind=pick_map();
+						X = apply_map(ind,X);
+						plot(ind,dissectionLevel,X);
+					}
+					ctx.putImageData(img,0,0);
+					window.requestAnimationFrame(chaos);
+				}
+				
+				// IFS: relection, scale ratio, scale factor, rotate, x-translation, y-translation
+				ifs[0][1]=1;	ifs[0][3]=45*Math.PI/180;	ifs[0][4]=-1;	ifs[0][5]=0;
+				ifs[1][1]=1;	ifs[1][3]=45*Math.PI/180;	ifs[1][4]=1;	ifs[1][5]=0;
+				for (let j=0; j<transformations; j++){
+					document.getElementById("f"+(j+1)).value = "0";
+					document.getElementById("sr"+(j+1)).value = "";
+					document.getElementById("r"+(j+1)).value = "";
+					document.getElementById("h"+(j+1)).value = "";
+					document.getElementById("v"+(j+1)).value = "";
+				}
+				document.getElementById('sr1').value = ifs[0][1];
+				document.getElementById('sr2').value = ifs[1][1];
+				document.getElementById('r1').value = ifs[0][3]*180/Math.PI;
+				document.getElementById('r2').value = ifs[1][3]*180/Math.PI;
+				document.getElementById('h1').value = ifs[0][4];
+				document.getElementById('h2').value = ifs[1][4];
+				document.getElementById('v1').value = ifs[0][5];
+				document.getElementById('v2').value = ifs[1][5];
+				
+				setup_timer();
+			}
+		</script>
+	</body>
+</html>
