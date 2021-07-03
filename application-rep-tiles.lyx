@@ -120,33 +120,38 @@ TODO: get permission for the Escher.
 
 \end_inset
 
-The floors of kitchens, bathrooms, museums, and other spaces are more often
- than not tiled in some fashion.
- Flat ceramic or natural stone tiles are placed together in a regular pattern,
- sometimes more artistically than others.
- In any case, the tiles are laid flat, covering the whole floor without
- overlapping.
- Perhaps the most common tile shape for this purpose is the square.
- It is easy to design a covering of a floor using squares of the same size.
- Squares are flexible and simple this way.
- More fanciful floor coverings are made of rectangular, triangular, hexagonal,
- and octagonal tiles.
- Fitting these various shapes together to cover a floor can be an artistic
- endeavor, limited mostly by imagination.
+The floors of kitchens, bathrooms, museums, and other spaces are tiled more
+ often than not.
+ Flat ceramic or natural stone tiles are placed together in a nonoverlapping
+ way, covering the whole floor.
+ It is very common to see square tiles laid out in a grid, for example.
+ Squares are easy to fit together this way and the pattern can be extended
+ to cover any amount of space.
 \end_layout
 
 \begin_layout Standard
-Tessellations are the mathematical equivalent of floor tiling.
- Any piecing together of a set of shapes, covering a flat surface without
- overlapping is called a tiling or tessellation.
- As with floors, perhaps the simplest way to tile, or tessellate, the plane
- is with squares.
- Any flat surface can be covered by fitting squares of the same size together
- at their corners, maintaining parallel sides, just like the pattern seen
- on graph paper.
- The same can be done with equilateral triangles and regular hexagons.
- These coverings are called regular tesselations, samples shown here.
- Each one can be extended indefinitely in any direction.
+The plane 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ can be imagined as a floor without boundaries.
+ Covering it with tiles requires extending those tiles endlessly in every
+ direction.
+ The most familiar example is a boundless rectangular grid.
+ Imagine rectangular graph paper extended forever in every direction.
+ It may not be the most attractive covering of the plane, but it does the
+ job.
+ 
+\end_layout
+
+\begin_layout Standard
+Any set of shapes covering the plane without overlapping is called a tessellatio
+n, and the shapes are said to tessellate the plane.
+ Like squares, equilateral triangles and regular hexagons can be fitted
+ together to tessellate the plane in a simple pattern.
+ In fact these three shapes for the bases for the only three so-called regular
+ tessellations, portions of what are shown here.
+ Only your imagination can extend the patterns indefinitely.
 \end_layout
 
 \begin_layout Standard
@@ -163,9 +168,10 @@ Tessellations are the mathematical equivalent of floor tiling.
 
 \begin_layout Standard
 \noindent
-Irregular polygons tile the plane just as well.
- Parallelograms, pentagons, convex and concave, can all be fitted to tessellate,
- samples shown here.
+Polygons that are not regular tessellate the plane just as well.
+ Parallelograms, hexagons, dodecagons, convex and concave, can all be fitted
+ to tessellate the plane.
+ Portions of a small sample are shown here.
 \end_layout
 
 \begin_layout Standard
@@ -197,10 +203,9 @@ noprefix "false"
 
 , for example.
  One way to create Escher-esque tessellations is to start with a regular
- tile and modify its perimeter in a symmetric way, preserving its tessellating
- nature.
+ tile and modify its perimeter in a symmetric way.
  The third tessellation of the diagram above is created from squares where
- each side is replaced by a zig-zag.
+ each side is replaced by a zig-zag, for example.
  Among the infinite possibilities for tiles created this way are the two
  shown here.
 \end_layout
@@ -219,10 +224,12 @@ noprefix "false"
 
 \begin_layout Standard
 \noindent
-Each side of each tile is given 180 degree rotational symmetry.
- The tile created from the equilateral triangle is then given 120 degree
- rotational symmetry on the whole, and the tile created from the square
- is given 90 degree rotational symmetry on the whole.
+Each edge of the regular tile is replaced by a curve with 180 degree rotational
+ symmetry about the midpoint of the original edge.
+ As long as the replacements do not intersect one another, the resulting
+ shape is a tile.
+ That is, multiple copies can be fitted together to cover, or tessellate,
+ the plane.
 \end_layout
 
 \begin_layout Standard
@@ -270,9 +277,10 @@ M.C.
 
 \end_inset
 
- Elaborate in a different way, some tiles are doubly tiling.
- Not only can they be fitted to tile the plane, but they can also be fitted
- to tile larger copies of themselves! These tiles are called 
+ Certain tiles (shapes that tessllate the plane) are actually doubly tiling.
+ Not only can they be fitted together to tile the plane—they can also be
+ fitted together to tile larger copies of themselves! These shapes are called
+ 
 \series bold
 rep-tiles
 \series default
@@ -286,13 +294,14 @@ rep-tiles
  and the fourth rotated 180 degrees, to form a larger copy.
  Regular hexagons are not rep-tiles as no finite number of copies of a hexagon
  can be fitted together (as tiles, without overlap) to form a hexagon.
- However, there are irregular hexagons that are rep-tiles.
- One such hexagon has a symmetric L shape—three squares glued together in
- an ell.
- To see that they are self-replicating, the following diagram shows four
- of each shape fitted together to form a larger replica.
- We have already seen that these shapes tessellate the plane, so they are
- indeed rep-tiles.
+ However, there are many non-regular rep-tilian hexagons.
+ For example, the hexagon formed by gluing three squares together in an
+ ell is a rep-tile.
+ The following diagram demonstrates the self-replication of a square, a
+ regular triangle, and this hexagonal ell shape.
+ Four copies of each shape are fitted together to form an enlarged replica.
+ Since we have already seen that these shapes tessellate the plane, they
+ are indeed rep-tiles.
  
 \end_layout
 
@@ -309,50 +318,88 @@ rep-tiles
 \end_layout
 
 \begin_layout Standard
-As these rep-tiles are polygons, rigorous mathematical descriptions of each
- are easily within reach.
- A square is described as a quadrilateral with four congruent sides and
- four congruent interior angles.
- With this description and the location of one pair of opposite vertices,
- exactly one square is determined and it can be sketched from this information.
- A triangle is a three-sided polygon.
- With this description and the locations of its vertices, exactly one triangle
- is determined and it can be sketched from this information.
- The L-shaped tile is harder to describe and harder still to provide sufficient
- information for drawing a particular such tile.
- Phrases like 
-\begin_inset Quotes eld
-\end_inset
-
-three squares glued together
-\begin_inset Quotes erd
-\end_inset
-
- or 
-\begin_inset Quotes eld
-\end_inset
-
-a square with one missing quadrant
-\begin_inset Quotes erd
-\end_inset
-
- are perhaps adequate, but general and flexible language for precisely describin
-g general polygons is lacking.
- As we explore more and more rep-tiles, the language of plane geometry becomes
- less and less satisfying.
- Linear algebra provides a common language to describe all rep-tiles, polygons
- and non-polygons alike—transformations.
+Rep-tiles come in much more fanciful shapes, however.
+ Take these three, for example.
 \end_layout
 
 \begin_layout Standard
-After building a larger replica of a rep-tile, one can switch perspecives
- and look at the construction as a dissection of the larger rep-tile.
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/application-reptiles-15.png
+	lyxscale 33
+	height 1.4in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/application-reptiles-17.png
+	lyxscale 33
+	height 1.4in
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/application-reptiles-16.png
+	lyxscale 33
+	height 1.4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Appearing rom left to right are the carpenter's plane of Golomb
+\begin_inset CommandInset citation
+LatexCommand cite
+key "golomb"
+literal "false"
+
+\end_inset
+
+, a fractile of Bandt
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bandt"
+literal "false"
+
+\end_inset
+
+, and a twindragon.
+ Seeing that these shapes are in fact rep-tiles is nontrivial.
+ Pictures showing them tiling replicas of themselves and tessellating a
+ portion of the plane would make adequate demonstrations, but would give
+ no insight into their origin or how to imagine others, or even how to define
+ the shapes themselves.
+ For that, we rely on linear algebra.
+\end_layout
+
+\begin_layout Standard
+After building a replica of a rep-tile (from similar copies of the rep-tile
+ itself), one can switch perspecives and look at the completed figure as
+ a dissection of the larger rep-tile.
  From this viewpoint, rep-tiles are plane figures that tessellate the plane
  and can be dissected into finitely many similar copies of themselves.
- All the figures of the previous diagram can be seen from this vantage.
- The large square is made up of four smaller squares.
- The large triangle is broken up into four similar triangles.
- The large L-shape is likewise divided into four smaller copies of itself.
+ All rep-tiles can be seen from this vantage.
+ Refer back to the diagram of the square, the equlateral triangle and the
+ hexagonal ell being fitted together to self-replicate with a different
+ lens.
+ The square is shown dissected into four smaller squares.
+ The equilateral triangle is shown dissected into four smaller equilateral
+ triangles, and the ell shaped hexagon is likewise divided into four smaller
+ copies of itself.
 \begin_inset ERT
 status open
 
@@ -443,12 +490,10 @@ end{digression}
 
 \begin_layout Standard
 By imposing a set of axes on any of these figures, rigorous mathematical
- descriptions of the figures are available as sets of affine transformations—com
-positions of linear transformations and translations.
- Any placement of the axes—or from the perspective of the square, putting
- it anywhere in the plane—will do.
- We only need a frame of reference.
- For simplicity, if we arrange for opposite corners of the square to coincide
+ descriptions of the figures become available.
+ Any placement of the axes will do.
+ Only a frame of reference is needed.
+ For example, suppose we arrange for opposite corners of the square to coincide
  with 
 \begin_inset Formula $(0,0)$
 \end_inset
@@ -457,7 +502,10 @@ positions of linear transformations and translations.
 \begin_inset Formula $(2,2)$
 \end_inset
 
-, the following diagram shows the transformations that determine the square.
+.
+ The following diagram shows the four squares of its dissection, and for
+ each of these squares, an affine transformation mapping the whole square
+ to the part.
 \end_layout
 
 \begin_layout Standard
@@ -473,40 +521,30 @@ positions of linear transformations and translations.
 \end_layout
 
 \begin_layout Standard
-Each transformation maps the whole square (the one with opposite corners
- 
-\begin_inset Formula $(0,0)$
-\end_inset
-
- and 
-\begin_inset Formula $(2,2)$
-\end_inset
-
-) to one of the parts of its dissection.
- You should recognize the 
+In words, the 
 \begin_inset Formula $2\times2$
 \end_inset
 
- matrices as scaling by a factor of 
+ matrices scale shapes (and more to the point, the square) by a factor of
+ 
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
- in both horizontal and vertical directions.
+ in both the horizontal and vertical directions.
  The addition of 
 \begin_inset Formula $2\times1$
 \end_inset
 
  vectors provide translations.
- In words, 
+ 
 \begin_inset Formula $T_{4}$
 \end_inset
 
- can be described as scaling by 
+ can thus be described as scaling by 
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
- horizontally and vertically followed by translation (shifting) 1 unit horizonta
-lly.
+ horizontally and vertically followed by translation 1 unit horizontally.
  
 \begin_inset Formula $T_{4}\left(\left[\begin{array}{c}
 0\\
@@ -540,7 +578,7 @@ lly.
 \end_inset
 
 , for example.
- More importantly, the image of the 
+ Again, the critical point is that the image of the 
 \begin_inset Formula $2$
 \end_inset
 
@@ -605,7 +643,27 @@ lly.
 \end_inset
 
  (the top right square of the dissection).
- The union of the four images is the original square.
+ 
+\end_layout
+
+\begin_layout Standard
+The union of the four images, 
+\begin_inset Formula $T_{1}(S)$
+\end_inset
+
+, 
+\begin_inset Formula $T_{2}(S)$
+\end_inset
+
+, 
+\begin_inset Formula $T_{3}(S)$
+\end_inset
+
+, and 
+\begin_inset Formula $T_{4}(S)$
+\end_inset
+
+, is the original square.
  In the form of an equation,
 \begin_inset Formula 
 \begin{equation}
@@ -614,10 +672,6 @@ T_{1}(S)\cup T_{2}(S)\cup T_{3}(S)\cup T_{4}(S)=S.\label{eq:hutchinson-square}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 A theorem of Hutchinson
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -640,13 +694,13 @@ noprefix "false"
 
 \end_inset
 
-) with the given transformations.
- In other words, 
-\begin_inset Formula $T_{1},T_{2},T_{3},T_{4}$
+).
+ In other words, the square 
+\begin_inset Formula $S$
 \end_inset
 
- determine 
-\begin_inset Formula $S$
+ is determined by the transformations 
+\begin_inset Formula $T_{1},T_{2},T_{3},T_{4}$
 \end_inset
 
  via equation (
@@ -660,8 +714,8 @@ noprefix "false"
 \end_inset
 
 ).
- These four transformations provide a precise description of the square
- with opposite corners at 
+ This way, these four transformations provide a precise description, or
+ definition, of the square with opposite corners at 
 \begin_inset Formula $(0,0)$
 \end_inset
 
@@ -698,7 +752,7 @@ Let
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- with scale factors less than one, and define
+ with scale factors less than one, and define 
 \begin_inset Formula 
 \begin{equation}
 \mathcal{H}_{\mathscr{C}}(A)=C_{1}(A)\cup C_{2}(A)\cup\cdots\cup C_{p}(A)\label{eq:hutchinson-operator}
@@ -1049,8 +1103,8 @@ literal "false"
 
 \begin_layout Standard
 \noindent
-The following set of similitudes determines an L-shaped rep-tile within
- the square with opposite vertices 
+The following set of similitudes defines the hexagonal ell within the square
+ with opposite vertices 
 \begin_inset Formula $(0,0)$
 \end_inset
 
@@ -1090,7 +1144,7 @@ L_{3}(\mathbf{x})=\left[\begin{array}{cc}
 
 \end_inset
 
-Can you generate the L-shaped rep-tile by applying (
+Can you generate the ell shaped rep-tile by applying (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:hutchinson-limit"
@@ -1123,11 +1177,11 @@ noprefix "false"
 
 \begin_layout Standard
 The following diagram illustrates three things.
- One, the dissection of a reptile is not unique (two different dissections
+ One, the dissection of a rep-tile is not unique (two different dissections
  are shown for the same right triangle).
  Two, the number of parts in a dissection of a rep-tile is not always four.
  Three, the parts of a dissection need not be congruent to one another (they
- only need be similar to the whole).
+ must only be similar to the whole).
 \end_layout
 
 \begin_layout Standard
@@ -1174,7 +1228,7 @@ In the second dissection, the two scale factors are
 \end_inset
 
 .
- If 
+ In general, if 
 \begin_inset Formula $\mathscr{C}=\{T_{1},T_{2},\ldots,T_{p}\}$
 \end_inset
 
@@ -1190,7 +1244,11 @@ T_{1}(R)\cup T_{2}(R)\cup\cdots\cup T_{p}(R)=R
 
 \end_inset
 
-so
+and the images 
+\begin_inset Formula $T_{k}(R)$
+\end_inset
+
+ pariwise have no overlapping area, so
 \begin_inset Formula 
 \begin{equation}
 \text{area}\left(T_{1}(R)\right)+\text{area}\left(T_{2}(R)\right)+\cdots+\text{area}\left(T_{p}(R)\right)=\text{area}(R).\label{eq:reptile-area}
@@ -1198,7 +1256,7 @@ so
 
 \end_inset
 
-But we know from section 
+Now, we know from section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Determinants-Eigenvalues-Area"
@@ -1255,8 +1313,8 @@ noprefix "false"
 \end_inset
 
 .
- Combined with the facts that the determinants of reflections and rotations
- are 
+ Finally, combined with the facts that the determinants of reflections and
+ rotations are 
 \begin_inset Formula $-1$
 \end_inset
 
@@ -1273,11 +1331,6 @@ noprefix "false"
 \end_inset
 
  is its scale factor.
- By extension, a similitude scales the area of a figure by a factor of 
-\begin_inset Formula $s^{2}$
-\end_inset
-
- as well.
  Applying this information to equation (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1288,7 +1341,7 @@ noprefix "false"
 
 \end_inset
 
-),
+), we get
 \begin_inset Formula 
 \[
 s_{1}^{2}\text{area}(R)+s_{2}^{2}\text{area}(R)+\cdots+s_{p}^{2}\text{area}(R)=\text{area}(R)
@@ -1305,11 +1358,7 @@ where
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Hence
+ Hence
 \begin_inset Formula 
 \begin{equation}
 s_{1}^{2}+s_{2}^{2}+\cdots+s_{p}^{2}=1.\label{eq:reptile-scale-factors}
@@ -1317,8 +1366,12 @@ s_{1}^{2}+s_{2}^{2}+\cdots+s_{p}^{2}=1.\label{eq:reptile-scale-factors}
 
 \end_inset
 
-The square, the L-shape, and the triangle were all dissected into four parts,
- each of which was a 
+
+\end_layout
+
+\begin_layout Standard
+The square, the hexagonal ell, and the triangle were all dissected into
+ four parts, each of which was a 
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
@@ -1361,68 +1414,12 @@ IFS
 \end_layout
 
 \begin_layout Standard
-That was a lot of work to be able to describe these special polygon-shaped
- rep-tiles, and if rep-tiles did not come in more exotic shapes, it would
- probably not have been worth the effort.
- To justify the work, try to imagine how else you might describe these rep-tiles
-,
+Returning to the carpenter's plane of Golomb, the fractile of Bandt, and
+ the twindragon, shown below are dissections.
 \end_layout
 
 \begin_layout Standard
 \align center
-\begin_inset space \hfill{}
-\end_inset
-
-
-\begin_inset Graphics
-	filename figures/application-reptiles-15.png
-	lyxscale 33
-	height 1.4in
-
-\end_inset
-
-
-\begin_inset space \hfill{}
-\end_inset
-
- 
-\begin_inset Graphics
-	filename figures/application-reptiles-17.png
-	lyxscale 33
-	height 1.4in
-
-\end_inset
-
-
-\begin_inset space \hfill{}
-\end_inset
-
- 
-\begin_inset Graphics
-	filename figures/application-reptiles-16.png
-	lyxscale 33
-	height 1.4in
-
-\end_inset
-
-
-\begin_inset space \hfill{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-dissections of which are shown here.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset space \hfill{}
-\end_inset
-
-
 \begin_inset Graphics
 	filename figures/application-reptiles-18.png
 	lyxscale 33
@@ -1455,10 +1452,14 @@ dissections of which are shown here.
 \end_inset
 
 
-\begin_inset space \hfill{}
-\end_inset
+\end_layout
 
-
+\begin_layout Standard
+\noindent
+Imposing a set of axes on any one of the dissections allows developing the
+ similitudes mapping the shape to its parts.
+ Much like a center and radius define a circle or two points define a line,
+ the collection of these similitudes defines the rep-tile.
 \end_layout
 
 \begin_layout Subsection
@@ -1757,6 +1758,609 @@ startexercises
 Exercises
 \end_layout
 
+\begin_layout Enumerate
+Determine an affine transformation that maps the large figure to the similar
+ (smaller) figure.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-43.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.5in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-44.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-43.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.5in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-45.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-46.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-47.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-46.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-48.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-49.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.5in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-50.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-49.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.5in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-51.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-52.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.5in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-53.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.95in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-52.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{.5in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename figures/rep-tiles-54.pdf
+	lyxscale 33
+	width 1.15in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
@@ -2321,7 +2925,7 @@ raisebox{-1.75in}{
 \begin_inset Graphics
 	filename figures/rep-tiles-25.pdf
 	lyxscale 25
-	width 2.3in
+	width 2in
 
 \end_inset
 
@@ -2360,7 +2964,7 @@ raisebox{-.875in}{
 \begin_inset Graphics
 	filename figures/rep-tiles-26.pdf
 	lyxscale 25
-	width 2.3in
+	width 2in
 
 \end_inset
 
@@ -2399,7 +3003,7 @@ raisebox{-1.75in}{
 \begin_inset Graphics
 	filename figures/rep-tiles-28.pdf
 	lyxscale 25
-	width 2.3in
+	width 2in
 
 \end_inset
 
@@ -2438,7 +3042,7 @@ raisebox{-1.75in}{
 \begin_inset Graphics
 	filename figures/rep-tiles-27.pdf
 	lyxscale 25
-	width 2.3in
+	width 2in
 
 \end_inset
 
@@ -3103,7 +3707,7 @@ Find the three scale factors of the IFS suggested by the dissection.
 \begin_inset Graphics
 	filename figures/rep-tiles-22.pdf
 	lyxscale 33
-	width 2in
+	width 2.3in
 
 \end_inset
 
@@ -3141,7 +3745,7 @@ Find an expression for
 \begin_inset Graphics
 	filename figures/rep-tiles-24.pdf
 	lyxscale 33
-	width 2in
+	width 2.3in
 
 \end_inset
 
