@@ -400,6 +400,194 @@ A_{2:4,2:3}=\left[\begin{array}{cc}
 Section 
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "sec:addition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:addition-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:addition-1"
+
+\end_inset
+
+Scalar products can always be computed, and is done so entry-wise.
+ Each entry is multiplied by the scalar:
+\begin_inset Formula 
+\[
+2\left[\begin{array}{cc}
+-1 & 6\\
+8 & 15
+\end{array}\right]=\left[\begin{array}{cc}
+2(-1) & 2(6)\\
+2(8) & 2(15)
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:addition-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:addition-2"
+
+\end_inset
+
+Since these matrices are not the same size, there are entries in one that
+ have no corresponding entry in the other.
+ Therefore the difference is not defined.
+ It cannot be computed.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:addition-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:addition-3"
+
+\end_inset
+
+In mathematics and logic a statement is either always true (true for all
+ possible values of the variables) or it is false.
+ Since there are matrices for which 
+\begin_inset Formula $M-N\neq N-M$
+\end_inset
+
+ (see counterexample below) the statement is false.
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]-\left[\begin{array}{c}
+1\\
+4
+\end{array}\right]\neq\left[\begin{array}{c}
+1\\
+4
+\end{array}\right]-\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:addition-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:addition-4"
+
+\end_inset
+
+SageMath uses calculator notation to do arithmetic computation, so 
+\begin_inset Formula $3A+4T$
+\end_inset
+
+ is input as 
+\family typewriter
+3*A+4*T
+\family default
+.
+ See 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtkT9LxEAQxftAvkPARs83kJnZTXYLi8NeENKJ
+hYWFxXEiJ_jxfbNJFRLY7G4yf37vzXl4Gi4ft5-vv_uMCW_JMELSDPEE0TgXFNiE5LwXiPGbx3fl4m6V
+9wl9N-weSQlqDDKwnhUkeOQbooxmLjDZZ1S8P_Tdyw5FjB3cIzOiyZMybEY0VcKYN0D-CjQCTtD5gIOx
+trEyhN35IpaSLipZg2ARtnFtJK97Eg0_Vk9C_pZKAEqkNurRilShCgKzmOTxgMSwehU-zgErzGFPKQ0q
+AAhmyI1i2Y9mbL1CeXORBxoSU5qw1izNWc5KaJMQ6Wgo0SVvmBVGS8kSBKsZoTFklMZwNzxfL9-_t8_B
+z49p6Ts_cT8t_4ycbUY=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+.
+ The result is
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+[ 286  188  -89 -110 -118 -132]
+\begin_inset Newline newline
+\end_inset
+
+[-156   94   65  -30 -132  -58]
+\begin_inset Newline newline
+\end_inset
+
+[ -51 -224 -195 -184 -324 -104]
+\begin_inset Newline newline
+\end_inset
+
+[   6  281  120  112  122  -38]
+\begin_inset Newline newline
+\end_inset
+
+[  22   -5  -51  -49  155  179]
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:Characterization-Part-2"
 plural "false"
 caps "false"

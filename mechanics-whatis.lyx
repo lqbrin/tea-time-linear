@@ -2183,7 +2183,7 @@ name "exc:whatis-1"
 \begin_inset Formula $15\times6$
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
@@ -2254,7 +2254,7 @@ name "exc:whatis-2"
 \begin_inset Formula $12\times5$
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
@@ -2325,7 +2325,7 @@ name "exc:whatis-3"
 \begin_inset Formula $4\times14$
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
@@ -2445,7 +2445,7 @@ name "exc:whatis-4"
 \end{array}\right]$
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
@@ -2554,7 +2554,7 @@ name "exc:whatis-6"
 \begin_inset Formula $N_{:,3}$
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
@@ -2642,7 +2642,7 @@ name "exc:whatis-8"
 \begin_inset Formula $N_{\backslash4,2}$
 \end_inset
 
- 
+
 \begin_inset ERT
 status open
 
@@ -3032,7 +3032,6 @@ Let
 
 .
  Write SageMath code that will accomplish the following.
- 
 \begin_inset ERT
 status open
 
@@ -3101,7 +3100,7 @@ name "exc:mechanics-whatis"
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3142,7 +3141,7 @@ What is the output of your code?
 \end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 

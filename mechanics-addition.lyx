@@ -1157,6 +1157,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:addition"
+
+\end_inset
+
 Perform the operation if possible.
 \end_layout
 
@@ -1189,6 +1195,13 @@ Perform the operation if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:addition-1"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 -5 & -8 & 7 & 5\\
 -9 & -3 & 1 & 0
@@ -1196,6 +1209,29 @@ Perform the operation if possible.
 3 & -4 & 7 & -8\\
 1 & -2 & 2 & -5
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:addition-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1269,10 +1305,40 @@ Perform the operation if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:addition-2"
+
+\end_inset
+
+
 \begin_inset Formula $2\left[\begin{array}{cc}
 -1 & 6\\
 8 & 15
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:addition-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1328,6 +1394,13 @@ Perform the operation if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:addition-3"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 9 & -10 & 4\\
 10 & 10 & 1\\
@@ -1336,6 +1409,29 @@ Perform the operation if possible.
 10 & -4 & -4\\
 8 & 9 & 4
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:addition-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1425,8 +1521,37 @@ In your own words, describe how to add or subtract two matrices, and explain
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:addition-4"
+
+\end_inset
+
 Can a matrix with 29 nonzero entries be added to a matrix with 25 nonzero
- entries?
+ entries? Explain.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:addition-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1443,7 +1568,7 @@ Suppose
 \end_inset
 
  can be computed).
- Is the following true or false?
+ Is the following true or false? Explain.
 \begin_inset Formula 
 \[
 M+N=N+M
@@ -1455,6 +1580,12 @@ M+N=N+M
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:addition-5"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $M$
 \end_inset
@@ -1468,11 +1599,34 @@ Suppose
 \end_inset
 
  can be computed).
- Is the following true or false? 
+ Is the following true or false? Explain.
 \begin_inset Formula 
 \[
 M−N=N−M
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:addition-3"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -1597,7 +1751,7 @@ value{enumigrab}}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1624,7 +1778,66 @@ Compute
 
 \begin_layout Standard
 \begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtkb1qxEAMhPuDewdDmoSMwNJq_4oUR_pA4LqQ
+IkWKFMeFcIE8fkZrV8aGtXfXkubT6DQ9TZeP28_X331GwZsbZohXSHKIxr6hwQo88dwgxrsU98rFr3We
+C46HafOIO9QYZGA9a3CkyDdEGc1cYHKq6Hh_OB5eNihiVEgpMiOaPJ5hFSGqhLE0APkr0AhYoHWHg7G2
+sjKE6nwRS0kXlWxAsAhlkg6S1y2Jhh-LJ9H-mkoAtsje2I92eIcqCMxikucdEsPiVfhYA1aYQ01pAyoA
+CGbIg-K8Hc08tKLz4SI3NCSmVLDUbMNZzkpokxBpbyihklfMDqOlZAmCxYzoMdpog-Fuer5evn9vn1M6
+Pfr5H7yxa7Q=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:addition-6"
+
+\end_inset
+
+Compute 
+\begin_inset Formula $3A+4T$
+\end_inset
+
+
+\begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:addition-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1651,7 +1864,7 @@ Compute
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
