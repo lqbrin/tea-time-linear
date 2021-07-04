@@ -106,7 +106,7 @@ Solutions to Selected Exercises
 Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Characterization-Part-2"
+reference "sec:WhatIs"
 plural "false"
 caps "false"
 noprefix "false"
@@ -140,6 +140,270 @@ fancyhead[RE]{Solutions to Selected Exercises}
 \backslash
 fancyhead[LO]{}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-1"
+
+\end_inset
+
+The number of rows always comes first in the size of a matrix, so the matrix
+ has 15 rows.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-2"
+
+\end_inset
+
+The number of columns always comes second in the size of a matrix, so the
+ matrix has 5 columns.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-3"
+
+\end_inset
+
+A matrix with size 
+\begin_inset Formula $4\times14$
+\end_inset
+
+ has 4 rows with 14 entries each (equivalently it has 14 columns with 4
+ entries each) for a total of 
+\begin_inset Formula $4\cdot14=56$
+\end_inset
+
+ entries.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-4"
+
+\end_inset
+
+
+\begin_inset Formula $M_{3,1}$
+\end_inset
+
+ means the entry of 
+\begin_inset Formula $M$
+\end_inset
+
+ in the third row and first column, so the answer is 
+\begin_inset Formula $-2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-5"
+
+\end_inset
+
+
+\begin_inset Formula $N_{:,3}$
+\end_inset
+
+ means the third column of 
+\begin_inset Formula $N$
+\end_inset
+
+, so its size is 5 rows by 1 column or 
+\begin_inset Formula $5\times1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-6"
+
+\end_inset
+
+
+\begin_inset Formula $N_{\backslash4,2}$
+\end_inset
+
+ means the submatrix formed by deleting row 4 and column 2 of 
+\begin_inset Formula $N$
+\end_inset
+
+, which means 
+\begin_inset Formula $N_{\backslash4,2}$
+\end_inset
+
+ will have one fewer row and one fewer column than 
+\begin_inset Formula $N$
+\end_inset
+
+ making its size 
+\begin_inset Formula $4\times5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-7"
+
+\end_inset
+
+
+\begin_inset Formula $A_{6,:}$
+\end_inset
+
+ means the sixth row of 
+\begin_inset Formula $A$
+\end_inset
+
+ so it is 
+\begin_inset Formula $\left[\begin{array}{ccccc}
+2 & -4 & 10 & -7 & -3\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:whatis-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:whatis-8"
+
+\end_inset
+
+
+\begin_inset Formula $A_{2:4,2:3}$
+\end_inset
+
+ means the submatrix of 
+\begin_inset Formula $A$
+\end_inset
+
+ containing the intersection of rows two through four with columns 2 through
+ 3, so 
+\begin_inset Formula 
+\[
+A_{2:4,2:3}=\left[\begin{array}{cc}
+-11 & 10\\
+-10 & 12\\
+-1 & 3
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Part-2"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 

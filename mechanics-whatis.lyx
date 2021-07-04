@@ -119,6 +119,12 @@ Matrix Calculations
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:WhatIs"
+
+\end_inset
+
 Matrices
 \end_layout
 
@@ -2156,12 +2162,48 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis"
+
+\end_inset
+
 How many rows does a matrix with the given size have?
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-1"
+
+\end_inset
+
+
 \begin_inset Formula $15\times6$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2202,7 +2244,37 @@ How many columns does a matrix with the given size have?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-2"
+
+\end_inset
+
+
 \begin_inset Formula $12\times5$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2243,7 +2315,37 @@ How many entries does a matrix with the given size have?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-3"
+
+\end_inset
+
+
 \begin_inset Formula $4\times14$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2263,7 +2365,7 @@ Identify the requested entry of the given matrix.
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Formula $A_{2,4};$
+\begin_inset Formula $A_{2,4}$
 \end_inset
 
 
@@ -2282,7 +2384,7 @@ Identify the requested entry of the given matrix.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $B_{1,2};$
+\begin_inset Formula $B_{1,2}$
 \end_inset
 
 
@@ -2301,7 +2403,7 @@ Identify the requested entry of the given matrix.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P_{3,4};$
+\begin_inset Formula $P_{3,4}$
 \end_inset
 
 
@@ -2321,7 +2423,14 @@ Identify the requested entry of the given matrix.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M_{3,1};$
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-4"
+
+\end_inset
+
+
+\begin_inset Formula $M_{3,1}$
 \end_inset
 
 
@@ -2334,6 +2443,29 @@ Identify the requested entry of the given matrix.
 8 & -32 & -3 & -20\\
 -2 & 50 & -24 & 20
 \end{array}\right]$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2368,7 +2500,81 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-5"
+
+\end_inset
+
+
+\begin_inset Formula $N_{1,:}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatis-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $N_{:,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-6"
+
+\end_inset
+
+
+\begin_inset Formula $N_{:,3}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2382,7 +2588,81 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-7"
+
+\end_inset
+
+
+\begin_inset Formula $N_{2:3,4:5}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatis-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $N_{\backslash3,5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-8"
+
+\end_inset
+
+
+\begin_inset Formula $N_{\backslash4,2}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2418,7 +2698,81 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-9"
+
+\end_inset
+
+
+\begin_inset Formula $A_{6,:}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $A_{:,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-10"
+
+\end_inset
+
+
+\begin_inset Formula $A_{:,5}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatis-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2432,7 +2786,81 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-11"
+
+\end_inset
+
+
+\begin_inset Formula $A_{2:4,2:3}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:whatis-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $A_{\backslash4,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-12"
+
+\end_inset
+
+
+\begin_inset Formula $A_{\backslash3,5}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatis-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2566,6 +2994,98 @@ Extract
 \begin_layout Enumerate
 Print 
 \begin_inset Formula $B_{2,3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:whatis-13"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $C=\left[\begin{array}{cccc}
+-4 & -9 & 13 & -11\\
+7 & 5 & -14 & -2\\
+-12 & 12 & 8 & 11
+\end{array}\right]$
+\end_inset
+
+.
+ Write SageMath code that will accomplish the following.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:whatis-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Create the matrix 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Print 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Extract 
+\begin_inset Formula $C_{3,2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Print 
+\begin_inset Formula $C_{3,2}$
 \end_inset
 
 .
