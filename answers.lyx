@@ -686,6 +686,20 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-1"
+
+\end_inset
+
+
 \begin_inset Formula $\sqrt{109}$
 \end_inset
 
@@ -703,6 +717,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-2"
+
+\end_inset
+
+
 \begin_inset Formula $\sqrt{30.42}\approx5.51543289325507$
 \end_inset
 
@@ -720,6 +741,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-3"
+
+\end_inset
+
+
 \begin_inset Formula $3\sqrt{15}$
 \end_inset
 
@@ -737,6 +765,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-4"
+
+\end_inset
+
+
 \begin_inset Formula $2\sqrt{34}$
 \end_inset
 
@@ -754,6 +789,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-5"
+
+\end_inset
+
+
 \begin_inset Formula $\sqrt{6.81}\approx2.60959767013998$
 \end_inset
 
@@ -771,6 +813,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-6"
+
+\end_inset
+
+
 \begin_inset Formula $\sqrt{91}$
 \end_inset
 
@@ -787,7 +836,14 @@ noprefix "false"
 
 \end_inset
 
-: yes
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-7"
+
+\end_inset
+
+yes
 \end_layout
 
 \begin_layout Description
@@ -800,7 +856,14 @@ noprefix "false"
 
 \end_inset
 
-: no
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-8"
+
+\end_inset
+
+no
 \end_layout
 
 \begin_layout Description
@@ -813,7 +876,14 @@ noprefix "false"
 
 \end_inset
 
-: yes
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-9"
+
+\end_inset
+
+yes
 \end_layout
 
 \begin_layout Description
@@ -827,6 +897,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:length-10"
+
+\end_inset
+
+
 \begin_inset Formula $k=-14,\ 6$
 \end_inset
 

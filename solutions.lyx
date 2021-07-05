@@ -990,6 +990,20 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-1"
+
+\end_inset
+
+
 \begin_inset Formula $\Vert\mathbf{u}\Vert$
 \end_inset
 
@@ -1029,6 +1043,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-2"
+
+\end_inset
+
+
 \begin_inset Formula $d(\mathbf{u},\mathbf{v})$
 \end_inset
 
@@ -1078,7 +1099,14 @@ noprefix "false"
 
 \end_inset
 
-: The simplest way to check whether two vectors are orthogonal is to check
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-3"
+
+\end_inset
+
+The simplest way to check whether two vectors are orthogonal is to check
  whether their dot product is zero.
  In this case,
 \begin_inset Formula 
@@ -1106,7 +1134,14 @@ noprefix "false"
 
 \end_inset
 
-: In order for the vectors to be orthogonal their dot product must be zero.
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-4"
+
+\end_inset
+
+In order for the vectors to be orthogonal their dot product must be zero.
  Setting the dot product equal to zero gives an equation that can be solved
  for 
 \begin_inset Formula $k$
@@ -1146,8 +1181,15 @@ noprefix "false"
 
 \end_inset
 
-: The length of a sum of vectors is the vector with tail coinciding with
- the tail of the first addend and head coinciding with the head of the last
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-5"
+
+\end_inset
+
+The length of a sum of vectors is the vector with tail coinciding with the
+ tail of the first addend and head coinciding with the head of the last
  addend.
  In this case, the tail of the first addend is at 
 \begin_inset Formula $(0,0)$
@@ -1185,7 +1227,14 @@ noprefix "false"
 
 \end_inset
 
-: Following the hint:
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-6"
+
+\end_inset
+
+Following the hint:
 \end_layout
 
 \begin_deeper
@@ -1364,7 +1413,14 @@ noprefix "false"
 
 \end_inset
 
-: Yes.
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-7"
+
+\end_inset
+
+Yes.
  Their dot product is zero:
 \begin_inset Formula 
 \[
@@ -1427,7 +1483,14 @@ noprefix "false"
 
 \end_inset
 
-: The code
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:length-8"
+
+\end_inset
+
+The code
 \end_layout
 
 \begin_deeper
