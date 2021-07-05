@@ -39,7 +39,7 @@
 \pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
-\pdf_pdfborder false
+\pdf_pdfborder true
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
@@ -1091,7 +1091,7 @@ M.transpose()
 
  
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1267,7 +1267,7 @@ matrix()
 On the other hand, SageMath is perfectly capable of treating the columns
  as vectors, as seen in the following code 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1461,12 +1461,42 @@ Multiply if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-4"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 -1 & 0 & -3\end{array}\right]\left[\begin{array}{c}
 6\\
 -2\\
 5
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1488,6 +1518,13 @@ Multiply if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-19"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 -3 & 2\end{array}\right]\left[\begin{array}{c}
 7\\
@@ -1496,9 +1533,39 @@ Multiply if possible.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-5"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{c}
 6.3\\
 4.1\\
@@ -1508,14 +1575,67 @@ Multiply if possible.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-6"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 5.8 & 0.2\end{array}\right]\left[\begin{array}{c}
 2.5\\
 3.8
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1615,6 +1735,13 @@ Multiply if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-7"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 9 & 10\\
 3 & 0 & 8\\
@@ -1628,9 +1755,39 @@ Multiply if possible.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-8"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 -3 & 0 & 1\\
 2 & 5 & 7
@@ -1642,9 +1799,39 @@ Multiply if possible.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-9"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 2 & 3\\
 2 & 3
@@ -1652,6 +1839,29 @@ Multiply if possible.
 1 & 0\\
 3 & 2
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1689,6 +1899,13 @@ Multiply if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-10"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 3 & 0\\
 5 & -4
@@ -1696,6 +1913,29 @@ Multiply if possible.
 6 & 3 & 1\\
 6 & 1 & 7
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1716,6 +1956,13 @@ Multiply if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-11"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{c}
 8\\
 0\\
@@ -1724,6 +1971,29 @@ Multiply if possible.
 2 & 4 & -1 & 1\\
 9 & 6 & 10 & 8
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1831,6 +2101,13 @@ Find the dot product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-12"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 -10\\
 3
@@ -1842,6 +2119,29 @@ Find the dot product
 0\\
 9
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1865,6 +2165,13 @@ Find the dot product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-13"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 10\\
 2\\
@@ -1878,6 +2185,29 @@ Find the dot product
 3\\
 -10
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1903,6 +2233,13 @@ Find the dot product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-14"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 8\\
 -7\\
@@ -1916,6 +2253,29 @@ Find the dot product
 -11\\
 -8
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1962,6 +2322,13 @@ Find the dot product
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-15"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 3\\
 -3\\
@@ -1979,6 +2346,29 @@ Find the dot product
 5\\
 4
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2007,9 +2397,61 @@ noprefix "false"
 \end_inset
 
  instead, and compare your answers.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-16"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $A$
 \end_inset
@@ -2036,6 +2478,29 @@ Suppose
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2081,6 +2546,12 @@ Describe how to multiply two matrices, and explain how to determine whether
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-17"
+
+\end_inset
+
 True or false? For any column vectors 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
@@ -2094,6 +2565,29 @@ True or false? For any column vectors
 \end_inset
 
 ,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:multiplication-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2181,7 +2675,7 @@ Find a pair of
 \end_layout
 
 \begin_layout Enumerate
-Can you find a pair of 
+Can you find a pair of distinct 
 \begin_inset Formula $2\times2$
 \end_inset
 
@@ -2351,7 +2845,69 @@ Compute
 \end_inset
 
 .
- Are they the same?
+ Are they equal?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtkc1KxTAQhfeFvkPAjcIZ6EySJlm4EJ_gFl2J
+ggsXLi5X5Ao-vmfSLqS0kDZJ5-c7Zx7CfTi_X78_f28zZrwkwwRJBRITRH1fUWEzUuS5Qox30e-Vi19r
+PM8Yh7B7JCWoMcjAelaRED3f4GU0c4HJsaDh9W4cnncoYuwQo2d6NHlShhV4UyWMxQ7IX45GwBlaDjgY
+axsrQ9idL2Ip6bySdQgWYZuoneS0J1H3Y_XE5W-pBKBEaqMebUgNqiAwi0meDkgMq1fuY3FYYQ57Su1Q
+DkAwQ-4Uy340U-_lyruL3NAQn9KMtWbtznJWQpuESEdD8S55w2wwWkoWJ1jNcI0uo3aGm_B4OX_9XD_C
+6e0pLOPw_2rxyz_1VHDq&lang=sage&interacts=eJyLjgUAARUAuQ==} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-18"
+
+\end_inset
+
+Compute 
+\begin_inset Formula $Q^{T}R$
+\end_inset
+
+ and 
+\begin_inset Formula $QR^{T}$
+\end_inset
+
+.
+ Are they equal?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

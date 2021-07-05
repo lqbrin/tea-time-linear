@@ -1025,6 +1025,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length"
+
+\end_inset
+
 Calculate 
 \begin_inset Formula $\Vert\mathbf{u\Vert}$
 \end_inset
@@ -1054,6 +1060,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-1"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 -10\\
 3
@@ -1085,6 +1098,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-2"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 2\\
 -6\\
@@ -1107,6 +1127,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-3"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 4.9\\
 0.4\\
@@ -1130,6 +1157,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-4"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 3\\
 -3\\
@@ -1187,6 +1221,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-5"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 -10\\
 3
@@ -1240,6 +1281,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-6"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 2\\
 -6\\
@@ -1278,6 +1326,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-7"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 4.9\\
 0.4\\
@@ -1318,6 +1373,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-8"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 3\\
 -3\\
@@ -1389,6 +1451,13 @@ Are
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-9"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 -10\\
 8
@@ -1442,6 +1511,13 @@ Are
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-10"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 2\\
 -6\\
@@ -1480,6 +1556,13 @@ Are
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-11"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 4.9\\
 0.4\\
@@ -1520,6 +1603,13 @@ Are
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-12"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
 3\\
 -3\\
@@ -1587,6 +1677,13 @@ k\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-13"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{c}
 -2\\
 -6\\
@@ -1646,6 +1743,13 @@ k\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-14"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{c}
 k\\
 2\\
@@ -1753,6 +1857,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-15"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -1827,6 +1938,13 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-16"
+
+\end_inset
+
+
 \begin_inset Formula $d(\mathbf{u}+\mathbf{w},\mathbf{v})=1$
 \end_inset
 
@@ -1985,6 +2103,12 @@ Are
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-17"
+
+\end_inset
+
 Are 
 \begin_inset Formula $-12.1\mathbf{u}$
 \end_inset
@@ -1998,6 +2122,13 @@ Are
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-18"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2006,17 +2137,17 @@ status open
 
 \backslash
 sagecell{https://sagecell.sagemath.org/?z=eJxzUbBVyE0sKcqs0DDWMdGJ1jXSMTTQ0TXXsdAB
-Ms11DA1BHF0THVMdM6BMrCYvl7KCRqamQkFRZl6JQn5piUJJRioQZxalKBTllyvkpym48HJBVGEoS8ss
-Ki5RSM7PKc3NA6sEAAw3Izc=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+Ms11DA1BHF0THVMdM6BMrCYvV0FRZl6JhoumtQKEBRRSVnBMSVFIzk9JVUhKzckvBwCCChXx&lang=sa
+ge&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \end_inset
 
- Add code that will calculate the length of the third column of 
+ Add code that will calculate the norm of the third column of 
 \family typewriter
 D
 \family default
-.
+ (treated as a vector).
 \begin_inset VSpace -12pt
 \end_inset
 
@@ -2039,7 +2170,7 @@ What is the output of your code?
 \end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
