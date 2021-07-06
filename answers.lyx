@@ -910,5 +910,348 @@ name "ans:length-10"
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:The-Determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-1"
+
+\end_inset
+
+
+\begin_inset Formula $C_{2,2}=\det(8)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-2"
+
+\end_inset
+
+
+\begin_inset Formula $C_{2,1}=-\det\left(\begin{array}{cc}
+0 & 1\\
+11 & -7
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-3"
+
+\end_inset
+
+44
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-4"
+
+\end_inset
+
+97
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-5"
+
+\end_inset
+
+273
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-6"
+
+\end_inset
+
+(a) true (b) false (c) false (d) true (e) false
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:determinant-7"
+
+\end_inset
+
+It is not possible to write any row as a linear combination of the other
+ two in any of the remaining seven blocks.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Division"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverses-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverses"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverses-1"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+\frac{1}{4\pi}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverses-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverses-2"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & -\sqrt{2}\\
+-\frac{2\sqrt{2}}{3} & \frac{5}{3}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverses-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverses-3"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 2 & 0\\
+-2 & 6 & -3\\
+1 & -1 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverses-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverses-4"
+
+\end_inset
+
+Not possible.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverses-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverses-5"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+13 & -8 & 5 & 1\\
+5 & 0 & 4 & 2\\
+6 & -3 & 3 & 1\\
+3 & -1 & 2 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverses-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverses-6"
+
+\end_inset
+
+(a) false (b) false (c) false (d) false (e) true (f) false (g) true
+\end_layout
+
 \end_body
 \end_document

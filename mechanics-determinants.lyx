@@ -420,7 +420,7 @@ noprefix "false"
 ? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
-reference "ans:determinant"
+reference "ans:twobytwodeterminant"
 plural "false"
 caps "false"
 noprefix "false"
@@ -484,9 +484,9 @@ noprefix "false"
 
 ) can be rewritten 
 \begin_inset Formula 
-\[
-\det A=A_{1,1}C_{1,1}+A_{1,2}C_{1,2}+\cdots+A_{1,n}C_{1,n}.
-\]
+\begin{equation}
+\det A=A_{1,1}C_{1,1}+A_{1,2}C_{1,2}+\cdots+A_{1,n}C_{1,n}.\label{eq:determinant_cofactors}
+\end{equation}
 
 \end_inset
 
@@ -1213,6 +1213,26 @@ coefficients The scalar quantities of a linear combination.
 \end_layout
 
 \begin_layout Description
+cofactor A scalar quantity denoted 
+\begin_inset Formula $C_{i,j}$
+\end_inset
+
+, computed for the matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+C_{i,j}=(-1)^{i+j}\det A_{\backslash i,j}\label{eq:cofactor}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 determinant 
 \family roman
 \series medium
@@ -1245,7 +1265,7 @@ The determinant of an
 , is defined by
 \begin_inset Formula 
 \[
-\det A=(-1)^{1+1}A_{1,1}\det A_{\backslash1,1}+(-1)^{1+2}A_{1,2}\det A_{\backslash1,2}+\cdots+(-1)^{1+n}A_{1,n}\det A_{\backslash1,n}
+\det A=A_{1,1}C_{1,1}+A_{1,2}C_{1,2}+\cdots+A_{1,n}C_{1,n}
 \]
 
 \end_inset
@@ -1403,7 +1423,23 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
-Calculate the cofactor.
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant"
+
+\end_inset
+
+Use formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cofactor"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) to write the cofactor as a determinant.
 \end_layout
 
 \begin_deeper
@@ -1436,6 +1472,13 @@ Calculate the cofactor.
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-1"
+
+\end_inset
+
+
 \begin_inset Formula $C_{2,1}$
 \end_inset
 
@@ -1447,9 +1490,39 @@ Calculate the cofactor.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-2"
+
+\end_inset
+
+
 \begin_inset Formula $C_{2,2}$
 \end_inset
 
@@ -1461,9 +1534,39 @@ Calculate the cofactor.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-3"
+
+\end_inset
+
+
 \begin_inset Formula $C_{1,3}$
 \end_inset
 
@@ -1476,9 +1579,39 @@ Calculate the cofactor.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-4"
+
+\end_inset
+
+
 \begin_inset Formula $C_{2,1}$
 \end_inset
 
@@ -1488,6 +1621,29 @@ Calculate the cofactor.
 3 & -5 & 7\\
 4 & 11 & -7
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1554,6 +1710,13 @@ Calculate the determinant if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-5"
+
+\end_inset
+
+
 \begin_inset Formula $\det A$
 \end_inset
 
@@ -1563,15 +1726,68 @@ Calculate the determinant if possible.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-6"
+
+\end_inset
+
+
 \begin_inset Formula $\det A$
 \end_inset
 
  where 
 \begin_inset Formula $A=\left[\begin{array}{c}
 44\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1598,10 +1814,80 @@ Calculate the determinant if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-7"
+
+\end_inset
+
+
 \begin_inset Formula $\left|\begin{array}{cc}
 18 & 5\\
 14 & -16
 \end{array}\right|$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-8"
+
+\end_inset
+
+
+\begin_inset Formula $\det\left(\begin{array}{cc}
+-11 & 2\\
+-10 & -7
+\end{array}\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1630,11 +1916,82 @@ Calculate the determinant if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-9"
+
+\end_inset
+
+
 \begin_inset Formula $\det\left(\begin{array}{ccc}
 -3 & -1 & -9\\
 1 & -4 & -8\\
 2 & 9 & 6
 \end{array}\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-10"
+
+\end_inset
+
+
+\begin_inset Formula $\left|\begin{array}{ccc}
+3 & -6 & 0\\
+-8 & 2 & -7\\
+5 & 1 & -1
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1665,12 +2022,42 @@ Calculate the determinant if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-11"
+
+\end_inset
+
+
 \begin_inset Formula $\det\left(\begin{array}{cccc}
 5 & 0 & 2 & 8\\
 4 & 8 & 6 & -2\\
 0 & -1 & 6 & 0\\
 0 & 3 & -1 & 3
 \end{array}\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1757,7 +2144,36 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-12"
+
+\end_inset
+
 True or false?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1940,11 +2356,11 @@ status collapsed
 
 
 \backslash
-sagecell{https://sagecell.sagemath.org/?z=eJylkL0OgjAUhXcT3oEw0eTG5Lb8FI2bK09gHEAZ
-iIKGdPDxPS2EYleXpmm_c-7Xts_X7cEcn-KhMVP_SRUpukgsGZWkqSKmnIqriHatQ2WA4hKgDTAiCHhU
-BSijTQMq0FjiQK6oDAUUAIsXaLaR3KOhgG3Ty_gSkU1rKIBL5ziP582zVCiQuSfl6CshwaQ9GgqwQ7QL
-VD-uKhTI3Y8WgBg4JCxaA1o-LNq9p340aS2O8bxLzp3ppqEfm9EcErEC-7s_T8WKb-sk_1_3BdlbkRc=
-&lang=sage&interacts=eJyLjgUAARUAuQ==}
+sagecell{https://sagecell.sagemath.org/?z=eJylUL0KgzAQ3gXfITgpHKXRGE1Kl05dnDqKg2AH
+KWqJEfr4vUuqdKhTbznuu-_nuHnppsfCzmxorelfsQIFdQoZCMhBQgEcgRJ7iZ1wjhuJuzBgv4o7mXD0
+AukkIROSeAuxJ1VIWhNKpFOmcH1NlntS8SEUW07u8kuH0z18TypxRQJKSunkJgmDp-lHG0c3_5zL1JpO
+Rxs-Ozg5MT8iXuEDPVofNQZq1azkauNF13Zm3d3ezdCP7WgjqA5fY5zsOGZaArr-5_gGnGB0Sw==&lan
+g=sage&interacts=eJyLjgUAARUAuQ===}
 \backslash
  
 \end_layout
@@ -1979,6 +2395,13 @@ The determinants of the
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-13"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1986,12 +2409,11 @@ status collapsed
 
 
 \backslash
-sagecell{https://sagecell.sagemath.org/?z=eJy9kEFuwjAQRfdI3CFiExumVccmiSniCFl1WbFw
-UBdRA0YhQI_fbydNqA_AJrIy7_959s22IrUppVUq57OqcYdv5mSXHG3X1j9Ck6ZPhc-aCjK0IaaM8v2I
-qgjFEKAPMCIITKiOUEabAZSjscAPNaIqFtAAPJ6j2UeyCY0FfJsZ1heIPLTGAhgGx349P1xLxwLrcKUM
-fQUkmMyExgIcEBMCm3-uOhbIwovmgBg4JDxaAhoebD47t_WpE6XcJv1p8eGaa1e70_tC_k0vrrl9iaa-
-dMIuy9fW3cWbXFXDkeVLf1BSkqVKjl1P3fULl5Ojag==&lang=sage&interacts=eJyLjgUAARUAuQ=
-=}
+sagecell{https://sagecell.sagemath.org/?z=eJy1kL0OwjAMhHck3qHq0gQMIiWkP4iFvRMjYkgF
+Q0UhKLTA42MntGKgI1mcnO_8RX5oyyIdQVRGfDy6t0dzboNNcNGNrV4sgwz2MSxBwgoUJCBQSLGmWEkX
+2FHYG4-CX0e4mHT2BO0UoSEU8SPkUDRDU0dI0U5M6WpHVkNR-TEkPWfl-KnT6T9iKKqwRQEixfTlA27l
+Zqtrw8KdX87WaHvMw173O-PrwD9RL3CBXt0vcgTm2aEzF70v3Jm6bSpz_R5l6seJ1dW9YXpSzK15sgWf
+lp-r4DN_iTkHDSUfYC5zBcj9N_MNOhOJKw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -2020,6 +2442,29 @@ For the
  two.
  For the remaning 7 blocks, explore whether there is any row that can be
  written as a linear combination of the other two.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate-Resume
@@ -2041,10 +2486,10 @@ status collapsed
 
 
 \backslash
-sagecell{https://sagecell.sagemath.org/?z=eJxtzzEOgzAMBdAdiTtkBOkvCSFOBhauwIgYOjIU
-IcTQ49c2lKFyRufZ355GN7j36zzWT1NQMAd0iOiRQPBcyKgr9_-IywVCPePE3EBep0SlxDRYqNMYmXBN
-jBYqDH5hmSlZKOva9OyVLBTvT3oiDdTrwlmpHOAtlLgs_RIa5L6lrav9WLezmcb2C5oxOOI=&lang=sa
-ge&interacts=eJyLjgUAARUAuQ==}
+sagecell{https://sagecell.sagemath.org/?z=eJwrLk3Jzy5VsFXITSwpyqzQsNSx1Ik20jHWMdEx
+1THTMdcxBApYAGkLIA0SNwTKmAHleLkUsAFDsDYTsHJzoHKQFpAhIC0QI0xwabUEKoLZYAFUDrLTBEzD
+bDbDpdUEqsAcbo8p2H4LsDjIPYa4tJoBpUAaQDYZgZwcq8nLVVCUmVeioRQMCRyn_MSiFCsluHgxWFjT
+WgHC1QQA_fRAgQ==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
@@ -2090,7 +2535,7 @@ Answers
 determinant: 
 \begin_inset CommandInset label
 LatexCommand label
-name "ans:determinant"
+name "ans:twobytwodeterminant"
 
 \end_inset
 
