@@ -86,7 +86,7 @@ figs-within-sections
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 2
+\papercolumns 1
 \papersides 2
 \paperpagestyle default
 \tracking_changes false
@@ -100,6 +100,22 @@ figs-within-sections
 
 \begin_layout Chapter*
 Answers to Selected Exercises
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{2}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1251,6 +1267,829 @@ name "ans:inverses-6"
 \end_inset
 
 (a) false (b) false (c) false (d) false (e) true (f) false (g) true
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Eigenpairs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-1"
+
+\end_inset
+
+
+\begin_inset Formula $-3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-2"
+
+\end_inset
+
+
+\begin_inset Formula $8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-3"
+
+\end_inset
+
+
+\begin_inset Formula $\lambda^{2}+21\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-4"
+
+\end_inset
+
+
+\begin_inset Formula $\lambda^{3}-2\lambda^{2}-\lambda+2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-5"
+
+\end_inset
+
+
+\begin_inset Formula $-2,3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-6"
+
+\end_inset
+
+
+\begin_inset Formula $-1,0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-7"
+
+\end_inset
+
+
+\begin_inset Formula $-2\pm i\sqrt{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-8"
+
+\end_inset
+
+
+\begin_inset Formula $-1,0,1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-9"
+
+\end_inset
+
+any vector of the form 
+\begin_inset Formula $r\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-10"
+
+\end_inset
+
+any vector of the form 
+\begin_inset Formula $r\left[\begin{array}{c}
+4\\
+-3-i\sqrt{3}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-11"
+
+\end_inset
+
+any vector of the form 
+\begin_inset Formula $r\left[\begin{array}{c}
+1\\
+2\\
+1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-12"
+
+\end_inset
+
+(a) false (b) false (c) true (d) false (e) false (f) true (g) false
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:eigenpairs-13"
+
+\end_inset
+
+The eigenvector is 
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+2\\
+-6\\
+-2
+\end{array}\right]$
+\end_inset
+
+ and the associated eigenvalue is 
+\begin_inset Formula $9$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Systems-of-Linear"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-38"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-1"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+3 & 2 & -8 & 9\\
+0 & -3 & 2 & 10\\
+-7 & 1 & 0 & -11
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-39"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-2"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+3 & 2 & -3 & -7\\
+-5 & 1 & -2 & -8\\
+1 & 1 & 1 & 11
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-40"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-3"
+
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccc}
+-14v_{1} & - & 15v_{2} & + & 8v_{3} & = & -8\\
+-13v_{1} & + & 2v_{2} & - & v_{3} & = & 13\\
+15v_{1} & - & 9v_{2} & - & 6v_{3} & = & 12
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-41"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-4"
+
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{ccccccccccc}
+10v_{1} & - & 9v_{2} & - & v_{3} & + & 3v_{4} & + & 15v_{5} & = & 6\\
+-11v_{1} & + & 12v_{2} & + & 13v_{3} & + & 5v_{4} & - & 4v_{5} & = & -2
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-5"
+
+\end_inset
+
+One solution is 
+\begin_inset Formula $v_{1}=-5$
+\end_inset
+
+, 
+\begin_inset Formula $v_{2}=4$
+\end_inset
+
+, 
+\begin_inset Formula $v_{3}=0$
+\end_inset
+
+.
+ It has infinitely many more because both 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ can be written in terms of 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+, and 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ can take any value:
+\begin_inset Formula 
+\[
+v_{1}=-5-2v_{3}\quad\text{and}\quad v_{2}=4-3v_{3}
+\]
+
+\end_inset
+
+The example solution comes from taking 
+\begin_inset Formula $v_{3}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-6"
+
+\end_inset
+
+Swap rows 2 and 3
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-7"
+
+\end_inset
+
+Row 2 replaced by row 2 minus 9 row 3
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-8"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+3 & -1 & 1 & -7\\
+5 & -10 & 30 & -20
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+-9 & 9 & -4\\
+5 & 6 & -2\\
+-9 & -9 & -6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-10"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+-5 & 1 & 9 & -6\\
+22 & -10 & -44 & 29\\
+-8 & 3 & 2 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-11"
+
+\end_inset
+
+Swap rows 1 and 3
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-12"
+
+\end_inset
+
+Scale row 3 by 3
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-13"
+
+\end_inset
+
+Replace row 1 by row 1 minus 2 row 2:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+2 & 3 & -2
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-14"
+
+\end_inset
+
+Replace row 2 by row 2 minus 2 row 1:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 3 & 4
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-operations-15"
+
+\end_inset
+
+Each coefficient of the linear combination that gives the second row of
+ 
+\begin_inset Formula $AB$
+\end_inset
+
+ is the same multiple of the corresponding coefficient of the linear combination
+ that gives the first row of 
+\begin_inset Formula $AB$
+\end_inset
+
+, so the second row must be that multiple of the first row:
+\begin_inset Formula 
+\begin{align*}
+(AB)_{1,:} & =A_{1,1}B_{1,:}+A_{1,2}B_{2,:}+\cdots+A_{1,n}B_{n,:}\\
+(AB)_{2,:} & =kA_{1,1}B_{1,:}+kA_{1,2}B_{2,:}+\cdots+kA_{1,n}B_{n,:}\\
+ & =k\left(A_{1,1}B_{1,:}+A_{1,2}B_{2,:}+\cdots+A_{1,n}B_{n,:}\right)\\
+ & =k(AB)_{1,:}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

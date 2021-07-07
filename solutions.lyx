@@ -2575,6 +2575,957 @@ You got this!
 Section 
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "sec:Eigenpairs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:eigenpairs"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:eigenpairs-1"
+
+\end_inset
+
+Since 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $A\mathbf{v}=\lambda\mathbf{v}$
+\end_inset
+
+ for some scalar 
+\begin_inset Formula $\lambda.$
+\end_inset
+
+ Computing 
+\begin_inset Formula $A\mathbf{v}$
+\end_inset
+
+ will reveal the value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+A\mathbf{v}=\left[\begin{array}{ccc}
+-4 & 1 & 1\\
+2 & 0 & -2\\
+-4 & -1 & 1
+\end{array}\right]\left[\begin{array}{c}
+0\\
+1\\
+-1
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+2\\
+-2
+\end{array}\right].
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+2\\
+-2
+\end{array}\right]=2\left[\begin{array}{c}
+0\\
+1\\
+-1
+\end{array}\right]$
+\end_inset
+
+, the eigenvalue 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ must be 2.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:eigenpairs-2"
+
+\end_inset
+
+The characteristic polynomial of a square matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\begin_inset Formula $\det(M-\lambda I)$
+\end_inset
+
+.
+ In this case,
+\begin_inset Formula 
+\begin{align*}
+\det\left(\left[\begin{array}{cc}
+-8 & -3\\
+3 & -2
+\end{array}\right]-\lambda\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\right) & =\det\left(\begin{array}{cc}
+-8-\lambda & -3\\
+3 & -2-\lambda
+\end{array}\right)\\
+ & =(-8-\lambda)(-2-\lambda)+9.
+\end{align*}
+
+\end_inset
+
+The characteristic polynomial is 
+\begin_inset Formula $(-8-\lambda)(-2-\lambda)+9$
+\end_inset
+
+ and can be expanded to yield the standard form 
+\begin_inset Formula $\lambda^{2}+10\lambda+25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:eigenpairs-3"
+
+\end_inset
+
+The eigenvalues of a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ are the roots of its characteristic polynomial.
+ That is, solutions of the equation 
+\begin_inset Formula $\det(A-\lambda I)=0$
+\end_inset
+
+.
+ In this case,
+\begin_inset Formula 
+\begin{align*}
+\det\left(\left[\begin{array}{cc}
+-7 & 25\\
+-1 & 3
+\end{array}\right]-\lambda\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\right) & =0\\
+\det\left(\begin{array}{cc}
+-7-\lambda & 25\\
+-1 & 3-\lambda
+\end{array}\right) & =0\\
+(-7-\lambda)(3-\lambda)+25 & =0\\
+\lambda^{2}+4\lambda+4 & =0\\
+(\lambda+2)^{2} & =0\\
+\lambda & =-2
+\end{align*}
+
+\end_inset
+
+so this matrix has one eigenvalue, 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:eigenpairs-4"
+
+\end_inset
+
+The eigenvalues of a square matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ are the roots of its characteristic polynomial.
+ That is, solutions of the equation 
+\begin_inset Formula $\det(A-\lambda I)=0$
+\end_inset
+
+.
+ In this case,
+\begin_inset Formula 
+\begin{align*}
+\det\left(\left[\begin{array}{ccc}
+-3 & 0 & 0\\
+4 & 13 & -12\\
+4 & 16 & -15
+\end{array}\right]-\lambda\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\right) & =0\\
+\det\left(\begin{array}{ccc}
+-3-\lambda & 0 & 0\\
+4 & 13-\lambda & -12\\
+4 & 16 & -15-\lambda
+\end{array}\right) & =0\\
+(-3-\lambda)\det\left(\begin{array}{cc}
+13-\lambda & -12\\
+16 & -15-\lambda
+\end{array}\right) & =0\\
+(-3-\lambda)\left((13-\lambda)(-15-\lambda)+192\right) & =0\\
+(-3-\lambda)(\lambda^{2}+2\lambda-3) & =0\\
+-\lambda^{3}-5\lambda^{2}-3\lambda+9 & =0.
+\end{align*}
+
+\end_inset
+
+Checking for integer roots first, the rational roots theorem says the only
+ possibilities are factors of the constant term, 9 divided by factors of
+ the leading coefficient, 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $\pm1,\pm3,\pm9$
+\end_inset
+
+.
+ Starting with 
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $-(1)^{3}-5(1)^{2}-3(1)+9=-1-5-3+9=0$
+\end_inset
+
+.
+ How lucky, a hit on the first try! Factoring 
+\begin_inset Formula $\lambda-1$
+\end_inset
+
+ out of 
+\begin_inset Formula $-\lambda^{3}-5\lambda^{2}-3\lambda+9$
+\end_inset
+
+ using synthetic division:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+yields 
+\begin_inset Formula $-\lambda^{3}-5\lambda^{2}-3\lambda+9=(\lambda-1)(-\lambda^{2}-6\lambda-9)$
+\end_inset
+
+.
+ Completing the factoring (factoring the quadratic 
+\begin_inset Formula $-\lambda^{2}-6\lambda-9$
+\end_inset
+
+) gives the characteristic equation
+\begin_inset Formula 
+\begin{align*}
+(\lambda-1)(-\lambda-3)(\lambda+3) & =0\\
+\lambda & =-3,1
+\end{align*}
+
+\end_inset
+
+so this matrix has two eigenvalues, 
+\begin_inset Formula $-3$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:eigenpairs-5"
+
+\end_inset
+
+The eigenpair 
+\begin_inset Formula $\lambda,\mathbf{v}$
+\end_inset
+
+ satisfies the equation 
+\begin_inset Formula $A\mathbf{v}=\lambda\mathbf{v}$
+\end_inset
+
+, which can be solved for 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+-4 & 2\\
+-16 & 8
+\end{array}\right]\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right] & =0\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\\
+\left[\begin{array}{c}
+-4v_{1}+2v_{2}\\
+-16v_{1}+8v_{2}
+\end{array}\right] & =\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ must satisfy the system
+\begin_inset Formula 
+\begin{align*}
+-4v_{1}+2v_{2} & =0\\
+-16v_{1}+8v_{2} & =0
+\end{align*}
+
+\end_inset
+
+Solving the first equation for 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ as an attempt to solve the system by substitution: 
+\begin_inset Formula $2v_{2}=4v_{1}$
+\end_inset
+
+ so 
+\begin_inset Formula $v_{2}=2v_{1}$
+\end_inset
+
+.
+ Substituting into the second equation, 
+\begin_inset Formula $-16v_{1}+8(2v_{1})=0$
+\end_inset
+
+ yields 
+\begin_inset Formula $0=0$
+\end_inset
+
+, a true statement for all values of 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+! This means 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ can be anything and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ must be 
+\begin_inset Formula $2v_{1}$
+\end_inset
+
+.
+ For example,
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]\text{ is an eigenvector}
+\]
+
+\end_inset
+
+but any vector of the form 
+\begin_inset Formula $\left[\begin{array}{c}
+r\\
+2r
+\end{array}\right]$
+\end_inset
+
+ is a valid solution.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:eigenpairs-6"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJ1rXQ0TXWMdbRNYrV
+5OUqKMrMK9Hw1bRWgLAQQnrJGYlFBfk5lRqamgB_MRN-&lang=sage&interacts=eJyLjgUAARUAuQ=
+=}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+One possible solution is
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+M = matrix(2,2,[-8,-3,3,-2])
+\begin_inset Newline newline
+\end_inset
+
+print(M); print()
+\begin_inset Newline newline
+\end_inset
+
+print(M.charpoly())
+\end_layout
+
+\begin_layout Standard
+which produces
+\end_layout
+
+\begin_layout LyX-Code
+[-8 -3]
+\begin_inset Newline newline
+\end_inset
+
+[ 3 -2]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+x^2 + 10*x + 25
+\end_layout
+
+\begin_layout Standard
+The solution of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:eigenpairs-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ was 
+\begin_inset Formula $\lambda^{2}+10\lambda+25$
+\end_inset
+
+, which is the same except for the (dummy) variable, so is the same solution.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Systems-of-Linear"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-42"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-operations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-operations-1"
+
+\end_inset
+
+The linear system represented by the matrix is
+\begin_inset Formula 
+\begin{align*}
+11v_{1} & =9\\
+5v_{2} & =-7\\
+v_{3} & =-13\\
+-2v_{4} & =6
+\end{align*}
+
+\end_inset
+
+so the solution is 
+\begin_inset Formula $v_{1}=\frac{9}{11}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{2}=-\frac{7}{5}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{3}=-13$
+\end_inset
+
+, 
+\begin_inset Formula $v_{4}=-3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-43"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-operations-2"
+
+\end_inset
+
+The linear system represented by the matrix is
+\begin_inset Formula 
+\begin{align*}
+11v_{1}+9v_{3} & =12\\
+-8v_{2}-4v_{3} & =-1\\
+v_{3} & =2
+\end{align*}
+
+\end_inset
+
+Starting with 
+\begin_inset Formula $v_{3}=2$
+\end_inset
+
+ and substituting into the other equations yields 
+\begin_inset Formula $-8v_{2}-4(2)=-1$
+\end_inset
+
+ so 
+\begin_inset Formula $v_{2}=-\frac{7}{8}$
+\end_inset
+
+ and 
+\begin_inset Formula $11v_{1}+9(2)=12$
+\end_inset
+
+ so 
+\begin_inset Formula $v_{1}=-\frac{6}{11}$
+\end_inset
+
+.
+ The solution is therefore 
+\begin_inset Formula $v_{1}=-\frac{6}{11}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{2}=-\frac{7}{8}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{3}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-operations-3"
+
+\end_inset
+
+Adding 4 times row 2 to row 3 of the identity matrix yields the given matrix:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\overset{4I_{2,:}+I_{3,:}\to I_{3,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 4 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+so the elementary row operation must be adding 4 times row 2 to row 3.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-operations-34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-operations-4"
+
+\end_inset
+
+The first row of the left matrix holds the coefficients of the linear combinatio
+n so the first row of the product must be
+\begin_inset Formula 
+\[
+-2\left[\begin{array}{ccc}
+4 & -3 & 2\end{array}\right]+1\left[\begin{array}{ccc}
+12 & 8 & -5\end{array}\right]=\left[\begin{array}{ccc}
+-8+12 & 6+8 & -4-5\end{array}\right]=\left[\begin{array}{ccc}
+4 & 14 & -9\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:Characterization-Part-2"
 plural "false"
 caps "false"
