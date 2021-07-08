@@ -1564,10 +1564,16 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms"
+
+\end_inset
+
 The augmented matrix for a linear system is given.
- Determine whether it is in row echelon form.
- If it is, (i) state whether the associated linear system is consistent
- or inconsistent, and (ii) how many solutions it has.
+ (i) Determine whether it is in row echelon form.
+ If it is, state (ii) whether the associated linear system is consistent
+ or inconsistent, and (iii) how many solutions it has.
  
 \end_layout
 
@@ -1584,6 +1590,13 @@ The augmented matrix for a linear system is given.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-1"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 0 & -8\\
 0 & 1 & 5
@@ -1591,9 +1604,39 @@ The augmented matrix for a linear system is given.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-2"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccccc}
 2 & 4 & 4 & 1 & 1 & 3\\
 0 & 0 & -4 & 4 & -2 & -4\\
@@ -1603,13 +1646,76 @@ The augmented matrix for a linear system is given.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-3"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 3 & 0 & 2 & -8\\
 0 & 1 & 1 & 9\\
 0 & 0 & 0 & 6
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & -5 & 4\\
+0 & 0 & -3
 \end{array}\right]$
 \end_inset
 
@@ -1639,12 +1745,52 @@ The augmented matrix for a linear system is given.
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-4"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+5 & -4 & 8 & 2\\
+0 & -3 & 0 & -1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 The augmented matrix for a linear system is given.
- Determine whether it is in reduced row echelon form.
- If it is, find the solution set.
- If the solution set is infinite give your answer in parametric vector form.
+ (i) Determine whether it is in reduced row echelon form.
+ If it is, (ii) find the solution set, in parametric vector form if infinite.
 \end_layout
 
 \begin_deeper
@@ -1682,11 +1828,41 @@ The augmented matrix for a linear system is given.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-5"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 1 & 0 & 0 & 6\\
 0 & 0 & 1 & -2\\
 0 & 1 & 0 & 4
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1704,6 +1880,13 @@ The augmented matrix for a linear system is given.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-6"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccccc}
 1 & 0 & -9 & 0 & 4\\
 0 & 1 & 1 & 0 & 3\\
@@ -1712,13 +1895,36 @@ The augmented matrix for a linear system is given.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 The augmented matrix for a linear system is given.
- Is the system homogeneous? If yes, find the solution set.
- If the solution set is infinite give your answer in parametric vector form.
+ (i) Is the system homogeneous? If yes, (ii) find the solution set, in parametri
+c vector form if infinite.
 \end_layout
 
 \begin_deeper
@@ -1745,11 +1951,82 @@ The augmented matrix for a linear system is given.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-7"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 2 & 0 & -2 & 0\\
 0 & 3 & 1 & 0\\
 0 & 0 & 0 & 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-8"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+3 & 0 & 4 & 2\\
+0 & 2 & -5 & 0\\
+0 & 0 & 1 & 0
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1765,9 +2042,9 @@ The coefficient matrix for a homogeneous linear system is given.
 \begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\left[\begin{array}{ccc}
-6 & 7 & -3\\
-0 & 4 & 2\\
-0 & 0 & -1
+1 & 6 & -2\\
+2 & 10 & -3\\
+3 & 16 & -5
 \end{array}\right]$
 \end_inset
 
@@ -1775,6 +2052,13 @@ The coefficient matrix for a homogeneous linear system is given.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-9"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 2 & 4 & 5\\
 0 & 2 & -7\\
@@ -1783,14 +2067,130 @@ The coefficient matrix for a homogeneous linear system is given.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:echelon-forms-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-10"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+6 & 7 & -3\\
+0 & 4 & 2\\
+0 & 0 & -1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+3 & -6 & 8\\
+-6 & 12 & -16\\
+1 & -2 & \frac{8}{3}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 4 & 8\\
+-3 & -10 & -20\\
+2 & 8 & 15
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-11"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 2 & 1 & -6\\
 -4 & -2 & 12\\
 1 & \frac{1}{2} & -3
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-10"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1825,6 +2225,13 @@ Use row reduction and a reduced row echelon form matrix to find all the
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-12"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 40 & 66\\
 -22 & -37
@@ -1836,9 +2243,39 @@ Use row reduction and a reduced row echelon form matrix to find all the
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-13"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 6 & -4 & 16\\
 3 & -7 & 4\\
@@ -1848,6 +2285,29 @@ Use row reduction and a reduced row echelon form matrix to find all the
 
 ; 
 \begin_inset Formula $\lambda=-6,-3$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:echelon-forms-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1902,8 +2362,14 @@ d system had a unique solution?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-14"
+
+\end_inset
+
 Alex and Bianca are solving the same system of equations.
- In reduced row echelon form, Alex got 
+ For the reduced row echelon form of the augmented matrix, Alex got 
 \begin_inset Formula 
 \[
 \left[\begin{array}{cccc}
@@ -1924,6 +2390,29 @@ and Bianca got
 0 & 0 & 0 & 0
 \end{array}\right].
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-12"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -1992,17 +2481,75 @@ so both systems have infinitely many solutions.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-15"
+
+\end_inset
+
 A system of linear equations with fewer equations than unknowns is sometimes
  called underdetermined.
  Suppose such a system were consistent.
  Explain why the system must have an infinite number of solutions.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:echelon-forms-16"
+
+\end_inset
+
 A system of linear equations with more equations than unknowns is sometimes
  called overdetermined.
  Can such a system be consistent? Illustrate your answer with an example
  (if yes) or an argument as to why not (if no).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:echelon-forms-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2027,7 +2574,7 @@ ge&interacts=eJyLjgUAARUAuQ==}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:echelonforms"
+name "exc:echelonforms-sage"
 
 \end_inset
 
@@ -2043,6 +2590,29 @@ Use SageMath to find (i) a row echelon form (but not reduced row echelon
 -5781 & 12812 & 1211 & 14321 & -16671
 \end{array}\right]
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:echelon-forms-3"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2069,7 +2639,7 @@ AK2SG_w=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:echelonforms-1"
+name "exc:echelonforms-sage-1"
 
 \end_inset
 
@@ -2115,14 +2685,14 @@ AK2SG_w=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:echelonforms-2"
+name "exc:echelonforms-sage-2"
 
 \end_inset
 
 Suppose the matrix in question 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:echelonforms-1"
+reference "exc:echelonforms-sage-1"
 plural "false"
 caps "false"
 noprefix "false"

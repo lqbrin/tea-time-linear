@@ -2642,10 +2642,40 @@ Reduce the matrix to row echelon form.
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-1"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 -2 & -4 & -10\\
 -5 & 2 & -1
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:row-reduction-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2673,6 +2703,13 @@ Reduce the matrix to row echelon form.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-2"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 -1 & 0 & 2\\
 4 & 1 & -3\\
@@ -2681,10 +2718,39 @@ Reduce the matrix to row echelon form.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:row-reduction-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-3"
+
+\end_inset
+
 Reduce the matrix in question 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2696,6 +2762,29 @@ noprefix "false"
 \end_inset
 
  to reduced row echelon form.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:row-reduction-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2711,10 +2800,40 @@ d system if possible.
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-4"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 3 & -1\\
 0 & 5
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:row-reduction-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2763,6 +2882,13 @@ d system if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-5"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 5 & 0 & -3\\
 0 & -4 & 1\\
@@ -2771,15 +2897,68 @@ d system if possible.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:row-reduction-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-6"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 5 & 3 & 0 & 0\\
 0 & 0 & 3 & -4\\
 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:row-reduction-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2806,10 +2985,40 @@ Solve the nonhomogeneous system by row reduction.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-7"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \begin{array}{ccccc}
 v_{1} & + & 4v_{2} & = & -4\\
 -3v_{1} & - & 11v_{2} & = & -5
 \end{array}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:row-reduction-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2834,10 +3043,40 @@ v_{1} & + & 4v_{2} & = & -4\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-8"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \begin{array}{ccccc}
 -3x & + & 5y & = & -3\\
 -15x & + & 20y & = & 6
 \end{array}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:row-reduction-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2862,10 +3101,40 @@ x_{1} & - & x_{2} & = & 3\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-9"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \begin{array}{ccccc}
 -45x & - & 8y & = & -6\\
 -10x & - & 2y & = & 4
 \end{array}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:row-reduction-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2891,11 +3160,45 @@ x & + & y & + & 2z & = & -5\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-10"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \begin{array}{ccccccc}
 -3v_{1} & - & 35v_{2} & + & 10v_{3} & = & 2\\
 9v_{1} & + & 130v_{2} & - & 40v_{3} & = & 2\\
 9v_{1} & + & 120v_{2} & - & 35v_{3} & = & -4
 \end{array}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:row-reduction-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2921,11 +3224,45 @@ x & + & y & + & 2z & = & -5\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-11"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \begin{array}{ccccccc}
 12x_{1} & - & 9x_{2} & - & 14x_{3} & = & 3\\
 24x_{1} & - & 15x_{2} & - & 21x_{3} & = & -3\\
 -9x_{1} & + & 6x_{2} & + & 7x_{3} & = & 2
 \end{array}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:row-reduction-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2952,12 +3289,46 @@ x & + & y & + & 2z & = & -5\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-reduction-12"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \begin{array}{ccccccccc}
 x_{1} & - & x_{2} & + & 4v_{3} & - & v_{4} & = & 1\\
 -2x_{1} & + & 6x_{2} & - & 10x_{3} & + & 5x_{4} & = & -3\\
 -x_{1} &  &  & + & 2x_{3} & - & 2x_{4} & = & 2\\
 3x_{1} & - & 2x_{2} & + & 11x_{3} & - & 2x_{4} & = & 6
 \end{array}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:row-reduction-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 

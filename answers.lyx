@@ -2076,6 +2076,790 @@ Each coefficient of the linear combination that gives the second row of
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Row-Reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-reduction"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-reduction-1"
+
+\end_inset
+
+Answers will vary.
+ Any answer where 
+\begin_inset Formula $x_{3}=\frac{4}{3}x_{4}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=-\frac{3}{5}x_{2}$
+\end_inset
+
+ (but not all zero) is correct.
+ For example, 
+\begin_inset Formula $x_{1}=-3$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=5$
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}=4$
+\end_inset
+
+, 
+\begin_inset Formula $x_{4}=3$
+\end_inset
+
+ is one solution.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-reduction-2"
+
+\end_inset
+
+
+\begin_inset Formula $x=-6$
+\end_inset
+
+, 
+\begin_inset Formula $y=-\frac{21}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-reduction-3"
+
+\end_inset
+
+
+\begin_inset Formula $x=\frac{22}{5}$
+\end_inset
+
+, 
+\begin_inset Formula $y=-24$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-reduction-4"
+
+\end_inset
+
+
+\begin_inset Formula $x_{1}=-\frac{4}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=-\frac{1}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}=-\frac{8}{7}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:row-reduction-5"
+
+\end_inset
+
+
+\begin_inset Formula $x_{1}=-92$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=-42$
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}=32$
+\end_inset
+
+, 
+\begin_inset Formula $x_{4}=77$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Echelon-Forms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-1"
+
+\end_inset
+
+(i) yes (ii) consistent (iii) 1
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-2"
+
+\end_inset
+
+(i) no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-3"
+
+\end_inset
+
+(i) yes (ii) inconsistent (iii) 0
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-4"
+
+\end_inset
+
+(i) yes (ii) consistent (iii) infinitely many
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-5"
+
+\end_inset
+
+(i) not in reduced row echelon form
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-6"
+
+\end_inset
+
+(i) in reduced row echelon form (ii) 
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}\\
+v_{4}
+\end{array}\right]=\left[\begin{array}{c}
+4\\
+3\\
+0\\
+2
+\end{array}\right]+r\left[\begin{array}{c}
+9\\
+-1\\
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-7"
+
+\end_inset
+
+(i) yes (ii) 
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=r\left[\begin{array}{c}
+1\\
+-\frac{1}{3}\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-8"
+
+\end_inset
+
+(i) no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-10"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=r\left[\begin{array}{c}
+-1\\
+1\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+6\\
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-11"
+
+\end_inset
+
+
+\begin_inset Formula $r\left[\begin{array}{c}
+1\\
+-\frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $s\left[\begin{array}{c}
+1\\
+-\frac{2}{3}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-12"
+
+\end_inset
+
+(a) yes, yes (b) infinitely many, infinitely many (c) 1, 1 (d) no (e) yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-13"
+
+\end_inset
+
+The coefficient matrix will have more columns than rows, and therefore the
+ system will have at least one free variable.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:echelon-forms-14"
+
+\end_inset
+
+Yes.
+ For example 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+has solution 
+\begin_inset Formula $x=1$
+\end_inset
+
+, 
+\begin_inset Formula $y=2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open

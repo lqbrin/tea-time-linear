@@ -3526,6 +3526,1348 @@ n so the first row of the product must be
 Section 
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "sec:Row-Reduction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-1"
+
+\end_inset
+
+Answers will vary depending on the steps taken.
+ For a matrix with two rows and no columns of zeros, the only requirement
+ of row echelon form is a 
+\begin_inset Formula $0$
+\end_inset
+
+ in the 
+\begin_inset Formula $2,1$
+\end_inset
+
+-entry.
+ One way to reduce is by first scaling the two rows and then replacing the
+ second row:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-2 & -4 & -10\\
+-5 & 2 & -1
+\end{array}\right]\stackrel[2A_{2,:}\to A_{2,:}]{-5A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+10 & 20 & 50\\
+-10 & 4 & -2
+\end{array}\right]\stackrel{A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+10 & 20 & 50\\
+0 & 24 & 48
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-2"
+
+\end_inset
+
+Answers will vary depending on the steps taken.
+ For a matrix with three rows and no columns of zeros, row echelon form
+ requires zeros in the 
+\begin_inset Formula $2,1$
+\end_inset
+
+-, 
+\begin_inset Formula $3,1$
+\end_inset
+
+-, and 
+\begin_inset Formula $3,2$
+\end_inset
+
+-entries.
+ One way to reduce is as follows:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-1 & 0 & 2\\
+4 & 1 & -3\\
+1 & 1 & 3
+\end{array}\right]\stackrel[A_{1,:}+A_{3,:}\to A_{3,:}]{4A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-1 & 0 & 2\\
+0 & 1 & 5\\
+0 & 1 & 5
+\end{array}\right]\stackrel{-A_{2,:}+A_{3,:}\to A_{3,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-1 & 0 & 2\\
+0 & 1 & 5\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-3"
+
+\end_inset
+
+Reduced row echelon form requires ones in the pivot positions and zeros
+ above.
+ Beginning with the echelon form of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the pivot positions are the 
+\begin_inset Formula $1,1$
+\end_inset
+
+- and 
+\begin_inset Formula $2,2$
+\end_inset
+
+-entries.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+10 & 20 & 50\\
+0 & 24 & 48
+\end{array}\right]\stackrel[\frac{1}{24}A_{2,:}\to A_{2,:}]{\frac{1}{10}A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 2 & 5\\
+0 & 1 & 2
+\end{array}\right]\stackrel{-2A_{2,:}+A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & 1\\
+0 & 1 & 2
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-4"
+
+\end_inset
+
+Reduced row echelon form requires ones in the pivot positions and zeros
+ above.
+ Beginning with the echelon form of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the pivot positions are the 
+\begin_inset Formula $1,1$
+\end_inset
+
+- and 
+\begin_inset Formula $2,2$
+\end_inset
+
+--entries.
+ The only thing remaining to do is get a one in the 
+\begin_inset Formula $1,1$
+\end_inset
+
+-entry.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-1 & 0 & 2\\
+0 & 1 & 5\\
+0 & 0 & 0
+\end{array}\right]\stackrel{-A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & -2\\
+0 & 1 & 5\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-5"
+
+\end_inset
+
+A homogeneous system has zero constants, so the associated system is
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5x_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The second equation requires 
+\begin_inset Formula $x_{2}=0$
+\end_inset
+
+ and substituting this value into the first equation reveals that 
+\begin_inset Formula $x_{1}=0$
+\end_inset
+
+ also.
+ There are no nontrivial solutions.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-6"
+
+\end_inset
+
+A homogeneous system has zero constants, so the associated system is
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3x_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-4x_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Answers will vary since there are infinitely many solutions, 
+\begin_inset Formula $x_{1}=12$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=5$
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}=20$
+\end_inset
+
+ is one example.
+ The third equation is always true (no matter the values of 
+\begin_inset Formula $x_{1},x_{2},x_{3}$
+\end_inset
+
+).
+ The second equation requires 
+\begin_inset Formula $x_{2}=\frac{1}{4}x_{3}$
+\end_inset
+
+ and the first equation requires 
+\begin_inset Formula $x_{1}=\frac{3}{5}x_{3}$
+\end_inset
+
+.
+ Any solution where these requirements of 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ are met will suffice.
+ For example, choosing 
+\begin_inset Formula $x_{3}=20$
+\end_inset
+
+, we get 
+\begin_inset Formula $x_{2}=5$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}=12$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-7"
+
+\end_inset
+
+Putting the coefficients in an augmented matrix and row reducing to reduced
+ row echelon form:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 4 & -4\\
+-3 & -11 & -5
+\end{array}\right]\stackrel{3A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 4 & -4\\
+0 & 1 & -17
+\end{array}\right]\stackrel{-4A_{2,:}+A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & 64\\
+0 & 1 & -17
+\end{array}\right]
+\]
+
+\end_inset
+
+The reduced row echelon form represents the system 
+\begin_inset Formula $v_{1}=64$
+\end_inset
+
+, 
+\begin_inset Formula $v_{2}=-17$
+\end_inset
+
+ (the solution).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:row-reduction-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:row-reduction-8"
+
+\end_inset
+
+Putting the coefficients in an augmented matrix and row reducing to reduced
+ row echelon form:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cccc}
+-3 & -35 & 10 & 2\\
+9 & 130 & -40 & 2\\
+9 & 120 & -35 & -4
+\end{array}\right]\stackrel[3A_{1,:}+A_{3,:}\to A_{3,:}]{3A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{cccc}
+-3 & -35 & 10 & 2\\
+0 & 25 & -10 & 8\\
+0 & 15 & -5 & 2
+\end{array}\right]\stackrel[-5A_{3,:}\to A_{3,:}]{3A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{cccc}
+-3 & -35 & 10 & 2\\
+0 & 75 & -30 & 24\\
+0 & -75 & 25 & -10
+\end{array}\right]\\
+\stackrel{A_{2,:}+A_{3,:}\to A_{3,:}}{\longrightarrow}\left[\begin{array}{cccc}
+-3 & -35 & 10 & 2\\
+0 & 75 & -30 & 24\\
+0 & 0 & -5 & 14
+\end{array}\right]\stackrel[2A_{3,:}+A_{1,:}\to A_{1,:}]{-6A_{3,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{cccc}
+-3 & -35 & 0 & 30\\
+0 & 75 & 0 & -60\\
+0 & 0 & -5 & 14
+\end{array}\right]\stackrel{\frac{1}{15}A_{2,:}\to A_{2,:}}{\longrightarrow}\\
+\left[\begin{array}{cccc}
+-3 & -35 & 0 & 30\\
+0 & 5 & 0 & -4\\
+0 & 0 & -5 & 14
+\end{array}\right]\stackrel{7A_{2,:}+A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{cccc}
+-3 & 0 & 0 & 2\\
+0 & 5 & 0 & -4\\
+0 & 0 & -5 & 14
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+Scaling each row appropriately produces
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & 0 & -\frac{2}{3}\\
+0 & 1 & 0 & -\frac{4}{5}\\
+0 & 0 & 1 & -\frac{14}{5}
+\end{array}\right]
+\]
+
+\end_inset
+
+from which the solution is clearly 
+\begin_inset Formula $v_{1}=-\frac{2}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{2}=-\frac{4}{5}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{3}=-\frac{14}{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Echelon-Forms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:echelon-forms"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:echelon-forms-1"
+
+\end_inset
+
+Begin by reducing:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+2 & 4 & 5\\
+0 & 2 & -7\\
+0 & -2 & 7
+\end{array}\right]\stackrel[A_{2,:}+A_{3,:}\to A_{3,:}]{-2A_{2,:}+A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+2 & 0 & 19\\
+0 & 2 & -7\\
+0 & 0 & 0
+\end{array}\right]\stackrel[\frac{1}{2}A_{2,:}\to A_{2,:}]{\frac{1}{2}A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & \frac{19}{2}\\
+0 & 1 & -\frac{7}{2}\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+which means 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ is a free variable and the solution is 
+\begin_inset Formula 
+\[
+x_{1}=-\frac{19}{2}x_{3};\quad x_{2}=\frac{7}{2}x_{3}.
+\]
+
+\end_inset
+
+In parametric vector form, using 
+\begin_inset Formula $r$
+\end_inset
+
+ for the arbitrary parameter:
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]=r\left[\begin{array}{c}
+-\frac{19}{2}\\
+\frac{7}{2}\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+Equivalently,
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]=s\left[\begin{array}{c}
+-19\\
+7\\
+2
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelon-forms-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:echelon-forms-2"
+
+\end_inset
+
+Eigenvectors are solutions of the system 
+\begin_inset Formula $(A-\lambda I)\mathbf{v}=0$
+\end_inset
+
+, for each lambda.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $\lambda=-6$
+\end_inset
+
+: 
+\begin_inset Formula $A-(-6)I=\left[\begin{array}{ccc}
+12 & -4 & 16\\
+3 & -1 & 4\\
+-6 & 2 & -8
+\end{array}\right]$
+\end_inset
+
+ which reduces as follows:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+12 & -4 & 16\\
+3 & -1 & 4\\
+-6 & 2 & -8
+\end{array}\right]\stackrel{\frac{1}{4}A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+3 & -1 & 4\\
+3 & -1 & 4\\
+-6 & 2 & -8
+\end{array}\right]\stackrel[2A_{1,:}+A_{3,:}\to A_{3,:}]{-A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+3 & -1 & 4\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+Hence 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+v_{1} & v_{2} & v_{3}\end{array}\right]^{T}$
+\end_inset
+
+ must satisfy only 
+\begin_inset Formula $3v_{1}-v_{2}+4v_{3}=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ are free and 
+\begin_inset Formula $v_{1}=\frac{1}{3}v_{2}-\frac{4}{3}v_{3}$
+\end_inset
+
+.
+ In parametric vector form,
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=r\left[\begin{array}{c}
+1/3\\
+1\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+-4/3\\
+0\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\lambda=-3$
+\end_inset
+
+: 
+\begin_inset Formula $A-(-3)I=\left[\begin{array}{ccc}
+9 & -4 & 16\\
+3 & -4 & 4\\
+-6 & 2 & -11
+\end{array}\right]$
+\end_inset
+
+ which reduces as follows:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{ccc}
+9 & -4 & 16\\
+3 & -4 & 4\\
+-6 & 2 & -11
+\end{array}\right]\stackrel{A_{1,:}\leftrightarrow A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+3 & -4 & 4\\
+9 & -4 & 16\\
+-6 & 2 & -11
+\end{array}\right]\stackrel[2A_{1,:}+A_{3,:}\to A_{3,:}]{-3A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+3 & -4 & 4\\
+0 & 8 & 4\\
+0 & -6 & -3
+\end{array}\right]\stackrel[-\frac{1}{3}A_{3,:}\to A_{3,:}]{\frac{1}{4}A_{2,:}\to A_{2,:}}{\longrightarrow}\\
+\left[\begin{array}{ccc}
+3 & -4 & 4\\
+0 & 2 & 1\\
+0 & 2 & 1
+\end{array}\right]\stackrel{-A_{2,:}+A_{3,:}\to A_{3,:}}{\longrightarrow}\left[\begin{array}{ccc}
+3 & -4 & 4\\
+0 & 2 & 1\\
+0 & 0 & 0
+\end{array}\right]\stackrel{2A_{2,:}+A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+3 & 0 & 6\\
+0 & 2 & 1\\
+0 & 0 & 0
+\end{array}\right]\stackrel[\frac{1}{2}A_{2,:}\to A_{2,:}]{\frac{1}{3}A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & 2\\
+0 & 1 & \frac{1}{2}\\
+0 & 0 & 0
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+Hence 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
+v_{1} & v_{2} & v_{3}\end{array}\right]^{T}$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $v_{1}=-2v_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}=-\frac{1}{2}v_{3}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ is free.
+ In parametric vector form,
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=t\left[\begin{array}{c}
+-2\\
+-\frac{1}{2}\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In summary, eigenvectors take the form 
+\begin_inset Formula $r\left[\begin{array}{c}
+1/3\\
+1\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+-4/3\\
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+ or the form 
+\begin_inset Formula $t\left[\begin{array}{c}
+-2\\
+-\frac{1}{2}\\
+1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:echelonforms-sage"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:echelon-forms-3"
+
+\end_inset
+
+One way to complete the code is as follows.
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+M=matrix(5,5,[2049,-4548,-511,-5177,6023,-4526,10252,916,11438,
+\begin_inset Newline newline
+\end_inset
+
+              -13292,-6947,15538,1740,17601,-20614,-1388,2866,
+\begin_inset Newline newline
+\end_inset
+
+              263,3166,-3697,-5781,12812,1211,14321,-16671])
+\begin_inset Newline newline
+\end_inset
+
+print("M ="); print(M); print()
+\begin_inset Newline newline
+\end_inset
+
+# Find a row echelon form (but not reduced row echelon form)
+\begin_inset Newline newline
+\end_inset
+
+print("Row echelon form:")
+\begin_inset Newline newline
+\end_inset
+
+print(M.echelon_form()); print()
+\begin_inset Newline newline
+\end_inset
+
+# Find the reduced row echelon form
+\begin_inset Newline newline
+\end_inset
+
+print("Reduced row echelon form:")
+\begin_inset Newline newline
+\end_inset
+
+print(M.rref())
+\end_layout
+
+\begin_layout Standard
+which produces:
+\end_layout
+
+\begin_layout LyX-Code
+M =
+\begin_inset Newline newline
+\end_inset
+
+[  2049  -4548   -511  -5177   6023]
+\begin_inset Newline newline
+\end_inset
+
+[ -4526  10252    916  11438 -13292]
+\begin_inset Newline newline
+\end_inset
+
+[ -6947  15538   1740  17601 -20614]
+\begin_inset Newline newline
+\end_inset
+
+[ -1388   2866    263   3166  -3697]
+\begin_inset Newline newline
+\end_inset
+
+[ -5781  12812   1211  14321 -16671]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Row echelon form:
+\begin_inset Newline newline
+\end_inset
+
+[   1   38  102  149 -184]
+\begin_inset Newline newline
+\end_inset
+
+[   0  134   67  402 -201]
+\begin_inset Newline newline
+\end_inset
+
+[   0    0  134  268 -134]
+\begin_inset Newline newline
+\end_inset
+
+[   0    0    0  804  268]
+\begin_inset Newline newline
+\end_inset
+
+[   0    0    0    0    0]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Reduced row echelon form:
+\begin_inset Newline newline
+\end_inset
+
+[   1    0    0    0 -1/3]
+\begin_inset Newline newline
+\end_inset
+
+[   0    1    0    0 -5/3]
+\begin_inset Newline newline
+\end_inset
+
+[   0    0    1    0 -5/3]
+\begin_inset Newline newline
+\end_inset
+
+[   0    0    0    1  1/3]
+\begin_inset Newline newline
+\end_inset
+
+[   0    0    0    0    0]
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:Characterization-Part-2"
 plural "false"
 caps "false"
