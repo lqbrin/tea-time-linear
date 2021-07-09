@@ -402,6 +402,80 @@ UNIFORMIZATION TODO
 \end_layout
 
 \begin_layout Itemize
+None left
+\end_layout
+
+\begin_layout Plain Layout
+UNIFORMIZATION COMPLETED
+\end_layout
+
+\begin_layout Itemize
+Change all 
+\begin_inset Quotes eld
+\end_inset
+
+left multiply
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+left-multiply
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+right multiply
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+right-multiply
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Change 
+\begin_inset Quotes eld
+\end_inset
+
+i,j
+\begin_inset Quotes erd
+\end_inset
+
+ in inset formulas to 
+\begin_inset Quotes eld
+\end_inset
+
+i,
+\backslash
+!j
+\begin_inset Quotes erd
+\end_inset
+
+ (not needed when 
+\begin_inset Quotes eld
+\end_inset
+
+i,j
+\begin_inset Quotes erd
+\end_inset
+
+ is a subscript—use grep -n.)
+\end_layout
+
+\begin_layout Itemize
 Reduce occurences of 
 \begin_inset Quotes eld
 \end_inset
@@ -419,10 +493,6 @@ SageCell
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-UNIFORMIZATION COMPLETED
 \end_layout
 
 \begin_layout Itemize

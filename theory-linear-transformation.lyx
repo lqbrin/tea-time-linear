@@ -1121,7 +1121,7 @@ ve inverses.
 \begin_inset Formula $M^{-1}(MA)=A$
 \end_inset
 
-—left multiplying the matrix 
+—left-multiplying the matrix 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1129,7 +1129,7 @@ ve inverses.
 \begin_inset Formula $M$
 \end_inset
 
- and then left multiplying the result by the matrix 
+ and then left-multiplying the result by the matrix 
 \begin_inset Formula $M^{-1}$
 \end_inset
 

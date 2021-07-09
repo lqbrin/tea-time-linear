@@ -792,8 +792,8 @@ X & =(B+I)A^{-1}
 
 \end_inset
 
-Notice the careful right multiplication of both sides in the third line.
- It is not valid to left multiply one side of the equation while right multiplyi
+Notice the careful right-multiplication of both sides in the third line.
+ It is not valid to left-multiply one side of the equation while right-multiplyi
 ng the other.
  Also, we should note that this solution is only good as long as 
 \begin_inset Formula $A$
@@ -870,7 +870,7 @@ noprefix "false"
 \begin_inset Formula $A$
 \end_inset
 
- left multiplied by an elementary matrix 
+ left-multiplied by an elementary matrix 
 \begin_inset Formula $E$
 \end_inset
 
@@ -1789,6 +1789,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations"
+
+\end_inset
+
 Solve
 \end_layout
 
@@ -1807,6 +1813,13 @@ Solve
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-2"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 -4 & -7\\
 -14 & 3
@@ -1817,9 +1830,39 @@ Solve
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-3"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 0 & -19\\
 -1 & 8
@@ -1827,6 +1870,29 @@ Solve
 -2 & 19\\
 -14 & 20
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-equations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1865,6 +1931,13 @@ Solve
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-4"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 5 & 2\\
 6 & 3
@@ -1875,9 +1948,39 @@ Solve
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-equations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-5"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 7 & 2\\
 3 & 1
@@ -1888,6 +1991,29 @@ Solve
 -20 & 14\\
 15 & -2
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1929,11 +2055,41 @@ Solve for the specified variable.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-6"
+
+\end_inset
+
+
 \begin_inset Formula $XYZ=B$
 \end_inset
 
  for 
 \begin_inset Formula $Z$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1951,6 +2107,13 @@ Solve for the specified variable.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-7"
+
+\end_inset
+
+
 \begin_inset Formula $PDP^{-1}=A$
 \end_inset
 
@@ -1959,14 +2122,67 @@ Solve for the specified variable.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-equations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-8"
+
+\end_inset
+
+
 \begin_inset Formula $2A(B^{-1}+C^{T})=D$
 \end_inset
 
  for 
 \begin_inset Formula $C$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2034,6 +2250,13 @@ x & y & z\end{array}\right]^{T}$
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-9"
+
+\end_inset
+
+
 \begin_inset Formula $T\mathbf{r}_{1}=\mathbf{\mathbf{r}}_{2}$
 \end_inset
 
@@ -2056,6 +2279,29 @@ s
 -8\\
 9
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2157,6 +2403,13 @@ Specify the matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-10"
+
+\end_inset
+
+
 \begin_inset Formula $\begin{array}{ccccc}
 14v_{1} & - & 17v_{2} & = & -11\\
 2v_{1} &  &  & = & -4\\
@@ -2165,14 +2418,46 @@ Specify the matrix
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Compute the third row of the product without computing the rest of the product.
-\begin_inset Formula 
-\[
-\left[\begin{array}{cccc}
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-1"
+
+\end_inset
+
+Compute the second row of the product (if it exists) without computing the
+ rest of the product.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
 2 & 2 & 1 & 5\\
 0 & 1 & -5 & -4\\
 5 & 0 & 3 & -3\\
@@ -2183,39 +2468,35 @@ Compute the third row of the product without computing the rest of the product.
 2 & -4\\
 -5 & 5\\
 0 & 1
-\end{array}\right]
-\]
-
+\end{array}\right]$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-Compute the second row of the product by summing an appropriate linear combinati
-on of row vectors.
-\begin_inset Formula 
-\[
-\left[\begin{array}{ccc}
+\begin_inset Formula $\left[\begin{array}{ccc}
 -3 & 2 & 3\\
 0 & -1 & 4
 \end{array}\right]\left[\begin{array}{ccc}
 0 & 4 & -3\\
 1 & -4 & 5\\
 3 & 2 & -1
-\end{array}\right]
-\]
-
+\end{array}\right]$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-Compute the second column of the product without computing the first.
-\begin_inset Formula 
-\[
-\left[\begin{array}{cccc}
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-14"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
 -4 & 5 & -3 & -4\\
 0 & -3 & 3 & 2\\
 4 & 1 & 4 & -5
@@ -2224,8 +2505,29 @@ Compute the second column of the product without computing the first.
 2 & -4\\
 -5 & 5\\
 0 & 1
-\end{array}\right]
-\]
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-equations-4"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2233,19 +2535,242 @@ Compute the second column of the product without computing the first.
 \end_layout
 
 \begin_layout Enumerate
-Compute the third column of the product by summing an appropriate linear
- combination of column vectors.
-\begin_inset Formula 
-\[
-\left[\begin{array}{ccc}
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-15"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
 -3 & 2 & 3\\
 0 & -1 & 4
 \end{array}\right]\left[\begin{array}{ccc}
 0 & 4 & -3\\
 1 & -4 & 5\\
 3 & 2 & -1
-\end{array}\right]
-\]
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-11"
+
+\end_inset
+
+Compute the third row of the product in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (if it exists) by summing an appropriate linear combination of row vectors.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-equations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-12"
+
+\end_inset
+
+Compute the second column of the product in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (if it exists) without computing the first.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-equations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-equations-13"
+
+\end_inset
+
+Compute the third column of the product in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (if it exists) by summing an appropriate linear combination of column vectors.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-equations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-equations-10"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 

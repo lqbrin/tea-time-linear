@@ -1218,7 +1218,7 @@ M=(E_{p}\cdots E_{2}E_{1})^{-1}U=LU.
 It is not realistic to expect that reduction can be done without row swaps,
  however.
  If, for example, the 
-\begin_inset Formula $1,1$
+\begin_inset Formula $1,\!1$
 \end_inset
 
 -entry of 

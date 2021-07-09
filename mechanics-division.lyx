@@ -565,22 +565,14 @@ For any matrices
 \end_inset
 
 ,
-\end_layout
+\begin_inset Formula 
+\begin{equation}
+A\text{ and }B\text{ are inverses if and only if }A\cdot B=B\cdot A=I.\label{eq:inverse-definition}
+\end{equation}
 
-\begin_layout Standard
-\align center
-\begin_inset Formula $A$
 \end_inset
 
- and 
-\begin_inset Formula $B$
-\end_inset
 
- are inverses if and only if 
-\begin_inset Formula ${\displaystyle A\cdot B=B\cdot A=I}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -1319,7 +1311,12 @@ Key Concepts
 \begin_inset Formula $A$
 \end_inset
 
-, can be computed via (
+.
+ Is defined by the property that 
+\begin_inset Formula ${\displaystyle A\cdot A^{-1}=A^{-1}\cdot A=I}$
+\end_inset
+
+, and can be computed via (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:inverse_by_adjugate"

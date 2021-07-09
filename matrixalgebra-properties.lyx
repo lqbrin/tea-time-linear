@@ -1479,6 +1479,13 @@ name "thmpart:left-distributive"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "thmpart:multiplicative-identity"
+
+\end_inset
+
+
 \begin_inset Formula $IA=A=AI$
 \end_inset
 
@@ -1571,7 +1578,7 @@ In more words than symbols, we might argue as follows.
 
  only in different orders.
  Since addition of real numbers (entries) is commutative, the 
-\begin_inset Formula $i,\negmedspace j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entries are equal.
@@ -1697,7 +1704,7 @@ noprefix "false"
 
 \end_inset
 
-) and right multiplication.
+) and right-multiplication.
  Additionally, the interplay between scalar multiplication and both matrix
  addition and matrix multiplication must be documented, as seen in the following
  theorem.
@@ -2722,6 +2729,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties"
+
+\end_inset
+
 Illustrate the rule by example.
  Then explain in your own words why the rule is true.
  
@@ -2837,6 +2850,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-1"
+
+\end_inset
+
+
 \begin_inset Formula $(rs)A=r(sA)$
 \end_inset
 
@@ -2861,6 +2881,29 @@ noprefix "false"
 \end_inset
 
 ).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-properties-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2945,6 +2988,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-2"
+
+\end_inset
+
+
 \begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
 \end_inset
 
@@ -2969,6 +3019,29 @@ noprefix "false"
 \end_inset
 
 ).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-properties-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2978,7 +3051,7 @@ Justify the rule by showing that the
 \end_inset
 
 -entry of the lefthand side of the equation equals the 
-\begin_inset Formula $i\!j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of the righthand side.
@@ -3013,6 +3086,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-3"
+
+\end_inset
+
+
 \begin_inset Formula $A(BC)=(AB)C$
 \end_inset
 
@@ -3037,6 +3117,29 @@ noprefix "false"
 \end_inset
 
 ).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-properties-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3148,6 +3251,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-4"
+
+\end_inset
+
+
 \begin_inset Formula $(A^{T})^{T}=A$
 \end_inset
 
@@ -3172,6 +3282,29 @@ noprefix "false"
 \end_inset
 
 ).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-properties-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3236,6 +3369,13 @@ Justify the claim by a string of equalities where each equality is supported
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-5"
+
+\end_inset
+
+
 \begin_inset Formula $(AB)^{-1}=B^{-1}A^{-1}$
 \end_inset
 
@@ -3260,6 +3400,29 @@ noprefix "false"
 \end_inset
 
 ).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-properties-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3327,6 +3490,12 @@ Without any further computation, find
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-6"
+
+\end_inset
+
 Let 
 \begin_inset Formula $A=\left[\begin{array}{cc}
 4 & 7\\
@@ -3335,6 +3504,29 @@ Let
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-properties-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3514,10 +3706,40 @@ Show that, for any matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-7"
+
+\end_inset
+
+
 \begin_inset Formula $A+(-A)=0$
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-properties-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

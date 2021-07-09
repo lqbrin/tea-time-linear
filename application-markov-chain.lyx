@@ -302,7 +302,7 @@ after two months
 .
  Notice that sum is just a row-column product (row 2 times column 5), which
  is the 
-\begin_inset Formula $2,5$
+\begin_inset Formula $2,\!5$
 \end_inset
 
 -entry of 
@@ -315,7 +315,7 @@ after two months
 
 \begin_layout Standard
 Generalizing, the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of
@@ -345,7 +345,7 @@ holds the percentage of bikes starting at station
 
  after two months.
  Likewise, the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of 

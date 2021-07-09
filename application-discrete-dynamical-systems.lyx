@@ -1459,7 +1459,7 @@ an equation we can solve:
 By row reduction (using this 
 \begin_inset CommandInset href
 LatexCommand href
-name "SageMath SageCell"
+name "SageCell"
 target "https://sagecell.sagemath.org/?z=eJzztc1NLCnKrNAw1jHWidY10DM01dE11DMGEZZApp6pqY6hnoWOMUgCIWmkZ2Qaq8nLlWRblppckl-kEW2ko2uqYwISc1SwVdDw1YWYq5eZkppXkllSqWGsqamXWJqeC-Rq6CYB1RUUZQKZjnCWUlFqSmlyarFCSb4SQlqvqCg1TUNTEwAi3i2-&lang=sage&interacts=eJyLjgUAARUAuQ=="
 literal "false"
 
@@ -1594,7 +1594,7 @@ does not present a clear pattern even after 100 iterations.
  As computed in this 
 \begin_inset CommandInset href
 LatexCommand href
-name "SageMath SageCell"
+name "SageCell"
 target "https://sagecell.sagemath.org/?z=eJzztTXUN9HKTSwpyqzQMNIx0okuLiwq0TDTM9DUBrOMgCwdBThTFy6to8DLpYAB4NK66LpRjYzV5OVKsi1LTS7JL9KI1gUK6QAxSLTCAC5sqGMIEikoyswr0VAyULBS0qkwAAqk5RcpZCpk5ikUJealp2oAlRkYalpBnAPU7qtVYaCdBOFC9GbqKEH0AgDkBzzH&lang=sage&interacts=eJyLjgUAARUAuQ=="
 literal "false"
 

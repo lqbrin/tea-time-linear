@@ -1359,7 +1359,7 @@ noprefix "false"
 
 \end_inset
 
-, neither right multiplying nor left multiplying a matrix by an invertible
+, neither right-multiplying nor left-multiplying a matrix by an invertible
  matrix changes its rank, so rank of 
 \begin_inset Formula $A$
 \end_inset

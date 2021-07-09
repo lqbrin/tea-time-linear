@@ -698,7 +698,7 @@ name "sol:multiplication-4"
 \end_inset
 
 The 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of a product is the product of the 
@@ -1522,7 +1522,7 @@ print(D.row(2).norm())
 \begin_layout Section*
 Section 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand ref
 reference "sec:The-Determinant"
 plural "false"
 caps "false"
@@ -2228,7 +2228,7 @@ noprefix "false"
 
 \end_inset
 
-This operation can be thought of as right multiplying both sides of
+This operation can be thought of as right-multiplying both sides of
 \begin_inset Formula 
 \[
 \left[\begin{array}{cc}
@@ -3567,7 +3567,7 @@ Answers will vary depending on the steps taken.
 \end_inset
 
  in the 
-\begin_inset Formula $2,1$
+\begin_inset Formula $2,\!1$
 \end_inset
 
 -entry.
@@ -3612,15 +3612,15 @@ name "sol:row-reduction-2"
 Answers will vary depending on the steps taken.
  For a matrix with three rows and no columns of zeros, row echelon form
  requires zeros in the 
-\begin_inset Formula $2,1$
+\begin_inset Formula $2,\!1$
 \end_inset
 
 -, 
-\begin_inset Formula $3,1$
+\begin_inset Formula $3,\!1$
 \end_inset
 
 -, and 
-\begin_inset Formula $3,2$
+\begin_inset Formula $3,\!2$
 \end_inset
 
 -entries.
@@ -3677,11 +3677,11 @@ noprefix "false"
 \end_inset
 
 , the pivot positions are the 
-\begin_inset Formula $1,1$
+\begin_inset Formula $1,\!1$
 \end_inset
 
 - and 
-\begin_inset Formula $2,2$
+\begin_inset Formula $2,\!2$
 \end_inset
 
 -entries.
@@ -3734,16 +3734,16 @@ noprefix "false"
 \end_inset
 
 , the pivot positions are the 
-\begin_inset Formula $1,1$
+\begin_inset Formula $1,\!1$
 \end_inset
 
 - and 
-\begin_inset Formula $2,2$
+\begin_inset Formula $2,\!2$
 \end_inset
 
---entries.
+-entries.
  The only thing remaining to do is get a one in the 
-\begin_inset Formula $1,1$
+\begin_inset Formula $1,\!1$
 \end_inset
 
 -entry.
@@ -4864,6 +4864,1112 @@ Reduced row echelon form:
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-properties"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-properties-1"
+
+\end_inset
+
+For any 
+\begin_inset Formula $r\times s$
+\end_inset
+
+ matrix 
+\begin_inset Formula $L$
+\end_inset
+
+ and any 
+\begin_inset Formula $s\times t$
+\end_inset
+
+ matrix 
+\begin_inset Formula $R$
+\end_inset
+
+, the 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of 
+\begin_inset Formula $LR$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+(LR)_{i,j}=L_{i,1}R_{1,j}+L_{i,2}R_{2,j}+\cdots+L_{i,s}R_{s,j}.\label{eq:entry-of-product-general}
+\end{equation}
+
+\end_inset
+
+Now suppose 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $\ell\times m$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ is 
+\begin_inset Formula $m\times n$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ is 
+\begin_inset Formula $n\times p$
+\end_inset
+
+.
+ Then applying formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:entry-of-product-general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) with various substitutions for matrices 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $R$
+\end_inset
+
+ and counts 
+\begin_inset Formula $s$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align}
+\left(A(BC)\right)_{i,j} & =A_{i,1}(BC)_{1,j}+A_{i,2}(BC)_{2,j}+\cdots+A_{i,m}(BC)_{m,j}\nonumber \\
+ & =A_{i,1}\left(B_{1,1}C_{1,j}+B_{1,2}C_{2,j}+\cdots+B_{1,n}C_{n,j}\right)\nonumber \\
+ & \phantom{=}+A_{i,2}\left(B_{2,1}C_{1,j}+B_{2,2}C_{2,j}+\cdots+B_{2,n}C_{n,j}\right)\nonumber \\
+ & \phantom{=}+\cdots+A_{i,m}\left(B_{m,1}C_{1,j}+B_{m,2}C_{2,j}+\cdots+B_{m,n}C_{n,j}\right)\label{eq:associative-term-1}
+\end{align}
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{align}
+\left((AB)C\right)_{i,j} & =(AB)_{i,1}C_{1,j}+(AB)_{i,2}C_{2,j}+\cdots+(AB)_{i,n}C_{n,j}\nonumber \\
+ & =\left(A_{i,1}B_{1,1}+A_{i,2}B_{2,1}+\cdots+A_{i,m}B_{m,1}\right)C_{1,j}\nonumber \\
+ & \phantom{=}+\left(A_{i,1}B_{1,2}+A_{i,2}B_{2,2}+\cdots+A_{i,m}B_{m,2}\right)C_{2,j}\nonumber \\
+ & \phantom{=}+\cdots+\left(A_{i,1}B_{1,n}+A_{i,2}B_{2,n}+\cdots+A_{i,m}B_{m,n}\right)C_{n,j}\label{eq:associative-term-2}
+\end{align}
+
+\end_inset
+
+By inspection, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:associative-term-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:associative-term-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) both contain the 
+\begin_inset Formula $mn$
+\end_inset
+
+ terms 
+\begin_inset Formula 
+\[
+A_{i,x}B_{x,y}C_{y,j}\quad x=1,2,\ldots,m\text{ and }y=1,2,\ldots,n
+\]
+
+\end_inset
+
+and therefore are equal.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-properties-2"
+
+\end_inset
+
+For the arbitrary matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\left(M^{T}\right)_{i,j}=M_{j,i}$
+\end_inset
+
+, which follows from the definition of the transpose.
+ Applying this observation twice,
+\begin_inset Formula 
+\[
+\left(\left(A^{T}\right)^{T}\right)_{i,j}=\left(A^{T}\right)_{j,i}=A_{i,j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-properties-3"
+
+\end_inset
+
+By the definition of inverse, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse-definition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), it must be shown that the product of the two matrices in either order
+ is the identity.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+To show that 
+\begin_inset Formula $(B^{-1}A^{-1})(AB)=I$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(B^{-1}A^{-1})(AB)=\left((B^{-1}A^{-1})A\right)B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\left(B^{-1}(A^{-1}A)\right)B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\left(B^{-1}I\right)B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+definition of inverse, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse-definition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=B^{-1}B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+definition of inverse, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse-definition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To show that 
+\begin_inset Formula $(AB)(B^{-1}A^{-1})=I$
+\end_inset
+
+ is similar:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(AB)(B^{-1}A^{-1})=A\left(B(B^{-1}A^{-1})\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=A\left((BB^{-1})A^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=A\left(IA^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+definition of inverse, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse-definition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=AA^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:associativity-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+definition of inverse, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:inverse-definition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Equations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations-1"
+
+\end_inset
+
+One way to proceed is to subtract from both sides and then multiply both
+ sides by 
+\begin_inset Formula $-1$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+0 & -19\\
+-1 & 8
+\end{array}\right]-\left[\begin{array}{cc}
+0 & -19\\
+-1 & 8
+\end{array}\right]-X & =\left[\begin{array}{cc}
+-2 & 19\\
+-14 & 20
+\end{array}\right]-\left[\begin{array}{cc}
+0 & -19\\
+-1 & 8
+\end{array}\right]\\
+-X & =\left[\begin{array}{cc}
+-2 & 38\\
+-13 & 12
+\end{array}\right]\\
+-1\left(-X\right) & =-1\left(\left[\begin{array}{cc}
+-2 & 38\\
+-13 & 12
+\end{array}\right]\right)\\
+X & =\left[\begin{array}{cc}
+2 & -38\\
+13 & -12
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations-2"
+
+\end_inset
+
+
+\series bold
+Left
+\series default
+-multiply both sides by a multiplicative inverse.
+ There is no division of matrices.
+ 
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+5 & 2\\
+6 & 3
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+5 & 2\\
+6 & 3
+\end{array}\right]X & =\left[\begin{array}{cc}
+5 & 2\\
+6 & 3
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+13 & -13\\
+-19 & 7
+\end{array}\right]\\
+IX & =\frac{1}{3}\left[\begin{array}{cc}
+3 & -2\\
+-6 & 5
+\end{array}\right]\left[\begin{array}{cc}
+13 & -13\\
+-19 & 7
+\end{array}\right]\\
+X & =\frac{1}{3}\left[\begin{array}{cc}
+77 & -53\\
+-173 & 113
+\end{array}\right]=\left[\begin{array}{cc}
+\frac{77}{3} & -\frac{53}{3}\\
+-\frac{173}{3} & \frac{113}{3}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations-3"
+
+\end_inset
+
+
+\series bold
+Right
+\series default
+-multiply both sides by 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\series bold
+left
+\series default
+-multiply both sides by 
+\begin_inset Formula $P^{-1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left(PDP^{-1}\right)P & =AP\\
+(PD)(P^{-1}P) & =AP\\
+PD & =AP\\
+P^{-1}(PD) & =P^{-1}AP\\
+(P^{-1}P)D & =P^{-1}AP\\
+D & =P^{-1}AP
+\end{align*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $P^{-1}$
+\end_inset
+
+ appears in the equation being solved, it is assumed to exist.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations-4"
+
+\end_inset
+
+The second row of a matrix product is the linear combination of the rows
+ of the righthand matrix with coefficients coming from the second row of
+ the lefthand matrix.
+ In symbols, 
+\begin_inset Formula $(AB)_{2,:}=A_{2,1}B_{1,:}+A_{2,2}B_{2,:}+\cdots+A_{2,n}B_{n,:}$
+\end_inset
+
+ (assuming 
+\begin_inset Formula $A$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ columns and 
+\begin_inset Formula $B$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ rows).
+ Applied to this question,
+\begin_inset Formula 
+\[
+\begin{gathered}0\left[\begin{array}{cc}
+-3 & 3\end{array}\right]-3\left[\begin{array}{cc}
+2 & -4\end{array}\right]+3\left[\begin{array}{cc}
+-5 & 5\end{array}\right]+2\left[\begin{array}{cc}
+0 & 1\end{array}\right]\\
+=\left[\begin{array}{cc}
+0 & 0\end{array}\right]+\left[\begin{array}{cc}
+-6 & 12\end{array}\right]+\left[\begin{array}{cc}
+-15 & 15\end{array}\right]+\left[\begin{array}{cc}
+0 & 2\end{array}\right]\\
+=\left[\begin{array}{cc}
+-21 & 29\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations-5"
+
+\end_inset
+
+The third row of a matrix product is the linear combination of the rows
+ of the righthand matrix with coefficients coming from the third row of
+ the lefthand matrix.
+ In symbols, 
+\begin_inset Formula $(AB)_{3,:}=A_{3,1}B_{1,:}+A_{3,2}B_{2,:}+\cdots+A_{3,n}B_{n,:}$
+\end_inset
+
+ (assuming 
+\begin_inset Formula $A$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ columns and 
+\begin_inset Formula $B$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ rows).
+ Applied to this question,
+\begin_inset Formula 
+\[
+\begin{gathered}4\left[\begin{array}{cc}
+-3 & 3\end{array}\right]+1\left[\begin{array}{cc}
+2 & -4\end{array}\right]+4\left[\begin{array}{cc}
+-5 & 5\end{array}\right]-5\left[\begin{array}{cc}
+0 & 1\end{array}\right]\\
+=\left[\begin{array}{cc}
+-12 & 12\end{array}\right]+\left[\begin{array}{cc}
+2 & -4\end{array}\right]+\left[\begin{array}{cc}
+-20 & 20\end{array}\right]+\left[\begin{array}{cc}
+0 & -5\end{array}\right]\\
+=\left[\begin{array}{cc}
+-30 & 23\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations-6"
+
+\end_inset
+
+The second column of a matrix product is the linear combination of the columns
+ of the lefthand matrix with coefficients coming from the second column
+ of the righthand matrix.
+ In symbols, 
+\begin_inset Formula $(AB)_{:,2}=A_{:,1}B_{1,2}+A_{:,2}B_{2,2}+\cdots+A_{:,n}B_{n,2}$
+\end_inset
+
+ (assuming 
+\begin_inset Formula $A$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ columns and 
+\begin_inset Formula $B$
+\end_inset
+
+ has 
+\begin_inset Formula $n$
+\end_inset
+
+ rows).
+ Applied to this question,
+\begin_inset Formula 
+\begin{align*}
+3\left[\begin{array}{c}
+-4\\
+0\\
+4
+\end{array}\right]-4\left[\begin{array}{c}
+5\\
+-3\\
+1
+\end{array}\right]+5\left[\begin{array}{c}
+-3\\
+3\\
+4
+\end{array}\right]+1\left[\begin{array}{c}
+-4\\
+2\\
+-5
+\end{array}\right] & =\left[\begin{array}{c}
+-12\\
+0\\
+12
+\end{array}\right]+\left[\begin{array}{c}
+-20\\
+12\\
+-4
+\end{array}\right]+\left[\begin{array}{c}
+-15\\
+15\\
+20
+\end{array}\right]+\left[\begin{array}{c}
+-4\\
+2\\
+-5
+\end{array}\right]=\left[\begin{array}{c}
+-51\\
+29\\
+23
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-equations-7"
+
+\end_inset
+
+The product has no third column since the righthand matrix has no third
+ column.
+\end_layout
+
 \begin_layout Section*
 Section 
 \begin_inset CommandInset ref

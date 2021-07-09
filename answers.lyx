@@ -1740,10 +1740,12 @@ name "ans:row-operations-4"
 \end_inset
 
 
-\begin_inset Formula $\begin{array}{ccccccccccc}
-10v_{1} & - & 9v_{2} & - & v_{3} & + & 3v_{4} & + & 15v_{5} & = & 6\\
--11v_{1} & + & 12v_{2} & + & 13v_{3} & + & 5v_{4} & - & 4v_{5} & = & -2
-\end{array}$
+\begin_inset Formula 
+\begin{align*}
+10v_{1}-9v_{2}-v_{3}+3v_{4}+15v_{5} & =6\\
+-11v_{1}+12v_{2}+13v_{3}+5v_{4}-4v_{5} & =-2
+\end{align*}
+
 \end_inset
 
 
@@ -2405,7 +2407,11 @@ name "ans:echelon-forms-6"
 
 \end_inset
 
-(i) in reduced row echelon form (ii) 
+(i) in reduced row echelon form
+\begin_inset Newline newline
+\end_inset
+
+(ii) 
 \begin_inset Formula $\left[\begin{array}{c}
 v_{1}\\
 v_{2}\\
@@ -2860,6 +2866,752 @@ has solution
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:operation-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-properties"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-properties-1"
+
+\end_inset
+
+Answers will vary—examples will be different as they are creations of individual
+s, and explanations will be different as they are requested as informal
+ explanations, likely based on intuition rather than definition.
+ Let 
+\begin_inset Formula $r=3$
+\end_inset
+
+, 
+\begin_inset Formula $s=2$
+\end_inset
+
+ and 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-1 & 2\\
+4 & -5
+\end{array}\right]$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $(rs)A=(2\cdot3)A=6A=\left[\begin{array}{cc}
+6\cdot-1 & 6\cdot2\\
+6\cdot4 & 6\cdot-5
+\end{array}\right]=\left[\begin{array}{cc}
+-6 & 12\\
+24 & -30
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $r(sA)=3(2A)=3\left(\left[\begin{array}{cc}
+2\cdot-1 & 2\cdot2\\
+2\cdot4 & 2\cdot-5
+\end{array}\right]\right)=3\left[\begin{array}{cc}
+-2 & 4\\
+8 & -10
+\end{array}\right]=\left[\begin{array}{cc}
+3\cdot-2 & 3\cdot4\\
+3\cdot8 & 3\cdot-10
+\end{array}\right]=\left[\begin{array}{cc}
+-6 & 12\\
+24 & -30
+\end{array}\right]$
+\end_inset
+
+.
+ The rule is true essentially because the associative rule for multiplication
+ of real numbers applies to each entry.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-properties-2"
+
+\end_inset
+
+Answers will vary—examples will be different as they are creations of individual
+s, and explanations will be different as they are requested as informal
+ explanations, likely based on intuition rather than definition.
+ Let 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+3 & -4 & -9\\
+7 & -6 & 2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+1 & 9 & 1\\
+4 & 7 & -2
+\end{array}\right]$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $(A+B)^{T}=\left(\left[\begin{array}{ccc}
+3 & -4 & -9\\
+7 & -6 & 2
+\end{array}\right]+\left[\begin{array}{ccc}
+1 & 9 & 1\\
+4 & 7 & -2
+\end{array}\right]\right)^{T}=\left[\begin{array}{ccc}
+4 & 5 & -8\\
+11 & 1 & 0
+\end{array}\right]^{T}=\left[\begin{array}{cc}
+4 & 11\\
+5 & 1\\
+-8 & 0
+\end{array}\right]$
+\end_inset
+
+ while 
+\begin_inset Formula $A^{T}+B^{T}=\left[\begin{array}{ccc}
+3 & -4 & -9\\
+7 & -6 & 2
+\end{array}\right]^{T}+\left[\begin{array}{ccc}
+1 & 9 & 1\\
+4 & 7 & -2
+\end{array}\right]^{T}=\left[\begin{array}{cc}
+3 & 7\\
+-4 & -6\\
+-9 & 2
+\end{array}\right]+\left[\begin{array}{cc}
+1 & 4\\
+9 & 7\\
+1 & -2
+\end{array}\right]=\left[\begin{array}{cc}
+4 & 11\\
+5 & 1\\
+-8 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ The rule is true because corresponding entries of 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are also corresponding entries of 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $B^{T}$
+\end_inset
+
+.
+ Thus the two numbers being added to obtain each entry of the sum is the
+ same on either side of the equation.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-properties-3"
+
+\end_inset
+
+(a) 
+\begin_inset Formula $A^{-1}=\left[\begin{array}{cc}
+-5 & 7\\
+3 & -4
+\end{array}\right]$
+\end_inset
+
+ (b) Answers will vary.
+ 
+\begin_inset Formula $(A^{T})^{-1}=\left[\begin{array}{cc}
+-5 & 3\\
+7 & -4
+\end{array}\right]$
+\end_inset
+
+ because the inverse of the transpose is the transpose of the inverse (theorem
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:inverse-of-transpose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-properties-4"
+
+\end_inset
+
+Answers will vary.
+ One demonstration relies on the fact that for any matrix 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $M-M=0$
+\end_inset
+
+ (justified in an answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:difference-of-a-matrix-with-itself"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+): 
+\begin_inset Formula $A+(-A)=A+(-1\cdot A)=A-A=0$
+\end_inset
+
+.
+ Another demonstration relies on distributivity (theorem 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ claim 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "thmpart:distributivity-matrix-over-scalars"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+): 
+\begin_inset Formula $A+(-A)=1\cdot A+(-1\cdot A)=(1+(-1))A=0A=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Equations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-1"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+16 & -13\\
+-2 & -3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-2"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & -14\\
+62 & -136
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-3"
+
+\end_inset
+
+
+\begin_inset Formula $Z=Y^{-1}X^{-1}B$
+\end_inset
+
+ assuming 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are invertible
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-4"
+
+\end_inset
+
+
+\begin_inset Formula $C=\frac{1}{2}D^{T}(A^{-1})^{T}-(B^{-1})^{T}$
+\end_inset
+
+ assuming 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are invertible
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-5"
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $14s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-6r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-6"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+14 & -17\\
+2 & 0\\
+9 & -2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{b}=\left[\begin{array}{c}
+-11\\
+-4\\
+-8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-7"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+11 & 12 & -9\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-8"
+
+\end_inset
+
+The product has no third row
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+-14\\
+12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-equations-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-equations-10"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+16\\
+-9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

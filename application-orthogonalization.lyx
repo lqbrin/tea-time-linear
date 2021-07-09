@@ -366,11 +366,11 @@ noprefix "false"
 \end_inset
 
  were zero, it would put zeros in the 
-\begin_inset Formula $1,2$
+\begin_inset Formula $1,\!2$
 \end_inset
 
 -entry and the 
-\begin_inset Formula $2,1$
+\begin_inset Formula $2,\!1$
 \end_inset
 
 -entry.
@@ -379,11 +379,11 @@ noprefix "false"
 \end_inset
 
  were zero, it would put zeros in the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry and the 
-\begin_inset Formula $j,i$
+\begin_inset Formula $j,\!i$
 \end_inset
 
 -entry.
@@ -394,7 +394,7 @@ noprefix "false"
 \end_inset
 
  for all pairs 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 , 

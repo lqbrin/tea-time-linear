@@ -920,7 +920,7 @@ noprefix "false"
 \end_inset
 
  matrix with zeros everywhere except the 
-\begin_inset Formula $j,j$
+\begin_inset Formula $j,\!j$
 \end_inset
 
 -entry where it has a one.

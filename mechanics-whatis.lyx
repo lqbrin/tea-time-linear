@@ -1570,7 +1570,7 @@ M
 \begin_layout Standard
 The square bracket notation is used to extract entries of a matrix, too.
  In SageMath the 
-\begin_inset Formula $i,j$
+\begin_inset Formula $i,\!j$
 \end_inset
 
 -entry of a matrix 
