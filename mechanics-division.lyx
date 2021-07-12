@@ -112,6 +112,27 @@ Division
 \end_inset
 
 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!inverse
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -364,6 +385,16 @@ The
 \series bold
 identity matrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!identity
+\end_layout
+
+\end_inset
+
  is denoted  
 \begin_inset Formula $I_{n\times n}$
 \end_inset
@@ -373,8 +404,17 @@ identity matrix
 \end_inset
 
  when the size of the matrix is known or unimportant.
- Identity matrices have ones on the main diagonal, the diagonal running
- from the 
+ Identity matrices have ones on the main diagonal
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+main diagonal
+\end_layout
+
+\end_inset
+
+, the diagonal running from the 
 \begin_inset Formula $1,\!1$
 \end_inset
 
@@ -593,6 +633,16 @@ begin{digression}{Inverses of non-square matrices?}
 \begin_inset CommandInset label
 LatexCommand label
 name "dig:nonsquare-inverses"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!inverse|textit
+\end_layout
 
 \end_inset
 
@@ -825,6 +875,15 @@ When
 invertible
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!invertible
+\end_layout
+
+\end_inset
+
  The matrix
 \begin_inset Formula 
 \[
@@ -842,6 +901,16 @@ is called the
 \series bold
 adjugate
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+adjugate
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $A$
 \end_inset
@@ -1024,7 +1093,17 @@ name "tab:ASCII"
 
 \end_inset
 
-ASCII (American Standard Code for Information Interchange) characters
+ASCII
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ASCII
+\end_layout
+
+\end_inset
+
+ (American Standard Code for Information Interchange) characters
 \end_layout
 
 \end_inset
@@ -1069,11 +1148,30 @@ Cryptography
 
 \begin_layout Standard
 \noindent
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+cryptography
+\end_layout
+
+\end_inset
+
 The ability to undo multiplication by an invertible matrix makes it possible
  to use matrices and their inverses for encrypting and decrypting messages.
  Decoding messages like the one opening this section amounts to regrouping
  the code into column vectors and multiplying by the decoding matrix—the
- inverse of the coding matrix.
+ inverse of the coding matrix
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!coding
+\end_layout
+
+\end_inset
+
+.
  As long as the parties on either end of the message transmission have one
  matrix of some pair of inverse matrices, they can each encode with their
  matrix, send their message securely, and decode received messages.
@@ -1089,7 +1187,17 @@ All we need now is a method for converting letters and symbols to numbers
 on, symbols like spaces and hashtags, capitalization, and numbers out.
  Since the early 1960's the American National Standards Institute has maintained
  a coding system for the electronic transmission of documents in English
- called ASCII (pronounced ass-kee) or US-ASCII.
+ called ASCII
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ASCII
+\end_layout
+
+\end_inset
+
+ (pronounced ass-kee) or US-ASCII.
  Part of that system, largely developed by Bob Bemer 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1262,7 +1370,17 @@ begin{digression}{Lester S.
 
 \end_inset
 
- The first documented multiple-letter cipher is attributed to Lester S.
+ The
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Hill!Lester S.|textit
+\end_layout
+
+\end_inset
+
+ first documented multiple-letter cipher is attributed to Lester S.
  Hill.
  His 
 \shape italic
@@ -1297,6 +1415,27 @@ end{digression}
 \end_inset
 
 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!inverse
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1312,11 +1451,7 @@ Key Concepts
 \end_inset
 
 .
- Is defined by the property that 
-\begin_inset Formula ${\displaystyle A\cdot A^{-1}=A^{-1}\cdot A=I}$
-\end_inset
-
-, and can be computed via (
+ Can be computed via (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:inverse_by_adjugate"
@@ -1330,7 +1465,17 @@ noprefix "false"
 \end_layout
 
 \begin_layout Description
-adjugate For a square matrix, the transpose of its matrix of cofactors.
+adjugate 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+adjugate|textbf
+\end_layout
+
+\end_inset
+
+For a square matrix, the transpose of its matrix of cofactors.
 \end_layout
 
 \begin_layout Description
@@ -1338,7 +1483,38 @@ identity
 \begin_inset space ~
 \end_inset
 
-matrix A matrix with ones on the main diagonal and zeros elsewhere.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!identity|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+identity
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, identity}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+A matrix with ones on the main diagonal and zeros elsewhere.
 \end_layout
 
 \begin_layout Description
@@ -1346,7 +1522,59 @@ matrix
 \begin_inset space ~
 \end_inset
 
-inverse Matrices 
+inverse 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!inverse|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inverse
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, inverse}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!division
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, inverse}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Matrices 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1366,7 +1594,38 @@ invertible
 \begin_inset space ~
 \end_inset
 
-matrix A matrix whose inverse is defined.
+(matrix) 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!invertible|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+invertible
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, invertible}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+A matrix whose inverse is defined.
 \end_layout
 
 \begin_layout Description
@@ -1374,7 +1633,17 @@ main
 \begin_inset space ~
 \end_inset
 
-diagonal The 
+diagonal 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+main diagonal|textbf
+\end_layout
+
+\end_inset
+
+The 
 \begin_inset Formula $i,\!i$
 \end_inset
 
@@ -1390,7 +1659,30 @@ If
 \family typewriter
 M
 \family default
- is a matrix in SageMath, then 
+ is a matrix in SageMath
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!inverse
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{inverse()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, then 
 \family typewriter
 M.inverse()
 \family default

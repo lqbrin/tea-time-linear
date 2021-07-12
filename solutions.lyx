@@ -968,7 +968,7 @@ They are not equal.
 \begin_layout Section*
 Section 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand ref
 reference "sec:Length-and-Orthogonality"
 plural "false"
 caps "false"
@@ -5974,6 +5974,1255 @@ The product has no third column since the righthand matrix has no third
 Section 
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-1"
+
+\end_inset
+
+
+\series bold
+(solution 1)
+\series default
+: If the vectors are augmented to form a matrix, then theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ applies.
+ It gives 6 ways to show that the columns of a matrix are linearly independent,
+ parts (ii)-(vii).
+ If we can show any one of them true, we have shown that the columns of
+ the augmented matrix, which are the given vectors, are linearly independent.
+ The simplest route to a conclusion is to use part (iv) of the theorem—
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every column—as determining pivot positions amounts
+ to doing some row reduction.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Augmenting the vectors gives the matrix
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cc}
+-1 & 5\\
+-1 & 4
+\end{array}\right].
+\]
+
+\end_inset
+
+Note that the vectors have been augmented in an order that makes row reduction
+ simple (a 
+\begin_inset Formula $-1$
+\end_inset
+
+ in the 
+\begin_inset Formula $1,\!1$
+\end_inset
+
+-entry).
+ This is consistent with the idea that linear independence is a characterisitic
+ of a set, where order of elements does not matter.
+ The row reduction can be completed in one operation: add 
+\begin_inset Formula $-1$
+\end_inset
+
+ times the first row to the second row, which yields
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-1 & 5\\
+0 & -1
+\end{array}\right].
+\]
+
+\end_inset
+
+At this point, it is clear the matrix has two pivot positions, one in each
+ column.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark
+\series default
+: We can also see at this point that 
+\begin_inset Formula $M$
+\end_inset
+
+ has no free variables—part (vii) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+—giving another way to conclude that the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(solution 2)
+\series default
+: The definition of linear independence can be used just as well.
+ The definition revolves around linear combinations of the vectors that
+ sum to zero: 
+\begin_inset Formula 
+\[
+x_{1}\left[\begin{array}{c}
+5\\
+4
+\end{array}\right]+x_{2}\left[\begin{array}{c}
+-1\\
+-1
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+ which can also be written as
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+5 & -1\\
+4 & -1
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cc}
+-1 & 5\\
+-1 & 4
+\end{array}\right]\left[\begin{array}{c}
+x_{2}\\
+x_{1}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right].\label{eq:sol-lin-ind-1}
+\end{equation}
+
+\end_inset
+
+As in solution 1, we choose to set up the system to make the row reduction
+ simple.
+ Writing the augmented matrix for (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sol-lin-ind-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and reducing:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-1 & 5 & 0\\
+-1 & 4 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & 5 & 0\\
+0 & -1 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & 0 & 0\\
+0 & -1 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+which means the (one and only) solution of the system is 
+\begin_inset Formula $x_{1}=x_{2}=0$
+\end_inset
+
+.
+ By definition, the vectors are linearly independent.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-2"
+
+\end_inset
+
+
+\series bold
+(solution 1)
+\series default
+: If the vectors are augmented to form a matrix, then theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ applies.
+ It gives 6 ways to show that the columns of a matrix are linearly independent,
+ parts (ii)-(vii).
+ If we can show any one of them true, we have shown that the columns of
+ the augmented matrix, which are the given vectors, are linearly independent.
+ The simplest route to a conclusion is to use part (iv) of the theorem—
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every column—as determining pivot positions amounts
+ to doing some row reduction.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Augmenting the vectors gives the matrix
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cc}
+-1 & 4\\
+2 & -3\\
+-1 & -3
+\end{array}\right].
+\]
+
+\end_inset
+
+Note that the vectors have been augmented in an order that makes row reduction
+ simple (a 
+\begin_inset Formula $-1$
+\end_inset
+
+ in the 
+\begin_inset Formula $1,\!1$
+\end_inset
+
+-entry).
+ This is consistent with the idea that linear independence is a characterisitic
+ of a set, where order of elements does not matter.
+ Enough row reduction can be completed in just two row operations:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-1 & 4\\
+2 & -3\\
+-1 & -3
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+-1 & 4\\
+0 & 5\\
+0 & -7
+\end{array}\right].
+\]
+
+\end_inset
+
+At this point, it is clear the matrix has two pivot positions, one in each
+ column.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark
+\series default
+: We can also see at this point that 
+\begin_inset Formula $M$
+\end_inset
+
+ has no free variables—part (vii) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+—giving another way to conclude that the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(solution 2)
+\series default
+: The definition of linear independence can be used just as well.
+ The definition revolves around linear combinations of the vectors that
+ sum to zero: 
+\begin_inset Formula 
+\[
+x_{1}\left[\begin{array}{c}
+-1\\
+2\\
+-1
+\end{array}\right]+x_{2}\left[\begin{array}{c}
+4\\
+-3\\
+-3
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+ which can also be written as
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cc}
+-1 & 4\\
+2 & -3\\
+-1 & -3
+\end{array}\right]\left[\begin{array}{c}
+x_{2}\\
+x_{1}
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right].\label{eq:sol-lin-ind-2}
+\end{equation}
+
+\end_inset
+
+As in solution 1, we choose to set up the system to make the row reduction
+ simple.
+ Writing the augmented matrix for (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sol-lin-ind-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and reducing:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-1 & 4 & 0\\
+2 & -3 & 0\\
+-1 & -3 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & 4 & 0\\
+0 & 5 & 0\\
+0 & -7 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & -4 & 0\\
+0 & 1 & 0\\
+0 & -7 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+which means the (one and only) solution of the system is 
+\begin_inset Formula $x_{1}=x_{2}=0$
+\end_inset
+
+.
+ By definition, the vectors are linearly independent.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-3"
+
+\end_inset
+
+We are trying to conclude that the system has at most one solution for any
+ constants.
+ Part (vi) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is exactly this statement, which means if we can show that any one of the
+ other conditions of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ holds, we are done.
+ Parts (iii), (iv), and (vii) are within reach.
+ Each one follows from row reduction of the coefficient matrix of the system.
+ To make the work a little easier, we rewrite the system as
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+-v_{3} & - & v_{2} & - & 2v_{1} & = & b_{1}\\
+ & + & 2v_{2} & + & 7v_{1} & = & b_{2}\\
+v_{3} & - & v_{2} & - & 4v_{1} & = & b_{3}
+\end{array}
+\]
+
+\end_inset
+
+and reduce the corresponding coefficient matrix:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-1 & -1 & -2\\
+0 & 2 & 7\\
+1 & -1 & -4
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & -1 & -2\\
+0 & 2 & 7\\
+0 & -2 & -6
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & -1 & -2\\
+0 & 2 & 7\\
+0 & 0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+At this point it is clear that the system has no free variables (and that
+ the coefficient matrix has a pivot in every column), so theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives us that the system has at most one solution for any selection of
+ constants.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-4"
+
+\end_inset
+
+We are trying to conclude that the system has at most one solution for any
+ constants.
+ Part (vi) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is exactly this statement, which means if we can show that any one of the
+ other conditions of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ holds, we are done.
+ Parts (iii), (iv), and (vii) are within reach.
+ Each one follows from row reduction of the coefficient matrix of the system.
+ To make the work a little easier, we rewrite the system as
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+-z & + & 3y & - & 6x & = & b_{3}\\
+2z & + & 7y & + & 6x & = & b_{2}\\
+7z & + & 5y & + & x & = & b_{1}\\
+ & + & y & + & 5x & = & b_{4}
+\end{array}
+\]
+
+\end_inset
+
+and reduce the corresponding coefficient matrix:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-1 & 3 & -6\\
+2 & 7 & 6\\
+7 & 5 & 1\\
+0 & 1 & 5
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & 3 & -6\\
+0 & 13 & -6\\
+0 & 26 & -41\\
+0 & 1 & 5
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & 3 & -6\\
+0 & 1 & 5\\
+0 & 26 & -41\\
+0 & 13 & -6
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & 3 & -6\\
+0 & 1 & 5\\
+0 & 0 & -171\\
+0 & 0 & -71
+\end{array}\right]
+\]
+
+\end_inset
+
+At this point it is clear that the system has no free variables (and that
+ the coefficient matrix has a pivot in every column), so theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives us that the system has at most one solution for any selection of
+ constants.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-5"
+
+\end_inset
+
+We are asked to show that the homogeneous system has only the trivial solution.
+ Part (iii) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is exactly this statement, which means if we can show that any one of the
+ other conditions of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ holds, we are done.
+ Parts (iv) and (vii) are within reach.
+ Each one follows from row reduction of the coefficient matrix of the system:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 8\\
+1 & -5
+\end{array}\right]\rightarrow\left[\begin{array}{cc}
+1 & 8\\
+0 & -13
+\end{array}\right]
+\]
+
+\end_inset
+
+At this point it is clear that the system has no free variables (and that
+ the coefficient matrix has a pivot in every column), so theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives us that the homogeneous system has only the trivial solution.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-6"
+
+\end_inset
+
+We are asked to show that the homogeneous system has only the trivial solution.
+ Part (iii) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is exactly this statement, which means if we can show that any one of the
+ other conditions of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ holds, we are done.
+ Parts (iv) and (vii) are within reach.
+ Each one follows from row reduction of the coefficient matrix of the system:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+6 & 3 & -1\\
+5 & 0 & 1\\
+1 & -4 & 1\\
+5 & 7 & -4
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & -4 & 1\\
+5 & 0 & 1\\
+6 & 3 & -1\\
+5 & 7 & -4
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & -4 & 1\\
+0 & 20 & -4\\
+0 & 27 & -7\\
+0 & 27 & -9
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & -4 & 1\\
+0 & 20 & -4\\
+0 & 27 & -7\\
+0 & 0 & -2
+\end{array}\right]
+\]
+
+\end_inset
+
+At this point it is clear that the system has no free variables (and that
+ the coefficient matrix has a pivot in every column), so theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives us that the homogeneous system has only the trivial solution.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-7"
+
+\end_inset
+
+Using the definition of linear independence, we need to determine the nature
+ of the solutions of 
+\begin_inset Formula 
+\begin{equation}
+a\sin^{2}t+b\cos^{2}t=0\label{eq:sol-lin-ind-3}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $0$
+\end_inset
+
+ is the 
+\shape italic
+zero function
+\shape default
+, not the number zero.
+ This means the equation has to be true for all values of 
+\begin_inset Formula $t$
+\end_inset
+
+! Attempting to solve the equation for 
+\begin_inset Formula $b$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+b\cos^{2}t & =-a\sin^{2}t\\
+b & =-a\frac{\sin^{2}t}{\cos^{2}t}\\
+b & =-a\tan^{2}t
+\end{align*}
+
+\end_inset
+
+This last equation is true for all values of 
+\begin_inset Formula $t$
+\end_inset
+
+ (for which it is defined) only if 
+\begin_inset Formula $a=0$
+\end_inset
+
+, which forces 
+\begin_inset Formula $b=0$
+\end_inset
+
+.
+ In other words, the only solution is 
+\begin_inset Formula $a=b=0$
+\end_inset
+
+.
+ Since the only solution of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sol-lin-ind-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is the trivial solution, 
+\begin_inset Formula $\sin^{2}t$
+\end_inset
+
+ and 
+\begin_inset Formula $\cos^{2}t$
+\end_inset
+
+ are linearly indpendent.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-8"
+
+\end_inset
+
+The double angle formula, 
+\begin_inset Formula $\cos(2t)=\cos^{2}t-\sin^{2}t$
+\end_inset
+
+ suggests that
+\begin_inset Formula 
+\[
+\sin^{2}t-\cos^{2}t+\cos(2t)=0
+\]
+
+\end_inset
+
+
+\shape italic
+for all
+\shape default
+ 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Thereby we have produced a nontrivial linear combination of 
+\begin_inset Formula $\sin^{2}t$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^{2}t$
+\end_inset
+
+, and 
+\begin_inset Formula $\cos(2t)$
+\end_inset
+
+ that sums to the 
+\shape italic
+zero function
+\shape default
+, proving that 
+\begin_inset Formula $\sin^{2}t$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^{2}t$
+\end_inset
+
+, and 
+\begin_inset Formula $\cos(2t)$
+\end_inset
+
+ are linearly dependent.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-9"
+
+\end_inset
+
+The question of whether the columns form a linearly independent set is a
+ rewording of the question of whether the columns are linearly independent.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, it is equivalent to determine whether the matrix has a pivot position
+ in every column.
+ If it does, part (iv) of the theorem is true, and therefore part (i) is
+ true.
+ If it does not, part (iv) of the theorem is false, and therefore part (i)
+ is false.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Since the matrix has 4 rows, it can have at most 4 pivot positions.
+ Since it has 6 columns, this means there is certainly a column (at least
+ two, actually) without a pivot position.
+ Therefore part (iv) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is false.
+ Equivalently, part (i) is false and the columns of the matrix are linearly
+ dependent.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-10"
+
+\end_inset
+
+The question can be rephrased as a question about a linear system.
+ By definition, the linear independence of the set hinges of the nature
+ of the solutions of
+\begin_inset Formula 
+\begin{equation}
+a\left[\begin{array}{ccc}
+1 & 8 & -11\end{array}\right]+b\left[\begin{array}{ccc}
+9 & 4 & -7\end{array}\right]+c\left[\begin{array}{ccc}
+4 & -2 & 2\end{array}\right]=\left[\begin{array}{ccc}
+0 & 0 & 0\end{array}\right].\label{eq:sol-lin-ind-5}
+\end{equation}
+
+\end_inset
+
+This equation can be rewritten using algebra:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{ccc}
+a & 8a & -11a\end{array}\right]+\left[\begin{array}{ccc}
+9b & 4b & -7b\end{array}\right]+\left[\begin{array}{ccc}
+4c & -2c & 2c\end{array}\right] & =\left[\begin{array}{ccc}
+0 & 0 & 0\end{array}\right]\\
+\left[\begin{array}{ccc}
+a+9b+4c & 8a+4b-2c & -11a-7b+2c\end{array}\right] & =\left[\begin{array}{ccc}
+0 & 0 & 0\end{array}\right]
+\end{align*}
+
+\end_inset
+
+The only way for this last equation to be true is if 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ solve the linear system
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ccccccc}
+a & + & 9b & + & 4c & = & 0\\
+8a & + & 4b & - & 2c & = & 0\\
+-11a & - & 7b & + & 2c & = & 0
+\end{array}.\label{eq:sol-lin-ind-4}
+\end{equation}
+
+\end_inset
+
+By row reduction,
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 9 & 4 & 0\\
+8 & 4 & -2 & 0\\
+-11 & -7 & 2 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 9 & 4 & 0\\
+0 & -68 & -34 & 0\\
+0 & -92 & 46 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 9 & 4 & 0\\
+0 & 2 & 1 & 0\\
+0 & 2 & -1 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 9 & 4 & 0\\
+0 & 2 & 1 & 0\\
+0 & 0 & -2 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+At this point, it is clear that the system has no free variables.
+ Therefore part (vii) of theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is false.
+ The equivalent part (iii) is therefore true, so (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sol-lin-ind-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) has only the trivial solution.
+ In turn, the trivial solution is the only solution of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sol-lin-ind-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), so the set is linearly independent.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-independence-11"
+
+\end_inset
+
+To show that two statements are true requires showing that if one of them
+ is true, so is the other, and vice versa, so there are two things to show.
+ (i) If (a) is true, then (b) is true; and (ii) if (b) is true, then (a)
+ is true.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{(a)}\Rightarrow\text{(b)}$
+\end_inset
+
+: 
+\series bold
+[We start by assuming (a) is true and showing that (b) follows logically.]
+\series default
+ Suppose 
+\begin_inset Formula $x=8$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x$
+\end_inset
+
+ is a perfect cube since 
+\begin_inset Formula $2^{3}=8$
+\end_inset
+
+.
+ Of course 
+\begin_inset Formula $6<8<20$
+\end_inset
+
+ so 
+\begin_inset Formula $6<x<20$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $x$
+\end_inset
+
+ is a perfect cube between 6 and 20.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{(b)}\Rightarrow\text{(a)}$
+\end_inset
+
+: 
+\series bold
+[We now assume (b) is true and show that (a) follows logically.]
+\series default
+ Suppose 
+\begin_inset Formula $x$
+\end_inset
+
+ is a perfect cube between 6 and 20.
+ Because 
+\begin_inset Formula $x$
+\end_inset
+
+ is a perfect cube, it must be one of the numbers 
+\begin_inset Formula $1,8,27$
+\end_inset
+
+ or higher.
+ The only one of those numbers between 6 and 20 is 8, so 
+\begin_inset Formula $x$
+\end_inset
+
+ must be 8.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:Characterization-Part-2"
 plural "false"
 caps "false"
@@ -5987,14 +7236,200 @@ noprefix "false"
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:characterizations"
+reference "exc:characterizations-9"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-: What makes any matrix 
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:characterizations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:characterizations-1"
+
+\end_inset
+
+According to theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ it is equivalent to show that the coefficient matrix has a pivot position
+ in every row.
+ This is done by row reduction:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cccc}
+6 & 5 & 1 & 5\\
+3 & 0 & -4 & 7\\
+-1 & 1 & 1 & -4
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+-1 & 1 & 1 & -4\\
+3 & 0 & -4 & 7\\
+6 & 5 & 1 & 5
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+-1 & 1 & 1 & -4\\
+0 & 3 & -1 & -5\\
+0 & 11 & 7 & -19
+\end{array}\right]\\
+\rightarrow\left[\begin{array}{cccc}
+-1 & 1 & 1 & -4\\
+0 & 33 & -11 & -55\\
+0 & -33 & -21 & 57
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+-1 & 1 & 1 & -4\\
+0 & 33 & -11 & -55\\
+0 & 0 & -32 & 2
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+At this point it is clear there is a pivot in every row.
+ Therefore the system has only the trivial solution.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:characterizations-2"
+
+\end_inset
+
+According to theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ it is equivalent to answer the question 
+\begin_inset Quotes eld
+\end_inset
+
+Does the matrix have a pivot position in every row?
+\begin_inset Quotes erd
+\end_inset
+
+ This is determined by row reduction:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cccc}
+-18 & 1 & -1 & 7\\
+-6 & 2 & 6 & 3\\
+12 & -5 & 0 & 4
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+-6 & 2 & 6 & 3\\
+-18 & 1 & -1 & 7\\
+12 & -5 & 0 & 4
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+-6 & 2 & 6 & 3\\
+0 & -5 & -19 & -2\\
+0 & -1 & 12 & 10
+\end{array}\right]\\
+\rightarrow\left[\begin{array}{cccc}
+-6 & 2 & 6 & 3\\
+0 & -1 & 12 & 10\\
+0 & -5 & -19 & -2
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+-6 & 2 & 6 & 3\\
+0 & -1 & 12 & 10\\
+0 & 0 & -79 & -52
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+At this point it is clear there is a pivot in every row.
+ Therefore the system has only the trivial solution.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:characterizations-3"
+
+\end_inset
+
+According to theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ it is equivalent to answer the question 
+\begin_inset Quotes eld
+\end_inset
+
+Does the matrix have a pivot position in every row?
+\begin_inset Quotes erd
+\end_inset
+
+ Since the matrix has 5 columns, it can have at most 5 pivot positions.
+ However the matrix has 6 rows, so cannot have a pivot in every row.
+ Consequently the rows do not form a linearly independent set.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:characterizations-4"
+
+\end_inset
+
+What makes any matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -6107,7 +7542,14 @@ noprefix "false"
 
 \end_inset
 
-: As long as 
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:characterizations-5"
+
+\end_inset
+
+As long as 
 \begin_inset Formula $j>1$
 \end_inset
 
@@ -6129,6 +7571,13 @@ noprefix "false"
 \end_inset
 
 : 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:characterizations-6"
+
+\end_inset
+
+
 \series bold
 \shape italic
 [Commentary that is not strictly part of the proof wil be inserted in square

@@ -195,6 +195,16 @@ In mathematics a
 \series bold
 binary operator
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+operator!binary
+\end_layout
+
+\end_inset
+
 , such as 
 \begin_inset Formula $+$
 \end_inset
@@ -375,6 +385,16 @@ raisebox{.3in}{$=$}
 The exact same component-wise (entry-by-entry) mechanics are used for adding
  matrices.
  Using matrix entry notation,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!addition
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \text{if }A\text{ and }B\text{ are matrices, then }(A+B)_{i,j}=A_{i,j}+B_{i,j}
@@ -447,6 +467,16 @@ for all entries
  must have the exact same size.
  The sum of matrices of differing size is undefined.
  Subtraction of matrices is defined analogously.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!subtraction
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \text{If }A\text{ and }B\text{ are matrices, then }(A-B)_{i,j}=a_{i,j}-b_{i,j}
@@ -716,9 +746,29 @@ scalar
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+scalar
+\end_layout
+
+\end_inset
+
  multiplication to differentiate it from matrix multiplication, the subject
  of the next section.
  In symbols,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+multiplication!scalar
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \text{If }A\text{ is a matrix and }c\text{ is a scalar, then }(cA)_{i,j}=cA_{i,j}
@@ -785,6 +835,16 @@ begin{digression}{Fields}
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+field|textit
+\end_layout
+
+\end_inset
+
 Sets of scalars other than real numbers and complex numbers are permissible
  in linear algebra as long as matrix entries come from the same field.
  A field must contain an additive identity, denoted  
@@ -842,8 +902,17 @@ binary
 \begin_inset space ~
 \end_inset
 
-operator A function with two inputs and one output, all three from the same
- set.
+operator 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+operator!binary|textbf
+\end_layout
+
+\end_inset
+
+A function with two inputs and one output, all three from the same set.
 \end_layout
 
 \begin_layout Description
@@ -852,6 +921,37 @@ matrix
 \end_inset
 
 addition 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!addition|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+addition!matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, addition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -918,6 +1018,16 @@ matrix
 \end_inset
 
 subtraction 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!subtraction|textbf
+\end_layout
+
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -930,6 +1040,40 @@ subtraction
 \uwave off
 \noun off
 \color none
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+subtraction!matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, subtraction}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 For any matrices 
 \begin_inset Formula $A$
 \end_inset
@@ -979,7 +1123,17 @@ For any matrices
 \end_layout
 
 \begin_layout Description
-scalar An element of a field.
+scalar 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+scalar|textbf
+\end_layout
+
+\end_inset
+
+An element of a field.
 \end_layout
 
 \begin_layout Description
@@ -988,6 +1142,16 @@ scalar
 \end_inset
 
 multiplication 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+multiplication!scalar|textbf
+\end_layout
+
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -1055,7 +1219,17 @@ SageMath
 
 \begin_layout Standard
 The syntax for scalar multiplication, matrix addition, and matrix subtraction
- in SageMath is much like calculator syntax.
+ in SageMath
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!operators
+\end_layout
+
+\end_inset
+
+ is much like calculator syntax.
  The plus sign is used for addtion, the minus sign for subtraction, and
  the asterisk for multiplication.
  The asterisk is not optional.
@@ -1090,7 +1264,7 @@ print(5*C)
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 

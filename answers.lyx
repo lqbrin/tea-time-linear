@@ -3612,6 +3612,798 @@ name "ans:matrix-equations-10"
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-1"
+
+\end_inset
+
+linearly independent
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-2"
+
+\end_inset
+
+(a) must have 3 pivots: 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+ (b) must have 2,1, or 0 pivots: 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & \star\\
+0 & 1 & \star\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & \star & 0\\
+0 & 0 & 1\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-3"
+
+\end_inset
+
+
+\begin_inset Formula $x\neq-\frac{8}{7}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-4"
+
+\end_inset
+
+
+\begin_inset Formula $x\neq\frac{26}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-5"
+
+\end_inset
+
+
+\begin_inset Formula $x=\frac{10}{7}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-6"
+
+\end_inset
+
+
+\begin_inset Formula $x=-8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-7"
+
+\end_inset
+
+(i) 
+\begin_inset Formula $7R_{:,1}+9R_{:,2}=0$
+\end_inset
+
+ (ii) 
+\begin_inset Formula $7\left[\begin{array}{c}
+-9\\
+0\\
+0\\
+0
+\end{array}\right]+9\left[\begin{array}{c}
+7\\
+0\\
+0\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ (iii) 
+\begin_inset Formula $7\left[\begin{array}{c}
+180\\
+-108\\
+-72\\
+-189
+\end{array}\right]+9\left[\begin{array}{c}
+-140\\
+84\\
+56\\
+147
+\end{array}\right]=\left[\begin{array}{c}
+1260\\
+-756\\
+-504\\
+-1323
+\end{array}\right]+\left[\begin{array}{c}
+-1260\\
+756\\
+504\\
+1323
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0\\
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-independence-8"
+
+\end_inset
+
+(i) columns 1 and 3 are linearly independent; and columns 2 and 4 are linearly
+ independent.
+ (ii) columns 1 and 3 are not multiples of one another and therefore are
+ linearly independent; and columns 2 and 4 are not multiples of one another
+ and therefore are linearly independent.
+ (iii) columns 1 and 3 are not multiples of one another and therefore are
+ linearly independent; and columns 2 and 4 are not multiples of one another
+ and therefore are linearly independent.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-1"
+
+\end_inset
+
+(i) no (ii) yes (iii) one (iv) one
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-2"
+
+\end_inset
+
+(i) 9 (ii) yes (iii) no (iv) infinitely many (v) infinitely many
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-3"
+
+\end_inset
+
+(ii) no (iii) no (iv) infinitely many (v) infinitely many
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-4"
+
+\end_inset
+
+5
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-5"
+
+\end_inset
+
+(a) must have three pivots:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & 0 & \star\\
+0 & 1 & 0 & \star\\
+0 & 0 & 1 & \star
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & \star & 0\\
+0 & 1 & \star & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & \star & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(b) must have 2,1, or 0 pivots:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & \star & \star\\
+0 & 1 & \star & \star\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & \star & 0 & \star\\
+0 & 0 & 1 & \star\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & \star & \star & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 1 & 0 & \star\\
+0 & 0 & 1 & \star\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 1 & \star & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & \star & \star & \star\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 1 & \star & \star\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 0 & 1 & \star\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-6"
+
+\end_inset
+
+82
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-7"
+
+\end_inset
+
+
+\begin_inset Formula $x\neq-\frac{8}{7}$
+\end_inset
+
+; same as section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-8"
+
+\end_inset
+
+
+\begin_inset Formula $x\neq\frac{26}{3}$
+\end_inset
+
+; same as section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-9"
+
+\end_inset
+
+
+\begin_inset Formula $x=\frac{10}{7}$
+\end_inset
+
+; same as section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:characterizations-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:characterizations-10"
+
+\end_inset
+
+
+\begin_inset Formula $x=-8$
+\end_inset
+
+; same as section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

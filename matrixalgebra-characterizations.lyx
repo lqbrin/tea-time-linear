@@ -666,24 +666,25 @@ noprefix "false"
 ).
  The principle behind induction is to show that (i) the claim is actually
  true for some particular integer, and (ii) if the claim is true for some
- integer at least as large, then it is also true for the next integer.
+ integer at least as large, then it is also true for the successive integer.
  This way, part (i) establishes the claim for a particular integer, say
  
 \begin_inset Formula $k$
 \end_inset
 
 .
- Then part (ii) establishes the claim for the next integer, 
+ Then part (ii) establishes the claim for the successive integer, 
 \begin_inset Formula $k+1$
 \end_inset
 
 .
- Part (ii) also establishes the claim for the next integer, 
+ Part (ii) also establishes the claim for the successor to the successive
+ integer, 
 \begin_inset Formula $k+2$
 \end_inset
 
 .
- Applying part (ii) again establishes the claim for the next integer, 
+ Applying part (ii) again establishes the claim for the 
 \begin_inset Formula $k+3$
 \end_inset
 
@@ -926,7 +927,7 @@ noprefix "false"
 Exercises 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:characterizations"
+reference "exc:characterizations-19"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1091,12 +1092,18 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations"
+
+\end_inset
+
 The size and number of pivot positions of a matrix 
 \begin_inset Formula $M$
 \end_inset
 
  are given.
- Answer the folowing questions as completely as you can.
+ Answer the following questions as completely as you can.
  (i) Are the rows of 
 \begin_inset Formula $M$
 \end_inset
@@ -1155,11 +1162,41 @@ The size and number of pivot positions of a matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-5"
+
+\end_inset
+
+
 \begin_inset Formula $9\times6$
 \end_inset
 
 ; 
 \begin_inset Formula $6$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1178,25 +1215,25 @@ The size of a matrix
 \end_inset
 
  is given.
- What is the maximum number of pivot positions 
+ (i) What is the maximum number of pivot positions 
 \begin_inset Formula $M$
 \end_inset
 
  could have? Assume it has that maximum number and answer the following
  questions.
- (i) Are the rows of 
+ (ii) Are the rows of 
 \begin_inset Formula $M$
 \end_inset
 
- linearly independent? (ii) Are the columns of 
+ linearly independent? (iii) Are the columns of 
 \begin_inset Formula $M$
 \end_inset
 
- linearly indpendent? (iii) How many solutions does 
+ linearly independent? (iv) How many solutions does 
 \begin_inset Formula $M\mathbf{v}=\mathbf{0}$
 \end_inset
 
- have? (iv) How many solutions does 
+ have? (v) How many solutions does 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -1223,7 +1260,37 @@ The size of a matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-6"
+
+\end_inset
+
+
 \begin_inset Formula $9\times29$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1231,6 +1298,12 @@ The size of a matrix
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-7"
+
+\end_inset
+
 Redo question 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1241,11 +1314,34 @@ noprefix "false"
 
 \end_inset
 
- assuming 
+ parts (ii)-(v) assuming 
 \begin_inset Formula $M$
 \end_inset
 
  has less than the maximum number of pivot positions.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1278,6 +1374,13 @@ x_{1} & + & 7x_{2} & + & x_{3} & = & b_{2}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-8"
+
+\end_inset
+
+
 \begin_inset Formula $\begin{array}{ccccccc}
 2v_{1} & - & v_{2} & - & v_{3} & = & b_{1}\\
 7v_{1} & + & 2v_{2} &  &  & = & b_{2}\\
@@ -1340,6 +1443,13 @@ x_{1} & x_{2}\end{array}\right]\left[\begin{array}{ccc}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-9"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 v_{1} & v_{2} & v_{3}\end{array}\right]\left[\begin{array}{cccc}
 6 & 5 & 1 & 5\\
@@ -1349,35 +1459,26 @@ v_{1} & v_{2} & v_{3}\end{array}\right]\left[\begin{array}{cccc}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-Show that the functions are linearly independent.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $1+t$
-\end_inset
-
-, 
-\begin_inset Formula $t+t^{2}$
-\end_inset
-
-, and 
-\begin_inset Formula $1+t^{2}$
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:characterizations-1"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Enumerate
-\begin_inset Formula $\sin^{2}t$
-\end_inset
-
- and 
-\begin_inset Formula $\cos^{2}t$
 \end_inset
 
 
@@ -1432,11 +1533,41 @@ Do the rows of the matrix form a linearly independent set?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-10"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 -18 & 1 & -1 & 7\\
 -6 & 2 & 6 & 3\\
 12 & -5 & 0 & 4
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:characterizations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1455,6 +1586,13 @@ Do the rows of the matrix form a linearly independent set?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-11"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccccc}
 -38 & -5 & 30 & 25 & -44\\
 4 & -28 & 44 & -39 & 43\\
@@ -1466,16 +1604,68 @@ Do the rows of the matrix form a linearly independent set?
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:characterizations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-12"
+
+\end_inset
+
 A 
 \begin_inset Formula $5\times8$
 \end_inset
 
  matrix has linearly independent rows.
  How many pivot positions does it have?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1514,11 +1704,40 @@ has a nontrivial solution
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-13"
+
+\end_inset
+
 What are the possible reduced row echelon forms of a 
 \begin_inset Formula $3\times4$
 \end_inset
 
  matrix with
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1562,7 +1781,7 @@ noprefix "false"
  exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:linear-independence"
+reference "exc:linear-independence-24"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1589,11 +1808,41 @@ Find the determinant.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-14"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 -8 & 0 & 0\\
 -15 & \frac{1}{4} & 0\\
 -29 & -1 & -41
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1651,7 +1900,7 @@ Find the value(s) of
 \begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\left[\begin{array}{cc}
-2 & -5\\
+2 & -6\\
 3 & x
 \end{array}\right]$
 \end_inset
@@ -1660,10 +1909,40 @@ Find the value(s) of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-15"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 x & 4\\
 -2 & 7
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1681,6 +1960,13 @@ x & 4\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-16"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 8 & 2\\
 6 & 45 & 1\\
@@ -1689,6 +1975,53 @@ x & 4\\
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Compare your answer with the answer to section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-independence-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1712,10 +2045,40 @@ Find the value(s) of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-17"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 2 & 7\\
 x & 5
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-9"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1733,11 +2096,41 @@ x & -6 & 27\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:characterizations-18"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{ccc}
 1 & 5 & -4\\
 -5 & 3 & x\\
 -7 & -11 & 4
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:characterizations-10"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1796,7 +2189,7 @@ M=\left[\begin{array}{cccc}
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:characterizations"
+name "exc:characterizations-19"
 
 \end_inset
 
@@ -1809,6 +2202,29 @@ Prove that if
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:characterizations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1831,6 +2247,29 @@ Prove that if
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:characterizations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1856,7 +2295,7 @@ Prove that if
  HINT: Use the facts proven in exercises 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:characterizations"
+reference "exc:characterizations-19"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1874,6 +2313,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:characterizations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

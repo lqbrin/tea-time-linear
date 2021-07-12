@@ -104,6 +104,27 @@ name "sec:The-Determinant"
 \end_inset
 
 The Determinant
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!determinant
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -115,6 +136,16 @@ The Determinant
 \end_inset
 
 the discriminant
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+discriminant
+\end_layout
+
+\end_inset
+
+
 \begin_inset Quotes erd
 \end_inset
 
@@ -182,6 +213,16 @@ The determinant of an
 \series bold
 square matrices
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!square
+\end_layout
+
+\end_inset
+
 , those with the same number of columns as rows.
  The determinant of a 
 \begin_inset Formula $1\times1$
@@ -449,6 +490,16 @@ noprefix "false"
 \series bold
 cofactors
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+cofactor
+\end_layout
+
+\end_inset
+
 .
  More generally, the quantity 
 \begin_inset Formula $(-1)^{i+j}\det A_{\backslash i,j}$
@@ -539,6 +590,16 @@ noprefix "false"
 \series bold
 linear combination
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear combination
+\end_layout
+
+\end_inset
+
 .
  It is the sum of scalar multiples of matrices.
  More generally, if 
@@ -578,6 +639,16 @@ is called a linear combination of the objects
 \series bold
 coefficients
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coefficient
+\end_layout
+
+\end_inset
+
  of the linear combination.
 \end_layout
 
@@ -600,7 +671,17 @@ begin{digression}{Linear Combinations}
 
 \begin_layout Standard
 \noindent
-Linear combinations appear in many contexts.
+Linear combinations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear combination|textit
+\end_layout
+
+\end_inset
+
+ appear in many contexts.
 \end_layout
 
 \begin_layout Itemize
@@ -752,9 +833,18 @@ Can the third row of the
 
  (row) matrix, operate on the row matrices and then cast back to sudoku
  rows, it would be as if the sudoku rows themselves were being added.
- In mathematics, we might say the sudoku rows inherit the operations of
- addition and scalar multiplication from the corresponding operations on
- matrices.
+ In mathematics, we might say the sudoku rows inherit
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inheritance
+\end_layout
+
+\end_inset
+
+ the operations of addition and scalar multiplication from the corresponding
+ operations on matrices.
 \end_layout
 
 \begin_layout Standard
@@ -1202,6 +1292,27 @@ So, for the block with determinant
  there was a way to write the third row as a linear combination of the first
  two.
  This bears further investigation, requested in the exercises.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!determinant
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1209,11 +1320,31 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-coefficients The scalar quantities of a linear combination.
+coefficients 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coefficient|textbf
+\end_layout
+
+\end_inset
+
+The scalar quantities of a linear combination.
 \end_layout
 
 \begin_layout Description
-cofactor A scalar quantity denoted 
+cofactor 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+cofactor|textbf
+\end_layout
+
+\end_inset
+
+A scalar quantity denoted 
 \begin_inset Formula $C_{i,j}$
 \end_inset
 
@@ -1234,6 +1365,37 @@ C_{i,j}=(-1)^{i+j}\det A_{\backslash i,j}\label{eq:cofactor}
 
 \begin_layout Description
 determinant 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!determinant|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, determinant}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -1299,7 +1461,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-combination An expression of the form 
+combination 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear combination|textbf
+\end_layout
+
+\end_inset
+
+An expression of the form 
 \begin_inset Formula 
 \[
 c_{1}b_{1}+c_{2}b_{2}+\cdots+c_{n}b_{n}=\sum_{i=1}^{n}c_{i}b_{i}
@@ -1324,7 +1496,17 @@ square
 \begin_inset space ~
 \end_inset
 
-matrix A matrix with the same number or columns as rows.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!square|textbf
+\end_layout
+
+\end_inset
+
+A matrix with the same number or columns as rows.
  An 
 \begin_inset Formula $n\times n$
 \end_inset
@@ -1345,7 +1527,30 @@ M
 \family typewriter
 M.determinant()
 \family default
- is its determinant.
+ is its determinant
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!determinant
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{determinant}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
  The following code computes the determinant of 
 \begin_inset Formula $A=\left[\begin{array}{cccc}
 -12 & 49 & -45 & -10\\

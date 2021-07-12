@@ -101,6 +101,27 @@ name "sec:Matrix-Multiplication"
 \end_inset
 
 Matrix Multiplication
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!multiplication
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -128,7 +149,17 @@ row matrix
 \begin_inset Formula $1\times n$
 \end_inset
 
- matrix) with a 
+ matrix)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!row
+\end_layout
+
+\end_inset
+
+ with a 
 \series bold
 column matrix
 \series default
@@ -136,7 +167,17 @@ column matrix
 \begin_inset Formula $m\times1$
 \end_inset
 
- matrix), you can master the product of any two matrices.
+ matrix)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!column
+\end_layout
+
+\end_inset
+
+, you can master the product of any two matrices.
  The following example illustrates the process.
  
 \begin_inset Formula 
@@ -432,12 +473,30 @@ Transposition and the Dot Product
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dot product
+\end_layout
+
+\end_inset
+
 If 
 \begin_inset Formula $A$
 \end_inset
 
- is a matrix, then its transpose is the matrix resulting from turning the
- rows of 
+ is a matrix, then its transpose
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!transpose
+\end_layout
+
+\end_inset
+
+ is the matrix resulting from turning the rows of 
 \begin_inset Formula $A$
 \end_inset
 
@@ -575,7 +634,26 @@ For example, the
 If you have seen the dot product, a very similar calculation, in physics
  or calculus, think of the row-matrix-column-matrix product as the linear
  algebra equivalent of the dot product.
- 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dot product
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -658,6 +736,16 @@ It's the same calculation! There are enough similarities between column
 \series bold
 column vectors
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!column
+\end_layout
+
+\end_inset
+
  or just vectors, and we call the row-matrix-column-matrix calculation the
  
 \series bold
@@ -691,6 +779,16 @@ A row matrix is sometimes referred to as a
 \series bold
 row vector
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!row|textit
+\end_layout
+
+\end_inset
+
  and can be used to represent vectors like those in physics or calculus
  just as a column vector can.
 \begin_inset ERT
@@ -735,6 +833,16 @@ status open
 
 \backslash
 begin{digression}{Ring}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ring|textit
 \end_layout
 
 \end_inset
@@ -902,6 +1010,27 @@ matrix multiplication is not commutative
 \end_inset
 
  to be equal even when both products are defined.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!multiplication
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -909,11 +1038,75 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
+row
+\begin_inset space ~
+\end_inset
+
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!row|textbf
+\end_layout
+
+\end_inset
+
+A matrix with only one row.
+\end_layout
+
+\begin_layout Description
 column
 \begin_inset space ~
 \end_inset
 
-vector A vector represented as a column matrix.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!column|textbf
+\end_layout
+
+\end_inset
+
+A matrix with only one column.
+\end_layout
+
+\begin_layout Description
+column
+\begin_inset space ~
+\end_inset
+
+vector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!column|textbf
+\end_layout
+
+\end_inset
+
+A vector represented as a column matrix.
+\end_layout
+
+\begin_layout Description
+row
+\begin_inset space ~
+\end_inset
+
+vector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!row|textbf
+\end_layout
+
+\end_inset
+
+A vector represented as a row matrix.
 \end_layout
 
 \begin_layout Description
@@ -922,6 +1115,37 @@ matrix
 \end_inset
 
 multiplication 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!multiplication|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+multiplication
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, multiplication}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -1000,7 +1224,38 @@ For any matrices
 \end_layout
 
 \begin_layout Description
-transpose For any 
+transpose 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!transpose|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transpose
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, transpose}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+For any 
 \begin_inset Formula $m\times n$
 \end_inset
 
@@ -1036,7 +1291,17 @@ transpose For any
 \end_layout
 
 \begin_layout Description
-vector A quantity with both magnitude and direction.
+vector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector|textbf
+\end_layout
+
+\end_inset
+
+A quantity with both magnitude and direction.
 \end_layout
 
 \begin_layout Description
@@ -1044,7 +1309,17 @@ dot
 \begin_inset space ~
 \end_inset
 
-product the dot product of 
+product 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dot product|textbf
+\end_layout
+
+\end_inset
+
+the dot product of 
 \begin_inset Formula $m\times1$
 \end_inset
 
@@ -1072,7 +1347,30 @@ If
 \family typewriter
 M
 \family default
- is a matrix in SageMath, then 
+ is a matrix in SageMath
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!transpose
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{transpose()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, then 
 \family typewriter
 M.transpose()
 \family default
@@ -1286,7 +1584,17 @@ R6RWYw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \family typewriter
 *
 \family default
- operator is used to compute the dot product of two vectors.
+ operator is used to compute the dot product
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!dot product
+\end_layout
+
+\end_inset
+
+ of two vectors.
 \end_layout
 
 \begin_layout LyX-Code

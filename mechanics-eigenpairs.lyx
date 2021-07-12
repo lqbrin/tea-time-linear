@@ -106,6 +106,27 @@ name "sec:Eigenpairs"
 \end_inset
 
 Eigenpairs
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenpair
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -445,6 +466,16 @@ Evidently
 \series bold
 eigenvector
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvector
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $A$
 \end_inset
@@ -498,6 +529,16 @@ eigenvector
 \series bold
 eigenvalue
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvalue
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $A$
 \end_inset
@@ -555,6 +596,16 @@ It is true, for any matrix
 \series bold
 zero vector
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!zero
+\end_layout
+
+\end_inset
+
 .
  Given the truth of this statement for all matrices, it does not tell us
  anything useful about a matrix.
@@ -991,6 +1042,16 @@ is the linchpin in finding eigenvalues and eigenvectors of a matrix, it
 \series bold
 characteristic equation
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+characteristic equation
+\end_layout
+
+\end_inset
+
  (of 
 \begin_inset Formula $M$
 \end_inset
@@ -1012,6 +1073,16 @@ characteristic equation
 \series bold
 characteristic polynomial
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+characteristic polynomial
+\end_layout
+
+\end_inset
+
  (of 
 \begin_inset Formula $M$
 \end_inset
@@ -1050,6 +1121,27 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenpair
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1062,6 +1154,16 @@ characteristic
 \end_inset
 
 equation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+characteristic equation|textbf
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $\det(M-\lambda I)=0$
 \end_inset
 
@@ -1078,6 +1180,16 @@ characteristic
 \end_inset
 
 polynomial 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+characteristic polynomial|textbf
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $\det(M-\lambda I)$
 \end_inset
 
@@ -1089,7 +1201,17 @@ polynomial
 \end_layout
 
 \begin_layout Description
-eigenpair An eigenvalue together with an associated eigenvector.
+eigenpair 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenpair|textbf
+\end_layout
+
+\end_inset
+
+An eigenvalue together with an associated eigenvector.
  
 \begin_inset Formula $(\lambda,\mathbf{v})$
 \end_inset
@@ -1106,7 +1228,17 @@ eigenpair An eigenvalue together with an associated eigenvector.
 \end_layout
 
 \begin_layout Description
-eigenvalue A value 
+eigenvalue 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvalue|textbf
+\end_layout
+
+\end_inset
+
+A value 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -1126,7 +1258,17 @@ eigenvalue A value
 \end_layout
 
 \begin_layout Description
-eigenvector A nonzero vector 
+eigenvector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvector|textbf
+\end_layout
+
+\end_inset
+
+A nonzero vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -1150,7 +1292,17 @@ zero
 \begin_inset space ~
 \end_inset
 
-vector Any vector with a zero for each entry.
+vector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!zero|textbf
+\end_layout
+
+\end_inset
+
+Any vector with a zero for each entry.
 \end_layout
 
 \begin_layout Subsection
@@ -1166,14 +1318,85 @@ M
 \family typewriter
 M.eigenvectors_right()
 \family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!eigenvector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{eigenvectors
+\backslash
+_right()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  lists its eigenvalues and eigenvectors, 
 \family typewriter
 M.eigenvalues()
 \family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!eigenvalue
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{eigenvalues()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  lists only its eigenvalues, and 
 \family typewriter
 M.charpoly()
 \family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!charpoly
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{charpoly()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  gives its characteristic polynomial.
  The following code computes the eigenvalues, eigenvectors, and characteristic
  polynomial of 

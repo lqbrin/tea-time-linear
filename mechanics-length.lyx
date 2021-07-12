@@ -112,6 +112,15 @@ Geometric Interpretation of Vectors
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!geometric interpretation
+\end_layout
+
+\end_inset
+
 One day my friend Victor took a 5 kilometer drive.
  When Victor told me this I knew just how long his drive was.
  It was 5 kilometers.
@@ -252,6 +261,16 @@ And I knew exactly where to put it since it started just where the previous
 \begin_layout Standard
 As the crow flies, Victor's total displacement or movement for the drive
  is represented by the sum of the vectors,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!addition
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -339,6 +358,15 @@ Perpendicularity
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+perpendicular vectors
+\end_layout
+
+\end_inset
+
 The length of a vector, not surprisingly, is defined by the length of its
  representative arrow.
  A collection of vectors pointing in various directions, including vertical
@@ -389,6 +417,16 @@ Coincidentally the dot product of
 \end_inset
 
 , is
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dot product
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -417,7 +455,7 @@ so the length of
 \end_inset
 
 .
- It could apply to vectors with 3, 8, or 28 entries just as wel as vectors
+ It could apply to vectors with 3, 8, or 28 entries just as well as vectors
  with 2 entries.
  Indeed, this is how the length, or magnitude, of a vector is defined for
  any size vector.
@@ -425,6 +463,16 @@ so the length of
 \series bold
 length
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!length
+\end_layout
+
+\end_inset
+
  of a vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
@@ -573,6 +621,16 @@ As with the formula
 \series bold
 orthogonal
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal
+\end_layout
+
+\end_inset
+
  if and only if their dot product is zero.
  For vectors with two or three entries this means the vectors are perpendicular.
  As a result, orthogonality is precisely the same as perpendicularity in
@@ -626,6 +684,15 @@ If
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!subtraction
+\end_layout
+
+\end_inset
+
  Easy to picture in two dimensions, this formula applies to vectors of any
  length again extending a two- and three-dimensional notion to higher dimensions.
 \end_layout
@@ -647,7 +714,17 @@ of
 \begin_inset space ~
 \end_inset
 
-vectors Vectors are often thought of as displacements represented by arrows.
+vectors 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!geometric interpretation|textbf
+\end_layout
+
+\end_inset
+
+Vectors are often thought of as displacements represented by arrows.
 \end_layout
 
 \begin_layout Description
@@ -667,12 +744,53 @@ vector
 \begin_inset space ~
 \end_inset
 
-sum The sum of two vectors is represented geometrically by a diagonal of
- the parallelogram determined by the two vectors.
+sum 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!addition|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+addition!vector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{vector, addition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The sum of two vectors is represented geometrically by a diagonal of the
+ parallelogram determined by the two vectors.
 \end_layout
 
 \begin_layout Description
-length of a column vector 
+length 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!length|textbf
+\end_layout
+
+\end_inset
+
+of a column vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -692,11 +810,83 @@ length of a column vector
 \end_layout
 
 \begin_layout Description
-orthogonal Two vectors whose dot product is defined and zero are orthogonal.
+orthogonal 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!orthogonality
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{orthogonal}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Two vectors whose dot product is defined and zero are orthogonal.
 \end_layout
 
 \begin_layout Description
-distance The distance between two vectors, 
+distance 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+distance|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!subtraction|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+subtraction!vector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{vector, subtraction}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The distance between two vectors, 
 \begin_inset Formula $d(\mathbf{u},\mathbf{v})$
 \end_inset
 
@@ -712,8 +902,31 @@ SageMath
 \end_layout
 
 \begin_layout Standard
-SageMath distinguishes between vectors and matrices, but just like in mathematic
-s the distinction is blurry.
+SageMath
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!vector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{vector()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ distinguishes between vectors and matrices, but just like in mathematics
+ the distinction is blurry.
  The SageMath code
 \end_layout
 
@@ -810,8 +1023,17 @@ produces
 
 \begin_layout Standard
 SageMath's internal process of converting one type of variable to another
- to avoid throwing an error, a process called coersion, can produce unanticipate
-d results.
+ to avoid throwing an error, a process called coersion
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!coersion
+\end_layout
+
+\end_inset
+
+, can produce unanticipated results.
  More predictable results are obtained by explicitly converting one type
  of variable to another.
  The SageMath code
@@ -927,6 +1149,38 @@ since the multiplicands are both matrices.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!length
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!norm
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{norm()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The length of a vector can be computed using the 
 \family typewriter
 .norm()

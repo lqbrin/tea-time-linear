@@ -126,6 +126,27 @@ name "sec:WhatIs"
 \end_inset
 
 Matrices
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -134,16 +155,6 @@ The fundamental object of linear algebra is the
 \series bold
 matrix
 \series default
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-matrix
-\end_layout
-
-\end_inset
-
 .
  A matrix is very much like a table or a spreadsheet, but without headings,
  labels, or lines.
@@ -225,6 +236,16 @@ usu.
 
 \shape default
  delimited by parentheses or square brackets.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix|textit
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -277,6 +298,16 @@ The
 \series bold
 size of a matrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!size
+\end_layout
+
+\end_inset
+
  is described by its number of rows 
 \begin_inset Quotes eld
 \end_inset
@@ -315,7 +346,17 @@ two by three
  entries
 \series default
 .
- The entry in the 
+ The entry
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!entry
+\end_layout
+
+\end_inset
+
+ in the 
 \begin_inset Formula $i^{th}$
 \end_inset
 
@@ -396,6 +437,16 @@ begin{digression}{Other Notations for Entries}
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!entry|textit
+\end_layout
+
+\end_inset
+
 The subscripted lower case counterpart to a matrix variable is often used
  to represent the entries of a matrix.
  You will often see 
@@ -438,6 +489,16 @@ Two matrices are
 equal
 \series default
  if they are the same size and corresponding entries are equal.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!equality
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -501,6 +562,16 @@ A
 \series bold
 submatrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+submatrix
+\end_layout
+
+\end_inset
+
  of a matrix 
 \begin_inset Formula $M$
 \end_inset
@@ -1266,7 +1337,27 @@ While the meaning of the entries in the grocery items example is stated
  simply be implied or understood from context.
  In any case, if the numbers in a matrix are to have contextual meaning,
  that information must be supplied separately.
- 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1274,8 +1365,18 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-matrix A rectangular array of algebraic quantities usually delimited by
- parentheses or square brackets.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix|textbf
+\end_layout
+
+\end_inset
+
+A rectangular array of algebraic quantities usually delimited by parentheses
+ or square brackets.
  Upper case letters are used for variables representing matrices.
 \end_layout
 
@@ -1284,7 +1385,17 @@ matrix A rectangular array of algebraic quantities usually delimited by
 \begin_inset space ~
 \end_inset
 
-entry One of the individual quantities in a matrix.
+entry 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!entry|textbf
+\end_layout
+
+\end_inset
+
+One of the individual quantities in a matrix.
 \end_layout
 
 \begin_layout Description
@@ -1292,7 +1403,17 @@ entry One of the individual quantities in a matrix.
 \begin_inset space ~
 \end_inset
 
-size The number of rows 
+size 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!size|textbf
+\end_layout
+
+\end_inset
+
+The number of rows 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1308,18 +1429,48 @@ matrix
 \begin_inset space ~
 \end_inset
 
-equality Two matrices are equal if they are the same size and corresponding
- entries are equal.
+equality 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!equality|textbf
+\end_layout
+
+\end_inset
+
+Two matrices are equal if they are the same size and corresponding entries
+ are equal.
 \end_layout
 
 \begin_layout Description
-submatrix The matrix resulting from deleting some number of rows (less than
- the total number of rows) and some number of columns (less than the total
- number of columns) from a matrix.
+submatrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+submatrix|textbf
+\end_layout
+
+\end_inset
+
+The matrix resulting from deleting some number of rows (less than the total
+ number of rows) and some number of columns (less than the total number
+ of columns) from a matrix.
 \end_layout
 
 \begin_layout Description
-Notation
+Notation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!notation|textbf
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1507,6 +1658,16 @@ In computer science, giving a value to a variable is called
 instantiation
 \shape default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+instantiation|textit
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -1665,6 +1826,39 @@ Mathematics
 
 \begin_layout Plain Layout
 SageMath (0-indexed)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{matrix()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!submatrix
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1934,7 +2128,7 @@ S
  When the code is run (evaluated), it seems nothing has happened! Test it
  by following this link:
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2011,6 +2205,16 @@ Here is a screenshot of this code being processed at
 SageCell.SageMath.org
 \family default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!SageCell screenshot
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2028,7 +2232,7 @@ SageCell.SageMath.org
 
 Live at 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2062,7 +2266,17 @@ begin{digression}{Nested Statements in SageMath}
 
 \begin_layout Standard
 \noindent
-SageMath statements may be nested.
+SageMath statements may be nested
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!nested statement|textit
+\end_layout
+
+\end_inset
+
+.
  That is, one statement may appear as the argument (inside) of another.
  For example, the code
 \end_layout

@@ -647,6 +647,19 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Indexing for sections below.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "mechanics-rowoperations.lyx"
@@ -724,6 +737,19 @@ filename "matrixalgebra-linearindependence.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "matrixalgebra-characterizations.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Answers and solutions for sections below.
+\end_layout
 
 \end_inset
 
