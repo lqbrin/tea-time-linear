@@ -1053,6 +1053,19 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-1"
+
+\end_inset
+
 The row operations that reduce a matrix 
 \begin_inset Formula $A$
 \end_inset
@@ -1075,6 +1088,29 @@ are given.
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:square-characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1127,7 +1163,36 @@ Row replacements only.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-2"
+
+\end_inset
+
 Row replacements and row swaps only.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:square-characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1201,7 +1266,7 @@ Row reduce to a triangular matrix to compute the determinant.
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{cc}
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{cc}
 -3 & 10\\
 -15 & -10
 \end{array}\right]}$
@@ -1211,17 +1276,47 @@ Row reduce to a triangular matrix to compute the determinant.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{cc}
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-3"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{cc}
 -12 & 12\\
 14 & 6
 \end{array}\right]}$
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:square-characterization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{cc}
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{cc}
 9 & -7\\
 4 & 7
 \end{array}\right]}$
@@ -1231,7 +1326,7 @@ Row reduce to a triangular matrix to compute the determinant.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{ccc}
 16 & -3 & -2\\
 -8 & 4 & -2\\
 -8 & 1 & 2
@@ -1242,7 +1337,7 @@ Row reduce to a triangular matrix to compute the determinant.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{ccc}
 -10 & 12 & -50\\
 20 & -18 & 80\\
 -30 & 18 & -80
@@ -1253,7 +1348,14 @@ Row reduce to a triangular matrix to compute the determinant.
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-4"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{ccc}
 -11 & -15 & 4\\
 8 & 9 & -4\\
 -3 & -3 & 2
@@ -1261,10 +1363,40 @@ Row reduce to a triangular matrix to compute the determinant.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:square-characterization-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-5"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{cccc}
 3 & 90 & -308 & -6\\
 -3 & -140 & 484 & 10\\
 6 & 210 & -737 & -16\\
@@ -1273,10 +1405,33 @@ Row reduce to a triangular matrix to compute the determinant.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:square-characterization-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
+\begin_inset Formula ${\displaystyle M=\left[\begin{array}{cccc}
 -80 & -161 & -18 & 55\\
 80 & 154 & 27 & -66\\
 0 & 0 & 9 & -11\\
@@ -1306,11 +1461,41 @@ Compute the determinant using a judicious combination of row expansion,
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-6"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
 -1 & 5 & -1\\
 0 & 6 & -1\\
 4 & -10 & 2
 \end{array}\right]}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:square-characterization-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1399,11 +1584,41 @@ Is the matrix invertible? Explain.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-7"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
 1 & 1 & 3\\
 4 & 7 & 11\\
 0 & 3 & 20
 \end{array}\right]}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:square-characterization-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1474,6 +1689,12 @@ Explain why a matrix with a pivot position in every row and every column
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-8"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $G$
 \end_inset
@@ -1492,6 +1713,29 @@ Suppose
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:square-characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1511,6 +1755,12 @@ If
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-9"
+
+\end_inset
+
 If 
 \begin_inset Formula $M$
 \end_inset
@@ -1521,6 +1771,29 @@ If
 
  are linearly indepedent.
  Explain why.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:square-characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1548,11 +1821,40 @@ If
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:square-characterization-10"
+
+\end_inset
+
 If a square matrix 
 \begin_inset Formula $B$
 \end_inset
 
  cannot be reduced to the identity matrix, what can you say about
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:square-characterization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1584,7 +1886,7 @@ Describe the row echelon form of an invertible matrix.
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:square-characterization"
+name "exc:square-characterization-11"
 
 \end_inset
 

@@ -2662,6 +2662,12 @@ Putting these three facts together, it is easy to justify the following
 \end_layout
 
 \begin_layout Itemize
+\begin_inset CommandInset label
+LatexCommand label
+name "par:effect-of-swap-on-determinant"
+
+\end_inset
+
 If 
 \begin_inset Formula $B$
 \end_inset
@@ -2701,6 +2707,12 @@ If
 
 \end_deeper
 \begin_layout Itemize
+\begin_inset CommandInset label
+LatexCommand label
+name "par:effect-of-scale-on-determinant"
+
+\end_inset
+
 If 
 \begin_inset Formula $B$
 \end_inset
@@ -2892,7 +2904,7 @@ if
 Justifications are requested in exercises 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:determinant-revisited-1"
+reference "exc:determinant-revisited-8"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2902,7 +2914,7 @@ noprefix "false"
  and 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:determinant-revisited-2"
+reference "exc:determinant-revisited-9"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2926,7 +2938,14 @@ noprefix "false"
 \begin_inset Formula $\det B=c\det A$
 \end_inset
 
- make it a straighforward matter to prove that if 
+ make it a straighforward matter to prove that 
+\begin_inset CommandInset label
+LatexCommand label
+name "par:effect-of-replacement-on-determinant"
+
+\end_inset
+
+if 
 \begin_inset Formula $B$
 \end_inset
 
@@ -3213,18 +3232,54 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited"
+
+\end_inset
+
 Take advantage of the fact that the determinant may be expanded along any
  row or any column to compute the determinant.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-1"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
 0 & -2 & 0 & 9\\
 -4 & 0 & 1 & 0\\
 4 & -9 & 0 & -2\\
 0 & 0 & 0 & 4
 \end{array}\right]}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-revisited-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -3295,12 +3350,42 @@ Find the determinant of the triangular matrix.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-2"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \left[\begin{array}{cccc}
 2 & 0 & 0 & 0\\
 -1 & 8 & 0 & 0\\
 1 & 8 & 4 & 0\\
 -2 & -2 & 8 & 7
 \end{array}\right]}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-revisited-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -3320,6 +3405,12 @@ Find the determinant of the triangular matrix.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-3"
+
+\end_inset
+
 Use the fact that
 \begin_inset Formula 
 \[
@@ -3333,6 +3424,29 @@ Use the fact that
 \end_inset
 
  to compute the determinant of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:determinant-revisited-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3484,6 +3598,12 @@ Use the fact that
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-4"
+
+\end_inset
+
 Use the fact that
 \begin_inset Formula 
 \[
@@ -3497,6 +3617,29 @@ Use the fact that
 \end_inset
 
  to compute the determinant of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-revisited-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3678,6 +3821,12 @@ Use the fact that
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-5"
+
+\end_inset
+
 Use the facts that
 \begin_inset Formula 
 \[
@@ -3721,6 +3870,29 @@ to determine
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-revisited-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3808,6 +3980,12 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-6"
+
+\end_inset
+
 Let 
 \begin_inset Formula $M$
 \end_inset
@@ -3826,6 +4004,29 @@ Let
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-revisited-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3895,6 +4096,12 @@ Suppose
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:determinant-revisited-7"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $M$
 \end_inset
@@ -3913,28 +4120,35 @@ Suppose
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
 \end_layout
 
-\begin_layout Enumerate
-Prove that if 
-\begin_inset Formula $A$
 \end_inset
 
- is a square matrix and 
-\begin_inset Formula $E$
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:determinant-revisited-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- is an elementary matrix, then 
-\begin_inset Formula $\det(AE)=\det E\cdot\det A$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:determinant-revisited-1"
+name "exc:determinant-revisited-8"
 
 \end_inset
 
@@ -3996,7 +4210,7 @@ if
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:determinant-revisited-2"
+name "exc:determinant-revisited-9"
 
 \end_inset
 
@@ -4026,7 +4240,7 @@ if
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:determinant-revisited"
+name "exc:determinant-revisited-10"
 
 \end_inset
 

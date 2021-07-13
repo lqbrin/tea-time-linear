@@ -647,12 +647,9 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Indexing for sections below.
-\end_layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "mechanics-rowoperations.lyx"
 
 \end_inset
 
@@ -660,9 +657,12 @@ TODO: Indexing for sections below.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "mechanics-rowoperations.lyx"
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Indexing for sections below.
+\end_layout
 
 \end_inset
 
@@ -744,19 +744,6 @@ filename "matrixalgebra-characterizations.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Answers and solutions for sections below.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "matrixalgebra-determinant-revisited.lyx"
@@ -770,6 +757,19 @@ filename "matrixalgebra-determinant-revisited.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "matrixalgebra-square-characterizations.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Answers and solutions for sections below.
+\end_layout
 
 \end_inset
 

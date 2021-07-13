@@ -7726,5 +7726,763 @@ noprefix "false"
 , and the proof is complete.
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-revisited-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:determinant-revisited"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:determinant-revisited-1"
+
+\end_inset
+
+It is advantageous to expand along rows and columns with many zeros since
+ corresponding cofactors will not need to be computed.
+ They will be multiplied by the zero entry in the computation of the determinant
+ anyway.
+ In this case, the fourth row has three zeros:
+\begin_inset Formula 
+\[
+\left|\begin{array}{cccc}
+0 & -2 & 0 & 9\\
+-4 & 0 & 1 & 0\\
+4 & -9 & 0 & -2\\
+0 & 0 & 0 & 4
+\end{array}\right|=4(1)\left|\begin{array}{ccc}
+0 & -2 & 0\\
+-4 & 0 & 1\\
+4 & -9 & 0
+\end{array}\right|=4(-2)(-1)\left|\begin{array}{cc}
+-4 & 1\\
+4 & 0
+\end{array}\right|=8(-4)=-32
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ determinant is expanded along the first row since it contains two zeros.
+ The 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ determinant, at this point, is probably as simple as having memorized the
+ pattern (upper left times lower right minus upper right times lower left).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-revisited-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:determinant-revisited-2"
+
+\end_inset
+
+The determinant of any triangular matrix is the product of the entries on
+ its main diagonal.
+ In this case, 
+\begin_inset Formula $2\cdot8\cdot4\cdot7=448$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:determinant-revisited-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:determinant-revisited-3"
+
+\end_inset
+
+(a) 
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+ is a swap matrix, so the determinant of the product is 
+\begin_inset Formula $-1$
+\end_inset
+
+ times the determinant of the given matrix (see justification on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:effect-of-swap-on-determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+): 
+\begin_inset Formula $(-1)(32)=-32$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(b) 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & \frac{1}{128}
+\end{array}\right]$
+\end_inset
+
+ is a scale matrix, so the determinant of the product is the scale factor,
+ 
+\begin_inset Formula $\frac{1}{128}$
+\end_inset
+
+, times the determinant of the given matrix (see justification on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:effect-of-scale-on-determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+): 
+\begin_inset Formula $\frac{1}{128}(32)=\frac{1}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(c) 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & -\frac{7}{9}\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+ is a replacement matrix, so the determinant of the product is the same
+ as the determinant of the given matrix (see justification on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:effect-of-replacement-on-determinant"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+): 
+\begin_inset Formula $32$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(d) The matrices 
+\begin_inset Formula $\left[\begin{array}{ccc}
+3 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+18 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+ are a scale by 
+\begin_inset Formula $3$
+\end_inset
+
+ and a replacement.
+ Their effect on the determinant of the product is, altogether, to multiply
+ it by 3: 
+\begin_inset Formula $3(32)=96$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Square-Matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization-1"
+
+\end_inset
+
+The determinant of the given matrix is 
+\begin_inset Formula $120$
+\end_inset
+
+.
+ (a) Row replacements do not change the determinant of a matrix, so the
+ original matrix must have had determinant 
+\begin_inset Formula $120$
+\end_inset
+
+ as well.
+ (b) Row replacements do not change the determinant of a matrix, and row
+ swaps change the sign of the determinant.
+ Therefore 
+\begin_inset Formula $(\det A)(-1)^{3}=120$
+\end_inset
+
+ so 
+\begin_inset Formula $\det A=-120$
+\end_inset
+
+.
+ (c) Row replacements do not change the determinant of a matrix, and row
+ scaling multiplies the determinant by the scale factor.
+ Therefore 
+\begin_inset Formula $(\det A)(6)(5)=120$
+\end_inset
+
+ so 
+\begin_inset Formula $\det A=4$
+\end_inset
+
+.
+ Row replacements do not change the determinant of a matrix, row scaling
+ multiplies the determinant by the scale factor, and row swaps change the
+ sign of the determinant.
+ Therefore 
+\begin_inset Formula $(\det A)(10)(-1)^{2}=120$
+\end_inset
+
+ so 
+\begin_inset Formula $\det A=12$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization-2"
+
+\end_inset
+
+The determinant of the given matrix is the product of the entries on the
+ main diagonal (since the matrix is triangular): 
+\begin_inset Formula $(-2)(-1)(5)(6)=60$
+\end_inset
+
+.
+ Row replacements do not change the determinant of a matrix, and row swaps
+ change the sign of the determinant.
+ Therefore 
+\begin_inset Formula $(\det A)(-1)^{k}=60$
+\end_inset
+
+ where 
+\begin_inset Formula $k$
+\end_inset
+
+ is the number of row swaps.
+ Since 
+\begin_inset Formula $(-1)^{k}$
+\end_inset
+
+ equals 
+\begin_inset Formula $1$
+\end_inset
+
+ or 
+\begin_inset Formula $-1$
+\end_inset
+
+, 
+\begin_inset Formula $\det A=\pm60$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization-3"
+
+\end_inset
+
+Row reducing:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-12 & 12\\
+14 & 6
+\end{array}\right]\stackrel{-\frac{1}{12}M_{1,:}\to M_{1,:}}{\longrightarrow}\left[\begin{array}{cc}
+1 & 1\\
+14 & 6
+\end{array}\right]\stackrel{-14M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{cc}
+1 & 1\\
+0 & -8
+\end{array}\right]
+\]
+
+\end_inset
+
+The determinant of a triangular matrix is the product of the entries of
+ the diagonal, so 
+\begin_inset Formula $\det\left(\begin{array}{cc}
+1 & 1\\
+0 & -8
+\end{array}\right)=-8$
+\end_inset
+
+.
+ The triangular matrix was gotten by scaling with factor 
+\begin_inset Formula $-\frac{1}{12}$
+\end_inset
+
+ and one row replacement.
+ Hence the determinant of 
+\begin_inset Formula $M$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $(\det M)\left(-\frac{1}{12}\right)=-8$
+\end_inset
+
+ so 
+\begin_inset Formula $\det M=96$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization-6"
+
+\end_inset
+
+Row reducing:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{ccc}
+-11 & -15 & 4\\
+8 & 9 & -4\\
+-3 & -3 & 2
+\end{array}\right]\stackrel[-11M_{3,:}\to M_{3,:}]{11M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-11 & -15 & 4\\
+88 & 99 & -44\\
+33 & 33 & -22
+\end{array}\right]\stackrel[3M_{1,:}+M_{3,:}\to M_{3,:}]{8M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-11 & -15 & 4\\
+0 & -21 & -12\\
+0 & -12 & -10
+\end{array}\right]\\
+\stackrel[\frac{7}{2}M_{3,:}\to M_{3,:}]{-\frac{1}{3}M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-11 & -15 & 4\\
+0 & 7 & 4\\
+0 & -42 & -35
+\end{array}\right]\stackrel{6M_{2,:}+M_{3,:}\to M_{3,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-11 & -15 & 4\\
+0 & 7 & 4\\
+0 & 0 & -11
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+The determinant of a triangular matrix is the product of the entries of
+ the diagonal, so 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{ccc}
+-11 & -15 & 4\\
+0 & 7 & 4\\
+0 & 0 & -11
+\end{array}\right)=7(11)^{2}.
+\]
+
+\end_inset
+
+ The triangular matrix was gotten by scaling with factors 
+\begin_inset Formula $11,-11,-\frac{1}{3},\frac{7}{2}$
+\end_inset
+
+ and three row replacements.
+ Hence the determinant of 
+\begin_inset Formula $M$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $(\det M)(11)(-11)\left(-\frac{1}{3}\right)\left(\frac{7}{2}\right)=7(11)^{2}$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\[
+\det M=\frac{7(11)^{2}(2)(3)}{11(-11)(-7)}=6.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization-7"
+
+\end_inset
+
+Row reducing:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cccc}
+3 & 90 & -308 & -6\\
+-3 & -140 & 484 & 10\\
+6 & 210 & -737 & -16\\
+3 & 70 & -231 & -4
+\end{array}\right]\stackrel[\begin{array}{c}
+{\scriptstyle -2M_{1,:}+M_{3,:}\to M_{3,:}}\\
+{\scriptstyle -M_{1,:}+M_{4,:}\to M_{4,:}}
+\end{array}]{M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{cccc}
+3 & 90 & -308 & -6\\
+0 & -50 & 176 & 4\\
+0 & 30 & -121 & -4\\
+0 & -20 & 77 & 2
+\end{array}\right]\stackrel[-5M_{4,:}\to M_{4,:}]{5M_{3,:}\to M_{3,:}}{\longrightarrow}\\
+\left[\begin{array}{cccc}
+3 & 90 & -308 & -6\\
+0 & -50 & 176 & 4\\
+0 & 150 & -605 & -20\\
+0 & 100 & -385 & -10
+\end{array}\right]\stackrel[2M_{2,:}+M_{4,:}\to M_{4,:}]{3M_{2,:}+M_{3,:}\to M_{3,:}}{\longrightarrow}\left[\begin{array}{cccc}
+3 & 90 & -308 & -6\\
+0 & -50 & 176 & 4\\
+0 & 0 & -77 & -8\\
+0 & 0 & -33 & -2
+\end{array}\right]\stackrel{-7M_{4,:}\to M_{4,:}}{\longrightarrow}\\
+\left[\begin{array}{cccc}
+3 & 90 & -308 & -6\\
+0 & -50 & 176 & 4\\
+0 & 0 & -77 & -8\\
+0 & 0 & 231 & 14
+\end{array}\right]\stackrel{3M_{3,:}+M_{4,:}\to M_{4,:}}{\longrightarrow}\left[\begin{array}{cccc}
+3 & 90 & -308 & -6\\
+0 & -50 & 176 & 4\\
+0 & 0 & -77 & -8\\
+0 & 0 & 0 & -10
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+The determinant of a triangular matrix is the product of the entries of
+ the diagonal, so 
+\begin_inset Formula 
+\[
+\det\left(\begin{array}{cccc}
+3 & 90 & -308 & -6\\
+0 & -50 & 176 & 4\\
+0 & 0 & -77 & -8\\
+0 & 0 & 0 & -10
+\end{array}\right)=-(3)(50)(77)(10).
+\]
+
+\end_inset
+
+ The triangular matrix was gotten by scaling with factors 
+\begin_inset Formula $5,-5,-7,$
+\end_inset
+
+ and three row replacements.
+ Hence the determinant of 
+\begin_inset Formula $M$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $(\det M)(5)(-5)(-7)=-3(50)(77)(10)$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\[
+\det M=\frac{-3(50)(77)(10)}{(5)(-5)(-7)}=-3(10)(-11)(-2)=-660.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization-4"
+
+\end_inset
+
+Eliminating the 4 by row replacement and then expanding along the first
+ column:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-1 & 5 & -1\\
+0 & 6 & -1\\
+4 & -10 & 2
+\end{array}\right]\stackrel{4M_{1,:}+M_{3,:}\to M_{3,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-1 & 5 & -1\\
+0 & 6 & -1\\
+0 & 10 & -2
+\end{array}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\left|\begin{array}{ccc}
+-1 & 5 & -1\\
+0 & 6 & -1\\
+0 & 10 & -2
+\end{array}\right|=(-1)\left|\begin{array}{cc}
+6 & -1\\
+10 & -2
+\end{array}\right|=(-1)(-12+10)=2.
+\]
+
+\end_inset
+
+Since the original matrix was only changed by row replacement, its determinant
+ and the determinant of the resulting matrix are equal.
+ Hence 
+\begin_inset Formula 
+\[
+\left|\begin{array}{ccc}
+-1 & 5 & -1\\
+0 & 6 & -1\\
+4 & -10 & 2
+\end{array}\right|=2.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:square-characterization-5"
+
+\end_inset
+
+Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives a number of conditions equivalent to invertibility of a square matrix
+ 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Among them are (vi) 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every column; (vii) 
+\begin_inset Formula $M$
+\end_inset
+
+ has a pivot position in every row; and (xiii) 
+\begin_inset Formula $\det M\neq0$
+\end_inset
+
+.
+ If we can show any one of these, we will know that the given matrix is
+ invertible.
+ Row reducing:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 1 & 3\\
+4 & 7 & 11\\
+0 & 3 & 20
+\end{array}\right]\stackrel{-4M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 1 & 3\\
+0 & 3 & -1\\
+0 & 3 & 20
+\end{array}\right]\stackrel{-M_{2,:}+M_{3,:}\to M_{3,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 1 & 3\\
+0 & 3 & -1\\
+0 & 0 & 21
+\end{array}\right]
+\]
+
+\end_inset
+
+At this point, we can see all of (vi), (vii), and (xiii) are true.
+ We may pick any one of them to explain why the given matrix is invertible.
+ For example, the given matrix has nonzero determinant and is therefore
+ invertible.
+\end_layout
+
 \end_body
 \end_document

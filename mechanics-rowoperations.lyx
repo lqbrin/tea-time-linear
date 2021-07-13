@@ -161,6 +161,16 @@ begin{digression}{Yanghui Triangle}
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Yanghui triangle|textit
+\end_layout
+
+\end_inset
+
 In China, the triangular arrangement of binomial coefficients, the first
  five rows of which are
 \begin_inset Formula 
@@ -219,6 +229,16 @@ In our modern treatment of systems of linear equations, a
 \series bold
 linear equation
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear equation
+\end_layout
+
+\end_inset
+
  is an equation that takes the form 
 \begin_inset Formula 
 \begin{equation}
@@ -248,6 +268,16 @@ for coefficients
 \series bold
 solution of the equation
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear equation!solution
+\end_layout
+
+\end_inset
+
  if and only if substitution of the values 
 \begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
 \end_inset
@@ -261,6 +291,16 @@ solution of the equation
 \series bold
 linear system
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system
+\end_layout
+
+\end_inset
+
  or 
 \series bold
 system of linear equations
@@ -274,6 +314,16 @@ system of linear equations
 \series bold
 solution of a linear system
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!solution
+\end_layout
+
+\end_inset
+
  if and only if it is a solution of every equation in the system.
  The set of equations (
 \begin_inset CommandInset ref
@@ -728,6 +778,15 @@ noprefix "false"
 elementary row operations
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation
+\end_layout
+
+\end_inset
+
  To summarize and name them, the elementary row operations are
 \end_layout
 
@@ -737,6 +796,16 @@ elementary row operations
 Swap
 \series default
 : swap two rows.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!swap
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -745,6 +814,16 @@ Swap
 Scale
 \series default
 : multiply each entry in a row by a scalar.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!scale
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -753,6 +832,16 @@ Scale
 Replace
 \series default
 : add a multiple of one row to another.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!replace
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -776,6 +865,15 @@ Any matrix resulting from performing an elementary row operation on an identity
 elementary matrix
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!elementary (row)
+\end_layout
+
+\end_inset
+
  For example
 \begin_inset Formula 
 \[
@@ -1041,12 +1139,43 @@ elementary
 \begin_inset space ~
 \end_inset
 
-row
+(row)
 \begin_inset space ~
 \end_inset
 
-matrix The matrix resulting from performing a single row operation on an
- identity matrix.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!elementary (row)|textbf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) matrix|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{matrix, elementary (row)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The matrix resulting from performing a single row operation on an identity
+ matrix.
 \end_layout
 
 \begin_layout Description
@@ -1054,11 +1183,21 @@ elementary
 \begin_inset space ~
 \end_inset
 
-row
+(row)
 \begin_inset space ~
 \end_inset
 
-operation One of swap, scale, or replace.
+operation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation|textbf
+\end_layout
+
+\end_inset
+
+One of swap, scale, or replace.
 \end_layout
 
 \begin_layout Description
@@ -1066,7 +1205,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-equation An equation of the form 
+equation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear equation|textbf
+\end_layout
+
+\end_inset
+
+An equation of the form 
 \begin_inset Formula $c_{1}v_{1}+c_{2}v_{2}+\cdots+c_{n}v_{n}=b$
 \end_inset
 
@@ -1090,7 +1239,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-system Another name for a system of linear equations.
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system|textbf
+\end_layout
+
+\end_inset
+
+Another name for a system of linear equations.
 \end_layout
 
 \begin_layout Description
@@ -1098,7 +1257,17 @@ system Another name for a system of linear equations.
 \begin_inset space ~
 \end_inset
 
-swap Swapping two rows of a matrix.
+swap 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!swap|textbf
+\end_layout
+
+\end_inset
+
+Swapping two rows of a matrix.
 \end_layout
 
 \begin_layout Description
@@ -1106,7 +1275,17 @@ swap Swapping two rows of a matrix.
 \begin_inset space ~
 \end_inset
 
-scale Multiplying each entry of a single row of a matrix by a nonzero scalar.
+scale 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!scale|textbf
+\end_layout
+
+\end_inset
+
+Multiplying each entry of a single row of a matrix by a nonzero scalar.
 \end_layout
 
 \begin_layout Description
@@ -1114,8 +1293,18 @@ scale Multiplying each entry of a single row of a matrix by a nonzero scalar.
 \begin_inset space ~
 \end_inset
 
-replace Replacing a row of a matrix with the sum of it plus some multiple
- of another row.
+replace 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!replace|textbf
+\end_layout
+
+\end_inset
+
+Replacing a row of a matrix with the sum of it plus some multiple of another
+ row.
 \end_layout
 
 \begin_layout Description
@@ -1151,7 +1340,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-system An (ordered) list of values 
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!solution|textbf
+\end_layout
+
+\end_inset
+
+An (ordered) list of values 
 \begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
 \end_inset
 
@@ -1175,7 +1374,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-equation An (ordered) list of values 
+equation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear equation!solution|textbf
+\end_layout
+
+\end_inset
+
+An (ordered) list of values 
 \begin_inset Formula $s_{1},s_{2},\ldots,s_{n}$
 \end_inset
 
