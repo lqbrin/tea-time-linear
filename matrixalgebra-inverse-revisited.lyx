@@ -563,8 +563,8 @@ noprefix "false"
 \end_inset
 
 ).
- Ironically the ideas presented recently give us the tools to prove that
- (
+ Ironically the ideas presented recently give us the tools to finally prove
+ that (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:inverse_by_adjugate"
@@ -950,6 +950,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited"
+
+\end_inset
+
 Find the inverse by row reduction.
 \end_layout
 
@@ -975,6 +981,13 @@ Find the inverse by row reduction.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-1"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \left[\begin{array}{cc}
 9 & -7\\
 4 & 7
@@ -982,14 +995,67 @@ Find the inverse by row reduction.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inverse-revisited-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-2"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle \left[\begin{array}{ccc}
 16 & -3 & -2\\
 -8 & 4 & -2\\
 -8 & 1 & 2
 \end{array}\right]}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inverse-revisited-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1031,6 +1097,12 @@ Find the inverse by row reduction.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-3"
+
+\end_inset
+
 If 
 \begin_inset Formula $\det M=2$
 \end_inset
@@ -1048,6 +1120,29 @@ If
 \end_inset
 
  are the same size, find
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inverse-revisited-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1174,7 +1269,36 @@ Explain why
 \end_layout
 
 \begin_layout Enumerate
-Suppose 
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-4"
+
+\end_inset
+
+Suppose
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inverse-revisited-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 AA^{T}=\left[\begin{array}{cc}
@@ -1185,17 +1309,31 @@ AA^{T}=\left[\begin{array}{cc}
 
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 Is 
 \begin_inset Formula $A$
 \end_inset
 
- necessarily invertible? What if 
+ necessarily invertible?
+\end_layout
+
+\begin_layout Enumerate
+If 
 \begin_inset Formula $A$
 \end_inset
 
- is square?
+ is square, is 
+\begin_inset Formula $A$
+\end_inset
+
+ necessarily invertible?
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 If 
 \begin_inset Formula $\lambda$
@@ -1213,6 +1351,12 @@ If
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-5"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $M-cI$
 \end_inset
@@ -1227,6 +1371,29 @@ Suppose
 \end_inset
 
 ? Explain.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inverse-revisited-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1264,6 +1431,13 @@ Use row reduction to find the eigenvectors corresponding to the given eigenvalue
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-6"
+
+\end_inset
+
+
 \begin_inset Formula $A=\left[\begin{array}{cc}
 2 & 4\\
 -3 & -4
@@ -1272,6 +1446,29 @@ Use row reduction to find the eigenvectors corresponding to the given eigenvalue
 
 ; 
 \begin_inset Formula $\lambda=-1-i\sqrt{3}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inverse-revisited-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1293,6 +1490,13 @@ Use row reduction to find the eigenvectors corresponding to the given eigenvalue
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-7"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle A=\left[\begin{array}{ccc}
 14 & 9 & 18\\
 12 & 17 & -18\\
@@ -1302,6 +1506,29 @@ Use row reduction to find the eigenvectors corresponding to the given eigenvalue
 
 ; 
 \begin_inset Formula $\lambda=26$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inverse-revisited-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1323,6 +1550,13 @@ Use row reduction to find the eigenvectors corresponding to the given eigenvalue
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inverse-revisited-8"
+
+\end_inset
+
+
 \begin_inset Formula ${\displaystyle A=\left[\begin{array}{cccc}
 45 & -51 & -24 & -60\\
 15 & 107 & 18 & 0\\
@@ -1333,6 +1567,29 @@ Use row reduction to find the eigenvectors corresponding to the given eigenvalue
 
 ; 
 \begin_inset Formula $\lambda=90$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inverse-revisited-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 

@@ -4719,6 +4719,362 @@ noprefix "false"
  part (xi)]
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverse-revisited"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverse-revisited-1"
+
+\end_inset
+
+(a) No.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ need not be square (it may be 
+\begin_inset Formula $2\times3$
+\end_inset
+
+ for example) and therefore not invertible.
+ (b) Yes.
+ 
+\begin_inset Formula $\det(AA^{T})=(\det A)(\det A^{T})=(\det A)^{2}=\det\left(\begin{array}{cc}
+2 & 1\\
+1 & 3
+\end{array}\right)=5$
+\end_inset
+
+ so 
+\begin_inset Formula $\det A=\sqrt{5}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverse-revisited-2"
+
+\end_inset
+
+No.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $M-cI$
+\end_inset
+
+ must be invertible and therefore 
+\begin_inset Formula $\det(M-cI)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverse-revisited-3"
+
+\end_inset
+
+
+\begin_inset Formula $A-\lambda I=\left[\begin{array}{cc}
+3+i\sqrt{3} & 4\\
+-3 & -3+i\sqrt{3}
+\end{array}\right]$
+\end_inset
+
+ reduces to 
+\begin_inset Formula $\left[\begin{array}{cc}
+3+i\sqrt{3} & 4\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ so an eigenvector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $v_{2}=-\frac{3+i\sqrt{3}}{4}v_{1}$
+\end_inset
+
+.
+ In parametric vector form,
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]=\left[\begin{array}{c}
+v_{1}\\
+-\frac{3+i\sqrt{3}}{4}v_{1}
+\end{array}\right]=v_{1}\left[\begin{array}{c}
+1\\
+-\frac{3+i\sqrt{3}}{4}
+\end{array}\right].
+\]
+
+\end_inset
+
+Using generic free variables (and multiplying by 4):
+\begin_inset Formula 
+\[
+\mathbf{v}=r\left[\begin{array}{c}
+-4\\
+3+i\sqrt{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverse-revisited-4"
+
+\end_inset
+
+
+\begin_inset Formula $A-\lambda I=\left[\begin{array}{ccc}
+-12 & 9 & 18\\
+12 & -9 & -18\\
+12 & -9 & -18
+\end{array}\right]$
+\end_inset
+
+ reduces to 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-4 & 3 & 6\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+ so an eigenvector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $v_{1}=\frac{3}{4}v_{2}+\frac{3}{2}v_{3}$
+\end_inset
+
+.
+ In parametric vector form,
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right] & =\left[\begin{array}{c}
+\frac{3}{4}v_{2}+\frac{3}{2}v_{3}\\
+v_{2}\\
+v_{3}
+\end{array}\right]=v_{2}\left[\begin{array}{c}
+\frac{3}{4}\\
+1\\
+0
+\end{array}\right]+v_{3}\left[\begin{array}{c}
+\frac{3}{2}\\
+0\\
+1
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+Using generic free variables (and scaling to eliminate fractions):
+\begin_inset Formula 
+\[
+\mathbf{v}=r\left[\begin{array}{c}
+3\\
+4\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+3\\
+0\\
+2
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inverse-revisited-5"
+
+\end_inset
+
+
+\begin_inset Formula $A-\lambda I=\left[\begin{array}{cccc}
+-45 & -51 & -24 & -60\\
+15 & 17 & 18 & 0\\
+15 & 17 & 8 & 20\\
+-30 & -34 & -16 & -40
+\end{array}\right]$
+\end_inset
+
+ reduces to 
+\begin_inset Formula $\left[\begin{array}{cccc}
+15 & 17 & 0 & 36\\
+0 & 0 & 1 & -2\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+ so an eigenvector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $v_{1}=-\frac{17}{15}v_{2}-\frac{36}{15}v_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{3}=2v_{4}$
+\end_inset
+
+.
+ In parametric vector form,
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}\\
+v_{4}
+\end{array}\right] & =\left[\begin{array}{c}
+-\frac{17}{15}v_{2}-\frac{36}{15}v_{4}\\
+v_{2}\\
+2v_{4}\\
+v_{4}
+\end{array}\right]\\
+ & =v_{2}\left[\begin{array}{c}
+-\frac{17}{15}\\
+1\\
+0\\
+0
+\end{array}\right]+v_{4}\left[\begin{array}{c}
+-\frac{36}{15}\\
+0\\
+2\\
+1
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+Using generic free variables (and scaling to eliminate fractions):
+\begin_inset Formula 
+\[
+\mathbf{v}=r\left[\begin{array}{c}
+-17\\
+15\\
+0\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+-36\\
+0\\
+30\\
+15
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

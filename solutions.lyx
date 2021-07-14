@@ -8484,5 +8484,256 @@ At this point, we can see all of (vi), (vii), and (xiii) are true.
  invertible.
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inverse-revisited"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inverse-revisited-1"
+
+\end_inset
+
+Augmenting the identity matrix and reducing:
+\begin_inset Formula 
+\[
+\begin{gathered}\left[\begin{array}{cccc}
+9 & -7 & 1 & 0\\
+4 & 7 & 0 & 1
+\end{array}\right]\stackrel{-2M_{2,:}+M_{1,:}\to M_{1,:}}{\longrightarrow}\left[\begin{array}{cccc}
+1 & -21 & 1 & -2\\
+4 & 7 & 0 & 1
+\end{array}\right]\stackrel{-4M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{cccc}
+1 & -21 & 1 & -2\\
+0 & 91 & -4 & 9
+\end{array}\right]\\
+\stackrel{\frac{1}{91}M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{cccc}
+1 & -21 & 1 & -2\\
+0 & 1 & -\frac{4}{91} & \frac{9}{91}
+\end{array}\right]\stackrel{21M_{2,:}+M_{1,:}\to M_{1,:}}{\longrightarrow}\left[\begin{array}{cccc}
+1 & 0 & \frac{7}{91} & \frac{7}{91}\\
+0 & 1 & -\frac{4}{91} & \frac{9}{91}
+\end{array}\right]
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inverse-revisited-2"
+
+\end_inset
+
+Augmenting the identity matrix and reducing:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+16 & -3 & -2 & 1 & 0 & 0\\
+-8 & 4 & -2 & 0 & 1 & 0\\
+-8 & 1 & 2 & 0 & 0 & 1
+\end{array}\right]\stackrel{M_{1,:}\leftrightarrow M_{3,:}}{\longrightarrow}\left[\begin{array}{cccccc}
+-8 & 1 & 2 & 0 & 0 & 1\\
+-8 & 4 & -2 & 0 & 1 & 0\\
+16 & -3 & -2 & 1 & 0 & 0
+\end{array}\right]\stackrel[2M_{1,:}+M_{2,:}\to M_{2,:}]{-M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+-8 & 1 & 2 & 0 & 0 & 1\\
+0 & 3 & -4 & 0 & 1 & -1\\
+0 & -1 & 2 & 1 & 0 & 2
+\end{array}\right]\stackrel{M_{2,:}\leftrightarrow M_{3,:}}{\longrightarrow}\left[\begin{array}{cccccc}
+-8 & 1 & 2 & 0 & 0 & 1\\
+0 & -1 & 2 & 1 & 0 & 2\\
+0 & 3 & -4 & 0 & 1 & -1
+\end{array}\right]\stackrel{3M_{2,:}+M_{3,:}\leftrightarrow M_{3,:}}{\longrightarrow}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+-8 & 1 & 2 & 0 & 0 & 1\\
+0 & -1 & 2 & 1 & 0 & 2\\
+0 & 0 & 2 & 3 & 1 & 5
+\end{array}\right]\stackrel[-M_{3,:}+M_{2,:}\to M_{2,:}]{-M_{3,:}+M_{1,:}\to M_{1,:}}{\longrightarrow}\left[\begin{array}{cccccc}
+-8 & 1 & 0 & -3 & -1 & -4\\
+0 & -1 & 0 & -2 & -1 & -3\\
+0 & 0 & 2 & 3 & 1 & 5
+\end{array}\right]\stackrel[-M_{2,:}\to M_{2,:}]{M_{2,:}+M_{1,:}\to M_{1,:}}{\longrightarrow}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccc}
+-8 & 0 & 0 & -5 & -2 & -7\\
+0 & 1 & 0 & 2 & 1 & 3\\
+0 & 0 & 2 & 3 & 1 & 5
+\end{array}\right]\stackrel[\frac{1}{2}M_{3,:}\to M_{3,:}]{-\frac{1}{8}M_{1,:}\to M_{1,:}}{\longrightarrow}\left[\begin{array}{cccccc}
+1 & 0 & 0 & \frac{5}{8} & \frac{1}{4} & \frac{7}{8}\\
+0 & 1 & 0 & 2 & 1 & 3\\
+0 & 0 & 1 & \frac{3}{2} & \frac{1}{2} & \frac{5}{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inverse-revisited-3"
+
+\end_inset
+
+Three facts are applied.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+[section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+] The determinant of a product is the product of the determinant [
+\begin_inset Formula $\det(AB)=(\det A)(\det B)$
+\end_inset
+
+].
+ 
+\end_layout
+
+\begin_layout Enumerate
+[section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+] The determinant of an inverse is the reciprocal of the determinant [
+\begin_inset Formula $\det(A^{-1})=\frac{1}{\det A}$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Enumerate
+[section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+] The determinant of a transpose equals the determinant [
+\begin_inset Formula $\det(A^{T})=\det A$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Standard
+(a) 
+\begin_inset Formula $\det(MR^{T})=(\det M)(\det R^{T})=(\det M)(\det R)=2\cdot\frac{1}{3}=\frac{2}{3}$
+\end_inset
+
+ using facts 1 and 3.
+\begin_inset Newline newline
+\end_inset
+
+(b) 
+\begin_inset Formula $\det(M^{-1}R)=(\det M^{-1})(\det R)=\frac{1}{\det M}\det R=\frac{1}{2}\cdot\frac{1}{3}=\frac{1}{6}$
+\end_inset
+
+ using facts 1 and 2.
+\begin_inset Newline newline
+\end_inset
+
+(c) 
+\begin_inset Formula $\det(MR^{-1})^{T}=\det(MR^{-1})=(\det M)(\det R^{-1})=\det M\frac{1}{\det R}=2\cdot3=6$
+\end_inset
+
+ using facts 1,2 and 3.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

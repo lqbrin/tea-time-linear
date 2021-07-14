@@ -764,19 +764,6 @@ filename "matrixalgebra-square-characterizations.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Answers and solutions for sections below.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "matrixalgebra-inverse-revisited.lyx"
@@ -807,6 +794,19 @@ status open
 \begin_layout Plain Layout
 
 % Chapter 4: Vector Spaces and Inner Product Spaces 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Answers and solutions for sections below.
 \end_layout
 
 \end_inset
