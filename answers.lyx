@@ -5075,6 +5075,388 @@ Using generic free variables (and scaling to eliminate fractions):
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-1"
+
+\end_inset
+
+The line passing through 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-2"
+
+\end_inset
+
+The 
+\begin_inset Formula $xy$
+\end_inset
+
+-plane
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-3"
+
+\end_inset
+
+The set of all sequences whose terms are all equal except possibly the second,
+ which is twice the others
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-4"
+
+\end_inset
+
+All constant functions (those whose graphs are horizontal lines)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-5"
+
+\end_inset
+
+No
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-6"
+
+\end_inset
+
+Yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-7"
+
+\end_inset
+
+Yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-8"
+
+\end_inset
+
+Yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-9"
+
+\end_inset
+
+Yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-14"
+
+\end_inset
+
+Yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-10"
+
+\end_inset
+
+No
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-26"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-11"
+
+\end_inset
+
+
+\begin_inset Formula $S\cup\{\mathbf{v}\}=\left\{ \left[\begin{array}{c}
+2\\
+2
+\end{array}\right],\left[\begin{array}{c}
+-1\\
+3
+\end{array}\right],\left[\begin{array}{c}
+-4\\
+4
+\end{array}\right]\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $-1\left[\begin{array}{c}
+2\\
+2
+\end{array}\right]+2\left[\begin{array}{c}
+-1\\
+3
+\end{array}\right]-1\left[\begin{array}{c}
+-4\\
+4
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-12"
+
+\end_inset
+
+
+\begin_inset Formula $S\cup\{\mathbf{v}\}=\left\{ 1,t,t^{2},5t^{2}-9t+5\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $-5(1)+9(t)-5(t^{2})+1(5t^{2}-9t+5)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:vector-spaces-13"
+
+\end_inset
+
+line 1: 
+\begin_inset Formula $\mathbf{u}_{2}+\mathbf{v}=\mathbf{v}$
+\end_inset
+
+ for any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ (including 
+\begin_inset Formula $\mathbf{u}_{1}$
+\end_inset
+
+); line 2: commutativity of addition (vector space definition property 2);
+ line 3: 
+\begin_inset Formula $\mathbf{u}_{1}+\mathbf{v}=\mathbf{v}$
+\end_inset
+
+ for any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ (including 
+\begin_inset Formula $\mathbf{u}_{2}$
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

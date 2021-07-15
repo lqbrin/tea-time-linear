@@ -802,12 +802,9 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Answers and solutions for sections below.
-\end_layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "theory-vector-spaces.lyx"
 
 \end_inset
 
@@ -815,9 +812,12 @@ TODO: Answers and solutions for sections below.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "theory-vector-spaces.lyx"
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Answers and solutions for sections below.
+\end_layout
 
 \end_inset
 

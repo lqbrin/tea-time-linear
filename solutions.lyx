@@ -8735,5 +8735,1575 @@ noprefix "false"
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-1"
+
+\end_inset
+
+Without any information to whittle down the list of properties to verify,
+ all 10 of the properties from the definition of vector space must be verified.
+ Let 
+\begin_inset Formula $\mathbf{f},\mathbf{g},\mathbf{h}$
+\end_inset
+
+ be in 
+\begin_inset Formula $V$
+\end_inset
+
+ (letters commonly associated with functions are used to emphasize that
+ these vectors are in fact functions) and let 
+\begin_inset Formula $s,t$
+\end_inset
+
+ be scalars.
+ Two functions are equal if they take the same value (give the same output)
+ on every point in the domain.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{f}+\mathbf{g}$
+\end_inset
+
+ means 
+\begin_inset Formula $\mathbf{f}(x)+\mathbf{g}(x)$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+and is a function defined on
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ since 
+\begin_inset Formula $\mathbf{f}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{g}(x)$
+\end_inset
+
+ are.
+ Therefore 
+\begin_inset Formula $\mathbf{f}+\mathbf{g}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{f}(x)+\mathbf{g}(x)=\mathbf{g}(x)+\mathbf{f}(x)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ since addition of real numbers is commutative.
+ Therefore 
+\begin_inset Formula $\mathbf{f}+\mathbf{g}=\mathbf{g}+\mathbf{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{f}(x)+\left(\mathbf{g}(x)+\mathbf{h}(x)\right)=\left(\mathbf{g}(x)+\mathbf{f}(x)\right)+\mathbf{h}(x)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ since addition of real numbers is associative.
+ Therefore 
+\begin_inset Formula $\mathbf{f}+(\mathbf{g}+\mathbf{h})=(\mathbf{g}+\mathbf{f})+\mathbf{h}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The function 
+\begin_inset Formula $\mathbf{z}(x)=0$
+\end_inset
+
+ (whose graph is a horizontal line on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis) is in 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{z}(x)+\mathbf{f}(x)=\mathbf{f}(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\mathbf{z}$
+\end_inset
+
+ is an additive identity in 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The function 
+\begin_inset Formula $-\mathbf{f}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+ since it is a function on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ and has the property that 
+\begin_inset Formula $\mathbf{f}(x)+(-\mathbf{f}(x))=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\mathbf{f}+(-\mathbf{f})=\mathbf{z}$
+\end_inset
+
+ so every element of 
+\begin_inset Formula $V$
+\end_inset
+
+ has an additive inverse.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s\mathbf{f}(x)$
+\end_inset
+
+ is a function on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ because 
+\begin_inset Formula $\mathbf{f}(x)$
+\end_inset
+
+ is.
+ Therefore 
+\begin_inset Formula $s\mathbf{f}$
+\end_inset
+
+ is in 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1\mathbf{f}(x)=\mathbf{f}(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $1\mathbf{f}=\mathbf{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s\left(\mathbf{f}(x)+\mathbf{g}(x)\right)=s\mathbf{f}(x)+s\mathbf{g}(x)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ by the distributive property of real numbers.
+ Therefore 
+\begin_inset Formula $s(\mathbf{f}+\mathbf{g})=s\mathbf{f}+s\mathbf{g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(s+t)\mathbf{f}(x)=s\mathbf{f}(x)+t\mathbf{f}(x)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ by the distributive property of real numbers.
+ Therefore 
+\begin_inset Formula $(s+t)\mathbf{f}=s\mathbf{f}+t\mathbf{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s\left(t\mathbf{f}(x)\right)=(st)\mathbf{f}(x)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ because multiplication of real numbers is associative.
+ Therefore 
+\begin_inset Formula $s(t\mathbf{f})=(st)\mathbf{f}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-2"
+
+\end_inset
+
+
+\series bold
+[To verify that 
+\begin_inset Formula $S$
+\end_inset
+
+ is a subspace, three properties need to be shown—that the zero vector is
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+; that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under addition; and that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under scalar multiplication.]
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{0}=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ is in 
+\begin_inset Formula $S$
+\end_inset
+
+ since it is on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis (the 
+\begin_inset Formula $y$
+\end_inset
+
+-coordinate is zero).
+ 
+\series bold
+[This shows that the zero vector is in 
+\begin_inset Formula $S$
+\end_inset
+
+.]
+\series default
+ For any 
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+x_{1}\\
+y_{1}
+\end{array}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\begin_inset Formula $y_{1}=0$
+\end_inset
+
+, so 
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+x_{1}\\
+0
+\end{array}\right]$
+\end_inset
+
+.
+ It follows that 
+\begin_inset Formula $s\mathbf{u}=\left[\begin{array}{c}
+sx_{1}\\
+0
+\end{array}\right]$
+\end_inset
+
+, which is in 
+\begin_inset Formula $S$
+\end_inset
+
+ since it also lies on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis (has 
+\begin_inset Formula $y$
+\end_inset
+
+-coordinate zero).
+ 
+\series bold
+[This shows that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under scalar multiplication.] 
+\series default
+ Similarly, for any 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+x_{2}\\
+y_{2}
+\end{array}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\begin_inset Formula $y_{2}=0$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\mathbf{u}+\mathbf{v}=\left[\begin{array}{c}
+x_{1}\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+x_{2}\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+x_{1}+x_{2}\\
+0
+\end{array}\right]$
+\end_inset
+
+, which is in 
+\begin_inset Formula $S$
+\end_inset
+
+ since it also lies on the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis (has 
+\begin_inset Formula $y$
+\end_inset
+
+-coordinate zero).
+ 
+\series bold
+[This shows that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under addition.]
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-3"
+
+\end_inset
+
+
+\series bold
+[To verify that 
+\begin_inset Formula $S$
+\end_inset
+
+ is a subspace, three properties need to be shown—that the zero vector is
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+; that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under addition; and that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under scalar multiplication.]
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In 
+\begin_inset Formula $\mathbb{P}_{3}(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{0}=\left(z(x)=0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $z(x)=0$
+\end_inset
+
+ is in 
+\begin_inset Formula $S$
+\end_inset
+
+ since it is a polynomial of degree less than three with roots at 3 and
+ 18.
+ 
+\series bold
+[This shows that the zero vector is in 
+\begin_inset Formula $S$
+\end_inset
+
+.]
+\series default
+ For any 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{p}(3)=\mathbf{p}(18)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ is a polynomial of degree three or less.
+ Since multiplying a polynomial by a scalar does not change its degree,
+ 
+\begin_inset Formula $(s\mathbf{p})$
+\end_inset
+
+ is a polynomial of degree three or less for any scalar 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Moreover 
+\begin_inset Formula $(s\mathbf{p})(3)=s\left(\mathbf{p}(3)\right)=s\cdot0=0$
+\end_inset
+
+ and 
+\begin_inset Formula $(s\mathbf{p})(18)=s\left(\mathbf{p}(18)\right)=s\cdot0=0$
+\end_inset
+
+ so 
+\begin_inset Formula $s\mathbf{p}$
+\end_inset
+
+ has roots at 3 and 18.
+ 
+\series bold
+[This shows that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under scalar multiplication.] 
+\series default
+ Similarly, for any 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{q}(3)=\mathbf{q}(18)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ is a polynomial of degree three or less.
+ Since the sum of two polynomials has degree no higher than the one with
+ highest degree 
+\begin_inset Formula $\mathbf{p}+\mathbf{q}$
+\end_inset
+
+ is a polynomial of degree at most 3.
+ Moreover 
+\begin_inset Formula $(\mathbf{p}+\mathbf{q})(3)=\mathbf{p}(3)+\mathbf{q}(3)=0+0=0$
+\end_inset
+
+ and 
+\begin_inset Formula $(\mathbf{p}+\mathbf{q})(18)=\mathbf{p}(18)+\mathbf{q}(18)=0+0=0$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{p}+\mathbf{q}$
+\end_inset
+
+ has roots at 3 and 18.
+ 
+\series bold
+[This shows that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under addition.]
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-4"
+
+\end_inset
+
+
+\series bold
+[To show that 
+\begin_inset Formula $S$
+\end_inset
+
+ is not a subspace, one of the three subspace properties needs to be shown
+ false—that the zero vector is in 
+\begin_inset Formula $S$
+\end_inset
+
+; that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under addition; and that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under scalar multiplication.
+ The easiest way to do this is often by counterexample (an example showing
+ that one of the properties does not hold in all instances).]
+\series default
+ 
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+14
+\end{array}\right]$
+\end_inset
+
+ is in 
+\begin_inset Formula $S$
+\end_inset
+
+ but 
+\begin_inset Formula $-2\left[\begin{array}{c}
+3\\
+14
+\end{array}\right]=\left[\begin{array}{c}
+-6\\
+-28
+\end{array}\right]$
+\end_inset
+
+ is not, so 
+\begin_inset Formula $S$
+\end_inset
+
+ is not closed under multiplication.
+ 
+\series bold
+Note: 
+\begin_inset Formula $S$
+\end_inset
+
+ contains the zero vector and is closed under addition, so the only property
+ for which a counterexample can be found is closure under scalar multiplication.
+ There are many counterexamples available.
+ Only one is needed.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-5"
+
+\end_inset
+
+
+\series bold
+[To show that 
+\begin_inset Formula $S$
+\end_inset
+
+ is not a subspace, one of the three subspace properties needs to be shown
+ false—that the zero vector is in 
+\begin_inset Formula $S$
+\end_inset
+
+; that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under addition; and that 
+\begin_inset Formula $S$
+\end_inset
+
+ is closed under scalar multiplication.
+ The easiest way to do this is often by counterexample (an example showing
+ that one of the properties does not hold in all instances).]
+\series default
+ 
+\begin_inset Formula $\mathbf{0}=\left(z(x)=0\right)$
+\end_inset
+
+ is not in 
+\begin_inset Formula $S$
+\end_inset
+
+ since 
+\begin_inset Formula $z(0)=0$
+\end_inset
+
+ (has 
+\begin_inset Formula $y$
+\end_inset
+
+-intercept 0, not 3).
+ Consequently the zero vector is not in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\series bold
+Note: 
+\begin_inset Formula $S$
+\end_inset
+
+ is not closed under addition nor closed under scalar multiplication either.
+ There are many exceptions to the properties available.
+ Only one is needed.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-6"
+
+\end_inset
+
+By definition,
+\begin_inset Formula 
+\[
+\text{span}S=\left\{ r\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]:r\text{ in }\mathbb{R}\right\} 
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\text{span}S$
+\end_inset
+
+ contains the vector 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]$
+\end_inset
+
+ and all multiples thereof, including 
+\begin_inset Formula $0\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+.
+ Each multiple points in the same or opposite direction, and there is a
+ multiple for every length.
+ Therefore all the points on the line containing 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]$
+\end_inset
+
+ are in 
+\begin_inset Formula $S$
+\end_inset
+
+ and nothing more.
+ In summary, 
+\begin_inset Formula $S$
+\end_inset
+
+ is the line passing through 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-7"
+
+\end_inset
+
+By definition,
+\begin_inset Formula 
+\[
+\text{span}S=\left\{ r\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]+s\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]:r,s\text{ in }\mathbb{R}\right\} .
+\]
+
+\end_inset
+
+Equivalently, 
+\begin_inset Formula $\text{span}S=\left\{ \left[\begin{array}{cc}
+5 & 2\\
+1 & 0
+\end{array}\right]\left[\begin{array}{c}
+r\\
+s
+\end{array}\right]:r,s\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+ since a matrix times a vector is a linear combination of the columns of
+ the matrix.
+ Since 
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & 2\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+ has nonzero determinant (
+\begin_inset Formula $5\cdot0-2\cdot1$
+\end_inset
+
+) theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ assures that 
+\begin_inset Formula $\left[\begin{array}{cc}
+5 & 2\\
+1 & 0
+\end{array}\right]\left[\begin{array}{c}
+r\\
+s
+\end{array}\right]=\mathbf{b}$
+\end_inset
+
+ has exactly one solution for every 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ In other words, every vector in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ is in the span of 
+\begin_inset Formula $S$
+\end_inset
+
+, so 
+\begin_inset Formula $\text{span}S=\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-8"
+
+\end_inset
+
+By definition,
+\begin_inset Formula 
+\[
+\text{span}S=\left\{ a\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]+b\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]+c\left[\begin{array}{cc}
+0 & -1\\
+0 & 0
+\end{array}\right]:a,b,c\text{ in }\mathbb{R}\right\} 
+\]
+
+\end_inset
+
+ so 
+\begin_inset Formula $\text{span}S=\left\{ \left[\begin{array}{cc}
+a & 0\\
+0 & 0
+\end{array}\right]+\left[\begin{array}{cc}
+0 & 0\\
+0 & b
+\end{array}\right]-\left[\begin{array}{cc}
+0 & c\\
+0 & 0
+\end{array}\right]:a,b,c\text{ in }\mathbb{R}\right\} =\left\{ \left[\begin{array}{cc}
+a & -c\\
+0 & b
+\end{array}\right]:a,b,c\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ are arbitrary real numbers, this is equivalent to 
+\begin_inset Formula $\left\{ \left[\begin{array}{cc}
+r_{1} & r_{2}\\
+0 & r_{3}
+\end{array}\right]:r_{1},r_{2},r_{3}\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+, which is the set of all 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices with a zero in the 
+\begin_inset Formula $2,\!1$
+\end_inset
+
+-entry.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-9"
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left[\begin{array}{c}
+3t\\
+-t\\
+5t
+\end{array}\right]=t\left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $S=\left\{ t\left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right];t\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+, and 
+\begin_inset Formula $S$
+\end_inset
+
+ contains all multiples of 
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right]$
+\end_inset
+
+, or in other words all linear combinations of vectors in 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+.
+ Hence the desired set is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-10"
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left[\begin{array}{c}
+3t-2s\\
+-t+s\\
+5t+s
+\end{array}\right]=t\left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right]+s\left[\begin{array}{c}
+-2\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $S=\left\{ t\left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right]+s\left[\begin{array}{c}
+-2\\
+1\\
+1
+\end{array}\right];t,s\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+.
+ This is the set of all linear combinations of 
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-2\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+, the very definition of 
+\begin_inset Formula $\text{span}\left\{ \left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-2\\
+1\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+.
+ Hence the desired set is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+3\\
+-1\\
+5
+\end{array}\right],\left[\begin{array}{c}
+-2\\
+1\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-11"
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $\text{span}S=\left\{ x\left[\begin{array}{c}
+7\\
+8\\
+9
+\end{array}\right]+y\left[\begin{array}{c}
+10\\
+2\\
+-6
+\end{array}\right]:x,y\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+ so the question is whether 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+ is in this set.
+ In other words, can we solve the equation 
+\begin_inset Formula $x\left[\begin{array}{c}
+7\\
+8\\
+9
+\end{array}\right]+y\left[\begin{array}{c}
+10\\
+2\\
+-6
+\end{array}\right]=\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+? Written in matrix form, that is 
+\begin_inset Formula $\left[\begin{array}{cc}
+7 & 10\\
+8 & 2\\
+9 & -6
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]=\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+ and whether there is a solution can be determined by reducing the augmented
+ matrix:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+7 & 10 & 1\\
+8 & 2 & 2\\
+9 & -6 & 3
+\end{array}\right]\stackrel{\text{reduces to}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 58 & -5\\
+0 & 66 & -6\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+Hence the system is consistent.
+ There is a solution, and therefore 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-12"
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $\text{span}\left\{ \sin^{2}\theta,\cos^{2}\theta\right\} =\left\{ a\sin^{2}\theta+b\cos^{2}\theta:a,b\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+ so the question is whether 
+\begin_inset Formula $\cos(2\theta)$
+\end_inset
+
+ is in this set.
+ Since 
+\begin_inset Formula $\cos(2\theta)=\cos^{2}\theta-\sin^{2}\theta=1\cos^{2}\theta+(-1)\sin^{2}\theta$
+\end_inset
+
+ [this is a standard trig identity—double angle formula], 
+\begin_inset Formula $\cos(2\theta)$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\left\{ \sin^{2}\theta,\cos^{2}\theta\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-13"
+
+\end_inset
+
+Since 
+\begin_inset Formula $\mathbf{v}=\left\langle 78,81,84,87,90,\ldots\right\rangle $
+\end_inset
+
+ can be written as 
+\begin_inset Formula 
+\[
+3\left\langle 1,2,3,4,5,\ldots\right\rangle +75\left\langle 1,1,1,1,1,\ldots\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is a linear combination of the vectors in the given set.
+ Since the span includes all linear combinations of its elements, it includes
+ this one.
+ Therefore the answer is yes.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:vector-spaces-14"
+
+\end_inset
+
+Implied in the question is that we are to treat the columns of the matrix
+ as individual vectors.
+ Therefore we are to determine whether 
+\begin_inset Formula $\left[\begin{array}{c}
+-240\\
+-406\\
+-416
+\end{array}\right]$
+\end_inset
+
+ is in 
+\begin_inset Formula 
+\[
+\left\{ x\left[\begin{array}{c}
+-499\\
+-425\\
+306
+\end{array}\right]+y\left[\begin{array}{c}
+-288\\
+-161\\
+-348
+\end{array}\right]+z\left[\begin{array}{c}
+232\\
+125\\
+141
+\end{array}\right]:x,y,z\text{ in }\mathbb{R}\right\} .
+\]
+
+\end_inset
+
+But this set is exactly 
+\begin_inset Formula $\left\{ \left[\begin{array}{ccc}
+-499 & -288 & 232\\
+-425 & -161 & 125\\
+306 & -348 & 141
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]:x,y,z\text{ in }\mathbb{R}\right\} $
+\end_inset
+
+ so we need to determine whether 
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{ccc}
+-499 & -288 & 232\\
+-425 & -161 & 125\\
+306 & -348 & 141
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]=\left[\begin{array}{c}
+-240\\
+-406\\
+-416
+\end{array}\right]\label{eq:vector-spaces-sol}
+\end{equation}
+
+\end_inset
+
+has a solution, which can be done be reducing the augmented matrix 
+\begin_inset Formula $\left[\begin{array}{cccc}
+-499 & -288 & 232 & -240\\
+-425 & -161 & 125 & -406\\
+306 & -348 & 141 & -416
+\end{array}\right]$
+\end_inset
+
+.
+ Adding the one line 
+\family typewriter
+A.rref()
+\family default
+ to the SageMath code produces
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+[               1                0                0  1533968/1012773]
+\begin_inset Newline newline
+\end_inset
+
+[               0                1                0   2328386/337591]
+\begin_inset Newline newline
+\end_inset
+
+[               0                0                1 10922888/1012773]
+\end_layout
+
+\begin_layout Standard
+for the reducded matrix, indicating that system (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vector-spaces-sol"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is consistent (has a solution).
+ Yes, 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is in the span of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
