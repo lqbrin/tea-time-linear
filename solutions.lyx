@@ -10305,5 +10305,532 @@ noprefix "false"
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:basis-and-dimension"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:basis-and-dimension-1"
+
+\end_inset
+
+(i) This is a subset of 
+\begin_inset Formula $\mathcal{M}_{2\times2}(\mathbb{R})$
+\end_inset
+
+.
+ (ii) The content of the final paragraph of this section (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) is that any vector that can be written as a linear combination of the
+ others in a set can be removed without affecting the span of the set.
+ In this case, 
+\begin_inset Formula $\left[\begin{array}{cc}
+-4 & -19\\
+14 & -13
+\end{array}\right]+\left[\begin{array}{cc}
+-19 & -2\\
+14 & -1
+\end{array}\right]=\left[\begin{array}{cc}
+-23 & -21\\
+28 & -14
+\end{array}\right]$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[\begin{array}{cc}
+-23 & -21\\
+28 & -14
+\end{array}\right]$
+\end_inset
+
+ is a linear combination of the others and we can remove it without affecting
+ the span.
+ Hence 
+\begin_inset Formula $\left\{ \left[\begin{array}{cc}
+-4 & -19\\
+14 & -13
+\end{array}\right],\left[\begin{array}{cc}
+-19 & -2\\
+14 & -1
+\end{array}\right]\right\} $
+\end_inset
+
+ is a subset with the same span.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:basis-and-dimension-2"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+-4 & -19\\
+14 & -13
+\end{array}\right]=\left[\begin{array}{cc}
+-23 & -21\\
+28 & -14
+\end{array}\right]-\left[\begin{array}{cc}
+-19 & -2\\
+14 & -1
+\end{array}\right]$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[\begin{array}{cc}
+-4 & -19\\
+14 & -13
+\end{array}\right]$
+\end_inset
+
+ can be removed from the set without affecting its span.
+ Hence 
+\begin_inset Formula $\left\{ \left[\begin{array}{cc}
+-23 & -21\\
+28 & -14
+\end{array}\right],\left[\begin{array}{cc}
+-19 & -2\\
+14 & -1
+\end{array}\right]\right\} $
+\end_inset
+
+ is a (different) subset with the same span.
+ Yes, this subset is a basis for the span because it is both spanning (as
+ we know) and linearly independent (since it contains two elements which
+ are not multiples of one another).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:basis-and-dimension-3"
+
+\end_inset
+
+Let 
+\begin_inset Formula $S=\left\{ 1+2t,3+t-2t^{2},-5+4t^{2},-5t-2t^{2}\right\} $
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $S$
+\end_inset
+
+ is a 4-element subset of 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+, which has dimension 3, we know that 
+\begin_inset Formula $S$
+\end_inset
+
+ is linearly dependent (theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:basis-superset"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Hence the equation 
+\begin_inset Formula 
+\begin{equation}
+A(1+2t)+B(3+t-2t^{2})+C(-5+4t^{2})+D(-5t-2t^{2})=0\label{eq:lin-ind-relationship}
+\end{equation}
+
+\end_inset
+
+ has nontrivial solutions.
+ We need to find one.
+ Expanding the lefthand side and collecting like terms:
+\begin_inset Formula 
+\begin{align*}
+A+2At+3B+Bt-2Bt^{2}-5C+4Ct^{2}-5Dt-2Dt^{2} & =0\\
+(A+3B-5C)+(2A+B-5D)t+(-2B+4C-2D)t^{2} & =0
+\end{align*}
+
+\end_inset
+
+For this equation to be true (for all 
+\begin_inset Formula $t$
+\end_inset
+
+, making the lefthand side equal to the zero function, the zero vector of
+ the vector space), it must be that each coefficient is zero, giving the
+ linear system
+\begin_inset Formula 
+\begin{align*}
+A+3B-5C & =0\\
+2A+B-5D & =0\\
+-2B+4C-2D & =0
+\end{align*}
+
+\end_inset
+
+which we can solve in a number of ways.
+ One solution is 
+\begin_inset Formula $A=-1$
+\end_inset
+
+, 
+\begin_inset Formula $B=2$
+\end_inset
+
+, 
+\begin_inset Formula $C=1$
+\end_inset
+
+, 
+\begin_inset Formula $D=0$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula 
+\[
+-1(1+2t)+2(3+t-2t^{2})+(-5+4t^{2})+0(-5t-2t^{2})=0
+\]
+
+\end_inset
+
+and we can write (for example) 
+\begin_inset Formula $1+2t$
+\end_inset
+
+ as a linear combination of the others:
+\begin_inset Formula 
+\[
+1+2t=-2(3+t-2t^{2})-(-5+4t^{2})
+\]
+
+\end_inset
+
+
+\series bold
+[we could have chosen to write 
+\begin_inset Formula $(3+t-2t^{2})$
+\end_inset
+
+ or 
+\begin_inset Formula $(-5+4t^{2})$
+\end_inset
+
+ as a linear combination of the others just as well]
+\series default
+.
+ This means we can remove 
+\begin_inset Formula $1+2t$
+\end_inset
+
+ from the set and retain its span.
+ If the set of the three remaining vectors is linearly independent, it is
+ a basis.
+ If it is linearly dependent, we need to eliminate one of the vectors from
+ 
+\begin_inset Formula $\left\{ 3+t-2t^{2},-5+4t^{2},-5t-2t^{2}\right\} $
+\end_inset
+
+.
+ Repeating the above process without the polynomial 
+\begin_inset Formula $1+2t$
+\end_inset
+
+ amounts to eliminating 
+\begin_inset Formula $A$
+\end_inset
+
+ from the equations: does 
+\begin_inset Formula 
+\[
+B(3+t-2t^{2})+C(-5+4t^{2})+D(-5t-2t^{2})=0
+\]
+
+\end_inset
+
+have nontrivial solutions? We check as before by solving the linear system
+\begin_inset Formula 
+\begin{align*}
+3B-5C & =0\\
+B-5D & =0\\
+-2B+4C-2D & =0.
+\end{align*}
+
+\end_inset
+
+One solution is 
+\begin_inset Formula $B=5$
+\end_inset
+
+, 
+\begin_inset Formula $C=3$
+\end_inset
+
+, 
+\begin_inset Formula $D=1$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula 
+\[
+5(3+t-2t^{2})+3(-5+4t^{2})+(-5t-2t^{2})=0
+\]
+
+\end_inset
+
+and we can write (for example) 
+\begin_inset Formula $-5t-2t^{2}$
+\end_inset
+
+ as a linear combination of the others:
+\begin_inset Formula 
+\[
+-5t-2t^{2}=-5(3+t-2t^{2})-3(-5+4t^{2})
+\]
+
+\end_inset
+
+
+\series bold
+[we could have chosen to write 
+\begin_inset Formula $(3+t-2t^{2})$
+\end_inset
+
+ or 
+\begin_inset Formula $(-5+4t^{2})$
+\end_inset
+
+ as a linear combination of the others just as well]
+\series default
+.
+ This means we can remove 
+\begin_inset Formula $-5t-2t^{2}$
+\end_inset
+
+ from the set and retain its span, leaving two vectors (polynomials), 
+\begin_inset Formula $(3+t-2t^{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $(-5+4t^{2})$
+\end_inset
+
+, that are not multiples of one another.
+ Hence 
+\begin_inset Formula $\left\{ 3+t-2t^{2},-5+4t^{2}\right\} $
+\end_inset
+
+ is a linearly independent subset of 
+\begin_inset Formula $S$
+\end_inset
+
+ with the same span—a basis for the span of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ The dimension of the span is two.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:basis-and-dimension-4"
+
+\end_inset
+
+Since the dimension of 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ is four, a linearly independent spanning set with 4 elements will be a
+ basis.
+ The given set (of columns of the matrix) has four elements, so we need
+ to determine whether it is linearly independent and spanning.
+ Upon inspection, columns two and three are identical (making each one a
+ linear combination of the other vectors in the set), so the set of columns
+ is linearly dependent and does not form a basis for 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:basis-and-dimension-5"
+
+\end_inset
+
+Since the dimension of 
+\begin_inset Formula $\mathbb{R}^{6}$
+\end_inset
+
+ is six, a linearly independent spanning set with 6 elements will be a basis.
+ The given set (of columns of the matrix) has six elements, so we need to
+ determine whether it is linearly independent and spanning.
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, determining linear independence is equivalent to determining whether there
+ is a pivot position in every column—done by row reduction.
+ Adding the line 
+\family typewriter
+print(M.rref())
+\family default
+ to the provided SageCell produces the reduced matrix
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+[      1       0       0       0       0 -501/35]
+\begin_inset Newline newline
+\end_inset
+
+[      0       1       0       0       0   273/5]
+\begin_inset Newline newline
+\end_inset
+
+[      0       0       1       0       0   71/15]
+\begin_inset Newline newline
+\end_inset
+
+[      0       0       0       1       0      -2]
+\begin_inset Newline newline
+\end_inset
+
+[      0       0       0       0       1     4/3]
+\begin_inset Newline newline
+\end_inset
+
+[      0       0       0       0       0       0]
+\end_layout
+
+\begin_layout Standard
+revealing that the matrix does not have a pivot position in every row (or
+ column).
+ Hence the columns of the matrix are linearly dependent and do not form
+ a basis for 
+\begin_inset Formula $\mathbb{R}^{6}$
+\end_inset
+
+.
+ 
+\series bold
+[Had there been a pivot position in each column, we would have needed to
+ address the question of whether the columns were spanning—theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Invertible-Matrix-Theorem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:exactly-one"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ provides the answer.]
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

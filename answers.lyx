@@ -5457,6 +5457,364 @@ line 1:
 )
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-1"
+
+\end_inset
+
+5
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-2"
+
+\end_inset
+
+6
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-3"
+
+\end_inset
+
+it is not linearly independent
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-4"
+
+\end_inset
+
+it is not a subset of 
+\begin_inset Formula $\mathbb{P}_{3}(\mathbb{R})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-5"
+
+\end_inset
+
+(i) 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+ (ii) one answer is 
+\begin_inset Formula $\left\{ 9-4t+7t^{2},-20+8t+17t^{2}\right\} $
+\end_inset
+
+ (but answers will vary since any two vectors from the set will do)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-6"
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ -20+8t+17t^{2},-11+4t+24t^{2}\right\} $
+\end_inset
+
+ (but answers will vary since any two vectors from the set will do, and
+ it has to be different from exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+); yes, this subset is a basis for the span
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-7"
+
+\end_inset
+
+2
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-8"
+
+\end_inset
+
+2
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-9"
+
+\end_inset
+
+
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}$
+\end_inset
+
+ must be linearly independent.
+ If it were linearly dependent, we would be able to eliminate one or more
+ of the vectors without affecting the span, resulting in a linearly independent
+ spanning set (basis) with fewer than four elements.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-10"
+
+\end_inset
+
+
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}$
+\end_inset
+
+ must be spanning.
+ If it were not, there would be a vector, call it 
+\begin_inset Formula $\mathbf{b}_{5}$
+\end_inset
+
+, that could not be written as a linear combination of 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{b}_{4}$
+\end_inset
+
+, resulting in a linearly independent set, 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4},\mathbf{b}_{5}\}$
+\end_inset
+
+, in 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+, contradicting theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:basis-superset"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-11"
+
+\end_inset
+
+yes—the determinant of the given matrix is nonzero
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-12"
+
+\end_inset
+
+no—there are more than four columns
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:basis-and-dimension-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:basis-and-dimension-13"
+
+\end_inset
+
+yes–the matrix can be reduced to the (
+\begin_inset Formula $6\times6$
+\end_inset
+
+) identity matrix
+\end_layout
+
+\begin_layout Description
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

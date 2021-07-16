@@ -306,7 +306,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Incidentally, the terms 
+The terms 
 \shape italic
 linear independence
 \shape default
@@ -633,6 +633,12 @@ Since
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:basis-superset"
+
+\end_inset
+
 If a vector space 
 \begin_inset Formula $V$
 \end_inset
@@ -837,7 +843,13 @@ name "par:standard-basis-of-PnR"
 \end_layout
 
 \begin_layout Standard
-On the flip side, if a vector space 
+\begin_inset CommandInset label
+LatexCommand label
+name "par:removal-of-linearly-dependent-vector"
+
+\end_inset
+
+We already know that if a vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -853,13 +865,23 @@ On the flip side, if a vector space
 \begin_inset Formula $n$
 \end_inset
 
- elements does not span 
+ elements is not a basis.
+ It therefore must either be linearly dependent or not span 
 \begin_inset Formula $V$
 \end_inset
 
 .
- The statement is clearly true when 
-\begin_inset Formula $n=0$
+ We will argue that such a set does not span 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ The statement is clearly true when the dimension of 
+\begin_inset Formula $V$
+\end_inset
+
+ is 
+\begin_inset Formula $0$
 \end_inset
 
  (there are no sets with less than 
@@ -871,7 +893,7 @@ On the flip side, if a vector space
 \end_inset
 
  (only the empty set has less than one element, but the empty set does not
- span any vector space).
+ span a nonempty vector space).
  For 
 \begin_inset Formula $n\geq2$
 \end_inset
@@ -888,28 +910,39 @@ On the flip side, if a vector space
 \begin_inset Formula $p<n$
 \end_inset
 
-.
- We have already argued that 
+ and suppose 
 \begin_inset Formula $S$
 \end_inset
 
- cannot be a basis (linearly independent spanning set) since it does not
- have 
-\begin_inset Formula $n$
+ is a spanning set.
+ Because 
+\begin_inset Formula $S$
 \end_inset
 
- elements.
- Because it is a spanning set but not a basis, 
+ spans 
+\begin_inset Formula $V$
+\end_inset
+
+ but is not a basis, 
 \begin_inset Formula $S$
 \end_inset
 
  must be linearly dependent.
- Therefore 
+ This is a contradiction in the case 
+\begin_inset Formula $n=2$
+\end_inset
+
+ since any set with one element is linearly independent.
+ In the case 
+\begin_inset Formula $n>2$
+\end_inset
+
+, 
 \begin_inset Formula $S$
 \end_inset
 
- has at least two elements (sets with zero or one element are linearly independe
-nt), one of which can be written as a linear combination of the others.
+ contains some element that can be written as a linear combination of the
+ others.
  By rearranging the order of the elements in 
 \begin_inset Formula $S$
 \end_inset
@@ -986,9 +1019,9 @@ noprefix "false"
 
  is linearly dependent, repeat the process of removing an element that can
  be written as a linear combination of the others, and continue until the
- remaining set is linearly dependent (and still spanning).
- This will happen when there is one element, if not sooner, so the process
- is guaranteed to end.
+ remaining set is linearly independent (and still spanning).
+ This will happen when there is one element left, if not sooner, so the
+ process is guaranteed to end.
  At this point what is left is a basis with less than 
 \begin_inset Formula $n$
 \end_inset
@@ -1177,7 +1210,37 @@ State the dimension of the vector space.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-4"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbb{R}^{5}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1205,7 +1268,37 @@ State the dimension of the vector space.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-5"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbb{P}_{5}(\mathbb{R})$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1276,6 +1369,13 @@ Explain why the set is not a basis of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-6"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 -91\\
 412\\
@@ -1289,6 +1389,29 @@ Explain why the set is not a basis of
 -218\\
 0
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1384,7 +1507,37 @@ Explain why the set is not a basis of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-7"
+
+\end_inset
+
+
 \begin_inset Formula $\{t,t^{2},t^{3},t^{4}\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1435,37 +1588,121 @@ Each set is a subset of a vector space.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-8"
+
+\end_inset
+
+
 \begin_inset Formula $\{9-4t+7t^{2},-20+8t+17t^{2},-11+4t+24t^{2}\}$
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $\left\{ \left\langle -4,-7,-10,-13,\ldots\right\rangle ,\left\langle 1,2,3,4,\ldots\right\rangle ,\left\langle -5,-9,-13,-17,\ldots\right\rangle \right\} $
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula $\left\{ \left\langle -4,-7,-10,-13,\ldots\right\rangle ,\left\langle 1,2,3,4,\ldots\right\rangle ,\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left.\left\langle -5,-9,-13,-17,\ldots\right\rangle \right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-9"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{cc}
 -4 & -19\\
 14 & -13
 \end{array}\right],\left[\begin{array}{cc}
 -19 & -2\\
 14 & -1
-\end{array}\right],\left[\begin{array}{cc}
+\end{array}\right],\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left.\left[\begin{array}{cc}
 -23 & -21\\
 28 & -14
 \end{array}\right]\right\} $
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:basis-and-dimension-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\{ 3\sin\theta-2\cos\theta,8\sin\theta+2\cos\theta,5\sin\theta+4\cos\theta\right\} $
+\begin_inset Formula $\left\{ 3\sin\theta-2\cos\theta,8\sin\theta+2\cos\theta,\right.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left.5\sin\theta+4\cos\theta\right\} $
 \end_inset
 
 
@@ -1473,6 +1710,12 @@ Each set is a subset of a vector space.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-10"
+
+\end_inset
+
 Redo part (ii) of exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1485,6 +1728,52 @@ noprefix "false"
 
 , this time stating a different subset with the same span.
  Is this subset a basis for the span of the set?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:basis-and-dimension-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1522,6 +1811,47 @@ Find the dimension of the span of the set.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-11"
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ 1+2t,3+t-2t^{2},-5+4t^{2},-5t-2t^{2}\right\} $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:basis-and-dimension-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $\left\{ \left[\begin{array}{cc}
 1 & 0\\
 0 & 0
@@ -1541,13 +1871,50 @@ Find the dimension of the span of the set.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-12"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \cos^{2}\theta,\sin^{2}\theta,1\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-13"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 1\\
 2\\
@@ -1568,6 +1935,29 @@ Find the dimension of the span of the set.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1584,6 +1974,12 @@ Justify the claim that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-14"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}=\mathbb{P}_{3}(\mathbb{R})$
 \end_inset
@@ -1598,9 +1994,38 @@ Suppose
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-15"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\mathbf{b}_{3},\mathbf{b}_{4}\}$
 \end_inset
@@ -1619,6 +2044,29 @@ Suppose
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1677,12 +2125,42 @@ Do the columns of the matrix (considered as a set of vectors) form a basis
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-16"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 -13 & 19 & 19 & 16\\
 -17 & -16 & -16 & 14\\
 -19 & 5 & 5 & -10\\
 -14 & 15 & 15 & 4
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:basis-and-dimension-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1701,12 +2179,42 @@ Do the columns of the matrix (considered as a set of vectors) form a basis
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-17"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccc}
 -17 & 18 & -12 & 9\\
 0 & -8 & 4 & 17\\
 0 & 0 & 12 & -9\\
 0 & 0 & 0 & -10
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-11"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1725,12 +2233,42 @@ Do the columns of the matrix (considered as a set of vectors) form a basis
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-18"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cccccc}
 9 & 3 & 13 & 11 & -5 & -6\\
 -17 & 12 & -14 & 10 & -2 & -7\\
 -13 & 8 & 0 & 16 & -15 & 18\\
 -8 & 19 & -12 & 15 & 2 & 1
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-12"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1784,6 +2322,13 @@ nteracts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-19"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1814,6 +2359,33 @@ OAzlLEYVMnUGQRWSKNmKkoq0My9Pd3-9vPftdYxD42ODv7mfbX_lvx6sJrk=&lang=sage&interacts
 -7 & -1 & -9 & 10 & -12 & -33\\
 14 & -13 & 173 & -42 & 148 & 190
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:basis-and-dimension-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1856,6 +2428,13 @@ GFdSwdBiGkqp0HV08EYqK3OBZr-H8-m9b69jmTufmsNl-tH-R-ELnwAmMQ==&lang=sage&interacts
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:basis-and-dimension-20"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1886,6 +2465,33 @@ nteracts=eJyLjgUAARUAuQ==}
 -117 & 27 & 97 & 106 & -110 & 81\\
 -149 & -54 & -66 & 132 & 46 & 111
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:basis-and-dimension-13"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
