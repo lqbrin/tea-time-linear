@@ -5811,7 +5811,645 @@ yes–the matrix can be reduced to the (
 ) identity matrix
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Functions-and-Transformations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-1"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-2"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-3"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-4"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-5"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+f: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-6"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-7"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-8"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+114\\
+-65\\
+-104
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-26"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-10"
+
+\end_inset
+
+Answers will vary.
+ Any counterexample to (violation of) the two properties of a linear transformat
+ion will do.
+ For example, 
+\begin_inset Formula $f(1+1)=\ln(1+1)=\ln2$
+\end_inset
+
+ but 
+\begin_inset Formula $f(1)+f(1)=\ln1+\ln1=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ does not preserve addition.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-11"
+
+\end_inset
+
+We must demonstrate that the two properties of linear transformations hold.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\begin{gathered}T\left(\left[\begin{array}{c}
+x_{1}\\
+y_{1}\\
+z_{1}
+\end{array}\right]+\left[\begin{array}{c}
+x_{2}\\
+y_{2}\\
+z_{2}
+\end{array}\right]\right)\\
+=\left[\begin{array}{c}
+4\\
+-1\\
+-5
+\end{array}\right]^{T}\left(\left[\begin{array}{c}
+x_{1}\\
+y_{1}\\
+z_{1}
+\end{array}\right]+\left[\begin{array}{c}
+x_{2}\\
+y_{2}\\
+z_{2}
+\end{array}\right]\right)\\
+=\left[\begin{array}{c}
+4\\
+-1\\
+-5
+\end{array}\right]^{T}\left[\begin{array}{c}
+x_{1}\\
+y_{1}\\
+z_{1}
+\end{array}\right]+\left[\begin{array}{c}
+4\\
+-1\\
+-5
+\end{array}\right]^{T}\left[\begin{array}{c}
+x_{2}\\
+y_{2}\\
+z_{2}
+\end{array}\right]\\
+=T\left(\left[\begin{array}{c}
+x_{1}\\
+y_{1}\\
+z_{1}
+\end{array}\right]\right)+T\left(\left[\begin{array}{c}
+x_{2}\\
+y_{2}\\
+z_{2}
+\end{array}\right]\right)
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\begin{align*}
+T\left(c\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\right) & =\left[\begin{array}{c}
+4\\
+-1\\
+-5
+\end{array}\right]^{T}\left(c\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\right)\\
+ & =c\left[\begin{array}{c}
+4\\
+-1\\
+-5
+\end{array}\right]^{T}\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\\
+ & =cT\left(\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-12"
+
+\end_inset
+
+We must demonstrate that the two properties of linear transformations hold.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\begin{gathered}L\left((a_{1}x^{2}+b_{1}x+c_{1})+(a_{2}x^{2}+b_{2}x+c_{2})\right)\\
+=L\left((a_{1}+a_{2})x^{2}+(b_{1}+b_{2})x+(c_{1}+c_{2})\right)\\
+=6(a_{1}+a_{2})x+3(b_{1}+b_{2})\\
+=6a_{1}x+6a_{2}x+3b_{1}+3b_{2}\\
+=\left(6a_{1}x+3b_{1}\right)+\left(6a_{2}x+3b_{2}\right)\\
+=L(a_{1}x^{2}+b_{1}x+c_{1})+L(a_{2}x^{2}+b_{2}x+c_{2})
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+\begin{gathered}L\left(k(ax^{2}+bx+c)\right)\\
+=L(kax^{2}+kbx+kc)\\
+=6kax+3kb\\
+=k(6ax+3b)\\
+=kL(ax^{2}+bx+c)
+\end{gathered}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-13"
+
+\end_inset
+
+
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+6\\
+-3
+\end{array}\right]\right)=T\left(3\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]\right)=3T\left(\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]\right)=\left[\begin{array}{c}
+-9\\
+-15\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-14"
+
+\end_inset
+
+
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-3\\
+5
+\end{array}\right]\right)=T\left(\left[\begin{array}{c}
+-1\\
+4
+\end{array}\right]-\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]\right)=T\left(\left[\begin{array}{c}
+-1\\
+4
+\end{array}\right]\right)-T\left(\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]\right)=\left[\begin{array}{c}
+1\\
+10\\
+3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-15"
+
+\end_inset
+
+
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+4\\
+0\\
+-8
+\end{array}\right]\right)=T\left(-2\left[\begin{array}{c}
+-2\\
+0\\
+4
+\end{array}\right]\right)=-2T\left(\left[\begin{array}{c}
+-2\\
+0\\
+4
+\end{array}\right]\right)=\left[\begin{array}{c}
+6\\
+10
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-16"
+
+\end_inset
+
+
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+1\\
+-4\\
+7
+\end{array}\right]\right)=T\left(\left[\begin{array}{c}
+5\\
+-4\\
+-1
+\end{array}\right]+2\left[\begin{array}{c}
+-2\\
+0\\
+4
+\end{array}\right]\right)=T\left(\left[\begin{array}{c}
+5\\
+-4\\
+-1
+\end{array}\right]\right)+T\left(2\left[\begin{array}{c}
+-2\\
+0\\
+4
+\end{array}\right]\right)=T\left(\left[\begin{array}{c}
+5\\
+-4\\
+-1
+\end{array}\right]\right)+2T\left(\left[\begin{array}{c}
+-2\\
+0\\
+4
+\end{array}\right]\right)=\left[\begin{array}{c}
+-5\\
+1
+\end{array}\right]+2\left[\begin{array}{c}
+-3\\
+-5
+\end{array}\right]=\left[\begin{array}{c}
+-11\\
+-9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-33"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:functions-and-transformations-17"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-2 & -1\\
+-\frac{15}{7} & \frac{5}{7}\\
+\frac{8}{7} & \frac{9}{7}
+\end{array}\right]$
+\end_inset
+
 
 \end_layout
 

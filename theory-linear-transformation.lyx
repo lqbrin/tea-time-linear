@@ -291,7 +291,7 @@ relation
 \end_inset
 
 .
- To be conscise, if 
+ To rephrase then, if 
 \begin_inset Formula $A$
 \end_inset
 
@@ -340,7 +340,7 @@ The same relation might be simplified to just
 \begin_inset Formula $a^{2}+b^{2}=1$
 \end_inset
 
- if it is understood, without writing explicitly, that 
+ if it is understood without writing explicitly that 
 \begin_inset Formula $a$
 \end_inset
 
@@ -410,9 +410,9 @@ When a relation is a function, we may emphasize this point using the notation
 \end_layout
 
 \begin_layout Standard
-Explicit mention of the domain and codomain of a function is often not made.
- The domain and codomain often fade into the background in favor of focusing
- on the rule of correspondence, such as in 
+The domain and codomain of a function are often taken for granted, fading
+ into the background in favor of focusing on the rule of correspondence,
+ such as in 
 \begin_inset Formula $f(x)=3x+11$
 \end_inset
 
@@ -423,9 +423,11 @@ Explicit mention of the domain and codomain of a function is often not made.
 \begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
 \end_inset
 
- every time a function on the real numbers comes up.
+ every time a function on the real numbers came up.
  More importantly, though, the domains of many functions with succinct formulas
  do not contain all real numbers.
+ The domain only includes numbers that correspond to some element of the
+ codomain.
  It would be a difficult distraction to have to write 
 \begin_inset Formula $f:A\to\mathbb{R}$
 \end_inset
@@ -434,11 +436,9 @@ Explicit mention of the domain and codomain of a function is often not made.
 \begin_inset Formula $A$
 \end_inset
 
- correct every time a function is mentioned.
- The domain only includes elements that correspond to some element of the
- codomain, so to be complete, the definition of a function should include
- this information.
- It is a convenience not to require it.
+ correct every time a function was mentioned.
+ To be complete, though, the definition of a function should include this
+ information, and it is a convenience not to require it.
  To compensate for this lack of completeness in practice, a classic problem
  in algebra is to find the 
 \shape italic
@@ -450,12 +450,28 @@ implied
 
 —the subset of real number inputs that correspond to real number outputs
  according to the formula.
+ Can you find the implied domain of 
+\begin_inset Formula $f(x)=\frac{3x+7}{2x-5}$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:implied-domain"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 The discussion of inverse functions, which will be very important for us,
- is often obfuscated by not introducing the notion of a relation.
- if 
+ is made abstruse by not introducing the notion of a relation.
+ The inverse of a relation is a relatively simple matter.
+ If 
 \begin_inset Formula $C$
 \end_inset
 
@@ -471,7 +487,7 @@ The discussion of inverse functions, which will be very important for us,
 \begin_inset Formula $B$
 \end_inset
 
-, codomain 
+ and codomain 
 \begin_inset Formula $A$
 \end_inset
 
@@ -488,15 +504,19 @@ inverse relation
 \end_inset
 
 .
- Every relation has an inverse relation (no exceptions).
- By extension, every function has an inverse 
+ Every relation has an inverse relation, no exceptions.
+ Simply reversing the order of the ordered pairs in any relation gives its
+ inverse.
+ Consequently every function (which is just a special type of relation)
+ has an inverse 
 \shape italic
 relation
 \shape default
-.
- That is not to say that every function has an inverse function, however.
- There are plenty that do not, and tackling this problem before tackling
- the simpler one of inverse relations causes much confusion.
+, and the inverse is conceptually straightforward.
+ That is not to say that the inverse relation is always a function, however.
+ There are plenty of functions that do not have inverse functions, and tackling
+ this problem before tackling the simpler one of inverse relations is the
+ root of much confusion and difficulty.
 \end_layout
 
 \begin_layout Subsection*
@@ -516,11 +536,7 @@ mapping
 \series bold
 transformation
 \series default
- are all synonyms for 
-\series bold
-function
-\series default
-.
+ are all synonyms for function.
  All four words share the same definition.
  When the codomain is not the set of real numbers, the word 
 \begin_inset Quotes eld
@@ -608,8 +624,8 @@ transformation
 \begin_inset Formula $\mathcal{A}(f)=\int_{0}^{x}f(t)\,dt$
 \end_inset
 
- is a standard of calculus, though it is uncommon to discuss the antiderivative
- as a transformation during a calculus class.
+ is a standard of calculus, though it is less common to discuss the antiderivati
+ve as a transformation during a calculus class.
  The derivative provides another example of a 
 \shape italic
 transformation
@@ -775,13 +791,24 @@ transformation
 \end_layout
 
 \begin_layout Standard
-These two properties mean that performing addition and scalar multiplication
+Can you justify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:two-properties"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ These two properties mean that performing addition and scalar multiplication
  in the domain and then transforming (the lefthand sides of the equations)
  gives the same result as transforming first and then performing the addition
  and scalar multiplication in the codomain (the righthand sides of the equations
 ).
- We say that this type of transformation preserves the operations of addition
- and scalar multiplication.
+ For this reason we say this type of transformation preserves the operations
+ of addition and scalar multiplication.
  Its properties form the essence for the abstraction of this idea to arbitrary
  vector spaces.
 \end_layout
@@ -845,8 +872,11 @@ This definition is modeled after
 \begin_inset Formula $T(\mathbf{x})=M\mathbf{x}$
 \end_inset
 
-, making this particular transformation the canonical example of a linear
- transformation.
+, making 
+\begin_inset Formula $T$
+\end_inset
+
+ the canonical example of a linear transformation.
  Some of the other transformations mentioned previously are linear transformatio
 ns and some are not.
  For example, 
@@ -1068,17 +1098,17 @@ the inverse
 \end_layout
 
 \begin_layout Standard
-It is not an accident that 
+It is not an accident that the notation 
 \begin_inset Formula $T^{-1}$
 \end_inset
 
- is called the inverse of 
+ is used for the inverse of 
 \begin_inset Formula $T$
 \end_inset
 
 .
- The notion of an inverse function extends the idea of additive and multiplicati
-ve inverses.
+ The notion of an inverse function extends the idea of multiplicative (and
+ additive) inverses.
  By definition, if 
 \begin_inset Formula $T$
 \end_inset
@@ -1097,6 +1127,17 @@ ve inverses.
 
  in 
 \begin_inset Formula $A$
+\end_inset
+
+.
+ Can you justify this claim? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:definition-of-inverse"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 .
@@ -1488,6 +1529,13 @@ transformation given vector spaces
 
 \end_deeper
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 \begin_inset ERT
 status open
@@ -1544,7 +1592,37 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-15"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left(a,\frac{1}{2}\right),\left(b,\frac{1}{3}\right),\left(c,\frac{1}{4}\right)\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1558,6 +1636,43 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-16"
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left(a,\frac{1}{2}\right),\left(b,b\right),\left(\frac{1}{5},c\right)\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $\left\{ \left(\frac{1}{2},a\right),\left(\frac{1}{3},b\right),\left(c,\frac{1}{3}\right),\left(d,\frac{1}{3}\right)\right\} $
 \end_inset
 
@@ -1565,7 +1680,37 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-17"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left(a,\frac{1}{3}\right),\left(b,\frac{1}{3}\right),\left(c,\frac{1}{3}\right),\left(d,\frac{1}{3}\right)\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1598,6 +1743,29 @@ noprefix "false"
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1651,6 +1819,57 @@ State the range.
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
+name "exc:linear-transformation-18"
+
+\end_inset
+
+The set 
+\begin_inset Formula $\left\{ \left(1,t\right),\left(2,t^{2}\right),\left(3,t^{3}\right),\left(4,t^{4}\right),\left(5,t^{5}\right)\right\} $
+\end_inset
+
+ is a relation.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:function-and-transformations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+State a possible domain.
+\end_layout
+
+\begin_layout Enumerate
+State a possible codomain.
+\end_layout
+
+\begin_layout Enumerate
+State the range.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
 name "exc:linear-transformation-3"
 
 \end_inset
@@ -1666,6 +1885,49 @@ noprefix "false"
 \end_inset
 
  where the set is a function instead of a relation.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-19"
+
+\end_inset
+
+Redo question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ where the set is a function instead of a relation.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:function-and-transformations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1716,8 +1978,95 @@ Find a preimage of
 \end_layout
 
 \begin_layout Enumerate
-Find the preimage (the set of all preimages) of 
+Find the preimage of 
 \begin_inset Formula $\frac{1}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the image of 
+\begin_inset Formula $\left\{ 1,2,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-20"
+
+\end_inset
+
+Let 
+\begin_inset Formula $p$
+\end_inset
+
+ be the mapping 
+\begin_inset Formula $p:\mathbb{Z}\to\mathbb{Q}$
+\end_inset
+
+, 
+\begin_inset Formula $p(z)=\frac{z}{1+z^{2}}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:function-and-transformations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Find the image of 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the image of 
+\begin_inset Formula $23$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find a preimage of 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the preimage of 
+\begin_inset Formula $\frac{2}{5}$
 \end_inset
 
 .
@@ -1765,6 +2114,60 @@ Relation
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-21"
+
+\end_inset
+
+Relation 
+\begin_inset Formula $R=\left\{ \left(t^{2}+3,\left[\begin{array}{c}
+1\\
+0\\
+3
+\end{array}\right]\right),\left(3t^{2}-2t,\left[\begin{array}{c}
+3\\
+-2\\
+0
+\end{array}\right]\right)\right\} $
+\end_inset
+
+ is a subset of 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})\times\mathbb{R}^{3}$
+\end_inset
+
+.
+ Find 
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:function-and-transformations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1818,6 +2221,12 @@ For the transformation
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-22"
+
+\end_inset
+
 Find the preimage of 
 \begin_inset Formula $\left[\begin{array}{cc}
 3 & 1\\
@@ -1826,9 +2235,38 @@ Find the preimage of
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-23"
+
+\end_inset
+
 Find 
 \begin_inset Formula $T^{-1}\left(\left[\begin{array}{cc}
 3 & 1\\
@@ -1837,6 +2275,29 @@ Find
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1908,6 +2369,13 @@ Find the image of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-24"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -9 & 1\\
 3 & 0
@@ -1919,6 +2387,29 @@ Find the image of
 -7\\
 10
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:function-and-transformations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1943,6 +2434,13 @@ Find the image of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-25"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 2 & 9 & 8\\
 -6 & 0 & -1\\
@@ -1985,7 +2483,37 @@ Show that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-26"
+
+\end_inset
+
+
 \begin_inset Formula $f(x)=\ln x$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-10"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2062,6 +2590,13 @@ y
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-27"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 x\\
 y\\
@@ -2072,6 +2607,29 @@ x\\
 y\\
 z
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-11"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2101,7 +2659,37 @@ Show that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-28"
+
+\end_inset
+
+
 \begin_inset Formula $L(ax^{2}+bx+c)=6ax+3b$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-12"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2209,10 +2797,40 @@ name "exc:linear-transformation-13"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-29"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 6\\
 -3
 \end{array}\right]\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-13"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2229,10 +2847,40 @@ name "exc:linear-transformation-13"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-30"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 -3\\
 5
 \end{array}\right]\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-14"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2278,11 +2926,41 @@ name "exc:linear-transformation-14"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-31"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 4\\
 0\\
 -8
 \end{array}\right]\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-15"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2300,11 +2978,41 @@ name "exc:linear-transformation-14"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-32"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 1\\
 -4\\
 7
 \end{array}\right]\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-16"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2323,6 +3031,12 @@ name "exc:linear-transformation-14"
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-transformation-33"
+
+\end_inset
+
 Can you find a matrix 
 \begin_inset Formula $M$
 \end_inset
@@ -2335,6 +3049,55 @@ Can you find a matrix
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:linear-transformation-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula $T(\mathbf{x})=M\mathbf{x}$
+\end_inset
+
+?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:functions-and-transformations-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Can you find a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ such that the transformation 
+\begin_inset Formula $T$
+\end_inset
+
+ of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-transformation-14"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2537,6 +3300,50 @@ Answers
 \end_layout
 
 \begin_layout Description
+implied
+\begin_inset space ~
+\end_inset
+
+domain 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:implied-domain"
+
+\end_inset
+
+The implied domain is the set of all inputs that correspond to real number
+ outputs.
+ The function 
+\begin_inset Formula $f(x)=\frac{3x+7}{2x-5}$
+\end_inset
+
+ includes a fraction, a quantity that is undefined precisely when the denominato
+r is zero.
+ Hence we must discard all numbers that satisfy 
+\begin_inset Formula $2x-5=0$
+\end_inset
+
+.
+ Solving this equation for 
+\begin_inset Formula $x$
+\end_inset
+
+ is a simple matter: 
+\begin_inset Formula $x=\frac{5}{2}$
+\end_inset
+
+ and so the implied domain is 
+\begin_inset Formula $\mathbb{R}\backslash\left\{ \frac{5}{2}\right\} $
+\end_inset
+
+ (all real numbers except 
+\begin_inset Formula $\frac{5}{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
 \begin_inset Formula $3n+1$
 \end_inset
 
@@ -2593,6 +3400,49 @@ so it takes 7 iterations to get the first
 .
 \end_layout
 
+\begin_layout Description
+two
+\begin_inset space ~
+\end_inset
+
+properties 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:two-properties"
+
+\end_inset
+
+For 
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $T(\mathbf{x})=M\mathbf{x}$
+\end_inset
+
+ where 
+\begin_inset Formula $M$
+\end_inset
+
+ is a matrix,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T(\mathbf{x}+\mathbf{y})=M(\mathbf{x}+\mathbf{y})=M\mathbf{x}+M\mathbf{y}=T(\mathbf{x})+T(\mathbf{y})$
+\end_inset
+
+; and
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T(c\mathbf{x})=M(c\mathbf{x})=c(M\mathbf{x})=cT(\mathbf{x})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Description
 linear
 \begin_inset space ~
@@ -2733,6 +3583,63 @@ Another two results of calculus are that
 \end_inset
 
  does not exist, so they are not equal.
+\end_layout
+
+\begin_layout Description
+definition
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+inverse 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:definition-of-inverse"
+
+\end_inset
+
+Since 
+\begin_inset Formula $a$
+\end_inset
+
+ is in the domain of 
+\begin_inset Formula $T$
+\end_inset
+
+, there must be an ordered pair 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ in 
+\begin_inset Formula $T$
+\end_inset
+
+—meaning 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+.
+ By definition 
+\begin_inset Formula $(b,a)$
+\end_inset
+
+ is then in the inverse of 
+\begin_inset Formula $T$
+\end_inset
+
+—meaning 
+\begin_inset Formula $T^{-1}(b)=a$
+\end_inset
+
+.
+ Putting these facts together, 
+\begin_inset Formula $T^{-1}\left(T(a)\right)=T^{-1}(b)=a$
+\end_inset
+
+.
 \end_layout
 
 \end_body
