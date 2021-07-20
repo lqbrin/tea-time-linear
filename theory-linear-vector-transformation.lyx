@@ -841,9 +841,8 @@ In words, a transformation from
 \begin_inset Formula $\mathbb{R}^{m}$
 \end_inset
 
- is linear if and only if it can be represented by matrix multiplication
- by a matrix whose columns are the images of the columns of the identity
- matrix.
+ is linear if and only if it can be represented by multiplication by a matrix
+ whose columns are the images of the columns of the identity matrix.
 \end_layout
 
 \begin_layout Standard
@@ -1099,6 +1098,12 @@ The following series of diagrams illustrates the types of transformations
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "par:transformationsR2-table"
+
+\end_inset
+
 matrix 
 \begin_inset Formula $M$
 \end_inset
@@ -2435,6 +2440,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation"
+
+\end_inset
+
 (i) Find the standard matrix of 
 \begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
@@ -2449,6 +2460,13 @@ Exercises
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-9"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2457,6 +2475,29 @@ Exercises
 \end_inset
 
  radians.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:linear-vector-transformations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2471,6 +2512,13 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-10"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2487,6 +2535,29 @@ Exercises
 \end_inset
 
  is unaffected.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2504,6 +2575,13 @@ name "exc:linear-vector-transformation-5"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-11"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2512,6 +2590,29 @@ name "exc:linear-vector-transformation-5"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2537,6 +2638,29 @@ name "exc:linear-vector-transformation-6"
 \end_inset
 
  rotates points counterclockwise about the origin by 180 degrees.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2595,6 +2719,13 @@ Find the standard matrix of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-12"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2608,6 +2739,29 @@ Find the standard matrix of
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:linear-vector-transformations-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2626,6 +2780,13 @@ Find the standard matrix of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-13"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2638,6 +2799,29 @@ Find the standard matrix of
 \end_inset
 
 -axis.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2656,6 +2840,13 @@ Find the standard matrix of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-14"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2668,6 +2859,29 @@ Find the standard matrix of
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2688,6 +2902,13 @@ Find the standard matrix of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-15"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2700,6 +2921,29 @@ Find the standard matrix of
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2718,6 +2962,13 @@ Find the standard matrix of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-16"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -2730,6 +2981,29 @@ Find the standard matrix of
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2778,6 +3052,13 @@ Are
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-17"
+
+\end_inset
+
+
 \begin_inset Formula $S$
 \end_inset
 
@@ -2806,6 +3087,29 @@ Are
 \end_inset
 
 -axis.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:linear-vector-transformations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2840,6 +3144,13 @@ Are
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-18"
+
+\end_inset
+
+
 \begin_inset Formula $S$
 \end_inset
 
@@ -2864,6 +3175,29 @@ Are
 \end_inset
 
  about the origin.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2913,6 +3247,13 @@ Find the standard matrix for the linear transformation
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-19"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 1\\
 0
@@ -2937,6 +3278,29 @@ Find the standard matrix for the linear transformation
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:linear-vector-transformations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2982,6 +3346,13 @@ Find the standard matrix for the linear transformation
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-20"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 1\\
 0
@@ -3004,6 +3375,29 @@ Find the standard matrix for the linear transformation
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3084,6 +3478,13 @@ Find a sequence of elementary matrices whose product is the standard matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-21"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -3096,6 +3497,29 @@ Find a sequence of elementary matrices whose product is the standard matrix
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3114,6 +3538,13 @@ Find a sequence of elementary matrices whose product is the standard matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-22"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -3126,6 +3557,29 @@ Find a sequence of elementary matrices whose product is the standard matrix
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3150,6 +3604,13 @@ Find a sequence of elementary matrices whose product is the standard matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-23"
+
+\end_inset
+
+
 \begin_inset Formula $T$
 \end_inset
 
@@ -3162,6 +3623,29 @@ Find a sequence of elementary matrices whose product is the standard matrix
 \end_inset
 
 -axis.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3176,6 +3660,13 @@ Though it is not strictly necessary, you may find SageMath helpful.
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-24"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -3224,6 +3715,29 @@ sage
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:linear-vector-transformations-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3269,6 +3783,13 @@ sage
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-25"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -3323,6 +3844,29 @@ sage
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3366,6 +3910,13 @@ sage
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-26"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -3429,6 +3980,29 @@ sage
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3469,7 +4043,7 @@ Argue in words that
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:linear-vector-transformation"
+name "exc:linear-vector-transformation-8"
 
 \end_inset
 
@@ -3502,7 +4076,7 @@ Write
  as a matrix product using the results of 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:linear-vector-transformation"
+reference "exc:linear-vector-transformation-8"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3733,6 +4307,12 @@ s & 1
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-27"
+
+\end_inset
+
 Show that reflection about the origin of the plane, which maps 
 \begin_inset Formula $\left[\begin{array}{c}
 x\\
@@ -3762,9 +4342,38 @@ y
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-28"
+
+\end_inset
+
 Show that 
 \begin_inset Formula $F_{xy}:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset

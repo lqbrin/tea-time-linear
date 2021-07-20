@@ -6453,6 +6453,829 @@ name "ans:functions-and-transformations-17"
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Transformations-on-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-1"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+-\frac{1}{2} & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-2"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-3"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+-1 & 0\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-4"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & 0\\
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-5"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+\frac{28}{9} & \frac{14}{3}\\
+0 & \frac{28}{9}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-6"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+2 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-7"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+\frac{17}{6} & \frac{12.92}{6}\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-8"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+-79 & 132\\
+117 & 98\\
+38 & -77
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-10"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 1.62\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & \frac{11}{7}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-11"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 1.27\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-12"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & \frac{2}{3}
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+\frac{2}{3} & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-13"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{ccc}
+42 & -641 & -135\\
+-1 & 8 & 2\\
+-12 & 258 & 52\\
+-24 & 282 & 62
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-26"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-14"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cccc}
+-172 & 23 & 33 & 151\\
+-1 & 2 & -2 & 15
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:linear-vector-transformations-15"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+-1 & 0\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Isomorphisms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphisms"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphisms-6"
+
+\end_inset
+
+(i) Yes.
+ (ii) Yes.
+ (iii) Yes.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphisms-1"
+
+\end_inset
+
+
+\begin_inset Formula $h\left(\left[\begin{array}{cccc}
+r_{1} & r_{2} & \cdots & r_{n}\end{array}\right]\right)=\left\langle r_{1},r_{2},\ldots,r_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphisms-2"
+
+\end_inset
+
+
+\begin_inset Formula $p\left(r_{1}I_{:,1}+r_{2}I_{:,2}+\cdots+r_{n}I_{:,n}\right)=\left(r_{1},r_{2},\ldots,r_{n}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphisms-3"
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is one-to-one precisely when 
+\begin_inset Formula 
+\[
+M\mathbf{v}=\mathbf{b}
+\]
+
+\end_inset
+
+has at most one solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ (they are equivalent).
+ Since the latter is one of the statements of the theorem, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is one-to-one
+\begin_inset Quotes erd
+\end_inset
+
+ may be added as yet another equivalent statement.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphisms-4"
+
+\end_inset
+
+By definition, 
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is one-to-one precisely when 
+\begin_inset Formula 
+\[
+M\mathbf{v}=\mathbf{b}
+\]
+
+\end_inset
+
+has at most one solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ (they are equivalent).
+ By definition, 
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is onto precisely when 
+\begin_inset Formula 
+\[
+M\mathbf{v}=\mathbf{b}
+\]
+
+\end_inset
+
+has at least one solution for each 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+ (they are equivalent).
+ Since the latter halves of each of these statements appear in the theorem,
+ the properties 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is one-to-one
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $T_{M}:\mathbb{R}^{n}\to\mathbb{R}^{m}$
+\end_inset
+
+ is onto
+\begin_inset Quotes erd
+\end_inset
+
+ may be added as additional equivalent statements.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-of-iso-is-iso"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:isomorphisms-5"
+
+\end_inset
+
+Let 
+\begin_inset Formula $f\subseteq V\times W$
+\end_inset
+
+ be an isomorphism.
+ By definition, 
+\begin_inset Formula $f$
+\end_inset
+
+ is one-to-one and onto.
+ Therefore the equation 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+ has at most one solution for each 
+\begin_inset Formula $b$
+\end_inset
+
+ (by definition of one-to-one) and has at least one solution for each 
+\begin_inset Formula $b$
+\end_inset
+
+ (by definition of onto).
+ Since the number of solutions is both less than or equal to one and greater
+ than or equal to one, it must be exactly one (for each 
+\begin_inset Formula $b$
+\end_inset
+
+).
+ Hence each element 
+\begin_inset Formula $b$
+\end_inset
+
+ of 
+\begin_inset Formula $W$
+\end_inset
+
+ has exactly one preimage 
+\begin_inset Formula $a$
+\end_inset
+
+ in 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ In other words, the relation 
+\begin_inset Formula $f^{-1}\subseteq W\times V$
+\end_inset
+
+ contains exactly one element 
+\begin_inset Formula $(b,a)$
+\end_inset
+
+ for each 
+\begin_inset Formula $b$
+\end_inset
+
+ in 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Therefore the domain of 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ is 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ is a one-to-one function.
+ That 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ is onto follows from the fact that 
+\begin_inset Formula $f$
+\end_inset
+
+ is a function (there is a pair 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ in 
+\begin_inset Formula $f$
+\end_inset
+
+ for every element 
+\begin_inset Formula $a$
+\end_inset
+
+ of the domain 
+\begin_inset Formula $V$
+\end_inset
+
+ so there is a pair 
+\begin_inset Formula $(b,a)$
+\end_inset
+
+ in 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ for every element 
+\begin_inset Formula $a$
+\end_inset
+
+ of 
+\begin_inset Formula $V$
+\end_inset
+
+).
+ Since 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ is a one-to-one and onto function, it is an isomorphism.
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

@@ -11177,5 +11177,1125 @@ T(\mathbf{a})=M\mathbf{a}=\left[\begin{array}{cc}
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Transformations-on-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations-1"
+
+\end_inset
+
+(i) Perhaps the simplest method for obtaining the standard matrix is to
+ graph the action of the transformation on the standard basis vectors.
+ Their images form the columns on the standard matrix.
+ In this case, the following diagram demonstrates this action.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-5
+\backslash
+baselineskip}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/linear-vector-transformations-01.pdf
+	lyxscale 33
+	width 2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+T\\
+\Rightarrow
+\end{array}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-5
+\backslash
+baselineskip}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/linear-vector-transformations-02.pdf
+	lyxscale 33
+	width 2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Basis vector 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ maps to 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+ and basis vector 
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ maps to 
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+0
+\end{array}\right]$
+\end_inset
+
+ so the standard matrix is 
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & -1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(ii) The image of 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+ means 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]\right)$
+\end_inset
+
+, which is calculated as
+\begin_inset Formula 
+\[
+T\left(\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]\right)=\left[\begin{array}{cc}
+0 & -1\\
+1 & 0
+\end{array}\right]\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+-1\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations-2"
+
+\end_inset
+
+
+\series bold
+[solution 1]
+\series default
+ From the table on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:transformationsR2-table"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the elementary matrices associated with this composition are
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+reflection about the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis (horizontal scale by factor 
+\begin_inset Formula $-1$
+\end_inset
+
+): 
+\begin_inset Formula $\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+vertical scale by a factor of 2: 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+horizontal scale by a factor of 2: 
+\begin_inset Formula $\left[\begin{array}{cc}
+2 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Altogether the standard matrix is the product of these elementary matrices
+ 
+\shape italic
+right to left
+\shape default
+:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+2 & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+0 & 2
+\end{array}\right]\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]=\left[\begin{array}{cc}
+-2 & 0\\
+0 & 2
+\end{array}\right]
+\]
+
+\end_inset
+
+Note: The order of multiplication in this particular example does not matter.
+ These particular elementary matrices commute with one another.
+ However, not all elementary matrices commute.
+ Generally, the order of multiplication matters.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+[solution 2]
+\series default
+ The standard matrix can always be determined by finding the images of the
+ standard basis vectors.
+ In this case, 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ maps to 
+\begin_inset Formula $\left[\begin{array}{c}
+-2\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ maps to 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+2
+\end{array}\right]$
+\end_inset
+
+, verifying that indeed 
+\begin_inset Formula $\left[\begin{array}{cc}
+-2 & 0\\
+0 & 2
+\end{array}\right]$
+\end_inset
+
+ is the standard matrix for 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Note: This method should be considered a double check when possible.
+ It is not always so simple to determine the images of the standard basis
+ vectors.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations-3"
+
+\end_inset
+
+Transformations with the same standard matrix are the same transformation.
+ Determining the standard matrices for 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ (using the chart on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "par:transformationsR2-table"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) will answer the question.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+: reflection about the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis (horizontal scaling by a factor of 
+\begin_inset Formula $-1$
+\end_inset
+
+), 
+\begin_inset Formula $\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+, followed by rotation 
+\begin_inset Formula $\frac{\pi}{4}$
+\end_inset
+
+ radians clockwise (
+\begin_inset Formula $-\frac{\pi}{4}$
+\end_inset
+
+ radians counterclockwise) about the origin,
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\left[\begin{array}{cc}
+\cos\left(-\frac{\pi}{4}\right) & -\sin\left(-\frac{\pi}{4}\right)\\
+\sin\left(-\frac{\pi}{4}\right) & \cos\left(-\frac{\pi}{4}\right)
+\end{array}\right]=\left[\begin{array}{cc}
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+\end{array}\right]$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+\end{array}\right]\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]=\left[\begin{array}{cc}
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+: rotation 
+\begin_inset Formula $\frac{3\pi}{4}$
+\end_inset
+
+ radians clockwise (
+\begin_inset Formula $-\frac{3\pi}{4}$
+\end_inset
+
+ radians counterclockwise) about the origin,
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\left[\begin{array}{cc}
+\cos\left(-\frac{3\pi}{4}\right) & -\sin\left(-\frac{3\pi}{4}\right)\\
+\sin\left(-\frac{3\pi}{4}\right) & \cos\left(-\frac{3\pi}{4}\right)
+\end{array}\right]=\left[\begin{array}{cc}
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+-\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2}
+\end{array}\right]$
+\end_inset
+
+, followed by reflection about the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis (vertical scaling by a factor of 
+\begin_inset Formula $-1$
+\end_inset
+
+), 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]\left[\begin{array}{cc}
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+-\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2}
+\end{array}\right]=\left[\begin{array}{cc}
+-\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+ have the same standard matrix, they must be the same transformation (despite
+ the differing descriptions).
+\end_layout
+
+\begin_layout Standard
+Note: It is equivalent to see geometrically that the images of the standard
+ basis vectors (the columns of the standard matrix) are the same for 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations-4"
+
+\end_inset
+
+Given are the images of the standard basis vectors, which are the columns
+ of the standard matrix.
+ There is no work to do but collect the images as columns of a matrix:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-7.5 & -5.2\\
+1 & 10.1\\
+-13.2 & -4.3\\
+-3.7 & 4.3
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations-5"
+
+\end_inset
+
+The columns of the standard matrix are the images of the standard basis
+ vectors.
+ Writing the standard basis vectors as linear combinations of the given
+ preimages will allow computation of the images of the standard basis vectors.
+ For example, to write 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ as a linear combination of 
+\begin_inset Formula $\left[\begin{array}{c}
+41\\
+-3\\
+-2
+\end{array}\right],\left[\begin{array}{c}
+-6\\
+1\\
+0
+\end{array}\right],\left[\begin{array}{c}
+-5\\
+-1\\
+1
+\end{array}\right]$
+\end_inset
+
+ it suffices to solve the matrix equation
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+41 & -6 & -5\\
+-3 & 1 & -1\\
+-2 & 0 & 1
+\end{array}\right]\left[\begin{array}{c}
+a\\
+b\\
+c
+\end{array}\right]=\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+which can be done by row reduction:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+41 & -6 & -5 & 1\\
+-3 & 1 & -1 & 0\\
+-2 & 0 & 1 & 0
+\end{array}\right]\stackrel{\text{reduces to}}{\longrightarrow}\left[\begin{array}{cccc}
+1 & 0 & 0 & 1\\
+0 & 1 & 0 & 5\\
+0 & 0 & 1 & 2
+\end{array}\right].
+\]
+
+\end_inset
+
+ Therefore, 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]=1\left[\begin{array}{c}
+41\\
+-3\\
+-2
+\end{array}\right]+5\left[\begin{array}{c}
+-6\\
+1\\
+0
+\end{array}\right]+2\left[\begin{array}{c}
+-5\\
+-1\\
+1
+\end{array}\right]
+\]
+
+\end_inset
+
+and using the fact that 
+\begin_inset Formula $T$
+\end_inset
+
+ is a linear transformation, it then follows that 
+\begin_inset Formula 
+\begin{align*}
+T\left(\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]\right) & =1T\left(\left[\begin{array}{c}
+41\\
+-3\\
+-2
+\end{array}\right]\right)+5T\left(\left[\begin{array}{c}
+-6\\
+1\\
+0
+\end{array}\right]\right)+2T\left(\left[\begin{array}{c}
+-5\\
+-1\\
+1
+\end{array}\right]\right)\\
+ & =1\left[\begin{array}{c}
+7\\
+-4
+\end{array}\right]+5\left[\begin{array}{c}
+-13\\
+-3
+\end{array}\right]+2\left[\begin{array}{c}
+-9\\
+-13
+\end{array}\right]=\left[\begin{array}{c}
+-76\\
+-45
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+The first column of the standard matrix is hence 
+\begin_inset Formula $\left[\begin{array}{c}
+-76\\
+-45
+\end{array}\right]$
+\end_inset
+
+.
+ Repeating the process for the second and third standard basis vectors gives
+ the second and third columns of the standard matrix.
+ The whole computation is neatly done in this 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtkctugzAQRfeR8g8jVhCZKIQ0VVN1gVSpK3Yo
+mygLBwYYNdjImD7-vmNCGlpF8sKPuffMHbeGlPW9N_pABdTICjuQBndeMJ9lKbxAI62hL38tYnF4FGEU
+i_BJhBsRxu5w5LJ2sMjS4BkuW76bz_Y3bey0m0iEWxE-OCFvea3FSkTOwGH2S9lXDbL6IlpSwQey334c
+_DJuCM9g0efcq9Xe6JAujcHSv1M89DPqshqhs1IV0hRjf5Drhp1KoxuwNXYIZ1Iojbs_kZKWtOpAl-4R
+qsmghiEljM7SRXpY7Tjnbnu8opK7_Ffdn84IeY35O6lKDKat0ZzGOkYCn2TrCao1OH4LdV7wJ8f_Av63
+W8V-ih9FHJsBllxcW1N3HcDUOVlMlD886aW5&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+.
+ The standard matrix is
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+-76 & -469 & -858\\
+-45 & -273 & -511
+\end{array}\right]
+\]
+
+\end_inset
+
+Double checking, we can multiply 
+\begin_inset Formula $A$
+\end_inset
+
+ times each given preimage to make sure it matches with the given image.
+ For example, 
+\begin_inset Formula 
+\[
+A\left[\begin{array}{c}
+41\\
+-3\\
+-2
+\end{array}\right]=\left[\begin{array}{ccc}
+-76 & -469 & -858\\
+-45 & -273 & -511
+\end{array}\right]\left[\begin{array}{c}
+41\\
+-3\\
+-2
+\end{array}\right]=\left[\begin{array}{c}
+7\\
+-4
+\end{array}\right]
+\]
+
+\end_inset
+
+ as required.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Isomorphisms"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:isomorphisms"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:isomorphisms-1"
+
+\end_inset
+
+(a) There are multiple elements of the domain with the same image.
+ For example,
+\begin_inset Formula 
+\begin{align*}
+T\left(\left\langle 1,2,3,4,1,2,3,4,\ldots\right\rangle \right) & =\left[\begin{array}{cccc}
+1 & 2 & 3 & 4\end{array}\right]\\
+\text{and}\\
+T\left(\left\langle 1,2,3,4,5,6,7,8,\ldots\right\rangle \right) & =\left[\begin{array}{cccc}
+1 & 2 & 3 & 4\end{array}\right]
+\end{align*}
+
+\end_inset
+
+(and therefore the equation 
+\begin_inset Formula $T(a)=\left[\begin{array}{cccc}
+1 & 2 & 3 & 4\end{array}\right]$
+\end_inset
+
+ has more than one solution, violating the definition of one-to-one).
+\begin_inset Newline newline
+\end_inset
+
+(b) For example,
+\begin_inset Formula 
+\[
+T\left(\left\langle s_{1},s_{2},s_{3},s_{4},1,1,1,1,1,\ldots\right\rangle \right)=\left[\begin{array}{cccc}
+s_{1} & s_{2} & s_{3} & s_{4}\end{array}\right]
+\]
+
+\end_inset
+
+for any vector 
+\begin_inset Formula $\left[\begin{array}{cccc}
+s_{1} & s_{2} & s_{3} & s_{4}\end{array}\right]$
+\end_inset
+
+ (and therefore the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at least one solution for every element of the codomain).
+\begin_inset Newline newline
+\end_inset
+
+(c) 
+\begin_inset Formula $T$
+\end_inset
+
+ is not an isomorphism because it is not one-to-one.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:isomorphisms-2"
+
+\end_inset
+
+(a) Yes.
+ Let 
+\begin_inset Formula $b$
+\end_inset
+
+ be an element of the codomain and suppose 
+\begin_inset Formula $T(f_{1})=b$
+\end_inset
+
+ and 
+\begin_inset Formula $T(f_{2})=b$
+\end_inset
+
+, which is to say the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has more than one solution.
+ Then 
+\begin_inset Formula $T(f_{1})=T(f_{2})$
+\end_inset
+
+ so 
+\begin_inset Formula $e^{x}f_{1}(x)=e^{x}f_{2}(x)$
+\end_inset
+
+.
+ Dividing both sides of the equation by 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+, we find that 
+\begin_inset Formula $f_{1}(x)=f_{2}(x)$
+\end_inset
+
+.
+ Therefore, in fact the 
+\begin_inset Quotes eld
+\end_inset
+
+two solutions
+\begin_inset Quotes erd
+\end_inset
+
+ must actually be one and the same (and we have shown that the equation
+ 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at most one solution).
+\begin_inset Newline newline
+\end_inset
+
+(b) Yes.
+ Let 
+\begin_inset Formula $b$
+\end_inset
+
+ be an element of the codomain (a function) and set 
+\begin_inset Formula $f(x)=\frac{b(x)}{e^{x}}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $T(f)=e^{x}\frac{b(x)}{e^{x}}=b(x)$
+\end_inset
+
+ so the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at least one solution (
+\begin_inset Formula $f$
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+(c) Yes.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ is both one-to-one and onto.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:isomorphisms-3"
+
+\end_inset
+
+The definitions of one-to-one and onto depend on the possible numbers of
+ solutions of the equation 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+, which in this case is
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cc}
+14 & -1\\
+-15 & 15\\
+12 & 9
+\end{array}\right]\left[\begin{array}{c}
+a_{1}\\
+a_{2}
+\end{array}\right]=\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+b_{3}
+\end{array}\right]\label{eq:isomorphisms-sol-3}
+\end{equation}
+
+\end_inset
+
+(i) By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:isomorphisms-sol-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) has at most one solution for each 
+\begin_inset Formula $b$
+\end_inset
+
+ precisely if the columns of the coefficient matrix are linearly independent.
+ By inspection, we can see that they are (they are not multiples of one
+ another), so 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has at most one solution for each 
+\begin_inset Formula $b$
+\end_inset
+
+ in the codomain and 
+\begin_inset Formula $T$
+\end_inset
+
+ is one-to-one.
+\begin_inset Newline newline
+\end_inset
+
+(ii) By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Matrix-Characterization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:isomorphisms-sol-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) has at least one solution for each 
+\begin_inset Formula $b$
+\end_inset
+
+ precisely if the coefficient matrix has a pivot position in every row.
+ This is, however impossible since there are 3 rows and at most 2 pivot
+ positions, one for each column.
+ Therefore 
+\begin_inset Formula $T(a)=b$
+\end_inset
+
+ has no solution for some elements 
+\begin_inset Formula $b$
+\end_inset
+
+ of the codomain and 
+\begin_inset Formula $T$
+\end_inset
+
+ is not onto.
+\begin_inset Newline newline
+\end_inset
+
+(iii) No.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ is not onto and therefore is not an isomorphism.
+\end_layout
+
 \end_body
 \end_document

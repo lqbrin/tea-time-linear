@@ -947,6 +947,12 @@ Exercises
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims"
+
+\end_inset
+
 Explain why the transformation 
 \begin_inset Formula $T:\mathbb{R}^{3}\to\mathbb{P}_{3}(\mathbb{R})$
 \end_inset
@@ -956,7 +962,7 @@ Explain why the transformation
 r_{1} & r_{2} & r_{3}\end{array}\right]\right)=(x-r_{1})(x-r_{2})(x-r_{3})$
 \end_inset
 
- is 
+ is
 \end_layout
 
 \begin_deeper
@@ -974,6 +980,12 @@ not an isomorphism.
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-1"
+
+\end_inset
+
 Explain why the transformation 
 \begin_inset Formula $T:\mathbb{R^{\mathbb{N}}}\to\mathbb{R}^{4}$
 \end_inset
@@ -984,6 +996,29 @@ s_{1} & s_{2} & s_{3} & s_{4}\end{array}\right]$
 \end_inset
 
  is
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:isomorphisms-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1023,6 +1058,12 @@ an isomorphism?
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-2"
+
+\end_inset
+
 Is the transformation 
 \begin_inset Formula $T:C([0,1])\to C([0,1])$
 \end_inset
@@ -1032,6 +1073,29 @@ Is the transformation
 \end_inset
 
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:isomorphisms-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1086,6 +1150,13 @@ z
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-3"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 x\\
 y
@@ -1097,6 +1168,29 @@ y
 x\\
 y
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:isomorphisms-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1121,6 +1215,13 @@ z
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-4"
+
+\end_inset
+
+
 \begin_inset Formula $T\left(\left[\begin{array}{c}
 x\\
 y
@@ -1131,6 +1232,29 @@ y
 x\\
 y
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:isomorphisms-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1193,7 +1317,37 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-5"
+
+\end_inset
+
+
 \begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:isomorphisms-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1207,7 +1361,37 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-6"
+
+\end_inset
+
+
 \begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:isomorphisms-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1227,6 +1411,12 @@ Justify the claim.
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-7"
+
+\end_inset
+
 the statement 
 \begin_inset Quotes eld
 \end_inset
@@ -1250,6 +1440,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:isomorphisms-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1279,6 +1492,12 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-8"
+
+\end_inset
+
 the statements 
 \begin_inset Quotes eld
 \end_inset
@@ -1314,6 +1533,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:isomorphisms-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1347,11 +1589,11 @@ If
 \begin_inset Formula $f:V\to W$
 \end_inset
 
- is an isomorphism between vector spaces 
+ is an isomorphism from vector space 
 \begin_inset Formula $V$
 \end_inset
 
- and 
+ to vector space 
 \begin_inset Formula $W$
 \end_inset
 
@@ -1360,6 +1602,29 @@ If
 \end_inset
 
  is an isomorphism.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:isomorphisms-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
