@@ -12297,5 +12297,1174 @@ noprefix "false"
  is not onto and therefore is not an isomorphism.
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces-1"
+
+\end_inset
+
+The five properties defining an inner product must be verified.
+ Direct computation will suffice.
+ Each string of inequalities hinges on the algebra of real numbers/variables.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \mathbf{u},\mathbf{u}\right\rangle =\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right],\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\right\rangle =2u_{1}u_{1}+3u_{2}u_{2}=2u_{1}^{2}+3u_{2}^{2}\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\left\langle \mathbf{u},\mathbf{u}\right\rangle =0$
+\end_inset
+
+ then 
+\begin_inset Formula $2u_{1}^{2}+3u_{2}^{2}=0$
+\end_inset
+
+ so it must be that 
+\begin_inset Formula $u_{1}^{2}=u_{2}^{2}=0$
+\end_inset
+
+, which means 
+\begin_inset Formula $u_{1}=u_{2}=0$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathbf{u}=\mathbf{0}$
+\end_inset
+
+.
+ On the other hand, if 
+\begin_inset Formula $\mathbf{u}=\mathbf{0}$
+\end_inset
+
+ then 
+\begin_inset Formula $u_{1}=u_{2}=0$
+\end_inset
+
+ so 
+\begin_inset Formula $\left\langle \mathbf{u},\mathbf{u}\right\rangle =2u_{1}^{2}+3u_{2}^{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \mathbf{u},\mathbf{v}\right\rangle =\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =2u_{1}v_{1}+3u_{2}v_{2}=2v_{1}u_{1}+3v_{2}u_{2}=\left\langle \left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right],\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]\right\rangle =\left\langle \mathbf{v},\mathbf{u}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \mathbf{u}+\mathbf{w},\mathbf{v}\right\rangle =\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right]+\left[\begin{array}{c}
+w_{1}\\
+w_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =\left\langle \left[\begin{array}{c}
+u_{1}+w_{1}\\
+u_{2}+w_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =2\left(u_{1}+w_{1}\right)v_{1}+3\left(u_{2}+w_{2}\right)v_{2}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $=\left(2u_{1}v_{1}+3u_{2}v_{2}\right)+\left(2w_{1}v_{1}+3w_{2}v_{2}\right)=\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle +\left\langle \left[\begin{array}{c}
+w_{1}\\
+w_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =\left\langle \mathbf{u},\mathbf{v}\right\rangle +\left\langle \mathbf{w},\mathbf{v}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle c\mathbf{u},\mathbf{v}\right\rangle =\left\langle c\left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =\left\langle \left[\begin{array}{c}
+cu_{1}\\
+cu_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =2cu_{1}v_{1}+3cu_{2}v_{2}=c\left(2u_{1}v_{1}+3u_{2}v_{2}\right)=c\left\langle \left[\begin{array}{c}
+u_{1}\\
+u_{2}
+\end{array}\right],\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]\right\rangle =c\left\langle \mathbf{u},\mathbf{v}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces-2"
+
+\end_inset
+
+By definition, two vectors are orthogonal if their inner product is zero.
+ Calculating,
+\begin_inset Formula 
+\[
+\left\langle \mathbf{u},\mathbf{v}\right\rangle =\left\langle \left[\begin{array}{c}
+3\\
+10
+\end{array}\right],\left[\begin{array}{c}
+10\\
+-5
+\end{array}\right]\right\rangle =\left[\begin{array}{cc}
+3 & 10\end{array}\right]\left[\begin{array}{cc}
+5 & 0\\
+0 & 3
+\end{array}\right]\left[\begin{array}{c}
+10\\
+-5
+\end{array}\right]=\left[\begin{array}{cc}
+3 & 10\end{array}\right]\left[\begin{array}{c}
+50\\
+-15
+\end{array}\right]=150-150=0
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are orthogonal.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces-3"
+
+\end_inset
+
+By definition, two vectors are orthogonal if their inner product is zero.
+ Calculating,
+\begin_inset Formula 
+\begin{align*}
+\left\langle \mathbf{u},\mathbf{v}\right\rangle  & =\mathbf{u}(0)\mathbf{v}(0)+\mathbf{u}(1)\mathbf{v}(1)+\mathbf{u}(2)\mathbf{v}(2)+\mathbf{u}(3)\mathbf{v}(3)\\
+ & =(3)(0)+(0)(-1)+(-1)(0)+(0)(3)=0
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are orthogonal.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces-4"
+
+\end_inset
+
+By definition, two vectors are orthogonal if their inner product is zero.
+ Calculating,
+\begin_inset Formula 
+\begin{align*}
+\left\langle \mathbf{u},\mathbf{v}\right\rangle  & =\frac{1}{2\pi}\int_{0}^{2\pi}\mathbf{u}(x)\mathbf{v}(x)\,dx=\frac{1}{2\pi}\int_{0}^{2\pi}(\sin x)(\cos x)\,dx=-\frac{1}{4\pi}\left[\cos^{2}x\right]_{0}^{2\pi}\\
+ & =-\frac{1}{4\pi}\left[\cos^{2}(2\pi)-\cos^{2}(0)\right]=-\frac{1}{4\pi}\left[1-1\right]=0
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are orthogonal.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces-5"
+
+\end_inset
+
+By definition, two vectors are orthogonal if their inner product is zero.
+ Calculating,
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{u}\mathbf{v}^{T}=\left[\begin{array}{cc}
+2 & 7\\
+-2 & 3
+\end{array}\right]\left[\begin{array}{cc}
+-2 & -6\\
+8 & -4
+\end{array}\right]=\left[\begin{array}{cc}
+52 & -40\\
+28 & 0
+\end{array}\right]$
+\end_inset
+
+ so
+\begin_inset Formula 
+\[
+\left\langle \mathbf{u},\mathbf{v}\right\rangle =\left(\mathbf{u}\mathbf{v}^{T}\right)_{1,1}+\left(\mathbf{u}\mathbf{v}^{T}\right)_{2,2}=52+0=52\neq0
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are not orthogonal.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-with-zero"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces-6"
+
+\end_inset
+
+Given any vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ in a vector space, 
+\begin_inset Formula $\mathbf{v}-\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ so
+\begin_inset Formula 
+\begin{align*}
+\left\langle \mathbf{0},\mathbf{v}\right\rangle =\left\langle \mathbf{v}-\mathbf{v},\mathbf{v}\right\rangle  & \quad\text{by substituion}\\
+=\left\langle \mathbf{v},\mathbf{v}\right\rangle +\left\langle -\mathbf{v},\mathbf{v}\right\rangle  & \quad\text{by inner product property 4}\\
+=\left\langle \mathbf{v},\mathbf{v}\right\rangle +\left\langle (-1)\mathbf{v},\mathbf{v}\right\rangle  & \quad\text{by exercise \ref{exc:vector-spaces-29} of section \ref{sec:Vector-Spaces-and-Span}}\\
+=\left\langle \mathbf{v},\mathbf{v}\right\rangle +(-1)\left\langle \mathbf{v},\mathbf{v}\right\rangle  & \quad\text{by inner product property 5}\\
+=\left\langle \mathbf{v},\mathbf{v}\right\rangle -\left\langle \mathbf{v},\mathbf{v}\right\rangle =0 & \quad\text{by algebra of real numbers}
+\end{align*}
+
+\end_inset
+
+Hence 
+\begin_inset Formula $\left\langle \mathbf{0},\mathbf{v}\right\rangle =0$
+\end_inset
+
+ and by inner product property 3, 
+\begin_inset Formula $\left\langle \mathbf{v},\mathbf{0}\right\rangle =\left\langle \mathbf{0},\mathbf{v}\right\rangle $
+\end_inset
+
+ (which of course is zero).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:inner-product-spaces-7"
+
+\end_inset
+
+Given any vectors 
+\begin_inset Formula $\mathbf{u},\mathbf{v},\mathbf{w}$
+\end_inset
+
+ in a vector space,
+\begin_inset Formula 
+\begin{align*}
+\left\langle \mathbf{u},\mathbf{v}+\mathbf{w}\right\rangle =\left\langle \mathbf{v}+\mathbf{w},\mathbf{u}\right\rangle  & \quad\text{by inner product property 3}\\
+=\left\langle \mathbf{v},\mathbf{u}\right\rangle +\left\langle \mathbf{w},\mathbf{u}\right\rangle  & \quad\text{by inner product property 4}\\
+=\left\langle \mathbf{u},\mathbf{v}\right\rangle +\left\langle \mathbf{u},\mathbf{w}\right\rangle  & \quad\text{by inner product property 3}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Solution-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-1"
+
+\end_inset
+
+The question is equivalent to asking whether 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ can be written as a linear combination of the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ In turn, this is equivalent to whether 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ has a solution.
+ Attempting to solve 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ by row reduction of the augmented matrix:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+27 & 33 & 6\\
+9 & 11 & 2
+\end{array}\right]\stackrel{\frac{1}{3}A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+9 & 11 & 2\\
+9 & 11 & 2
+\end{array}\right]\stackrel{-A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+9 & 11 & 2\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+shows that there are infinitely many solutions.
+ Hence 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is in the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-2"
+
+\end_inset
+
+From the echelon form 
+\begin_inset Formula $\left[\begin{array}{cc}
+9 & 11\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ (see solution above) the only pivot position is in the first column so
+ the set containing just the first column of 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \left\{ \left[\begin{array}{c}
+27\\
+9
+\end{array}\right]\right\} }$
+\end_inset
+
+ is a basis for the column space.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-3"
+
+\end_inset
+
+From the echelon form 
+\begin_inset Formula $\left[\begin{array}{cc}
+9 & 11\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ solutions of the homogeneous equation 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $9v_{1}+11v_{2}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $v_{1}=-\frac{11}{9}v_{2}$
+\end_inset
+
+.
+ In parametric vector form, the solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ are 
+\begin_inset Formula $\mathbf{v}=r\left[\begin{array}{c}
+11\\
+-9
+\end{array}\right]$
+\end_inset
+
+ and therefore 
+\begin_inset Formula ${\displaystyle \left\{ \left[\begin{array}{c}
+11\\
+-9
+\end{array}\right]\right\} }$
+\end_inset
+
+ is a basis for the null space.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-4"
+
+\end_inset
+
+(i) Yes.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ does not have a leading coefficient in the rightmost column.
+ Hence the system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is consistent.
+ (ii) The pivot positions of 
+\begin_inset Formula $M$
+\end_inset
+
+ are in the first, third, and fourth columns, so the first, third, and fourth
+ columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ comprise a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+-20\\
+-6\\
+4
+\end{array}\right],\left[\begin{array}{c}
+6\\
+2\\
+-2
+\end{array}\right],\left[\begin{array}{c}
+153\\
+45\\
+-36
+\end{array}\right]\right\} 
+\]
+
+\end_inset
+
+Note: Since the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ are in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ and there are three linearly indpendent columns, they must span all of
+ 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ so any three linearly independent vectors form a basis for the column space
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ (iii) In parametric vector form, the solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ are 
+\begin_inset Formula $\mathbf{v}=r\left[\begin{array}{c}
+9\\
+-2\\
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ so one basis for the null space is
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+9\\
+-2\\
+0\\
+0
+\end{array}\right]\right\} .
+\]
+
+\end_inset
+
+Note: Any set containing any nonzero multiple of 
+\begin_inset Formula $\left[\begin{array}{c}
+9\\
+-2\\
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ is also a basis for the null space.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-5"
+
+\end_inset
+
+(i) No.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ has a leading coefficient in the rightmost column.
+ Hence the system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is inconsistent.
+ (ii) The pivot positions of 
+\begin_inset Formula $M$
+\end_inset
+
+ are in the first, second, and fourth columns, so the first, second, and
+ fourth columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ comprise a basis for the column space of 
+\begin_inset Formula $M$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+187\\
+0\\
+-33\\
+-154
+\end{array}\right],\left[\begin{array}{c}
+99\\
+-11\\
+-22\\
+-77
+\end{array}\right],\left[\begin{array}{c}
+-12\\
+4\\
+4\\
+12
+\end{array}\right]\right\} 
+\]
+
+\end_inset
+
+Note: Any other set of three vectors with the same span would also do.
+ (iii) In parametric vector form, the solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ are 
+\begin_inset Formula $\mathbf{v}=r\left[\begin{array}{c}
+7\\
+-5\\
+11\\
+0
+\end{array}\right]$
+\end_inset
+
+ so one basis for the null space is
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+7\\
+-5\\
+11\\
+0
+\end{array}\right]\right\} .
+\]
+
+\end_inset
+
+Note: Any set containing any nonzero multiple of 
+\begin_inset Formula $\left[\begin{array}{c}
+7\\
+-5\\
+11\\
+0
+\end{array}\right]$
+\end_inset
+
+ is also a basis for the null space.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-6"
+
+\end_inset
+
+(i) Because the first and fourth columns comprise a basis for the column
+ space, there must be a linear combination of these two columns that sums
+ to 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ By inspection,
+\begin_inset Formula 
+\[
+1\left[\begin{array}{c}
+-15\\
+27\\
+9
+\end{array}\right]+1\left[\begin{array}{c}
+-7\\
+42\\
+7
+\end{array}\right]=\left[\begin{array}{c}
+-22\\
+69\\
+16
+\end{array}\right]=\mathbf{b}
+\]
+
+\end_inset
+
+(ii) From above, one particular solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+1\\
+0\\
+0\\
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+.
+ The solution of the homogeneous system 
+\begin_inset Formula $M\mathbf{v}=\mathbf{0}$
+\end_inset
+
+ is given by the equations 
+\begin_inset Formula $v_{1}=-\frac{7}{3}v_{2}-\frac{8}{3}v_{3}-\frac{7}{3}v_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{4}=\frac{8}{7}v_{5}$
+\end_inset
+
+.
+ In parametric vector form, 
+\begin_inset Formula 
+\[
+\mathbf{v}=r\left[\begin{array}{c}
+-\frac{7}{3}\\
+1\\
+0\\
+0\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+-\frac{8}{3}\\
+0\\
+1\\
+0\\
+0
+\end{array}\right]+t\left[\begin{array}{c}
+-\frac{7}{3}\\
+0\\
+0\\
+\frac{8}{7}\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+Hence the general solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+1\\
+0\\
+0\\
+1\\
+0
+\end{array}\right]+r\left[\begin{array}{c}
+-\frac{7}{3}\\
+1\\
+0\\
+0\\
+0
+\end{array}\right]+s\left[\begin{array}{c}
+-\frac{8}{3}\\
+0\\
+1\\
+0\\
+0
+\end{array}\right]+t\left[\begin{array}{c}
+-\frac{7}{3}\\
+0\\
+0\\
+\frac{8}{7}\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-33"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-7"
+
+\end_inset
+
+(a) 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is 
+\begin_inset Formula $-2$
+\end_inset
+
+ times the fourth column of 
+\begin_inset Formula $M$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+0\\
+0\\
+-2
+\end{array}\right]$
+\end_inset
+
+ is one solution of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(b) The general solution (the set of all solutions) of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+0\\
+0\\
+0\\
+-2
+\end{array}\right]+r\left[\begin{array}{c}
+0\\
+1\\
+1\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(c) The solution in part (a) corresponds to the general solution with 
+\begin_inset Formula $r=0$
+\end_inset
+
+.
+ Picking any three other real numbers for the parameter in the general solution
+ will provide three solutions different from the one in (a).
+ For example, using 
+\begin_inset Formula $r=1,2,3$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+0\\
+1\\
+1\\
+-2
+\end{array}\right],\left[\begin{array}{c}
+0\\
+2\\
+2\\
+-2
+\end{array}\right],\left[\begin{array}{c}
+0\\
+3\\
+3\\
+-2
+\end{array}\right]
+\]
+
+\end_inset
+
+are all solutions of 
+\begin_inset Formula $M\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-47"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:solution-spaces-8"
+
+\end_inset
+
+The eigenspace corresponding to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the null space of 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+.
+ The dimension of the null space of 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+ is the number of free variables of the system 
+\begin_inset Formula $(M-\lambda I)=\mathbf{0}$
+\end_inset
+
+, which can be found by row reducing 
+\begin_inset Formula $M-\lambda I$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+25 & 45 & -75\\
+5 & 9 & -15\\
+15 & 27 & -45
+\end{array}\right]\stackrel[\frac{1}{3}A_{3,:}\to A_{3,:}]{\frac{1}{5}A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+5 & 9 & -15\\
+5 & 9 & -15\\
+5 & 9 & -15
+\end{array}\right]\stackrel[-A_{1,:}+A_{3,:}\to A_{3,:}]{-A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+5 & 9 & -15\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+The dimension of the eigenspace is 2.
+\end_layout
+
 \end_body
 \end_document

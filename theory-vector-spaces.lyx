@@ -1058,6 +1058,28 @@ noprefix "false"
 \end_inset
 
 .
+ For consistency with the notion of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:vector-spaces-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of this section and the nonemptiness of vector spaces (and the concept
+ of a basis, which will be studied later), the span of the empty set is
+ 
+\begin_inset Formula $\{\mathbf{0}\}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $\text{span}\{\}=\{\mathbf{0}\}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1237,7 +1259,11 @@ span for vectors
 
 \end_inset
 
+Additionally, 
+\begin_inset Formula $\text{span}\{\}=\{\mathbf{0}\}$
+\end_inset
 
+.
 \end_layout
 
 \begin_layout Description
@@ -1272,15 +1298,23 @@ as
 \begin_inset space ~
 \end_inset
 
-subspace given any vectors 
-\begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
+subspace given any subset 
+\begin_inset Formula $H$
 \end_inset
 
- of a vector space, 
-\begin_inset Formula $\text{span}\{\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}\}$
+ of a vector space 
+\begin_inset Formula $V$
 \end_inset
 
- is a subspace.
+, 
+\begin_inset Formula $\text{span}H$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection*
@@ -3988,6 +4022,12 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:vector-spaces-29"
+
+\end_inset
+
 Prove that for any vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
@@ -4109,6 +4149,12 @@ Suppose
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:vector-spaces-30"
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $V$
 \end_inset

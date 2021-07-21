@@ -168,10 +168,11 @@ One important feature of
  To do that, though, we would need to write down the essential features
  of the dot product and hope that, as an abstract list of requirements,
  other vector spaces would admit similar operators.
+ We explore some properties of the dot product presently.
 \end_layout
 
 \begin_layout Standard
-Representing elements of 
+First, representing elements of 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -179,7 +180,7 @@ Representing elements of
 \begin_inset Formula $\mathbf{u},\mathbf{v}\in\mathbb{R}^{n}$
 \end_inset
 
- is given by 
+ is defined by 
 \begin_inset Formula $\mathbf{u}^{T}\mathbf{v}$
 \end_inset
 
@@ -194,7 +195,7 @@ noprefix "false"
 \end_inset
 
 ).
- In other words, if 
+ Letting 
 \begin_inset Formula $\mathbf{u}=u_{1},u_{2},\ldots,u_{n}$
 \end_inset
 
@@ -202,7 +203,7 @@ noprefix "false"
 \begin_inset Formula $\mathbf{v}=v_{1},v_{2},\ldots,v_{n}$
 \end_inset
 
-, then the dot product of 
+, the dot product of 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -210,44 +211,79 @@ noprefix "false"
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
-, which we will begin to denote  
+, which we will begin to denote 
 \begin_inset Formula $\mathbf{u}\bcdot\mathbf{v}$
 \end_inset
 
 , is given by
 \begin_inset Formula 
-\[
-\mathbf{u}\bcdot\mathbf{v}=u_{1}v_{1}+u_{2}v_{2}+\cdots+u_{n}v_{n}.
-\]
+\begin{equation}
+\mathbf{u}\bcdot\mathbf{v}=u_{1}v_{1}+u_{2}v_{2}+\cdots+u_{n}v_{n}.\label{eq:dot-product-formula}
+\end{equation}
 
 \end_inset
 
-Thus
+This is not a new definition, just a new notation and a general formula
+ for computing the dot product.
+ Also in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the length of a vector 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ is defined by 
+\begin_inset Formula $\sqrt{\mathbf{u}^{T}\mathbf{u}}$
+\end_inset
+
+.
+ Using the new notation and formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dot-product-formula"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+),
 \begin_inset Formula 
 \begin{align*}
-\mathbf{u}\bcdot\mathbf{u} & =u_{1}u_{1}+u_{2}u_{2}+\cdots+u_{n}u_{n}\\
- & =u_{1}^{2}+u_{2}^{2}+\cdots+u_{n}^{2}
+\Vert\mathbf{u}\Vert=\sqrt{\mathbf{u}\bcdot\mathbf{u}} & =\sqrt{u_{1}u_{1}+u_{2}u_{2}+\cdots+u_{n}u_{n}}\\
+ & =\sqrt{u_{1}^{2}+u_{2}^{2}+\cdots+u_{n}^{2}},
 \end{align*}
 
 \end_inset
 
-is, conveniently, the square of the magnitude of 
-\begin_inset Formula $\mathbf{u}$
-\end_inset
-
-.
- In particular, 
+a formula that only makes sense as a magnitude since 
 \begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}$
 \end_inset
 
  is nonnegative (the squares of real numbers are nonnegative and the sum
  of nonnegative numbers is nonnegative).
- This seems like an important property of the dot product since square roots
- of negative numbers are not magnitudes.
+ If 
+\begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}$
+\end_inset
+
+ were sometimes negative it would not make a good quantity for defining
+ vector length.
+ As such, the nonnegativity of 
+\begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}$
+\end_inset
+
+ is an important property of the dot product.
 \end_layout
 
 \begin_layout Standard
-In section 
+Second, in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Length-and-Orthogonality"
@@ -261,14 +297,11 @@ noprefix "false"
 \begin_inset Formula $\mathbf{u}\bcdot\mathbf{v}=\mathbf{v}\bcdot\mathbf{u}$
 \end_inset
 
- implying that the dot product is commutative.
+, meaning that the dot product is commutative.
  Commutativity (or lack thereof) is a fundamental property of any operator.
- Since the dot product is commutative it seems that any abstraction of the
- dot product should be commutative too.
-\end_layout
-
-\begin_layout Standard
-Both nonnegativity (of 
+ Since the dot product is commutative any abstraction of the dot product
+ should be commutative too.
+ Note that both nonnegativity (of 
 \begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}$
 \end_inset
 
@@ -277,12 +310,43 @@ Both nonnegativity (of
 \end_inset
 
 ) follow directly from properties of the real numbers.
- Another such property is a sense of linearity.
- For the dot product of elements of 
-\begin_inset Formula $\mathbb{R}^{n}$
+\end_layout
+
+\begin_layout Standard
+Two other properties, distributivity and a type of associativity, of the
+ dot product follow directly from properties of the real numbers as well.
+ You may have explored these properties in exercises 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:multiplication-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
-,
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:multiplication-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ To recap using the new notation,
 \begin_inset Formula 
 \begin{align*}
 (\mathbf{u}+\mathbf{w})\bcdot\mathbf{v} & =\mathbf{u}\bcdot\mathbf{v}+\mathbf{w}\bcdot\mathbf{v}\\
@@ -304,15 +368,15 @@ noprefix "false"
 \end_inset
 
 .
- Since this property follows as a natural consequence of considering real
- number scalars, it seems like it also ought to be a requirement of any
- abstraction.
+ You might think of these properties as a kind of linearity.
+ Since they follow as a natural consequence of using real number scalars,
+ any abstraction of the dot product should have a similar distributive and
+ associative properties.
 \end_layout
 
 \begin_layout Standard
-One final point about the dot product that cannot be proven from these four
- but is nonetheless a direct consequence of properties of the real numbers
- is that 
+Fifth, a property that cannot be proven from the previous four but is nonetheles
+s a direct consequence of properties of the real numbers is that 
 \begin_inset Formula 
 \[
 \mathbf{u}\bcdot\mathbf{u}=0\text{ if and only if }\mathbf{u}=\mathbf{0}.
@@ -320,8 +384,32 @@ One final point about the dot product that cannot be proven from these four
 
 \end_inset
 
-Though we did not discuss it before, this fact shows that the dot product
- can be used to determine when a vector is the zero vector.
+That is, the statements 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}=0$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\mathbf{u}=\mathbf{0}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ are equivalent.
+ The dot product can be used to determine whether a vector is the zero vector.
  Can you argue using properties of real numbers that the equivalence is
  true? Answer on page 
 \begin_inset CommandInset ref
@@ -337,9 +425,9 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-These five features form the foundation for a useful abstraction of the
- dot product.
- Accordingly, we define an 
+These five features of the dot product form the foundation for a useful
+ abstraction.
+ We define an 
 \series bold
 inner product
 \series default
@@ -465,7 +553,22 @@ name "enu:inner-product-preserve-scalar-mult"
 \end_layout
 
 \begin_layout Standard
-Any real vector space on which an inner product is defined is called an
+The dot product on 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ as defined in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the canonical, and motivating, example of an inner product.
+ Any real vector space on which an inner product is defined is called an
  
 \series bold
 inner product space
@@ -475,8 +578,8 @@ inner product space
 \end_layout
 
 \begin_layout Standard
-Extending the ideas of magnitude, distance, and orthogonality is then a
- simple matter.
+Extending the ideas of magnitude, distance, and orthogonality to an arbitrary
+ inner product space is a simple matter as the following chart suggests.
 \end_layout
 
 \begin_layout Standard
@@ -727,8 +830,8 @@ noprefix "false"
 
 \begin_layout Standard
 \noindent
-One reason for using the words norm and orthogonal instead of magnitude
- and perpendicular is because magnitude and perpendicular have ingrained
+We use the words norm instead of magnitude (or length) and orthogonal instead
+ of perpendicular because magnitude and perpendicular have special, visual,
  geometric meaning in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
@@ -737,8 +840,8 @@ One reason for using the words norm and orthogonal instead of magnitude
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
- that does not readily transer to objects such as matrices and functions
- or even 
+ that does not readily transer to other contexts.
+ Objects such as matrices and functions, and even vectors in 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -746,25 +849,54 @@ One reason for using the words norm and orthogonal instead of magnitude
 \begin_inset Formula $n>3$
 \end_inset
 
-.
+ cannot be visualized the same way.
  What would it mean for two polynomials to be perpendicular, for example?
- Is there some geometric way to visualize this? What would the magnitude
- (or size) of a matrix mean? Is there some way to visualize this geometrically?
- Likely you are coming up short of answers.
+ What would be the geometric magnitude (or length) of a matrix? The familiar
+ geometric notions of length and perpendicularity of vectors in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ have no geometric analogy in other vector spaces such as 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{M}_{m\times n}(\mathbb{R})$
+\end_inset
+
+.
  No matter.
- If we can come up with an inner product on the vector space of polynomials,
- then orthogonality of two vectors (polynomials) is 
+ This is really the purpose of the above chart.
+ Orthogonality (the abstraction of perpendicularity) of two vectors is 
 \shape italic
 defined by
 \shape default
- the requirement that their inner product be zero.
- This is the power of mathematical abstraction.
+ the requirement that their inner product be zero whatever that may look
+ like geometrically.
+ Therein lies the power of mathematical abstraction.
  A notion such as perpendicularity, which we can clearly see and grasp in
  
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
 , can be extended to other sets where no analogous picture can be drawn.
+ Likewise the norm (abstraction of length) of a matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\shape italic
+defined by
+\shape default
+ the quantity 
+\begin_inset Formula $\sqrt{\langle M,M\rangle}$
+\end_inset
+
+ whether it has geometric meaning or not.
 \end_layout
 
 \begin_layout Standard
@@ -1038,6 +1170,29 @@ v_{2}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inner-product-spaces-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1164,6 +1319,28 @@ name "exc:inner-product-5"
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-6"
+
+\end_inset
+
+
+\begin_inset Formula $\langle,\rangle:\mathcal{M}_{2\times2}(\mathbb{R})\times\mathcal{M}_{2\times2}(\mathbb{R})\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle M,N\right\rangle =(MN^{T})_{1,1}+(MN^{T})_{2,2}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 In 
@@ -1203,9 +1380,39 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-7"
+
+\end_inset
+
+
 \begin_inset Formula $\left\langle \left[\begin{array}{cc}
 6 & -3\end{array}\right]^{T},\left[\begin{array}{cc}
 3 & -5\end{array}\right]^{T}\right\rangle $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1228,8 +1435,38 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-8"
+
+\end_inset
+
+
 \begin_inset Formula $\left\Vert \left[\begin{array}{cc}
 -1 & 6\end{array}\right]^{T}\right\Vert $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1256,7 +1493,37 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-9"
+
+\end_inset
+
+
 \begin_inset Formula $\left\langle 2+5x+6x^{2},-2-3x-x^{2}\right\rangle $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1277,7 +1544,37 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-10"
+
+\end_inset
+
+
 \begin_inset Formula $\left\Vert 2-2x+x^{2}\right\Vert $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1325,7 +1622,37 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\langle x+1,\frac{1}{x-1}\right\rangle $
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-11"
+
+\end_inset
+
+
+\begin_inset Formula $\left\langle x+10,\frac{1}{x-10}\right\rangle $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1339,7 +1666,37 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-12"
+
+\end_inset
+
+
 \begin_inset Formula $\left\Vert \cos x\right\Vert $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1354,6 +1711,155 @@ noprefix "false"
 
 \begin_layout Enumerate
 \begin_inset Formula $\left\Vert 5(1+x-x^{2})\right\Vert $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+In 
+\begin_inset Formula $\mathcal{M}_{2\times2}(\mathbb{R})$
+\end_inset
+
+ with the inner product of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, calculate
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-13"
+
+\end_inset
+
+
+\begin_inset Formula $\left\langle \left[\begin{array}{cc}
+-9 & 0\\
+-8 & 7
+\end{array}\right],\left[\begin{array}{cc}
+5 & 6\\
+-2 & -3
+\end{array}\right]\right\rangle $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \left[\begin{array}{cc}
+-8 & 4\\
+9 & -9
+\end{array}\right],\left[\begin{array}{cc}
+-9 & 4\\
+7 & 0
+\end{array}\right]\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \left[\begin{array}{cc}
+3 & 9\\
+4 & -3
+\end{array}\right],\left[\begin{array}{cc}
+0 & 6\\
+8 & -9
+\end{array}\right]\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-14"
+
+\end_inset
+
+
+\begin_inset Formula $\left\Vert \left[\begin{array}{cc}
+-1 & 7\\
+-3 & 9
+\end{array}\right]\right\Vert $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \left[\begin{array}{cc}
+9 & -9\\
+-4 & -2
+\end{array}\right]\right\Vert $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \left[\begin{array}{cc}
+0 & -3\\
+-9 & 7
+\end{array}\right]\right\Vert $
 \end_inset
 
 
@@ -1415,6 +1921,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-15"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 8 & -4\end{array}\right]^{T}$
 \end_inset
@@ -1422,6 +1935,29 @@ noprefix "false"
  and 
 \begin_inset Formula $\left[\begin{array}{cc}
 14 & 3\end{array}\right]^{T}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-11"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1477,11 +2013,41 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-16"
+
+\end_inset
+
+
 \begin_inset Formula $6+2x-6x^{2}$
 \end_inset
 
  and 
 \begin_inset Formula $-5-3x-2x^{2}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-12"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1504,11 +2070,41 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-17"
+
+\end_inset
+
+
 \begin_inset Formula $x$
 \end_inset
 
  and 
 \begin_inset Formula $x^{2}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-13"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1549,6 +2145,120 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
+Using the inner product of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, find the distance between
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+3 & -5\\
+-3 & 1
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{cc}
+-8 & -5\\
+9 & -9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-4 & -5\\
+-7 & -6
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{cc}
+-5 & 8\\
+-8 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+-8 & 9\\
+4 & -5
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{cc}
+2 & 3\\
+-4 & -7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-18"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+9 & -3\\
+-6 & -9
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{cc}
+-3 & 3\\
+2 & 9
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 In 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
@@ -1576,6 +2286,13 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-19"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\left[\begin{array}{cc}
 3 & 10\end{array}\right]^{T}$
 \end_inset
@@ -1583,6 +2300,29 @@ noprefix "false"
  and 
 \begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
 10 & -5\end{array}\right]^{T}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inner-product-spaces-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1691,11 +2431,41 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-20"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=(x-1)(x-3)$
 \end_inset
 
  and 
 \begin_inset Formula $\mathbf{v}=x^{2}-2x$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inner-product-spaces-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1752,11 +2522,41 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-21"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{u}=\sin x$
 \end_inset
 
  and 
 \begin_inset Formula $\mathbf{v}=\cos x$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inner-product-spaces-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1808,11 +2608,161 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
+In 
+\begin_inset Formula $\mathcal{M}_{2\times2}(\mathbb{R})$
+\end_inset
+
+ with the inner product of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, are 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ orthogonal?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-22"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{cc}
+2 & 7\\
+-2 & 3
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+-2 & 8\\
+-6 & -4
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inner-product-spaces-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{cc}
+-7 & 7\\
+1 & 4
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+8 & -5\\
+-9 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{cc}
+-8 & -5\\
+-1 & 8
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+-3 & -6\\
+6 & -6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{cc}
+-6 & 5\\
+2 & -2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+2 & 6\\
+-7 & -4
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{cc}
+-5 & -4\\
+5 & -2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+3 & -1\\
+5 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Describe all vectors orthogonal to
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-23"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 3 & 5\end{array}\right]^{T}$
 \end_inset
@@ -1832,6 +2782,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1856,6 +2829,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-24"
+
+\end_inset
+
+
 \begin_inset Formula $f(x)=1$
 \end_inset
 
@@ -1867,6 +2847,53 @@ noprefix "false"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:inner-product-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+8 & 0\\
+1 & -3
+\end{array}\right]$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{M}_{2\times2}(\mathbb{R})$
+\end_inset
+
+ with the inner product of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-6"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1982,7 +3009,37 @@ Suppose for vectors
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-25"
+
+\end_inset
+
+
 \begin_inset Formula $\left\langle \mathbf{u},\mathbf{v}+2\mathbf{w}\right\rangle $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-17"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1996,7 +3053,37 @@ Suppose for vectors
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-26"
+
+\end_inset
+
+
 \begin_inset Formula $\left\langle 3\mathbf{w},2\mathbf{u}\right\rangle $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-18"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2034,6 +3121,12 @@ an inner product?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-28"
+
+\end_inset
+
 Explain why 
 \begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
 \end_inset
@@ -2047,6 +3140,29 @@ Explain why
 \end_inset
 
  is not an inner product.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:inner-product-spaces-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2070,13 +3186,25 @@ For any vector
 \end_inset
 
 .
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-TODO: provide solution.
- 
+
+
+\backslash
+hasasolution
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inner-product-spaces-6"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2104,6 +3232,12 @@ For any scalar
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:inner-product-27"
+
+\end_inset
+
 For any any vectors 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
@@ -2121,6 +3255,29 @@ For any any vectors
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:inner-product-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate

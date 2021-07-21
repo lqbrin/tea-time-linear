@@ -1760,16 +1760,6 @@ Is
 \end_inset
 
 ? 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Scrap comments after writing answers and solutions.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1794,7 +1784,7 @@ name "exc:solutions-spaces-1"
 \end{array}\right]$
 \end_inset
 
- (ind, yes)
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1818,7 +1808,7 @@ name "exc:solutions-spaces-2"
 \end{array}\right]$
 \end_inset
 
- (no, dep)
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1842,7 +1832,7 @@ name "exc:solutions-spaces-3"
 \end{array}\right]$
 \end_inset
 
- (dep, yes)
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1866,7 +1856,30 @@ name "exc:solutions-spaces-4"
 \end{array}\right]$
 \end_inset
 
- (dep, yes)
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1890,7 +1903,30 @@ name "exc:solutions-spaces-5"
 \end{array}\right]$
 \end_inset
 
- (ind, yes)
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1914,7 +1950,30 @@ name "exc:solutions-spaces-6"
 \end{array}\right]$
 \end_inset
 
- (no, dep)
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1940,6 +1999,52 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1964,6 +2069,52 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2032,6 +2183,29 @@ name "exc:solutions-spaces-10"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2084,10 +2258,10 @@ name "exc:solutions-spaces-12"
 \end_inset
 
 
-\begin_inset Formula $R=\left[\begin{array}{ccccc}
-1 & 0 & 0 & 8/11 & -7/11\\
-0 & 1 & 0 & -2/5 & 7/5\\
-0 & 0 & 1 & -8/3 & 7/3
+\begin_inset Formula $R=\left[\begin{array}{cccccc}
+1 & 0 & 0 & 8/11 & -7/11 & 1\\
+0 & 1 & 0 & -2/5 & 7/5 & 2\\
+0 & 0 & 1 & -8/3 & 7/3 & 1
 \end{array}\right]$
 \end_inset
 
@@ -2121,6 +2295,29 @@ name "exc:solutions-spaces-13"
 0 & 0 & 0 & 1 & 0\\
 0 & 0 & 0 & 0 & 1
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2185,6 +2382,29 @@ name "exc:solutions-spaces-15"
 0 & 0 & 0 & 1 & -9/11\\
 0 & 0 & 0 & 0 & 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2256,6 +2476,29 @@ name "exc:solutions-spaces-17"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2314,13 +2557,36 @@ name "exc:solutions-spaces-19"
 \end_inset
 
 
-\begin_inset Formula $R=\left[\begin{array}{ccccc}
-1 & 0 & 0 & 0 & 0\\
-0 & 1 & 0 & 0 & 0\\
-0 & 0 & 1 & 0 & 0\\
-0 & 0 & 0 & 1 & 0\\
-0 & 0 & 0 & 0 & 1
+\begin_inset Formula $R=\left[\begin{array}{cccccc}
+1 & 0 & 0 & 0 & 0 & -3\\
+0 & 1 & 0 & 0 & 0 & 2\\
+0 & 0 & 1 & 0 & 0 & 14\\
+0 & 0 & 0 & 1 & 0 & -8\\
+0 & 0 & 0 & 0 & 1 & 3
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-9"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2427,6 +2693,29 @@ name "exc:solutions-spaces-22"
 69\\
 16
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2553,6 +2842,29 @@ name "exc:solutions-spaces-25"
 8\\
 -5
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-10"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2811,6 +3123,29 @@ Let
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2993,6 +3328,29 @@ Use the fact that row operations were used to reduce
 
  that are linearly independent.
  Are there other such sets?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3129,6 +3487,29 @@ name "exc:solutions-spaces-47"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:solution-spaces-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3170,6 +3551,29 @@ name "exc:solutions-spaces-49"
 
 ; 
 \begin_inset Formula $\lambda=11$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-12"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -3218,6 +3622,29 @@ name "exc:solutions-spaces-52"
 \end_inset
 
 What is the rank of a matrix of all ones?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:solution-spaces-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate

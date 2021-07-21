@@ -7276,6 +7276,860 @@ Let
  is a one-to-one and onto function, it is an isomorphism.
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-3"
+
+\end_inset
+
+
+\begin_inset Formula $135$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-4"
+
+\end_inset
+
+
+\begin_inset Formula $113$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-5"
+
+\end_inset
+
+
+\begin_inset Formula $1934$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-6"
+
+\end_inset
+
+
+\begin_inset Formula $\sqrt{34}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-7"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \frac{1}{\pi}\left(\pi+10\frac{\ln(10-2\pi)}{\ln10}\right)=1+\frac{10}{\pi}\log(10-2\pi)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-8"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \frac{\sqrt{2}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-9"
+
+\end_inset
+
+
+\begin_inset Formula $-50$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-10"
+
+\end_inset
+
+
+\begin_inset Formula $\sqrt{140}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-11"
+
+\end_inset
+
+
+\begin_inset Formula $\sqrt{85}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-12"
+
+\end_inset
+
+
+\begin_inset Formula $\sqrt{290}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-13"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \frac{1}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-14"
+
+\end_inset
+
+
+\begin_inset Formula $2\sqrt{142}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-15"
+
+\end_inset
+
+All scalar multiples of 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+-2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-16"
+
+\end_inset
+
+All functions whose integral over 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ is zero.
+ Another way to describe them is all functions whose graphs have equal areas
+ below the axes and above over the interval 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-17"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \frac{11}{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-26"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-18"
+
+\end_inset
+
+
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inner-product-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:inner-product-spaces-19"
+
+\end_inset
+
+It fails to satisfy inner product property 2.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Solution-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-1"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-2"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-3"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+2\\
+4
+\end{array}\right],\left[\begin{array}{c}
+-6\\
+-14
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+f: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-4"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+10\\
+-40
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-5"
+
+\end_inset
+
+
+\begin_inset Formula $\{\}$
+\end_inset
+
+ (the empty set, whose span is 
+\begin_inset Formula $\{\mathbf{0}\}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+f: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-6"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-3\\
+5
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-7"
+
+\end_inset
+
+(i) yes (ii) Answers may vary.
+ One solution is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-12\\
+-36\\
+24\\
+60
+\end{array}\right],\left[\begin{array}{c}
+6\\
+15\\
+-9\\
+-30
+\end{array}\right],\left[\begin{array}{c}
+11\\
+33\\
+-11\\
+-33
+\end{array}\right]\right\} $
+\end_inset
+
+ (iii) Answers may vary.
+ One solution is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+3\\
+-16\\
+6\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-8"
+
+\end_inset
+
+(i) yes (ii) Answers may vary.
+ One solution is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-12\\
+-36\\
+24\\
+-24\\
+36
+\end{array}\right],\left[\begin{array}{c}
+-8\\
+-20\\
+24\\
+-8\\
+32
+\end{array}\right],\left[\begin{array}{c}
+8\\
+16\\
+24\\
+-16\\
+-72
+\end{array}\right],\left[\begin{array}{c}
+-48\\
+-132\\
+156\\
+-84\\
+132
+\end{array}\right]\right\} $
+\end_inset
+
+ (iii) 
+\begin_inset Formula $\{\}$
+\end_inset
+
+ (the empty set, whose span is 
+\begin_inset Formula $\{\mathbf{0}\}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-9"
+
+\end_inset
+
+(i) yes (ii) Any five linearly independent vectors in 
+\begin_inset Formula $\mathbb{R}^{5}$
+\end_inset
+
+ will do.
+ For example, the columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ or the standard basis.
+ (iii) 
+\begin_inset Formula $\{\}$
+\end_inset
+
+ (the empty set, whose span is 
+\begin_inset Formula $\{\mathbf{0}\}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-10"
+
+\end_inset
+
+(i) 
+\begin_inset Formula $\mathbf{b}=-\frac{1}{7}M_{:,2}$
+\end_inset
+
+ (ii) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+0\\
+-\frac{1}{7}\\
+0\\
+0
+\end{array}\right]+r\left[\begin{array}{c}
+0\\
+-4\\
+7\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-41"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-11"
+
+\end_inset
+
+Columns 1,3, and 5 are linearly independent.
+ Yes, there are other such sets.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-49"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-12"
+
+\end_inset
+
+1
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:solutions-spaces-52"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:solution-spaces-13"
+
+\end_inset
+
+1
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
