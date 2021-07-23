@@ -13466,5 +13466,2014 @@ The eigenspace corresponding to
 The dimension of the eigenspace is 2.
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Coordinate-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-33"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-1"
+
+\end_inset
+
+Finding coordinates for a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ relative to a basis means finding a linear combination of the basis vectors
+ that sums to the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ In this case we are to write (the vector) 
+\begin_inset Formula $\mathbf{v}=3-4t+5t^{2}$
+\end_inset
+
+ as a linear combination of (the basis vectors) 
+\begin_inset Formula $3-4t$
+\end_inset
+
+ and 
+\begin_inset Formula $t^{2}$
+\end_inset
+
+.
+ This can be done by inspection:
+\begin_inset Formula 
+\[
+\mathbf{v}=3-4t+5t^{2}=1(3-4t)+1(t^{2})
+\]
+
+\end_inset
+
+so the coordinates of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are 
+\begin_inset Formula $1$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ and as a coordinate vector 
+\begin_inset Formula ${\displaystyle \mathbf{v}=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]_{\mathcal{B}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-35"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-2"
+
+\end_inset
+
+Finding coordinates for a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ relative to a basis means finding a linear combination of the basis vectors
+ that sums to the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ In this case we are to write (the vector) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
+1 & 2\\
+3 & 4
+\end{array}\right]$
+\end_inset
+
+ as a linear combination of (the basis vectors) 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 1\\
+0 & 2
+\end{array}\right],$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ This can be done by inspection:
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{cc}
+1 & 2\\
+3 & 4
+\end{array}\right]=1\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]+2\left[\begin{array}{cc}
+0 & 1\\
+0 & 2
+\end{array}\right]+3\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+so the coordinates of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are 
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $2$
+\end_inset
+
+, and 
+\begin_inset Formula $3$
+\end_inset
+
+, in that order, and as a coordinate vector 
+\begin_inset Formula ${\displaystyle \mathbf{v}=\left[\begin{array}{c}
+1\\
+2\\
+3
+\end{array}\right]_{\mathcal{B}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-3"
+
+\end_inset
+
+Finding coordinates for a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ relative to a basis means finding a linear combination of the basis vectors
+ that sums to the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ In this case we are to write (the vector) 
+\begin_inset Formula $\mathbf{v}=\langle6,3,-4\rangle$
+\end_inset
+
+ as a linear combination of (the basis vectors) 
+\begin_inset Formula $\langle2,-1,9\rangle,\langle6,3,-4\rangle,$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle-8,1,1\rangle$
+\end_inset
+
+.
+ This can be done by inspection:
+\begin_inset Formula 
+\[
+\mathbf{v}=\langle6,3,-4\rangle=0\langle2,-1,9\rangle+1\langle6,3,-4\rangle+0\langle-8,1,1\rangle
+\]
+
+\end_inset
+
+so the coordinates of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are 
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $1$
+\end_inset
+
+, and 
+\begin_inset Formula $0$
+\end_inset
+
+, in that order, and as a coordinate vector 
+\begin_inset Formula ${\displaystyle \mathbf{v}=\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right]_{\mathcal{B}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-4"
+
+\end_inset
+
+Finding coordinates for a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ relative to a basis means finding a linear combination of the basis vectors
+ that sums to the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(a) We are to write (the vector) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+-12
+\end{array}\right]$
+\end_inset
+
+ as a linear combination of (the basis vectors) 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]$
+\end_inset
+
+.
+ In other words, we need to solve the equation
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+7\\
+-12
+\end{array}\right]=v_{1}\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]
+\]
+
+\end_inset
+
+which is equivalent to solving
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 5\\
+-2 & -9
+\end{array}\right]\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]=\left[\begin{array}{c}
+7\\
+-12
+\end{array}\right].
+\]
+
+\end_inset
+
+The solution can be found by row reduction:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 5 & 7\\
+-2 & -9 & -12
+\end{array}\right]\stackrel{2M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 5 & 7\\
+0 & 1 & 2
+\end{array}\right]\stackrel{-5M_{2,:}+M_{1,:}\to M_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & -3\\
+0 & 1 & 2
+\end{array}\right].
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula $\left[\begin{array}{c}
+7\\
+-12
+\end{array}\right]=-3\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]+2\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]$
+\end_inset
+
+ and as a coordinate vector 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-3\\
+2
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(b) We are to write (the vector) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]$
+\end_inset
+
+ as a linear combination of (the basis vectors) 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]$
+\end_inset
+
+.
+ In other words, we need to solve the equation
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]=v_{1}\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]
+\]
+
+\end_inset
+
+which is equivalent to solving
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 5\\
+-2 & -9
+\end{array}\right]\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]=\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right].
+\]
+
+\end_inset
+
+The solution can be found by row reduction:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 5 & -2\\
+-2 & -9 & 3
+\end{array}\right]\stackrel{2M_{1,:}+M_{2,:}\to M_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 5 & -2\\
+0 & 1 & -1
+\end{array}\right]\stackrel{-5M_{2,:}+M_{1,:}\to M_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+1 & 0 & 3\\
+0 & 1 & -1
+\end{array}\right].
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula $\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]=3\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]-1\left[\begin{array}{c}
+5\\
+-9
+\end{array}\right]$
+\end_inset
+
+ and as a coordinate vector 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+3\\
+-1
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Note: There is no prescribed method for finding coordinate vectors.
+ Any meethod of finding the desired linear combination will do, whether
+ by inspection, row reduction, inverse matrices, or other tactic.
+ This question could have been answered just as easily using matrix inversion,
+ for example.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-5"
+
+\end_inset
+
+The columns of the change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ (the conversion matrix from coordinates with respect to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ to coordinates with respect to 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+) are the vectors of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ written with respect to 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+.
+ These are given in the statement of the question: 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}=\left[\begin{array}{cc}
+1 & 5\\
+-2 & -9
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left|\begin{array}{cc}
+1 & 5\\
+-2 & -9
+\end{array}\right|=1(-9)-5(-2)=1$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}=\left[\begin{array}{cc}
+-9 & -5\\
+2 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(a) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\mathbf{v}=\left[\begin{array}{cc}
+-9 & -5\\
+2 & 1
+\end{array}\right]\left[\begin{array}{c}
+7\\
+-12
+\end{array}\right]=\left[\begin{array}{c}
+-3\\
+2
+\end{array}\right]$
+\end_inset
+
+ which has the same coordinates as the answer for 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a.
+\begin_inset Newline newline
+\end_inset
+
+(b) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\mathbf{v}=\left[\begin{array}{cc}
+-9 & -5\\
+2 & 1
+\end{array}\right]\left[\begin{array}{c}
+-2\\
+3
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+-1
+\end{array}\right]$
+\end_inset
+
+ which has the same coordinates as the answer for 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b.
+\begin_inset Newline newline
+\end_inset
+
+Note: This process is equivalent to solving the equation 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}\mathbf{x}=\mathbf{v}$
+\end_inset
+
+ by matrix inversion, which gives 
+\begin_inset Formula $\mathbf{x}=\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\mathbf{v}$
+\end_inset
+
+, emphasizing that 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}=\left[\mathcal{E}\right]_{\mathcal{B}}$
+\end_inset
+
+ (the conversion matrix from coordinates with respect to 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ to coordinates with respect to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-6"
+
+\end_inset
+
+
+\series bold
+[solution 1]
+\series default
+ The change-of-basis matrix 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+ (the conversion matrix from coordinates with respect to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ to coordinates with respect to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+) is the matrix whose columns are the vectors of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ written with respect to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ The task then is to find linear combinations of the vectors of 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ that sum to the vectors of 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+-8\\
+7
+\end{array}\right] & =v_{1}\left[\begin{array}{c}
+3\\
+7
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+2\\
+4
+\end{array}\right]\\
+ & \text{and}\\
+\left[\begin{array}{c}
+5\\
+-6
+\end{array}\right] & =v_{1}\left[\begin{array}{c}
+3\\
+7
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+2\\
+4
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+These equations can be solved by row reduction, matrix inversion, or maybe
+ even inspection.
+ In any case, the solutions are 
+\begin_inset Formula $\left[\begin{array}{c}
+23\\
+-\frac{77}{2}
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-16\\
+\frac{53}{2}
+\end{array}\right]$
+\end_inset
+
+ respectively.
+ Therefore 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\begin{array}{cc}
+23 & -16\\
+-\frac{77}{2} & \frac{53}{2}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-7"
+
+\end_inset
+
+(a) Finding 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+ means solving
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+2\\
+-4
+\end{array}\right]=v_{1}\left[\begin{array}{c}
+-8\\
+7
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+5\\
+-6
+\end{array}\right].
+\]
+
+\end_inset
+
+By row reduction:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+-8 & 5 & 2\\
+7 & -6 & -4
+\end{array}\right]\to\left[\begin{array}{ccc}
+-1 & -1 & -2\\
+7 & -6 & -4
+\end{array}\right]\to\left[\begin{array}{ccc}
+-1 & -1 & -2\\
+0 & -13 & -18
+\end{array}\right]\to\left[\begin{array}{ccc}
+13 & 13 & 26\\
+0 & -13 & -18
+\end{array}\right]\to\left[\begin{array}{ccc}
+13 & 0 & 8\\
+0 & -13 & -18
+\end{array}\right]
+\]
+
+\end_inset
+
+and therefore 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+\frac{8}{13}\\
+\frac{18}{13}
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(b) Finding 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+ means solving
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+2\\
+-4
+\end{array}\right]=v_{1}\left[\begin{array}{c}
+3\\
+7
+\end{array}\right]+v_{2}\left[\begin{array}{c}
+2\\
+4
+\end{array}\right].
+\]
+
+\end_inset
+
+By row reduction:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+3 & 2 & 2\\
+7 & 4 & -4
+\end{array}\right]\to\left[\begin{array}{ccc}
+3 & 2 & 2\\
+1 & 0 & -8
+\end{array}\right]\to\left[\begin{array}{ccc}
+1 & 0 & -8\\
+3 & 2 & 2
+\end{array}\right]\to\left[\begin{array}{ccc}
+1 & 0 & -8\\
+0 & 2 & 26
+\end{array}\right]\to\left[\begin{array}{ccc}
+1 & 0 & -8\\
+0 & 1 & 13
+\end{array}\right]
+\]
+
+\end_inset
+
+and therefore 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-8\\
+13
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(c) From question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\begin{array}{cc}
+23 & -16\\
+-\frac{77}{2} & \frac{53}{2}
+\end{array}\right]$
+\end_inset
+
+ so
+\begin_inset Formula 
+\[
+\left[\mathcal{B}\right]_{\mathcal{C}}\left[\mathbf{v}\right]_{\mathcal{B}}=\left[\begin{array}{cc}
+23 & -16\\
+-\frac{77}{2} & \frac{53}{2}
+\end{array}\right]\left[\begin{array}{c}
+\frac{8}{13}\\
+\frac{18}{13}
+\end{array}\right]=\left[\begin{array}{c}
+23\left(\frac{8}{13}\right)-16\left(\frac{18}{13}\right)\\
+-\frac{77}{2}\left(\frac{8}{13}\right)+\frac{53}{2}\left(\frac{18}{13}\right)
+\end{array}\right]=\left[\begin{array}{c}
+\frac{-104}{13}\\
+\frac{338}{26}
+\end{array}\right]=\left[\begin{array}{c}
+-8\\
+13
+\end{array}\right]
+\]
+
+\end_inset
+
+which equals (has the same coordinates as) the answer in part (b).
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}$
+\end_inset
+
+ is the conversion matrix from coordinates relative to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ to coordinates relative to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ As a two-step process, converting from coordinates in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ to coordinates in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ can be done by converting first from coordinates in 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ to coordinates in 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ and then to coordinates in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ As a matrix equation, 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\mathcal{E}\right]_{\mathcal{C}}\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+ or (because 
+\begin_inset Formula $\left[\mathcal{E}\right]_{\mathcal{C}}=\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}$
+\end_inset
+
+) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\mathcal{C}\right]_{\mathcal{E}}^{-1}\left[\mathcal{B}\right]_{\mathcal{E}}$
+\end_inset
+
+.
+ Solving for 
+\begin_inset Formula $\left[\mathcal{C}\right]_{\mathcal{E}}$
+\end_inset
+
+, we find 
+\begin_inset Formula $\left[\mathcal{C}\right]_{\mathcal{E}}=\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathcal{B}\right]_{\mathcal{C}}^{-1}$
+\end_inset
+
+.
+ Hence the basis 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ written with respect to the standard basis appears in the columns of 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}\left[\mathcal{B}\right]_{\mathcal{C}}^{-1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left[\mathcal{C}\right]_{\mathcal{E}}=\left[\begin{array}{cc}
+5 & 2\\
+9 & -5
+\end{array}\right]\left[\begin{array}{cc}
+1 & 8\\
+-7 & 1
+\end{array}\right]^{-1}=\frac{1}{57}\left[\begin{array}{cc}
+5 & 2\\
+9 & -5
+\end{array}\right]\left[\begin{array}{cc}
+1 & -8\\
+7 & 1
+\end{array}\right]=\frac{1}{57}\left[\begin{array}{cc}
+19 & -38\\
+-26 & -77
+\end{array}\right]
+\]
+
+\end_inset
+
+and finally 
+\begin_inset Formula $\mathcal{C}=\left\{ \frac{1}{3}-\frac{26}{57}t,\,-\frac{2}{3}-\frac{77}{57}t\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:coordinate-vectors-8"
+
+\end_inset
+
+Finding coordinates for a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ relative to a basis means finding a linear combination of the basis vectors
+ that sums to the vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ In this case, the most immediate means to a solution is graphically.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Finding 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{B}}$
+\end_inset
+
+: the violet grid marks coordinates with respect to 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+.
+ By inspection:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/coordinate-vectors-sol-01.pdf
+	lyxscale 25
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{v}=11\mathbf{b}_{1}-2\mathbf{b}_{2}$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+11\\
+-2
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finding 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+: the orange grid marks coordinates with respect to 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ By inspection:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/coordinate-vectors-sol-02.pdf
+	lyxscale 25
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{v}=5\mathbf{c}_{1}-5\mathbf{c}_{2}$
+\end_inset
+
+ so 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+5\\
+-5
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-1"
+
+\end_inset
+
+
+\begin_inset Formula $\Vert\mathbf{v}\Vert=\sqrt{\left(\frac{15}{19}\right)^{2}+\left(\frac{8}{19}\right)^{2}}=\frac{17}{19}\neq1$
+\end_inset
+
+.
+ Since the norm of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is not one, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is not a unit vector.
+ Scaling by the reciprocal of its norm will normalize it:
+\begin_inset Formula 
+\[
+\frac{19}{17}\left[\begin{array}{cc}
+\frac{15}{19} & \frac{8}{19}\end{array}\right]=\left[\begin{array}{cc}
+\frac{15}{17} & \frac{8}{17}\end{array}\right]
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\left[\begin{array}{cc}
+\frac{15}{17} & \frac{8}{17}\end{array}\right]$
+\end_inset
+
+ is the normalized vector (it is a scaled version of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ with norm 1).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-2"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-8\\
+4
+\end{array}\right]=7(-8)+7(4)=-28\neq0$
+\end_inset
+
+ so the vectors are not orthogonal and therefore the set is not orthogonal.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-26"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-3"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+3\\
+4
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-\frac{1}{2}\\
+-5\\
+4
+\end{array}\right]=-1-15+16=0$
+\end_inset
+
+ so 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+3\\
+4
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{1}{2}\\
+-5\\
+4
+\end{array}\right]$
+\end_inset
+
+ are orthogonal.
+ However, it is not enough that one pair of vectors is orthogonal.
+ All pairs must be orthogonal for the set to be orthogonal.
+ Checking the other two pairs, 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+3\\
+4
+\end{array}\right]\bcdot\left[\begin{array}{c}
+16\\
+-5\\
+-\frac{17}{4}
+\end{array}\right]=32-15-17=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{1}{2}\\
+-5\\
+4
+\end{array}\right]\bcdot\left[\begin{array}{c}
+16\\
+-5\\
+-\frac{17}{4}
+\end{array}\right]=-8+25-17=0$
+\end_inset
+
+.
+ All three possible pairs of vectors are orthogonal so the set is orthogonal.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-5"
+
+\end_inset
+
+
+\begin_inset Formula $\left\langle \left[\begin{array}{c}
+7\\
+7
+\end{array}\right],\left[\begin{array}{c}
+-8\\
+4
+\end{array}\right]\right\rangle =7(-8)+2(7)(4)=0$
+\end_inset
+
+ so the vectors are orthogonal and therefore the set is orthogonal (with
+ respect to this inner product).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-8"
+
+\end_inset
+
+
+\begin_inset Formula $\left\langle t^{2}-2t,\,3t^{2}-t-2\right\rangle =0(-2)+(-1)(0)+0(8)=0$
+\end_inset
+
+ so 
+\begin_inset Formula $3t^{2}-t-2$
+\end_inset
+
+ is orthogonal to 
+\begin_inset Formula $t^{2}-2t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-9"
+
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \text{proj}_{\mathbf{u}}\mathbf{v}=\frac{\left\langle \mathbf{v},\mathbf{u}\right\rangle }{\left\langle \mathbf{u},\mathbf{u}\right\rangle }\mathbf{u}=\frac{\left[\begin{array}{c}
+4\\
+-3
+\end{array}\right]\bcdot\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]}{\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]\bcdot\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]}\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]=\frac{-1}{13}\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{2}{13}\\
+-\frac{3}{13}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-36"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-10"
+
+\end_inset
+
+Coordinates of a vector 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ relative to an orthogonal basis can be computed by projecting 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ onto each vector of the basis:
+\begin_inset Formula 
+\[
+\frac{\left[\begin{array}{c}
+18\\
+5\\
+-1
+\end{array}\right]\bcdot\left[\begin{array}{c}
+3\\
+8\\
+5
+\end{array}\right]}{\left[\begin{array}{c}
+3\\
+8\\
+5
+\end{array}\right]\bcdot\left[\begin{array}{c}
+3\\
+8\\
+5
+\end{array}\right]}\left[\begin{array}{c}
+3\\
+8\\
+5
+\end{array}\right]=\frac{89}{98}\left[\begin{array}{c}
+3\\
+8\\
+5
+\end{array}\right]\qquad\frac{\left[\begin{array}{c}
+18\\
+5\\
+-1
+\end{array}\right]\bcdot\left[\begin{array}{c}
+25\\
+-15\\
+9
+\end{array}\right]}{\left[\begin{array}{c}
+25\\
+-15\\
+9
+\end{array}\right]\bcdot\left[\begin{array}{c}
+25\\
+-15\\
+9
+\end{array}\right]}\left[\begin{array}{c}
+25\\
+-15\\
+9
+\end{array}\right]=\frac{366}{931}\left[\begin{array}{c}
+25\\
+-15\\
+9
+\end{array}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{\left[\begin{array}{c}
+18\\
+5\\
+-1
+\end{array}\right]\bcdot\left[\begin{array}{c}
+3\\
+2\\
+-5
+\end{array}\right]}{\left[\begin{array}{c}
+3\\
+2\\
+-5
+\end{array}\right]\bcdot\left[\begin{array}{c}
+3\\
+2\\
+-5
+\end{array}\right]}\left[\begin{array}{c}
+3\\
+2\\
+-5
+\end{array}\right]=\frac{69}{38}\left[\begin{array}{c}
+3\\
+2\\
+-5
+\end{array}\right]
+\]
+
+\end_inset
+
+so 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+\frac{89}{98}\\
+\frac{366}{931}\\
+\frac{69}{38}
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-11"
+
+\end_inset
+
+The first vector of the orthogonal set is the first vector of the given
+ set, 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]$
+\end_inset
+
+.
+ The second vector of the orthogonal set is the second vector minus its
+ projection onto the first vector,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+5\\
+-7
+\end{array}\right]-\frac{\left[\begin{array}{c}
+5\\
+-7
+\end{array}\right]\bcdot\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]}{\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]\bcdot\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]}\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]=\left[\begin{array}{c}
+5\\
+-7
+\end{array}\right]-\frac{12}{2}\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]=\left[\begin{array}{c}
+-1\\
+-1
+\end{array}\right]}$
+\end_inset
+
+.
+ Therefore the result of orthogonalization is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+1\\
+-1
+\end{array}\right],\left[\begin{array}{c}
+-1\\
+-1
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-42"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-12"
+
+\end_inset
+
+The first vector of the orthogonal set is the first vector of the given
+ set, 
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+4
+\end{array}\right]$
+\end_inset
+
+.
+ However, an orthonormal set is requested, so this vector needs to be scaled
+ to a unit vector:
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{\left[\begin{array}{c}
+3\\
+4
+\end{array}\right]\bcdot\left[\begin{array}{c}
+3\\
+4
+\end{array}\right]}}\left[\begin{array}{c}
+3\\
+4
+\end{array}\right]=\frac{1}{\sqrt{9+16}}\left[\begin{array}{c}
+3\\
+4
+\end{array}\right]=\left[\begin{array}{c}
+\frac{3}{5}\\
+\frac{4}{5}
+\end{array}\right].
+\]
+
+\end_inset
+
+The second vector of the orthogonal set is the second vector minus its projectio
+n onto the first, normalized, vector,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+-5\\
+10
+\end{array}\right]-\left(\left[\begin{array}{c}
+-5\\
+10
+\end{array}\right]\bcdot\left[\begin{array}{c}
+\frac{3}{5}\\
+\frac{4}{5}
+\end{array}\right]\right)\left[\begin{array}{c}
+\frac{3}{5}\\
+\frac{4}{5}
+\end{array}\right]=\left[\begin{array}{c}
+-5\\
+10
+\end{array}\right]-5\left[\begin{array}{c}
+\frac{3}{5}\\
+\frac{4}{5}
+\end{array}\right]=\left[\begin{array}{c}
+-8\\
+6
+\end{array}\right]}$
+\end_inset
+
+.
+ Notice the calculation of the projection is slightly simplified since the
+ denominator must be 1 as we are projecting onto a unit vector.
+ To finish, the new vector needs to be scaled to a unit vector:
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{\left[\begin{array}{c}
+-8\\
+6
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-8\\
+6
+\end{array}\right]}}\left[\begin{array}{c}
+-8\\
+6
+\end{array}\right]=\frac{1}{\sqrt{64+36}}\left[\begin{array}{c}
+3\\
+4
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{4}{5}\\
+\frac{3}{5}
+\end{array}\right].
+\]
+
+\end_inset
+
+Therefore the result of orthonormalization is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{3}{5}\\
+\frac{4}{5}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{4}{5}\\
+\frac{3}{5}
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-6"
+
+\end_inset
+
+According to the solution of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the vectors are not orthogonal.
+ Orthogonalization of a single pair of vectors amounts to subtracting from
+ one of the vectors its projection onto the other.
+ Letting 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}=,\left[\begin{array}{c}
+-8\\
+4
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\mathbf{w}-\text{proj}_{\mathbf{v}}\mathbf{w}=\left[\begin{array}{c}
+-8\\
+4
+\end{array}\right]-\frac{\left[\begin{array}{c}
+-8\\
+4
+\end{array}\right]\bcdot\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]}{\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]\bcdot\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]}\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]=\left[\begin{array}{c}
+-8\\
+4
+\end{array}\right]-\left(\frac{-56+28}{49+49}\right)\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]=\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]
+\]
+
+\end_inset
+
+Hence an orthogonal set with the same span as 
+\begin_inset Formula $S$
+\end_inset
+
+ is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+7\\
+7
+\end{array}\right],\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Normalizing each vector,
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]\bcdot\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]}}\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]=\frac{1}{7\sqrt{2}}\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]=\left[\begin{array}{c}
+\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}
+\end{array}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]}}\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]=\frac{1}{6\sqrt{2}}\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}
+\end{array}\right]
+\]
+
+\end_inset
+
+and an orthonormal set with the same span is 
+\begin_inset Formula $S$
+\end_inset
+
+ is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{1}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}}
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:orthogonalization-7"
+
+\end_inset
+
+According to the solution of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ans:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b, the vectors are orthogonal so the set 
+\begin_inset Formula $S$
+\end_inset
+
+ itself is an orthogonal set with the same span! Normalizing each vector,
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{\left\langle \left[\begin{array}{c}
+7\\
+7
+\end{array}\right],\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]\right\rangle }}\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]=\frac{1}{7\sqrt{3}}\left[\begin{array}{c}
+7\\
+7
+\end{array}\right]=\left[\begin{array}{c}
+\frac{1}{\sqrt{3}}\\
+\frac{1}{\sqrt{3}}
+\end{array}\right]
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{\left\langle \left[\begin{array}{c}
+-6\\
+6
+\end{array}\right],\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]\right\rangle }}\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]=\frac{1}{6\sqrt{3}}\left[\begin{array}{c}
+-6\\
+6
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{1}{\sqrt{3}}\\
+\frac{1}{\sqrt{3}}
+\end{array}\right]
+\]
+
+\end_inset
+
+and an orthonormal set with the same span is 
+\begin_inset Formula $S$
+\end_inset
+
+ is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{1}{\sqrt{3}}\\
+\frac{1}{\sqrt{3}}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{1}{\sqrt{3}}\\
+\frac{1}{\sqrt{3}}
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document

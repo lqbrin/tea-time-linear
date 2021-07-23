@@ -112,15 +112,6 @@ Orthogonalization []
 As it is in linear algebra, determining the linear combination of basis
  vectors that sums to a given vector is big business in engineering and
  the sciences.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Add references to this book(?) and engineering texts
-\end_layout
-
-\end_inset
-
  This problem is generally aided by careful choice of basis vectors (see
  Legendre Polynomials, Fourier Series, and Finite Element Methods, for example).
  But what makes one set of basis vectors more amenable than another? To
@@ -190,36 +181,8 @@ noprefix "false"
 \begin_inset Formula $V$
 \end_inset
 
- is an inner product space, perhaps the inner product can be used to illuminate
+ is an inner product space, though, perhaps the inner product can be leveraged
  instead.
-\end_layout
-
-\begin_layout Standard
-To start, can you show that if 
-\begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
-\end_inset
-
- for any vector 
-\begin_inset Formula $\mathbf{w}\in V$
-\end_inset
-
-, then 
-\begin_inset Formula $\mathbf{w}=\mathbf{0}$
-\end_inset
-
-? Answer on page 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "ans:zero-inner-products"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- Only the zero vector is orthogonal to (has inner product zero with) every
- vector in a basis.
 \end_layout
 
 \begin_layout Standard
@@ -310,15 +273,16 @@ a_{n}
 
 \end_inset
 
-No matter the vector and no matter the basis, this problem is reduced to
- solving this linear system of equations, a problem that we have studied
- extensively!
+No matter the vector, no matter the basis, and no matter the inner product
+ space—the problem of writing a vector with respect to a given basis is
+ reduced to solving a linear system of equations, a problem that we have
+ studied extensively!
 \end_layout
 
 \begin_layout Standard
-If that were all there were to it, though, this method would be no better
- than using coordinate vectors.
- As noted, (
+If that were all there were to it, it would be enough (though no better
+ than using coordinate vectors).
+ Note that (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:the-coefficient-problem"
@@ -347,10 +311,11 @@ noprefix "false"
 \end_inset
 
 ).
- However, this section began by suggesting that careful choice of basis
- would help.
+ Is one really better than the other? This section began with the promise
+ that careful choice of basis would help.
  Since the process of row reduction involves producing zeros above and below
- the pivots, starting with some zeros in the coefficient matrix of (
+ the pivots, starting with some zeros in these entries of the coefficient
+ matrix of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:coefficients-matrix-format"
@@ -658,7 +623,7 @@ so
 \end_inset
 
  are not).
- And this applies in any inner product space, not just 
+ This applies in any inner product space, not just 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -893,8 +858,74 @@ noprefix "false"
 \end_inset
 
 ).
- Following our steps backward, the same properties of inner product spaces
- that gave us that (
+ To help correct this deficiency, can you show that if 
+\begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+ for some vector 
+\begin_inset Formula $\mathbf{w}\in V$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{w}=\mathbf{0}$
+\end_inset
+
+? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:zero-inner-products"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This means the zero vector is orthogonal to (has inner product zero with)
+ every vector in a basis and in fact is the only such vector.
+ this fact will be imporant shortly, but for now we return to showing (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) implies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Following the steps establishing that (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:the-coefficient-problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) implies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficients-matrix-format"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) backward, the same properties of inner product spaces that gave us that
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:coefficients-inner-products"
@@ -1394,7 +1425,7 @@ set orthogonal set of unit vectors.
 \begin_inset space ~
 \end_inset
 
-projection (of one vector onto another)
+projection (of one vector onto another) 
 \begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}=\frac{\langle\mathbf{v},\mathbf{u}\rangle}{\langle\mathbf{u},\mathbf{u}\rangle}\mathbf{u}$
 \end_inset
 
@@ -1576,8 +1607,38 @@ Is
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-21"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}=\left[\begin{array}{cc}
 \frac{15}{19} & \frac{8}{19}\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1592,16 +1653,76 @@ Is
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-22"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}=\left[\begin{array}{ccc}
 -\frac{2}{3} & \frac{2}{3} & -\frac{1}{3}\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-23"
+
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}=\left[\begin{array}{cccc}
 \frac{1}{6} & \frac{1}{2} & -\frac{1}{2} & \frac{2}{3}\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1645,6 +1766,13 @@ Determine whether
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-24"
+
+\end_inset
+
+
 \begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 7\\
 7
@@ -1652,6 +1780,29 @@ Determine whether
 -8\\
 4
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1687,6 +1838,13 @@ Determine whether
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-25"
+
+\end_inset
+
+
 \begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 6\\
 -1\\
@@ -1696,6 +1854,29 @@ Determine whether
 -9\\
 5
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1717,6 +1898,13 @@ Determine whether
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-26"
+
+\end_inset
+
+
 \begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 2\\
 3\\
@@ -1730,6 +1918,29 @@ Determine whether
 -5\\
 -\frac{17}{4}
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1755,6 +1966,13 @@ Determine whether
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-27"
+
+\end_inset
+
+
 \begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 -7\\
 0\\
@@ -1772,6 +1990,33 @@ Determine whether
 10\\
 2
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-21"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1818,56 +2063,52 @@ v_{1} & v_{2} & \cdots & v_{n}\end{array}\right]$
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:orthogonalization-2"
-
 \end_inset
 
-Find an orthogonal set in question 
+
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:orthogonalization"
+LatexCommand pageref
+reference "sol:orthogonalization-5"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- and normalize each vector so it becomes an orthonormal set.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:orthogonalization-3"
-
 \end_inset
 
-Find an orthogonal set in question 
+
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:orthogonalization"
+LatexCommand pageref
+reference "ans:orthogonalization-5"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- relative to the inner product of question 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:orthogonalization-1"
-plural "false"
-caps "false"
-noprefix "false"
 
-\end_inset
-
- and normalize each vector so it becomes an orthonormal set.
 \end_layout
 
 \begin_layout Enumerate
@@ -1920,7 +2161,37 @@ which of the following polynomials are orthogonal to
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-28"
+
+\end_inset
+
+
 \begin_inset Formula $3t^{2}-t-2$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1934,7 +2205,37 @@ which of the following polynomials are orthogonal to
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-29"
+
+\end_inset
+
+
 \begin_inset Formula $4t^{2}-8t+3$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-14"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1976,7 +2277,37 @@ Let
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-30"
+
+\end_inset
+
+
 \begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-9"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1990,7 +2321,37 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-31"
+
+\end_inset
+
+
 \begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{w}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-15"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2004,7 +2365,37 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-32"
+
+\end_inset
+
+
 \begin_inset Formula $\text{proj}_{\mathbf{v}}\mathbf{u}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-16"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2036,6 +2427,29 @@ noprefix "false"
 \end_inset
 
  and the two vectors involved in the projection on the same set of axes.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2054,6 +2468,13 @@ Approximate
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-33"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2082,6 +2503,33 @@ status open
 
 }
 \end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-20"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2124,6 +2572,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-34"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2152,6 +2607,33 @@ status open
 
 }
 \end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-22"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2216,6 +2698,29 @@ noprefix "false"
 \end_inset
 
  instead.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2300,6 +2805,13 @@ name "exc:orthogonalization-12"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-35"
+
+\end_inset
+
+
 \begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
 -2\\
 -5
@@ -2314,6 +2826,29 @@ name "exc:orthogonalization-12"
 8\\
 9
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-24"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2340,6 +2875,13 @@ name "exc:orthogonalization-12"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-36"
+
+\end_inset
+
+
 \begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
 3\\
 8\\
@@ -2361,6 +2903,29 @@ name "exc:orthogonalization-12"
 5\\
 -1
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-10"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2406,6 +2971,13 @@ Orthogonalize
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-37"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 1\\
 -1
@@ -2413,6 +2985,29 @@ Orthogonalize
 5\\
 -7
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-11"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2432,6 +3027,13 @@ Orthogonalize
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-38"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 8\\
 -9
@@ -2439,6 +3041,29 @@ Orthogonalize
 9\\
 3
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-25"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2458,6 +3083,13 @@ Orthogonalize
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-39"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 -1\\
 2\\
@@ -2467,6 +3099,29 @@ Orthogonalize
 -4\\
 1
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-26"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2488,6 +3143,13 @@ Orthogonalize
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-40"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 2\\
 1\\
@@ -2501,6 +3163,29 @@ Orthogonalize
 2\\
 5
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-27"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2550,6 +3235,13 @@ eUF_TTgQiLSBzUiN2s703nTx5KBg1C5eTK-EV4-LR3D67A3eWobUMmQtQ2oZZDpw01LPoNi6qx11_wXW
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-41"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2598,6 +3290,29 @@ YiniTbHbFPGm2G3KWEqUv3kutLs=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2608,6 +3323,13 @@ Orthonormalize (normalize the vectors of the orthogonalization process as
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-42"
+
+\end_inset
+
+
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 3\\
 4
@@ -2615,6 +3337,29 @@ Orthonormalize (normalize the vectors of the orthogonalization process as
 -5\\
 10
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-12"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2634,6 +3379,13 @@ Orthonormalize (normalize the vectors of the orthogonalization process as
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-43"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2667,6 +3419,33 @@ en-XyC1u3NLYEHWGfgGq1r3b&lang=sage&interacts=eJyLjgUAARUAuQ==}
 2\\
 5
 \end{array}\right]\right\} $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-29"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2738,6 +3517,29 @@ noprefix "false"
 \end_inset
 
 )?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2758,7 +3560,183 @@ noprefix "false"
 \end_inset
 
  to find an orthonormal set.
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-35"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-2"
+
+\end_inset
+
+Find an orthogonal set with the same span as 
+\begin_inset Formula $S$
+\end_inset
+
+ from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and normalize each vector so it becomes an orthonormal set.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:orthogonalization-3"
+
+\end_inset
+
+Find an orthogonal set with the same span as 
+\begin_inset Formula $S$
+\end_inset
+
+ from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ relative to the inner product of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and normalize each vector so it becomes an orthonormal set.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:orthogonalization-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2912,6 +3890,29 @@ Orthogonalize
 \[
 \left\langle p,q\right\rangle =p(0)q(0)+p(1)q(1)+p(2)q(2).
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:orthogonalization-40"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -3097,111 +4098,6 @@ The three possible dot products are all zero:
 \end_inset
 
 
-\end_layout
-
-\begin_layout Description
-zero
-\begin_inset space ~
-\end_inset
-
-inner
-\begin_inset space ~
-\end_inset
-
-products 
-\begin_inset CommandInset label
-LatexCommand label
-name "ans:zero-inner-products"
-
-\end_inset
-
-Let 
-\begin_inset Formula $\mathbf{w}=c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}$
-\end_inset
-
-.
- Then 
-\begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
-\end_inset
-
- means 
-\begin_inset Formula $c_{1}\langle\mathbf{w},\mathbf{b}_{1}\rangle=c_{2}\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=c_{n}\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
-\end_inset
-
-.
- By properties 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:inner-product-symmetry"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:inner-product-preserve-sum"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:inner-product-preserve-scalar-mult"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- of inner product spaces (see page 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "enu:inner-product-preserve-sum"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), 
-\begin_inset Formula $\langle\mathbf{w},c_{1}\mathbf{b}_{1}\rangle=\langle\mathbf{w},c_{2}\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},c_{n}\mathbf{b}_{n}\rangle=0$
-\end_inset
-
-, so 
-\begin_inset Formula $\langle\mathbf{w},c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}\rangle=0$
-\end_inset
-
-.
- But 
-\begin_inset Formula $c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}=\mathbf{w}$
-\end_inset
-
- so 
-\begin_inset Formula $\langle\mathbf{w},\mathbf{w}\rangle=0$
-\end_inset
-
- and by property 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enu:inner-product-zero"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset Formula $\mathbf{w}=\mathbf{0}$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Description
@@ -3399,6 +4295,111 @@ giving a nontrivial linear combination of
 \end_inset
 
 , is linearly dependent.
+\end_layout
+
+\begin_layout Description
+zero
+\begin_inset space ~
+\end_inset
+
+inner
+\begin_inset space ~
+\end_inset
+
+products 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:zero-inner-products"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathbf{w}=c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+ means 
+\begin_inset Formula $c_{1}\langle\mathbf{w},\mathbf{b}_{1}\rangle=c_{2}\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=c_{n}\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+.
+ By properties 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-symmetry"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-preserve-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-preserve-scalar-mult"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of inner product spaces (see page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "enu:inner-product-preserve-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 
+\begin_inset Formula $\langle\mathbf{w},c_{1}\mathbf{b}_{1}\rangle=\langle\mathbf{w},c_{2}\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},c_{n}\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+, so 
+\begin_inset Formula $\langle\mathbf{w},c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}\rangle=0$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $c_{1}\mathbf{b}_{1}+c_{2}\mathbf{b}_{2}+\cdots+c_{n}\mathbf{b}_{n}=\mathbf{w}$
+\end_inset
+
+ so 
+\begin_inset Formula $\langle\mathbf{w},\mathbf{w}\rangle=0$
+\end_inset
+
+ and by property 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:inner-product-zero"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{w}=\mathbf{0}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_body

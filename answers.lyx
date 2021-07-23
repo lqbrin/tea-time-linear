@@ -8130,6 +8130,1391 @@ name "ans:solution-spaces-13"
 1
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Coordinate-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-1"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+3\\
+-4\\
+5
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-36"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-2"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+1\\
+1\\
+4
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-38"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-3"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[12\right]_{\mathcal{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-4"
+
+\end_inset
+
+(a) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+ (b) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-3\\
+-2
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-5"
+
+\end_inset
+
+(a) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+1\\
+2\\
+-1
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+ (b) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-2\\
+1\\
+3
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+ (c) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-1\\
+2\\
+1
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-6"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}=\left[\begin{array}{cc}
+6 & -5\\
+3 & -8
+\end{array}\right]$
+\end_inset
+
+ (a) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
+17\\
+14
+\end{array}\right]=\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]$
+\end_inset
+
+ (b) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
+-8\\
+7
+\end{array}\right]=\left[\begin{array}{c}
+-3\\
+-2
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+; The coordinates are the same as those in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-7"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}=\left[\begin{array}{ccc}
+-4 & 9 & -3\\
+7 & 4 & 5\\
+3 & 3 & 4
+\end{array}\right]$
+\end_inset
+
+ (a) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
+17\\
+10\\
+5
+\end{array}\right]=\left[\begin{array}{c}
+1\\
+2\\
+-1
+\end{array}\right]$
+\end_inset
+
+ (b) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
+8\\
+5\\
+9
+\end{array}\right]=\left[\begin{array}{c}
+-2\\
+1\\
+3
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+ (c) 
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
+19\\
+6\\
+7
+\end{array}\right]=\left[\begin{array}{c}
+-1\\
+2\\
+1
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+; The coordinates are the same as those in question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-8"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\begin{array}{cc}
+-\frac{4}{5} & \frac{3}{2}\\
+\frac{11}{15} & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{C}}=\left[\begin{array}{ccc}
+-\frac{1}{2} & -\frac{155}{136} & \frac{7}{68}\\
+\frac{1}{2} & -\frac{43}{136} & -\frac{45}{68}\\
+0 & -\frac{38}{17} & -\frac{23}{17}
+\end{array}\right]$
+\end_inset
+
+ as produced by the code at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJytjs0KglAQhfeC7zDYRmEU9WoK0cq1TyAt_JlM
+SK9dr9XjNxmU0LKYzcd3DofZQCb78UyaQJ8IatkwSCiH6UZqUZeZJt3JwTONDPbQl1p1d1ugwMLHFEO-
+LboxY4pucnBMowq4d6VaS2UXEef-YsOVdRNMMFq0WOuUZ-OnztlmXjm3PQ3argJWo-oYc2cHL7IUNXNN
+E_9rfWJPKTpy6137Hgv_OSZ-GHsALfpvpQ==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-10"
+
+\end_inset
+
+(a) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+\frac{3}{19}\\
+\frac{58}{57}
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+ (b) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+\frac{7}{5}\\
+\frac{17}{15}
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+ (c) 
+\begin_inset Formula $\left[\begin{array}{cc}
+-\frac{4}{5} & \frac{3}{2}\\
+\frac{11}{15} & 1
+\end{array}\right]\left[\begin{array}{c}
+\frac{3}{19}\\
+\frac{58}{57}
+\end{array}\right]=\left[\begin{array}{c}
+\frac{7}{5}\\
+\frac{17}{15}
+\end{array}\right]$
+\end_inset
+
+ which is 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+ as expected
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:coordinate-vectors-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:coordinate-vectors-11"
+
+\end_inset
+
+As produced by the code at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJyFkFFvgyAUhd-b9D-Q7gWWi4qImi17gZ9hTGMs
+3UyqdIhuP3_AFrc0TfZ2-O7hHC4PSJnxetFOI_emUW9OXhjUTfOHthG9L3p2g5mS_U6iFzR2zg6fmAOH
+pgBaAa0hh8ofMyhAtGS_Uze2DIIlhxKo8LL2t4Jt9bZV985Y3HA_ZhGGDpl0y-uoJ4dXj652CEqSZ_Qt
+D1afll7P_qGHP_PEWn3GZLOFtPAUdS9N_ZOm7qTJ28UoS3OgTIiU8RKqtKwhkoJHQAsRUAaU1ynzP5V7
+Hlf_aW5ke1ToETVre5RPv-1bBwMZ5ttuSW8uyzhhTgj5Ai-JerE=&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
+\end_layout
+
+\end_inset
+
+, (a) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+\frac{55}{49}\\
+-\frac{9}{49}\\
+\frac{17}{49}
+\end{array}\right]_{\mathcal{B}}$
+\end_inset
+
+ (b) 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-\frac{43}{136}\\
+\frac{53}{136}\\
+-\frac{1}{17}
+\end{array}\right]_{\mathcal{C}}$
+\end_inset
+
+ (c) 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-\frac{1}{2} & -\frac{155}{136} & \frac{7}{68}\\
+\frac{1}{2} & -\frac{43}{136} & -\frac{45}{68}\\
+0 & -\frac{38}{17} & -\frac{23}{17}
+\end{array}\right]\left[\begin{array}{c}
+\frac{55}{49}\\
+-\frac{9}{49}\\
+\frac{17}{49}
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{43}{136}\\
+\frac{53}{136}\\
+-\frac{1}{17}
+\end{array}\right]$
+\end_inset
+
+ which is 
+\begin_inset Formula $\left[\mathbf{v}\right]_{\mathcal{C}}$
+\end_inset
+
+ as expected
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-1"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-2"
+
+\end_inset
+
+no.
+ 
+\begin_inset Formula $\left[\begin{array}{cccc}
+\frac{1}{\sqrt{35}} & \frac{3}{\sqrt{35}} & -\frac{3}{\sqrt{35}} & \frac{4}{\sqrt{35}}\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-4"
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ is orthogonal
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-21"
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ is not orthogonal (Orthogonal sets are linearly independent, but this set
+ is necessarily linearly dependent having four vectors from 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-5"
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ is not orthogonal
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-6"
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ is not orthogonal
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-7"
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ is not orthogonal (Orthogonal sets are linearly independent, but this set
+ is necessarily linearly dependent having four vectors from 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-14"
+
+\end_inset
+
+
+\begin_inset Formula $4t^{2}-8t+3$
+\end_inset
+
+ is not orthogonal fo 
+\begin_inset Formula $t^{2}-2t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-15"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-16"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{4}{25}\\
+\frac{3}{25}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-17"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-18"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-19"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-33"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-20"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-22"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-23"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-35"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-24"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-38"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-25"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-39"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-26"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-40"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-27"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-41"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-28"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-43"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-29"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-30"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-31"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-32"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-33"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-34"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-35"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-36"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-37"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-38"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-39"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-8"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-9"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-10"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-12"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-13"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:orthogonalization-40"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

@@ -886,16 +886,6 @@ filename "application-solution-spaces.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Answers and solutions for sections below.
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-coordinate-vectors.lyx"
@@ -916,6 +906,16 @@ filename "application-orthogonalization.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Answers and solutions for sections below.
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-similarity-transformations.lyx"
