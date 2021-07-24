@@ -8298,7 +8298,12 @@ name "ans:coordinate-vectors-5"
 \end{array}\right]_{\mathcal{B}}$
 \end_inset
 
- (c) 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(c) 
 \begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
 -1\\
 2\\
@@ -8309,6 +8314,7 @@ name "ans:coordinate-vectors-5"
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -8391,7 +8397,12 @@ name "ans:coordinate-vectors-7"
 \end{array}\right]$
 \end_inset
 
- (a) 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(a) 
 \begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
 17\\
 10\\
@@ -8403,7 +8414,11 @@ name "ans:coordinate-vectors-7"
 \end{array}\right]$
 \end_inset
 
- (b) 
+ 
+\end_layout
+
+\begin_layout Standard
+(b) 
 \begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
 8\\
 5\\
@@ -8415,7 +8430,11 @@ name "ans:coordinate-vectors-7"
 \end{array}\right]_{\mathcal{B}}$
 \end_inset
 
- (c) 
+ 
+\end_layout
+
+\begin_layout Standard
+(c) 
 \begin_inset Formula $\left[\mathcal{B}\right]_{\mathcal{E}}^{-1}\left[\begin{array}{c}
 19\\
 6\\
@@ -8440,6 +8459,7 @@ noprefix "false"
 .
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -8542,7 +8562,12 @@ name "ans:coordinate-vectors-10"
 \end{array}\right]_{\mathcal{C}}$
 \end_inset
 
- (c) 
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(c) 
 \begin_inset Formula $\left[\begin{array}{cc}
 -\frac{4}{5} & \frac{3}{2}\\
 \frac{11}{15} & 1
@@ -8562,6 +8587,7 @@ name "ans:coordinate-vectors-10"
  as expected
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -8748,8 +8774,9 @@ name "ans:orthogonalization-21"
 \begin_inset Formula $S$
 \end_inset
 
- is not orthogonal (Orthogonal sets are linearly independent, but this set
- is necessarily linearly dependent having four vectors from 
+ is not orthogonal (Orthogonal sets of nonzero vectors are linearly independent,
+ but this set is necessarily linearly dependent having four vectors from
+ 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
@@ -8825,8 +8852,9 @@ name "ans:orthogonalization-7"
 \begin_inset Formula $S$
 \end_inset
 
- is not orthogonal (Orthogonal sets are linearly independent, but this set
- is necessarily linearly dependent having four vectors from 
+ is not orthogonal (Orthogonal sets of nonzero vectors are linearly independent,
+ but this set is necessarily linearly dependent having four vectors from
+ 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
@@ -8933,6 +8961,22 @@ name "ans:orthogonalization-17"
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-05.pdf
+	lyxscale 25
+	width 2.5in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -8949,6 +8993,22 @@ c:
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:orthogonalization-18"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-06.pdf
+	lyxscale 25
+	width 2.5in
 
 \end_inset
 
@@ -8973,6 +9033,22 @@ name "ans:orthogonalization-19"
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-07.pdf
+	lyxscale 25
+	width 2.5in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -8989,6 +9065,23 @@ noprefix "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:orthogonalization-20"
+
+\end_inset
+
+
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}=\left[\begin{array}{cc}
+3 & 1\end{array}\right]^{T}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-08.pdf
+	lyxscale 25
+	width 2.5in
 
 \end_inset
 
@@ -9013,6 +9106,23 @@ name "ans:orthogonalization-22"
 \end_inset
 
 
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}=\left[\begin{array}{cc}
+-2 & -3\end{array}\right]^{T}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-09.pdf
+	lyxscale 25
+	width 2.5in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -9029,6 +9139,23 @@ a:
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:orthogonalization-23"
+
+\end_inset
+
+
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}=\left[\begin{array}{cc}
+-4.7 & -3\end{array}\right]^{T}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-10.pdf
+	lyxscale 25
+	width 2.5in
 
 \end_inset
 
@@ -9053,6 +9180,23 @@ name "ans:orthogonalization-3"
 \end_inset
 
 
+\begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}=\left[\begin{array}{cc}
+2 & 4\end{array}\right]^{T}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/orthogonalization-11.pdf
+	lyxscale 25
+	width 2.5in
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -9070,6 +9214,13 @@ noprefix "false"
 LatexCommand label
 name "ans:orthogonalization-24"
 
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-\frac{61}{29}\\
+\frac{22}{29}
+\end{array}\right]$
 \end_inset
 
 
@@ -9092,7 +9243,19 @@ name "ans:orthogonalization-25"
 
 \end_inset
 
+Answers may vary.
+ One answer is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+8\\
+-9
+\end{array}\right],\left[\begin{array}{c}
+9\\
+8
+\end{array}\right]\right\} $
+\end_inset
 
+.
+ Multiples of these vectors also suffice, for example.
 \end_layout
 
 \begin_layout Description
@@ -9112,7 +9275,21 @@ name "ans:orthogonalization-26"
 
 \end_inset
 
+Answers may vary.
+ One answer is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-1\\
+2\\
+1
+\end{array}\right],\left[\begin{array}{c}
+3\\
+0\\
+3
+\end{array}\right]\right\} $
+\end_inset
 
+.
+ Multiples of these vectors also suffice, for example.
 \end_layout
 
 \begin_layout Description
@@ -9132,7 +9309,25 @@ name "ans:orthogonalization-27"
 
 \end_inset
 
+Answers may vary.
+ One answer is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+2\\
+1\\
+4
+\end{array}\right],\left[\begin{array}{c}
+1\\
+2\\
+-1
+\end{array}\right],\left[\begin{array}{c}
+9\\
+-6\\
+-3
+\end{array}\right]\right\} $
+\end_inset
 
+.
+ Multiples of these vectors also suffice, for example.
 \end_layout
 
 \begin_layout Description
@@ -9152,7 +9347,53 @@ name "ans:orthogonalization-28"
 
 \end_inset
 
+Answers may vary.
+ One answer is 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-2\\
+-4\\
+7\\
+3
+\end{array}\right],\left[\begin{array}{c}
+35\\
+109\\
+53\\
+45
+\end{array}\right],\left[\begin{array}{c}
+685\\
+-377\\
+-369\\
+815
+\end{array}\right],\left[\begin{array}{c}
+29174\\
+-7042\\
+13581\\
+-21629
+\end{array}\right]\right\} $
+\end_inset
 
+ as shown at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJx1k01P4zAQhu9I_IdRuTSVK9YeCyiIExJXuKM9
+RKlpQ0NcJQ4W_35nhsZxtuJg2Xqf-R75Cp7857FxwUHYO6j81l1eDBoe4ctVwXfLt7VRa6tuFf4tiJiM
+aIVKKy06Zjo5GLVRGwF2BlhfWwZX8NrVbYBd_eXak0V_eXFkcbngChZq0MWkGFFMpqAomClWFFs8wI9C
+KHIvg2Yb_xG1NLAczCrq4noZNd90yI4B0TWMhlzjU9lUQ1PSdCJC2W4hWti7zqVwKOHwLJxgM2HD2PBN
+h7IxIJqypSf5pOBWvO1vwRP-L7hgnDAyRr7pUG4GRFNuO-VOT3Ln_l-GcBwCdK4fmjCtJ8p6YraeKOuJ
+2XqirCdm64mynmhJkdnuXXUA34W93_m2bOrwPZqmBS7EqG53c7v7RZHXsvUBTgXo1ayGE8OR4TmzI7Oz
+bjI_M_czuZ-Z-2HOcJV6ffYd9OXBgX-Xf1a2fXQdHNy3YtxXZeO29PuOtetPNr0bfwWUHXk0vc-GcH8-
+Ks4xj52NKdsVbvIZGfyTt3ej8Y7L_gdaAysS&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+.
+ Multiples of these vectors also suffice, for example.
 \end_layout
 
 \begin_layout Description
@@ -9172,9 +9413,49 @@ name "ans:orthogonalization-29"
 
 \end_inset
 
+As shown at 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJyFkEFPhDAUhO-b7H94YS9AINpXvWg87Q_Qu_FA
+2AZQlmJpt_HfW96WUtTEAwn5ZngzzAGO8jz2QgvQrYBansR-Zxg8wUXUWqr0FQtW3L1ljmJES-ZweU-c
+R5zdFlgQPsCL6gYNTXcRg9en_W6cYZrMEUlhWLYSJIIR4UR49ghX4iQ7VzPsZvpUOjUs9xfku2XULzWY
+W5a5x3ln4GgJi8Ezi9fvrfMiVT1WfW36yq1gObRCiXCU01EejhLGFaPD890ZOBqywqvzetlyH-s-4xT7
+bPRoNCgxmV6v41gax0bjWBrHRuNYGofu0A-0ov4AqXQrGzlUfae_FmuYLyFTNzRb30OSxcknqcHHsXyT
+6DW-aHzTL9Iw_9FrkOr8X6fg-asPWzLZ70xcMrfrRH1o72_xhNYV&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
 \end_layout
 
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{2}{\sqrt{21}}\\
+\frac{1}{\sqrt{21}}\\
+\frac{4}{\sqrt{21}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{1}{\sqrt{6}}\\
+\frac{2}{\sqrt{6}}\\
+-\frac{1}{\sqrt{6}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{3}{\sqrt{14}}\\
+-\frac{2}{\sqrt{14}}\\
+-\frac{1}{\sqrt{14}}
+\end{array}\right]\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9190,6 +9471,10 @@ a:
 LatexCommand label
 name "ans:orthogonalization-30"
 
+\end_inset
+
+yes; 
+\begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
 
@@ -9212,6 +9497,10 @@ name "ans:orthogonalization-31"
 
 \end_inset
 
+yes; 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
 
 \end_layout
 
@@ -9232,7 +9521,7 @@ name "ans:orthogonalization-32"
 
 \end_inset
 
-
+no
 \end_layout
 
 \begin_layout Description
@@ -9250,6 +9539,10 @@ g:
 LatexCommand label
 name "ans:orthogonalization-33"
 
+\end_inset
+
+yes; 
+\begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
 
@@ -9270,6 +9563,10 @@ i:
 LatexCommand label
 name "ans:orthogonalization-34"
 
+\end_inset
+
+yes; 
+\begin_inset Formula $\mathbb{R}^{4}$
 \end_inset
 
 
@@ -9293,6 +9590,16 @@ name "ans:orthogonalization-35"
 \end_inset
 
 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{1}{\sqrt{2}}\\
+-\frac{1}{\sqrt{2}}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{1}{\sqrt{2}}\\
+-\frac{1}{\sqrt{2}}
+\end{array}\right]\right\} $
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -9310,6 +9617,16 @@ c:
 LatexCommand label
 name "ans:orthogonalization-36"
 
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{8}{\sqrt{145}}\\
+-\frac{9}{\sqrt{145}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{9}{\sqrt{145}}\\
+\frac{8}{\sqrt{145}}
+\end{array}\right]\right\} $
 \end_inset
 
 
@@ -9333,6 +9650,18 @@ name "ans:orthogonalization-37"
 \end_inset
 
 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-\frac{1}{\sqrt{6}}\\
+\frac{2}{\sqrt{6}}\\
+\frac{1}{\sqrt{6}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{1}{\sqrt{2}}\\
+0\\
+\frac{1}{\sqrt{2}}
+\end{array}\right]\right\} $
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -9353,6 +9682,22 @@ name "ans:orthogonalization-38"
 \end_inset
 
 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{2}{\sqrt{21}}\\
+\frac{1}{\sqrt{21}}\\
+\frac{4}{\sqrt{21}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{1}{\sqrt{6}}\\
+\frac{2}{\sqrt{6}}\\
+-\frac{1}{\sqrt{6}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{3}{\sqrt{14}}\\
+-\frac{2}{\sqrt{14}}\\
+-\frac{1}{\sqrt{14}}
+\end{array}\right]\right\} $
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Description
@@ -9373,8 +9718,41 @@ name "ans:orthogonalization-39"
 \end_inset
 
 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-\frac{2}{\sqrt{78}}\\
+-\frac{4}{\sqrt{78}}\\
+\frac{7}{\sqrt{78}}\\
+\frac{3}{\sqrt{78}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{35}{2\sqrt{4485}}\\
+\frac{109}{2\sqrt{4485}}\\
+\frac{53}{2\sqrt{4485}}\\
+\frac{45}{2\sqrt{4485}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{685}{6\sqrt{39215}}\\
+-\frac{377}{6\sqrt{39215}}\\
+-\frac{123}{2\sqrt{39215}}\\
+\frac{815}{6\sqrt{39215}}
+\end{array}\right],\right.$
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left.\left[\begin{array}{c}
+\frac{58}{3\sqrt{682}}\\
+-\frac{14}{3\sqrt{682}}\\
+\frac{9}{\sqrt{682}}\\
+-\frac{43}{3\sqrt{682}}
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9389,6 +9767,27 @@ e:
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:orthogonalization-8"
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ is orthogonal as-is.
+ Normalized: 
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+\frac{6}{\sqrt{46}}\\
+-\frac{1}{\sqrt{46}}\\
+\frac{3}{\sqrt{46}}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{4}{\sqrt{122}}\\
+-\frac{9}{\sqrt{122}}\\
+\frac{5}{\sqrt{122}}
+\end{array}\right]\right\} 
+\]
 
 \end_inset
 
@@ -9413,6 +9812,39 @@ name "ans:orthogonalization-9"
 \end_inset
 
 
+\begin_inset Formula $S$
+\end_inset
+
+ is orthogonal as-is.
+ Normalized: 
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+\frac{2}{\sqrt{29}}\\
+\frac{3}{\sqrt{29}}\\
+\frac{4}{\sqrt{29}}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{1}{\sqrt{165}}\\
+-\frac{10}{\sqrt{165}}\\
+\frac{8}{\sqrt{165}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{64}{\sqrt{4785}}\\
+-\frac{20}{\sqrt{4785}}\\
+-\frac{17}{\sqrt{4785}}
+\end{array}\right]\right\} 
+\]
+
+\end_inset
+
+ 
+\series bold
+[Technically, any orthogonal set of at least 3 vectors will suffice since
+ any such set spans 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ We have not been asked to use the orthogonalization procedure.]
 \end_layout
 
 \begin_layout Description
@@ -9432,7 +9864,71 @@ name "ans:orthogonalization-10"
 
 \end_inset
 
+Following the orthogonalization process leads to 
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+-7\\
+0\\
+9
+\end{array}\right],\left[\begin{array}{c}
+9\\
+8\\
+7
+\end{array}\right],\left[\begin{array}{c}
+288\\
+-520\\
+224
+\end{array}\right],\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]\right\} .
+\]
 
+\end_inset
+
+ 
+\series bold
+[Technically, any orthogonal set of at least 3 vectors will suffice since
+ any such set spans 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ We have not been asked to use the orthogonalization procedure.]
+\series default
+ The zero vector cannot be normalized so must not be included in the orthonormal
+ set.
+ Normalizing the other three vectors: 
+\begin_inset Formula 
+\[
+\left\{ \left[\begin{array}{c}
+-\frac{7}{\sqrt{130}}\\
+0\\
+\frac{9}{\sqrt{130}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{9}{\sqrt{194}}\\
+\frac{8}{\sqrt{194}}\\
+\frac{7}{\sqrt{194}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{36}{\sqrt{6305}}\\
+-\frac{65}{\sqrt{6305}}\\
+\frac{28}{\sqrt{6305}}
+\end{array}\right]\right\} .
+\]
+
+\end_inset
+
+
+\series bold
+[Technically, any orthonormal set of 3 vectors, such as the standard basis,
+ will suffice since any such set spans 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ We have not been asked to use the orthogonalization procedure.]
 \end_layout
 
 \begin_layout Description
@@ -9452,9 +9948,39 @@ name "ans:orthogonalization-11"
 
 \end_inset
 
+Orthogonalized: 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+6\\
+-1\\
+3
+\end{array}\right],\left[\begin{array}{c}
+-19\\
+-21\\
+8
+\end{array}\right]\right\} $
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Orthonormalized: 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{6}{\sqrt{65}}\\
+-\frac{1}{\sqrt{65}}\\
+\frac{3}{\sqrt{65}}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{19}{\sqrt{1435}}\\
+-\frac{21}{\sqrt{1435}}\\
+\frac{8}{\sqrt{1435}}
+\end{array}\right]\right\} $
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9472,9 +9998,50 @@ name "ans:orthogonalization-12"
 
 \end_inset
 
+Orthogonalized: 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+2\\
+3\\
+4
+\end{array}\right],\left[\begin{array}{c}
+-69\\
+-401\\
+212
+\end{array}\right],\left[\begin{array}{c}
+192\\
+-30\\
+-17
+\end{array}\right]\right\} $
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Orthonormalized:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+\frac{2}{\sqrt{70}}\\
+\frac{3}{\sqrt{70}}\\
+\frac{4}{\sqrt{70}}
+\end{array}\right],\left[\begin{array}{c}
+-\frac{69}{\sqrt{461195}}\\
+-\frac{401}{\sqrt{461195}}\\
+\frac{212}{\sqrt{461195}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{192}{\sqrt{39531}}\\
+-\frac{30}{\sqrt{39531}}\\
+-\frac{17}{\sqrt{39531}}
+\end{array}\right]\right\} $
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9492,9 +10059,57 @@ name "ans:orthogonalization-13"
 
 \end_inset
 
+Orthogonalized:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-7\\
+0\\
+9
+\end{array}\right],\left[\begin{array}{c}
+1755\\
+1168\\
+455
+\end{array}\right],\left[\begin{array}{c}
+216\\
+-195\\
+56
+\end{array}\right],\left[\begin{array}{c}
+0\\
+0\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+Orthonormalized:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+-\frac{7}{2\sqrt{73}}\\
+0\\
+\frac{9}{2\sqrt{73}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{1755}{2\sqrt{1607387}}\\
+\frac{584}{\sqrt{1607387}}\\
+\frac{455}{2\sqrt{1607387}}
+\end{array}\right],\left[\begin{array}{c}
+\frac{216}{\sqrt{132114}}\\
+-\frac{195}{\sqrt{132114}}\\
+\frac{56}{\sqrt{132114}}
+\end{array}\right]\right\} $
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9510,6 +10125,10 @@ noprefix "false"
 LatexCommand label
 name "ans:orthogonalization-40"
 
+\end_inset
+
+
+\begin_inset Formula $\left\{ 1,\,t-1,\,t^{2}-2t+\frac{1}{3}\right\} $
 \end_inset
 
 

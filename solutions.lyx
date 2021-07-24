@@ -15054,11 +15054,9 @@ The first vector of the orthogonal set is the first vector of the given
 .
  The second vector of the orthogonal set is the second vector minus its
  projection onto the first vector,
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+\begin_inset Formula 
+\[
+{\displaystyle \left[\begin{array}{c}
 5\\
 -7
 \end{array}\right]-\frac{\left[\begin{array}{c}
@@ -15085,10 +15083,11 @@ The first vector of the orthogonal set is the first vector of the given
 \end{array}\right]=\left[\begin{array}{c}
 -1\\
 -1
-\end{array}\right]}$
+\end{array}\right]}.
+\]
+
 \end_inset
 
-.
  Therefore the result of orthogonalization is 
 \begin_inset Formula $\left\{ \left[\begin{array}{c}
 1\\
@@ -15153,12 +15152,10 @@ The first vector of the orthogonal set is the first vector of the given
 \end_inset
 
 The second vector of the orthogonal set is the second vector minus its projectio
-n onto the first, normalized, vector,
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula ${\displaystyle \left[\begin{array}{c}
+n onto the first, normalized, vector: 
+\begin_inset Formula 
+\[
+{\displaystyle \left[\begin{array}{c}
 -5\\
 10
 \end{array}\right]-\left(\left[\begin{array}{c}
@@ -15179,10 +15176,11 @@ n onto the first, normalized, vector,
 \end{array}\right]=\left[\begin{array}{c}
 -8\\
 6
-\end{array}\right]}$
+\end{array}\right]}.
+\]
+
 \end_inset
 
-.
  Notice the calculation of the projection is slightly simplified since the
  denominator must be 1 as we are projecting onto a unit vector.
  To finish, the new vector needs to be scaled to a unit vector:
