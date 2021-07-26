@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -100,7 +109,7 @@ Geometry: Determinants, Eigenvalues, and Area []
 \end_layout
 
 \begin_layout Standard
-Intuitively, we might think of area as the amount of paint needed in painting
+Intuitively, we might think of area as the amount of paint needed to paint
  a particular shape.
  The more paint needed, the larger its area, and the larger its area, the
  more paint needed.
@@ -116,12 +125,13 @@ Calculating the areas of shapes (assigning numbers to areas) is another
  We certainly are not going to require that to find the area of an object
  it needs to be painted and the amount of paint used measured.
  What paint should be used, by whom, and what instrument should do the measuring
-? This process would be so imprecise it would lead to a single shape having
- many areas (depending on the paint, the painter, and the measuring device),
- a rather undesirable situation.
- The area of a shape should be uniquely determined.
- A single shape has but a single size, and so it must have but a single
- measure of its size—like the area formulas presented in grammar school.
+? This process would be so imprecise as to be useless, giving the area of
+ a single object many numerical areas.
+ A single shape has but a single size, however, and so it must have but
+ a single measure of its size—like the area formulas presented in grammar
+ school.
+ The area of a shape must be uniquely determined.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -318,7 +328,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-With the very definition of area up in the air,
+With the very definition of area left as an interesting yet unresolved conundrum
+,
 \begin_inset ERT
 status open
 
@@ -466,7 +477,7 @@ To understand how the linear transformation
 \begin_inset Formula $A$
 \end_inset
 
- is a product of elementary matrices, 
+ as a product of elementary matrices, 
 \begin_inset Formula $A=E_{p}\cdots E_{2}E_{1}$
 \end_inset
 
@@ -492,7 +503,10 @@ noprefix "false"
 , if we can understand how linear transformations associated with elementary
  matrices affect area, we have a chance of understanding how general linear
  transformations affect area.
- If 
+\end_layout
+
+\begin_layout Standard
+If 
 \begin_inset Formula $E$
 \end_inset
 
@@ -546,8 +560,7 @@ noprefix "false"
 \begin_inset Formula $\text{area}(T_{E}(S))=|\det E|\cdot\text{area}(S)$
 \end_inset
 
-.
- Remember, the determinant of a row swap matrix is 
+ (the determinant of a row swap matrix is 
 \begin_inset Formula $-1$
 \end_inset
 
@@ -563,8 +576,8 @@ noprefix "false"
 \begin_inset Formula $s$
 \end_inset
 
-.
- Therefore,
+).
+ It follows that
 \begin_inset Formula 
 \begin{align*}
 \text{area}\left(T_{A}(S)\right) & =\text{area}\left((T_{E_{p}}\circ\cdots\circ T_{E_{2}}\circ T_{E_{1}})(S)\right)\\
@@ -622,15 +635,23 @@ Let
 \begin_inset Formula $2\times2$
 \end_inset
 
- matrix with linearly independent eigenpairs 
-\begin_inset Formula $\lambda_{1},\mathbf{v}_{1}$
+ matrix with linearly independent eigenvectors 
+\begin_inset Formula $\mathbf{v}_{1}$
 \end_inset
 
  and 
-\begin_inset Formula $\lambda_{2},\mathbf{v}_{2}$
+\begin_inset Formula $\mathbf{v}_{2}$
 \end_inset
 
-.
+ corresponding to eigenvalues 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+ respectively.
  Then 
 \begin_inset Formula $T_{A}(\mathbf{v}_{1})=\lambda_{1}\mathbf{v}_{1}$
 \end_inset
@@ -665,8 +686,8 @@ Let
 \end_inset
 
 .
- Further analysis shows that the image of the parallelogram determined by
- 
+ Further analysis of line segments shows that the image of the parallelogram
+ determined by 
 \begin_inset Formula $\mathbf{v}_{1}$
 \end_inset
 
@@ -791,13 +812,12 @@ It must be, then, that
 \begin_inset Formula $|\det A|=|\lambda_{1}\lambda_{2}|$
 \end_inset
 
-.
- This is true for any 
+, a true statement about any 
 \begin_inset Formula $2\times2$
 \end_inset
 
- matrix including noninvertible ones, but the statement can be made much
- stronger, as in the following theorem.
+ matrix! The statement can be made much stronger, however, as in the following
+ theorem.
 \end_layout
 
 \begin_layout Theorem
@@ -1286,8 +1306,8 @@ end{digression}
 Hence we have two ways to measure the effect of a linear transformation
  on the plane.
  In rough terms, a linear transformation expands or compresses areas by
- a factor equal to the absolute value of the determinant (which is equal
- to the absolute value of the product of the eigenvalues) of its standard
+ a factor equal to the absolute value of the determinant, which is equal
+ to the absolute value of the product of the eigenvalues, of its standard
  matrix.
  More precisely a linear transformation expands or compresses areas in the
  direction of each eigenvector by a factor equal to the absolute value of
@@ -1363,7 +1383,7 @@ noprefix "false"
 
 \end_inset
 
- can be proved for operators on 
+ can be proved for linear operators on 
 \begin_inset Formula $\mathbb{R}^{3}$
 \end_inset
 
@@ -1372,13 +1392,13 @@ noprefix "false"
 \begin_inset Formula $2$
 \end_inset
 
-'s in this section are replaced by 
+'s of the present section are replaced by 
 \begin_inset Formula $3$
 \end_inset
 
 's and the word area is replaced by the word volume, the discourse still
  applies with only minor additional modification.
- In particular, for 
+ To illustrate, for 
 \begin_inset Formula $3\times3$
 \end_inset
 
@@ -1407,7 +1427,9 @@ and the concluding paragraph in the discussion of transformations of the
  plane might be rephrased for transformations of space as follows.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Quotation
+
+\shape italic
 We have two ways to measure the effect of a linear transformation on space,
  
 \begin_inset Formula $\mathbb{R}^{3}$
@@ -1415,12 +1437,15 @@ We have two ways to measure the effect of a linear transformation on space,
 
 .
  In rough terms, a linear transformation expands or compresses volumes by
- a factor equal to the absolute value of the determinant (which is equal
- to the absolute value of the product of the eigenvalues) of its standard
+ a factor equal to the absolute value of the determinant ,which is equal
+ to the absolute value of the product of the eigenvalues, of its standard
  matrix.
  More precisely a linear transformation expands or compresses volumes in
  the direction of each eigenvector by a factor equal to the absolute value
  of the associated eigenvalue.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1509,7 +1534,7 @@ noprefix "false"
 
 \begin_layout Standard
 Affine transformations, compositions of linear transformations with translations
-, are consequently not linear either, and their effect on areas is predictable.
+, are consequently not linear either, but their effect on areas is predictable.
  They scale areas in exactly the same manner as their linear parts.
  For an affine transformation 
 \begin_inset Formula $F:\mathbb{R}^{n}\to\mathbb{R}^{n}$
@@ -2058,7 +2083,7 @@ The image of the hexagon with adjacent vertices
 \begin_inset Formula $2\times2$
 \end_inset
 
- matrix.
+ matrix is shown.
  What is the determinant of 
 \begin_inset Formula $A$
 \end_inset
@@ -2663,7 +2688,7 @@ finishexercises
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Answers
 \end_layout
 

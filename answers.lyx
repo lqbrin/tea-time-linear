@@ -10134,6 +10134,1415 @@ name "ans:orthogonalization-40"
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Similarity-and-Diagonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-1"
+
+\end_inset
+
+Answers may vary.
+ 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+1 & 1\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P^{-1}MP=\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-2"
+
+\end_inset
+
+Answers may vary.
+ 
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+0 & 4 & 0\\
+-1 & 1 & -1\\
+2 & 3 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P^{-1}MP=\left[\begin{array}{ccc}
+-8 & 0 & 0\\
+0 & -20 & 0\\
+0 & 0 & -16
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-3"
+
+\end_inset
+
+Answers may vary.
+ 
+\begin_inset Formula $P=\left[\begin{array}{cccc}
+0 & 1 & 3 & 2\\
+3 & 3 & 1 & -3\\
+-2 & -2 & -2 & 0\\
+1 & -2 & -1 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P^{-1}MP=\left[\begin{array}{cccc}
+7 & 0 & 0 & 0\\
+0 & 21 & 0 & 0\\
+0 & 0 & -7 & 0\\
+0 & 0 & 0 & -7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-4"
+
+\end_inset
+
+
+\begin_inset Formula $-1,1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-5"
+
+\end_inset
+
+
+\begin_inset Formula $-20,-16,-8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-6"
+
+\end_inset
+
+
+\begin_inset Formula $-7,7,21$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-7"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-8"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-9"
+
+\end_inset
+
+
+\begin_inset Formula $k=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-10"
+
+\end_inset
+
+Answers will vary.
+ 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+1 & 4\\
+1 & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-11"
+
+\end_inset
+
+Answers will vary.
+ 
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{array}\right]$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+a=-\frac{25698}{97469}r_{1}+\frac{319807}{97469}r_{2}-\frac{50820}{97469}r_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b=-\frac{16879}{389876}r_{1}+\frac{1996453}{389876}r_{2}-\frac{317321}{389876}r_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+c=r_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+d=\frac{326995}{389876}r_{1}-\frac{319057801}{389876}r_{2}+\frac{50321237}{389876}r_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+e=\frac{13066}{97469}r_{1}-\frac{12604743}{97469}r_{2}+\frac{1988259}{97469}r_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f=-\frac{1244091}{389876}r_{1}+\frac{1215417989}{389876}r_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{191691365}{389876}r_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g=r_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h=r_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+i=-\frac{41}{389876}r_{1}+\frac{1106915}{389876}r_{2}-\frac{1659967}{389876}r_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-12"
+
+\end_inset
+
+2
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-13"
+
+\end_inset
+
+3
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-14"
+
+\end_inset
+
+Reflection across the 
+\begin_inset Formula $y$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-axis parallel to the line 
+\begin_inset Formula $y=\frac{1}{2}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-15"
+
+\end_inset
+
+Scaling by a factor of 2 in the direction of 
+\begin_inset Formula $\left[\begin{array}{c}
+\cos\alpha\\
+\sin\alpha
+\end{array}\right]$
+\end_inset
+
+ and by a factor of 3 in the direction of 
+\begin_inset Formula $\left[\begin{array}{c}
+-\sin\alpha\\
+\cos\alpha
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:similarity-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:similarity-16"
+
+\end_inset
+
+
+\begin_inset Formula $M^{7}=\left[\begin{array}{cc}
+1 & 1\\
+-7 & 1
+\end{array}\right]\left[\begin{array}{cc}
+\frac{6}{5} & 0\\
+0 & \frac{4}{5}
+\end{array}\right]^{7}\frac{1}{8}\left[\begin{array}{cc}
+1 & -1\\
+7 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{8}\left[\begin{array}{cc}
+\left(\frac{6}{5}\right)^{7}+7\left(\frac{4}{5}\right)^{7} & -\left(\frac{6}{5}\right)^{7}+\left(\frac{4}{5}\right)^{7}\\
+-7\left(\frac{6}{5}\right)^{7}+7\left(\frac{4}{5}\right)^{7} & 7\left(\frac{6}{5}\right)^{7}+\left(\frac{4}{5}\right)^{7}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:LU-Factorization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-1"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+-3 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+3 & 5\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-2"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+-\frac{5}{2} & \frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+-2 & -6\\
+0 & 40
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-3"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+-5 & 0 & 0\\
+-4 & -21 & 0\\
+1 & -6 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+5 & -2\\
+0 & 1\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-4"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+-1 & 1 & 0\\
+\frac{3}{2} & -\frac{3}{2} & \frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+-6 & 8 & 4\\
+0 & 12 & 0\\
+0 & 0 & -12
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-5"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+-4 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+1 & 7\\
+0 & 25
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-6"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+8 & 1 & 0\\
+12 & -2 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+-1 & 2 & 0\\
+0 & 6 & -4\\
+0 & 0 & -7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-7"
+
+\end_inset
+
+
+\begin_inset Formula $\det M=3\cdot1\cdot1\cdot1=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-8"
+
+\end_inset
+
+
+\begin_inset Formula $\det M=1\cdot\frac{1}{2}\cdot-2\cdot40=-40$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-9"
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ is not square so has no determinant
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-10"
+
+\end_inset
+
+
+\begin_inset Formula $\det M=1\cdot1\cdot\frac{1}{2}\cdot-6\cdot12\cdot-12=432$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-11"
+
+\end_inset
+
+
+\begin_inset Formula $\det M=-1\cdot1\cdot1\cdot1\cdot25=-25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-12"
+
+\end_inset
+
+
+\begin_inset Formula $\det M=-1\cdot1\cdot1\cdot1\cdot-1\cdot6\cdot-7=-42$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-13"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+-3 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+3 & 5\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-14"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{cc}
+1 & 0\\
+-\frac{5}{2} & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+-2 & -6\\
+0 & 20
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-15"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+\frac{4}{5} & 1 & 0\\
+-\frac{1}{5} & \frac{2}{7} & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+-25 & 10\\
+0 & -21\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-16"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+-1 & 1 & 0\\
+\frac{3}{2} & -\frac{3}{2} & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+-6 & 8 & 4\\
+0 & 12 & 0\\
+0 & 0 & -6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-17"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{cc}
+3 & 0\\
+-9 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+1 & \frac{5}{3}\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-18"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{cc}
+-2 & 0\\
+5 & 20
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+1 & 3\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-19"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{cc}
+4 & 0\\
+1 & -36
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 6 & 6\\
+0 & 1 & \frac{1}{6}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-20"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+-25 & 0 & 0\\
+-20 & -21 & 0\\
+5 & -6 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{cc}
+1 & -\frac{2}{5}\\
+0 & 1\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+i: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-21"
+
+\end_inset
+
+
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+-6 & 0 & 0\\
+6 & 12 & 0\\
+-9 & -18 & -6
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+1 & -\frac{8}{6} & -\frac{4}{6}\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-22"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+-13
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-23"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+1\\
+-2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-24"
+
+\end_inset
+
+
+\begin_inset Formula $M^{-1}=\left[\begin{array}{cc}
+-\frac{1}{15} & -\frac{1}{30}\\
+\frac{2}{3} & -\frac{1}{6}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-25"
+
+\end_inset
+
+
+\begin_inset Formula $M^{-1}=\left[\begin{array}{ccc}
+-\frac{4}{3} & -\frac{2}{3} & \frac{1}{2}\\
+\frac{1}{7} & 0 & \frac{1}{14}\\
+-3 & -1 & \frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:LU-decomposition-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+f: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:LU-factorization-26"
+
+\end_inset
+
+
+\begin_inset Formula $M^{-1}=\left[\begin{array}{ccc}
+-\frac{33}{2} & -\frac{15}{2} & 1\\
+-\frac{2}{7} & -\frac{1}{7} & 0\\
+-8 & -\frac{7}{2} & \frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

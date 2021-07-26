@@ -109,9 +109,8 @@ The Power Method []
 \end_layout
 
 \begin_layout Standard
-Students typically learn about the quadratic formula in high school if not
- earlier.
- It gives a formula for the solutions of the equation
+Students typically learn about the quadratic formula in high school or earlier.
+ It provides a formula for the solutions of the equation
 \begin_inset Formula 
 \[
 ax^{2}+bx+c=0
@@ -123,7 +122,7 @@ ax^{2}+bx+c=0
 \begin_inset Formula $f(x)=ax^{2}+bx+c$
 \end_inset
 
-) for any values of 
+) for any values 
 \begin_inset Formula $a,b,$
 \end_inset
 
@@ -150,7 +149,12 @@ x=\frac{-b\pm\left(b^{2}-4ac\right)^{\frac{1}{2}}}{2a},
 
 which combines the coefficients of the equation using addition, subtraction,
  multiplication, division, and rational exponentiation.
- There are more elaborate formulas for solving the general cubic,
+ 
+\end_layout
+
+\begin_layout Standard
+What you may never have seen are the more elaborate formulas for solving
+ the general cubic,
 \begin_inset Formula 
 \[
 a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}=0
@@ -161,20 +165,71 @@ a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}=0
  and the general quartic,
 \begin_inset Formula 
 \[
-a_{4}x^{4}+a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}=0,
+a_{4}x^{4}+a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0}=0.
 \]
 
 \end_inset
 
-but each one uses nothing more than addition, subtraction, multiplication,
- division, and radical exponentiation.
- In other words, any solution of any polynomial equation up to degree four
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Cubic and Quartic Formulas}
+\end_layout
+
+\end_inset
+
+The formula for solving the general cubic polynomial is most often credited
+ to Gerolamo Cardano as he is the first known to have published the result,
+ in 1545.
+ However, history reveals that Niccol
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+`o
+\end_layout
+
+\end_inset
+
+ Tartaglia knew of the solution before Cardano, and Scipione del Ferro,
+ who died circa 1526, before him.
+ In the same work where Cardano published the solution of the cubic, 
+\shape italic
+Ars Magna
+\shape default
+, he also published the solution of the quartic.
+ History has been kinder to the original solver of the quartic, however,
+ most often crediting the result to Lodovico Ferrari, a student of Cardano.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+Though the formulas are much more involved than the quadratic formula, each
+ one uses nothing more than addition, subtraction, multiplication, division,
+ and radical exponentiation.
+ As a result, any solution of any polynomial equation up to degree four
  can be written down explicitly and exactly.
 \end_layout
 
 \begin_layout Standard
-A famous result of Galois theory is that there are unsolvable quintics,
- fifth degree polynomials, and unsolvable polynomials of all higher degrees
+A famous result of Galois theory is that there are unsolvable fifth degree
+ polynomials (quintics), and unsolvable polynomials of all higher degrees
  as well.
  Their roots have no closed form expression using addition, subtraction,
  multiplication, division, and rational exponentiation of its coefficients.
@@ -184,16 +239,65 @@ A famous result of Galois theory is that there are unsolvable quintics,
 \end_inset
 
  is a classic example.
+ Its roots cannot be written down exactly and explicitly.
  However, being a fifth degree polynomial with real coefficients, it must
  have at least one real root.
- If there is no formula for the root, how can we locate it?
+ For large negative values of 
+\begin_inset Formula $x$
+\end_inset
+
+, say 
+\begin_inset Formula $-100$
+\end_inset
+
+ or 
+\begin_inset Formula $-1000$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is negative and for large positive values of 
+\begin_inset Formula $x$
+\end_inset
+
+, say 
+\begin_inset Formula $100$
+\end_inset
+
+ or 
+\begin_inset Formula $1000$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is positive.
+ Somewhere in between, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ must be zero (as required by the intermediate value theorem).
+ Despite the impossibility of a formula, SageMath and other computer algebra
+ systems can still find roots of any polynomial.
+ But how can the roots of a 
+\begin_inset Formula $5^{th}$
+\end_inset
+
+ degree polynomial be found if there is no formula?
 \end_layout
 
 \begin_layout Standard
-The key is to give up on writing it down explicitly and exactly and to settle
- for an approximation, and there are a host of numerical methods for doing
- this.
- For example, if we set 
+As discussed, there is no exact, explicit formula.
+ There are, however, many methods for approximating such roots, each one
+ capable of determining the roots to arbitrary precision.
+ Getting back to finding the roots of 
+\begin_inset Formula $f(x)=x^{5}-10x+2$
+\end_inset
+
+, if we set 
 \begin_inset Formula $x_{0}=2$
 \end_inset
 
@@ -202,7 +306,7 @@ The key is to give up on writing it down explicitly and exactly and to settle
 \end_inset
 
 , we can generate a sequence of approximations that get more and more accurate
- as we go.
+ as we proceed.
  
 \begin_inset Formula $x_{1}=x_{0}-\frac{f(x_{0})}{5x_{0}^{4}-10}=2-\frac{f(2)}{5(2)^{4}-10}=\frac{9}{5}$
 \end_inset
@@ -254,13 +358,13 @@ This is an example of an iterative routine.
  is applied to generate the rest of the list.
  The output of one iteration is input into the formula to calculate the
  next.
- As more and more iterations are calculated, the output approaches (we hope!)
- the desired quantity.
+ As more and more iterations are calculated, the output approaches the desired
+ quantity.
  There are a number of iterative routines for linear algebra problems too.
 \end_layout
 
 \begin_layout Standard
-For example, let 
+Let 
 \begin_inset Formula 
 \[
 M=\left[\begin{array}{cc}
@@ -388,12 +492,7 @@ noprefix "false"
 \end_inset
 
 .
- (In the parlance of linear algebra, the lines are the 1-dimensional vector
- spaces generated by the individual 
-\begin_inset Formula $\mathbf{v}_{i}$
-\end_inset
-
-.) The head of each 
+ The head of each 
 \begin_inset Formula $\mathbf{v}_{i}$
 \end_inset
 
@@ -426,12 +525,7 @@ noprefix "false"
 -2 & 1\end{array}\right]^{T}$
 \end_inset
 
- (or 
-\begin_inset Formula $\left[\begin{array}{cc}
-2 & -1\end{array}\right]^{T}$
-\end_inset
-
- if you prefer).
+.
  Further iteration will reveal more of the same.
 \end_layout
 
@@ -576,7 +670,7 @@ M\left[\begin{array}{c}
 
 \end_inset
 
-or in short 
+or 
 \begin_inset Formula $M\left[\begin{array}{cc}
 -2 & 1\end{array}\right]^{T}=3\left[\begin{array}{cc}
 -2 & 1\end{array}\right]^{T}$
@@ -624,13 +718,13 @@ Sit back and think about this for a moment.
 \begin_inset Formula $5\times5$
 \end_inset
 
- and up cannot generally be found exactly as their characteristic polynomials
- are fifth degree or higher.
+ and up cannot generally be found exactly (their characteristic polynomials
+ are fifth degree or higher).
  Numerical methods must be used!
 \end_layout
 
 \begin_layout Standard
-This approach of iteratively multiplying some vector by the matrix whose
+The approach of iteratively multiplying some vector by the matrix whose
  eigenpairs are desired, known as the 
 \series bold
 power method
@@ -1029,7 +1123,7 @@ method iteration of the recurrence relation
 \begin_inset Formula $\mathbf{v}_{0}$
 \end_inset
 
-.
+, usually with scaling.
  Under certain conditions the sequence 
 \begin_inset Formula $\mathbf{v}_{0},\mathbf{v}_{1},\ldots$
 \end_inset
@@ -2618,10 +2712,18 @@ name "exc:power-method-13"
 \end_inset
 
 20 is a good estimate of one of the non-dominant eigenvalues of 
-\begin_inset Formula $M$
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+585 & -53 & -303 & -827\\
+221 & 39 & -176 & -263\\
+1652 & -36 & -944 & -2204\\
+-296 & -24 & 192 & 360
+\end{array}\right].
+\]
+
 \end_inset
 
-.
  Apply the power method to 
 \begin_inset Formula $(M-20I)^{-1}$
 \end_inset
@@ -2645,7 +2747,7 @@ finishexercises
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Answers
 \end_layout
 

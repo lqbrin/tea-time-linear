@@ -1183,7 +1183,7 @@ where
 \begin_inset Formula $U$
 \end_inset
 
- (the echelon frorm of 
+ (the echelon form of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1243,11 +1243,11 @@ It is not realistic to expect that reduction can be done without row swaps,
 
 .
  Instead, it factors 
-\begin_inset Formula $PM$
+\begin_inset Formula $M$
 \end_inset
 
  into a product 
-\begin_inset Formula $LU$
+\begin_inset Formula $PLU$
 \end_inset
 
  where 
@@ -1375,7 +1375,7 @@ U=\left[\begin{array}{cccc}
 
 and the product of the 8 elementary matrices corresponding to the 8 row
  operations form 
-\begin_inset Formula $P^{-1}L$
+\begin_inset Formula $PL$
 \end_inset
 
 .
@@ -1464,7 +1464,7 @@ In full detail:
 -7 & 0 & 1 & 0\\
 3 & 1 & 0 & 0\\
 3 & 0 & 0 & 0
-\end{array}\right]=P^{-1}L
+\end{array}\right]=PL
 \]
 
 \end_inset
@@ -1494,7 +1494,7 @@ which, as expected, is not lower triangular times upper triangular.
 
 .
  The permutation matrix 
-\begin_inset Formula $P$
+\begin_inset Formula $P^{-1}$
 \end_inset
 
  can be constructed by applying only the row swaps to the identity matrix,
@@ -1525,7 +1525,7 @@ which, as expected, is not lower triangular times upper triangular.
 0 & 0 & 1 & 0\\
 0 & 1 & 0 & 0\\
 1 & 0 & 0 & 0
-\end{array}\right]=P.
+\end{array}\right]=P^{-1}.
 \]
 
 \end_inset
@@ -1535,7 +1535,7 @@ In this case the order of the swaps does not matter, but when an index is
  Finally, we have 
 \begin_inset Formula 
 \[
-PM=LU=\left[\begin{array}{cccc}
+P^{-1}M=LU=\left[\begin{array}{cccc}
 3 & 0 & 0 & 0\\
 3 & 1 & 0 & 0\\
 -7 & 0 & 1 & 0\\
@@ -1551,11 +1551,21 @@ PM=LU=\left[\begin{array}{cccc}
 \end_inset
 
 or 
-\begin_inset Formula $M=P^{-1}LU$
+\begin_inset Formula $M=PLU$
 \end_inset
 
 .
- Can you verify this? Answer on page .
+ Can you verify this? Answer on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-verified"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1564,12 +1574,12 @@ Therefore the system
 \end_inset
 
  is equivalent to 
-\begin_inset Formula $P^{-1}LU\mathbf{v}=\mathbf{b}$
+\begin_inset Formula $PLU\mathbf{v}=\mathbf{b}$
 \end_inset
 
 .
  Solving amounts to first applying 
-\begin_inset Formula $P$
+\begin_inset Formula $P^{-1}$
 \end_inset
 
  to 
@@ -1577,15 +1587,15 @@ Therefore the system
 \end_inset
 
 , permuting its entries, yielding 
-\begin_inset Formula $LU\mathbf{v}=P\mathbf{b}$
+\begin_inset Formula $LU\mathbf{v}=P^{-1}\mathbf{b}$
 \end_inset
 
 ; second, solving 
-\begin_inset Formula $L\mathbf{w}=P\mathbf{b}$
+\begin_inset Formula $L\mathbf{w}=P^{-1}\mathbf{b}$
 \end_inset
 
 , which yields 
-\begin_inset Formula $\mathbf{w}=L^{-1}P\mathbf{b}$
+\begin_inset Formula $\mathbf{w}=L^{-1}P^{-1}\mathbf{b}$
 \end_inset
 
 ; and third, solving 
@@ -1597,7 +1607,7 @@ Therefore the system
 \end_inset
 
  such that 
-\begin_inset Formula $U\mathbf{v}=L^{-1}P\mathbf{b}$
+\begin_inset Formula $U\mathbf{v}=L^{-1}P^{-1}\mathbf{b}$
 \end_inset
 
 .
@@ -1616,12 +1626,12 @@ When
 \begin_inset Formula $\mathbf{v}=U^{-1}L^{-1}P\mathbf{b}=M^{-1}\mathbf{b}$
 \end_inset
 
-.
- But the method works even when 
+, but the method works even when 
 \begin_inset Formula $M$
 \end_inset
 
- is noninvertible—whenever 
+ is noninvertible.
+ Whenever 
 \begin_inset Formula $U\mathbf{v}=\mathbf{w}$
 \end_inset
 
@@ -1772,10 +1782,40 @@ Provide an
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-9"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 3 & 5\\
 -9 & -14
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1792,10 +1832,40 @@ Provide an
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-10"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -2 & -6\\
 5 & 35
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1812,10 +1882,40 @@ Provide an
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-11"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 4 & 24 & 24\\
 1 & -30 & 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:LU-factorization-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1832,11 +1932,41 @@ Provide an
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-12"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -25 & 10\\
 -20 & -13\\
 5 & -8
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1854,11 +1984,41 @@ Provide an
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-13"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 -6 & 8 & 4\\
 6 & 4 & -4\\
 -9 & -6 & 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1901,10 +2061,40 @@ Find a permutation matrix
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-14"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -4 & -3\\
 1 & 7
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1921,11 +2111,41 @@ Find a permutation matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-15"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -7 & 3\\
 6 & -10\\
 8 & -5
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:LU-factorization-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1943,11 +2163,41 @@ Find a permutation matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-16"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 8 & -10 & -4\\
 -1 & 2 & 0\\
 -12 & 12 & 1
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1991,6 +2241,52 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:LU-factorization-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2019,6 +2315,52 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:LU-factorization-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2053,6 +2395,52 @@ noprefix "false"
 \end_inset
 
 s on its diagonal.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:LU-factorization-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2087,6 +2475,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2144,6 +2555,13 @@ Use the fact that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-17"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -5 & 1\\
 -20 & -2
@@ -2173,6 +2591,29 @@ Use the fact that
 -23\\
 -14
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-22"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2214,6 +2655,13 @@ Use the fact that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-18"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 3 & -7 & -2\\
 -12 & 35 & 7\\
@@ -2251,6 +2699,29 @@ Use the fact that
 6\\
 14
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:LU-factorization-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2300,6 +2771,13 @@ Use the fact that
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:LU-decomposition-19"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 2 & -7 & -4\\
 -4 & 7 & 8\\
@@ -2337,6 +2815,33 @@ Use the fact that
 -17\\
 -43
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-23"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2402,6 +2907,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:LU-factorization-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2505,7 +3033,7 @@ finishexercises
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Answers
 \end_layout
 
@@ -2524,7 +3052,7 @@ name "ans:LU-factorization-verified"
 
 \begin_inset Formula 
 \[
-PM=\left[\begin{array}{cccc}
+P^{-1}M=\left[\begin{array}{cccc}
 0 & 0 & 0 & 1\\
 0 & 0 & 1 & 0\\
 0 & 1 & 0 & 0\\

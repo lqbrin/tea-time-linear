@@ -402,11 +402,25 @@ UNIFORMIZATION TODO
 \end_layout
 
 \begin_layout Itemize
-None left
+Spell checking (done on 7/25/2021).
+ No errors found.
+ Do again?
 \end_layout
 
 \begin_layout Plain Layout
 UNIFORMIZATION COMPLETED
+\end_layout
+
+\begin_layout Itemize
+Take 
+\begin_inset Quotes eld
+\end_inset
+
+Answers
+\begin_inset Quotes erd
+\end_inset
+
+ sections out of table of contents (make them Section*)
 \end_layout
 
 \begin_layout Itemize
@@ -906,16 +920,6 @@ filename "application-orthogonalization.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Answers and solutions for sections below.
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-similarity-transformations.lyx"
@@ -993,6 +997,16 @@ filename "application-lu-factorization.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Answers and solutions for sections below.
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-power-method.lyx"

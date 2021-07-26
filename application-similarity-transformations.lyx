@@ -1904,6 +1904,13 @@ Find a matrix
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-14"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 5 & 4\\
 20 & 7
@@ -1922,6 +1929,29 @@ Find a matrix
 1\\
 -2
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1952,6 +1982,13 @@ Find a matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-15"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 1 & -2\\
 0 & -1
@@ -1970,6 +2007,29 @@ Find a matrix
 1\\
 1
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2000,10 +2060,17 @@ Find a matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-16"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
--20 & -0 & -0\\
+-20 & 0 & 0\\
 7 & -24 & -8\\
--19 & 16 & -0
+-19 & 16 & 0
 \end{array}\right]$
 \end_inset
 
@@ -2029,6 +2096,29 @@ Find a matrix
 -1\\
 1
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2070,6 +2160,13 @@ Find a matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-17"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 11 & -20 & 30\\
 8 & -17 & 30\\
@@ -2099,6 +2196,29 @@ Find a matrix
 1\\
 2
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2140,6 +2260,13 @@ Find a matrix
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-18"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cccc}
 -39 & -28 & -52 & -20\\
 -102 & -91 & -171 & -48\\
@@ -2185,6 +2312,29 @@ Find a matrix
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2210,6 +2360,52 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2228,6 +2424,13 @@ Is
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-19"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 25 & 4\\
 -1 & 29
@@ -2236,6 +2439,43 @@ Is
 
 ; 
 \begin_inset Formula $27$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{cc}
+61 & 4\\
+-25 & 41
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $51$
 \end_inset
 
 
@@ -2256,6 +2496,57 @@ Is
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-20"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{cc}
+8 & 0\\
+15 & 3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $8,3$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-21"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 18 & -8 & 14\\
 -8 & 6 & -7\\
@@ -2265,6 +2556,29 @@ Is
 
 ; 
 \begin_inset Formula $-6,2$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-11"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2280,6 +2594,66 @@ Is
 
 ; 
 \begin_inset Formula $10,6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+15 & 14 & 18\\
+26 & 3 & 18\\
+-26 & -14 & -29
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $11,-11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-22"
+
+\end_inset
+
+
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+9 & 2 & 2\\
+3 & 9 & -1\\
+-1 & -3 & 7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $5,10$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2359,6 +2733,53 @@ Matrices
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-23"
+
+\end_inset
+
+
+\begin_inset Formula $A=\left[\begin{array}{cc}
+5 & -2\\
+-4 & 3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+-3 & -2\\
+20 & k
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $A=\left[\begin{array}{cc}
 11 & 8\\
 k & -3
@@ -2375,6 +2796,53 @@ k & -3
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-24"
+
+\end_inset
+
+
+\begin_inset Formula $A=\left[\begin{array}{cc}
+2 & 1\\
+k & 3
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+3 & 5\\
+k & 2
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
@@ -2384,7 +2852,7 @@ name "exc:similarity-4"
 \end_inset
 
 Find 
-\begin_inset Formula $P$
+\begin_inset Formula $P\neq\mathbf{0}$
 \end_inset
 
  such that 
@@ -2402,6 +2870,52 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2493,6 +3007,13 @@ Explain why
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-25"
+
+\end_inset
+
+
 \begin_inset Formula $A=\left[\begin{array}{cc}
 -6 & -1\\
 11 & -2
@@ -2504,6 +3025,33 @@ Explain why
 5 & -10\\
 -4 & 8
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2526,6 +3074,40 @@ Explain why
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+37 & 9\\
+4 & 1
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+1 & -2\\
+-4 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+3 & 4\\
+8 & 2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+3 & -6\\
+7 & -14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
@@ -2540,46 +3122,50 @@ What does the SageMath code do?
 \begin_deeper
 \begin_layout LyX-Code
 # Variables
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 var('a,b,c,d')
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 # Similar matrices
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 A = matrix(2,2,[9,-6,5,-8])
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 B = matrix(2,2,[106,-132,84,-105])
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 # Unknown matrix
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 P = matrix(2,2,[a,b,c,d])
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 print(A);print()
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 print(B);print()
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
 # Solve for P and print solution
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout LyX-Code
-print(solve((A*P-P*B).coefficients(),[a,b,c,d]))
+syseq = (A*P-P*B).coefficients()
+\begin_inset Newline newline
+\end_inset
+
+print(solve(syseq,[a,b,c,d]))
 \end_layout
 
 \end_deeper
@@ -2603,6 +3189,13 @@ Find all matrices
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-26"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2631,6 +3224,29 @@ r0TDUdNaAcKCCzkhhAB1UStC&lang=sage&interacts=eJyLjgUAARUAuQ==}
 -2 & 1\\
 81 & -3
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-9"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2671,6 +3287,13 @@ Gg2SKijKzCvRcNS0VoCw4EJOCCEANwosSg==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-27"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2702,6 +3325,33 @@ Uf2L3laTOuE=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 -6634 & -1171 & 24959\\
 2053 & 372 & -7699
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-11"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2763,6 +3413,29 @@ noprefix "false"
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2798,6 +3471,13 @@ Describe the action of the transformation
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-28"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 1 & 0\\
 0 & -1
@@ -2812,9 +3492,39 @@ Describe the action of the transformation
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-29"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 2 & 0\\
 0 & 3
@@ -2826,6 +3536,33 @@ Describe the action of the transformation
 \cos\alpha & \sin\alpha\\
 -\sin\alpha & \cos\alpha
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-15"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2866,6 +3603,13 @@ Calculate
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-30"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -\frac{17}{6} & -\frac{11}{6}\\
 \frac{11}{3} & \frac{8}{3}
@@ -2873,7 +3617,30 @@ Calculate
 \end_inset
 
 ; 
-\begin_inset Formula $\frac{5}{6},1$
+\begin_inset Formula $\frac{5}{6},-1$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:similarity-10"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2908,6 +3675,13 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:similarity-31"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 \frac{17}{20} & -\frac{1}{20}\\
 -\frac{7}{20} & \frac{23}{20}
@@ -2916,6 +3690,29 @@ Calculate
 
 ; 
 \begin_inset Formula $\frac{4}{5},\frac{6}{5}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:similarity-16"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2958,7 +3755,7 @@ finishexercises
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Answers
 \end_layout
 
