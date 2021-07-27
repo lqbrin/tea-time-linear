@@ -1167,18 +1167,18 @@ For a square matrix
  is invertible (its columns are linearly independent), and
 \begin_inset Formula 
 \begin{align*}
-Q^{-1}AQ & =Q^{-1}A\left[\begin{array}{ccccc}
+Q^{-1}MQ & =Q^{-1}M\left[\begin{array}{ccccc}
 \mathbf{v} & \mathbf{u}_{1} & \mathbf{u}_{2} & \cdots & \mathbf{u}_{n-1}\end{array}\right]\\
  & =\left[\begin{array}{ccccc}
-Q^{-1}A\mathbf{v} & Q^{-1}A\mathbf{u}_{1} & Q^{-1}A\mathbf{u}_{2} & \cdots & Q^{-1}A\mathbf{u}_{n-1}\end{array}\right]\\
+Q^{-1}M\mathbf{v} & Q^{-1}M\mathbf{u}_{1} & Q^{-1}M\mathbf{u}_{2} & \cdots & Q^{-1}M\mathbf{u}_{n-1}\end{array}\right]\\
  & =\left[\begin{array}{ccccc}
-\lambda Q^{-1}\mathbf{v} & Q^{-1}A\mathbf{u}_{1} & Q^{-1}A\mathbf{u}_{2} & \cdots & Q^{-1}A\mathbf{u}_{n-1}\end{array}\right].
+\lambda Q^{-1}\mathbf{v} & Q^{-1}M\mathbf{u}_{1} & Q^{-1}M\mathbf{u}_{2} & \cdots & Q^{-1}M\mathbf{u}_{n-1}\end{array}\right].
 \end{align*}
 
 \end_inset
 
 While we cannot say much about 
-\begin_inset Formula $Q^{-1}A\mathbf{u}_{j}$
+\begin_inset Formula $Q^{-1}M\mathbf{u}_{j}$
 \end_inset
 
  for any 
@@ -1211,7 +1211,7 @@ While we cannot say much about
  Hence we have 
 \begin_inset Formula 
 \[
-Q^{-1}AQ=\left[\begin{array}{ccccc}
+Q^{-1}MQ=\left[\begin{array}{ccccc}
 \lambda & \star & \star & \star & \star\\
 0 & \star & \star & \star & \star\\
 0 & \star & \star & \star & \star\\
@@ -1223,7 +1223,7 @@ Q^{-1}AQ=\left[\begin{array}{ccccc}
 \end_inset
 
 By the inductive hypothesis, there is a triangularization of 
-\begin_inset Formula $(Q^{-1}AQ)_{\backslash1,1}$
+\begin_inset Formula $(Q^{-1}MQ)_{\backslash1,1}$
 \end_inset
 
 .
@@ -1232,7 +1232,7 @@ By the inductive hypothesis, there is a triangularization of
 \end_inset
 
  be such that 
-\begin_inset Formula $R^{-1}(Q^{-1}AQ)_{\backslash1,1}R$
+\begin_inset Formula $R^{-1}(Q^{-1}MQ)_{\backslash1,1}R$
 \end_inset
 
  is upper triangular, and set 
@@ -1253,12 +1253,12 @@ By the inductive hypothesis, there is a triangularization of
  and 
 \begin_inset Formula 
 \[
-\hat{Q}^{-1}(Q^{-1}AQ)\hat{Q}=\left[\begin{array}{cc}
+\hat{Q}^{-1}(Q^{-1}MQ)\hat{Q}=\left[\begin{array}{cc}
 1 & 0\\
 0 & R^{-1}
 \end{array}\right]\left[\begin{array}{cc}
 \lambda & \star\\
-0 & (Q^{-1}AQ)_{\backslash1,1}
+0 & (Q^{-1}MQ)_{\backslash1,1}
 \end{array}\right]\left[\begin{array}{cc}
 1 & 0\\
 0 & R
@@ -1269,11 +1269,11 @@ By the inductive hypothesis, there is a triangularization of
 
 is upper triangular.
  Hence 
-\begin_inset Formula $(Q\hat{Q})^{-1}A(Q\hat{Q})$
+\begin_inset Formula $(Q\hat{Q})^{-1}M(Q\hat{Q})$
 \end_inset
 
  is a triangularization of 
-\begin_inset Formula $A$
+\begin_inset Formula $M$
 \end_inset
 
  and we set 
@@ -1733,6 +1733,13 @@ Find the area of the parallelogram with vertices
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-10"
+
+\end_inset
+
+
 \begin_inset Formula $(0,0)$
 \end_inset
 
@@ -1746,6 +1753,29 @@ Find the area of the parallelogram with vertices
 
 , 
 \begin_inset Formula $(3,-4)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:det-eig-area-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1790,6 +1820,13 @@ Find the area of the parallelogram with vertices
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-11"
+
+\end_inset
+
+
 \begin_inset Formula $(4,5)$
 \end_inset
 
@@ -1803,6 +1840,29 @@ Find the area of the parallelogram with vertices
 
 , 
 \begin_inset Formula $(12,6)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:det-eig-area-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1935,6 +1995,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-12"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -1963,6 +2030,33 @@ status open
 
 }
 \end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:det-eig-area-3"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2089,6 +2183,33 @@ The image of the hexagon with adjacent vertices
 \end_inset
 
 ?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:det-eig-area-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2127,6 +2248,29 @@ noprefix "false"
 \end_inset
 
 ?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:det-eig-area-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2140,7 +2284,11 @@ Suppose
 \begin_inset Formula $M$
 \end_inset
 
- factors as shown.
+ factors as 
+\begin_inset Formula $P^{-1}UP$
+\end_inset
+
+.
  Use the information to find (i) 
 \begin_inset Formula $\det M$
 \end_inset
@@ -2154,29 +2302,65 @@ Suppose
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Formula $M=\left[\begin{array}{cc}
-12 & -10\\
-10 & 4
-\end{array}\right]^{-1}\left[\begin{array}{cc}
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-13"
+
+\end_inset
+
+
+\begin_inset Formula $U=\left[\begin{array}{cc}
 -4 & -9\\
 0 & 5
-\end{array}\right]\left[\begin{array}{cc}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P=\left[\begin{array}{cc}
 12 & -10\\
 10 & 4
 \end{array}\right]$
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:det-eig-area-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M=\left[\begin{array}{cc}
--12 & 10\\
--7 & 8
-\end{array}\right]^{-1}\left[\begin{array}{cc}
+\begin_inset Formula $U=\left[\begin{array}{cc}
 -6 & 12\\
 0 & -8
-\end{array}\right]\left[\begin{array}{cc}
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $P=\left[\begin{array}{cc}
 -12 & 10\\
 -7 & 8
 \end{array}\right]$
@@ -2186,15 +2370,19 @@ Suppose
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M=\left[\begin{array}{ccc}
-4 & 9 & 11\\
--5 & 1 & -6\\
--7 & -3 & 6
-\end{array}\right]^{-1}\left[\begin{array}{ccc}
+\begin_inset Formula $U=\left[\begin{array}{ccc}
 -11 & -4 & -7\\
 0 & 0 & -12\\
 0 & 0 & 12
-\end{array}\right]\left[\begin{array}{ccc}
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $P=\left[\begin{array}{ccc}
 4 & 9 & 11\\
 -5 & 1 & -6\\
 -7 & -3 & 6
@@ -2205,15 +2393,19 @@ Suppose
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M=\left[\begin{array}{ccc}
-12 & 8 & -12\\
--6 & -10 & 1\\
-6 & -11 & 4
-\end{array}\right]^{-1}\left[\begin{array}{ccc}
+\begin_inset Formula $U=\left[\begin{array}{ccc}
 -11 & 4 & 11\\
 0 & -5 & -2\\
 0 & 0 & 3
-\end{array}\right]\left[\begin{array}{ccc}
+\end{array}\right]$
+\end_inset
+
+;
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $P=\left[\begin{array}{ccc}
 12 & 8 & -12\\
 -6 & -10 & 1\\
 6 & -11 & 4
@@ -2250,6 +2442,13 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-14"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2263,6 +2462,29 @@ Kcqs0DDSMdKJNjTS0TU00AEik1hNXq5QNGldEx1dSx0DHVOQpC9QMkAvM68stag4VUNTK1QrAABvMhp5
 \backslash
  
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:det-eig-area-5"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2407,6 +2629,13 @@ Let
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-15"
+
+\end_inset
+
+
 \begin_inset Formula $A=\left[\begin{array}{cc}
 0 & -1/2\\
 1/2 & 0
@@ -2418,6 +2647,29 @@ Let
 1\\
 1/2
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:det-eig-area-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2517,7 +2769,7 @@ Let
 \begin_inset Formula $G(S)$
 \end_inset
 
- and use your sketch to determine the determinants of the matrix parts of
+ and use your sketch to determine the determinants of the linear parts of
  
 \begin_inset Formula $F$
 \end_inset
@@ -2540,9 +2792,9 @@ noprefix "false"
 
 \end_inset
 
- outlines a recursive procedure for diagonalizing any matrix.
- It is constructive, giving an algorithm for finding the diagonalizing matrix
- 
+ outlines a recursive procedure for triangularizing any matrix.
+ It is constructive, giving an algorithm for finding the traignularizing
+ matrix 
 \begin_inset Formula $P$
 \end_inset
 
@@ -2565,6 +2817,13 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-16"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 13 & -8\\
 20 & -13
@@ -2573,6 +2832,29 @@ noprefix "false"
 
 ; 
 \begin_inset Formula $\lambda=-3$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:det-eig-area-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2593,6 +2875,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-17"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 11 & -8\\
 2 & 1
@@ -2601,6 +2890,29 @@ noprefix "false"
 
 ; 
 \begin_inset Formula $\lambda=3$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:det-eig-area-5"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2622,6 +2934,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-18"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 -34 & -50 & -24\\
 37 & 53 & 24\\
@@ -2634,9 +2953,39 @@ noprefix "false"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:det-eig-area-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:det-eig-area-19"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 78 & -50 & -54\\
 -167 & 135 & 186\\
@@ -2646,6 +2995,33 @@ noprefix "false"
 
 ; 
 \begin_inset Formula $\lambda=5$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:det-eig-area-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 

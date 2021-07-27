@@ -997,16 +997,6 @@ filename "application-lu-factorization.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Answers and solutions for sections below.
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand include
 filename "application-power-method.lyx"
@@ -1020,6 +1010,19 @@ filename "application-power-method.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "theory-det-eig-area.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Answers and solutions for sections below.
+\end_layout
 
 \end_inset
 

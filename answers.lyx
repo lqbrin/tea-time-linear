@@ -11543,6 +11543,793 @@ name "ans:LU-factorization-26"
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Power-Method"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-1"
+
+\end_inset
+
+7
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-2"
+
+\end_inset
+
+
+\begin_inset Formula $-6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-3"
+
+\end_inset
+
+
+\begin_inset Formula $-24$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-4"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-5"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-6"
+
+\end_inset
+
+Answers may vary.
+ One answer is 
+\begin_inset Formula $3.996,\left[\begin{array}{c}
+16381\\
+8191
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-7"
+
+\end_inset
+
+Answers may vary.
+ One answer is 
+\begin_inset Formula $83.06,\left[\begin{array}{c}
+10654688\\
+16132160\\
+-10084800
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-8"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}_{8}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{v}_{11}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+0
+\end{array}\right],\left[\begin{array}{c}
+17\\
+-8
+\end{array}\right],\left[\begin{array}{c}
+49\\
+0
+\end{array}\right],\left[\begin{array}{c}
+833\\
+-392
+\end{array}\right]
+\]
+
+\end_inset
+
+giving two rather different directions, 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+2.125\\
+-1
+\end{array}\right]$
+\end_inset
+
+, so it seems the method will not converge.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-26"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-9"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{v}_{8}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{v}_{11}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right],\left[\begin{array}{c}
+-11\\
+-14\\
+-13
+\end{array}\right],\left[\begin{array}{c}
+81\\
+81\\
+81
+\end{array}\right],\left[\begin{array}{c}
+-891\\
+-1134\\
+-1053
+\end{array}\right]
+\]
+
+\end_inset
+
+giving two rather different directions, 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+11\\
+14\\
+13
+\end{array}\right]$
+\end_inset
+
+, so it seems the method will not converge.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-10"
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{v}_{10}=\left[\begin{array}{c}
+-53291821\\
+63954728\\
+-13570337
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{11}=\left[\begin{array}{c}
+3533661079\\
+-4085829332\\
+896471030
+\end{array}\right]$
+\end_inset
+
+, both pointing in approximately the direction 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+-1.2\\
+0.25
+\end{array}\right]$
+\end_inset
+
+, so it seems the method will converge.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-11"
+
+\end_inset
+
+
+\begin_inset Formula $4,\left[\begin{array}{c}
+1\\
+\frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-12"
+
+\end_inset
+
+
+\begin_inset Formula $110,\left[\begin{array}{c}
+\frac{1}{3}\\
+\frac{2}{3}\\
+-1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-13"
+
+\end_inset
+
+(i) 
+\begin_inset Formula $-12$
+\end_inset
+
+ (ii) 2 (iii) yes, 
+\begin_inset Formula $\left[\begin{array}{cccc}
+-.39 & .8 & -.98 & 1\end{array}\right]^{T}$
+\end_inset
+
+ (iv) Answers may vary.
+ With 
+\begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{cccc}
+8 & -3 & 2 & -7\end{array}\right]^{T}$
+\end_inset
+
+ yes, it produces the same eigenvector as before.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-14"
+
+\end_inset
+
+yes, it works
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-15"
+
+\end_inset
+
+(a) 390 is the dominant eigenvalue of 
+\begin_inset Formula $M$
+\end_inset
+
+ (b) the eigenvector corresponding with eigenvalue 390 is 
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 1 & 1 & 1\end{array}\right]^{T}$
+\end_inset
+
+ (c) the power method will work
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-16"
+
+\end_inset
+
+eigenvalues 
+\begin_inset Formula $33$
+\end_inset
+
+ and 
+\begin_inset Formula $11$
+\end_inset
+
+.
+ It seemed the method would converge, and this is because 
+\begin_inset Formula $M$
+\end_inset
+
+ has a dominant eigenvalue.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-17"
+
+\end_inset
+
+eigenvalues 
+\begin_inset Formula $7$
+\end_inset
+
+ and 
+\begin_inset Formula $-7$
+\end_inset
+
+.
+ It seemed the method would not converge, and this is because 
+\begin_inset Formula $M$
+\end_inset
+
+ does not have a dominant eigenvalue.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-18"
+
+\end_inset
+
+eigenvalues 
+\begin_inset Formula $9$
+\end_inset
+
+ and 
+\begin_inset Formula $-9$
+\end_inset
+
+.
+ It seemed the method would not converge, and this is because 
+\begin_inset Formula $M$
+\end_inset
+
+ does not have a dominant eigenvalue.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+g: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:power-19"
+
+\end_inset
+
+eigenvalues 
+\begin_inset Formula $-39,-52$
+\end_inset
+
+, and 
+\begin_inset Formula $-65$
+\end_inset
+
+.
+ It seemed the method would converge, and this is because 
+\begin_inset Formula $M$
+\end_inset
+
+ has a dominant eigenvalue.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Determinants-Eigenvalues-Area"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:det-eig-area"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:det-eig-area-2"
+
+\end_inset
+
+2
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:det-eig-area-3"
+
+\end_inset
+
+1 and 2
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:det-eig-area-4"
+
+\end_inset
+
+
+\begin_inset Formula $\negmedspace$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/det-eig-area-08.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:det-eig-area-5"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+3 & -8\\
+0 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:det-eig-area-6"
+
+\end_inset
+
+Answers may vary.
+ One solution is 
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+4 & 6 & 0\\
+-1 & -5 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

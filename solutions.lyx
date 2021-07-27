@@ -17012,5 +17012,1366 @@ Starting with
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Power-Method"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:power"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:power-1"
+
+\end_inset
+
+The eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ are determined by its characteristic equation: 
+\begin_inset Formula 
+\[
+|M-\lambda I|=\left|\begin{array}{cc}
+-4-\lambda & 2\\
+-3 & -9-\lambda
+\end{array}\right|=(-4-\lambda)(-9-\lambda)+6=\lambda^{2}+13\lambda+42=0
+\]
+
+\end_inset
+
+which can be factored as 
+\begin_inset Formula $(\lambda+7)(\lambda+6)=0$
+\end_inset
+
+ giving eigenvalues 
+\begin_inset Formula $-7$
+\end_inset
+
+ and 
+\begin_inset Formula $-6$
+\end_inset
+
+.
+ The magnitudes (absolute values) of the eigenvalues are 
+\begin_inset Formula $7$
+\end_inset
+
+ and 
+\begin_inset Formula $6$
+\end_inset
+
+, so 
+\begin_inset Formula $-7$
+\end_inset
+
+ is the dominant eigenvalue (the one with greatest magnitude).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:power-2"
+
+\end_inset
+
+The eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ are determined by its characteristic equation: 
+\begin_inset Formula 
+\[
+|M-\lambda I|=\left|\begin{array}{cc}
+19-\lambda & 12\\
+-28 & -19-\lambda
+\end{array}\right|=(19-\lambda)(-19-\lambda)+336=\lambda^{2}-25=0
+\]
+
+\end_inset
+
+which can be factored as 
+\begin_inset Formula $(\lambda+5)(\lambda-5)=0$
+\end_inset
+
+ giving eigenvalues 
+\begin_inset Formula $-5$
+\end_inset
+
+ and 
+\begin_inset Formula $5$
+\end_inset
+
+.
+ The magnitudes (absolute values) of the eigenvalues are both 
+\begin_inset Formula $5$
+\end_inset
+
+, so there is no dominant eigenvalue (one with greatest magnitude).
+ The two eigenvalues have the same magnitude.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:power-3"
+
+\end_inset
+
+The most immediate approximation of an eigenvector is 
+\begin_inset Formula $\mathbf{v}_{5}$
+\end_inset
+
+ itself.
+ And the simplest way to get a handle on the associated eigenvalue is to
+ multiply 
+\begin_inset Formula $M\mathbf{v}_{5}$
+\end_inset
+
+, which should be approximately 
+\begin_inset Formula $\lambda\mathbf{v}_{5}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+M\mathbf{v}_{5}=\left[\begin{array}{cc}
+-12 & -5\\
+16 & 6
+\end{array}\right]\left[\begin{array}{c}
+-467\\
+742
+\end{array}\right]=\left[\begin{array}{c}
+1894\\
+-3020
+\end{array}\right]\approx\lambda\left[\begin{array}{c}
+-467\\
+742
+\end{array}\right]=\left[\begin{array}{c}
+-467\lambda\\
+742\lambda
+\end{array}\right]
+\]
+
+\end_inset
+
+Matching entries, we see that 
+\begin_inset Formula $1894\approx-467\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $-3020\approx742\lambda$
+\end_inset
+
+, and solving for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\approx\frac{1894}{-467}\approx-4.056$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\approx\frac{-3020}{742}\approx-4.070$
+\end_inset
+
+.
+ Either one of these estimates will do for our approximation.
+ There is no reason to choose one over the other save personal preference.
+ As for an approximate eigenvector, note that 
+\begin_inset Formula $M\mathbf{v}_{5}=\mathbf{v}_{6}$
+\end_inset
+
+, and we expect 
+\begin_inset Formula $\mathbf{v}_{6}$
+\end_inset
+
+ to be a better approximation than 
+\begin_inset Formula $\mathbf{v}_{5}$
+\end_inset
+
+.
+ Having gone through the trouble of calculating it, we choose 
+\begin_inset Formula $\mathbf{v}_{6}$
+\end_inset
+
+ as the approximate eigenvector.
+ In summary, we choose
+\begin_inset Formula 
+\[
+-4.065,\left[\begin{array}{c}
+1894\\
+-3020
+\end{array}\right]
+\]
+
+\end_inset
+
+as the approximate eigenpair.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:power-4"
+
+\end_inset
+
+The code computes 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{v}_{11}$
+\end_inset
+
+ for us.
+ Since the ratios 
+\begin_inset Formula $(\mathbf{v}_{10})_{1,1}:(\mathbf{v}_{10})_{2,1}$
+\end_inset
+
+ and 
+\begin_inset Formula $(\mathbf{v}_{11})_{1,1}:(\mathbf{v}_{11})_{2,1}$
+\end_inset
+
+ are 
+\begin_inset Formula $5196345:12990681$
+\end_inset
+
+ and 
+\begin_inset Formula $171478659:428694651$
+\end_inset
+
+, or approximately 
+\begin_inset Formula $1:2.49997$
+\end_inset
+
+ and 
+\begin_inset Formula $1:2.49999$
+\end_inset
+
+ it seems that the eigenvector is converging to some multiple of 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+2.5
+\end{array}\right]$
+\end_inset
+
+ and therefore yes, it seems as if the method will converge.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:power-5"
+
+\end_inset
+
+The code computes 
+\begin_inset Formula $\mathbf{v}_{6}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{v}_{100}$
+\end_inset
+
+ for us.
+ Since 
+\begin_inset Formula $\mathbf{v}_{100}=\left[\begin{array}{c}
+0.625\\
+-1
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{52}$
+\end_inset
+
+ through 
+\begin_inset Formula $\mathbf{v}_{99}$
+\end_inset
+
+ are multiples of this vector (
+\begin_inset Formula $1$
+\end_inset
+
+ or 
+\begin_inset Formula $-1$
+\end_inset
+
+ times), the method has settled/converged on this direction as an eigenvector.
+ To find the associated eigenvalue, we compute 
+\begin_inset Formula 
+\[
+M\mathbf{v}_{100}=\left[\begin{array}{cc}
+-12 & -5\\
+16 & 6
+\end{array}\right]\left[\begin{array}{c}
+0.625\\
+-1
+\end{array}\right]=\left[\begin{array}{c}
+-2.5\\
+4
+\end{array}\right]
+\]
+
+\end_inset
+
+Noting that 
+\begin_inset Formula $\left[\begin{array}{c}
+-2.5\\
+4
+\end{array}\right]=-4\left[\begin{array}{c}
+0.625\\
+-1
+\end{array}\right]$
+\end_inset
+
+, the associated eigenvalue is 
+\begin_inset Formula $-4$
+\end_inset
+
+ and we have the exact eigenpair 
+\begin_inset Formula 
+\[
+-4,\left[\begin{array}{c}
+0.625\\
+-1
+\end{array}\right].
+\]
+
+\end_inset
+
+Note: This compares well to the approximation from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ where the result was 
+\begin_inset Formula 
+\[
+-4.065,\left[\begin{array}{c}
+1894\\
+-3020
+\end{array}\right].
+\]
+
+\end_inset
+
+Scaling the approximate eigenvector by 
+\begin_inset Formula $\frac{1}{3020}$
+\end_inset
+
+ gives (a scaled eigenvector approximation of about) 
+\begin_inset Formula $\left[\begin{array}{c}
+0.62715\\
+-1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Determinants-Eigenvalues-Area"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:det-eig-area"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:det-eig-area-1"
+
+\end_inset
+
+The parallelogram in question is sketched below.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/det-eig-area-06.pdf
+	lyxscale 33
+	height 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By an analysis much like that in subsection 
+\series bold
+Areas and eigenvalues
+\series default
+, an argument can be made that this parallelogram is the image of the unit
+ square (the square with vertices at 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+) under the linear transformation 
+\begin_inset Formula $T_{A}(\mathbf{v})=A\mathbf{v}=\left[\begin{array}{cc}
+2 & 3\\
+3 & -4
+\end{array}\right]\mathbf{v}$
+\end_inset
+
+, which maps 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+2\\
+3
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+3\\
+-4
+\end{array}\right]$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $P$
+\end_inset
+
+ be the parallelogram and 
+\begin_inset Formula $S$
+\end_inset
+
+ the unit square, we have 
+\begin_inset Formula $T(S)=P$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\text{area}(P)=|\det A|\cdot\text{area}(S)=17\cdot1$
+\end_inset
+
+.
+ The area of the parallelogram is 
+\begin_inset Formula $17$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:det-eig-area-2"
+
+\end_inset
+
+The parallelogram in question is sketched below.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/det-eig-area-07.pdf
+	lyxscale 33
+	height 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By an analysis much like that in subsection 
+\series bold
+Areas and eigenvalues
+\series default
+, an argument can be made that this parallelogram is the image of the unit
+ square (the square with vertices at 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+, and 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+) under the affine transformation 
+\begin_inset Formula $T(\mathbf{v})=A\mathbf{v}+\mathbf{b}=\left[\begin{array}{cc}
+4 & 8\\
+6 & 1
+\end{array}\right]\mathbf{v}+\left[\begin{array}{c}
+4\\
+5
+\end{array}\right]$
+\end_inset
+
+, which maps 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+4\\
+5
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+8\\
+11
+\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+ to 
+\begin_inset Formula $\left[\begin{array}{c}
+12\\
+6
+\end{array}\right]$
+\end_inset
+
+.
+ Letting 
+\begin_inset Formula $P$
+\end_inset
+
+ be the parallelogram and 
+\begin_inset Formula $S$
+\end_inset
+
+ the unit square, we have 
+\begin_inset Formula $T(S)=P$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\text{area}(P)=|\det A|\cdot\text{area}(S)=44\cdot1$
+\end_inset
+
+.
+ The area of the parallelogram is 
+\begin_inset Formula $44$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:det-eig-area-3"
+
+\end_inset
+
+The area of the parallelogram determined by the columns of 
+\begin_inset Formula $\left[\begin{array}{cc}
+-1 & 6\\
+4 & -2
+\end{array}\right]$
+\end_inset
+
+ is exactly twice the area of the given triangle.
+ By question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\left|\det\left[\begin{array}{cc}
+-1 & 6\\
+4 & -2
+\end{array}\right]\right|=22$
+\end_inset
+
+ is the area of the paralellogram, so the area of the triangle is 
+\begin_inset Formula $11$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:det-eig-area-4"
+
+\end_inset
+
+Because 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $U$
+\end_inset
+
+ are similar, they have the same determinant and eigenvalues (see Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Similarity-and-Diagonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Because 
+\begin_inset Formula $U$
+\end_inset
+
+ is triangular, (i) 
+\begin_inset Formula $\det U$
+\end_inset
+
+ is the product of the entries on its diagonal, 
+\begin_inset Formula $(-4)(5)=-20=\det M$
+\end_inset
+
+; and (ii) the eigenvalues of 
+\begin_inset Formula $U$
+\end_inset
+
+ are the entries on its diagonal: 
+\begin_inset Formula $-4$
+\end_inset
+
+ and 
+\begin_inset Formula $5$
+\end_inset
+
+ are the eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:det-eig-area-5"
+
+\end_inset
+
+Adding the lines
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+print("M =")
+\begin_inset Newline newline
+\end_inset
+
+print(M); print()
+\begin_inset Newline newline
+\end_inset
+
+print("det M =",M.det())
+\begin_inset Newline newline
+\end_inset
+
+print("eigenvalues are",M.eigenvalues())
+\end_layout
+
+\begin_layout Standard
+to the SageMath code produces
+\end_layout
+
+\begin_layout LyX-Code
+M =
+\begin_inset Newline newline
+\end_inset
+
+[-13/37  54/37]
+\begin_inset Newline newline
+\end_inset
+
+[495/37  50/37]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+det M = -20
+\begin_inset Newline newline
+\end_inset
+
+eigenvalues are [5, -4]
+\end_layout
+
+\begin_layout Standard
+Hence 
+\begin_inset Formula $\det M=-20$
+\end_inset
+
+ and the eigenvalues of 
+\begin_inset Formula $M$
+\end_inset
+
+ are 
+\begin_inset Formula $-5$
+\end_inset
+
+ and 
+\begin_inset Formula $4$
+\end_inset
+
+ as determined before.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:det-eig-area-6"
+
+\end_inset
+
+Following the algorithm requires finding an eigenpair, so we find an eigenvector
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ corresponding to eigenvalue 
+\begin_inset Formula $\lambda=-3$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+M-\lambda I=\left[\begin{array}{cc}
+16 & -8\\
+20 & -10
+\end{array}\right]\stackrel{-\frac{5}{4}A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{cc}
+16 & -8\\
+0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+so eigenvectors 
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}
+\end{array}\right]$
+\end_inset
+
+ satisfy 
+\begin_inset Formula $16v_{1}-8v_{2}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $v_{2}=2v_{1}$
+\end_inset
+
+.
+ Using eigenvector 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]$
+\end_inset
+
+ we set 
+\begin_inset Formula $Q=\left[\begin{array}{cc}
+1 & 0\\
+2 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\left(Q^{-1}MQ\right)_{\backslash1,1}$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times1$
+\end_inset
+
+ matrix, it is already upper triangular, and we can select 
+\begin_inset Formula $R=\left[1\right]$
+\end_inset
+
+.
+ Hence we have 
+\begin_inset Formula $\hat{Q}=\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $P=Q\hat{Q}=\left[\begin{array}{cc}
+1 & 0\\
+2 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Note that 
+\begin_inset Formula 
+\[
+P^{-1}MP=\left[\begin{array}{cc}
+1 & 0\\
+2 & 1
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+13 & -8\\
+20 & -13
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+2 & 1
+\end{array}\right]=\left[\begin{array}{cc}
+1 & 0\\
+-2 & 1
+\end{array}\right]\left[\begin{array}{cc}
+13 & -8\\
+20 & -13
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+2 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left[\begin{array}{cc}
+13 & -8\\
+-6 & 3
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+2 & 1
+\end{array}\right]=\left[\begin{array}{cc}
+-3 & -8\\
+0 & 3
+\end{array}\right],
+\]
+
+\end_inset
+
+which is upper triangular.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:det-eig-area-7"
+
+\end_inset
+
+Following the algorithm requires finding an eigenpair, so we find an eigenvector
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ corresponding to eigenvalue 
+\begin_inset Formula $\lambda=4$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+M-\lambda I=\left[\begin{array}{ccc}
+-38 & -50 & -24\\
+37 & 49 & 24\\
+-26 & -35 & -18
+\end{array}\right]\stackrel[-\frac{4}{3}A_{3,:}+A_{1,:}\to A_{1,:}]{\frac{4}{3}A_{3,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-\frac{10}{3} & -\frac{10}{3} & 0\\
+\frac{7}{3} & \frac{7}{3} & 0\\
+-26 & -35 & -18
+\end{array}\right]\stackrel[\frac{3}{7}A_{2,:}\to A_{2,:}]{-\frac{3}{10}A_{1,:}\to A_{1,:}}{\longrightarrow}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 1 & 0\\
+1 & 1 & 0\\
+-26 & -35 & -18
+\end{array}\right]\stackrel[35A_{2,:}+A_{3,:}\to A_{3,:}]{-A_{2,:}+A_{1,:}\to A_{1,:}}{\longrightarrow}\left[\begin{array}{ccc}
+0 & 0 & 0\\
+1 & 1 & 0\\
+9 & 0 & -18
+\end{array}\right]
+\]
+
+\end_inset
+
+so eigenvectors 
+\begin_inset Formula $\left[\begin{array}{c}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}\right]$
+\end_inset
+
+ satisfy 
+\begin_inset Formula $v_{2}=-v_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{3}=\frac{1}{2}v_{1}$
+\end_inset
+
+.
+ Using eigenvector 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+2\\
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+ we set 
+\begin_inset Formula $Q=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\left(Q^{-1}MQ\right)_{\backslash1,1}$
+\end_inset
+
+ is a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix, it must be calculated and triangularized.
+ By row reduction, 
+\begin_inset Formula $Q^{-1}=\left[\begin{array}{ccc}
+\frac{1}{2} & 0 & 0\\
+1 & 1 & 0\\
+-\frac{1}{2} & 0 & 1
+\end{array}\right]$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\[
+Q^{-1}MQ=\left[\begin{array}{ccc}
+\frac{1}{2} & 0 & 0\\
+1 & 1 & 0\\
+-\frac{1}{2} & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+-34 & -50 & -24\\
+37 & 53 & 24\\
+-26 & -35 & -14
+\end{array}\right]\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & 0 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+4 & -25 & -12\\
+0 & 3 & 0\\
+0 & -10 & -2
+\end{array}\right]
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $\left(Q^{-1}MQ\right)_{\backslash1,1}=\left[\begin{array}{cc}
+3 & 0\\
+-10 & -2
+\end{array}\right]$
+\end_inset
+
+ must now be triangularized (applying the algorithm as done for question
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:det-eig-area-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The eigenvalues of 
+\begin_inset Formula $\left(Q^{-1}MQ\right)_{\backslash1,1}$
+\end_inset
+
+ are 
+\begin_inset Formula $3$
+\end_inset
+
+ and 
+\begin_inset Formula $-2$
+\end_inset
+
+.
+ Choosing to find an eigenvector for eigenvalue 
+\begin_inset Formula $3$
+\end_inset
+
+, 
+\begin_inset Formula $\left(Q^{-1}MQ\right)_{\backslash1,1}-3I=\left[\begin{array}{cc}
+0 & 0\\
+-10 & -5
+\end{array}\right]$
+\end_inset
+
+ so a corresponding eigenvector is 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+-2 & 1
+\end{array}\right]$
+\end_inset
+
+ triangularizes 
+\begin_inset Formula $\left(Q^{-1}MQ\right)_{\backslash1,1}$
+\end_inset
+
+ and we set 
+\begin_inset Formula $R=\left[\begin{array}{cc}
+1 & 0\\
+-2 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ Returning to the triangularization of 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\hat{Q}=\left[\begin{array}{cc}
+1 & 0\\
+0 & R
+\end{array}\right]=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & -2 & 1
+\end{array}\right]\quad\text{and}\quad P=Q\hat{Q}=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & -2 & 1
+\end{array}\right].
+\]
+
+\end_inset
+
+Multiplying, we find 
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & -2 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Note that 
+\begin_inset Formula 
+\[
+P^{-1}MP=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & -2 & 1
+\end{array}\right]^{-1}\left[\begin{array}{ccc}
+-34 & -50 & -24\\
+37 & 53 & 24\\
+-26 & -35 & -14
+\end{array}\right]\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & -2 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left[\begin{array}{ccc}
+\frac{1}{2} & 0 & 0\\
+1 & 1 & 0\\
+\frac{3}{2} & 2 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+-34 & -50 & -24\\
+37 & 53 & 24\\
+-26 & -35 & -14
+\end{array}\right]\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & -2 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left[\begin{array}{ccc}
+-17 & -25 & -12\\
+3 & 3 & 0\\
+-3 & -4 & -2
+\end{array}\right]\left[\begin{array}{ccc}
+2 & 0 & 0\\
+-2 & 1 & 0\\
+1 & -2 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+4 & -1 & -12\\
+0 & 3 & 0\\
+0 & 0 & -2
+\end{array}\right],
+\]
+
+\end_inset
+
+which is upper triangular.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

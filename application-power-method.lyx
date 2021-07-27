@@ -1182,10 +1182,40 @@ Find the dominant eigenvalue of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-14"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -4 & 2\\
 -3 & -9
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:power-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1202,10 +1232,40 @@ Find the dominant eigenvalue of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-15"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 5 & 1\\
 2 & 6
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1223,11 +1283,41 @@ Find the dominant eigenvalue of
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-16"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 -25 & 129 & -72\\
 1 & -17 & 8\\
 9 & -69 & 36
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1267,6 +1357,13 @@ acts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-17"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1297,6 +1394,33 @@ AARUAuQ==}
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1322,10 +1446,40 @@ Does the matrix have a dominant eigenvalue?
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-18"
+
+\end_inset
+
+
 \begin_inset Formula $\left[\begin{array}{cc}
 19 & 12\\
 -28 & -19
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:power-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1360,6 +1514,13 @@ sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDWMdaJNjMx1DEyMtXRNT
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-19"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1381,6 +1542,33 @@ NDbXMdQxtdDRNTfTsdAxNInVBAALEgp8&lang=sage&interacts=eJyLjgUAARUAuQ==}
 -137 & 1 & 58\\
 -76 & 8 & 14
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1414,6 +1602,13 @@ N9LRNbMAco1AhIUOUNgiVhMAKroLBw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-20"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1445,6 +1640,33 @@ tjEEr_rbx_38A0HvGu0=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1473,6 +1695,13 @@ The sixth term of the sequence defined by an initial vector,
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-21"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -12 & -5\\
 16 & 6
@@ -1484,6 +1713,33 @@ The sixth term of the sequence defined by an initial vector,
 -467\\
 742
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:power-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1507,6 +1763,13 @@ The sixth term of the sequence defined by an initial vector,
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-22"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{cc}
 -11 & 30\\
 -5 & 14
@@ -1518,6 +1781,29 @@ The sixth term of the sequence defined by an initial vector,
 4099\\
 2049
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-6"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1547,6 +1833,13 @@ The sixth term of the sequence defined by an initial vector,
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-23"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 44 & 27 & -4\\
 0 & 86 & -16\\
@@ -1554,12 +1847,39 @@ The sixth term of the sequence defined by an initial vector,
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
 128272\\
 177760\\
 -52800
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-7"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1610,6 +1930,13 @@ Calculate
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-24"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1633,11 +1960,38 @@ ZZoAc-caCg==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
 11^{-8}\\
 11^{-8}
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:power-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1667,7 +2021,11 @@ KgPKlaUml-QXaQDFTUFCaflFCpkKmXkKRYl56akahoaaVrxcCkAAUuurVQbhFBRl5pVolGkCAHDQF9E=
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
 2\\
 5
@@ -1678,6 +2036,13 @@ KgPKlaUml-QXaQDFTUFCaflFCpkKmXkKRYl56akahoaaVrxcCkAAUuurVQbhFBRl5pVolGkCAHDQF9E=
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-25"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1701,11 +2066,38 @@ aQIAGgYZWg==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
 7^{-8}\\
 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-8"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1735,7 +2127,11 @@ BA==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
 3\\
 2
@@ -1746,6 +2142,13 @@ BA==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-26"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1776,6 +2179,29 @@ vFwKQADS6atVBuEUFGXmlWiUaQIA5Rse7Q==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 9^{-8}\\
 9^{-8}
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-9"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1818,6 +2244,13 @@ VQbhFBRl5pVolGkCAGa8HBk=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-27"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1848,6 +2281,29 @@ TLrl926Y7b3vqHEmi6uXfDXlYqr9A-DPHRQ=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 13^{-9}\\
 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-10"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1939,6 +2395,13 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-28"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1953,6 +2416,29 @@ pTVNnql126c9yA5yllOIvMAtTBQofc2_vZhCAi13fXwnBjKoGwUapzkOCaQr-9XgznZjo80PXzwvFg==
 \backslash
  
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:power-5"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -1981,6 +2467,13 @@ g=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-29"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1995,6 +2488,29 @@ mbzzts42MG-Jmq2uoAfdhygTXsPIgdPX_t1LOCQ0ejO7dxJkS6YGNDQ-Y59QW9fND63sF7bG_gCpzS96
 \backslash
  
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-11"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2023,6 +2539,13 @@ UZgeyxBY7PI-NbAx_rFcmVP-BWntOVg=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-30"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2037,6 +2560,29 @@ tgRsIjEEvb2pLgrO6j_--0xLTmTugzcvKLHErqpQaiwq5FgrLIRKoSg5HvmF5VlMdhxuwXnohKyllii0
 \backslash
  
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-12"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2156,6 +2702,13 @@ Z8PH2OfFDZMWpdWdxIPNgu2CXSe7-85nCjELXk58-5WTCBJ8zzGvU2WO_4HTbSejNTtwEM6tX_6eW7U=
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-31"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2197,6 +2750,33 @@ P7LhPPZpdsN_r3JrOo0n04ztjMtOd489P9GHpGQ-yNVvispryK3EtJ2VKX6B5NsOZIzYSTBO1h-m4ltx
 
 ; 
 \begin_inset Formula $g=1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-13"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2267,6 +2847,13 @@ HAXn1C8eFF31&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-32"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2296,6 +2883,29 @@ g=sage&interacts=eJyLjgUAARUAuQ==}
 48 & -512 & -68 & 248\\
 48 & -352 & -40 & 172
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-14"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2349,6 +2959,29 @@ The entrywise quotient of
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2382,6 +3015,13 @@ What does this say about the power method applied to
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-9"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2397,13 +3037,6 @@ lU4E3K3mRqJbfe-cZC2WFBI1pbDkQRjq6R879J1sqG4uPSHrgs7BEdfMoTDxWYHv4ab9fJ1zLTjfu3D9
 \backslash
  
 \end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:power-method-9"
 
 \end_inset
 
@@ -2567,6 +3200,29 @@ noprefix "false"
 .
  Use the information to supply an explanation of why the power method did/did
  not seem to converge.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:power-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2686,6 +3342,13 @@ Combine 11 and 12 to show that if
 \end_layout
 
 \begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:power-method-13"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2701,13 +3364,6 @@ biFjtTBO5DfLwFE_&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \backslash
  
 \end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:power-method-13"
 
 \end_inset
 
