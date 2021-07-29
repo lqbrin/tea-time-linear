@@ -1207,8 +1207,12 @@ name "thm:best-approximation-linear-system"
 \end_inset
 
 .
- Then 
-\begin_inset Formula $\hat{\mathbf{v}}=\text{proj}_{W}\mathbf{b}$
+ Then the solution of 
+\begin_inset Formula $M\hat{\mathbf{v}}=\text{proj}_{W}\mathbf{b}$
+\end_inset
+
+ for 
+\begin_inset Formula $\hat{\mathbf{v}}$
 \end_inset
 
  is the best approximation to a solution of 
@@ -1273,7 +1277,11 @@ noprefix "false"
 
 \end_inset
 
-onto the column space of 
+onto 
+\begin_inset Formula $W$
+\end_inset
+
+, the column space of 
 \begin_inset Formula 
 \[
 M=\left[\begin{array}{cc}
@@ -1363,16 +1371,27 @@ as the orthogonal basis of the column space of
 \begin_inset Formula $\mathbf{b}$
 \end_inset
 
- onto this subspace is
+ onto 
+\begin_inset Formula $W$
+\end_inset
+
+ is
 \begin_inset Formula 
 \begin{align*}
-\text{proj}_{\mathbf{b}_{1}}\mathbf{b}+\text{proj}_{\mathbf{b}_{2}}\mathbf{b} & =\frac{\langle\mathbf{b},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}+\frac{\langle\mathbf{b},\mathbf{b}_{2}\rangle}{\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle}\mathbf{b}_{2}=\frac{3}{2}\mathbf{b}_{1}-\frac{7}{54}\mathbf{b}_{2}\\
- & =\frac{1}{27}\left[\begin{array}{c}
+\text{proj}_{W}\mathbf{b}=\text{proj}_{\mathbf{b}_{1}}\mathbf{b}+\text{proj}_{\mathbf{b}_{2}}\mathbf{b} & =\frac{\langle\mathbf{b},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\mathbf{b}_{1}+\frac{\langle\mathbf{b},\mathbf{b}_{2}\rangle}{\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle}\mathbf{b}_{2}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{3}{2}\mathbf{b}_{1}-\frac{7}{54}\mathbf{b}_{2}=\frac{1}{27}\left[\begin{array}{c}
 -44\\
 83\\
 137
 \end{array}\right].
-\end{align*}
+\]
 
 \end_inset
 
@@ -1451,7 +1470,35 @@ and there is no vector in the column space of
 \end_inset
 
 .
- See figure 
+ Hence the solution of 
+\begin_inset Formula $M\hat{\mathbf{v}}=\text{proj}_{W}\mathbf{b}$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & -3\\
+4 & 9\\
+-9 & 6
+\end{array}\right]\hat{\mathbf{v}}=\frac{1}{27}\left[\begin{array}{c}
+-44\\
+83\\
+137
+\end{array}\right]$
+\end_inset
+
+, gives the best approximation of a solution:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & -3 & -\frac{44}{27}\\
+4 & 9 & \frac{83}{27}\\
+-9 & 6 & \frac{137}{27}
+\end{array}\right]\to
+\]
+
+\end_inset
+
+See figure 
 \begin_inset Float figure
 wide false
 sideways false
@@ -5094,14 +5141,6 @@ noprefix "false"
 \end_inset
 
  where 
-\begin_inset Formula $V=\mathbb{R}^{m}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{v}=\mathbf{b}$
-\end_inset
-
- (and 
 \begin_inset Formula $W$
 \end_inset
 
@@ -5109,7 +5148,15 @@ noprefix "false"
 \begin_inset Formula $M$
 \end_inset
 
-).
+, 
+\begin_inset Formula $V=\mathbb{R}^{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}=\mathbf{b}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
