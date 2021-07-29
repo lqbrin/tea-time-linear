@@ -18373,5 +18373,1153 @@ which is upper triangular.
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-1"
+
+\end_inset
+
+This question is requesting the best approximation of (the point) 
+\begin_inset Formula $\mathbf{p}=\left[\begin{array}{c}
+12\\
+1
+\end{array}\right]$
+\end_inset
+
+ within the subspace 
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+7\\
+-6
+\end{array}\right]\right\} $
+\end_inset
+
+ (the collection of all multiples of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+).
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the answer is the projection of 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ onto 
+\begin_inset Formula $W$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{proj}_{W}\mathbf{p}=\text{proj}_{\mathbf{v}}\mathbf{p}=\frac{\mathbf{p}\bcdot\mathbf{v}}{\mathbf{v}\bcdot\mathbf{v}}\mathbf{v}=\frac{12(7)+1(-6)}{7(7)+(-6)(-6)}\mathbf{v}=\frac{78}{85}\mathbf{v}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-2"
+
+\end_inset
+
+The distance between a point and line is the distance between the point
+ and the nearest point on the line (the best approximation of the point
+ on the line).
+ The line 
+\begin_inset Formula $y=\frac{1}{5}x$
+\end_inset
+
+ is shorthand for the set of points 
+\begin_inset Formula $\left\{ (x,y):y=\frac{1}{5}x\right\} $
+\end_inset
+
+, or as vectors, 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+x\\
+y
+\end{array}\right]:y=\frac{1}{5}x\right\} =\left\{ \left[\begin{array}{c}
+x\\
+\frac{1}{5}x
+\end{array}\right]:x\text{ in }\mathbb{R}\right\} =\left\{ x\left[\begin{array}{c}
+1\\
+\frac{1}{5}
+\end{array}\right]:x\text{ in }\mathbb{R}\right\} =\text{span}\left\{ \left[\begin{array}{c}
+1\\
+\frac{1}{5}
+\end{array}\right]\right\} =\text{span}\left\{ \left[\begin{array}{c}
+5\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+.
+ Hence we seek the best approximation of (the point) 
+\begin_inset Formula $\mathbf{p}=\left[\begin{array}{c}
+-3\\
+-4
+\end{array}\right]$
+\end_inset
+
+ within the subspace 
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+5\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+ (the line 
+\begin_inset Formula $y=\frac{1}{5}x$
+\end_inset
+
+).
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the nearest point to 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ is the projection of 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ onto 
+\begin_inset Formula $W$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{proj}_{W}\mathbf{p}=\frac{-3(5)-4(1)}{5(5)+1(1)}\mathbf{p}=-\frac{19}{26}\left[\begin{array}{c}
+5\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{95}{26}\\
+-\frac{19}{26}
+\end{array}\right].
+\]
+
+\end_inset
+
+The distance between the point and line is then the distance between the
+ point and the best approximation, the norm of their difference:
+\begin_inset Formula 
+\[
+\left\Vert \left[\begin{array}{c}
+-3\\
+-4
+\end{array}\right]-\left[\begin{array}{c}
+-\frac{95}{26}\\
+-\frac{19}{26}
+\end{array}\right]\right\Vert =\left\Vert \left[\begin{array}{c}
+-\frac{173}{26}\\
+-\frac{123}{26}
+\end{array}\right]\right\Vert =\frac{1}{26}\left\Vert \left[\begin{array}{c}
+173\\
+123
+\end{array}\right]\right\Vert =\frac{\sqrt{173^{2}+123^{2}}}{26}=\frac{\sqrt{45058}}{26}\approx8.164
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-3"
+
+\end_inset
+
+By definition, the projection of a vector (as the given 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+) onto a subspace is the sum of its projections onto an orthogonal basis
+ (as the given 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+) of the subspace.
+\begin_inset Formula 
+\[
+\text{proj}_{\text{span}\mathcal{B}}\mathbf{v}=\frac{\left[\begin{array}{c}
+9\\
+-12\\
+5
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-1\\
+-4\\
+5
+\end{array}\right]}{\left[\begin{array}{c}
+-1\\
+-4\\
+5
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-1\\
+-4\\
+5
+\end{array}\right]}\left[\begin{array}{c}
+-1\\
+-4\\
+5
+\end{array}\right]+\frac{\left[\begin{array}{c}
+9\\
+-12\\
+5
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-3\\
+2\\
+1
+\end{array}\right]}{\left[\begin{array}{c}
+-3\\
+2\\
+1
+\end{array}\right]\bcdot\left[\begin{array}{c}
+-3\\
+2\\
+1
+\end{array}\right]}\left[\begin{array}{c}
+-3\\
+2\\
+1
+\end{array}\right]+\frac{\left[\begin{array}{c}
+9\\
+-12\\
+5
+\end{array}\right]\bcdot\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]}{\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]\bcdot\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]}\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{64}{42}\left[\begin{array}{c}
+-1\\
+-4\\
+5
+\end{array}\right]+\frac{-46}{14}\left[\begin{array}{c}
+-3\\
+2\\
+1
+\end{array}\right]+\frac{2}{3}\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+9\\
+-12\\
+5
+\end{array}\right]
+\]
+
+\end_inset
+
+Note: This could have been determined without calculation.
+ We have a basis with 3 elements in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, so 
+\begin_inset Formula $\text{span}\mathcal{B}=\mathbb{R}^{3}$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.
+ The vector is in the subspace in question and so does not need to be approximat
+ed.
+ It can be represented exactly as a linear combination of any basis.
+ See question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-31"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-4"
+
+\end_inset
+
+
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+ equals the span of the column space of 
+\begin_inset Formula $\left[\mathcal{B}\right]$
+\end_inset
+
+, which can be determined by row reduction:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+0 & 6 & 6\\
+-9 & -16 & -7\\
+-6 & 2 & 8
+\end{array}\right]\to\left[\begin{array}{ccc}
+3 & -1 & -4\\
+-9 & -16 & -7\\
+0 & 6 & 6
+\end{array}\right]\to\left[\begin{array}{ccc}
+3 & -1 & -4\\
+0 & -19 & -19\\
+0 & 6 & 6
+\end{array}\right]\to\left[\begin{array}{ccc}
+3 & -1 & -4\\
+0 & 1 & 1\\
+0 & 0 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+The first two columns have pivot positions, so the first two vectors of
+ 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ form a basis for 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+.
+ In order to project onto 
+\begin_inset Formula $\text{span}\mathcal{B}$
+\end_inset
+
+, however, we need an orthogonal basis.
+ Letting 
+\begin_inset Formula $\mathbf{b}_{1}=-\frac{1}{3}\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right]=$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}_{2}=\frac{1}{2}\left[\begin{array}{c}
+6\\
+-16\\
+2
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+-8\\
+1
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\mathbf{b}_{2}-\text{proj}_{\mathbf{b}_{1}}\mathbf{b}_{2}=\left[\begin{array}{c}
+3\\
+-8\\
+1
+\end{array}\right]-\frac{-22}{13}\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+-\frac{38}{13}\\
+\frac{57}{13}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula $13\left[\begin{array}{c}
+3\\
+-\frac{38}{13}\\
+\frac{57}{13}
+\end{array}\right]=\left[\begin{array}{c}
+39\\
+-38\\
+57
+\end{array}\right]$
+\end_inset
+
+, so we may use 
+\begin_inset Formula $\left\{ \mathbf{w}_{1}=\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right],\mathbf{w}_{2}=\left[\begin{array}{c}
+39\\
+-38\\
+57
+\end{array}\right]\right\} $
+\end_inset
+
+ for an orthogonal basis.
+ Finally,
+\begin_inset Formula 
+\[
+\text{proj}_{\text{span}\mathcal{B}}\mathbf{v}=\text{proj}_{\mathbf{w}_{1}}\mathbf{v}+\text{proj}_{\mathbf{w}_{2}}\mathbf{v}=\frac{\left[\begin{array}{c}
+7\\
+-7\\
+9
+\end{array}\right]\bcdot\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right]}{\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right]\bcdot\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right]}\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right]+\frac{\left[\begin{array}{c}
+7\\
+-7\\
+9
+\end{array}\right]\bcdot\left[\begin{array}{c}
+39\\
+-38\\
+57
+\end{array}\right]}{\left[\begin{array}{c}
+39\\
+-38\\
+57
+\end{array}\right]\bcdot\left[\begin{array}{c}
+39\\
+-38\\
+57
+\end{array}\right]}\left[\begin{array}{c}
+39\\
+-38\\
+57
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{-3}{13}\left[\begin{array}{c}
+0\\
+3\\
+2
+\end{array}\right]+\frac{1052}{6214}\left[\begin{array}{c}
+39\\
+-38\\
+57
+\end{array}\right]=\frac{1}{239}\left[\begin{array}{c}
+1578\\
+-1703\\
+2196
+\end{array}\right]\approx\left[\begin{array}{c}
+6.6025\\
+-7.1255\\
+9.1883
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-5"
+
+\end_inset
+
+By definition 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ if it is orthogonal to all vectors in subspace 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula 
+\[
+W=\left\{ a\left[\begin{array}{c}
+-7\\
+0\\
+0
+\end{array}\right]+b\left[\begin{array}{c}
+8\\
+-3\\
+-4
+\end{array}\right]:a,b\text{ in }\mathbb{R}\right\} ,
+\]
+
+\end_inset
+
+we may represent a particular but arbitrary vector 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ of 
+\begin_inset Formula $W$
+\end_inset
+
+ by 
+\begin_inset Formula $\mathbf{w}=a\left[\begin{array}{c}
+-7\\
+0\\
+0
+\end{array}\right]+b\left[\begin{array}{c}
+8\\
+-3\\
+-4
+\end{array}\right]$
+\end_inset
+
+ for some real numbers 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\mathbf{w}\bcdot\mathbf{v}=\left(a\left[\begin{array}{c}
+-7\\
+0\\
+0
+\end{array}\right]+b\left[\begin{array}{c}
+8\\
+-3\\
+-4
+\end{array}\right]\right)\bcdot\left[\begin{array}{c}
+0\\
+-8\\
+6
+\end{array}\right]=a\left[\begin{array}{c}
+-7\\
+0\\
+0
+\end{array}\right]\bcdot\left[\begin{array}{c}
+0\\
+-8\\
+6
+\end{array}\right]+b\left[\begin{array}{c}
+8\\
+-3\\
+-4
+\end{array}\right]\bcdot\left[\begin{array}{c}
+0\\
+-8\\
+6
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=a\left(-7(0)+0(-8)+0(6)\right)+b\left(8(0)-3(-8)-4(6)\right)=0.
+\]
+
+\end_inset
+
+So 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to all elements of 
+\begin_inset Formula $W$
+\end_inset
+
+ and is therefore in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Note: In retrospect, showing that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is orthogonal to all elements of the given basis of 
+\begin_inset Formula $W$
+\end_inset
+
+ (shown as part of the computation above) is sufficient.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-6"
+
+\end_inset
+
+We have determined above that 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+, so one decomposition is 
+\begin_inset Formula $\mathbf{v}=\mathbf{0}+\left[\begin{array}{c}
+0\\
+-8\\
+6
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+-8\\
+6
+\end{array}\right]$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ as required.
+ (And by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Orthogonal-Decomposition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this is the only such decomposition).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-36"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-7"
+
+\end_inset
+
+By row reduction, the solution of the system:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+-6 & 3 & -15 & 7\\
+14 & -7 & 35 & 1\\
+-18 & 9 & -45 & 6
+\end{array}\right]\stackrel{-3A_{1,:}+A_{3,:}\to A_{3,:}}{\longrightarrow}\left[\begin{array}{cccc}
+-6 & 3 & -15 & 7\\
+14 & -7 & 35 & 1\\
+0 & 0 & 0 & -15
+\end{array}\right]
+\]
+
+\end_inset
+
+The system is inconsistent! We must find a best approximation.
+ According to theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation-linear-system"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we need to project the constant vector onto the column space of the coefficien
+t matrix.
+ Continuing the row reduction begun above, but without the rightmost column:
+\begin_inset Formula 
+\[
+\stackrel{\frac{7}{3}A_{1,:}+A_{2,:}\to A_{2,:}}{\longrightarrow}\left[\begin{array}{ccc}
+-6 & 3 & -15\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right].
+\]
+
+\end_inset
+
+The only pivot position of the coefficient matrix appears in the first column,
+ so the first column of the coefficient matrix provides a basis for the
+ column space.
+ We therefore project 
+\begin_inset Formula $\left[\begin{array}{c}
+7\\
+1\\
+-15
+\end{array}\right]$
+\end_inset
+
+ onto 
+\begin_inset Formula $\left[\begin{array}{c}
+-6\\
+14\\
+-18
+\end{array}\right]$
+\end_inset
+
+, or better 
+\begin_inset Formula ${\displaystyle -\frac{1}{2}\left[\begin{array}{c}
+-6\\
+14\\
+-18
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+-7\\
+9
+\end{array}\right]}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{7(3)+1(-7)-15(9)}{3^{2}+7^{2}+9^{2}}\left[\begin{array}{c}
+3\\
+-7\\
+9
+\end{array}\right]=\frac{-121}{139}\left[\begin{array}{c}
+3\\
+-7\\
+9
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{363}{139}\\
+\frac{847}{139}\\
+-\frac{1089}{139}
+\end{array}\right]\approx\left[\begin{array}{c}
+-2.6115\\
+6.0935\\
+-7.8345
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-40"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-8"
+
+\end_inset
+
+By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Orthogonal-Decomposition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, every vector of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ can be written as a sum of a vector in 
+\begin_inset Formula $W$
+\end_inset
+
+ and a vector in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+ Hence if 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is a basis for 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}^{\perp}$
+\end_inset
+
+ is a basis for 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+ , it must be that 
+\begin_inset Formula $\mathcal{B}\cup\mathcal{B}^{\perp}$
+\end_inset
+
+ spans 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ That 
+\begin_inset Formula $\mathcal{B}\cup\mathcal{B}^{\perp}$
+\end_inset
+
+ is linearly independent (and therefore a basis is left as an exercise—see
+ exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ In the case of this question, 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ is given with one element meaning 
+\begin_inset Formula $\mathcal{B}^{\perp}$
+\end_inset
+
+ must have two elements.
+ We seek two linearly independent vectors orthogonal to 
+\begin_inset Formula $W=\text{span}\left\{ \left[\begin{array}{c}
+7\\
+11\\
+12
+\end{array}\right]\right\} $
+\end_inset
+
+.
+ A quick computation will show 
+\begin_inset Formula $\left[\begin{array}{c}
+-11\\
+7\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+-12\\
+11
+\end{array}\right]$
+\end_inset
+
+ are orthogonal to 
+\begin_inset Formula $W$
+\end_inset
+
+ (do you see where they came from?).
+ Since 
+\begin_inset Formula $\left[\begin{array}{c}
+-11\\
+7\\
+0
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+-12\\
+11
+\end{array}\right]$
+\end_inset
+
+ are additionally linearly independent, they form a basis for 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-42"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-9"
+
+\end_inset
+
+This question is requesting the best approximation of (the point) 
+\begin_inset Formula $\mathbf{p}=x^{3}-11x^{2}-9x+10$
+\end_inset
+
+ within the subspace 
+\begin_inset Formula $W=\text{span}\left\{ 12x^{3}-x-5\right\} $
+\end_inset
+
+ (the collection of all multiples of 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+).
+ By theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:best-approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the answer is the projection of 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ onto 
+\begin_inset Formula $W$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{proj}_{W}\mathbf{p}=\text{proj}_{\mathbf{q}}\mathbf{p}=\frac{\left\langle \mathbf{p},\mathbf{q}\right\rangle }{\left\langle \mathbf{q},\mathbf{q}\right\rangle }\mathbf{q}=\frac{-4132}{8238}\mathbf{q}=-\frac{2066}{1083}\mathbf{q}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+c: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:approximation-10"
+
+\end_inset
+
+According to the solution above, the best approximation is 
+\begin_inset Formula $-\frac{2066}{1083}\mathbf{q}$
+\end_inset
+
+.
+ Distance is measured as the norm of the difference, which is 
+\begin_inset Formula $\left\Vert -\frac{2066}{1083}\mathbf{q}-\mathbf{p}\right\Vert $
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left\Vert -\frac{2066}{1083}\mathbf{q}-\mathbf{p}\right\Vert =\frac{1}{1083}\left\Vert 2066\mathbf{q}+1083\mathbf{p}\right\Vert =\frac{1}{1083}\left\Vert 25875x^{3}-11913x^{2}-11813x+500\right\Vert 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{1083}\sqrt{2,5513,748}=\frac{2\sqrt{6378437}}{1083}\approx4.664
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

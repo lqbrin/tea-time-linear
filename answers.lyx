@@ -12330,6 +12330,810 @@ Answers may vary.
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-1"
+
+\end_inset
+
+
+\begin_inset Formula $\frac{53}{75}\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-2"
+
+\end_inset
+
+
+\begin_inset Formula $\frac{102}{269}\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-3"
+
+\end_inset
+
+
+\begin_inset Formula $-\frac{47}{315}\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-4"
+
+\end_inset
+
+
+\begin_inset Formula $11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-25"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-5"
+
+\end_inset
+
+
+\begin_inset Formula $\sqrt{\frac{10819}{130}}\approx9.123$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-26"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-6"
+
+\end_inset
+
+
+\begin_inset Formula $\sqrt{\frac{1745}{201}}\approx2.946$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-7"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{65}{34}\\
+\frac{39}{34}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-28"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-8"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{106}{29}\\
+0\\
+\frac{265}{29}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-30"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-9"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+\frac{613}{51}\\
+\frac{665}{153}\\
+-\frac{1147}{153}\\
+\frac{838}{153}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-10"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{101217}{19274}\\
+-\frac{79991}{19274}\\
+\frac{45753}{9637}\\
+-\frac{22176}{9637}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-33"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-11"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+6\\
+10\\
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-35"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-12"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-13"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+7\\
+7\\
+12
+\end{array}\right]=\left[\begin{array}{c}
+-\frac{17}{194}\\
+\frac{54}{97}\\
+-\frac{47}{194}
+\end{array}\right]+\left[\begin{array}{c}
+\frac{1375}{194}\\
+\frac{625}{97}\\
+\frac{2375}{194}
+\end{array}\right]
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\left[\begin{array}{c}
+-\frac{17}{194}\\
+\frac{54}{97}\\
+-\frac{47}{194}
+\end{array}\right]$
+\end_inset
+
+ is in 
+\begin_inset Formula $W$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[\begin{array}{c}
+\frac{1375}{194}\\
+\frac{625}{97}\\
+\frac{2375}{194}
+\end{array}\right]$
+\end_inset
+
+ is in 
+\begin_inset Formula $W^{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-14"
+
+\end_inset
+
+The system is consistent:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]=\frac{1}{1129}\left[\begin{array}{c}
+-661\\
+-337\\
+130
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-38"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-15"
+
+\end_inset
+
+The system is consistent:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right]=\left[\begin{array}{c}
+-2\\
+3\\
+0
+\end{array}\right]+r\left[\begin{array}{c}
+5\\
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-39"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-16"
+
+\end_inset
+
+The system is inconsistent.
+ The best approximation is 
+\begin_inset Formula $\left[\begin{array}{c}
+\frac{7045}{679}\\
+\frac{6605}{1358}\\
+\frac{10845}{1358}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-41"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-17"
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+114\\
+7\\
+61
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-18"
+
+\end_inset
+
+See the solution of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for a hint.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-19"
+
+\end_inset
+
+See the solution of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-40"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for a hint.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-43"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-20"
+
+\end_inset
+
+
+\begin_inset Formula $-\frac{187}{274}\left(-6x^{2}+2x-1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-21"
+
+\end_inset
+
+
+\begin_inset Formula $-\frac{31}{131}\left(11x^{2}+3x-1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $+\frac{503}{979}\left(-4x^{3}+8x^{2}+17x-28\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $=-\frac{2012}{979}x^{3}+\frac{193305}{128249}x^{2}+\frac{1029134}{128249}x-\frac{1814655}{128249}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-45"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-22"
+
+\end_inset
+
+
+\begin_inset Formula $-\frac{159}{163}\left(5x^{2}-11x+14\right)+\frac{124}{121}\left(4x^{2}-12x-5\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $=-\frac{15347}{19723}x^{2}-\frac{30915}{19723}x-\frac{370406}{19723}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-46"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-23"
+
+\end_inset
+
+
+\begin_inset Formula $\frac{73}{50}\left(-3x^{2}+3x-1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $-\frac{859}{3382}\left(-14x^{3}+9x^{2}-3x+25\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $=\frac{6013}{1691}x^{3}-\frac{281802}{42275}x^{2}+\frac{217377}{42275}x-\frac{330159}{42275}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-47"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-24"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-25"
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{w}=\text{proj}_{W}\mathbf{p}=\frac{520}{857}\left(7x^{3}+8x^{2}-8x-1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $=\frac{3640}{857}x^{3}+\frac{4160}{857}x^{2}-\frac{4160}{857}x-\frac{520}{857}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{w}^{\perp}=\mathbf{p}-\mathbf{w}^{\perp}=\frac{645}{857}x^{3}-\frac{5017}{857}x^{2}+\frac{6731}{857}x+\frac{2234}{857}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:approximation-48"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:approximation-26"
+
+\end_inset
+
+
+\begin_inset Formula $\left\{ 14x^{3}-21x^{2}-5x-5\right\} $
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
