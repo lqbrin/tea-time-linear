@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -1831,6 +1840,29 @@ Argue that
 \end_inset
 
  is a vector space.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:fourier-series-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1865,6 +1897,29 @@ Why do we not include the case
 \end_inset
 
  in the family of harmonics for Fourier sine series?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:fourier-series-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1890,11 +1945,41 @@ Show that, in the inner product space
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-12"
+
+\end_inset
+
+
 \begin_inset Formula $\left\langle \cos\left(m\cdot\frac{\pi}{L}t\right),\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle =\frac{L}{2}$
 \end_inset
 
  for 
 \begin_inset Formula $m=1,2,\ldots$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:fourier-series-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1940,11 +2025,41 @@ Find the Fourier sine series for
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-13"
+
+\end_inset
+
+
 \begin_inset Formula $f(x)=x$
 \end_inset
 
 ; 
 \begin_inset Formula $[0,1]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:fourier-series-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1965,11 +2080,41 @@ x & x\leq1/2\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-14"
+
+\end_inset
+
+
 \begin_inset Formula $f(x)=e^{x}$
 \end_inset
 
 ; 
 \begin_inset Formula $[0,\ln2]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:fourier-series-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2004,11 +2149,41 @@ Find the Fourier cosine series for
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-15"
+
+\end_inset
+
+
 \begin_inset Formula $f(x)=x$
 \end_inset
 
 ; 
 \begin_inset Formula $[0,1]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:fourier-series-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2029,11 +2204,41 @@ x & x\leq1/2\\
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-16"
+
+\end_inset
+
+
 \begin_inset Formula $f(x)=e^{x}$
 \end_inset
 
 ; 
 \begin_inset Formula $[0,\ln2]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:fourier-series-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2060,7 +2265,37 @@ Find the Fourier series for
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-17"
+
+\end_inset
+
+
 \begin_inset Formula $f(x)=1$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:fourier-series-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2118,6 +2353,29 @@ noprefix "false"
 \end_inset
 
  with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:fourier-series-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2157,6 +2415,29 @@ noprefix "false"
 \end_inset
 
  with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:fourier-series-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2196,6 +2477,29 @@ noprefix "false"
 \end_inset
 
  with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:fourier-series-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2205,7 +2509,7 @@ name "exc:fourier-series-8"
 
 \end_inset
 
-Reproduce a sound wave.
+Reproduce a sound wave, part 1.
 \end_layout
 
 \begin_deeper
@@ -2243,7 +2547,7 @@ name "exc:fourier-series-9"
 
 \end_inset
 
-Reproduce a sound wave, advanced.
+Reproduce a sound wave, part 2.
 \end_layout
 
 \begin_deeper

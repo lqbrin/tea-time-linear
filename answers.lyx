@@ -13808,6 +13808,985 @@ name "ans:linear-regression-14"
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Markov-Chains"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-1"
+
+\end_inset
+
+no
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-2"
+
+\end_inset
+
+yes
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-3"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtj00KwjAQRveF3mGom1ZCyF9bRXqEnEAUQutC
+qEVKHTy-kwZMKq7yhXnM-8ZCBw-3zPd3qZhiZy5qzfjBNIwfTcu4rM2lyjMUKSeJazynTeunz_k-LWVh
+oSuqE4Sf_aYI-C2RQJEiOyhdBb0b-9folhvYqwI3DfTqPLOK9HZvKemQVLQSmHrVHzEt2TD6xzykZpQM
+ULHVjiRHuSpRUAw9UFIMRTAW8VxynUzu3jRElUw2vVBXH1ydaoQ=&lang=sage&interacts=eJyLjgU
+AARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(i) 
+\begin_inset Formula $M^{2}=\left[\begin{array}{cc}
+0.803971 & 0.175122\\
+0.196029 & 0.824878
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{3}=\left[\begin{array}{cc}
+0.208450997 & 0.707128254\\
+0.791549003 & 0.292871746
+\end{array}\right]$
+\end_inset
+
+ (ii) 
+\begin_inset Formula $0.947$
+\end_inset
+
+, 
+\begin_inset Formula $0.196029$
+\end_inset
+
+, 
+\begin_inset Formula $0.791549003$
+\end_inset
+
+ (iii) 
+\begin_inset Formula $\frac{1}{2}0.791549003+\frac{1}{2}0.292871746=0.5422103745$
+\end_inset
+
+ (iv) 
+\begin_inset Formula $\mathbf{v}_{1}=\left[\begin{array}{c}
+0.328171\\
+0.671829
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{2}=\left[\begin{array}{c}
+0.585760397\\
+0.414239603
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{3}=\left[\begin{array}{c}
+0.381492005179\\
+0.618507994821
+\end{array}\right]$
+\end_inset
+
+ (v) 
+\begin_inset Formula $0.618507994821$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-4"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxtj0EKwjAQRfeF3mGom1ZCmcnQVpEeIScQhVBd
+CFqk1MHjO2nBpuJm8pP5_PfjoIWHH4fbO2fD5oglVWSw5KrSSTXrtOGh5kZnVU9yrxNxF3ZNcyrSRDDO
+Ic0xVKLBsHsOt37MMwdtVhxgvrmvWgwhY3EIxpYN5L6Azt-7192PV3BnC76_6Mlp4qzC3dap4lnZharG
+mGv_gDVk5eEf8iUmCxkQaya6KFxoQgqqnHsIqZyLyFIk-KLfUfTvVUOx0WbVS7j4AKLncBo=&lang=sa
+ge&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(i) 
+\begin_inset Formula $M^{2}=\left[\begin{array}{ccc}
+0.2015 & 0.281044 & 0.268564\\
+0.52332 & 0.484799 & 0.54607\\
+0.275172 & 0.234157 & 0.185366
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $M^{3}=\left[\begin{array}{ccc}
+0.261059 & 0.252708 & 0.264622\\
+0.529767 & 0.498964 & 0.508049\\
+0.209172 & 0.248326 & 0.227327
+\end{array}\right]$
+\end_inset
+
+ (ii) 
+\begin_inset Formula $0.21$
+\end_inset
+
+, 
+\begin_inset Formula $0.52332$
+\end_inset
+
+, 
+\begin_inset Formula $0.52976784$
+\end_inset
+
+ (iii) 
+\begin_inset Formula $\frac{1}{3}0.5297678+\frac{1}{3}0.49896412+\frac{1}{3}0.5080499=0.512260651$
+\end_inset
+
+ (iv) 
+\begin_inset Formula $\mathbf{v}_{1}=\left[\begin{array}{c}
+0.355\\
+0.637\\
+0.008
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{2}=\left[\begin{array}{c}
+0.281044\\
+0.484799\\
+0.234157
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}_{3}=\left[\begin{array}{c}
+0.25270888\\
+0.498964123\\
+0.248326997
+\end{array}\right]$
+\end_inset
+
+ (v) 
+\begin_inset Formula $0.498964123$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-5"
+
+\end_inset
+
+Because the have the same characteristic equations.
+ Can you prove it? See crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:Markov-chains"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-6"
+
+\end_inset
+
+
+\begin_inset Formula $\text{span}\left\{ \left[\begin{array}{c}
+846\\
+947
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-7"
+
+\end_inset
+
+
+\begin_inset Formula $\text{span}\left\{ \left[\begin{array}{c}
+257969\\
+509670\\
+233637
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-8"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDSMdKJ1jMwNdbRszAx09Gz
+NDHX0TM0NYnV5OUqKMrMK9FQ8lWwVdK0VoDwfOEsoAJfI6BBvlq-QJYJiGWk5WsEZFuA2CZaviZAtqEZ
+iGOh5WsB5BiD1RuaaQExwvg4kDCSDcZGCDsAi74osg==&lang=sage&interacts=eJyLjgUAARUAuQ=
+=}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $M^{32}=\left[\begin{array}{cc}
+0.472150 & 0.471552\\
+0.527849 & 0.528447
+\end{array}\right]$
+\end_inset
+
+; the columns of 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+ are approximately 
+\begin_inset Formula $\frac{1}{1793}$
+\end_inset
+
+ times the answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset Formula $\frac{1}{1793}\left[\begin{array}{c}
+846\\
+947
+\end{array}\right]$
+\end_inset
+
+.
+ In other words, the ratio of the entries in each column of 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+, 
+\begin_inset Formula $0.47:0.53$
+\end_inset
+
+, is approximately equal to the ratio of the entries in the eigenvector,
+ 
+\begin_inset Formula $846:947$
+\end_inset
+
+ (so the vectors are approximately multiples of one another).
+ The columns of 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+ are (nearly) in the eigenspace of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-9"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxNjbEKwzAMRPdC_8Fkio0JtmXLDiWfoC8oLXTM
+0FJChnx-TymkHXS8OwmdmMk8H-sybz158tcwxBJ9GKgUaGSCJg2YKrTwjiM0hKa7Wm_2fHov82vtOzFT
+Zy_m6-QgHEhCkTgBZaXkJIGbcnaSwZHVNCcNhvb7yA7ze3_X-K-Bkv0AkaAr6w==&lang=sage&inter
+acts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $M^{32}=\left[\begin{array}{ccc}
+0.257640 & 0.257640 & 0.257640\\
+0.509020 & 0.509020 & 0.509020\\
+0.233339 & 0.233339 & 0.233339
+\end{array}\right]$
+\end_inset
+
+; the columns of 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+ are approximately 
+\begin_inset Formula $\frac{1}{1000}$
+\end_inset
+
+ times the answer from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset Formula $\frac{1}{1000}\left[\begin{array}{c}
+257969\\
+509670\\
+233637
+\end{array}\right]$
+\end_inset
+
+.
+ In other words, the ratio of the entries in each column of 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+, 
+\begin_inset Formula $0.257:0.509:0.233$
+\end_inset
+
+, is approximately equal to the ratio of the entries in the eigenvector,
+ 
+\begin_inset Formula $257969:509670:233637$
+\end_inset
+
+ (so the vectors are approximately multiples of one another).
+ The columns of 
+\begin_inset Formula $M^{32}$
+\end_inset
+
+ are (nearly) in the eigenspace of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-10"
+
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{1793}\left[\begin{array}{c}
+846\\
+947
+\end{array}\right]\approx\left[\begin{array}{c}
+0.471834913552705\\
+0.528165086447295
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-11"
+
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{1001276}\left[\begin{array}{c}
+257969\\
+509670\\
+233637
+\end{array}\right]\approx\left[\begin{array}{c}
+0.257640251039673\\
+0.509020489854945\\
+0.233339259105381
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-12"
+
+\end_inset
+
+(a) 
+\begin_inset Formula $\left[\begin{array}{ccccc}
+\frac{1}{3} & \frac{1}{3} & 0 & 0 & 0\\
+\frac{1}{3} & 0 & 0 & 0 & 0\\
+\frac{1}{3} & \frac{1}{3} & \frac{1}{3} & \frac{1}{3} & 0\\
+0 & \frac{1}{3} & \frac{1}{3} & \frac{1}{3} & 0\\
+0 & 0 & \frac{1}{3} & \frac{1}{3} & 1
+\end{array}\right]$
+\end_inset
+
+ (b) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJzzVbBVyE0sKcqs0DDVMdWJNtQ31gFhAzBEsCBs
+ZIwuhqYqVpOXq6AoM69Ew1fTWgHCggsp-cYZWSnBxX21tIywKjJGVWSMVZGhAaoqQwOEMgD6_Dga&lan
+g=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{1}{9}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{8}{27}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{55330}{59049}\approx0.937$
+\end_inset
+
+ (c) the game will end
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:markov-chains-13"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxVjr0KwyAURvdC30EyabFSc_NHS9ZuLllDh5LY
+1KEarEj79jUkNAZE_Ljn3E-BavS6O6s-GCjQlkGZU5byjDJIi3BNqSqWlE7DcCCrbmS_G63SDicC1Qm5
+oDmJ_ysAPt7OactPNC8pQCT7WPaxLCZbHPzas2HFBl6Qq9K90gNyT4mkGqT2snPGos5YK9-jWaYG8XMS
+rCY0YHGcv8hUL7VT7ouBEBb4x7q4Wbt-3JZXMQ==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ (a) 
+\begin_inset Formula $M=\left[\begin{array}{ccc}
+.375 & .214 & .326\\
+.35 & .286 & .326\\
+.275 & .5 & .348
+\end{array}\right]$
+\end_inset
+
+ (b) the consumption of each sector in dollars (c) 
+\begin_inset Formula $M\mathbf{v}=\left[\begin{array}{c}
+26.706\\
+30.560\\
+42.734
+\end{array}\right]$
+\end_inset
+
+; the farming sector consumes (
+\begin_inset Formula $26.706$
+\end_inset
+
+) more than it produces (
+\begin_inset Formula $10$
+\end_inset
+
+); the building sector produces (
+\begin_inset Formula $57$
+\end_inset
+
+) more than it consumes (
+\begin_inset Formula $30.56$
+\end_inset
+
+) (c) because 
+\begin_inset Formula $1$
+\end_inset
+
+ is an eigenvalue of every transition/consumption matrix (d) Any multiple
+ of 
+\begin_inset Formula $\left[\begin{array}{c}
+0.814670795745254\\
+0.855931062340110\\
+1
+\end{array}\right]$
+\end_inset
+
+; for the economy in part (c), where the total economy is 100 (
+\begin_inset Formula $\$100,000$
+\end_inset
+
+), the 
+\begin_inset Quotes eld
+\end_inset
+
+everybody is happy
+\begin_inset Quotes erd
+\end_inset
+
+ vector is 
+\begin_inset Formula $\left[\begin{array}{c}
+30.5051385057193\\
+32.0501185809012\\
+37.4447429133795
+\end{array}\right]$
+\end_inset
+
+, for example
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Fourier-Series"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-4"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-6"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+b: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-7"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+d: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-8"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:fourier-series-9"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

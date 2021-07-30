@@ -20597,5 +20597,167 @@ LjgUAARUAuQ==}
 \end_layout
 
 \end_deeper
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Markov-Chains"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:markov-chains-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:markov-chains"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:markov-chains-1"
+
+\end_inset
+
+A transition matrix must be (i) square, (ii) have nonnegative entries, and
+ (iii) have columns that sum to 1.
+ The matrix 
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{ccc}
+0.09 & 0.686 & 0.168\\
+0.908 & 0.036 & 0.807\\
+0.002 & 0.278 & 0.485
+\end{array}\right]
+\]
+
+\end_inset
+
+has qualities (i) and (ii), but not (iii) since the third column does not
+ sum to 1.
+ Therefore, 
+\begin_inset Formula $M$
+\end_inset
+
+ is not a transition matrix.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Fourier-Series"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:fourier-series"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:fourier-series-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:fourier-series-2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:fourier-series-3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:fourier-series-4"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

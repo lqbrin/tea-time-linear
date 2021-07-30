@@ -38,7 +38,16 @@ enumitem
 \index_command default
 \paperfontsize 12
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -506,6 +515,13 @@ status open
 \backslash
 begin{digression}{Why it Works}
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "dig:Markov-chains"
 
 \end_inset
 
@@ -1541,11 +1557,41 @@ Is
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-11"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 0.09 & 0.686 & 0.168\\
 0.908 & 0.036 & 0.807\\
 0.002 & 0.278 & 0.485
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:markov-chains-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1563,11 +1609,41 @@ Is
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-12"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 0.826 & 0.006 & 0.235\\
 0.104 & 0.122 & 0.609\\
 0.07 & -0.72 & 0.156
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1585,11 +1661,41 @@ Is
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-13"
+
+\end_inset
+
+
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 0.341 & 0.104 & 0.217\\
 0.525 & 0.592 & 0.249\\
 0.134 & 0.304 & 0.534
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1611,13 +1717,26 @@ Given transition matrix
 \begin_inset Formula $\mathbf{v}_{0}$
 \end_inset
 
-, (a) calculate 
+, (i) calculate 
+\begin_inset Formula $M^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{3}$
+\end_inset
+
+; (ii) determine the probability of transitioning from state 1 to state
+ 2 over the course of one time step, two time steps, and three time steps;
+ (iii) determine the probability of being in state 2 after three time steps
+ given equal likelihood of starting in any state; (iv) calculate 
 \begin_inset Formula $\mathbf{v}_{3}$
 \end_inset
 
-; (b) determine the probability of transitioning from state 1 to state 2
- over the course of one time step, two time steps, and three time steps;
- and (c) the probability of being in state 2 after three time steps.
+; and (v) for the given initial distribution, 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+, what is the probability of being in state 2 after three time steps?
 \end_layout
 
 \begin_deeper
@@ -1656,6 +1775,13 @@ I-Y=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-14"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1684,6 +1810,29 @@ NDHX0TM0NYnV5OUqM0BWZwhUZwZSZ2xiDpItKMrMK9FQ8lWwVdK0VoDwfOEshAKQKQgVZQYIJQAaayPm
 0.653\\
 0.347
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-3"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1760,6 +1909,13 @@ KvuxbGdZODUUVa_e5r6UhHCVjIuS8gC1VSsT&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:markov-chains-15"
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1790,6 +1946,29 @@ wvOFsxAKQGYgVJQZIJQAAJgVKXw=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 1\\
 0
 \end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-4"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -1852,6 +2031,29 @@ For any square matrix
 \end_inset
 
  have the same eigenvalues.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1885,6 +2087,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1919,6 +2144,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1940,6 +2188,29 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1997,6 +2268,29 @@ literal "false"
 \end_inset
 
 .
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2006,9 +2300,9 @@ Create a
 
  transition matrix.
  Each block on the board represents one state (location of the playing piece).
- It is impossible to move onto spaces 3,4,5, or 8 since the playing piece
- immediately slides up or down from there, so only the other 5 states need
- to be included.
+ It is impossible to end a turn on spaces 3,4,5, or 8 since the playing
+ piece immediately slides up or down from there, so only the other 5 states
+ need to be included.
  Transitioning from state 9 is represented by a column with 4 zeros and
  a one, indicating that once square 9 is reached the playing piece never
  leaves! Mathematically, state 9 is called an 
@@ -2090,7 +2384,29 @@ The Leontief model for a closed economy is a Markov chain where each column
  and the tailors use $0.5.
  For every dollar of clothing produced, the tailors use $0.348, the builders
  use $0.326, and the farmers use $0.326.
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:markov-chains-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2169,8 +2485,9 @@ Any solution of
 \begin_inset Formula $M\mathbf{v}=\mathbf{v}$
 \end_inset
 
- is, mathematically, called an equilibrium vector? Explain in terms of the
- economy what is in equilibrium at production levels in such a 
+ is, in the context of the problem, called an equilibrium.
+ Explain in terms of the economy what is in equilibrium at production levels
+ in such a 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -2198,10 +2515,10 @@ F and average high temperature about 68
 
 F all 12 months of the year.
  Clouds and rain are similarly predictable.
- Suppose a friend of yours claims it rains there one quarter of the time,
- so you do some research.
- For the past two months, you have noticed that on a rainy day there is
- a 
+ Suppose you are visiting Quito and a friend of yours claims it rains there
+ one quarter of the time.
+ For two months you record the weather.
+ Your data suggest empirically that on a rainy day there is a 
 \begin_inset Formula $\frac{3}{14}$
 \end_inset
 
@@ -2331,7 +2648,8 @@ How does
 
 \end_deeper
 \begin_layout Enumerate
-Redo the bikeshare analysis for 2020.
+Redo the bikeshare analysis for 2020 in the same section of Alexandria as
+ done in the text.
  Data can be retrieved at 
 \begin_inset CommandInset href
 LatexCommand href
@@ -2342,8 +2660,8 @@ literal "false"
 \end_inset
 
 .
- Can you think of a reason the data are likely to be very different from
- the 2018 data? How different is the expected bike distribution in 2020?
+ How different is the expected bike distribution in 2020? Can you think
+ of a reason the data are likely to be very different from the 2018 data?
 \end_layout
 
 \begin_layout Enumerate
