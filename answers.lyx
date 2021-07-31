@@ -14624,6 +14624,16 @@ name "ans:fourier-series-1"
 
 \end_inset
 
+Verify the 10 properties of a vector space as in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 
 \end_layout
 
@@ -14642,6 +14652,14 @@ noprefix "false"
 LatexCommand label
 name "ans:fourier-series-2"
 
+\end_inset
+
+because 
+\begin_inset Formula $\sin\left(m\frac{\pi}{L}t\right)=\sin(0)=0$
+\end_inset
+
+ when 
+\begin_inset Formula $m=0$
 \end_inset
 
 
@@ -14665,6 +14683,10 @@ name "ans:fourier-series-3"
 \end_inset
 
 
+\begin_inset Formula ${\displaystyle b_{m}=\frac{2m\pi}{\left(\ln2\right)^{2}+m^{2}\pi^{2}}\left(1+2\left(-1\right)^{m+1}\right)}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -14682,6 +14704,18 @@ noprefix "false"
 LatexCommand label
 name "ans:fourier-series-4"
 
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle a_{0}=\frac{1}{\ln2}}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{m}=\frac{2\ln2}{\left(\ln2\right)^{2}+m^{2}\pi^{2}}\left(2\left(-1\right)^{m}-1\right)$
+\end_inset
+
+ for 
+\begin_inset Formula $m=1,2,\ldots$
 \end_inset
 
 
@@ -14704,9 +14738,115 @@ name "ans:fourier-series-5"
 
 \end_inset
 
+(i) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-08.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(ii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-09.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-10.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14724,9 +14864,115 @@ name "ans:fourier-series-6"
 
 \end_inset
 
+(i) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-11.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(ii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-12.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-13.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14744,9 +14990,115 @@ name "ans:fourier-series-7"
 
 \end_inset
 
+(i) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-14.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(ii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-15.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-16.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14764,9 +15116,115 @@ name "ans:fourier-series-8"
 
 \end_inset
 
+(i) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-17.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(ii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-18.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(iii) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-2.3in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/application-fourier-series-19.pdf
+	lyxscale 33
+	width 2.5in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14782,6 +15240,10 @@ a:
 LatexCommand label
 name "ans:fourier-series-9"
 
+\end_inset
+
+All four graphs are the same, equal to 
+\begin_inset Formula $f(x)=1$
 \end_inset
 
 

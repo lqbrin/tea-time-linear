@@ -1938,6 +1938,13 @@ Show that, in the inner product space
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-19"
+
+\end_inset
+
+
 \begin_inset Formula $\left\langle 1,1\right\rangle =L$
 \end_inset
 
@@ -1986,6 +1993,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:fourier-series-18"
+
+\end_inset
+
+
 \begin_inset Formula $\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle =\frac{L}{2}$
 \end_inset
 
@@ -2352,7 +2366,7 @@ noprefix "false"
 
 \end_inset
 
- with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+ with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero terms.
 \begin_inset ERT
 status open
 
@@ -2414,7 +2428,7 @@ noprefix "false"
 
 \end_inset
 
- with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+ with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero terms.
 \begin_inset ERT
 status open
 
@@ -2476,7 +2490,7 @@ noprefix "false"
 
 \end_inset
 
- with (i) 1 term; (ii) 2 terms; and (iii) 5 terms.
+ with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero  terms.
 \begin_inset ERT
 status open
 

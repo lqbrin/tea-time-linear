@@ -20696,7 +20696,35 @@ name "sol:fourier-series-1"
 
 \end_inset
 
+In 
+\begin_inset Formula $C([0,L])$
+\end_inset
 
+,
+\begin_inset Formula 
+\[
+\left\langle \cos\left(m\frac{\pi}{L}t\right),\cos\left(m\frac{\pi}{L}t\right)\right\rangle =\int_{0}^{L}\cos^{2}\left(m\frac{\pi}{L}t\right)\,dt=\frac{1}{2}\int_{0}^{L}\left(1+\cos\left(2m\frac{\pi}{L}t\right)\right)\,dt
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{2}\left[t+\frac{L}{2m\pi}\sin\left(2m\frac{\pi}{L}t\right)\right]_{0}^{L}\,dt=\frac{1}{2}\left[L+\frac{L}{2m\pi}\sin\left(2m\pi\right)\right]=\frac{L}{2}
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\sin(2m\pi)=0$
+\end_inset
+
+ for any integer 
+\begin_inset Formula $m$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -20716,9 +20744,88 @@ name "sol:fourier-series-2"
 
 \end_inset
 
+From question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, in 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle \sin\left(m\pi t\right),\sin\left(m\pi t\right)\right\rangle =\frac{1}{2}$
+\end_inset
+
+.
+ Therefore
+\begin_inset Formula 
+\[
+b_{m}=2\left\langle f,\sin\left(m\pi t\right)\right\rangle =2\int_{0}^{1}t\sin\left(m\pi t\right)\,dt=\frac{-2}{m\pi}\left[t\cos\left(m\pi t\right)-\frac{1}{m\pi}\sin\left(m\pi t\right)\right]_{0}^{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{-2}{m\pi}\cos\left(m\pi\right)=\frac{-2}{m\pi}\left(-1\right)^{m}=\frac{2}{m\pi}\left(-1\right)^{m+1}
+\]
+
+\end_inset
+
+ and the Fourier sine series is
+\begin_inset Formula 
+\[
+\frac{2}{\pi}\sin\left(\pi t\right)-\frac{1}{\pi}\sin\left(2\pi t\right)+\frac{2}{3\pi}\sin\left(3\pi t\right)-\cdots
+\]
+
+\end_inset
+
+Notes: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\sin(m\pi)=0$
+\end_inset
+
+ for any integer 
+\begin_inset Formula $m$
+\end_inset
+
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $\int t\sin\left(m\pi t\right)\,dt$
+\end_inset
+
+ can be calculated using integration by parts:
+\begin_inset Formula 
+\[
+\int t\sin\left(m\pi t\right)\,dt=-\frac{t}{m\pi}\cos\left(m\pi t\right)+\frac{1}{m\pi}\int\cos(m\pi t)\,dt
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=-\frac{t}{m\pi}\cos\left(m\pi t\right)+\frac{1}{\left(m\pi\right)^{2}}\sin(m\pi t)=\frac{-1}{m\pi}\left[t\cos\left(m\pi t\right)-\frac{1}{m\pi}\sin\left(m\pi t\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -20736,9 +20843,114 @@ name "sol:fourier-series-3"
 
 \end_inset
 
+From question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, in 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle \cos\left(m\pi t\right),\cos\left(m\pi t\right)\right\rangle =\frac{1}{2}$
+\end_inset
+
+ and from question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle 1,1\right\rangle =1$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+a_{0}=\left\langle f,1\right\rangle =\int_{0}^{1}t\,dt=\left[\frac{1}{2}t^{2}\right]_{0}^{1}=\frac{1}{2}
+\]
+
+\end_inset
+
+and for 
+\begin_inset Formula $m=1,2,\ldots$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a_{m}=2\left\langle f,\cos\left(m\pi t\right)\right\rangle =2\int_{0}^{1}t\cos\left(m\pi t\right)\,dt=\frac{2}{m\pi}\left[t\sin\left(m\pi t\right)+\frac{1}{m\pi}\cos\left(m\pi t\right)\right]_{0}^{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{2}{\left(m\pi\right)^{2}}\left[\cos\left(m\pi\right)-1\right]=\frac{2}{\left(m\pi\right)^{2}}\left[\left(-1\right)^{m}-1\right]=\frac{-4}{\left(m\pi\right)^{2}}\text{ for }m=1,3,5,\ldots
+\]
+
+\end_inset
+
+and the Fourier cosine series is
+\begin_inset Formula 
+\[
+\frac{1}{2}-\frac{4}{\pi^{2}}\cos\left(\pi t\right)-\frac{4}{9\pi^{2}}\cos\left(3\pi t\right)-\frac{4}{25\pi^{2}}\cos\left(5\pi t\right)-\cdots
+\]
+
+\end_inset
+
+Notes: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\sin(m\pi)=0$
+\end_inset
+
+ for any integer 
+\begin_inset Formula $m$
+\end_inset
+
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $\int t\cos\left(m\pi t\right)\,dt$
+\end_inset
+
+ can be calculated using integration by parts:
+\begin_inset Formula 
+\[
+\int t\cos\left(m\pi t\right)\,dt=\frac{t}{m\pi}\sin\left(m\pi t\right)-\frac{1}{m\pi}\int\sin(m\pi t)\,dt
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{t}{m\pi}\sin\left(m\pi t\right)+\frac{1}{\left(m\pi\right)^{2}}\cos(m\pi t)=\frac{1}{m\pi}\left[t\sin\left(m\pi t\right)+\frac{1}{m\pi}\cos\left(m\pi t\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -20753,6 +20965,90 @@ noprefix "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "sol:fourier-series-4"
+
+\end_inset
+
+From question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:fourier-series-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, in 
+\begin_inset Formula $C([0,1])$
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle \cos\left(m\pi t\right),\cos\left(m\pi t\right)\right\rangle =\left\langle \sin\left(m\pi t\right),\sin\left(m\pi t\right)\right\rangle =\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle 1,1\right\rangle =1$
+\end_inset
+
+.
+ Combined with the fact that the functions 
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^{2}\left(m\pi t\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\sin^{2}\left(m\pi t\right)$
+\end_inset
+
+ are even, in 
+\begin_inset Formula $C([-1,1])$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle \cos\left(m\pi t\right),\cos\left(m\pi t\right)\right\rangle =\left\langle \sin\left(m\pi t\right),\sin\left(m\pi t\right)\right\rangle =1$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle 1,1\right\rangle =2$
+\end_inset
+
+.
+ Therefore,
+\begin_inset Formula 
+\[
+a_{0}=\frac{1}{2}\left\langle f,1\right\rangle =\frac{1}{2}\int_{-1}^{1}1\,dt=\frac{1}{2}\left[t\right]_{-1}^{1}=1
+\]
+
+\end_inset
+
+and for 
+\begin_inset Formula $m=1,2,\ldots$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a_{m}=\left\langle f,\cos\left(m\pi t\right)\right\rangle =\int_{-1}^{1}\cos\left(m\pi t\right)\,dt=\frac{2}{m\pi}\left[\sin\left(m\pi t\right)\right]_{-1}^{1}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b_{m}=\left\langle f,\sin\left(m\pi t\right)\right\rangle =\int_{-1}^{1}\sin\left(m\pi t\right)\,dt=0\text{ (because }\sin\left(m\pi t\right)\text{ is odd)}
+\]
+
+\end_inset
+
+and the Fourier cosine series is
+\begin_inset Formula 
+\[
+1
+\]
 
 \end_inset
 
