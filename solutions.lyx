@@ -21055,5 +21055,806 @@ and the Fourier cosine series is
 
 \end_layout
 
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Discrete-Dynamical-Systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:discrete-dynamical"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:discrete-dynamical-1"
+
+\end_inset
+
+Though SageMath is not strictly required, it makes repetitive calculations
+ like this more manageable.
+ 
+\begin_inset Formula 
+\[
+\mathbf{x}_{1}=\mathbf{f}(\mathbf{x}_{0})=\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]\left[\begin{array}{c}
+0\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]=\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]\approx\left[\begin{array}{c}
+0.14285\\
+0.21428
+\end{array}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{x}_{2}=\mathbf{f}(\mathbf{x}_{1})=\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]+\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]=\left[\begin{array}{c}
+55/294\\
+61/588
+\end{array}\right]\approx\left[\begin{array}{c}
+0.18707\\
+0.10374
+\end{array}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{x}_{3}=\mathbf{f}(\mathbf{x}_{2})=\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]\left[\begin{array}{c}
+55/294\\
+61/588
+\end{array}\right]+\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]=\left[\begin{array}{c}
+239/1764\\
+821/3528
+\end{array}\right]\approx\left[\begin{array}{c}
+0.13548\\
+0.23270
+\end{array}\right],
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{x}_{4}=\mathbf{f}(\mathbf{x}_{3})=\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]\left[\begin{array}{c}
+239/1764\\
+821/3528
+\end{array}\right]+\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]=\left[\begin{array}{c}
+2071/10584\\
+1741/21168
+\end{array}\right]\approx\left[\begin{array}{c}
+0.19567\\
+0.08224
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:discrete-dynamical-2"
+
+\end_inset
+
+A fixed point of a function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is a solution of the equation 
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+ (where the input and output of the function are equal).
+ Iteration beginning at the fixed point stays at the fixed point.
+ Solving for the fixed points:
+\begin_inset Formula 
+\[
+\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]=\mathbf{x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]\mathbf{x}-\mathbf{x}=-\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]-\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\right)\mathbf{x}=-\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{42}\left[\begin{array}{cc}
+-26 & 26\\
+65 & -65
+\end{array}\right]\mathbf{x}=-\left[\begin{array}{c}
+1/7\\
+3/14
+\end{array}\right]
+\]
+
+\end_inset
+
+so fixed points are solutions of 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+-26 & 26\\
+65 & -65
+\end{array}\right]\mathbf{x}=\left[\begin{array}{c}
+-6\\
+-9
+\end{array}\right],
+\]
+
+\end_inset
+
+an inconsistent system.
+ 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ has no fixed points.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:discrete-dynamical-3"
+
+\end_inset
+
+The dynamical system has no fixed point, so it cannot have an attractor
+ (an attractor is a fixed point).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:discrete-dynamical-4"
+
+\end_inset
+
+The dynamical system tends toward infinity.
+ With a spectral radius greater than one 
+\begin_inset Formula $\left(\frac{7}{6}\text{ in this case}\right)$
+\end_inset
+
+, if the orbit is not fixed it will tend toward infinity 
+\begin_inset Formula $\left(\text{at approximately the rate}\left(\frac{7}{6}\right)^{k}\text{ in this case}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+e: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:discrete-dynamical-5"
+
+\end_inset
+
+The dynamical system tends toward the fixed point.
+ With a spectral radius less than one 
+\begin_inset Formula $\left(\frac{1}{2}\text{ in this case}\right)$
+\end_inset
+
+, the fixed point will be an attractor.
+\end_layout
+
+\begin_layout Section*
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Rep-tiles"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:rep-tiles"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:rep-tiles-1"
+
+\end_inset
+
+Answers may vary.
+ The figure is scaled by 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ in both the horizontal and vertical directions, either reflected about
+ the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis or rotated 
+\begin_inset Formula $90^{\circ}$
+\end_inset
+
+, and then translated into place.
+ To be more specific, these general observations lead to two possibilities
+ (and there are others):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+scale by 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, reflect about the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis, translate 
+\begin_inset Formula $\left[\begin{array}{c}
+4\\
+0
+\end{array}\right]$
+\end_inset
+
+.
+ As a formula,
+\begin_inset Formula 
+\[
+\mathbf{f}(\mathbf{x})=\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{cc}
+1/2 & 0\\
+0 & 1/2
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+4\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left[\begin{array}{cc}
+-1/2 & 0\\
+0 & 1/2
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+4\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+scale by 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, rotate 
+\begin_inset Formula $90^{\circ}$
+\end_inset
+
+ (counterclockwise) about the origin, translate 
+\begin_inset Formula $\left[\begin{array}{c}
+4\\
+0
+\end{array}\right]$
+\end_inset
+
+.
+ As a formula,
+\begin_inset Formula 
+\[
+\mathbf{f}(\mathbf{x})=\left[\begin{array}{cc}
+0 & -1\\
+1 & 0
+\end{array}\right]\left[\begin{array}{cc}
+1/2 & 0\\
+0 & 1/2
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+4\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left[\begin{array}{cc}
+0 & -1/2\\
+1/2 & 0
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+4\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:rep-tiles-2"
+
+\end_inset
+
+One of the easiest ways to show that a shape tessellates the plane is to
+ show that it tiles a parallelogram or a triangle.
+ That tiling can then be repeated to tessellate the plane.
+ In this case, however, that is not an option.
+ A dissect and inflate, dissect and inflate, dissect and inflate,
+\begin_inset Formula $\ldots$
+\end_inset
+
+ procedure can be used instead.
+ The inflation is performed so that one part of the dissection becomes the
+ whole (and the other parts lie outside the whole).
+ Which part becomes the whole rotates among the parts.
+ In pictures:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-56.pdf
+	lyxscale 33
+	width 2.8in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\stackrel{\text{dissect}}{\longrightarrow}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-57.pdf
+	lyxscale 33
+	width 2.8in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\stackrel{\text{inflate}}{\longrightarrow}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-58.pdf
+	lyxscale 33
+	width 2.8in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\stackrel{\text{dissect}}{\longrightarrow}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-59.pdf
+	lyxscale 33
+	width 2.8in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\stackrel{\text{inflate}}{\longrightarrow}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-60.pdf
+	lyxscale 33
+	width 2.8in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\stackrel{\text{dissect}}{\longrightarrow}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-61.pdf
+	lyxscale 33
+	width 2.8in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\stackrel{\text{inflate}}{\longrightarrow}\cdots$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:rep-tiles-3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:rep-tiles-4"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:rep-tiles-5"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

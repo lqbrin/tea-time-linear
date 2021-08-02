@@ -1840,6 +1840,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-10"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -1990,6 +1997,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-11"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2140,6 +2154,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-12"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2290,6 +2311,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-13"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2420,6 +2448,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-14"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2492,6 +2527,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-15"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2562,6 +2604,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-16"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2632,6 +2681,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-17"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2743,6 +2799,12 @@ status open
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-18"
+
+\end_inset
+
 Show that the shape in question 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2870,6 +2932,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-19"
+
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:rep-tiles-3"
@@ -2948,6 +3017,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-20"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -3026,6 +3102,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-21"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -3104,6 +3187,12 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-22"
+
+\end_inset
+
 The images of the line segment under the similtudes of the IFS are the line
  segments from 
 \begin_inset Formula $(0,0)$
@@ -3212,6 +3301,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-23"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -3437,6 +3533,13 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:rep-tiles-24"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
