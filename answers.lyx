@@ -15999,7 +15999,17 @@ name "ans:rep-tiles-1"
 
 \end_inset
 
- 
+
+\begin_inset Formula $\mathbf{f}(\mathbf{x})=\frac{1}{2}\left[\begin{array}{cc}
+-1 & 0\\
+0 & 1
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -16017,6 +16027,16 @@ noprefix "false"
 LatexCommand label
 name "ans:rep-tiles-2"
 
+\end_inset
+
+
+\begin_inset Formula $\mathbf{f}(\mathbf{x})=\frac{1}{2}\left[\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+0\\
+2\sqrt{3}
+\end{array}\right]$
 \end_inset
 
 
@@ -16040,6 +16060,16 @@ name "ans:rep-tiles-3"
 \end_inset
 
 
+\begin_inset Formula $\mathbf{f}(\mathbf{x})=\frac{1}{2}\left[\begin{array}{cc}
+1 & -\sqrt{3}\\
+\sqrt{3} & 1
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -16056,6 +16086,39 @@ noprefix "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-4"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-69.pdf
+	lyxscale 25
+	height 1in
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -16080,6 +16143,38 @@ name "ans:rep-tiles-5"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-70.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -16096,6 +16191,38 @@ noprefix "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-6"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-71.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -16120,6 +16247,38 @@ name "ans:rep-tiles-7"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-72.pdf
+	lyxscale 25
+	height 1in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -16132,14 +16291,27 @@ noprefix "false"
 
 \end_inset
 
-: 
+b: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-8"
 
 \end_inset
 
+Two copies of this shape can be fitted together to form a parallelogram
+ (see the solution to exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-14"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+ above).
+ Such parallelograms can be pieced together to tessellate the plane, thereby
+ tessellating the plane with this shape.
 \end_layout
 
 \begin_layout Description
@@ -16152,14 +16324,17 @@ noprefix "false"
 
 \end_inset
 
-: 
+d: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-9"
 
 \end_inset
 
-
+All triangles tessellate the plane.
+ Two congruent triangles can always be put together to form a parallelogram.
+ Such parallelograms can be pieced together to tessellate the plane, thereby
+ tessellating the plane with the triangle.
 \end_layout
 
 \begin_layout Description
@@ -16172,14 +16347,27 @@ noprefix "false"
 
 \end_inset
 
-: 
+h: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-10"
 
 \end_inset
 
+Four copies of this shape can be fitted together to form a parallelogram
+ (see the solution to exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-17"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+ above).
+ Such parallelograms can be pieced together to tessellate the plane, thereby
+ tessellating the plane with this shape.
 \end_layout
 
 \begin_layout Description
@@ -16196,6 +16384,70 @@ noprefix "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-11"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.7in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-73.pdf
+	lyxscale 25
+	height 0.7in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.7in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-74.pdf
+	lyxscale 25
+	height 0.7in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -16219,7 +16471,15 @@ name "ans:rep-tiles-12"
 
 \end_inset
 
+There are 5 congruent parts, so we must have 
+\begin_inset Formula $5s^{2}=1$
+\end_inset
 
+ and therefore the scale factor is 
+\begin_inset Formula $\frac{1}{\sqrt{5}}$
+\end_inset
+
+ for each part.
 \end_layout
 
 \begin_layout Description
@@ -16240,8 +16500,59 @@ name "ans:rep-tiles-13"
 \end_inset
 
 
+\begin_inset Formula $\left\{ T_{1}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]\right.$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $T_{2}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{3}(\mathbf{x})=\left[\begin{array}{cc}
+-\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.T_{4}(\mathbf{x})=\left[\begin{array}{cc}
+0 & \frac{1}{2}\\
+-\frac{1}{2} & 0
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+0\\
+2
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16260,8 +16571,30 @@ name "ans:rep-tiles-14"
 \end_inset
 
 
+\begin_inset Formula $\left\{ T_{1}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & -\frac{1}{2}\\
+\frac{1}{2} & \frac{1}{2}
+\end{array}\right]\mathbf{x}\right.$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left.T_{2}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & -\frac{1}{2}\\
+\frac{1}{2} & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+5\\
+0
+\end{array}\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16279,9 +16612,49 @@ name "ans:rep-tiles-15"
 
 \end_inset
 
+Translations will vary based on placement of the axes.
+ Placing the origin at the lower left corner of the rep-tile with scaling
+ so that the bottom side is 2 units long, the IFS is
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $\left\{ T_{1}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}\right.$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{2}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.T_{3}(\mathbf{x})=\left[\begin{array}{cc}
+-\frac{1}{2} & -\frac{1}{2}\\
+-\frac{1}{2} & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16299,9 +16672,62 @@ name "ans:rep-tiles-16"
 
 \end_inset
 
+Translations will vary based on placement of the axes.
+ Placing the origin at the center of the rep-tile with scaling so that the
+ distance between nearest centers of the parts is 1 unit, the IFS is
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $\left\{ T_{1}(\mathbf{x})=\left[\begin{array}{cc}
+-\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}\right.$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{2}(\mathbf{x})=\left[\begin{array}{cc}
+-\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+-1\\
+0
+\end{array}\right]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{3}(\mathbf{x})=\left[\begin{array}{cc}
+-\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{1}{2}\\
+\frac{\sqrt{3}}{2}
+\end{array}\right]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.T_{4}(\mathbf{x})=\left[\begin{array}{cc}
+-\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{1}{2}\\
+-\frac{\sqrt{3}}{2}
+\end{array}\right]\right\} $
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16319,9 +16745,92 @@ name "ans:rep-tiles-17"
 
 \end_inset
 
+In the form of the required compositions, the four transormations (see the
+ solution of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+extrarowheight}{5pt}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+none, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 1, 1
+\end_layout
+
+\begin_layout Standard
+none, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 2, 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 2, 0
+\end_layout
+
+\begin_layout Standard
+none, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $-90$
+\end_inset
+
+, 0, 2
+\end_layout
+
+\begin_layout Standard
+Screenshot of the Rep-Tile Designer with these parameters:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-75.jpg
+	lyxscale 22
+	width 2.7in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16339,9 +16848,54 @@ name "ans:rep-tiles-18"
 
 \end_inset
 
+In the form of the required compositions, the four transormations (see the
+ solution of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-22"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+none, 
+\begin_inset Formula $\frac{1}{\sqrt{2}}$
+\end_inset
+
+, 45, 0, 0
+\end_layout
+
+\begin_layout Standard
+none, 
+\begin_inset Formula $\frac{1}{\sqrt{2}}$
+\end_inset
+
+, 45, 5, 0
+\end_layout
+
+\begin_layout Standard
+Screenshot of the Rep-Tile Designer with these parameters:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-76.jpg
+	lyxscale 22
+	width 2.7in
+
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16359,9 +16913,69 @@ name "ans:rep-tiles-19"
 
 \end_inset
 
+In the form of the required compositions, the four transormations (see the
+ solution of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-23"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+none, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 0, 0
+\end_layout
+
+\begin_layout Standard
+none, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 1, 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{\sqrt{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $-135$
+\end_inset
+
+, 2, 1
+\end_layout
+
+\begin_layout Standard
+Screenshot of the Rep-Tile Designer with these parameters:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-77.jpg
+	lyxscale 22
+	width 2.7in
+
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16379,9 +16993,102 @@ name "ans:rep-tiles-20"
 
 \end_inset
 
+In the form of the required compositions, the four transormations (see the
+ solution of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-24"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 0, 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 
+\begin_inset Formula $-1$
+\end_inset
+
+, 0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{\sqrt{3}}{2}$
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $-\frac{\sqrt{3}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Screenshot of the Rep-Tile Designer with these parameters:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-78.jpg
+	lyxscale 22
+	width 2.7in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open

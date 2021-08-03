@@ -1833,10 +1833,6 @@ status open
 \end_inset
 
 
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -1915,12 +1911,36 @@ status open
 \end_inset
 
 
-\begin_inset VSpace bigskip
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:rep-tiles-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -1929,7 +1949,7 @@ status open
 
 
 \backslash
-raisebox{-.95in}{
+raisebox{-.6in}{
 \end_layout
 
 \end_inset
@@ -1990,10 +2010,6 @@ status open
 \end_inset
 
 
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -2011,7 +2027,7 @@ status open
 
 
 \backslash
-raisebox{-.95in}{
+raisebox{-.6in}{
 \end_layout
 
 \end_inset
@@ -2072,12 +2088,36 @@ status open
 \end_inset
 
 
-\begin_inset VSpace bigskip
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-1"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -2144,10 +2184,6 @@ status open
 }
 \end_layout
 
-\end_inset
-
-
-\begin_inset VSpace bigskip
 \end_inset
 
 
@@ -2229,12 +2265,36 @@ status open
 \end_inset
 
 
-\begin_inset VSpace bigskip
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -2301,10 +2361,6 @@ status open
 }
 \end_layout
 
-\end_inset
-
-
-\begin_inset VSpace bigskip
 \end_inset
 
 
@@ -2388,6 +2444,34 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
@@ -2488,6 +2572,29 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2568,6 +2675,34 @@ status open
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -2639,6 +2774,29 @@ status open
 
 }
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-6"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2716,6 +2874,29 @@ status open
 
 }
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-7"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -2817,6 +2998,52 @@ noprefix "false"
 
  tessellates the plane.
  This completes a demonstration that the shape is a rep-tile.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:rep-tiles-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2905,6 +3132,29 @@ The right triangle with side lengths
 
  can be dissected into five congruent parts two different ways.
  Find one of them.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2942,6 +3192,29 @@ name "exc:rep-tiles-19"
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:rep-tiles-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-12"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3056,6 +3329,29 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -3137,6 +3433,29 @@ status open
 
 }
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:rep-tiles-3"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
@@ -3225,6 +3544,34 @@ The images of the line segment under the similtudes of the IFS are the line
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -3376,12 +3723,40 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \begin_inset VSpace bigskip
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -3608,12 +3983,40 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \begin_inset VSpace bigskip
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status open
@@ -3791,6 +4194,52 @@ a vertical translation
 
 \begin_layout Standard
 in that order.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:rep-tiles-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:rep-tiles-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3802,6 +4251,29 @@ name "exc:rep-tiles-8"
 \end_inset
 
 Find the three scale factors of the IFS suggested by the dissection.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:rep-tiles-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper

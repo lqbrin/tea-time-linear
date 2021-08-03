@@ -21583,8 +21583,8 @@ raisebox{-1.1in}{
 
 \begin_inset Graphics
 	filename figures/rep-tiles-56.pdf
-	lyxscale 33
-	width 2.8in
+	lyxscale 20
+	width 2.5in
 
 \end_inset
 
@@ -21622,8 +21622,8 @@ raisebox{-1.1in}{
 
 \begin_inset Graphics
 	filename figures/rep-tiles-57.pdf
-	lyxscale 33
-	width 2.8in
+	lyxscale 25
+	width 2.5in
 
 \end_inset
 
@@ -21658,8 +21658,8 @@ raisebox{-1.1in}{
 
 \begin_inset Graphics
 	filename figures/rep-tiles-58.pdf
-	lyxscale 33
-	width 2.8in
+	lyxscale 20
+	width 2.5in
 
 \end_inset
 
@@ -21697,8 +21697,8 @@ raisebox{-1.1in}{
 
 \begin_inset Graphics
 	filename figures/rep-tiles-59.pdf
-	lyxscale 33
-	width 2.8in
+	lyxscale 20
+	width 2.5in
 
 \end_inset
 
@@ -21733,8 +21733,8 @@ raisebox{-1.1in}{
 
 \begin_inset Graphics
 	filename figures/rep-tiles-60.pdf
-	lyxscale 33
-	width 2.8in
+	lyxscale 20
+	width 2.5in
 
 \end_inset
 
@@ -21772,8 +21772,8 @@ raisebox{-1.1in}{
 
 \begin_inset Graphics
 	filename figures/rep-tiles-61.pdf
-	lyxscale 33
-	width 2.8in
+	lyxscale 20
+	width 2.5in
 
 \end_inset
 
@@ -21813,9 +21813,361 @@ name "sol:rep-tiles-3"
 
 \end_inset
 
+The IFS contains an affine transformation for each part of the dissection.
+ Each transformation maps the whole to one of the parts.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-62.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow
+\end{array}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-63.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-62.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow\\
+\text{reflect about }x\text{-axis}\\
+\text{translate }(0,2\sqrt{3})
+\end{array}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-64.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-62.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow\\
+\text{rotate }120^{\circ}\\
+\text{translate }(3,\sqrt{3})
+\end{array}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-65.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-62.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow\\
+\text{reflect about }x\text{-axis}\\
+\text{rotate }-60^{\circ}\\
+\text{translate }(3,\sqrt{3})
+\end{array}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-.75in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-66.pdf
+	lyxscale 25
+	width 1.75in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Formally, the IFS is
+\begin_inset Formula 
+\[
+\left\{ T_{1}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & \frac{1}{2}
+\end{array}\right]\mathbf{x},\quad T_{2}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{2} & 0\\
+0 & -\frac{1}{2}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+0\\
+2\sqrt{3}
+\end{array}\right],\right.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left.T_{3}(\mathbf{x})=\left[\begin{array}{cc}
+-\frac{1}{4} & -\frac{\sqrt{3}}{4}\\
+\frac{\sqrt{3}}{4} & -\frac{1}{4}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+3\\
+\sqrt{3}
+\end{array}\right],\quad T_{4}(\mathbf{x})=\left[\begin{array}{cc}
+\frac{1}{4} & \frac{\sqrt{3}}{4}\\
+-\frac{\sqrt{3}}{4} & \frac{1}{4}
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+3\\
+\sqrt{3}
+\end{array}\right]\right\} 
+\]
+
+\end_inset
+
+Note: There are different possible literal descriptions of the transformations,
+ but the IFS itself is unique.
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -21833,9 +22185,201 @@ name "sol:rep-tiles-4"
 
 \end_inset
 
+Taking the literal descriptions from the solution of exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:rep-tiles-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and translating them to the required sequence:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow
+\end{array}$
+\end_inset
+
 
 \end_layout
 
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+none, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 0, 0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow\\
+\text{reflect about }x\text{-axis}\\
+\text{translate }(0,2\sqrt{3})
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 0, 0, 
+\begin_inset Formula $2\sqrt{3}\approx3.46410$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow\\
+\text{rotate }120^{\circ}\\
+\text{translate }(3,\sqrt{3})
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+none, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 120, 3, 
+\begin_inset Formula $\sqrt{3}\approx1.73205$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{array}{c}
+\text{scale }\frac{1}{2}\\
+\longrightarrow\\
+\text{reflect about }x\text{-axis}\\
+\text{rotate }-60^{\circ}\\
+\text{translate }(3,\sqrt{3})
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+-axis, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $-60$
+\end_inset
+
+, 3, 
+\begin_inset Formula $\sqrt{3}\approx1.73205$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A screenshot of this information in the rep-tile designer shows the correct
+ rep-tile, verifying that the transformations are correct.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/rep-tiles-67.jpg
+	lyxscale 25
+	height 4in
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -21853,8 +22397,121 @@ name "sol:rep-tiles-5"
 
 \end_inset
 
+Each part is labeled with its scale factor in the following diagram.
+ Each of the labeled sides generates one equation involving the scale factors
+ by the fact that the lengths of the two parts of each side must sum to
+ the length of the whole side.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-1.125in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/rep-tiles-68.pdf
+	lyxscale 25
+	width 2.7in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+5s_{1}+\sqrt{13}s_{2}=5\\
+2.6s_{2}+5s_{2}=\sqrt{13}\\
+2.6s_{3}+\sqrt{13}s_{2}=2.6
+\end{array}$
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+In matrix form, the system of equations is
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+5 & \sqrt{13} & 5\\
+0 & \frac{38}{5} & \sqrt{13}\\
+0 & \sqrt{13} & \frac{13}{5}
+\end{array}\right]\left[\begin{array}{c}
+s_{1}\\
+s_{2}\\
+s_{3}
+\end{array}\right]=\left[\begin{array}{c}
+5\\
+\sqrt{13}\\
+\frac{13}{5}
+\end{array}\right]
+\]
+
+\end_inset
+
+and can be solved using the code at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxNjk0Kg0AMhfeCdwi6Ge1gq1OhUDyCGwvdiIVB
+ZqjgT52Mpd6-sYp0keR7L5AXH25D-1ZgnwpwRqs618khg05a03yY4GdephxHY1ksAn7iKZW4HJfx5-4Y
+C1otrQpcp6BDeWSM0ozUyzS9ZUVwhZXI8uGuTKNnipd2_WHqYNArjpM0CndZy1aBlrUdDEJDfq9cBymi
+iOqhnbqeiT3Fw_iRwAGSEJMfoKCReRzLUxWG26qMN8YyWSj4AvTBTD4=&lang=sage&interacts=eJy
+LjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+.
+ The solution is 
+\begin_inset Formula $s_{1}=\frac{25}{38}$
+\end_inset
+
+, 
+\begin_inset Formula $s_{2}=\frac{5\sqrt{13}}{38}$
+\end_inset
+
+, 
+\begin_inset Formula $s_{3}=\frac{13}{38}$
+\end_inset
+
+.
+ Note: the code also verifies that the sum of the squares of the scale factors
+ 
+\begin_inset Formula $\left(s_{1}^{2}+2s_{2}^{2}+s_{3}^{2}\right)$
+\end_inset
+
+ is 1, evidence that the solution is correct.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
