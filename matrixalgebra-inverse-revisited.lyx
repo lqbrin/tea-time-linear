@@ -126,7 +126,17 @@ name "thm:determinant-of-product"
 
 \series default
 \shape default
- If 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of product|textidxthm
+\end_layout
+
+\end_inset
+
+If 
 \begin_inset Formula $A$
 \end_inset
 
@@ -298,9 +308,28 @@ As a direct consequence, we can relate the determinants of inverse matrices.
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!ofinverse
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!inverse algorithm
+\end_layout
+
+\end_inset
+
 There is more! The proof of theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -478,6 +507,16 @@ status open
 
 \backslash
 begin{digression}{Inverses via Row Reduction}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!inverse algorithm|textidxdig
 \end_layout
 
 \end_inset
@@ -744,6 +783,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvector!by row reduction
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "par:eigenvector-revisited"
@@ -827,7 +876,17 @@ an
 \begin_inset space ~
 \end_inset
 
-inverse if 
+inverse 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of inverse|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $M$
 \end_inset
 
@@ -851,7 +910,17 @@ a
 \begin_inset space ~
 \end_inset
 
-product if 
+product 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of product|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $A$
 \end_inset
 
@@ -883,7 +952,17 @@ row
 \begin_inset space ~
 \end_inset
 
-reduction if 
+reduction 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!inverse algorithm|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $A$
 \end_inset
 
@@ -913,7 +992,17 @@ row
 \begin_inset space ~
 \end_inset
 
-reduction if 
+reduction 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvector!by row reduction|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $\lambda$
 \end_inset
 

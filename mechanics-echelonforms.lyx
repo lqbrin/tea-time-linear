@@ -153,8 +153,8 @@ x+2y & =0\\
 \end_inset
 
 which has no solution.
- Even though the first equation has many solutons, the second equation will
- not be true for any values of 
+ Even though the first equation has many solutions, the second equation
+ will not be true for any values of 
 \begin_inset Formula $x$
 \end_inset
 
@@ -202,6 +202,26 @@ which has infinitely many solutions,
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!set
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The three associated linear systems have different types of solution sets.
  The first set of solutions contains exactly one element.
  The second set of solutions is empty.
@@ -279,7 +299,28 @@ corresponding to infinitely many solutions, no solution, and one solution.
 \end_inset
 
 s, the number of solutions of the associated systems will not change.
- This is the real power of row echelon form matrices.
+ This is the real power of row echelon form
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!row
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ matrices.
  
 \end_layout
 
@@ -346,7 +387,17 @@ all rows beneath the pivot
 \end_inset
 
 The leftmost nonzero entry in the second row is therefore a pivot position.
- The pivot positions of matrices (
+ The pivot positions
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pivot position
+\end_layout
+
+\end_inset
+
+ of matrices (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:2by3echelonforms"
@@ -509,13 +560,32 @@ A linear system with at least one solution is called
 \series bold
 consistent
 \series default
-, perhaps deriving from the fact that the equations do not contradict one
+,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!consistent
+\end_layout
+
+\end_inset
+
+ perhaps deriving from the fact that the equations do not contradict one
  another.
  A linear system with no solution is called 
 \series bold
 inconsistent
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!inconsistent
+\end_layout
+
+\end_inset
+
  If a row echelon form of its augmented matrix has a pivot in the last column,
  the linear system is inconsistent.
  Otherwise it is consistent.
@@ -562,7 +632,27 @@ All of the following augmented matrices are in row echelon form and are
 
 This is enough to know they all have infinitely many solutions, but writing
  down those solutions still takes a little work.
- 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!row
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -766,6 +856,36 @@ status open
 
 \backslash
 begin{digression}{Particular and Homogeneous Solutions}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!particular solution|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!homogeneous solution|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!general solution|textidxdig
 \end_layout
 
 \end_inset
@@ -1132,11 +1252,29 @@ ly, what are known as
 free variables
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+variable!free
+\end_layout
+
+\end_inset
+
  Variables represented by columns with pivots are called 
 \series bold
 basic variables
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+variable!basic
+\end_layout
+
+\end_inset
+
  Other forms of the solution may be obtained by letting different pairs
  of variables be the arbitrary ones or by making substitutions for the arbitrary
  
@@ -1189,7 +1327,17 @@ name "thm:linear-system-existence-uniqueness"
 [Existence and Uniqueness]
 \series default
 \shape default
- A linear system is consistent if and only if the rightmost column of its
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!existence and uniqueness of solutions|textidxthm
+\end_layout
+
+\end_inset
+
+A linear system is consistent if and only if the rightmost column of its
  augmented matrix representation is not a pivot column.
  Furthermore, a consistent system will have (a) exactly one solution if
  it admits no free variables; and (b) infinitely many solutions if it admits
@@ -1283,6 +1431,27 @@ noprefix "false"
 \end_inset
 
 ).
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!set
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1451,8 +1620,38 @@ basic
 \begin_inset space ~
 \end_inset
 
-variable a variable corresponding to the column of an augmented matrix with
- a pivot.
+variable 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+variable!basic|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basic variable|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{variable, basic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a variable corresponding to the column of an augmented matrix with a pivot.
 \end_layout
 
 \begin_layout Description
@@ -1460,16 +1659,124 @@ free
 \begin_inset space ~
 \end_inset
 
-variable a variable corresponding to the column of an augmented matrix with
- no pivot.
+variable 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+variable!free|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+free variable|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{variable, free}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a variable corresponding to the column of an augmented matrix with no pivot.
 \end_layout
 
 \begin_layout Description
-consistent having at least one solution.
+consistent
+\begin_inset space ~
+\end_inset
+
+(linear
+\begin_inset space ~
+\end_inset
+
+system) 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!consistent|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+consistent linear system|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{linear system, consistent}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+having at least one solution.
 \end_layout
 
 \begin_layout Description
-inconsistent having no solution.
+inconsistent
+\begin_inset space ~
+\end_inset
+
+(linear
+\begin_inset space ~
+\end_inset
+
+system) 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!inconsistent|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inconsistent linear system|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{linear system, inconsistent}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+having no solution.
 \end_layout
 
 \begin_layout Description
@@ -1493,7 +1800,7 @@ solutions
 \begin_inset space ~
 \end_inset
 
-of
+(for
 \begin_inset space ~
 \end_inset
 
@@ -1501,7 +1808,59 @@ linear
 \begin_inset space ~
 \end_inset
 
-systems see theorem 
+systems) 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!existence and uniqueness of solutions|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+existence|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{linear system, existence and uniqueness of solutions}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+uniqueness|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{linear system, existence and uniqueness of solutions}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+see theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:linear-system-existence-uniqueness"
@@ -1523,7 +1882,17 @@ vector
 \begin_inset space ~
 \end_inset
 
-form a linear combination of vectors.
+form 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+parametric vector form|textidxkey
+\end_layout
+
+\end_inset
+
+a linear combination of vectors.
 \end_layout
 
 \begin_layout Description
@@ -1539,7 +1908,17 @@ echelon
 \begin_inset space ~
 \end_inset
 
-form of a matrix is unique.
+form 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!reduced row|textidxkey
+\end_layout
+
+\end_inset
+
+of a matrix is unique.
 \end_layout
 
 \begin_layout Standard

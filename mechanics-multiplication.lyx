@@ -784,7 +784,7 @@ row vector
 status open
 
 \begin_layout Plain Layout
-vector!row|textit
+vector!row|textidxdig
 \end_layout
 
 \end_inset
@@ -842,7 +842,7 @@ begin{digression}{Ring}
 status open
 
 \begin_layout Plain Layout
-ring|textit
+ring|textidxdig
 \end_layout
 
 \end_inset
@@ -1047,7 +1047,7 @@ matrix
 status open
 
 \begin_layout Plain Layout
-matrix!row|textbf
+matrix!row|textidxkey
 \end_layout
 
 \end_inset
@@ -1065,7 +1065,7 @@ matrix
 status open
 
 \begin_layout Plain Layout
-matrix!column|textbf
+matrix!column|textidxkey
 \end_layout
 
 \end_inset
@@ -1083,7 +1083,7 @@ vector
 status open
 
 \begin_layout Plain Layout
-vector!column|textbf
+vector!column|textidxkey
 \end_layout
 
 \end_inset
@@ -1101,7 +1101,7 @@ vector
 status open
 
 \begin_layout Plain Layout
-vector!row|textbf
+vector!row|textidxkey
 \end_layout
 
 \end_inset
@@ -1119,7 +1119,7 @@ multiplication
 status open
 
 \begin_layout Plain Layout
-matrix!multiplication|textbf
+matrix!multiplication|textidxkey
 \end_layout
 
 \end_inset
@@ -1130,6 +1130,48 @@ status open
 
 \begin_layout Plain Layout
 multiplication!matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, multiplication}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!product
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, multiplication}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+product!matrix
 \begin_inset ERT
 status open
 
@@ -1229,7 +1271,7 @@ transpose
 status open
 
 \begin_layout Plain Layout
-matrix!transpose|textbf
+matrix!transpose|textidxkey
 \end_layout
 
 \end_inset
@@ -1296,7 +1338,7 @@ vector
 status open
 
 \begin_layout Plain Layout
-vector|textbf
+vector|textidxkey
 \end_layout
 
 \end_inset
@@ -1314,7 +1356,7 @@ product
 status open
 
 \begin_layout Plain Layout
-dot product|textbf
+dot product|textidxkey
 \end_layout
 
 \end_inset

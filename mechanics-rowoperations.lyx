@@ -108,6 +108,16 @@ name "sec:Systems-of-Linear"
 \end_inset
 
 Systems of Linear Equations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -166,7 +176,7 @@ begin{digression}{Yanghui Triangle}
 status open
 
 \begin_layout Plain Layout
-Yanghui triangle|textit
+Yanghui triangle|textidxdig
 \end_layout
 
 \end_inset
@@ -1148,7 +1158,7 @@ matrix
 status open
 
 \begin_layout Plain Layout
-matrix!elementary (row)|textbf
+matrix!elementary (row)|textidxkey
 \end_layout
 
 \end_inset
@@ -1192,7 +1202,7 @@ operation
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation|textbf
+elementary (row) operation|textidxkey
 \end_layout
 
 \end_inset
@@ -1210,7 +1220,7 @@ equation
 status open
 
 \begin_layout Plain Layout
-linear equation|textbf
+linear equation|textidxkey
 \end_layout
 
 \end_inset
@@ -1244,7 +1254,7 @@ system
 status open
 
 \begin_layout Plain Layout
-linear system|textbf
+linear system|textidxkey
 \end_layout
 
 \end_inset
@@ -1262,7 +1272,7 @@ swap
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!swap|textbf
+elementary (row) operation!swap|textidxkey
 \end_layout
 
 \end_inset
@@ -1280,7 +1290,7 @@ scale
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!scale|textbf
+elementary (row) operation!scale|textidxkey
 \end_layout
 
 \end_inset
@@ -1298,7 +1308,7 @@ replace
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!replace|textbf
+elementary (row) operation!replace|textidxkey
 \end_layout
 
 \end_inset
@@ -1345,7 +1355,28 @@ system
 status open
 
 \begin_layout Plain Layout
-linear system!solution|textbf
+linear system!solution|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!linear system
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear system, solution}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1379,7 +1410,28 @@ equation
 status open
 
 \begin_layout Plain Layout
-linear equation!solution|textbf
+linear equation!solution|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!linear equation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear equation, solution}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

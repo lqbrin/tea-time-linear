@@ -719,7 +719,7 @@ vectors
 status open
 
 \begin_layout Plain Layout
-vector!geometric interpretation|textbf
+vector!geometric interpretation|textidxkey
 \end_layout
 
 \end_inset
@@ -749,7 +749,7 @@ sum
 status open
 
 \begin_layout Plain Layout
-vector!addition|textbf
+vector!addition|textidxkey
 \end_layout
 
 \end_inset
@@ -785,7 +785,7 @@ length
 status open
 
 \begin_layout Plain Layout
-vector!length|textbf
+vector!length|textidxkey
 \end_layout
 
 \end_inset
@@ -815,7 +815,7 @@ orthogonal
 status open
 
 \begin_layout Plain Layout
-orthogonal|textbf
+orthogonal|textidxkey
 \end_layout
 
 \end_inset
@@ -850,7 +850,7 @@ distance
 status open
 
 \begin_layout Plain Layout
-distance|textbf
+distance|textidxkey
 \end_layout
 
 \end_inset
@@ -860,7 +860,7 @@ distance|textbf
 status open
 
 \begin_layout Plain Layout
-vector!subtraction|textbf
+vector!subtraction|textidxkey
 \end_layout
 
 \end_inset

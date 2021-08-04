@@ -200,7 +200,7 @@ binary operator
 status open
 
 \begin_layout Plain Layout
-operator!binary
+operator!binary|textidxdig
 \end_layout
 
 \end_inset
@@ -840,7 +840,7 @@ begin{digression}{Fields}
 status open
 
 \begin_layout Plain Layout
-field|textit
+field|textidxdig
 \end_layout
 
 \end_inset
@@ -907,7 +907,7 @@ operator
 status open
 
 \begin_layout Plain Layout
-operator!binary|textbf
+operator!binary|textidxkey
 \end_layout
 
 \end_inset
@@ -925,7 +925,7 @@ addition
 status open
 
 \begin_layout Plain Layout
-matrix!addition|textbf
+matrix!addition|textidxkey
 \end_layout
 
 \end_inset
@@ -1022,7 +1022,7 @@ subtraction
 status open
 
 \begin_layout Plain Layout
-matrix!subtraction|textbf
+matrix!subtraction|textidxkey
 \end_layout
 
 \end_inset
@@ -1128,7 +1128,7 @@ scalar
 status open
 
 \begin_layout Plain Layout
-scalar|textbf
+scalar|textidxkey
 \end_layout
 
 \end_inset
@@ -1146,7 +1146,7 @@ multiplication
 status open
 
 \begin_layout Plain Layout
-multiplication!scalar|textbf
+multiplication!scalar|textidxkey
 \end_layout
 
 \end_inset
@@ -1164,6 +1164,48 @@ multiplication!scalar|textbf
 \uwave off
 \noun off
 \color none
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+product!scalar
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{multiplication, scalar}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+scalar!product
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{multiplication, scalar}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 For any matrix 
 \begin_inset Formula $A$
 \end_inset

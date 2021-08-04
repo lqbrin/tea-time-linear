@@ -178,6 +178,16 @@ begin{digression}{Dictionary Definition}
 \end_inset
 
 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix|textidxdig
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -236,16 +246,6 @@ usu.
 
 \shape default
  delimited by parentheses or square brackets.
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-matrix|textit
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -442,7 +442,7 @@ begin{digression}{Other Notations for Entries}
 status open
 
 \begin_layout Plain Layout
-matrix!entry|textit
+matrix!entry|textidxdig
 \end_layout
 
 \end_inset
@@ -1370,7 +1370,7 @@ matrix
 status open
 
 \begin_layout Plain Layout
-matrix|textbf
+matrix|textidxkey
 \end_layout
 
 \end_inset
@@ -1390,7 +1390,7 @@ entry
 status open
 
 \begin_layout Plain Layout
-matrix!entry|textbf
+matrix!entry|textidxkey
 \end_layout
 
 \end_inset
@@ -1408,7 +1408,7 @@ size
 status open
 
 \begin_layout Plain Layout
-matrix!size|textbf
+matrix!size|textidxkey
 \end_layout
 
 \end_inset
@@ -1434,7 +1434,7 @@ equality
 status open
 
 \begin_layout Plain Layout
-matrix!equality|textbf
+matrix!equality|textidxkey
 \end_layout
 
 \end_inset
@@ -1449,7 +1449,7 @@ submatrix
 status open
 
 \begin_layout Plain Layout
-submatrix|textbf
+submatrix|textidxkey
 \end_layout
 
 \end_inset
@@ -1460,12 +1460,33 @@ The matrix resulting from deleting some number of rows (less than the total
 \end_layout
 
 \begin_layout Description
-Notation 
+notation 
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-matrix!notation|textbf
+matrix!notation|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+notation!matrix|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{matrix, notation}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1662,7 +1683,7 @@ instantiation
 status open
 
 \begin_layout Plain Layout
-instantiation|textit
+instantiation|textidxdig
 \end_layout
 
 \end_inset
@@ -2271,7 +2292,7 @@ SageMath statements may be nested
 status open
 
 \begin_layout Plain Layout
-SageMath!nested statement|textit
+SageMath!nested statement|textidxdig
 \end_layout
 
 \end_inset

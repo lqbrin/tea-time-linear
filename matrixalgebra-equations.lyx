@@ -601,6 +601,16 @@ noprefix "false"
 \end_inset
 
  is the additive identity, we can proceed as follows.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+addition!property of equality
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align*}
 0 & =A-B\\
@@ -636,6 +646,16 @@ Equally critical to the second solution above is the principle that for
 \end_inset
 
  
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+multiplication!property of equality
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \text{if }A=B\text{ then }CA=CB\label{eq:multiplication-property-of-equality-part-1}
@@ -804,6 +824,27 @@ ng the other.
 
 \begin_layout Subsection
 The most important equation in linear algebra
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!matrix form
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -934,6 +975,16 @@ noprefix "false"
 \end_inset
 
  can be computed as
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!multiplication
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 (BA)_{r,:}=B_{r,1}A_{1,:}+B_{r,2}A_{2,:}+\cdots+B_{r,n}A_{n,:}.\label{eq:matrix-prod-as-lin-comb-of-rows}
@@ -1275,6 +1326,16 @@ In other words, column
 
 .
  In short,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!multiplication
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 (BA)_{:,c}=A_{1,c}B_{:,1}+A_{2,c}B_{:,2}+\cdots+A_{n,c}B_{:,n}.\label{eq:matrix-prod-as-lin-comb-of-cols}
@@ -1372,6 +1433,15 @@ Letting
 nontrivial solution
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!nontrivial
+\end_layout
+
+\end_inset
+
  Finally, we add 
 \end_layout
 
@@ -1447,6 +1517,27 @@ M & \mathbf{b}\end{array}\right]$
 \begin_layout Standard
 Wow.
  Apparently there are six ways of understanding the same phenomenon.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!matrix form
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1466,7 +1557,17 @@ of
 \begin_inset space ~
 \end_inset
 
-equality for all matrices 
+equality 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+addition!property of equality|textidxkey
+\end_layout
+
+\end_inset
+
+for all matrices 
 \begin_inset Formula $A,B,C$
 \end_inset
 
@@ -1498,7 +1599,17 @@ of
 \begin_inset space ~
 \end_inset
 
-equality for all matrices 
+equality 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+multiplication!property of equality|textidxkey
+\end_layout
+
+\end_inset
+
+for all matrices 
 \begin_inset Formula $A,B,C$
 \end_inset
 
@@ -1534,7 +1645,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-system if 
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!matrix form|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -1587,7 +1708,17 @@ of
 \begin_inset space ~
 \end_inset
 
-rows given matrices 
+rows 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!multiplication|textidxkey
+\end_layout
+
+\end_inset
+
+given matrices 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1659,7 +1790,17 @@ of
 \begin_inset space ~
 \end_inset
 
-columns given matrices 
+columns 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!multiplication|textidxkey
+\end_layout
+
+\end_inset
+
+given matrices 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1724,7 +1865,38 @@ nontrivial
 \begin_inset space ~
 \end_inset
 
-solution a solution 
+solution 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!nontrivial|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nontrivial solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{solution, nontrivial}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a solution 
 \begin_inset Formula $\mathbf{v}\neq\mathbf{0}$
 \end_inset
 
@@ -1752,7 +1924,17 @@ of
 \begin_inset space ~
 \end_inset
 
-equality for all matrices 
+equality 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+multiplication!property of equality|textidxkey
+\end_layout
+
+\end_inset
+
+for all matrices 
 \begin_inset Formula $A,B,C$
 \end_inset
 

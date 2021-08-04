@@ -155,7 +155,17 @@ name "thm:Matrix-Characterization-2"
 
 \series default
 \shape default
- Suppose 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of|textidxthm
+\end_layout
+
+\end_inset
+
+Suppose 
 \begin_inset Formula $M$
 \end_inset
 
@@ -643,6 +653,25 @@ Hence
 
 \begin_layout Standard
 The justification for many of the upcoming claims relies heavily on induction
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+induction
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+proof technique!induction
+\end_layout
+
+\end_inset
+
  (see axiom 5 of crumpet 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -717,10 +746,30 @@ An
 \series bold
 upper triangular matrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!upper triangular
+\end_layout
+
+\end_inset
+
  is one in which all entries below the main diagonal are zero, and a 
 \series bold
 lower triangular matrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!lower triangular
+\end_layout
+
+\end_inset
+
  is one in which all entries above the main diagonal are zero.
  Using 
 \begin_inset Formula $\star$
@@ -779,6 +828,16 @@ The determinant of a lower triangular matrix is the product of the entries
  about why this is true in general.
  We will prove it by induction, but the proof may not resonate with you
  the way your own thoughts about it will.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of lower triangular matrix
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Claim*
@@ -946,6 +1005,27 @@ noprefix "false"
 
  request a proof that the determinant of a square upper triangular matrix
  is also the product of the entries on the main diagonal.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -961,7 +1041,17 @@ of
 \begin_inset space ~
 \end_inset
 
-matrices see theorem 
+matrices 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of|textidxkey
+\end_layout
+
+\end_inset
+
+see theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Matrix-Characterization-2"
@@ -983,7 +1073,38 @@ triangular
 \begin_inset space ~
 \end_inset
 
-matrix a matrix in which all entries below the main diagonal are zero.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!upper triangular|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+upper triangular matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, upper triangular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a matrix in which all entries below the main diagonal are zero.
 \end_layout
 
 \begin_layout Description
@@ -995,7 +1116,38 @@ triangular
 \begin_inset space ~
 \end_inset
 
-matrix a matrix in which all entries above the main diagonal are zero.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!lower triangular|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+lower triangular matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, lower triangular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a matrix in which all entries above the main diagonal are zero.
 \end_layout
 
 \begin_layout Description
@@ -1023,7 +1175,17 @@ triangular
 \begin_inset space ~
 \end_inset
 
-matrix the product of the entries on the main diagonal.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of lower triangular matrix|textidxkey
+\end_layout
+
+\end_inset
+
+the product of the entries on the main diagonal.
 \end_layout
 
 \begin_layout Description
@@ -1051,7 +1213,17 @@ triangular
 \begin_inset space ~
 \end_inset
 
-matrix the product of the entries on the main diagonal.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of upper triangular matrix|textidxkey
+\end_layout
+
+\end_inset
+
+the product of the entries on the main diagonal.
 \end_layout
 
 \begin_layout Description
@@ -1063,9 +1235,50 @@ by
 \begin_inset space ~
 \end_inset
 
-induction showing that (i) the claim is true for some particular integer,
- and (ii) if the claim is true for some integer at least as large, then
- it is also true for the next integer.
+induction 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+induction|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+proof technique!induction|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+induction!proof by
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{induction}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+showing that (i) the claim is true for some particular integer, and (ii)
+ if the claim is true for some integer at least as large, then it is also
+ true for the next integer.
  These together prove that the claim is true for all integers greater than
  or equal to the particular integer of part (i).
 \end_layout
@@ -2292,6 +2505,15 @@ Prove that if
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of upper triangular matrix|textidxkey
+\end_layout
+
+\end_inset
+
  HINT: Use the facts proven in exercises 
 \begin_inset CommandInset ref
 LatexCommand ref

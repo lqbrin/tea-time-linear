@@ -96,6 +96,27 @@ name "sec:Characterization-Square-Matrices"
 \end_inset
 
 Characterization of Square Matrices
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -238,6 +259,15 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!algorithm
+\end_layout
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $M$
 \end_inset
@@ -545,7 +575,17 @@ begin{digression}{Proving Real Numbers are Equal}
 
 \end_inset
 
-Every so often, it is convenient to prove that two real numbers, 
+Every
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+proof technique!real numbers are equal|textidxdig
+\end_layout
+
+\end_inset
+
+ so often, it is convenient to prove that two real numbers, 
 \begin_inset Formula $x$
 \end_inset
 
@@ -674,7 +714,17 @@ name "thm:Invertible-Matrix-Theorem"
 
 \series default
 \shape default
- Suppose 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of|textidxthm
+\end_layout
+
+\end_inset
+
+Suppose 
 \begin_inset Formula $M$
 \end_inset
 
@@ -976,6 +1026,27 @@ noprefix "false"
  that one row of a matrix could only be written as a linear combination
  of the others when the determinant of the matrix was zero, you were correct,
  and we finally have the theory to support it.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1006,6 +1077,27 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -1025,8 +1117,17 @@ the
 \begin_inset space ~
 \end_inset
 
-determinant reduce the matrix to row echelon form, noting the row operations
- used.
+determinant 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!algorithm|textidxkey
+\end_layout
+
+\end_inset
+
+reduce the matrix to row echelon form, noting the row operations used.
  The product of the determinants of the inverses of the associated elementary
  matrices with the determinant of the reduced matrix is the desired determinant.
 \end_layout

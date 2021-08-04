@@ -105,6 +105,27 @@ name "sec:Linear-Independence"
 \end_inset
 
 Linear Independence
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear independence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -433,6 +454,15 @@ where not all the
 nontrivial solution
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nontrivial solution
+\end_layout
+
+\end_inset
+
  Otherwise the objects 
 \begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
 \end_inset
@@ -512,8 +542,17 @@ so the third column is a linear combination of the first two.
 
 \end_inset
 
-a nontrivial linear combination (not all of the coefficients are zero) of
- the columns that sums to 0.
+a nontrivial linear combination
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nontrivial linear combination
+\end_layout
+
+\end_inset
+
+ (not all of the coefficients are zero) of the columns that sums to 0.
  No fanfare.
  No notes of special cases.
  The definition of linear dependence is clean and direct.
@@ -521,6 +560,27 @@ a nontrivial linear combination (not all of the coefficients are zero) of
 
 \begin_layout Subsection
 Matrix Characterization Part 1
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -543,6 +603,16 @@ name "thm:Matrix-Characterization-1"
 
 \series default
 \shape default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of|textidxthm
+\end_layout
+
+\end_inset
+
  Suppose 
 \begin_inset Formula $M$
 \end_inset
@@ -614,6 +684,16 @@ No column of
 \end_inset
 
  has only the trivial solution.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+trivial solution
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -656,12 +736,41 @@ There is a matrix
 \end_deeper
 \begin_layout Standard
 \noindent
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+equivalent statements
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The following list of arguments will show that if one of the statements
  is true, so is another...and if that one is true so is a third...and if that
  one is true so is the next...and so on until all the statements have been
  justified.
  Such a series of justifications means that if the first statement is true,
  they are all true since they all followed logically from the first.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+proof technique!equivalent statements
+\end_layout
+
+\end_inset
+
  Proving they are equivalent requires one more step.
  The last statement will be shown to imply the first, completing a logical
  path from any one of the statements to any other.
@@ -682,6 +791,16 @@ status open
 
 \backslash
 begin{digression}{Proof by Contraposition}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+proof technique!contraposition|textidxdig
 \end_layout
 
 \end_inset
@@ -1176,6 +1295,48 @@ v_{1} & v_{2} & \cdots & v_{n}\end{array}\right]^{T}$
 \begin_layout Standard
 Later, we will see that the determinant, row equivalence, invertibility,
  and function concepts are also directly connected to these statements.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+equivalent statements
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear independence
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1191,7 +1352,38 @@ of
 \begin_inset space ~
 \end_inset
 
-matrices see theorem 
+matrices 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!characterization of|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+characterization!matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, characterization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+see theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Matrix-Characterization-1"
@@ -1209,8 +1401,38 @@ equivalent
 \begin_inset space ~
 \end_inset
 
-statements a list of statements such that if one of them is true they are
- all true.
+statements 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+equivalent statements|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+statements!equivalent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{equivalent statements}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a list of statements such that if one of them is true they are all true.
 \end_layout
 
 \begin_layout Description
@@ -1218,7 +1440,38 @@ linearly
 \begin_inset space ~
 \end_inset
 
-dependent objects 
+dependent 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear dependence|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dependence!linear
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear independence}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+objects 
 \begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
 \end_inset
 
@@ -1234,7 +1487,38 @@ linearly
 \begin_inset space ~
 \end_inset
 
-independent objects 
+independent 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear independence|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+independence!linear
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear independence}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+objects 
 \begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
 \end_inset
 
@@ -1279,7 +1563,38 @@ linear
 \begin_inset space ~
 \end_inset
 
-combination a linear combination in which not all the coefficients are zero.
+combination 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear combination!nontrivial|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nontrivial linear combination
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear combination!nontrivial}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+a linear combination in which not all the coefficients are zero.
 \end_layout
 
 \begin_layout Description
@@ -1287,7 +1602,38 @@ nontrivial
 \begin_inset space ~
 \end_inset
 
-solution any solution 
+solution 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!nontrivial|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nontrivial solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{solution!nontrivial}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+any solution 
 \begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
 \end_inset
 
@@ -1307,7 +1653,38 @@ trivial
 \begin_inset space ~
 \end_inset
 
-solution the solution 
+solution 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!trivial|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+trivial solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{solution!nontrivial}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+the solution 
 \begin_inset Formula $x_{1}=x_{2}=\cdots=x_{n}=0$
 \end_inset
 

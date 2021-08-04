@@ -92,10 +92,31 @@ name "sec:Row-Reduction"
 \end_inset
 
 Row Reduction
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+row reduction
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The system associated with an augmented matrix of the form
+The system associated with a  matrix of the form
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
@@ -122,7 +143,7 @@ y & =5
 \end_inset
 
 (though you may have imagined different variables).
- The system is solved! The system corresponding to the augmented matrix
+ The system is solved! The system corresponding to the matrix
 \begin_inset Formula 
 \[
 \left[\begin{array}{ccc}
@@ -178,11 +199,29 @@ Step
 pivot column
 \series default
 .
- The topmost position in this column is a 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pivot!column
+\end_layout
+
+\end_inset
+
+ The topmost position (row and column) in this column is a 
 \series bold
 pivot position
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pivot!position
+\end_layout
+
+\end_inset
+
  If no such column exists or there are no rows below the pivot position,
  continue to step 5.
 \end_layout
@@ -196,12 +235,32 @@ Step
 \series bold
 swap
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!swap
+\end_layout
+
+\end_inset
+
  rows so the entry in the pivot position is nonzero.
  This nonzero entry is a 
 \series bold
 pivot
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pivot
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -213,6 +272,16 @@ Step
 \series bold
 Replace
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!replace
+\end_layout
+
+\end_inset
+
  rows until all entries in the pivot column below the pivot are 0.
 \end_layout
 
@@ -242,7 +311,21 @@ Step
 \begin_inset space ~
 \end_inset
 
-6: Scale the row with the pivot so the pivot in that row is 1.
+6: 
+\series bold
+Scale
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) operation!scale
+\end_layout
+
+\end_inset
+
+ the row with the pivot so the pivot in that row is 1.
 \end_layout
 
 \begin_layout Description
@@ -264,6 +347,15 @@ Translating the resulting matrix back into a system of equations reveals
 row echelon form
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!row
+\end_layout
+
+\end_inset
+
  The system corresponding to a matrix in row echelon form can be solved
  by back-substitution, so these steps of the algorithm are often sufficient.
  Any matrix produced by the completion of the entire algorithm is said to
@@ -272,6 +364,15 @@ row echelon form
 reduced row echelon form
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!reduced row
+\end_layout
+
+\end_inset
+
  The system corresponding to a matrix in reduced row echelon form is solved.
 \end_layout
 
@@ -297,7 +398,17 @@ begin{digression}{Automated Row Reduction}
 
 \end_inset
 
-A computer programmed to perform row reduction will have to make choices
+A
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+row reduction!automated|textidxdig
+\end_layout
+
+\end_inset
+
+ computer programmed to perform row reduction will have to make choices
  just as a human working by hand would.
  However, the objectives of a computer are slightly different from the objective
 s of a human.
@@ -517,7 +628,7 @@ by row reduction.
  The following discussion charts the progress of three different approaches—(1)
  using fractions, (2) avoiding fractions by scaling non-pivot rows, and
  (3) avoiding fractions by scaling and swapping.
- All three approaches start from the augmented matrix
+ All three approaches start from the matrix
 \begin_inset Formula 
 \[
 A=\left[\begin{array}{cccc}
@@ -2390,6 +2501,15 @@ A matrix containing the coefficients and constants of a linear system (one
 augmented matrix
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!augmented
+\end_layout
+
+\end_inset
+
  A matrix containing the coefficients of a linear system (one row for each
  equation and one column for the coefficients of each variable, as usual)
  but not the constants is called a 
@@ -2397,6 +2517,15 @@ augmented matrix
 coefficient matrix
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!coefficient
+\end_layout
+
+\end_inset
+
  The coefficient matrix for any linear system is a submatrix of the correspondin
 g augmented matrix.
  The augmented matrix simply has one more column—the column of constants
@@ -2484,11 +2613,30 @@ noprefix "false"
 homogeneous system
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!homogeneous
+\end_layout
+
+\end_inset
+
  Otherwise it is called a 
 \series bold
 nonhomogeneous system
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!nonhomogeneous
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2511,6 +2659,27 @@ status open
 
 \backslash
 end{digression}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+row reduction
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2540,8 +2709,39 @@ augmented
 \begin_inset space ~
 \end_inset
 
-matrix A matrix holding a particular arrangement of all the coefficients
- and constants of a linear system.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!augmented|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+augmented matrix|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{matrix, augmented}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+A matrix holding a particular arrangement of all the coefficients and constants
+ of a linear system.
 \end_layout
 
 \begin_layout Description
@@ -2549,8 +2749,39 @@ coefficient
 \begin_inset space ~
 \end_inset
 
-matrix A matrix holding a particular arrangement of all the coefficients
- but none of the constants of a linear system.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!coefficient|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coefficient matrix|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{matrix, coefficient}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+A matrix holding a particular arrangement of all the coefficients but none
+ of the constants of a linear system.
 \end_layout
 
 \begin_layout Description
@@ -2558,7 +2789,38 @@ homogeneous
 \begin_inset space ~
 \end_inset
 
-system A linear system with constants all equal to zero.
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!homogeneous|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+homogeneous linear system|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{linear system, homogeneous}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+A linear system with constants all equal to zero.
 \end_layout
 
 \begin_layout Description
@@ -2566,7 +2828,88 @@ nonhomogeneous
 \begin_inset space ~
 \end_inset
 
-system A linear system with at least one nonzero constant.
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!nonhomogeneous|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nonhomogeneous linear system|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{linear system, nonhomogeneous}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+A linear system with at least one nonzero constant.
+\end_layout
+
+\begin_layout Description
+pivot 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pivot|textidxkey
+\end_layout
+
+\end_inset
+
+the leading entry of a matrix in echelon form
+\end_layout
+
+\begin_layout Description
+pivot
+\begin_inset space ~
+\end_inset
+
+column 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pivot!column|textidxkey
+\end_layout
+
+\end_inset
+
+a column containing a pivot
+\end_layout
+
+\begin_layout Description
+pivot
+\begin_inset space ~
+\end_inset
+
+position 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pivot!position|textidxkey
+\end_layout
+
+\end_inset
+
+the row and column of a pivot
 \end_layout
 
 \begin_layout Description
@@ -2574,9 +2917,19 @@ row
 \begin_inset space ~
 \end_inset
 
-reduction The process of using elementary row operations to transform a
- matrix whose associated linear system is not solved into one whose associated
- linear system is either solved or could be solved by back-substitution.
+reduction 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+row reduction|textidxkey
+\end_layout
+
+\end_inset
+
+The process of using elementary row operations to transform a matrix whose
+ associated linear system is not solved into one whose associated linear
+ system is either solved or could be solved by back-substitution.
 \end_layout
 
 \begin_layout Description
@@ -2588,8 +2941,39 @@ echelon
 \begin_inset space ~
 \end_inset
 
-form An arrangement of the entries of a matrix following completion of the
- first four steps of the row reduction algorithm.
+form 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!row|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+row echelon form|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{echelon form, row}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+An arrangement of the entries of a matrix following completion of the first
+ four steps of the row reduction algorithm.
 \end_layout
 
 \begin_layout Description
@@ -2605,8 +2989,39 @@ echelon
 \begin_inset space ~
 \end_inset
 
-form An arrangement of the entries of a matrix following completion of the
- row reduction algorithm.
+form 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!reduced row|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+reduced row echelon form|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{echelon form, reduced row}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+An arrangement of the entries of a matrix following completion of the row
+ reduction algorithm.
 \end_layout
 
 \begin_layout Standard

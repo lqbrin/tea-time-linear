@@ -641,7 +641,7 @@ name "dig:nonsquare-inverses"
 status open
 
 \begin_layout Plain Layout
-matrix!inverse|textit
+matrix!inverse|textidxdig
 \end_layout
 
 \end_inset
@@ -1375,7 +1375,7 @@ begin{digression}{Lester S.
 status open
 
 \begin_layout Plain Layout
-Hill, Lester S.|textit
+Hill, Lester S.|textidxdig
 \end_layout
 
 \end_inset
@@ -1470,7 +1470,7 @@ adjugate
 status open
 
 \begin_layout Plain Layout
-adjugate|textbf
+adjugate|textidxkey
 \end_layout
 
 \end_inset
@@ -1488,7 +1488,7 @@ matrix
 status open
 
 \begin_layout Plain Layout
-matrix!identity|textbf
+matrix!identity|textidxkey
 \end_layout
 
 \end_inset
@@ -1527,7 +1527,7 @@ inverse
 status open
 
 \begin_layout Plain Layout
-matrix!inverse|textbf
+matrix!inverse|textidxkey
 \end_layout
 
 \end_inset
@@ -1599,7 +1599,7 @@ invertible
 status open
 
 \begin_layout Plain Layout
-matrix!invertible|textbf
+matrix!invertible|textidxkey
 \end_layout
 
 \end_inset
@@ -1638,7 +1638,7 @@ diagonal
 status open
 
 \begin_layout Plain Layout
-main diagonal|textbf
+main diagonal|textidxkey
 \end_layout
 
 \end_inset

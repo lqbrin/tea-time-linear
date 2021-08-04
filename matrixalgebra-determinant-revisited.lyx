@@ -142,7 +142,28 @@ Tell me your latest number, and I'll tell you your starting number.
 \end_layout
 
 \begin_layout Standard
-Matrices and row operations work in a similar fashion 
+Matrices
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) matrix!inverse
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and row operations work in a similar fashion 
 \begin_inset Formula $\ldots$
 \end_inset
 
@@ -451,9 +472,50 @@ Multiplying the operation matrix by the inverse matrix will verify the inverse
  pairs.
  Each elementary matrix has an inverse elementary matrix of the same type,
  and in the case of a row swap, the elementary matrix is its own inverse.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) matrix!inverse
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) matrix!determinant
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 Now notice a couple of things about the determinants:
 \begin_inset Formula 
 \[
@@ -485,8 +547,18 @@ Now notice a couple of things about the determinants:
 
 \end_inset
 
-Come to think of it, the determinant of a scale matrix will always be the
- scale factor! Can you justify this claim? Answer on page 
+Come to think of it, the determinant of a scale matrix
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of scale matrix
+\end_layout
+
+\end_inset
+
+ will always be the scale factor! Can you justify this claim? Answer on
+ page 
 \begin_inset CommandInset ref
 LatexCommand pageref
 reference "ans:determinant-scale-matrix"
@@ -498,6 +570,15 @@ noprefix "false"
 
 .
  Wait a minute! the determinant of a replace matrix is always 1.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of replacement matrix
+\end_layout
+
+\end_inset
+
  Can you justify this claim? Answer on page 
 \begin_inset CommandInset ref
 LatexCommand pageref
@@ -517,7 +598,17 @@ Is the determinant of a swap matrix always
 \begin_inset Formula $-1$
 \end_inset
 
-? There is no such thing as a swap matrix with one row.
+?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of swap matrix
+\end_layout
+
+\end_inset
+
+ There is no such thing as a swap matrix with one row.
  There is only one swap matrix with two rows:
 \begin_inset Formula 
 \[
@@ -572,7 +663,38 @@ begin{digression}{Binomial Coefficients}
 
 \end_inset
 
-The number of swap matrices with 
+The
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+binomial coefficient|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coefficient!binomial
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{binomial coefficient}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ number of swap matrices with 
 \begin_inset Formula $n$
 \end_inset
 
@@ -727,6 +849,15 @@ for any
 .
  This formula implies that determinants may be computed by expanding along
  any row or any column, not just the first row.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!by expansion
+\end_layout
+
+\end_inset
+
  To illustrate,
 \end_layout
 
@@ -1229,7 +1360,17 @@ noprefix "false"
 \end_inset
 
 .
- Proceeding by induction, assume that for some 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of swap matrix
+\end_layout
+
+\end_inset
+
+Proceeding by induction, assume that for some 
 \begin_inset Formula $k\geq2$
 \end_inset
 
@@ -1342,6 +1483,16 @@ status open
 begin{digression}{Proof of Formula (
 \backslash
 ref{eq:determinant-general-expansion})}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!by expansion|textidxdig
 \end_layout
 
 \end_inset
@@ -1528,6 +1679,15 @@ by applying properties 3, 4, and 2, respectively.
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of swap matrix|textidxdig
+\end_layout
+
+\end_inset
+
  
 \shape italic
 Proof:
@@ -2579,10 +2739,30 @@ the determinant of a swap matrix is
 \end_inset
 
 ,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of swap matrix
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 the determinant of a scale matrix is the scale factor, and
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of scale matrix
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2591,6 +2771,16 @@ the determinant of a replace matrix is
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of replacement matrix
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2654,6 +2844,16 @@ for any square matrix
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of transpose
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2781,6 +2981,16 @@ The relevance of all these observations is mounting evidence that
 
  is a scale matrix.
  We are only missing this fact for elementary replacement matrices.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of replacement matrix
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3047,6 +3257,27 @@ Therefore,
 \end_inset
 
  is a replacement matrix.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary (row) matrix!determinant
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3058,7 +3289,17 @@ elementary
 \begin_inset space ~
 \end_inset
 
-matrices are invertible and 
+matrices 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!elementary (row)|textidxkey
+\end_layout
+
+\end_inset
+
+are invertible and 
 \begin_inset Formula $\det(EA)=\det E\cdot\det A$
 \end_inset
 
@@ -3082,7 +3323,17 @@ by
 \begin_inset space ~
 \end_inset
 
-expansion the determinant of an 
+expansion 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!by expansion|textidxkey
+\end_layout
+
+\end_inset
+
+the determinant of an 
 \begin_inset Formula $n\times n$
 \end_inset
 
@@ -3123,7 +3374,17 @@ replacement
 \begin_inset space ~
 \end_inset
 
-matrix if 
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of replacement matrix|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $E$
 \end_inset
 
@@ -3147,7 +3408,17 @@ swap
 \begin_inset space ~
 \end_inset
 
-matrix if 
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of swap matrix|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $E$
 \end_inset
 
@@ -3171,7 +3442,17 @@ scale
 \begin_inset space ~
 \end_inset
 
-matrix if 
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of scale matrix|textidxkey
+\end_layout
+
+\end_inset
+
+if 
 \begin_inset Formula $E$
 \end_inset
 
@@ -3199,7 +3480,17 @@ the
 \begin_inset space ~
 \end_inset
 
-transpose for any square matrix 
+transpose 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!of transpose|textidxkey
+\end_layout
+
+\end_inset
+
+for any square matrix 
 \begin_inset Formula $A$
 \end_inset
 

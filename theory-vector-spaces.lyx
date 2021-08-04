@@ -398,6 +398,16 @@ A nonempty set
 \series bold
 vector space
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector space
+\end_layout
+
+\end_inset
+
  if for every 
 \begin_inset Formula $\mathbf{u},\mathbf{v},\mathbf{w}$
 \end_inset
@@ -535,7 +545,17 @@ The set of all
 \begin_inset Formula $n$
 \end_inset
 
-) with real entries is the model from which this list is derived.
+)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector
+\end_layout
+
+\end_inset
+
+ with real entries is the model from which this list is derived.
  We use the symbol 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
@@ -638,6 +658,16 @@ s of a vector space.
 \series bold
 vectors
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector
+\end_layout
+
+\end_inset
+
  (even if they are matrices, sequences, or polynomials).
  In this abstract sense, even functions are vectors! Proof that 
 \begin_inset Formula $\mathbb{P}_{n}(\mathbb{R})$
@@ -1003,6 +1033,15 @@ Any subset of a vector space that is itself a vector space is called a
 subspace
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+subspace
+\end_layout
+
+\end_inset
+
  One common way to define a subspace is through the collection of all linear
  combinations of a set of vectors (reminiscent of how 
 \begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
@@ -1018,6 +1057,16 @@ subspace
 \series bold
 span
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+span
+\end_layout
+
+\end_inset
+
  of those vectors.
  To be precise, if 
 \begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
@@ -1091,7 +1140,17 @@ vector
 \begin_inset space ~
 \end_inset
 
-space A set 
+space 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector space|textidxkey
+\end_layout
+
+\end_inset
+
+A set 
 \begin_inset Formula $V$
 \end_inset
 
@@ -1230,11 +1289,31 @@ there is an element
 
 \end_deeper
 \begin_layout Description
-vector an element of a vector space.
+vector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector|textidxkey
+\end_layout
+
+\end_inset
+
+an element of a vector space.
 \end_layout
 
 \begin_layout Description
-span for vectors 
+span 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+span|textidxkey
+\end_layout
+
+\end_inset
+
+for vectors 
 \begin_inset Formula $\mathbf{v}_{1},\mathbf{v}_{2},\ldots,\mathbf{v}_{k}$
 \end_inset
 
@@ -1267,7 +1346,17 @@ Additionally,
 \end_layout
 
 \begin_layout Description
-subspace a subset of a vector space that is itself a vector space.
+subspace 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+subspace|textidxkey
+\end_layout
+
+\end_inset
+
+a subset of a vector space that is itself a vector space.
 \end_layout
 
 \begin_layout Description
@@ -1319,6 +1408,37 @@ subspace given any subset
 
 \begin_layout Subsection*
 Notation
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector space!notation
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+notation!vector space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{vector space!notation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

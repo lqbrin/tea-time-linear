@@ -676,7 +676,7 @@ Linear combinations
 status open
 
 \begin_layout Plain Layout
-linear combination|textit
+linear combination|textidxdig
 \end_layout
 
 \end_inset
@@ -1325,7 +1325,7 @@ coefficients
 status open
 
 \begin_layout Plain Layout
-coefficient|textbf
+coefficient|textidxkey
 \end_layout
 
 \end_inset
@@ -1339,7 +1339,7 @@ cofactor
 status open
 
 \begin_layout Plain Layout
-cofactor|textbf
+cofactor|textidxkey
 \end_layout
 
 \end_inset
@@ -1369,7 +1369,7 @@ determinant
 status open
 
 \begin_layout Plain Layout
-matrix!determinant|textbf
+matrix!determinant|textidxkey
 \end_layout
 
 \end_inset
@@ -1466,7 +1466,7 @@ combination
 status open
 
 \begin_layout Plain Layout
-linear combination|textbf
+linear combination|textidxkey
 \end_layout
 
 \end_inset
@@ -1501,7 +1501,7 @@ matrix
 status open
 
 \begin_layout Plain Layout
-matrix!square|textbf
+matrix!square|textidxkey
 \end_layout
 
 \end_inset

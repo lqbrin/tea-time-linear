@@ -109,6 +109,27 @@ name "sec:operation-properties"
 \end_inset
 
 Properties of Matrix Operations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!algebraic properties
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -228,6 +249,66 @@ name "dig:peano-axioms"
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+analysis|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Landau!Edmund|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Peano!Giuseppe|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Dedekind!Richard|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Cauchy!Augustin-Louis|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+induction|textidxdig
+\end_layout
+
+\end_inset
+
 In 1951 Edmund Landau published the first edition of his 
 \shape italic
 Grundlagen der Analysis
@@ -247,9 +328,9 @@ target "https://b-ok.cc/book/2863641/855790"
 
 \end_inset
 
-, accessed Feb 9, 2021) where, based on the work of Peano, Dedekind, Cauchy
- and others, he develops the arithmetic of whole, rational, irrational and
- complex numbers in a single volume.
+, accessed Feb 9, 2021) where, based on the work of Giuseppe Peano, Richard
+ Dedekind, Augustin-Louis Cauchy and others, he develops the arithmetic
+ of whole, rational, irrational and complex numbers in a single volume.
  Peano's five axioms defining the natural numbers appear on page 2 as follows.
 \end_layout
 
@@ -608,6 +689,16 @@ status open
 
 \backslash
 begin{digression}{An Interesting Addition Table}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+addition!table|textidxdig
 \end_layout
 
 \end_inset
@@ -1137,7 +1228,7 @@ end{digression}
 \end_layout
 
 \begin_layout Subsection
-Some Properties
+Some Properties of Matrices
 \end_layout
 
 \begin_layout Standard
@@ -1375,6 +1466,16 @@ noprefix "false"
 \series bold
 zero matrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!zero
+\end_layout
+
+\end_inset
+
  and is denoted  
 \begin_inset Formula $0_{m\times n}$
 \end_inset
@@ -1397,10 +1498,20 @@ name "thm:matrixproperties-part1"
 
 \series bold
 \shape up
-[Matrix Properties Part 1]
+[Algebraic Properties of Matrices, Part 1]
 \series default
 \shape default
- For all matrices 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!algebraic properties|textidxthm
+\end_layout
+
+\end_inset
+
+For all matrices 
 \begin_inset Formula $A,B,C$
 \end_inset
 
@@ -1720,10 +1831,20 @@ name "thm:matrixproperties-part2"
 
 \series bold
 \shape up
-[Matrix Properties Part 2]
+[Algebraic Properties of Matrices, Part 2]
 \series default
 \shape default
- For all matrices 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!algebraic properties|textidxthm
+\end_layout
+
+\end_inset
+
+For all matrices 
 \begin_inset Formula $A,B,C$
 \end_inset
 
@@ -1834,10 +1955,20 @@ name "thm:matrixproperties-part3"
 
 \series bold
 \shape up
-[Matrix Properties Part 3]
+[Algebraic Properties of Matrices, Part 3]
 \series default
 \shape default
- For all matrices 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!algebraic properties|textidxthm
+\end_layout
+
+\end_inset
+
+For all matrices 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2128,10 +2259,94 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!algebraic properties
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Applications to eigenpairs
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenpair
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvalue
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2636,11 +2851,82 @@ noprefix "false"
 
 \end_layout
 
+\begin_layout Standard
+\noindent
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvalue
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenpair
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
 
 \begin_layout Description
+algebraic
+\begin_inset space ~
+\end_inset
+
 properties
 \begin_inset space ~
 \end_inset
@@ -2649,11 +2935,38 @@ of
 \begin_inset space ~
 \end_inset
 
-matrix
-\begin_inset space ~
+matrices 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!algebraic properties|textidxkey
+\end_layout
+
 \end_inset
 
-operations see theorems 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+algebraic properties of matrices|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{matrix, algebraic properties}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+see theorems 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:matrixproperties-part1"
@@ -2691,7 +3004,38 @@ zero
 \begin_inset space ~
 \end_inset
 
-matrix an 
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!zero|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+zero matrix|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{matrix, zero}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+an 
 \begin_inset Formula $m\times n$
 \end_inset
 

@@ -671,19 +671,6 @@ filename "mechanics-rowoperations.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Indexing for sections below.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "mechanics-rowreduction.lyx"
@@ -819,6 +806,16 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "theory-vector-spaces.lyx"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Indexing for sections below.
+\end_layout
 
 \end_inset
 
