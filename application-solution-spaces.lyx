@@ -101,6 +101,27 @@ name "sec:Solution-Spaces"
 \end_inset
 
 Solution Spaces []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -369,6 +390,16 @@ The zero vector is in
 \series bold
 column space
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+column space
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $M$
 \end_inset
@@ -381,6 +412,16 @@ column space
 \series bold
 null space
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+null space
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $M$
 \end_inset
@@ -394,6 +435,16 @@ null space
 \series bold
 rank
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+rank
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $M$
 \end_inset
@@ -406,6 +457,16 @@ rank
 \series bold
 nullity
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nullity
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $M$
 \end_inset
@@ -427,6 +488,16 @@ nullity
 \series bold
 eigenspace
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenspace
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $M$
 \end_inset
@@ -746,6 +817,16 @@ Row operations do not affect the linear dependence relationships among the
  columns of a matrix
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear dependence
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -762,6 +843,16 @@ begin{digression}{Uniqueness of Reduced Row Echelon Form}
 \begin_inset CommandInset label
 LatexCommand label
 name "dig:UniquenessOfRREF"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+echelon form!reduced row|textidxdig
+\end_layout
 
 \end_inset
 
@@ -1394,7 +1485,27 @@ name "thm:Rank-and-Nullity"
 
 \end_inset
 
- If 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+rank|textidxthm
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nullity|textidxthm
+\end_layout
+
+\end_inset
+
+If 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1419,6 +1530,58 @@ name "thm:Rank-and-Nullity"
 
 \begin_layout Subsection*
 General Solutions
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!general solution
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+general solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear system!general solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!general
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear system!general solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1426,7 +1589,59 @@ Let
 \begin_inset Formula $\mathbf{v}_{p}$
 \end_inset
 
- be a particular (any single) solution of 
+ be a particular
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!particular solution
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+particular solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear system!particular solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!particular
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{linear system!particular solution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ (any single) solution of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -1532,6 +1747,16 @@ name "thm:Char-of-Sols-of-linear-system"
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!characterization of solutions|textidxthm
+\end_layout
+
+\end_inset
+
  For a consistent linear system 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
@@ -1563,6 +1788,31 @@ where
 .
 \end_layout
 
+\begin_layout Standard
+\noindent
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
@@ -1572,7 +1822,17 @@ column
 \begin_inset space ~
 \end_inset
 
-space of an 
+space 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+column space|textidxkey
+\end_layout
+
+\end_inset
+
+ of an 
 \begin_inset Formula $m\times n$
 \end_inset
 
@@ -1592,7 +1852,17 @@ null
 \begin_inset space ~
 \end_inset
 
-space of an 
+space 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+null space|textidxkey
+\end_layout
+
+\end_inset
+
+ of an 
 \begin_inset Formula $m\times n$
 \end_inset
 
@@ -1612,7 +1882,17 @@ space of an
 \end_layout
 
 \begin_layout Description
-eigenspace of 
+eigenspace 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenspace|textidxkey
+\end_layout
+
+\end_inset
+
+ of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1701,7 +1981,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-system see theorem 
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear system!characterization of solutions|textidxkey
+\end_layout
+
+\end_inset
+
+ see theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:Char-of-Sols-of-linear-system"
@@ -1719,8 +2009,46 @@ row
 \begin_inset space ~
 \end_inset
 
-operations (i) do not affect the null space of a matrix, and (ii) do not
- affect the linear dependence relationships of the columns of a matrix.
+operations 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+elementary row operation|textidxkey
+\end_layout
+
+\end_inset
+
+ (i) do not affect the null space of a matrix, and (ii) do not affect the
+ linear dependence relationships of the columns of a matrix.
+\end_layout
+
+\begin_layout Description
+rank 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+rank|textidxkey
+\end_layout
+
+\end_inset
+
+the dimension of the column space of a matrix.
+\end_layout
+
+\begin_layout Description
+nullity 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+nullity|textidxkey
+\end_layout
+
+\end_inset
+
+the dimension of the null space of a matrix.
 \end_layout
 
 \begin_layout Standard

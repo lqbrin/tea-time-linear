@@ -106,6 +106,27 @@ name "sec:Coordinate-Vectors"
 \end_inset
 
 Coordinate Vectors []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coordinate vector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -324,6 +345,26 @@ It should be noted that the order of the elements in a basis matters, and
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis!change of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The basis 
 \begin_inset Formula $\mathcal{B}=\{I_{:,2},I_{:,1},\ldots,I_{:,n}\}$
 \end_inset
@@ -899,6 +940,48 @@ noprefix "false"
 \end_inset
 
 ).
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis!change of
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coordinate vector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -910,7 +993,38 @@ coordinate
 \begin_inset space ~
 \end_inset
 
-vector If 
+vector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coordinate vector|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!coordinate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{coordinate vector}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ If 
 \begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
 \end_inset
 
@@ -955,7 +1069,38 @@ of
 \begin_inset space ~
 \end_inset
 
-basis given bases 
+basis 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis!change of|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+change of basis
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{basis, change of}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ given bases 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 

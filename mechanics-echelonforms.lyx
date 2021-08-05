@@ -1452,6 +1452,27 @@ status open
 \end_inset
 
 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!solution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{solution, set}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1467,10 +1488,58 @@ M
 \family typewriter
 M.echelon_form()
 \family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!echelon form
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{echelon
+\backslash
+_form()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  returns a row echelon form and 
 \family typewriter
 M.rref()
 \family default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SageMath!rref
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+texttt{rref()}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  returns the reduced row echelon form.
  The following code computes a row echelon form and the reduced echelon
  form of 

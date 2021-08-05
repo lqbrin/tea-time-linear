@@ -402,13 +402,17 @@ UNIFORMIZATION TODO
 \end_layout
 
 \begin_layout Itemize
-Spell checking (done on 7/25/2021).
- No errors found.
- Do again?
+????
 \end_layout
 
 \begin_layout Plain Layout
 UNIFORMIZATION COMPLETED
+\end_layout
+
+\begin_layout Itemize
+Spell checking (done on 7/25/2021).
+ No errors found.
+ Do again?
 \end_layout
 
 \begin_layout Itemize
@@ -806,16 +810,6 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "theory-vector-spaces.lyx"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Indexing for sections below.
-\end_layout
 
 \end_inset
 

@@ -240,7 +240,7 @@ swap
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!swap
+elementary row operation!swap
 \end_layout
 
 \end_inset
@@ -277,7 +277,7 @@ Replace
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!replace
+elementary row operation!replace
 \end_layout
 
 \end_inset
@@ -320,7 +320,7 @@ Scale
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!scale
+elementary row operation!scale
 \end_layout
 
 \end_inset

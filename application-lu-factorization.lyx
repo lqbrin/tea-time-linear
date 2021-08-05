@@ -105,6 +105,31 @@ name "sec:LU-Factorization"
 \end_inset
 
 LU Factorization []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+factorization!
+\begin_inset Formula $LU$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1254,8 +1279,22 @@ It is not realistic to expect that reduction can be done without row swaps,
 \begin_inset Formula $P$
 \end_inset
 
- is a permutation matrix, a matrix that holds the same rows as the identity
- matrix but in a possibly different order.
+ is a 
+\series bold
+permutation matrix
+\series default
+,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!permutation
+\end_layout
+
+\end_inset
+
+ a matrix that holds the same rows as the identity matrix but in a possibly
+ different order.
  Including 
 \begin_inset Formula $P$
 \end_inset
@@ -1277,6 +1316,16 @@ It is not realistic to expect that reduction can be done without row swaps,
 partial pivoting
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+partial pivoting
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1648,6 +1697,31 @@ When
 \end_inset
 
  will also be inconsistent).
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+factorization!
+\begin_inset Formula $LU$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1655,11 +1729,31 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-factorizaton factoring a matrix into a product of matrices.
+factorization 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+factorization|textidxkey
+\end_layout
+
+\end_inset
+
+ factoring a matrix into a product of matrices.
 \end_layout
 
 \begin_layout Description
-decomposition factorization.
+decomposition 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+decomposition|textidxkey
+\end_layout
+
+\end_inset
+
+ factorization.
 \end_layout
 
 \begin_layout Description
@@ -1670,8 +1764,45 @@ decomposition factorization.
 \begin_inset space ~
 \end_inset
 
-factorization factoring a matrix into a product of a lower triangular matrix
- (
+factorization 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+factorization!
+\begin_inset Formula $LU$
+\end_inset
+
+|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $LU$
+\end_inset
+
+ factorization
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{factorization, $LU$}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ factoring a matrix into a product of a lower triangular matrix (
 \begin_inset Formula $L$
 \end_inset
 
@@ -1687,7 +1818,17 @@ partial
 \begin_inset space ~
 \end_inset
 
-pivoting allowing row swaps in 
+pivoting 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+partial pivoting|textidxkey
+\end_layout
+
+\end_inset
+
+ allowing row swaps in 
 \begin_inset Formula $LU$
 \end_inset
 
@@ -1712,8 +1853,39 @@ permutation
 \begin_inset space ~
 \end_inset
 
-matrix a matrix containing the same rows as an identity matrix but in a
- possibly different order.
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!permutation|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+permutation matrix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{matrix, permutation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ a matrix containing the same rows as an identity matrix but in a possibly
+ different order.
  Such a matrix will have exactly one 
 \begin_inset Formula $1$
 \end_inset

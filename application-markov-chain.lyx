@@ -106,6 +106,27 @@ name "sec:Markov-Chains"
 \end_inset
 
 Markov Chains []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Markov chain
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -525,12 +546,32 @@ name "dig:Markov-chains"
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Markov chain|textidxdig
+\end_layout
+
+\end_inset
+
 Suppose 
 \begin_inset Formula $M$
 \end_inset
 
  is a positive column-stochastic matrix.
- The Gershgorin circle theorem ensures that 
+ The Gershgorin circle theorem
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Gershgorin circle theorem|textidxdig
+\end_layout
+
+\end_inset
+
+ ensures that 
 \begin_inset Formula $M^{T}$
 \end_inset
 
@@ -674,6 +715,16 @@ A
 positive matrix
 \series default
  is one whose entries are all positive.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!positive|textidxdig
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -682,6 +733,16 @@ A
 nonnegative matrix
 \series default
  is one who entries are all nonnegative.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!nonnegative|textidxdig
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -690,6 +751,16 @@ A
 stochastic matrix
 \series default
  is a nonnegative matrix whose columns each sum to 1.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!stochastic|textidxdig
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1014,6 +1085,16 @@ Multiplying the distribution vector by the
 \series bold
 transition matrix
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!transition
+\end_layout
+
+\end_inset
+
  
 \begin_inset Formula $M$
 \end_inset
@@ -1318,6 +1399,30 @@ arrival or service times in a single server queue (the states are the possible
  probabilities).
 \end_layout
 
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Markov chain
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Key Concepts
 \end_layout
@@ -1327,7 +1432,17 @@ transition
 \begin_inset space ~
 \end_inset
 
-matrix a square matrix 
+matrix 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!transition|textidxkey
+\end_layout
+
+\end_inset
+
+ a square matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1375,7 +1490,17 @@ Markov
 \begin_inset space ~
 \end_inset
 
-chain a sequence of distributions arising from an initial distribution 
+chain 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Markov chain|textidxkey
+\end_layout
+
+\end_inset
+
+ a sequence of distributions arising from an initial distribution 
 \begin_inset Formula $\mathbf{v}_{0}$
 \end_inset
 

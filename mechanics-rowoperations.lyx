@@ -792,7 +792,7 @@ elementary row operations
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation
+elementary row operation
 \end_layout
 
 \end_inset
@@ -810,7 +810,7 @@ Swap
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!swap
+elementary row operation!swap
 \end_layout
 
 \end_inset
@@ -828,7 +828,7 @@ Scale
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!scale
+elementary row operation!scale
 \end_layout
 
 \end_inset
@@ -846,7 +846,7 @@ Replace
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!replace
+elementary row operation!replace
 \end_layout
 
 \end_inset
@@ -879,7 +879,7 @@ elementary matrix
 status open
 
 \begin_layout Plain Layout
-matrix!elementary (row)
+matrix!elementary
 \end_layout
 
 \end_inset
@@ -1149,16 +1149,12 @@ elementary
 \begin_inset space ~
 \end_inset
 
-(row)
-\begin_inset space ~
-\end_inset
-
 matrix 
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-matrix!elementary (row)|textidxkey
+matrix!elementary|textidxkey
 \end_layout
 
 \end_inset
@@ -1168,13 +1164,13 @@ matrix!elementary (row)|textidxkey
 status open
 
 \begin_layout Plain Layout
-elementary (row) matrix|
+elementary matrix|
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-see{matrix, elementary (row)}
+see{matrix, elementary)}
 \end_layout
 
 \end_inset
@@ -1193,7 +1189,7 @@ elementary
 \begin_inset space ~
 \end_inset
 
-(row)
+row
 \begin_inset space ~
 \end_inset
 
@@ -1202,7 +1198,7 @@ operation
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation|textidxkey
+elementary row operation|textidxkey
 \end_layout
 
 \end_inset
@@ -1263,7 +1259,7 @@ Another name for a system of linear equations.
 \end_layout
 
 \begin_layout Description
-(row)
+row
 \begin_inset space ~
 \end_inset
 
@@ -1272,7 +1268,7 @@ swap
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!swap|textidxkey
+elementary row operation!swap|textidxkey
 \end_layout
 
 \end_inset
@@ -1281,7 +1277,7 @@ Swapping two rows of a matrix.
 \end_layout
 
 \begin_layout Description
-(row)
+row
 \begin_inset space ~
 \end_inset
 
@@ -1290,7 +1286,7 @@ scale
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!scale|textidxkey
+elementary row operation!scale|textidxkey
 \end_layout
 
 \end_inset
@@ -1299,7 +1295,7 @@ Multiplying each entry of a single row of a matrix by a nonzero scalar.
 \end_layout
 
 \begin_layout Description
-(row)
+row
 \begin_inset space ~
 \end_inset
 
@@ -1308,7 +1304,7 @@ replace
 status open
 
 \begin_layout Plain Layout
-elementary (row) operation!replace|textidxkey
+elementary row operation!replace|textidxkey
 \end_layout
 
 \end_inset

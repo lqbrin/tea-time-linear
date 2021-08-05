@@ -310,10 +310,30 @@ The terms
 \shape italic
 linear independence
 \shape default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear independence
+\end_layout
+
+\end_inset
+
  and 
 \shape italic
 span
 \shape default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+span
+\end_layout
+
+\end_inset
+
  have meaning in 
 \shape italic
 any
@@ -335,6 +355,16 @@ any
 \series bold
 spanning set
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+spanning set
+\end_layout
+
+\end_inset
+
  if 
 \begin_inset Formula $\text{span}S=V$
 \end_inset
@@ -348,6 +378,16 @@ spanning set
 \series bold
 basis
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis
+\end_layout
+
+\end_inset
+
  (of 
 \begin_inset Formula $V$
 \end_inset
@@ -475,10 +515,9 @@ Let
 \end_inset
 
 Then 
-\begin_inset Formula $\mathbf{0}=\mathbf{v}-\mathbf{v}=(a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{n}\mathbf{v}_{n})-(b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{n}\mathbf{v}_{n})=(a_{1}-b_{1})\mathbf{v}_{1}+(a_{2}-b_{2})\mathbf{v}_{2}+\cdots+(a_{n}-b_{n})\mathbf{v}_{n}$
+\begin_inset Formula $\mathbf{0}=\mathbf{v}-\mathbf{v}=(a_{1}\mathbf{v}_{1}+a_{2}\mathbf{v}_{2}+\cdots+a_{n}\mathbf{v}_{n})-(b_{1}\mathbf{v}_{1}+b_{2}\mathbf{v}_{2}+\cdots+b_{n}\mathbf{v}_{n})=(a_{1}-b_{1})\mathbf{v}_{1}+(a_{2}-b_{2})\mathbf{v}_{2}+\cdots+(a_{n}-b_{n})\mathbf{v}_{n}.$
 \end_inset
 
-.
  Since 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
@@ -639,6 +678,16 @@ name "thm:basis-superset"
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear dependence|textidxthm
+\end_layout
+
+\end_inset
+
 If a vector space 
 \begin_inset Formula $V$
 \end_inset
@@ -744,8 +793,32 @@ To understand the implications of this theorem, let
 \series bold
 dimension
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dimension
+\end_layout
+
+\end_inset
+
  of a vector space.
- The trivial vector space, 
+ The 
+\series bold
+trivial vector space
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector space!trivial
+\end_layout
+
+\end_inset
+
+, 
 \begin_inset Formula $\{\mathbf{0}\}$
 \end_inset
 
@@ -836,6 +909,16 @@ standard basis
 \begin_inset CommandInset label
 LatexCommand label
 name "par:standard-basis-of-PnR"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis!standard
+\end_layout
 
 \end_inset
 
@@ -1048,6 +1131,37 @@ spanning
 set
 \series default
  
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+spanning set|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!spanning
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{spanning set}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $S$
 \end_inset
 
@@ -1063,11 +1177,31 @@ set
 \end_layout
 
 \begin_layout Description
-basis a linearly independent spanning set of a vector space.
+basis 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis|textidxkey
+\end_layout
+
+\end_inset
+
+a linearly independent spanning set of a vector space.
 \end_layout
 
 \begin_layout Description
-dimension the number of vectors in a basis of a vector space.
+dimension 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dimension|textidxkey
+\end_layout
+
+\end_inset
+
+the number of vectors in a basis of a vector space.
 \end_layout
 
 \begin_layout Description
@@ -1087,7 +1221,38 @@ of
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- the columns of 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis!standard|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+standard basis
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{basis, standard}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+the columns of 
 \begin_inset Formula $I_{n\times n}$
 \end_inset
 
@@ -1123,7 +1288,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-dependence if a vector space 
+dependence 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear dependence|textidxkey
+\end_layout
+
+\end_inset
+
+if a vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -1143,7 +1318,17 @@ dependence if a vector space
 \end_layout
 
 \begin_layout Description
-spanning if a vector space 
+spanning 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+span|textidxkey
+\end_layout
+
+\end_inset
+
+if a vector space 
 \begin_inset Formula $V$
 \end_inset
 
@@ -1168,6 +1353,61 @@ spanning if a vector space
 
 \begin_layout Description
 bases all bases of a given vector space have the same number of elements.
+\end_layout
+
+\begin_layout Description
+trivial
+\begin_inset space ~
+\end_inset
+
+vector
+\begin_inset space ~
+\end_inset
+
+space 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector space!trivial|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+trivial vector space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{vector space, trivial}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\{\mathbf{0}\}$
+\end_inset
+
+ contains only the one vector 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ and, by definition, has dimension 
+\begin_inset Formula $0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

@@ -512,6 +512,26 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonalization
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The SageMath output below demonstrates a process for taking any basis of
  
 \begin_inset Formula $\mathbb{R}^{3}$
@@ -640,10 +660,20 @@ so
 \begin_inset Formula $\mathbf{b}_{1}$
 \end_inset
 
- direction or the (orthogonal) 
+ direction or the 
 \series bold
-projection
+orthogonal projection
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!projection
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $\mathbf{b}_{2}$
 \end_inset
@@ -1333,18 +1363,46 @@ A set of vectors in which every pair of distinct vectors is orthogonal is
 orthogonal set
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!set
+\end_layout
+
+\end_inset
+
  A vector with norm 1 is called a 
 \series bold
 unit vector
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!unit
+\end_layout
+
+\end_inset
+
  If each vector in an orthogonal set is a unit vector, it is called an 
 \series bold
 orthonormal set
 \series default
 .
- If all the vectors in an orthogonal set are scaled to have norm 1 (normalized),
- the orthogonal set becomes an orthonormal set with the same span.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthonormal!set
+\end_layout
+
+\end_inset
+
+ If all the vectors in an orthogonal set are scaled to have norm 1 (are
+ normalized), the orthogonal set becomes an orthonormal set with the same
+ span.
 \end_layout
 
 \begin_layout Standard
@@ -1390,6 +1448,27 @@ In words, writing a vector as a linear combination of orthogonal basis vectors
 \end_inset
 
 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonalization
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1401,7 +1480,38 @@ unit
 \begin_inset space ~
 \end_inset
 
-vector vector with norm 1.
+vector 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector!unit|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+unit vector
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{vector, unit}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ vector with norm 1.
 \end_layout
 
 \begin_layout Description
@@ -1409,7 +1519,38 @@ orthogonal
 \begin_inset space ~
 \end_inset
 
-set set in which every pair of distinct vectors is orthogonal.
+set 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!set|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!orthogonal
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{orthogonal, set}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ set in which every pair of distinct vectors is orthogonal.
 \end_layout
 
 \begin_layout Description
@@ -1417,15 +1558,77 @@ orthonormal
 \begin_inset space ~
 \end_inset
 
-set orthogonal set of unit vectors.
+set 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthonormal!set|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!orthonormal
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{orthonormal, set}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ orthogonal set of unit vectors.
 \end_layout
 
 \begin_layout Description
-(orthogonal)
+orthogonal
 \begin_inset space ~
 \end_inset
 
-projection (of one vector onto another) 
+projection 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!projection|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+projection!orthogonal
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{orthogonal, projection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ (of one vector onto another) 
 \begin_inset Formula $\text{proj}_{\mathbf{u}}\mathbf{v}=\frac{\langle\mathbf{v},\mathbf{u}\rangle}{\langle\mathbf{u},\mathbf{u}\rangle}\mathbf{u}$
 \end_inset
 
@@ -1437,7 +1640,38 @@ orthogonal
 \begin_inset space ~
 \end_inset
 
-basis basis that is an orthogonal set.
+basis 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis!orthogonal|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!basis
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{basis, orthogonal}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ basis that is an orthogonal set.
  If 
 \begin_inset Formula $\mathcal{B}=\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{n}\}$
 \end_inset
@@ -1458,7 +1692,17 @@ basis basis that is an orthogonal set.
 \end_layout
 
 \begin_layout Description
-normalize scale a vector to meet a certain criterion.
+normalize 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+normalize|textidxkey
+\end_layout
+
+\end_inset
+
+ scale a vector to meet a certain criterion.
  Often this means scaling so the norm is one.
 \end_layout
 
@@ -1467,7 +1711,17 @@ normalize scale a vector to meet a certain criterion.
 \begin_inset space ~
 \end_inset
 
-orthogonalzation 
+orthogonalization 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonalization|textidxkey
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "key:orthogonalization"
@@ -1543,7 +1797,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-independence an orthogonal set of nonzero vectors is linearly independent.
+independence 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear independence|textidxkey
+\end_layout
+
+\end_inset
+
+an orthogonal set of nonzero vectors is linearly independent.
 \end_layout
 
 \begin_layout Standard

@@ -1537,7 +1537,7 @@ matrix!inverse|textidxkey
 status open
 
 \begin_layout Plain Layout
-inverse
+inverse matrix
 \begin_inset ERT
 status open
 
@@ -1609,7 +1609,7 @@ matrix!invertible|textidxkey
 status open
 
 \begin_layout Plain Layout
-invertible
+invertible matrix
 \begin_inset ERT
 status open
 

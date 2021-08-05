@@ -106,6 +106,27 @@ name "sec:Fourier-Series"
 \end_inset
 
 Fourier Series []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!series
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -481,6 +502,16 @@ noprefix "false"
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+best approximation
+\end_layout
+
+\end_inset
+
  provides the guidance.
  Orthogonal projection of the function gives the right intensities.
  All we need are an appropriate inner product space and a basis for some
@@ -534,7 +565,17 @@ noprefix "false"
 \begin_inset Formula $\langle f,g\rangle=\int_{0}^{L}f(x)g(x)\,dx$
 \end_inset
 
- defines an inner product on 
+ defines an inner product
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inner product
+\end_layout
+
+\end_inset
+
+ on 
 \begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
@@ -780,10 +821,46 @@ name "dig:Fejer"
 
 
 \series bold
-[Fejer, 1900]
+[Fej
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'e
+\end_layout
+
+\end_inset
+
+r, 1900]
 \series default
  
 \shape italic
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fej
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'e
+\end_layout
+
+\end_inset
+
+r|textidxdig
+\end_layout
+
+\end_inset
+
 Let 
 \begin_inset Formula $f$
 \end_inset
@@ -1266,6 +1343,15 @@ Fourier sine series
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!sine series
+\end_layout
+
+\end_inset
+
  The (infinite) series
 \begin_inset Formula 
 \[
@@ -1286,6 +1372,16 @@ is called the
 \series bold
 Fourier cosine series
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!cosine series
+\end_layout
+
+\end_inset
+
  for 
 \begin_inset Formula $f$
 \end_inset
@@ -1303,7 +1399,17 @@ Fourier cosine series
 \series bold
 Fourier coefficients
 \series default
-, and the functions 
+,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!coefficient
+\end_layout
+
+\end_inset
+
+ and the functions 
 \begin_inset Formula $\sin\left(m\cdot\frac{\pi}{L}x\right)$
 \end_inset
 
@@ -1320,6 +1426,15 @@ Fourier coefficients
  harmonics
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+harmonic
+\end_layout
+
+\end_inset
+
  Most of our effort to now has concentrated on the sine series since we
  have been examining functions for which 
 \begin_inset Formula $f(0)=f(L)=0$
@@ -1629,6 +1744,27 @@ literal "false"
  Finally, F16095 and the original audio are indistinguishable, at least
  to my ear.
  Have a listen!
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!series
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1640,7 +1776,17 @@ Fourier
 \begin_inset space ~
 \end_inset
 
-series for functions 
+series 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!series|textidxkey
+\end_layout
+
+\end_inset
+
+ for functions 
 \begin_inset Formula $f$
 \end_inset
 
@@ -1676,7 +1822,17 @@ sine
 \begin_inset space ~
 \end_inset
 
-series for functions 
+series 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!sine series|textidxkey
+\end_layout
+
+\end_inset
+
+ for functions 
 \begin_inset Formula $f$
 \end_inset
 
@@ -1712,7 +1868,17 @@ cosine
 \begin_inset space ~
 \end_inset
 
-series for functions 
+series 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!cosine series|textidxkey
+\end_layout
+
+\end_inset
+
+ for functions 
 \begin_inset Formula $f$
 \end_inset
 
@@ -1744,7 +1910,38 @@ Fourier
 \begin_inset space ~
 \end_inset
 
-coefficients the 
+coefficients 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!coefficient|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+coefficient!Fourier
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{Fourier, coefficient}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ the 
 \begin_inset Formula $a_{m}$
 \end_inset
 
@@ -1756,7 +1953,17 @@ coefficients the
 \end_layout
 
 \begin_layout Description
-harmonics the functions 
+harmonics 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+harmonic|textidxkey
+\end_layout
+
+\end_inset
+
+ the functions 
 \begin_inset Formula $\cos\left(m\cdot\frac{2\pi}{L}t\right)$
 \end_inset
 
@@ -1803,8 +2010,18 @@ Fourier
 \begin_inset space ~
 \end_inset
 
-analysis the process of determining a large selection of Fourier coefficients
- with the purpose of identifying those with some particular characteristic.
+analysis 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fourier!analysis|textidxkey
+\end_layout
+
+\end_inset
+
+ the process of determining a large selection of Fourier coefficients with
+ the purpose of identifying those with some particular characteristic.
 \end_layout
 
 \begin_layout Standard
@@ -2490,7 +2707,7 @@ noprefix "false"
 
 \end_inset
 
- with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero  terms.
+ with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero terms.
 \begin_inset ERT
 status open
 

@@ -1161,6 +1161,27 @@ noprefix "false"
 
 \begin_layout Subsection
 Similarity
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+similarity
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1215,6 +1236,16 @@ similar
 \begin_inset CommandInset label
 LatexCommand label
 name "thm:similar-matrices"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+similarity|textidxthm
+\end_layout
 
 \end_inset
 
@@ -1381,6 +1412,15 @@ Other similar features of similar matrices are explored in the exercises.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!powers of
+\end_layout
+
+\end_inset
+
 Another important feature of similar matrices is that powers of similar
  matrices are similar.
  That is, if 
@@ -1580,6 +1620,25 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+diagonalization
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+factorization!diagonal
+\end_layout
+
+\end_inset
+
 When a matrix 
 \begin_inset Formula $M$
 \end_inset
@@ -1702,6 +1761,27 @@ which is diagonal.
 \end_inset
 
  linearly independent eigenvectors.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+similarity
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1713,7 +1793,17 @@ similar
 \begin_inset space ~
 \end_inset
 
-matrices matrices 
+matrices 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!similar|textidxkey
+\end_layout
+
+\end_inset
+
+ matrices 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1741,13 +1831,33 @@ matrices matrices
 \end_layout
 
 \begin_layout Description
-similarity Matrices that are similar have similarity.
+similarity 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+similarity|textidxkey
+\end_layout
+
+\end_inset
+
+ Matrices that are similar have similarity.
  Matrices that have similarity have the same (i) determinant, (ii) eigenvalues,
  and (iii) rank.
 \end_layout
 
 \begin_layout Description
-diagonalizable a matrix that is similar to a diagonal matrix.
+diagonalizable 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!diagonalizable|textidxkey
+\end_layout
+
+\end_inset
+
+ a matrix that is similar to a diagonal matrix.
  
 \end_layout
 
@@ -1789,7 +1899,17 @@ of
 \begin_inset space ~
 \end_inset
 
-matrices The 
+matrices 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!powers of|textidxkey
+\end_layout
+
+\end_inset
+
+ The 
 \begin_inset Formula $k^{th}$
 \end_inset
 

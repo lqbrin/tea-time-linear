@@ -1361,6 +1361,27 @@ dot product|textidxkey
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+product!dot
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{dot product}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 the dot product of 
 \begin_inset Formula $m\times1$
 \end_inset

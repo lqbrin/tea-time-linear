@@ -177,7 +177,7 @@ oof structure.
 
 \begin_layout Standard
 Those who enjoy a more typical presentation might still find this textbook
- suits their preference to a large extent.
+ suits their needs.
  There will be a summary of the key concepts at the end of each conversation
  and a number of the exercises will be solved in complete detail in the
  appendix.
@@ -226,57 +226,91 @@ haspartwithsolution
 \begin_layout Standard
 The topical coverage in 
 \shape italic
-Tea Time Numerical Analysis
+Tea Time Linear Algebra
 \shape default
- is fairly typical.
- The book starts with an introductory chapter, followed by root finding
- methods, interpolation (part 1), numerical calculus, interpolation (part
- 2), and the second edition introduces a chapter on differential equations.
- The first five chapters cover what, at SCSU, constitutes a first semester
- course in numerical analysis.
+ is fairly typical, but the order of presentation is not.
+ The book starts with an introductory chapter covering all the typical matrix
+ arithmetic including inverses and eigenvalues, but with only one method
+ for each computation and without accompanying theory.
+ The second chapter begins to bridge the gap between computational and theoretic
+ linear algebra, covering row operations and systems of equations, concluding
+ with the first theorem of the book, existence and uniqueness of solutions
+ of linear systems.
+ Chapter 3 introduces the notion of linear indepenence and revisits eigenpairs,
+ inverses and determinants, adding depth to the computations of chapter
+ 1.
+ These three chapters conclude what might be considered the bare essentials
+ of matrix algebra.
+ Upon completion, students will be able to compute matrix sums and products,
+ dot products, and lengths plus eigenpairs, matrix inverses, and determinants
+ in multiple ways.
+ They will be able to solve linear systems with any number of solutions
+ and have enough theory to compute the number of solutions of a system without
+ finding those solutions.
+ This concludes part I, the mostly computational aspects of the course.
+ Chapter 4 opens up part II by extolling the idea of abstraction.
+ Vector spaces, basis, dimension, and isomorphisms are covered.
+ Linear transformations and inner products are discussed for general vector
+ spaces, not just 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ Chapter 5 closes part II by considering vector spaces such as column spaces,
+ null spaces, and eigenspaces, and extending the ideas of orthogonality,
+ length, and distance to arbitrary inner product spaces.
+ The theme of abstraction is highlighted throughout.
+ Part III (chapters 6 and 7) builds upon the computational aspects and theoretic
+al notions of chapters 1-5 to solve mathematical and other problems, introducing
+ unstudied theory of linear algebra sparingly.
+ Factorization, iterative methods, geometry, and approximation take center
+ stage.
+\end_layout
+
+\begin_layout Standard
+The first three chapters plus selections from chapters 4 and 5, capped with
+ a smattering of chapters 6 and 7 cover what, at SCSU, constitutes a first
+ semester course in linear algebra.
+ The entirety of the book is not intended as a one-semester study.
  As this book is intended for use as a free download or an inexpensive print-on-
 demand volume, no effort has been made to keep the page count low or to
  spare copious diagrams and colors.
  In fact, I have taken the inexpensive mode of delivery as liberty to do
  quite the opposite.
  I have added many passages and diagrams that are not strictly necessary
- for the study of numerical analysis, but are at least peripherally related,
+ for the study of linear algebra, but are at least peripherally related,
  and may be of interest to some readers.
  Most of these passages will be presented as digressions, so they will be
  easy to identify.
- For example, Taylor's theorem plays such a central role in the subject
- that not only its statement is presented.
- Its proof and a bit of history are added as 
+ For example, the fact that determinants may be calculated by expansion
+ along any row or any column is necessary basic fare for the course, but
+ its proof is rather slippery and well beyond many students new to linear
+ algebra.
+ Its proof is therefore added as a 
 \begin_inset Quotes eld
 \end_inset
 
-crumpets
+crumpet
 \begin_inset Quotes erd
 \end_inset
 
 .
- Of course they can be skipped, but are included to provide a more complete
- understanding of this fundamental theorem of numerical analysis.
- For another example, as a fan of dynamical systems, I found it impossible
- to refrain from including a section on visualizing Newton's method.
- The powerful and beautiful pictures of Newton's method as a dynamical system
- should be eyebrow-raising and question-provoking even if only tangentially
- important.
- There are, of course, other examples of somewhat less critical content,
- but each is there to enhance the reader's understanding or appreciation
- of the subject, even if the material is not strictly necessary for an introduct
-ory study of numerical analysis.
- While version 2.5 does not introduce any new sections, it contains many
- corrections, new exercises and modified discourse.
- As a result, page and exercise numbering has changed.
+ Other crumpets similarly cover technical details, but some lay out historical
+ context and points for possible further study.
+ They can be skipped without harm to the learning process, but are included
+ to provide a more complete understanding of the fundamentals.
+ In any case, each crumpet is there to enhance the reader's understanding
+ or appreciation of the subject, even if the material is not strictly necessary
+ for an introductory study of linear algebra.
 \end_layout
 
 \begin_layout Standard
-Implementation of the numerical methods in the form of computer code will
- also be discussed.
- While one could simply ignore the programming sections and exercises and
- still get something out of this text, it is my firm belief that full appreciati
-on for the content can not be achieved without getting one's hands 
+Many of the computations can not be done satisfactorily with pencil and
+ paper, so sufficient linear algebra routines of SageMath are introduced
+ and discussed.
+ While one could simply ignore the SageMath sections and exercises and still
+ get something out of this text, it is my firm belief that full appreciation
+ for the content can not be achieved without getting one's hands 
 \begin_inset Quotes eld
 \end_inset
 
@@ -284,40 +318,28 @@ dirty
 \begin_inset Quotes erd
 \end_inset
 
- by doing some programming.
+ by doing some calculation.
  It would be nice if readers have had at least some minimal exposure to
  programming whether it be Python, Java, C, web programming, or just about
  anything, but I have made every effort to give enough detail so that even
  those who have never written a single line of code will be able to participate
  in this part of the study.
- In keeping with the desire to produce a completely free learning experience,
- GNU Octave was chosen as the programming language for this book.
- GNU Octave (Octave for short) is offered freely to anyone and everyone!
- It is free to download and use.
- Its source code is free to download and study.
- And anyone is welcome to modify or add to the code if so inclined.
- As an added bonus, users of the much better-known MATLAB will not be burdened
- by learning a new language.
- Octave is a MATLAB clone.
- By design, nearly any program written in MATLAB will run in Octave without
- modification.
- So, if you have access to MATLAB and would prefer to use it, you may do
- so without worry.
- I have made considerable effort to ensure that every line of Octave in
- this book will run verbatim under MATLAB.
- Even with this earnest effort, though, it is possible that some of the
- code will not run under MATLAB.
- It has only been tested in Octave! If you find any code that does not run
- in MATLAB, please let me know.
- Version 2.5 includes substantial rewriting of details related to Octave
- from installation to coding, and even includes information about computing
- in the cloud.
+ In addition to maintaining a completely free learning experience, SageMath
+ was chosen as the computer algebra system for this book because it allows
+ linking to SageCells.
+ Each live SageCell link in the PDF of this book leads to a bare bones,
+ but fully operational portal to SageMath.
+ Most links land on prepopulated code to aid with the process of using computer
+ algebra.
+ For example, in almost all cases the matrices involved in a question will
+ be coded for the student to alleviate the tedium and errors of data entry.
+ The SageMathCell website is offered freely to anyone and everyone!
 \end_layout
 
 \begin_layout Standard
 I hope you enjoy your reading of 
 \shape italic
-Tea Time Numerical Analysis
+Tea Time Linear Algebra
 \shape default
 .
  It was my pleasure to write it.
@@ -379,7 +401,7 @@ brinl1@southernct.edu
 \end_layout
 
 \begin_layout Section*
-How to Get Sage
+About the Exercises
 \end_layout
 
 \begin_layout Standard
@@ -390,7 +412,7 @@ status open
 
 
 \backslash
-addcontentsline{toc}{section}{How to Get Octave}
+addcontentsline{toc}{section}{About the Exercises}
 \end_layout
 
 \end_inset
@@ -399,58 +421,8 @@ addcontentsline{toc}{section}{How to Get Octave}
 \end_layout
 
 \begin_layout Standard
-Just use sagecell.sagemath.com
-\end_layout
-
-\begin_layout Section*
-How to Get the Code
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{section}{How to Get the Code}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-All the code appearing in the textbook can be downloaded from this textbook's
- companion website,
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://lqbrin.github.io/tea-time-numerical/ancillaries.html
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\noindent
-The code printed within and accompanying Tea Time Numerical Analysis electronica
-lly is distributed under the GNU Public License (GPL).
- Details are available at the website.
+Each exercise where it is recommended to use SageMath is noted (TODO: finish
+ this thought)
 \end_layout
 
 \begin_layout Section*
@@ -475,21 +447,9 @@ addcontentsline{toc}{section}{Acknowledgments}
 
 \begin_layout Standard
 I gratefully acknowledge the generous support I received during the writing
- of this textbook, from the patience my immediate family, Amy, Cecelia,
- and Victorija exercised while I was absorbed by my laptop's screen, to
- the willingness of my Spring 2013 Seminar class, Elizabeth Field, Rachael
- Ivison, Amanda Reyher, and Steven Warner to read and criticize an early
- version of the first chapter.
- The Woodbridge Public Library staff, especially Pamela Wilonski, helped
- provide a peaceful and inspirational environment for writing the bulk of
- the first edition text.
- Many thanks to Dick Pelosi for his extensive review and many kind words
- and encouragements throughout the endeavor to create the first edition.
- I also owe a hearty thanks to the folks at CollegeOpenTextbooks.org, who
- provided unpaid copy editing.
- Finally, many thanks to the users who have provided corrections and suggestions
- for improvements.
- A number of them have found their way into the third edition.
+ of this textbook, mostly from the patience my immediate family, Amy, Cecelia,
+ and Victorija exercised while I was absorbed by my laptop's screen, but
+ also the time allowed by sabbatical leave.
 \end_layout
 
 \end_body

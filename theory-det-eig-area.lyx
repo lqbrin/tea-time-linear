@@ -342,6 +342,16 @@ begin{digression}{A Definition of Area}
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+area!definition of|textidxdig
+\end_layout
+
+\end_inset
+
 The area of a bounded region of the plane, a shape 
 \begin_inset Formula $S$
 \end_inset
@@ -415,10 +425,30 @@ ns affect the areas of general shapes.
 
 \begin_layout Subsection*
 Areas and determinants
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!and area
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-In general, the image of a set 
+In general, the image
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+image!set
+\end_layout
+
+\end_inset
+
+ of a set 
 \begin_inset Formula $S$
 \end_inset
 
@@ -465,7 +495,17 @@ In general, the image of a set
 \end_layout
 
 \begin_layout Standard
-To understand how the linear transformation 
+To understand how the linear transformation
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear transformation
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $T_{A}:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
 
@@ -477,7 +517,17 @@ To understand how the linear transformation
 \begin_inset Formula $A$
 \end_inset
 
- as a product of elementary matrices, 
+ as a product of elementary matrices
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+matrix!elementary
+\end_layout
+
+\end_inset
+
+, 
 \begin_inset Formula $A=E_{p}\cdots E_{2}E_{1}$
 \end_inset
 
@@ -624,6 +674,16 @@ If
 
 \begin_layout Subsection*
 Areas and eigenvalues
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!and eigenvalues
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -833,7 +893,17 @@ name "thm:Determinant-Eigenvalues"
 [Determinant and the Product of Eigenvalues]
 \series default
 \shape default
- If 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!and eigenvalues|textidxthm
+\end_layout
+
+\end_inset
+
+If 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1063,6 +1133,16 @@ begin{digression}{Triangularization}
 \begin_inset CommandInset label
 LatexCommand label
 name "dig:triangularization"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+triangularization|textidxdig
+\end_layout
 
 \end_inset
 
@@ -1315,7 +1395,17 @@ Hence we have two ways to measure the effect of a linear transformation
 \end_layout
 
 \begin_layout Subsection*
-Determinants, eigenvalues, and volumes 
+Determinants, eigenvalues, and volumes
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!and volume
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1458,6 +1548,16 @@ begin{digression}{Hyperspace}
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hyperspace
+\end_layout
+
+\end_inset
+
 The main results of this section and the previous are stated and hold for
  
 \begin_inset Formula $\mathbb{R}^{n}$
@@ -1483,6 +1583,16 @@ end{digression}
 
 \begin_layout Subsection*
 Affine Transformations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transformation!affine
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1576,7 +1686,38 @@ set
 \begin_inset space ~
 \end_inset
 
-image For any transformation (map or function) 
+image 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+image!set|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!image
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{image, set}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ For any transformation (map or function) 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
@@ -1608,7 +1749,17 @@ and
 \begin_inset space ~
 \end_inset
 
-area For any linear transformation 
+area 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!and area|textidxkey
+\end_layout
+
+\end_inset
+
+ For any linear transformation 
 \begin_inset Formula $T_{A}:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
 
@@ -1640,7 +1791,17 @@ and
 \begin_inset space ~
 \end_inset
 
-volume For any linear transformation 
+volume 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!and volume|textidxkey
+\end_layout
+
+\end_inset
+
+ For any linear transformation 
 \begin_inset Formula $T_{A}:\mathbb{R}^{3}\to\mathbb{R}^{3}$
 \end_inset
 
@@ -1672,12 +1833,41 @@ and
 \begin_inset space ~
 \end_inset
 
-eigenvalues The determinant of any square matrix is the product of its eigenvalu
-es.
+eigenvalues 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+determinant!and eigenvalues|textidxkey
+\end_layout
+
+\end_inset
+
+ The determinant of any square matrix is the product of its eigenvalues.
 \end_layout
 
 \begin_layout Description
-triangularization For any square matrix 
+triangularization 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+triangularization|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+factorization!triangular|textidxkey
+\end_layout
+
+\end_inset
+
+ For any square matrix 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1697,7 +1887,38 @@ affine
 \begin_inset space ~
 \end_inset
 
-transformation The composition of a linear transformation with a translation.
+transformation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transformation!affine|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+affine transformation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{transformation, affine}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ The composition of a linear transformation with a translation.
 \end_layout
 
 \begin_layout Standard

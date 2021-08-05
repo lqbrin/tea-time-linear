@@ -222,6 +222,27 @@ name "sec:Vector-Spaces-and-Span"
 \end_inset
 
 Vector Spaces and Span
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1574,6 +1595,27 @@ status collapsed
 
 \begin_layout Standard
 \noindent
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+vector space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 

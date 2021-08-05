@@ -191,7 +191,26 @@ A function is made from three ingredients—three sets, really.
  in the other, subsets of real numbers in one and polynomials in the other,
  matrices in one and integers in the other—no restrictions.
  The definition of function does not specify.
- These two sets are called the domain and codomain.
+ These two sets are called the domain
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+domain
+\end_layout
+
+\end_inset
+
+ and codomain.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+codomain
+\end_layout
+
+\end_inset
+
  Any set can be the domain of a function, and any set can be the codomain
  of a function.
  The only requirements of a function are placed on the third set.
@@ -217,6 +236,25 @@ xed func
 tion
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+relation
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+function
+\end_layout
+
+\end_inset
+
  It has to adhere to fewer rules.
  Remember, the set of ordered pairs defining a function must contain exactly
  one ordered pair for each element of the domain, but a relation does not
@@ -290,6 +328,16 @@ relation
 \begin_inset Quotes erd
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Cartesian product
+\end_layout
+
+\end_inset
+
 .
  To rephrase then, if 
 \begin_inset Formula $A$
@@ -324,7 +372,7 @@ A relation
 \begin_inset Formula $C$
 \end_inset
 
- might be given using the rather compact set notation 
+ might be given using the rather terse set notation 
 \begin_inset Formula $C=\{(a,b)\in A\times B:\text{rule of correspondence}\}$
 \end_inset
 
@@ -353,8 +401,17 @@ The same relation might be simplified to just
 \end_layout
 
 \begin_layout Standard
-When a relation is a function, we may emphasize this point using the notation
- 
+When a relation is a function
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+notation!function
+\end_layout
+
+\end_inset
+
+, we may emphasize this point using the notation 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
@@ -468,8 +525,18 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The discussion of inverse functions, which will be very important for us,
- is made abstruse by not introducing the notion of a relation.
+The discussion of inverse functions
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inverse function
+\end_layout
+
+\end_inset
+
+, which will be very important for us, is made abstruse by not introducing
+ the notion of a relation.
  The inverse of a relation is a relatively simple matter.
  If 
 \begin_inset Formula $C$
@@ -499,6 +566,16 @@ The discussion of inverse functions, which will be very important for us,
 \series bold
 inverse relation
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inverse relation
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $C$
 \end_inset
@@ -528,14 +605,44 @@ Maps and Transformations
 \series bold
 Map
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Map
+\end_layout
+
+\end_inset
+
 , 
 \series bold
 mapping
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+mapping
+\end_layout
+
+\end_inset
+
 , and 
 \series bold
 transformation
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transformation
+\end_layout
+
+\end_inset
+
  are all synonyms for function.
  All four words share the same definition.
  When the codomain is not the set of real numbers, the word 
@@ -815,6 +922,27 @@ noprefix "false"
 
 \begin_layout Subsection*
 Linear Transformations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear transformation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -964,6 +1092,16 @@ the image
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+image
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1008,6 +1146,16 @@ the range
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+range
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1027,6 +1175,16 @@ a preimage
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+preimage
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1063,6 +1221,16 @@ kernel
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+kernel
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1095,6 +1263,16 @@ the inverse
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inverse function
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1188,6 +1366,27 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear transformation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1199,7 +1398,38 @@ Cartesian
 \begin_inset space ~
 \end_inset
 
-product given any sets 
+product given
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Cartesian product|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+product!Cartesian
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{Cartesian product}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ any sets 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1227,7 +1457,17 @@ product given any sets
 \end_layout
 
 \begin_layout Description
-relation given any sets 
+relation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+relation|textidxkey
+\end_layout
+
+\end_inset
+
+given any sets 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1247,7 +1487,17 @@ relation given any sets
 \end_layout
 
 \begin_layout Description
-function given any sets 
+function 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+function|textidxkey
+\end_layout
+
+\end_inset
+
+given any sets 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1275,7 +1525,17 @@ function given any sets
 \end_layout
 
 \begin_layout Description
-domain the set 
+domain 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+domain|textidxkey
+\end_layout
+
+\end_inset
+
+the set 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1283,7 +1543,17 @@ domain the set
 \end_layout
 
 \begin_layout Description
-codomain the set 
+codomain 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+codomain|textidxkey
+\end_layout
+
+\end_inset
+
+ the set 
 \begin_inset Formula $B$
 \end_inset
 
@@ -1311,7 +1581,17 @@ inverse
 \begin_inset space ~
 \end_inset
 
-relation (of a relation 
+relation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inverse relation|textidxkey
+\end_layout
+
+\end_inset
+
+ (of a relation 
 \begin_inset Formula $T$
 \end_inset
 
@@ -1343,8 +1623,17 @@ inverse
 \begin_inset space ~
 \end_inset
 
-function the inverse relation of a function whenever it happens to be a
- function.
+function 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inverse function|textidxkey
+\end_layout
+
+\end_inset
+
+ the inverse relation of a function whenever it happens to be a function.
 \end_layout
 
 \begin_layout Description
@@ -1370,16 +1659,52 @@ inverse an inverse function.
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Description
-invertible a function is called invertible if its inverse relation is a
- function.
+invertible 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+invertible function|textidxkey
+\end_layout
+
+\end_inset
+
+ a function is called invertible if its inverse relation is a function.
 \end_layout
 
 \begin_layout Description
-map a function, usually used when the codomain is not 
+kernel 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+kernel|textidxkey
+\end_layout
+
+\end_inset
+
+the preimage of 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ whenever the codomain of a transformation is a vector space.
+\end_layout
+
+\begin_layout Description
+map 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+map|textidxkey
+\end_layout
+
+\end_inset
+
+ a function, usually used when the codomain is not 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
@@ -1387,7 +1712,17 @@ map a function, usually used when the codomain is not
 \end_layout
 
 \begin_layout Description
-mapping a function, usually used when the codomain is not 
+mapping 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+mapping|textidxkey
+\end_layout
+
+\end_inset
+
+ a function, usually used when the codomain is not 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
@@ -1395,7 +1730,17 @@ mapping a function, usually used when the codomain is not
 \end_layout
 
 \begin_layout Description
-transformation a function, usually used when the codomain is not 
+transformation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transformation|textidxkey
+\end_layout
+
+\end_inset
+
+ a function, usually used when the codomain is not 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
@@ -1403,7 +1748,17 @@ transformation a function, usually used when the codomain is not
 \end_layout
 
 \begin_layout Description
-image an element, 
+image 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+image|textidxkey
+\end_layout
+
+\end_inset
+
+ an element, 
 \begin_inset Formula $T(a)$
 \end_inset
 
@@ -1428,7 +1783,17 @@ image an element,
 \end_layout
 
 \begin_layout Description
-preimage if 
+preimage 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+preimage|textidxkey
+\end_layout
+
+\end_inset
+
+ if 
 \begin_inset Formula $b$
 \end_inset
 
@@ -1469,7 +1834,17 @@ preimage if
 \end_layout
 
 \begin_layout Description
-range the set of all images, 
+range 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+range|textidxkey
+\end_layout
+
+\end_inset
+
+ the set of all images, 
 \begin_inset Formula $\text{range}(f)=\{f(a):a\text{ is in }A\}$
 \end_inset
 
@@ -1485,7 +1860,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-transformation given vector spaces 
+transformation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear transformation|textidxkey
+\end_layout
+
+\end_inset
+
+ given vector spaces 
 \begin_inset Formula $V$
 \end_inset
 

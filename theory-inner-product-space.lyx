@@ -97,6 +97,27 @@ name "sec:Inner-Product-Spaces"
 \end_inset
 
 Inner Product Spaces
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inner product space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -155,7 +176,28 @@ One important feature of
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- not included in the definition of a vector space is the dot product.
+ not included in the definition of a vector space is the dot product
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dot product
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
  We have seen that the dot product allows us to define the magnitudes and
  orthogonality of elements of 
 \begin_inset Formula $\mathbb{R}^{n}$
@@ -422,6 +464,27 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dot product
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -431,6 +494,16 @@ These five features of the dot product form the foundation for a useful
 \series bold
 inner product
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inner product
+\end_layout
+
+\end_inset
+
  on a real vector space 
 \begin_inset Formula $V$
 \end_inset
@@ -574,12 +647,51 @@ noprefix "false"
 inner product space
 \series default
 .
- 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inner product space
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Extending the ideas of magnitude, distance, and orthogonality to an arbitrary
- inner product space is a simple matter as the following chart suggests.
+Extending the ideas of magnitude
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+norm
+\end_layout
+
+\end_inset
+
+, distance
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+distance
+\end_layout
+
+\end_inset
+
+, and orthogonality
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal
+\end_layout
+
+\end_inset
+
+ to an arbitrary inner product space is a simple matter as the following
+ chart suggests.
 \end_layout
 
 \begin_layout Standard
@@ -928,6 +1040,27 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inner product space
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -939,7 +1072,38 @@ inner
 \begin_inset space ~
 \end_inset
 
-product an operator 
+product 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inner product|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+product!inner
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{inner product}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ an operator 
 \begin_inset Formula $\langle,\rangle:V\times V\to\mathbb{R}$
 \end_inset
 
@@ -1036,11 +1200,31 @@ product
 \begin_inset space ~
 \end_inset
 
-space a vector space endowed with an inner product.
+space 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+inner product space|textidxkey
+\end_layout
+
+\end_inset
+
+ a vector space endowed with an inner product.
 \end_layout
 
 \begin_layout Description
-norm extension of the idea of magnitude in 
+norm 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+norm|textidxkey
+\end_layout
+
+\end_inset
+
+ extension of the idea of magnitude in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
@@ -1065,7 +1249,17 @@ norm extension of the idea of magnitude in
 \end_layout
 
 \begin_layout Description
-distance extension of the idea of distance in 
+distance 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+distance|textidxkey
+\end_layout
+
+\end_inset
+
+ extension of the idea of distance in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
@@ -1094,7 +1288,17 @@ distance extension of the idea of distance in
 \end_layout
 
 \begin_layout Description
-orthogonal extension of the idea of perpendicular in 
+orthogonal 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal|textidxkey
+\end_layout
+
+\end_inset
+
+ extension of the idea of perpendicular in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 

@@ -147,7 +147,7 @@ Matrices
 status open
 
 \begin_layout Plain Layout
-elementary (row) matrix!inverse
+elementary matrix!inverse
 \begin_inset ERT
 status open
 
@@ -476,7 +476,7 @@ Multiplying the operation matrix by the inverse matrix will verify the inverse
 status open
 
 \begin_layout Plain Layout
-elementary (row) matrix!inverse
+elementary matrix!inverse
 \begin_inset ERT
 status open
 
@@ -500,7 +500,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-elementary (row) matrix!determinant
+elementary matrix!determinant
 \begin_inset ERT
 status open
 
@@ -3261,7 +3261,7 @@ Therefore,
 status open
 
 \begin_layout Plain Layout
-elementary (row) matrix!determinant
+elementary matrix!determinant
 \begin_inset ERT
 status open
 
@@ -3294,7 +3294,7 @@ matrices
 status open
 
 \begin_layout Plain Layout
-matrix!elementary (row)|textidxkey
+matrix!elementary|textidxkey
 \end_layout
 
 \end_inset

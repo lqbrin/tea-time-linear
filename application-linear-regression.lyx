@@ -110,6 +110,27 @@ name "sec:Linear-Regression"
 \end_inset
 
 Linear Regression []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!linear
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -304,8 +325,17 @@ best value
 \begin_inset Quotes erd
 \end_inset
 
-, but one reasonable definition is to minimize the sum of the squared errors,
- where an error, also known as a residual, is the difference between an
+, but one reasonable definition is to minimize the sum of the squared errors
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+sum of squared errors
+\end_layout
+
+\end_inset
+
+, where an error, also known as a residual, is the difference between an
  observed response and the modeled response to the same input.
  For example, 
 \begin_inset Formula $12.956$
@@ -353,7 +383,17 @@ As a linear algebra problem, finding the best value of
 \begin_inset Formula $k$
 \end_inset
 
- in this sense amounts to finding the best approximation (see theorem 
+ in this sense amounts to finding the best approximation
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+best approximation
+\end_layout
+
+\end_inset
+
+ (see theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:best-approximation-linear-system"
@@ -772,8 +812,34 @@ For a final linear regression on the February driving data, we return to
 
 .
  This model is slightly different from the ones we have derived so far.
- Here, we have two input variables, making this a multiple linear regression,
- or multilinear regression.
+ Here, we have two input variables, making this a 
+\series bold
+multiple linear regression
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!multiple linear
+\end_layout
+
+\end_inset
+
+, or 
+\series bold
+multilinear regression
+\series default
+.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!multilinear
+\end_layout
+
+\end_inset
+
  The principle is the same, however.
  We wish to find the best approximation of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
@@ -913,6 +979,27 @@ A linear regression model with two input parameters is, geometrically, a
 
 \begin_layout Subsection*
 Normal Equations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+normal equations
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -929,9 +1016,18 @@ noprefix "false"
 , the calculation of a best approximation involves projecting onto the column
  space of a coefficient matrix, requiring an orthogonal basis for the column
  space.
- While (Gram-Schmidt) orthogonalization can be applied to find such a basis,
- the process is computationally intensive and, more detrimental to the results,
- error prone.
+ While (Gram-Schmidt) orthogonalization
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonalization
+\end_layout
+
+\end_inset
+
+ can be applied to find such a basis, the process is computationally intensive
+ and, more detrimental to the results, error prone.
  In practice, the normal equations
 \begin_inset Formula 
 \[
@@ -961,7 +1057,17 @@ status open
 
 
 \backslash
-begin{digression}{Normal Equations} 
+begin{digression}{Normal Equations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+normal equations|textidxdig
 \end_layout
 
 \end_inset
@@ -1337,6 +1443,48 @@ noprefix "false"
 \end_inset
 
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+normal equations
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!linear
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1352,7 +1500,17 @@ squares
 \begin_inset space ~
 \end_inset
 
-solution a best approximation 
+solution 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+solution!least squares|textidxkey
+\end_layout
+
+\end_inset
+
+ a best approximation 
 \begin_inset Formula $\hat{\mathbf{v}}$
 \end_inset
 
@@ -1360,7 +1518,7 @@ solution a best approximation
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
- having sum of squared errors 
+, having sum of squared errors 
 \begin_inset Formula $\left\Vert M\hat{\mathbf{v}}-\mathbf{b}\right\Vert $
 \end_inset
 
@@ -1380,7 +1538,17 @@ squared
 \begin_inset space ~
 \end_inset
 
-errors given observations 
+errors 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+sum of squared errors|textidxkey
+\end_layout
+
+\end_inset
+
+ given observations 
 \begin_inset Formula $(X_{i},y_{i})$
 \end_inset
 
@@ -1404,7 +1572,59 @@ linear
 \begin_inset space ~
 \end_inset
 
-regression given a model of the form 
+regression 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!linear|textidxkey
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!least squares
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{regression, linear}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+least squares regression
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{regression, linear}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ given a model of the form 
 \begin_inset Formula $f(X)=\beta_{1}f_{1}(X)+\beta_{2}f_{2}(X)+\cdots+\beta_{p}f_{p}(X)$
 \end_inset
 
@@ -1448,6 +1668,16 @@ normal
 \end_inset
 
 equations 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+normal equations|textidxkey
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $M^{T}M\mathbf{v}=M^{T}\mathbf{b}$
 \end_inset
 
@@ -1467,7 +1697,17 @@ linear
 \begin_inset space ~
 \end_inset
 
-regression linear regression with multiple input variables.
+regression 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!multiple linear|textidxkey
+\end_layout
+
+\end_inset
+
+ linear regression with multiple input variables.
 \end_layout
 
 \begin_layout Description
@@ -1475,7 +1715,17 @@ multilinear
 \begin_inset space ~
 \end_inset
 
-regression another name for multiple linear regression.
+regression 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+regression!multilinear|textidxkey
+\end_layout
+
+\end_inset
+
+ another name for multiple linear regression.
 \end_layout
 
 \begin_layout Standard

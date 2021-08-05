@@ -97,6 +97,27 @@ name "sec:Discrete-Dynamical-Systems"
 \end_inset
 
 Discrete Dynamical Systems []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+discrete dynamical system
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -755,6 +776,16 @@ which paired with an
 initial condition
 \series default
 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+initial condition
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \mathbf{x}_{0}=\mathbf{v}\label{eq:dds-initial-condition}
@@ -781,6 +812,16 @@ noprefix "false"
 \series bold
 recurrence
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+recurrence
+\end_layout
+
+\end_inset
+
  or 
 \series bold
 recurrence relation
@@ -1134,10 +1175,29 @@ Further terms can be calculated similarly.
 iteration
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+iteration
+\end_layout
+
+\end_inset
+
  The terms themselves are called 
 \series bold
 iterates
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+iterate
+\end_layout
+
+\end_inset
+
  or 
 \series bold
 iterations
@@ -1146,6 +1206,16 @@ iterations
 \series bold
 orbit
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orbit
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $\mathbf{x}_{0}$
 \end_inset
@@ -1276,6 +1346,27 @@ The first few iterates of an orbit are often not the ultimate goal, however.
 long term behavior
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+long term behavior
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1344,6 +1435,15 @@ accurate to 3 decimal places.
 attractor
 \series default
 .
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+attractor
+\end_layout
+
+\end_inset
+
  It 
 \begin_inset Quotes eld
 \end_inset
@@ -1384,6 +1484,16 @@ Any solution of this equation is called a
 \series bold
 fixed point
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+fixed point
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $\mathbf{f}$
 \end_inset
@@ -1962,6 +2072,16 @@ The
 \series bold
 spectral radius
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+spectral radius
+\end_layout
+
+\end_inset
+
  of a square matrix is the maximum of the magnitudes (absolute values) of
  its eigenvalues.
  The magnitude of a complex number 
@@ -2005,6 +2125,16 @@ status open
 
 \backslash
 begin{digression}{Long Term Behavior}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+long term behavior|textidxdig
 \end_layout
 
 \end_inset
@@ -2116,7 +2246,17 @@ for some scalars
 \end_inset
 
 This solution is dominated by the eigenvalue(s) with the greatest magnitude.
- If the dominant magnitude is less than one, 
+ If the dominant
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+eigenvalue!dominant|textidxdig
+\end_layout
+
+\end_inset
+
+ magnitude is less than one, 
 \begin_inset Formula $\mathbf{y}_{k}$
 \end_inset
 
@@ -2159,6 +2299,48 @@ end{digression}
 \end_inset
 
 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+long term behavior
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+discrete dynamical system
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2186,7 +2368,17 @@ dynamical
 \begin_inset space ~
 \end_inset
 
-system an equation of the form 
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+discrete dynamical system|textidxkey
+\end_layout
+
+\end_inset
+
+ an equation of the form 
 \begin_inset Formula $\mathbf{x}_{k+1}=\mathbf{f}(\mathbf{x}_{k})$
 \end_inset
 
@@ -2214,7 +2406,17 @@ initial
 \begin_inset space ~
 \end_inset
 
-condition a value 
+condition 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+initial condition|textidxkey
+\end_layout
+
+\end_inset
+
+ a value 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -2226,8 +2428,18 @@ condition a value
 \end_layout
 
 \begin_layout Description
-recurrence a general term for the type of equation appearing in a discrete
- dynamical system.
+recurrence 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+recurrence|textidxkey
+\end_layout
+
+\end_inset
+
+ a general term for the type of equation appearing in a discrete dynamical
+ system.
 \end_layout
 
 \begin_layout Description
@@ -2235,7 +2447,17 @@ recurrence
 \begin_inset space ~
 \end_inset
 
-relation a recurrence.
+relation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+relation!recurrence|textidxkey
+\end_layout
+
+\end_inset
+
+ a recurrence.
  
 \end_layout
 
@@ -2264,7 +2486,17 @@ affine
 \begin_inset space ~
 \end_inset
 
-map a map 
+transformation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transformation!affine|textidxkey
+\end_layout
+
+\end_inset
+
+ a transformation 
 \begin_inset Formula $\mathbf{f}:\mathbb{R}^{n}\to\mathbb{R}^{n}$
 \end_inset
 
@@ -2276,12 +2508,32 @@ map a map
 \end_layout
 
 \begin_layout Description
-iteration the process of calculating the terms of the sequence determined
- by a discrete dynamical system.
+iteration 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+iteration|textidxkey
+\end_layout
+
+\end_inset
+
+ the process of calculating the terms of the sequence determined by a discrete
+ dynamical system.
 \end_layout
 
 \begin_layout Description
-iterates the terms of the sequence determined by a discrete dynamical system.
+iterates 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+iterate|textidxkey
+\end_layout
+
+\end_inset
+
+ the terms of the sequence determined by a discrete dynamical system.
 \end_layout
 
 \begin_layout Description
@@ -2289,8 +2541,18 @@ iterations iterates.
 \end_layout
 
 \begin_layout Description
-orbit the sequence determined by a discrete dynamical system—the solution
- of a dynamical system with initial condition.
+orbit 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orbit|textidxkey
+\end_layout
+
+\end_inset
+
+ the sequence determined by a discrete dynamical system—the solution of
+ a dynamical system with initial condition.
 \end_layout
 
 \begin_layout Description
@@ -2302,8 +2564,17 @@ term
 \begin_inset space ~
 \end_inset
 
-behavior a quantitative or qualitative description of the orbit of a dynamical
- system.
+behavior 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+long term behavior|textidxkey
+\end_layout
+
+\end_inset
+
+ a quantitative or qualitative description of the orbit of a dynamical system.
  The phrases 
 \begin_inset Quotes eld
 \end_inset
@@ -2345,7 +2616,17 @@ fixed
 \begin_inset space ~
 \end_inset
 
-point a solution of the equation 
+point 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+fixed point|textidxkey
+\end_layout
+
+\end_inset
+
+ a solution of the equation 
 \begin_inset Formula $\mathbf{f}(\mathbf{x})=\mathbf{x}$
 \end_inset
 
@@ -2353,8 +2634,49 @@ point a solution of the equation
 \end_layout
 
 \begin_layout Description
-attractor the fixed point of a dynamical system whose solutions tend toward
- it.
+attractor 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+attractor|textidxkey
+\end_layout
+
+\end_inset
+
+ the fixed point of a dynamical system whose solutions tend toward it.
+\end_layout
+
+\begin_layout Description
+repeller 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+repeller|textidxkey
+\end_layout
+
+\end_inset
+
+ the fixed point of a dynamical system whose solutions tend away from it.
+\end_layout
+
+\begin_layout Description
+spectral
+\begin_inset space ~
+\end_inset
+
+radius 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+spectral radius|textidxkey
+\end_layout
+
+\end_inset
+
+the greatest magnitude of all eigenvalues of a matrix.
 \end_layout
 
 \begin_layout Standard

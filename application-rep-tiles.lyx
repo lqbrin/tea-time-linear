@@ -106,6 +106,27 @@ name "sec:Rep-tiles"
 \end_inset
 
 Rep-tiles []
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+rep-tile
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -408,6 +429,26 @@ status open
 
 \backslash
 begin{digression}{Solomon Golomb}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Golomb!Solomon|textidxdig
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Gardner!Martin|textidxdig
 \end_layout
 
 \end_inset
@@ -732,11 +773,45 @@ noprefix "false"
 \series bold
 similitude
 \series default
-—a rigid transformation (rotation, reflection, translation, or composition
- thereof) composed with 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+similitude
+\end_layout
+
+\end_inset
+
+—a 
+\series bold
+rigid transformation
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transformation!rigid
+\end_layout
+
+\end_inset
+
+ (rotation, reflection, translation, or composition thereof) composed with
+ 
 \series bold
 dilation
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dilation
+\end_layout
+
+\end_inset
+
  (scaling by the same scale factor in all directions).
  Similitudes preserve shape but not necessarily size, exactly the type of
  transformation needed to map a shape onto one of the (similar) parts of
@@ -773,6 +848,16 @@ for any subset
 \series bold
 Hutchinson's theorem
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Hutchinson's theorem
+\end_layout
+
+\end_inset
+
  concludes that there is exactly one compact set 
 \begin_inset Formula $K$
 \end_inset
@@ -813,6 +898,16 @@ status open
 
 \backslash
 begin{digression}{Hutchinson}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Hutchinson's theorem|textidxdig
 \end_layout
 
 \end_inset
@@ -1460,6 +1555,27 @@ Imposing a set of axes on any one of the dissections allows developing the
  similitudes mapping the shape to its parts.
  Much like a center and radius define a circle or two points define a line,
  the collection of these similitudes defines the rep-tile.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+rep-tile
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1467,8 +1583,18 @@ Key Concepts
 \end_layout
 
 \begin_layout Description
-rep-tile a plane figure that tessellates the plane and can be dissected
- into finitely many similar copies.
+rep-tile 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+rep-tile|textidxkey
+\end_layout
+
+\end_inset
+
+ a plane figure that tessellates the plane and can be dissected into finitely
+ many similar copies.
  Equivalently, a plane figure that tiles the plane and tiles an enlarged
  replica of itself.
 \end_layout
@@ -1490,7 +1616,17 @@ special
 \begin_inset space ~
 \end_inset
 
-case) Let 
+case) 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Hutchinson's theorem|textidxkey
+\end_layout
+
+\end_inset
+
+ Let 
 \begin_inset Formula $\mathscr{C}=\{C_{1},C_{2},\ldots,C_{n}\}$
 \end_inset
 
@@ -1544,7 +1680,17 @@ for any compact set
 \end_layout
 
 \begin_layout Description
-similitude a rigid transformation composed with a dilation.
+similitude 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+similitude|textidxkey
+\end_layout
+
+\end_inset
+
+ a rigid transformation composed with a dilation.
  Similitudes preserve shape but not necessarily size
 \end_layout
 
@@ -1553,11 +1699,31 @@ rigid
 \begin_inset space ~
 \end_inset
 
-transformation a rotation, reflection, or translation.
+transformation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+transformation!rigid|textidxkey
+\end_layout
+
+\end_inset
+
+ a rotation, reflection, or translation.
 \end_layout
 
 \begin_layout Description
-dilation a map of the form 
+dilation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dilation|textidxkey
+\end_layout
+
+\end_inset
+
+ a map of the form 
 \begin_inset Formula $T(\mathbf{x})=r\mathbf{x}$
 \end_inset
 
@@ -1573,7 +1739,17 @@ compact
 \begin_inset space ~
 \end_inset
 
-set a subset 
+set 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!compact|textidxkey
+\end_layout
+
+\end_inset
+
+ a subset 
 \begin_inset Formula $S$
 \end_inset
 
@@ -1589,7 +1765,17 @@ closed
 \begin_inset space ~
 \end_inset
 
-set a subset 
+set 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!closed|textidxkey
+\end_layout
+
+\end_inset
+
+ a subset 
 \begin_inset Formula $S$
 \end_inset
 
@@ -1618,7 +1804,17 @@ bounded
 \begin_inset space ~
 \end_inset
 
-set a subset 
+set 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+set!bounded|textidxkey
+\end_layout
+
+\end_inset
+
+ a subset 
 \begin_inset Formula $S$
 \end_inset
 
@@ -1651,7 +1847,17 @@ function
 \begin_inset space ~
 \end_inset
 
-system a set of contraction mappings.
+system 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+iterated function system|textidxkey
+\end_layout
+
+\end_inset
+
+ a set of contraction mappings.
 \end_layout
 
 \begin_layout Description
@@ -1659,7 +1865,17 @@ contraction
 \begin_inset space ~
 \end_inset
 
-mapping a map 
+mapping 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+mapping!contraction
+\end_layout
+
+\end_inset
+
+ a map 
 \begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{n}$
 \end_inset
 
@@ -1693,7 +1909,28 @@ A contraction mapping scales down the distance between every pair of distinct
 \end_layout
 
 \begin_layout Description
-IFS iterated function system.
+IFS 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IFS
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|see{iterated function system}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ iterated function system.
 \end_layout
 
 \begin_layout Description

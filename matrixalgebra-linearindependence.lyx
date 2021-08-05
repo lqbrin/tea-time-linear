@@ -432,6 +432,16 @@ Let
 \series bold
 linearly dependent
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear dependence
+\end_layout
+
+\end_inset
+
  or that 
 \begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
 \end_inset
@@ -458,7 +468,7 @@ nontrivial solution
 status open
 
 \begin_layout Plain Layout
-nontrivial solution
+solution!nontrivial
 \end_layout
 
 \end_inset
@@ -475,7 +485,17 @@ linearly independent
 \begin_inset Formula $\{b_{1},b_{2},\ldots,b_{n}\}$
 \end_inset
 
- is a linearly independent set.
+ is a linearly independent
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+linear independence
+\end_layout
+
+\end_inset
+
+ set.
  Note that the 
 \begin_inset Formula $0$
 \end_inset
@@ -547,7 +567,7 @@ a nontrivial linear combination
 status open
 
 \begin_layout Plain Layout
-nontrivial linear combination
+linear combination!nontrivial
 \end_layout
 
 \end_inset
@@ -688,7 +708,7 @@ No column of
 status open
 
 \begin_layout Plain Layout
-trivial solution
+solution!trivial
 \end_layout
 
 \end_inset
@@ -1461,7 +1481,7 @@ status open
 
 \begin_layout Plain Layout
 
-|see{linear independence}
+|see{linear dependence}
 \end_layout
 
 \end_inset
@@ -1674,7 +1694,7 @@ status open
 
 \begin_layout Plain Layout
 
-|see{solution!nontrivial}
+|see{solution!trivial}
 \end_layout
 
 \end_inset

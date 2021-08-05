@@ -515,7 +515,17 @@ Actually, we have done this to some extent already!
 We know the shortest distance between a point and a line is measured perpendicul
 arly.
  The point on the line where this shortest distance occurs coincides exactly
- with the (orthogonal) projection of 
+ with the orthogonal projection
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!projection
+\end_layout
+
+\end_inset
+
+ of 
 \begin_inset Formula $\mathbf{b}$
 \end_inset
 
@@ -653,6 +663,16 @@ If
 \series bold
 orthogonal
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal
+\end_layout
+
+\end_inset
+
  to 
 \begin_inset Formula $W$
 \end_inset
@@ -670,6 +690,16 @@ orthogonal
 \series bold
 orthogonal complement
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!complement
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $W$
 \end_inset
@@ -772,6 +802,16 @@ noprefix "false"
 \shape italic
 orthogonal basis
 \shape default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+basis!orthogonal
+\end_layout
+
+\end_inset
+
  of 
 \begin_inset Formula $W$
 \end_inset
@@ -846,7 +886,17 @@ name "thm:Orthogonal-Decomposition"
 [Orthogonal Decomposition]
 \series default
 \shape default
- Let 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!decomposition|textidxthm
+\end_layout
+
+\end_inset
+
+Let 
 \begin_inset Formula $W$
 \end_inset
 
@@ -1033,7 +1083,17 @@ name "thm:best-approximation"
 [Best Approximation]
 \series default
 \shape default
- If 
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+best approximation|textidxthm
+\end_layout
+
+\end_inset
+
+If 
 \begin_inset Formula $W$
 \end_inset
 
@@ -1585,7 +1645,17 @@ best
 \begin_inset space ~
 \end_inset
 
-approximation of 
+approximation 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+best approximation|textidxkey
+\end_layout
+
+\end_inset
+
+ of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -1666,7 +1736,17 @@ noprefix "false"
 \end_layout
 
 \begin_layout Description
-orthogonal a vector 
+orthogonal 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal|textidxkey
+\end_layout
+
+\end_inset
+
+ a vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -1703,11 +1783,21 @@ orthogonal a vector
 \end_layout
 
 \begin_layout Description
-(orthogonal)
+orthogonal
 \begin_inset space ~
 \end_inset
 
-projection of a vector 
+projection 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!projection|textidxkey
+\end_layout
+
+\end_inset
+
+ of a vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -1735,7 +1825,17 @@ orthogonal
 \begin_inset space ~
 \end_inset
 
-complement of a subspace 
+complement 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!complement|textidxkey
+\end_layout
+
+\end_inset
+
+ of a subspace 
 \begin_inset Formula $W$
 \end_inset
 
@@ -1768,7 +1868,17 @@ orthogonal
 \begin_inset space ~
 \end_inset
 
-decomposition writing 
+decomposition 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+orthogonal!decomposition|textidxkey
+\end_layout
+
+\end_inset
+
+ writing 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
