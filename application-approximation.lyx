@@ -105,7 +105,47 @@ name "sec:Approximation"
 
 \end_inset
 
-Approximation []
+Approximation [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Solution-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \end_layout
 
 \begin_layout Standard
@@ -376,13 +416,13 @@ have a best approximation.
  such that
 \begin_inset Formula 
 \[
-\left\Vert M\hat{\mathbf{v}}-\mathbf{b}\right\Vert <\left\Vert M\mathbf{v}-\mathbf{b}\right\Vert 
+\left\Vert M\hat{\mathbf{v}}-\mathbf{b}\right\Vert \leq\left\Vert M\mathbf{v}-\mathbf{b}\right\Vert 
 \]
 
 \end_inset
 
 for all 
-\begin_inset Formula $\mathbf{v}\neq\hat{\mathbf{v}}$
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
 ? For example,

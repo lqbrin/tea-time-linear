@@ -1106,7 +1106,7 @@ noprefix "false"
 status open
 
 \begin_layout Plain Layout
-matrix!elementary
+elementary matrix
 \end_layout
 
 \end_inset
@@ -2482,7 +2482,7 @@ plane the
 status open
 
 \begin_layout Plain Layout
-matrix!elementary|textidxkey
+elementary matrix|textidxkey
 \end_layout
 
 \end_inset

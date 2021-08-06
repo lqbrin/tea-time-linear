@@ -105,7 +105,17 @@ name "sec:Markov-Chains"
 
 \end_inset
 
-Markov Chains []
+Markov Chains [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 
@@ -1222,8 +1232,12 @@ which is, accurate to three decimal places, equal to the columns of
 More importantly, the distribution we see after 8 months will be the eventual
  distribution of bicycles no matter the initial distribution! Given any
  initial distribution of bicycles, 
-\begin_inset Formula $\left[\begin{array}{cccccccc}
-w_{1} & w_{2} & w_{3} & w_{4} & w_{5} & w_{6} & w_{7} & w_{8}\end{array}\right]^{T}$
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccccccc}
+w_{1} & w_{2} & w_{3} & w_{4} & w_{5} & w_{6} & w_{7} & w_{8}\end{array}\right]^{T}
+\]
+
 \end_inset
 
  (where 
@@ -2015,6 +2029,10 @@ KvuxbGdZODUUVa_e5r6UhHCVjIuS8gC1VSsT&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 0.403 & 0.357 & 0.024\\
 0.446 & 0.116 & 0.24\\
@@ -2023,6 +2041,9 @@ KvuxbGdZODUUVa_e5r6UhHCVjIuS8gC1VSsT&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 ; 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
 0.105\\
 0.019\\
@@ -2033,6 +2054,7 @@ KvuxbGdZODUUVa_e5r6UhHCVjIuS8gC1VSsT&lang=sage&interacts=eJyLjgUAARUAuQ==}
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
@@ -2058,6 +2080,10 @@ wvOFsxAKQGYgVJQZIJQAAJgVKXw=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 0.151 & 0.355 & 0.163\\
 0.21 & 0.637 & 0.56\\
@@ -2065,7 +2091,10 @@ wvOFsxAKQGYgVJQZIJQAAJgVKXw=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
 0\\
 1\\
@@ -2099,6 +2128,7 @@ noprefix "false"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status collapsed
@@ -2117,6 +2147,10 @@ VoDwfOEshAKQUQgVZQYIJQCkQSsH&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 0.385 & 0.3 & 0.429\\
 0.049 & 0.651 & 0.378\\
@@ -2125,6 +2159,9 @@ VoDwfOEshAKQUQgVZQYIJQCkQSsH&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 ; 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\mathbf{v}_{0}=\left[\begin{array}{c}
 0.578\\
 0.269\\
@@ -2135,6 +2172,7 @@ VoDwfOEshAKQUQgVZQYIJQCkQSsH&lang=sage&interacts=eJyLjgUAARUAuQ==}
 
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label

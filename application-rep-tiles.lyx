@@ -105,7 +105,17 @@ name "sec:Rep-tiles"
 
 \end_inset
 
-Rep-tiles []
+Rep-tiles [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Determinants-Eigenvalues-Area"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 
@@ -438,7 +448,7 @@ begin{digression}{Solomon Golomb}
 status open
 
 \begin_layout Plain Layout
-Golomb!Solomon|textidxdig
+Golomb, Solomon|textidxdig
 \end_layout
 
 \end_inset
@@ -448,7 +458,7 @@ Golomb!Solomon|textidxdig
 status open
 
 \begin_layout Plain Layout
-Gardner!Martin|textidxdig
+Gardner, Martin|textidxdig
 \end_layout
 
 \end_inset

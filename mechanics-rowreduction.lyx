@@ -2764,7 +2764,7 @@ matrix!coefficient|textidxkey
 status open
 
 \begin_layout Plain Layout
-coefficient matrix|
+coefficient!matrix|
 \begin_inset ERT
 status open
 

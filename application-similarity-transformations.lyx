@@ -105,7 +105,37 @@ name "sec:Similarity-and-Diagonalization"
 
 \end_inset
 
-Similarity and Diagonalization []
+Similarity and Diagonalization [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Transformations-on-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Coordinate-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \end_layout
 
 \begin_layout Standard

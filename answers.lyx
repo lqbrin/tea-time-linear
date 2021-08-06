@@ -5584,7 +5584,11 @@ name "ans:basis-and-dimension-5"
 \end_inset
 
  (ii) one answer is 
-\begin_inset Formula $\left\{ 9-4t+7t^{2},-20+8t+17t^{2}\right\} $
+\begin_inset Formula 
+\[
+\left\{ 9-4t+7t^{2},-20+8t+17t^{2}\right\} 
+\]
+
 \end_inset
 
  (but answers will vary since any two vectors from the set will do)

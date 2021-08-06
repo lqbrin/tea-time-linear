@@ -879,7 +879,7 @@ elementary matrix
 status open
 
 \begin_layout Plain Layout
-matrix!elementary
+elementary matrix
 \end_layout
 
 \end_inset
@@ -1154,7 +1154,7 @@ matrix
 status open
 
 \begin_layout Plain Layout
-matrix!elementary|textidxkey
+elementary matrix|textidxkey
 \end_layout
 
 \end_inset
@@ -1164,13 +1164,13 @@ matrix!elementary|textidxkey
 status open
 
 \begin_layout Plain Layout
-elementary matrix|
+matrix!elementary
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-see{matrix, elementary)}
+|see{elementary matrix)}
 \end_layout
 
 \end_inset

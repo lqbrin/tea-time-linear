@@ -181,43 +181,17 @@ Those who enjoy a more typical presentation might still find this textbook
  There will be a summary of the key concepts at the end of each conversation
  and a number of the exercises will be solved in complete detail in the
  appendix.
- So, one can get a closer-to-typical presentation by scanning for theorems
- in the conversations, reading the key concepts, and then skipping to the
- exercises with solutions.
+ One can get a closer-to-typical presentation by scanning for theorems in
+ the conversations, reading the key concepts, and then skipping to the exercises
+ with solutions.
  I hope most readers won't choose to do so, but it is an option.
  In any case, the exercises with solutions will be critical reading for
  most.
  Learning by example is often the most effective means.
  After reading a section, or at least scanning it, readers are strongly
- encouraged to skip to the statements of the exercises with solutions (marked
- by 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
- 
-\backslash
-hasasolution 
-\end_layout
-
-\end_inset
-
- or 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
- 
-\backslash
-haspartwithsolution
-\end_layout
-
-\end_inset
-
-), contemplate their solutions, solve them if they can, and then turn to
- the back of the book for full disclosure.
+ encouraged to skip to the statements of the exercises with solutions, contempla
+te their solutions, solve them if they can, and then turn to the back of
+ the book for full disclosure.
  The hope is that, with their placement in the appendix, readers will be
  more apt to consider solving the exercises on their own before looking
  at the solutions.
@@ -233,7 +207,7 @@ Tea Time Linear Algebra
  arithmetic including inverses and eigenvalues, but with only one method
  for each computation and without accompanying theory.
  The second chapter begins to bridge the gap between computational and theoretic
- linear algebra, covering row operations and systems of equations, concluding
+al linear algebra, covering row operations and systems of equations, concluding
  with the first theorem of the book, existence and uniqueness of solutions
  of linear systems.
  Chapter 3 introduces the notion of linear indepenence and revisits eigenpairs,
@@ -265,13 +239,18 @@ al notions of chapters 1-5 to solve mathematical and other problems, introducing
  unstudied theory of linear algebra sparingly.
  Factorization, iterative methods, geometry, and approximation take center
  stage.
+ While these application sections largely stand on their own, the sections
+ to which they refer are included parenthetically in the name of the section
+ to help guide the reader and instructor on sequencing.
+ Parts I and II do not have to be completed in their entirety before Part
+ III is considered.
 \end_layout
 
 \begin_layout Standard
 The first three chapters plus selections from chapters 4 and 5, capped with
  a smattering of chapters 6 and 7 cover what, at SCSU, constitutes a first
  semester course in linear algebra.
- The entirety of the book is not intended as a one-semester study.
+ It is likely full coverage of the book would require more than one semester.
  As this book is intended for use as a free download or an inexpensive print-on-
 demand volume, no effort has been made to keep the page count low or to
  spare copious diagrams and colors.
@@ -319,11 +298,11 @@ dirty
 \end_inset
 
  by doing some calculation.
- It would be nice if readers have had at least some minimal exposure to
- programming whether it be Python, Java, C, web programming, or just about
- anything, but I have made every effort to give enough detail so that even
- those who have never written a single line of code will be able to participate
- in this part of the study.
+ It would be nice if readers have had at least some exposure to programming
+ whether it be Python, Java, C, web programming, or just about anything,
+ but I have made every effort to give enough detail so that even those who
+ have never written a single line of code will be able to participate in
+ this part of the study.
  In addition to maintaining a completely free learning experience, SageMath
  was chosen as the computer algebra system for this book because it allows
  linking to SageCells.
@@ -337,12 +316,399 @@ dirty
 \end_layout
 
 \begin_layout Standard
-I hope you enjoy your reading of 
+As students come to linear algebra at widely varying levels of maturity,
+ this course is not proof-based, nor does it require calculus.
+ There are only 19 theorems and corollaries stated formally as such.
+ Instead, main ideas and their proofs are often embedded in the course of
+ discussion.
+ Despite not being a proofs course, proofs are requested in the exercises,
+ but usually using the word 
+\begin_inset Quotes eld
+\end_inset
+
+justify
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+show
+\begin_inset Quotes erd
+\end_inset
+
+, which may be interpreted as requesting an informal argument for those
+ who are not ready for full rigor.
+ Almost never will the instructions begin 
+\begin_inset Quotes eld
+\end_inset
+
+Prove
+\begin_inset Formula $\ldots$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, though students with rigorous proof experience are always most welcome
+ to provide full rigor.
+ In the end, the level of rigor is up to the reader and instructor.
+ Several tips on proof technique, such as contraposition and induction,
+ are sprinkled throughout the text to aid the unaccustomed reader in digesting
+ some of the arguments, but the explanations are too scant to substitute
+ as a complete course on foundations.
+ References to calculus and exercises including integrals and derivatives
+ can easily be ignored, with one exception.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Fourier-Series"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ on Fourier series necessarily requires calculus.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ on inner product spaces is enhanced by knowledge of calculus, but does
+ not require it.
+ A corequisite course in calculus would suffice for section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ but at least one complete semester is recommended for section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Fourier-Series"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Chapters 1 and 2 form the foundation for the rest of the text and every
+ section therein should be covered in order before jumping to other topics.
+ As an instructor, you may be tempted to fill in 
+\begin_inset Quotes eld
+\end_inset
+
+missing
+\begin_inset Quotes erd
+\end_inset
+
+ pieces of the discussion, but do whatever it takes to resist.
+ The gaps will be filled in later.
+ The purpose of these chapters is to give a straightforward introduction
+ that gently eases the student into the finer details and provide a context
+ for deeper study.
+ While chapters 6 and 7 are placed at the back of the book, much of the
+ material is appropriate long before the completion of the first 5 chapters.
+ The applications within these final two chapters should be sprinkled into
+ the course as prerequisite material is covered.
+ For example, the first application, 
+\begin_inset Formula $LU$
+\end_inset
+
+ factorization, depends only on chapters 1-3 and can easily be included
+ immediately following section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Square-Matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, as indicated in the brackets of the section title.
+ Bracketed lists of recommended prerequisite sections appear in the titles
+ of all sections of chapters 5-7 to provide some guidance with sequencing.
+ These prerequisite lists assume chapters 1 and 2 have completed in their
+ entirety, and are not meant to be hard and fast rules.
+ You may find you are able to do without some of the recommendations, and
+ you may be more comfortable adding others.
+ The following table is included for further guidance.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+interject this section
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+any time after completing this section
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Discrete-Dynamical-Systems"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ Discrete Dynamical Systems
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Markov-Chains"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ Markov Chains; and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Power-Method"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ The Power Method
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:LU-Factorization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\begin_inset Formula $LU$
+\end_inset
+
+ Factorization
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Square-Matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Determinants-Eigenvalues-Area"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ Geometry; and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Rep-tiles"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ Rep-tiles
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Transformations-on-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The remainder of the application sections (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Regression"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Fourier-Series"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are best left until after the first 5 chapters, but you may find a way
+ to modify the discussion of best approximation to avoid inner products
+ and solution spaces, thus covering it sooner.
+\end_layout
+
+\begin_layout Standard
+No matter how you choose to use the book, I hope you enjoy your reading
+ of 
 \shape italic
 Tea Time Linear Algebra
 \shape default
 .
  It was my pleasure to write it.
+ If you spot one of the many inaccuracies that have undoubtedly evaded my
+ watch, please let me know.
  Feedback is always welcome.
 \end_layout
 
@@ -421,8 +787,254 @@ addcontentsline{toc}{section}{About the Exercises}
 \end_layout
 
 \begin_layout Standard
-Each exercise where it is recommended to use SageMath is noted (TODO: finish
- this thought)
+Exercises may be marked with one or more of the following symbols.
+ In the PDF version of the book, each of these symbols is a hyperlink to
+ the web or another part of the textbook.
+ Click to follow.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+This exercise has a detailed solution on page 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithsolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Part of this exercise has a detailed solution on page 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+This exercise has an answer on page 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+haspartwithanswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Part of this exercise has an answer on page 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SageMath is recommended for this exercise.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+geogebra
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GeoGebra is recommended for this exercise.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Answers and solutions may be followed back to the exercise by clicking the
+ exercise number.
 \end_layout
 
 \begin_layout Section*

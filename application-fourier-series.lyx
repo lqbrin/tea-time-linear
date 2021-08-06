@@ -105,7 +105,27 @@ name "sec:Fourier-Series"
 
 \end_inset
 
-Fourier Series []
+Fourier Series [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, calculus]
 \begin_inset Index idx
 status open
 

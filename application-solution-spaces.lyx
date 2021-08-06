@@ -100,7 +100,47 @@ name "sec:Solution-Spaces"
 
 \end_inset
 
-Solution Spaces []
+Solution Spaces [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Square-Matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 
@@ -117,16 +157,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: add section numbers to the [] in application sections
 \end_layout
 
 \end_inset

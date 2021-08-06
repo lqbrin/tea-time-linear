@@ -1255,27 +1255,6 @@ proof technique!induction|textidxkey
 
 \end_inset
 
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-induction!proof by
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{induction}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 showing that (i) the claim is true for some particular integer, and (ii)
  if the claim is true for some integer at least as large, then it is also
  true for the next integer.

@@ -1752,7 +1752,8 @@ noprefix "false"
 \end{array}\right)+(-1)(-1)^{1+2}\det\left(\begin{array}{cc}
 1 & -8\\
 2 & 6
-\end{array}\right)+(-9)(-1)^{1+3}\det\left(\begin{array}{cc}
+\end{array}\right)\\
+ & \phantom{==}+(-9)(-1)^{1+3}\det\left(\begin{array}{cc}
 1 & -4\\
 2 & 9
 \end{array}\right)\\
@@ -14270,7 +14271,15 @@ By row reduction:
 \end{array}\right]\to\left[\begin{array}{ccc}
 -1 & -1 & -2\\
 0 & -13 & -18
-\end{array}\right]\to\left[\begin{array}{ccc}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\to\left[\begin{array}{ccc}
 13 & 13 & 26\\
 0 & -13 & -18
 \end{array}\right]\to\left[\begin{array}{ccc}

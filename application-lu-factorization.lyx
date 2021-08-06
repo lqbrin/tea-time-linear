@@ -104,7 +104,27 @@ name "sec:LU-Factorization"
 
 \end_inset
 
-LU Factorization []
+LU Factorization [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Part-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Square-Matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 
@@ -240,10 +260,6 @@ noprefix "false"
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1783,16 +1799,13 @@ factorization!
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $LU$
-\end_inset
-
- factorization
+LU factorization
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-|see{factorization, $LU$}
+@$LU$ factorization|see{factorization, $LU$}
 \end_layout
 
 \end_inset

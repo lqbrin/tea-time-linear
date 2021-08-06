@@ -1387,7 +1387,7 @@ matrix!characterization of|textidxkey
 status open
 
 \begin_layout Plain Layout
-characterization!matrix
+characterization of matrices
 \begin_inset ERT
 status open
 
@@ -1431,27 +1431,6 @@ equivalent statements|textidxkey
 
 \end_inset
 
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-statements!equivalent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{equivalent statements}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 a list of statements such that if one of them is true they are all true.
 \end_layout
 
@@ -1475,7 +1454,7 @@ linear dependence|textidxkey
 status open
 
 \begin_layout Plain Layout
-dependence!linear
+dependence, linear
 \begin_inset ERT
 status open
 

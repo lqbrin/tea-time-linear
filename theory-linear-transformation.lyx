@@ -372,7 +372,7 @@ A relation
 \begin_inset Formula $C$
 \end_inset
 
- might be given using the rather terse set notation 
+ might be given using terse set notation 
 \begin_inset Formula $C=\{(a,b)\in A\times B:\text{rule of correspondence}\}$
 \end_inset
 
@@ -610,7 +610,7 @@ Map
 status open
 
 \begin_layout Plain Layout
-Map
+map
 \end_layout
 
 \end_inset

@@ -108,7 +108,7 @@ The Determinant
 status open
 
 \begin_layout Plain Layout
-matrix!determinant
+determinant
 \begin_inset ERT
 status open
 
@@ -1296,7 +1296,7 @@ So, for the block with determinant
 status open
 
 \begin_layout Plain Layout
-matrix!determinant
+determinant
 \begin_inset ERT
 status open
 
@@ -1369,28 +1369,7 @@ determinant
 status open
 
 \begin_layout Plain Layout
-matrix!determinant|textidxkey
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-determinant
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{matrix, determinant}
-\end_layout
-
-\end_inset
-
-
+determinant|textidxkey
 \end_layout
 
 \end_inset

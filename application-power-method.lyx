@@ -105,7 +105,17 @@ name "sec:The-Power-Method"
 
 \end_inset
 
-The Power Method []
+The Power Method [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Determinant-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 
@@ -229,7 +239,7 @@ quartic formula|textidxdig
 status open
 
 \begin_layout Plain Layout
-Cardano!Gerolamo|textidxdig
+Cardano, Gerolamo|textidxdig
 \end_layout
 
 \end_inset
@@ -239,7 +249,7 @@ Cardano!Gerolamo|textidxdig
 status open
 
 \begin_layout Plain Layout
-Tartaglia!Niccol
+Tartaglia, Niccol
 \begin_inset ERT
 status open
 
@@ -262,7 +272,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-del Ferro!Scipione|textidxdig
+del Ferro, Scipione|textidxdig
 \end_layout
 
 \end_inset
@@ -272,7 +282,7 @@ del Ferro!Scipione|textidxdig
 status open
 
 \begin_layout Plain Layout
-Ferrari!Lodovico|textidxdig
+Ferrari, Lodovico|textidxdig
 \end_layout
 
 \end_inset
@@ -935,7 +945,15 @@ roman{enumi})
 \begin_inset Formula $M$
 \end_inset
 
- is diagonalizable, and
+ is 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ and has 
+\begin_inset Formula $n$
+\end_inset
+
+ linearly independent eigenvectors, and
 \end_layout
 
 \begin_layout Enumerate
@@ -957,7 +975,7 @@ eigenvalue!dominant
 \end_layout
 
 \begin_layout Enumerate
-the dominant eigenvalue has a 1-dimensional eigenspace, and
+the dominant eigenvalue has exactly one associated eigenvector
 \end_layout
 
 \begin_layout Enumerate
@@ -1043,7 +1061,7 @@ begin{digression}{The Power Method}
 
 \end_inset
 
- 
+
 \begin_inset CommandInset label
 LatexCommand label
 name "dig:power-method"
@@ -2815,8 +2833,9 @@ name "exc:power-method-6"
 The algebraic multiplicity of an eigenvalue is its multiplicity as a root
  of the characteristic polynomial.
  The geometric multiplicity of an eigenvalue is the dimension of its eigenspace.
- They are equal when the algebraic multiplicity is one, and the geometric
- multiplicity is always less than or equal to the algebraic multiplicity.
+ They are equal when the algebraic multiplicity is one.
+ The geometric multiplicity is always less than or equal to the algebraic
+ multiplicity.
  Given are the matrix 
 \begin_inset Formula $M$
 \end_inset
@@ -2999,7 +3018,7 @@ noprefix "false"
 
 \end_inset
 
-) but has a dominant eigenvalue with a 1-dimensional eigenspace.
+) but has a dominant eigenvalue with only one associated eigenvector.
  Apply the power method anyway.
  Does it work?
 \end_layout
@@ -3117,7 +3136,7 @@ The dominant eigenvalue of
 \begin_inset Formula $M$
 \end_inset
 
- has algebraic multiplicity 2 but only a 1-dimensional eigenspace.
+ has algebraic multiplicity 2 but only one associated eigenvector.
  
 \begin_inset Formula 
 \[

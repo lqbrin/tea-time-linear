@@ -105,7 +105,27 @@ name "sec:Coordinate-Vectors"
 
 \end_inset
 
-Coordinate Vectors []
+Coordinate Vectors [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Vector-Spaces-and-Span"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Basis-and-Dimension"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 

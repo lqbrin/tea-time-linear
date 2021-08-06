@@ -109,7 +109,17 @@ name "sec:Linear-Regression"
 
 \end_inset
 
-Linear Regression []
+Linear Regression [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Approximation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 
@@ -1578,27 +1588,6 @@ status open
 
 \begin_layout Plain Layout
 regression!linear|textidxkey
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-regression!least squares
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{regression, linear}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset

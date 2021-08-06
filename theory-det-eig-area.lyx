@@ -105,7 +105,37 @@ name "sec:Determinants-Eigenvalues-Area"
 
 \end_inset
 
-Geometry: Determinants, Eigenvalues, and Area []
+Geometry: Determinants, Eigenvalues, and Area [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Characterization-Square-Matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Transformations-on-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \end_layout
 
 \begin_layout Standard
@@ -308,6 +338,16 @@ literal "false"
 
 \end_inset
 
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Golomb, Solomon
+\end_layout
+
+\end_inset
+
  and features an infinitely spiraling appendage.
  The figure on the right is referred to as a twin dragon as it is the union
  of a pair of dragon curves.
@@ -347,7 +387,7 @@ begin{digression}{A Definition of Area}
 status open
 
 \begin_layout Plain Layout
-area!definition of|textidxdig
+area, definition of|textidxdig
 \end_layout
 
 \end_inset
@@ -522,7 +562,7 @@ linear transformation
 status open
 
 \begin_layout Plain Layout
-matrix!elementary
+elementary matrix
 \end_layout
 
 \end_inset
@@ -659,7 +699,7 @@ If
 
 , is a multiple of that column.
  Thus the image of every vector lies on the line determined by that column,
- giving the image of any shape area zero.
+ giving the image of any shape zero area.
  The entire image is contained within a line.
  Of course, 
 \begin_inset Formula $|\det A|=0$

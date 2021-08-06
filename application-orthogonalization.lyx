@@ -105,7 +105,27 @@ name "sec:Orthogonalization"
 
 \end_inset
 
-Orthogonalization []
+Orthogonalization [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Inner-Product-Spaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Coordinate-Vectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \end_layout
 
 \begin_layout Standard
@@ -1395,7 +1415,7 @@ orthonormal set
 status open
 
 \begin_layout Plain Layout
-orthonormal!set
+orthonormal set
 \end_layout
 
 \end_inset
@@ -1563,7 +1583,7 @@ set
 status open
 
 \begin_layout Plain Layout
-orthonormal!set|textidxkey
+orthonormal set|textidxkey
 \end_layout
 
 \end_inset
@@ -1579,7 +1599,7 @@ status open
 
 \begin_layout Plain Layout
 
-|see{orthonormal, set}
+|see{orthonormal set}
 \end_layout
 
 \end_inset

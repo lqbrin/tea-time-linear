@@ -96,7 +96,27 @@ name "sec:Discrete-Dynamical-Systems"
 
 \end_inset
 
-Discrete Dynamical Systems []
+Discrete Dynamical Systems [
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Matrix-Equations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Linear-Independence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+]
 \begin_inset Index idx
 status open
 
