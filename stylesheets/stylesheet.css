@@ -194,6 +194,10 @@ pre code {
   box-shadow: none;
 }
 
+kbd {
+	font-family: monospace;
+}
+
 blockquote {
   color: #666;
   margin-bottom: 20px;
