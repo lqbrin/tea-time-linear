@@ -23,3 +23,6 @@ webpage/
 
 # Copyrighted Escher drawings
 figures/*escher*
+
+# Ignore large Lulu files
+*Lulu*
