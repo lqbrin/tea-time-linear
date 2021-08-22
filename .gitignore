@@ -20,3 +20,6 @@ ClassHandouts/
 
 # Ignore gh-pages branch
 webpage/
+
+# Copyrighted Escher drawings
+figures/*escher*

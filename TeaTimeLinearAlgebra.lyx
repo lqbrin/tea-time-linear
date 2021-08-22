@@ -188,7 +188,7 @@ vfill
 \begin_inset CommandInset href
 LatexCommand href
 name "Leon Q. Brin"
-target "http://lqbrin.github.io/tea-time-numerical/"
+target "http://lqbrin.github.io/tea-time-linear/"
 literal "false"
 
 \end_inset

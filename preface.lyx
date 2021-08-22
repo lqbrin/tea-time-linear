@@ -121,7 +121,7 @@ addcontentsline{toc}{chapter}{Preface}
 
 
 \backslash
-addcontentsline{toc}{section}{About Tea Time Numerical Analysis}
+addcontentsline{toc}{section}{About Tea Time Linear Algebra}
 \end_layout
 
 \begin_layout Plain Layout

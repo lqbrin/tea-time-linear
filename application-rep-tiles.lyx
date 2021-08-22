@@ -140,17 +140,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: get permission for the Escher.
- Add information about copyright.
- requested from www.mcescher.com
-\end_layout
-
-\end_inset
-
 The floors of kitchens, bathrooms, museums, and other spaces are tiled more
  often than not.
  Flat ceramic or natural stone tiles are placed together in a nonoverlapping
@@ -269,7 +258,7 @@ lines 0
 placement o
 overhang 0col%
 width "50col%"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -300,6 +289,38 @@ M.C.
 	filename figures/escher-systemXe.png
 	lyxscale 50
 	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+All M.C.
+ Escher works
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+copyright 
+\end_layout
+
+\end_inset
+
+2021 The M.C.
+ Escher Company - the Netherlands.
+ All rights reserved.
+ Used by permission.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "www.mcescher.com"
+target "http://www.mcescher.com/"
+literal "false"
 
 \end_inset
 
