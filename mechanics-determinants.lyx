@@ -606,8 +606,8 @@ linear combination
 \begin_inset Formula $S$
 \end_inset
 
- is any set of objects on which addition and scalar mutliplication are defined
- (sound familiar?), 
+ is any set of objects on which addition and scalar mutliplication are defined,
+ 
 \begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
 \end_inset
 
@@ -824,7 +824,7 @@ Can the third row of the
 \end_inset
 
 -block of the completed sudoku board be written as a linear combination
- of the first two rows? Maybe you feel there is a natural way to understand
+ of its first two rows? Maybe you feel there is a natural way to understand
  linear combinations of rows of a sudoku puzzle and maybe not.
  It is not something done in solving the puzzle.
  However, if we cast each sudoku row as a 
@@ -2516,6 +2516,67 @@ noprefix "false"
 .
 \end_layout
 
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxzVLBVyE0sKcqs0DDWMdaJNtfRNdXRNdLRBfEM
+QZSRjmGsJi-XE5pCQ6AECFromINUgXSZgtQpKzjn5xaUlqQq1DjW8HKhCDihCzhiiBhjaDJ2qgEA3xAp
+vA==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+Calculate
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\det A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det(AB)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det(3A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\det(3B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What do you notice?
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \noindent
 The remaining exercises refer to the completed sudoku board of this section

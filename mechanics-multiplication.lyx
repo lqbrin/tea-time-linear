@@ -278,7 +278,7 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \begin_inset Formula $P=AB$
 \end_inset
 
- is the single entry of the product of the 
+ is the single entry of the 
 \begin_inset Formula $i^{th}$
 \end_inset
 
@@ -286,7 +286,7 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \begin_inset Formula $A$
 \end_inset
 
- with the 
+ times the 
 \begin_inset Formula $j^{th}$
 \end_inset
 
@@ -295,7 +295,7 @@ For matrices with multiple rows and columns, this row-matrix-column-matrix
 \end_inset
 
 , where this makes sense.
- That is, if 
+ If 
 \begin_inset Formula $A$
 \end_inset
 
@@ -631,7 +631,7 @@ For example, the
 \end_layout
 
 \begin_layout Standard
-If you have seen the dot product, a very similar calculation, in physics
+If you have seen the dot product, a very similar calculation in physics
  or calculus, think of the row-matrix-column-matrix product as the linear
  algebra equivalent of the dot product.
 \begin_inset Index idx
@@ -1834,6 +1834,51 @@ Multiply if possible.
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
+name "exc:multiplication-20"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+-9\\
+-4\\
+4
+\end{array}\right]\left[\begin{array}{c}
+2\\
+9\\
+-6
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
 name "exc:multiplication-4"
 
 \end_inset
@@ -1932,48 +1977,6 @@ noprefix "false"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
-name "exc:multiplication-5"
-
-\end_inset
-
-
-\begin_inset Formula $\left[\begin{array}{c}
-6.3\\
-4.1\\
-3.4
-\end{array}\right]\left[\begin{array}{cc}
-2.3 & 4.5\end{array}\right]$
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hasasolution
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "sol:multiplication-2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
 name "exc:multiplication-6"
 
 \end_inset
@@ -2024,11 +2027,9 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{c}
-7\\
--2
-\end{array}\right]\left[\begin{array}{cc}
--2 & 0\end{array}\right]$
+\begin_inset Formula $\left[\begin{array}{cccc}
+7 & 8 & 2 & 4\end{array}\right]\left[\begin{array}{cccc}
+-6 & 1 & 6 & 4\end{array}\right]$
 \end_inset
 
 
@@ -2051,17 +2052,6 @@ noprefix "false"
 \begin_inset Formula $\left[\begin{array}{ccc}
 1.35 & 4.58 & 7.36\end{array}\right]\left[\begin{array}{ccc}
 3.36 & -0.25 & 1.6\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left[\begin{array}{c}
-4\\
--1
-\end{array}\right]\left[\begin{array}{cccc}
-5 & 1 & 4 & 6\end{array}\right]$
 \end_inset
 
 
@@ -2093,6 +2083,17 @@ Multiply if possible.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+7\\
+-2
+\end{array}\right]\left[\begin{array}{cc}
+-2 & 0\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $\left[\begin{array}{cc}
 0.03 & -0.6\\
 4.25 & 5.09
@@ -2100,6 +2101,48 @@ Multiply if possible.
 -0.3\\
 4.6
 \end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-5"
+
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+6.3\\
+4.1\\
+3.4
+\end{array}\right]\left[\begin{array}{cc}
+2.3 & 4.5\end{array}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-2"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 
@@ -2247,6 +2290,17 @@ noprefix "false"
 -2 & 1\\
 -1 & 2
 \end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+4\\
+-1
+\end{array}\right]\left[\begin{array}{cccc}
+5 & 1 & 4 & 6\end{array}\right]$
 \end_inset
 
 
@@ -2935,7 +2989,7 @@ True or false? For any column vectors
 \begin_inset Formula $\mathbf{w}$
 \end_inset
 
-,
+ with the same number of entries each,
 \begin_inset ERT
 status open
 

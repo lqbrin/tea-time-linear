@@ -588,7 +588,6 @@ linear system!inconsistent
 
  If a row echelon form of its augmented matrix has a pivot in the last column,
  the linear system is inconsistent.
- Otherwise it is consistent.
  Indeed, a row containing a pivot in the last column has the form 
 \begin_inset Formula $\left[\begin{array}{ccccc}
 0 & 0 & \cdots & 0 & \#\end{array}\right]$
@@ -599,15 +598,16 @@ linear system!inconsistent
 \end_inset
 
  (zero equals a nonzero number), which of course is nonsense.
- If a row echelon form matrix does not have a pivot in the rightmost column,
- the corresponding system can be solved by back-substitution.
+ Otherwise it is consistent.
+ 
 \end_layout
 
 \begin_layout Standard
-The pivots can also be used to determine the number of solutions of a consistent
- system.
- If a row echelon form of an augmented matrix has a pivot in each column
- (beside the rightmost), the linear system has exactly one solution.
+For a consistent system (no row echelon form matrix has a pivot in the rightmost
+ column), the corresponding system can be solved by back-substitution.
+ The pivots can also be used to determine the number of solutions.
+ If a row echelon form of the system's augmented matrix has a pivot in each
+ column (beside the rightmost), the linear system has exactly one solution.
  Otherwise it has infinitely many solutions.
  The second case is worth closer inspection.
  
@@ -701,7 +701,7 @@ a single equation in two variables.
 
 .
  So 
-\begin_inset Formula $7,-16$
+\begin_inset Formula $-16,7$
 \end_inset
 
  is a solution.
@@ -820,7 +820,7 @@ Take a moment to verify that these matrix representations are equivalent
 \end_inset
 
 .
- The last presentation of the solution might feel more satisfying.
+ The last presentation of the solution should feel the most satisfying.
  It does not favor one variable over the other and gives an explicit formula
  for the value of each variable.
  This form of the solution is called 
@@ -989,8 +989,8 @@ x_{2}
 \end_inset
 
 , is a valid homogeneous solution.
- Any combination of one particular solution and one homogeneous solution
- is an equivalent 
+ The set of all sums of one particular solution and one homogeneous solution
+ is the 
 \series bold
 general solution
 \series default

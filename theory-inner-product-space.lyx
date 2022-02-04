@@ -277,7 +277,7 @@ noprefix "false"
 
 \end_inset
 
- the length of a vector 
+ the magnitude of a vector 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -316,7 +316,7 @@ a formula that only makes sense as a magnitude since
 \end_inset
 
  were sometimes negative it would not make a good quantity for defining
- vector length.
+ vector magnitude.
  As such, the nonnegativity of 
 \begin_inset Formula $\mathbf{u}\bcdot\mathbf{u}$
 \end_inset
@@ -942,9 +942,9 @@ noprefix "false"
 
 \begin_layout Standard
 \noindent
-We use the words norm instead of magnitude (or length) and orthogonal instead
- of perpendicular because magnitude and perpendicular have special, visual,
- geometric meaning in 
+We use the words norm instead of magnitude and orthogonal instead of perpendicul
+ar because magnitude and perpendicular have special, visual, geometric meaning
+ in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
@@ -963,8 +963,8 @@ We use the words norm instead of magnitude (or length) and orthogonal instead
 
  cannot be visualized the same way.
  What would it mean for two polynomials to be perpendicular, for example?
- What would be the geometric magnitude (or length) of a matrix? The familiar
- geometric notions of length and perpendicularity of vectors in 
+ What would be the geometric magnitude of a matrix? The familiar geometric
+ notions of magnitude and perpendicularity of vectors in 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
 
@@ -996,7 +996,7 @@ defined by
 \end_inset
 
 , can be extended to other sets where no analogous picture can be drawn.
- Likewise the norm (abstraction of length) of a matrix 
+ Likewise the norm (abstraction of magnitude) of a matrix 
 \begin_inset Formula $M$
 \end_inset
 

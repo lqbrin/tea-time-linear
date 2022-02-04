@@ -2376,6 +2376,10 @@ it has no inverse.
 
 \end_deeper
 \begin_layout Enumerate
+Explain how the determinant can help determine whether a matrix has an inverse.
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:inverses-11"
@@ -2562,6 +2566,27 @@ x & 5 & 4
 \end_inset
 
 
+\series bold
+HINT
+\series default
+: You do not need to calculate 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
+ Use the fact that whenever 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are inverses, 
+\begin_inset Formula $AB=BA=I$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2713,67 +2738,6 @@ noprefix "false"
 \end_inset
 
 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate-Resume
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-sagecell{https://sagecell.sagemath.org/?z=eJxzVLBVyE0sKcqs0DDWMdaJNtfRNdXRNdLRBfEM
-QZSRjmGsJi-XE5pCQ6AECFromINUgXSZgtQpKzjn5xaUlqQq1DjW8HKhCDihCzhiiBhjaDJ2qgEA3xAp
-vA==&lang=sage&interacts=eJyLjgUAARUAuQ==}
-\backslash
- 
-\end_layout
-
-\end_inset
-
-Calculate
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $\det A$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\det B$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\det(AB)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\det(3A)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\det(3B)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-What do you notice?
 \end_layout
 
 \end_deeper

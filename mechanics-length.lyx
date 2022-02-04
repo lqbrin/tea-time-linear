@@ -104,7 +104,7 @@ name "sec:Length-and-Orthogonality"
 
 \end_inset
 
-Length and Orthogonality
+Magnitude and Orthogonality
 \end_layout
 
 \begin_layout Subsection*
@@ -128,8 +128,8 @@ One day my friend Victor took a 5 kilometer drive.
  due east, I knew more.
  I knew which way Victor was driving.
  I could imagine tracing out his path on a map by drawing a horizontal arrow
- pointing to the right (eastward) with a length equivalent to 5 kilometers.
- The arrow captures both the direction and length of Victor's drive.
+ pointing to the right (eastward) with a magnitude equivalent to 5 kilometers.
+ The arrow captures both the direction and magnitude of Victor's drive.
  Vectors can be imagined in the same way.
  The vector 
 \begin_inset Formula 
@@ -153,8 +153,8 @@ has a 5 as its first entry and a 0 as its second.
 
 - coordinates, the five represents 5 units right (eastward) and the zero
  represents 0 units up (northward).
- In this way, the vector represents both the length and direction of Victor's
- drive, just like the arrow.
+ In this way, the vector represents both the magnitude and direction of
+ Victor's drive, just like the arrow.
  The vector and the arrow can be interpreted to represent the same thing,
  blurring any distinction between them.
  
@@ -253,8 +253,8 @@ And I knew exactly where to put it since it started just where the previous
 \end_inset
 
 .
- It has the right length and it points southeast (and starts where the first
- leg leaves off), so it accurately represents the second leg of Victor's
+ It has the right magnitude and it points southeast (and starts where the
+ first leg leaves off), so it accurately represents the second leg of Victor's
  drive.
 \end_layout
 
@@ -367,8 +367,8 @@ perpendicular vectors
 
 \end_inset
 
-The length of a vector, not surprisingly, is defined by the length of its
- representative arrow.
+The magnitude of a vector, not surprisingly, is defined by the length of
+ its representative arrow.
  A collection of vectors pointing in various directions, including vertical
  and horizontal are shown below.
 \end_layout
@@ -394,7 +394,7 @@ y
 \end{array}\right]$
 \end_inset
 
- points, its length is 
+ points, its magnitude is 
 \begin_inset Formula $\sqrt{|x|^{2}+|y|^{2}}$
 \end_inset
 
@@ -403,8 +403,8 @@ y
 \end_inset
 
 .
- The Pythagorean theorem can be used to calculate lengths of vectors that
- are not horizontal or vertical.
+ The Pythagorean theorem can be used to calculate magnitudes of vectors
+ that are not horizontal or vertical.
 \end_layout
 
 \begin_layout Standard
@@ -440,7 +440,7 @@ y
 
 \end_inset
 
-so the length of 
+so the magnitude of 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -457,18 +457,16 @@ so the length of
 .
  It could apply to vectors with 3, 8, or 28 entries just as well as vectors
  with 2 entries.
- Indeed, this is how the length, or magnitude, of a vector is defined for
- any size vector.
  The 
 \series bold
-length
+magnitude
 \series default
 
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-vector!length
+vector!magnitude
 \end_layout
 
 \end_inset
@@ -493,8 +491,8 @@ vector!length
 \end_layout
 
 \begin_layout Standard
-The following diagram illustrates the relationship between the lengths of
- vectors 
+The following diagram illustrates the relationship between the magnitudes
+ of vectors 
 \begin_inset Formula $\mathbf{v}-\mathbf{u}$
 \end_inset
 
@@ -522,7 +520,7 @@ The following diagram illustrates the relationship between the lengths of
 \end_inset
 
  if and only if they are both right angles.
- Consequently the lengths of 
+ Consequently the magnitudes of 
 \begin_inset Formula $\mathbf{v}+\mathbf{u}$
 \end_inset
 
@@ -557,6 +555,15 @@ The following diagram illustrates the relationship between the lengths of
 \noindent
 This observation leads to a very useful property of the dot product, exposed
  by the following calculation.
+ 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ are perpendicular if and only if
 \begin_inset Formula 
 \begin{align}
 \Vert\mathbf{v}+\mathbf{u}\Vert & =\Vert\mathbf{v}-\mathbf{u}\Vert\nonumber \\
@@ -573,7 +580,8 @@ This observation leads to a very useful property of the dot product, exposed
 
 \end_inset
 
-Vectors 
+Since each line follows logically from the previous, and vice veresa, the
+ vectors 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -582,8 +590,8 @@ Vectors
 \end_inset
 
  (with two entries) are perpendicular if and only if their dot product is
- zero! Passing from the seventh equation to the eighth equation depends
- on the fact that 
+ zero! Passing between the seventh equation and the eighth depends on the
+ fact that 
 \begin_inset Formula $\mathbf{v}^{T}\mathbf{u}=\mathbf{u}^{T}\mathbf{v}$
 \end_inset
 
@@ -607,8 +615,8 @@ As with the formula
 \begin_inset Formula $\Vert\mathbf{v}\Vert=\sqrt{\mathbf{v}^{T}\mathbf{v}}$
 \end_inset
 
- for length, this calculation is independent of the number of entries in
- the vectors.
+ for magnitude, this calculation is independent of the number of entries
+ in the vectors.
  We say that vectors 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
@@ -694,7 +702,8 @@ vector!subtraction
 \end_inset
 
  Easy to picture in two dimensions, this formula applies to vectors of any
- length again extending a two- and three-dimensional notion to higher dimensions.
+ magnitude again extending a two- and three-dimensional notion to higher
+ dimensions.
 \end_layout
 
 \begin_layout Subsection
@@ -780,12 +789,12 @@ The sum of two vectors is represented geometrically by a diagonal of the
 \end_layout
 
 \begin_layout Description
-length 
+magnitude 
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-vector!length|textidxkey
+vector!magnitude|textidxkey
 \end_layout
 
 \end_inset
@@ -890,7 +899,7 @@ The distance between two vectors,
 \begin_inset Formula $d(\mathbf{u},\mathbf{v})$
 \end_inset
 
-, is the length of their difference, 
+, is the magnitude of their difference, 
 \begin_inset Formula $\Vert\mathbf{u}-\mathbf{v}\Vert$
 \end_inset
 
@@ -1153,7 +1162,7 @@ since the multiplicands are both matrices.
 status open
 
 \begin_layout Plain Layout
-SageMath!length
+SageMath!magnitude
 \end_layout
 
 \end_inset
@@ -1181,7 +1190,7 @@ texttt{norm()}
 
 \end_inset
 
-The length of a vector can be computed using the 
+The magnitude of a vector can be computed using the 
 \family typewriter
 .norm()
 \family default
@@ -1200,7 +1209,7 @@ same
 \end_inset
 
  vector as both a SageMath vector and a SageMath matrix and then outputs
- their lengths, or norms.
+ their magnitudes, or norms.
 \end_layout
 
 \begin_layout LyX-Code
@@ -2614,11 +2623,11 @@ Give an example of a
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- such that the length of 
+ such that the magnitude of 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
- is less than the length of 
+ is less than the magnitude of 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 

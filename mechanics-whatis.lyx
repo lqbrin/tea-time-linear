@@ -1739,7 +1739,7 @@ M[2,:]
  The first row is row 1, the second row is row 2, and so on.
  However, SageMath uses the very common computer programming convention
  of 0-indexing.
- That is, counting starts with 0 instead of 1 in SageMath.
+ Counting starts with 0 instead of 1 in SageMath.
  So the first row of a matrix 
 \family typewriter
 M
@@ -2298,7 +2298,7 @@ SageMath!nested statement|textidxdig
 \end_inset
 
 .
- That is, one statement may appear as the argument (inside) of another.
+ One statement may appear as the argument (inside) of another.
  For example, the code
 \end_layout
 

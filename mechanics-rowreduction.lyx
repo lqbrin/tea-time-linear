@@ -2454,7 +2454,7 @@ Step 7
 \begin_layout Standard
 \noindent
 Notice that all three approaches produced the same reduced row echelon form.
- This is not an accident and will be picked up again soon.
+ This is not an accident and this point will be picked up again soon.
  Writing the linear system corresponding to this reduced row echelon form,
  we see
 \family roman
@@ -3795,7 +3795,11 @@ c
 \end{array}\right]}$
 \end_inset
 
+; 
+\begin_inset Formula $a,b,c$
+\end_inset
 
+ are arbitrary real numbers
 \end_layout
 
 \end_deeper

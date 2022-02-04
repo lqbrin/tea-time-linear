@@ -797,15 +797,38 @@ elementary row operation
 
 \end_inset
 
- To summarize and name them, the elementary row operations are
+ To summarize, name them, and provide shorthand notation, the elementary
+ row operations are
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Description
 
 \series bold
 Swap
 \series default
 : swap two rows.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Shorthand for swapping rows 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ of matrix 
+\begin_inset Formula $M$
+\end_inset
+
+: 
+\begin_inset Formula $M_{j,:}\leftrightarrow M_{k,:}$
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -818,12 +841,34 @@ elementary row operation!swap
 
 \end_layout
 
-\begin_layout Enumerate
+\end_deeper
+\begin_layout Description
 
 \series bold
 Scale
 \series default
-: multiply each entry in a row by a scalar.
+: multiply each entry in a row by a nonzero scalar.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Shorthand for scaling row 
+\begin_inset Formula $j$
+\end_inset
+
+ of matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ by 
+\begin_inset Formula $s$
+\end_inset
+
+: 
+\begin_inset Formula $sM_{j,:}\to M_{j,:}$
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -836,12 +881,38 @@ elementary row operation!scale
 
 \end_layout
 
-\begin_layout Enumerate
+\end_deeper
+\begin_layout Description
 
 \series bold
 Replace
 \series default
 : add a multiple of one row to another.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Shorthand for adding 
+\begin_inset Formula $s$
+\end_inset
+
+ times row 
+\begin_inset Formula $j$
+\end_inset
+
+ to row 
+\begin_inset Formula $k$
+\end_inset
+
+ of matrix 
+\begin_inset Formula $M$
+\end_inset
+
+: 
+\begin_inset Formula $sM_{j,:}+M_{k,:}\to M_{k,:}$
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -854,6 +925,7 @@ elementary row operation!replace
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 Any system of linear equations can be translated into a matrix and solved
  using these three operations.
@@ -1596,7 +1668,8 @@ Write the linear system associated with the matrix.
 \begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
 \end_inset
 
- and their coefficients appear in that order in the matrix.
+, their coefficients appear in that order in the matrix, and the rightmost
+ column holds the constants.
 \end_layout
 
 \begin_deeper
@@ -2075,6 +2148,152 @@ name "exc:row-operations-10"
 2 & 6 & -1 & -8\\
 -2 & 2 & -12 & 8\\
 2 & -5 & -6 & 6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What elementary row matrix 
+\begin_inset Formula $E$
+\end_inset
+
+ makes the equation true?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-44"
+
+\end_inset
+
+
+\begin_inset Formula $E\cdot\left[\begin{array}{cccc}
+12 & -13 & 16 & -1\\
+15 & -8 & 2 & -7\\
+-5 & -4 & -3 & -1
+\end{array}\right]=\left[\begin{array}{cccc}
+12 & -13 & 16 & -1\\
+-60 & 32 & -8 & 28\\
+-5 & -4 & -3 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-45"
+
+\end_inset
+
+
+\begin_inset Formula $E\cdot\left[\begin{array}{ccc}
+15 & 6 & 19\\
+-5 & -18 & -1\\
+4 & 2 & 5
+\end{array}\right]=\left[\begin{array}{ccc}
+15 & 6 & 19\\
+4 & 2 & 5\\
+-5 & -18 & -1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-46"
+
+\end_inset
+
+
+\begin_inset Formula $E\cdot\left[\begin{array}{ccc}
+12 & 18 & -2\\
+-10 & 3 & 6\\
+15 & 5 & 3
+\end{array}\right]=\left[\begin{array}{ccc}
+12 & 18 & -2\\
+-10 & 3 & 6\\
+-30 & -10 & -6
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-47"
+
+\end_inset
+
+
+\begin_inset Formula $E\cdot\left[\begin{array}{cc}
+4 & -5\\
+2 & 9\\
+4 & 5
+\end{array}\right]=\left[\begin{array}{cc}
+4 & -5\\
+-18 & -16\\
+4 & 5
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-48"
+
+\end_inset
+
+
+\begin_inset Formula $E\cdot\left[\begin{array}{cc}
+-4 & -14\\
+-19 & 7\\
+-20 & 17\\
+13 & 14
+\end{array}\right]=\left[\begin{array}{cc}
+13 & 14\\
+-19 & 7\\
+-20 & 17\\
+-4 & -14
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:row-operations-49"
+
+\end_inset
+
+
+\begin_inset Formula $E\cdot\left[\begin{array}{ccc}
+8 & 9 & -7\\
+5 & 9 & 10\\
+9 & 3 & -4\\
+-4 & -1 & 4
+\end{array}\right]=\left[\begin{array}{ccc}
+23 & 36 & 23\\
+5 & 9 & 10\\
+9 & 3 & -4\\
+-4 & -1 & 4
 \end{array}\right]$
 \end_inset
 

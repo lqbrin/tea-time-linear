@@ -294,12 +294,85 @@ where
 \end_inset
 
  with each of these vectors gives a scalar multiple of the vector.
- That's unusual.
- Previous experience would suggest this does not always happen.
+ That's unusual, and a quick experiment will illustrate.
+ Try this:
+\end_layout
+
+\begin_layout Enumerate
+Write down a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ with four random nonzero entries (from 
+\begin_inset Formula $-10$
+\end_inset
+
+ to 
+\begin_inset Formula $10$
+\end_inset
+
+, say).
+\end_layout
+
+\begin_layout Enumerate
+Write down a 
+\begin_inset Formula $2\times1$
+\end_inset
+
+ vector 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ with two random nonzero entries.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $M\mathbf{u}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-In fact, 
+You will almost certainly find that 
+\begin_inset Formula $M\mathbf{u}$
+\end_inset
+
+ is 
+\series bold
+not
+\series default
+ a multiple of 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Using the example matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ from above as a random matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ and the vector 
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+2
+\end{array}\right]$
+\end_inset
+
+ as a random vector 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+, 
 \begin_inset Formula 
 \[
 A\left[\begin{array}{c}
@@ -314,27 +387,12 @@ A\left[\begin{array}{c}
 \end{array}\right]=\left[\begin{array}{c}
 10\\
 1
-\end{array}\right]
+\end{array}\right].
 \]
 
 \end_inset
 
-and 
-\begin_inset Formula $\left[\begin{array}{c}
-10\\
-1
-\end{array}\right]$
-\end_inset
-
- is no scalar multiple of 
-\begin_inset Formula $\left[\begin{array}{c}
--1\\
-2
-\end{array}\right]$
-\end_inset
-
-.
- There is no number 
+There is no number 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -348,22 +406,20 @@ and
 \end{array}\right]$
 \end_inset
 
+ demonstrating that 
+\begin_inset Formula $M\mathbf{u}$
+\end_inset
+
+ is no scalar multiple of 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
 .
- So multiplying a vector by 
+ Multiplying a vector by 
 \begin_inset Formula $A$
 \end_inset
 
  does not always produce a multiple of the vector.
- 
-\begin_inset Formula $A$
-\end_inset
-
- is not some special matrix that scales all vectors (that would be 
-\begin_inset Formula $\lambda I$
-\end_inset
-
-).
- 
 \end_layout
 
 \begin_layout Standard
@@ -412,7 +468,7 @@ Letting
 \end_layout
 
 \begin_layout Standard
-Evidently 
+From the evidence 
 \begin_inset Formula $A$
 \end_inset
 
@@ -918,33 +974,6 @@ noprefix "false"
 \end_inset
 
 .
- Perhaps this reminds you of solving quadratic equations by factoring.
- In algebra, if you know that 
-\begin_inset Formula $(x-2)(x+5)=0$
-\end_inset
-
-, then you know that either 
-\begin_inset Formula $x-2=0$
-\end_inset
-
- or 
-\begin_inset Formula $x+5=0$
-\end_inset
-
- giving two solutions, 
-\begin_inset Formula $x=2$
-\end_inset
-
- and 
-\begin_inset Formula $x=-5$
-\end_inset
-
-.
- Something similar can be said of the equation 
-\begin_inset Formula $(M-\lambda I)\mathbf{v}=\mathbf{0}$
-\end_inset
-
-.
  Certainly if 
 \begin_inset Formula $\mathbf{v}=\mathbf{0}$
 \end_inset
@@ -1088,7 +1117,42 @@ characteristic polynomial
 \end_inset
 
 ).
- Exercise 
+ Perhaps solving equations of the form 
+\begin_inset Formula $polynomial=0$
+\end_inset
+
+ reminds you of factoring.
+ If you know that 
+\begin_inset Formula $(x-2)(x+5)=0$
+\end_inset
+
+, for example, then you know that either 
+\begin_inset Formula $x-2=0$
+\end_inset
+
+ or 
+\begin_inset Formula $x+5=0$
+\end_inset
+
+ giving two solutions, 
+\begin_inset Formula $x=2$
+\end_inset
+
+ and 
+\begin_inset Formula $x=-5$
+\end_inset
+
+.
+ The equation 
+\begin_inset Formula $\det(M-\lambda I)=0$
+\end_inset
+
+ takes exactly this form and, when contrived as such, will be factorable.
+ 
+\end_layout
+
+\begin_layout Standard
+Exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:square-characterization-11"

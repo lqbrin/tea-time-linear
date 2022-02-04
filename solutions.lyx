@@ -611,6 +611,42 @@ noprefix "false"
 : 
 \begin_inset CommandInset label
 LatexCommand label
+name "sol:multiplication-8"
+
+\end_inset
+
+For matrix multiplication to be defined, the left matrix must have the same
+ number of columns (in this example it has one) as the right matrix has
+ rows (in this example it has three).
+ Therefore the matrix product 
+\begin_inset Formula $\left[\begin{array}{c}
+-9\\
+-4\\
+4
+\end{array}\right]\left[\begin{array}{c}
+2\\
+9\\
+-6
+\end{array}\right]$
+\end_inset
+
+ is undefined.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:multiplication-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
 name "sol:multiplication-1"
 
 \end_inset
@@ -651,9 +687,68 @@ name "sol:multiplication-2"
 
 \end_inset
 
-Column-row multiplication is undefined.
- Only column-row multiplication is defined, and only when the column and
- the row have the same number of entries.
+Because a column matrix has exactly one element per row and a row matrix
+ one element per column, every column-matrix-row-matrix product is defined.
+ The left matrix has the same number of columns (one) as the right matrix
+ has rows (also one).
+ The 
+\begin_inset Formula $i,\!j$
+\end_inset
+
+-entry of the product is the product of entry in the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row of the left matrix with the entry in the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ column of the right matrix.
+ For example, the 
+\begin_inset Formula $1,1$
+\end_inset
+
+-entry of the product is 
+\begin_inset Formula $(6.3)(2.3)=14.49$
+\end_inset
+
+ and the 
+\begin_inset Formula $2,1$
+\end_inset
+
+-entry is 
+\begin_inset Formula $(4.1)(2.3)=9.43$
+\end_inset
+
+.
+ Placing the right matrix just to the right and below the left matrix can
+ help with the organization:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+6.3\\
+4.1\\
+3.4
+\end{array}\right] & \left[\begin{array}{cc}
+14.49 & 28.35\\
+9.43 & 18.45\\
+7.82 & 15.3
+\end{array}\right]\\
+ & \left[\begin{array}{cc}
+\ 2.3\  & \quad4.5\quad\end{array}\right].
+\end{align*}
+
+\end_inset
+
+The answer is 
+\begin_inset Formula $\left[\begin{array}{cc}
+14.49 & 28.35\\
+9.43 & 18.45\\
+7.82 & 15.3
+\end{array}\right]$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -698,7 +793,7 @@ name "sol:multiplication-4"
 \end_inset
 
 The 
-\begin_inset Formula $i,\!j$
+\begin_inset Formula $i,j$
 \end_inset
 
 -entry of a product is the product of the 
@@ -1007,7 +1102,7 @@ name "sol:length-1"
 \begin_inset Formula $\Vert\mathbf{u}\Vert$
 \end_inset
 
- is the length or norm of 
+ is the magnitude or norm of 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -1188,9 +1283,8 @@ name "sol:length-5"
 
 \end_inset
 
-The length of a sum of vectors is the vector with tail coinciding with the
- tail of the first addend and head coinciding with the head of the last
- addend.
+The sum of vectors is the vector with tail coinciding with the tail of the
+ first addend and head coinciding with the head of the last addend.
  In this case, the tail of the first addend is at 
 \begin_inset Formula $(0,0)$
 \end_inset
@@ -9620,7 +9714,7 @@ so
 
 .
  Each multiple points in the same or opposite direction, and there is a
- multiple for every length.
+ multiple for every magnitude.
  Therefore all the points on the line containing 
 \begin_inset Formula $\left[\begin{array}{c}
 0\\

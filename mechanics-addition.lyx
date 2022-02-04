@@ -229,9 +229,9 @@ end{digression}
 \begin_layout Standard
 \noindent
 With this idea in hand, perhaps the most organized way to proceed is to
- add the number in the upper-left corner of the first matrix to the number
- in the upper-left corner of the second matrix to produce the number in
- the upper-left corner of the sum.
+ add the number in the upper-left corner of the first block to the number
+ in the upper-left corner of the second block to produce the number in the
+ upper-left corner of the sum.
  Similarly, the other 8 numbers of the sum can be produced by adding correspondi
 ng numbers (by location) of the two blocks being added.
  Here is an illustration of that process.
@@ -440,7 +440,7 @@ for all entries
 \end_inset
 
 .
- For the sume to be defined 
+ For the sum to be defined 
 \begin_inset Quotes eld
 \end_inset
 
@@ -479,7 +479,7 @@ matrix!subtraction
 
 \begin_inset Formula 
 \[
-\text{If }A\text{ and }B\text{ are matrices, then }(A-B)_{i,j}=a_{i,j}-b_{i,j}
+\text{If }A\text{ and }B\text{ are matrices, then }(A-B)_{i,j}=A_{i,j}-B_{i,j}
 \]
 
 \end_inset

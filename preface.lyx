@@ -445,8 +445,8 @@ noprefix "false"
 , as indicated in the brackets of the section title.
  Bracketed lists of recommended prerequisite sections appear in the titles
  of all sections of chapters 5-7 to provide some guidance with sequencing.
- These prerequisite lists assume chapters 1 and 2 have completed in their
- entirety, and are not meant to be hard and fast rules.
+ These prerequisite lists assume chapters 1 and 2 have been completed in
+ their entirety, and are not meant to be hard and fast rules.
  You may find you are able to do without some of the recommendations, and
  you may be more comfortable adding others.
  The following table is included for further guidance.
@@ -986,7 +986,7 @@ sage
 \begin_inset Text
 
 \begin_layout Plain Layout
-SageMath is recommended for this exercise.
+SageMath is recommended or required for this exercise.
 \end_layout
 
 \end_inset
@@ -1018,7 +1018,7 @@ geogebra
 \begin_inset Text
 
 \begin_layout Plain Layout
-GeoGebra is recommended for this exercise.
+GeoGebra is recommended or required for this exercise.
 \end_layout
 
 \end_inset

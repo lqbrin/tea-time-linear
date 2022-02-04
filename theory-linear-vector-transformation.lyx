@@ -141,7 +141,7 @@ noprefix "false"
  For example, if every vector we draw has an image pointing in the same
  direction but twice as long, that gives us a clear picture of how it transforms
  vectors.
- It doubles their lengths.
+ It doubles their magnitudes.
  
 \end_layout
 
