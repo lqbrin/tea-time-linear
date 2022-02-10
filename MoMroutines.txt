@@ -1,0 +1,125 @@
+-----------------
+GENERATE MATRICES
+-----------------
+627772 Generate random matrix
+	IN: $r = # rows; $c = # columns; $bound = max magnitude of entries; $diff = T/(F) different entries
+	OUT: $a = array of entries; $M = matrix; $Mdisp = matrixformat; $sage = Sage code; $latex = LaTeX code
+
+631975 Generate random matrix with determinant 1
+	IN: $size = # rows & columns; $bound = max magnitude of row scale
+	OUT: $a = array of entries; $M = matrix; $Mdisp = matrixformat; $Msage = Sage code; $Mlatex = LaTeX code
+		$b = inverse entries; $Minv = matrix; $Minvdisp = matrixformat; $Minvsage = Sage code; $Minvlatex = LaTeX code
+
+634385 Generate random matrix with known eigenpairs
+	IN: $size = # rows & columns; $eigbound = max magnitude of eigenvalues; $bound = max magnitude of row scale;
+		$fullrank = (T)/F; $repeatedeigenvalue = T/(F); $zeroeigenvalue = T/(F); $manualeigenvalues = T/(F);
+		$eigenvalues = array of eigenvalues if $manualeigenvalues is true
+	OUT: $M = matrix; $Mdisp = matrixformat; $Msage = Sage code; $Mlatex = LaTeX code;
+		$V = (generalized) eigenvectors; $Vdisp = matrixformat; $Vsage = Sage code; $Vlatex = LaTeX code
+		$eval = array of eigenvalues
+
+641942 Generate random matrix with specified echelon form
+	IN: $a = array of entries of echelon form matrix; and $r = number of rows; $bound = max magnitude of row scale
+	OUT: $M	= equivalent to echelon form; $Mdisp = matrixformat; $Msage	= Sage code; $Mlatex = LaTeX code
+		$Mef = echelon form; $Mefdisp = matrixformat; $Mefsage = Sage code; $Meflatex = LaTeX code
+		$Mref = reduced row echelon form; $Mrefdisp	: matrixformat; $Mrefsage = Sage code; $Mreflatex = LaTeX code
+
+652992 Generate random matrix with linearly dependent columns
+	IN: $r = # rows; $c = # columns; $independentcolumns = # ind columns; $bound = max magnitude of entries (to start)
+		$coeffbound = max magnitude of row scale
+	OUT: $a = array of entries; $M = matrix; $Mdisp = matrixformat; $Msage = Sage code; $Mlatex = LaTeX code
+
+747853 Generate random LU-factorable matrices without fractions
+	IN: $r = # rows; $c = # columns; $bound = max magnitude of row scale; $canonical = T/(F) force 1s on diagonal
+	OUT: $M	= matrix; $Mdisp = matrixformat; $Msage = Sage code; $Mlatex = LaTeX code;
+		$L = lower; $Ldisp = matrixformat; $Lsage = Sage code; $Llatex = LaTeX code;
+		$U = lower; $Udisp = matrixformat; $Usage = Sage code; $Ulatex = LaTeX code;
+
+751020 Generate random transition matrix
+	IN: $size = # rows & columns
+	OUT: $M	= matrix; $Mdisp = matrixformat; $Msage = Sage code; $Mlatex = LaTeX code;
+
+743643 Generate random column equivalent random matrices
+	IN: $r = # rows; $c = # columns; $bound = max magnitude of row scale
+	OUT: $M	= matrix 1; $Mdisp = matrixformat; $Msage = Sage code; $Mlatex = LaTeX code;
+		$N = matrix 2; $Ndisp = matrixformat; $Nsage = Sage code; $Nlatex = LaTeX code;
+
+747010 Generate random similar matrices
+	IN: $size = # rows & columns; $bound = max magnitude of row scale
+	OUT: $A	= matrix 1; $Adisp = matrixformat; $Asage = Sage code; $Alatex = LaTeX code;
+		$B = matrix 2; $Bdisp = matrixformat; $Bsage = Sage code; $Blatex = LaTeX code;
+
+--------------
+MATH UTILITIES
+--------------
+626561 Generate matrix minor
+	IN: $r = # rows; $c = # columns; $a = array of entries; $row = row to delete; $col = column to delete
+	OUT: $b = array of entries of minor
+
+881497 Is matrix in echelon form?
+	IN: $M = matrix
+	OUT: $isechelon = T/F; $pc = array of pivot columns; $pclist = list of pivot columns
+
+881505 Is matrix in reduced row echelon form?
+	IN: $M = matrix
+	OUT: $isrref = T/F; $pc = array of pivot columns; $pclist = list of pivot columns
+
+878890 Define sudoku board as matrix and graphic
+	IN: none
+	OUT: $Smatrix = sudoku board as a matrix; $Sboard = graphic; $Sarray = array of 9 rows (arrays) of sudoku board;
+		$Sblock = matrix of 3x3 blocks (matrices)
+
+---------
+UTILITIES
+---------
+626534 Define matrix variables
+	IN: none
+	OUT: $V,$v,$W,$w (upper and lower case variable names)
+	QTEXT: Use [(1,2,3),(4,5,6)] format or use equation editor.
+
+873799 Define matrix variables
+	IN: none
+	OUT: $V,$v,$W,$w (upper and lower case variable names)
+	QTEXT: Use the word <code>backslash</code> or the abbreviation <code>bs</code> for a `backslash`.
+
+626539 Latex code for a matrix
+	IN: $r = # rows; $c = # columns; $a = array of entries
+	OUT: $latex
+
+641908 Sage code for a matrix
+	IN: $r = # rows; $c = # columns; $a = array of entries
+	OUT: $sage
+
+875191 Sageoutput for a matrix
+	IN: $A = matrix
+	OUT: $sageans = use in $answer; $sageshow = use in $showanswer
+
+876688 Alternate to matrixParseStuans
+	IN: $Min = stuans or matrix in matrixformat; $eval = T/(F) evalnumstr() each entry
+	OUT: $Matrix = matrix; $good = T/F whether the matrix is valid
+
+888722 matrixParseSageAns: creates matrix type from Sage matrix output
+	IN: $Min = Sage matrix output; $eval = T/(F) evalnumstr() each entry
+	OUT: $Matrix = matrix; $good = T/F whether the matrix is valid
+	NOTE: ** WILL CHANGE $Min **
+
+873810 Generic collection of SageCell code (MANUAL grade)
+	IN: $instructions; $startercode
+	OUT: none
+
+889256 Essay collection question text and code
+	IN: none
+	OUT: none
+
+874036 Generic collection of SageCell output (AUTO grade)
+			OVERWRITE IN and QTEXT AS NEEDED--only works as-is for single answer
+	IN: $anstypes = "essay,string"; $answeights = "0,1"; $instructions; $startercode
+	OUT: none
+	QTEXT: 	$instructions
+			<div class="converttosagecell">
+				$answerbox[0]
+				<pre class="hidden">
+					$startercode
+				</pre>
+			</div>
+			$answerbox[1]

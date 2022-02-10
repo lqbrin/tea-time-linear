@@ -3079,8 +3079,8 @@ name "exc:matrix-properties"
 
 \end_inset
 
-Illustrate the rule by example.
- Then explain in your own words why the rule is true.
+Illustrate the property by example.
+ Then explain in your own words why it is true.
  
 \end_layout
 
@@ -3892,6 +3892,102 @@ Without any further computation, find
 
 \end_deeper
 \begin_layout Enumerate
+Calculate 
+\begin_inset Formula $(AB)^{T}$
+\end_inset
+
+ without calculating 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+0 & -8\\
+-12 & 5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+10 & -5\\
+7 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+9 & 3\\
+-4 & -10
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+1 & 9\\
+2 & -8
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $(AB)^{-1}$
+\end_inset
+
+ without calculating 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+-3 & 2\\
+7 & -5
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+-8 & -3\\
+5 & 2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+4 & 1\\
+7 & 2
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+-2 & 3\\
+1 & -2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Justify the claim 
 \begin_inset Formula 
 \[
@@ -4038,7 +4134,7 @@ Show that, for any matrix
 \end_inset
 
 .
- That is,
+ That is, show
 \end_layout
 
 \begin_deeper
