@@ -1468,7 +1468,7 @@ noprefix "false"
 
 \end_inset
 
-) has the form as a system of linear equations with variables 
+) has the form of a system of linear equations with variables 
 \begin_inset Formula $A_{1,c},A_{2,c},\ldots,A_{n,c}$
 \end_inset
 
@@ -2405,7 +2405,7 @@ x_{1} & x_{2} & x_{3}\end{array}\right]^{T}$
 
 ; 
 \begin_inset Formula $\mathbf{c}=\left[\begin{array}{cc}
-7 & 3\end{array}\right]$
+7 & 3\end{array}\right]^{T}$
 \end_inset
 
 
@@ -3015,8 +3015,8 @@ Suppose the fifth column of
 \end_layout
 
 \begin_layout Enumerate
-Demonstrate that the zero product rule for real numbers does not hold for
- matrices.
+Demonstrate that the zero product rule, which holds for real numbers, does
+ not hold for matrices.
  That is, show that the claim 
 \begin_inset Quotes eld
 \end_inset
@@ -3045,7 +3045,8 @@ if
 \begin_inset Quotes erd
 \end_inset
 
- is false by finding matrices 
+ is false.
+ Do so (four times over) by providing examples of matrices 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3065,7 +3066,7 @@ if
 \begin_inset Formula $AB=0$
 \end_inset
 
- where
+ in each of the following cases.
 \end_layout
 
 \begin_deeper

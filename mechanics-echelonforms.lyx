@@ -2790,15 +2790,40 @@ Using
 \end_layout
 
 \begin_layout Enumerate
-Suppose a 
+What can you say about the existence and uniqueness of solutions of the
+ system associated with the described matrix?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $4\times7$
 \end_inset
 
- coefficient matrix has 4 pivots.
- What can you say about the existence and uniqueness of solutions for this
- system?
+ coefficient matrix with 4 pivots
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $4\times7$
+\end_inset
+
+ augmented matrix with 4 pivots
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $7\times4$
+\end_inset
+
+ coefficient matrix with 4 pivots
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $7\times4$
+\end_inset
+
+ augmented matrix with 4 pivots
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 What conditions on the pivots of an augmented matrix would ensure the associated
  system had a unique solution?

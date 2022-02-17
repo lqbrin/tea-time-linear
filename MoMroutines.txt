@@ -96,7 +96,7 @@ UTILITIES
 
 876688 Alternate to matrixParseStuans
 	IN: $Min = stuans or matrix in matrixformat; $eval = T/(F) evalnumstr() each entry
-	OUT: $Matrix = matrix; $good = T/F whether the matrix is valid
+	OUT: $Matrix = matrix; $mps = array of entries of matrix; $good = T/F whether the matrix is valid
 
 888722 matrixParseSageAns: creates matrix type from Sage matrix output
 	IN: $Min = Sage matrix output; $eval = T/(F) evalnumstr() each entry

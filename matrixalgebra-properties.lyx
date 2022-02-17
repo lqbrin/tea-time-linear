@@ -2011,6 +2011,20 @@ name "thmpart:transpose-of-scalar-multiple"
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
+name "thmpart:inverse-of-scalar-multiple"
+
+\end_inset
+
+
+\begin_inset Formula $(rA)^{-1}=\frac{1}{r}A^{-1}$
+\end_inset
+
+ (inverse of a scalar multiple)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
 name "thmpart:transpose-of-sum"
 
 \end_inset
@@ -2156,7 +2170,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-While a list of 18 claims over 3 theorems may seem a bit overwhelming to
+While a list of 19 claims over 3 theorems may seem a bit overwhelming to
  digest, there are only a small few that require great attention.
  The claims of theorem 
 \begin_inset CommandInset ref
