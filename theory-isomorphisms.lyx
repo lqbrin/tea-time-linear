@@ -432,15 +432,22 @@ status open
 
 \end_inset
 
-Formally, two sets are isomorphic if there exists an isomorphism between
- them.
+Formally, two sets are 
+\series bold
+isomorphic
+\series default
+ if there exists an isomorphism between them.
  What defines an isomorphism depends on the structure of the sets.
  A vector space is a set endowed with two operations.
  The set defines the elements of the vector space and the operations define
  the structure.
- An isomorphism between vector spaces maps each element of one vector space
- to exactly one element of the other without missing any and preserves vector
- addition and scalar multiplication.
+ An 
+\series bold
+isomorphism
+\series default
+ between vector spaces maps each element of one vector space to exactly
+ one element of the other without missing any and preserves vector addition
+ and scalar multiplication.
  Such an isomorphism can be understood as the mathematical formalization
  allowing the free flow between one representation of a vector and another.
  It supplies the rigor behind using row vectors, column vectors, ordered
@@ -565,7 +572,8 @@ isomorphism
 \begin_inset Quotes eld
 \end_inset
 
-each element of one vector space to exactly one element of the other
+each element of one vector space corresponds to exactly one element of the
+ other
 \begin_inset Quotes erd
 \end_inset
 
@@ -1059,11 +1067,231 @@ Exercises
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
+name "exc:isomorphims-10"
+
+\end_inset
+
+Which functions are one-to-one?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:isomorphisms-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)=\sin(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $q:\mathbb{R}\to(0,\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $q(x)=e^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p:\mathbb{R}\to[0,\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $p(x)=x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h:[0,\infty)\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $h(x)=\sqrt{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $g:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $g(x)=3x-9$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-11"
+
+\end_inset
+
+Which functions are onto?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:isomorphisms-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)=-2x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $q:\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $q(x)=e^{x}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p:[0,\infty)\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $p(x)=x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $g:\left[0,\frac{\pi}{2}\right]\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $g(x)=\cos(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h:[0,\infty)\to[0,\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $h(x)=\sqrt{x}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-12"
+
+\end_inset
+
+Which of the functions in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are onto?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-13"
+
+\end_inset
+
+Which of the functions in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are one-to-one?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
 name "exc:isomorphims"
 
 \end_inset
 
-Explain why the transformation 
+Which of the requirements of isomorphism does 
 \begin_inset Formula $T:\mathbb{R}^{3}\to\mathbb{P}_{3}(\mathbb{R})$
 \end_inset
 
@@ -1072,20 +1300,29 @@ Explain why the transformation
 r_{1} & r_{2} & r_{3}\end{array}\right]\right)=(x-r_{1})(x-r_{2})(x-r_{3})$
 \end_inset
 
- is
+ fail to satisfy?
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-one-to-one.
+\begin_inset Formula $T$
+\end_inset
+
+ is one-to-one
 \end_layout
 
 \begin_layout Enumerate
-not onto.
+\begin_inset Formula $T$
+\end_inset
+
+ is onto
 \end_layout
 
 \begin_layout Enumerate
-not an isomorphism.
+\begin_inset Formula $T$
+\end_inset
+
+ is linear
 \end_layout
 
 \end_deeper
@@ -1096,16 +1333,15 @@ name "exc:isomorphims-1"
 
 \end_inset
 
-Explain why the transformation 
+Which of the requirements of isomorphism does 
 \begin_inset Formula $T:\mathbb{R^{\mathbb{N}}}\to\mathbb{R}^{4}$
 \end_inset
 
 , 
-\begin_inset Formula $T\left(\left\langle s_{1},s_{2},s_{3},s_{4},s_{5},\ldots\right\rangle \right)=\left[\begin{array}{cccc}
-s_{1} & s_{2} & s_{3} & s_{4}\end{array}\right]$
+\begin_inset Formula $T\left(\left\langle s_{1},s_{2},s_{3},s_{4},s_{5},\ldots\right\rangle \right)=s_{1},s_{2},s_{3},s_{4}$
 \end_inset
 
- is
+ fail to satisfy?
 \begin_inset ERT
 status open
 
@@ -1133,15 +1369,68 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
-not one-to-one.
+\begin_inset Formula $T$
+\end_inset
+
+ is one-to-one
 \end_layout
 
 \begin_layout Enumerate
-onto.
+\begin_inset Formula $T$
+\end_inset
+
+ is onto
 \end_layout
 
 \begin_layout Enumerate
-not an isomorphism.
+\begin_inset Formula $T$
+\end_inset
+
+ is linear
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:isomorphims-9"
+
+\end_inset
+
+Which of the requirements of isomorphism does 
+\begin_inset Formula $T:\mathbb{C}\to\mathcal{M}_{2\times2}(\mathbb{R})$
+\end_inset
+
+, 
+\begin_inset Formula $T\left(a+bi\right)=\left[\begin{array}{cc}
+a & -b\\
+b & a
+\end{array}\right]$
+\end_inset
+
+ fail to satisfy?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ is one-to-one
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ is onto
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ is linear
 \end_layout
 
 \end_deeper
@@ -1154,6 +1443,10 @@ Is the transformation
 \end_layout
 
 \begin_deeper
+\begin_layout Enumerate
+linear?
+\end_layout
+
 \begin_layout Enumerate
 one-to-one?
 \end_layout
@@ -1209,6 +1502,10 @@ noprefix "false"
 \end_layout
 
 \begin_deeper
+\begin_layout Enumerate
+linear?
+\end_layout
+
 \begin_layout Enumerate
 one-to-one?
 \end_layout

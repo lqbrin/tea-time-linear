@@ -49,6 +49,15 @@ GENERATE MATRICES
 	OUT: $A	= matrix 1; $Adisp = matrixformat; $Asage = Sage code; $Alatex = LaTeX code;
 		$B = matrix 2; $Bdisp = matrixformat; $Bsage = Sage code; $Blatex = LaTeX code;
 
+909064 Generate random upper triangular square matrix
+	IN: $size = # rows & columns; $lb = minimum entry; $ub = maximum entry;
+	OUT: $a = array of entries; $M = matrix; $Mdisp = matrixformat; $sage = Sage code; $latex = LaTeX code
+
+909066 Generate random lower triangular square matrix
+	IN: $size = # rows & columns; $lb = minimum entry; $ub = maximum entry;
+	OUT: $a = array of entries; $M = matrix; $Mdisp = matrixformat; $sage = Sage code; $latex = LaTeX code
+
+
 --------------
 MATH UTILITIES
 --------------
@@ -69,10 +78,34 @@ MATH UTILITIES
 	OUT: $Smatrix = sudoku board as a matrix; $Sboard = graphic; $Sarray = array of 9 rows (arrays) of sudoku board;
 		$Sblock = matrix of 3x3 blocks (matrices)
 
+922827 Extract array of entries, number of rows, and number of columns from matrix.
+	IN: $Min = matrix
+	OUT: $rows = number of rows; $cols = number of columns; $ents = array of entries
+
+932907 Find basis for null space given reduced row echelon form matrix.
+	IN: $rrefMatrix = matrix in reduced row echelon form; $integers = T/(F) give basis with integer entries only
+	OUT: $Basis = matrix whose columns form a basis for the null space
+
+936293 Compute orthogonal projection.
+	IN: $Basis = orthogonal basis; $v = vector to project
+	OUT: $projarr = array of numerators of projection; $denominator = denominator of each entry of projection
+
+936336 Orthogonalize a linearly independent set.
+	IN : $Set = set of linearly independent vectors with integer entries
+	OUT: $Basis = orthogonal basis with integer entries
+
+950325 Is matrix an elementary row matrix?
+	IN: $Min = matrix to check
+	OUT: $isElementary = T/F
+
+950387 Is matrix a projection onto some subset of the axes?
+	IN: $Min = matrix to check
+	OUT: $isProjection = T/F
+
 ---------
 UTILITIES
 ---------
-626534 Define matrix variables
+626534 Define matrix variables (random from "A,B,C,D,M,N,P,Q")
 	IN: none
 	OUT: $V,$v,$W,$w (upper and lower case variable names)
 	QTEXT: Use [(1,2,3),(4,5,6)] format or use equation editor.
@@ -93,6 +126,7 @@ UTILITIES
 875191 Sageoutput for a matrix
 	IN: $A = matrix
 	OUT: $sageans = use in $answer; $sageshow = use in $showanswer
+	NOTE: Must include $strflags = "remove_whitespace=1"
 
 876688 Alternate to matrixParseStuans
 	IN: $Min = stuans or matrix in matrixformat; $eval = T/(F) evalnumstr() each entry
@@ -108,7 +142,7 @@ UTILITIES
 	OUT: none
 
 889256 Essay collection question text and code
-	IN: none
+	IN: none ($displayformat="editor")
 	OUT: none
 
 874036 Generic collection of SageCell output (AUTO grade)
@@ -123,3 +157,7 @@ UTILITIES
 				</pre>
 			</div>
 			$answerbox[1]
+
+920918 Evaluate Sage output matrices--to be used at the end of a SageMath output collection question
+	IN: $SageAns = answer as MoM matrix; [$CodeAns = sample Sage code answer]
+	OUT: $answer and $showanswer

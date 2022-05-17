@@ -12082,6 +12082,311 @@ noprefix "false"
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "exc:isomorphims-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:isomorphisms-4"
+
+\end_inset
+
+
+\begin_inset Formula $q$
+\end_inset
+
+, 
+\begin_inset Formula $h$
+\end_inset
+
+, and 
+\begin_inset Formula $g$
+\end_inset
+
+ are one-to-one.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $q$
+\end_inset
+
+: The equation 
+\begin_inset Formula $q(a)=b$
+\end_inset
+
+ can be solved as follows, demonstrating that it has at most one solution:
+\begin_inset Formula 
+\[
+e^{a}=b\Rightarrow a=\ln(b)\text{ if }b\geq0.
+\]
+
+\end_inset
+
+
+\begin_inset Formula $h$
+\end_inset
+
+: The equation 
+\begin_inset Formula $h(a)=b$
+\end_inset
+
+ can be solved as follows, demonstrating that it has at most one solution:
+\begin_inset Formula 
+\[
+\sqrt{a}=b\Rightarrow a=b^{2}\text{ if }b\geq0
+\]
+
+\end_inset
+
+
+\begin_inset Formula $g$
+\end_inset
+
+: The equation 
+\begin_inset Formula $g(a)=b$
+\end_inset
+
+ can be solved as follows, demonstrating that it has at most one solution:
+\begin_inset Formula 
+\[
+3x-9=b\Rightarrow3x=b+9\Rightarrow x=\frac{b+9}{3}
+\]
+
+\end_inset
+
+To show that a function is not one-to-one, it is enough to provide a counterexam
+ple.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ is not one-to-one since 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $2\pi$
+\end_inset
+
+ are both in the domain and 
+\begin_inset Formula $f(0)=f(2\pi)=0$
+\end_inset
+
+, demonstrating that the equation 
+\begin_inset Formula $f(a)=0$
+\end_inset
+
+ has more than one solution.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ is not one-to-one since 
+\begin_inset Formula $-5$
+\end_inset
+
+ and 
+\begin_inset Formula $5$
+\end_inset
+
+ are both in the domain and 
+\begin_inset Formula $p(-5)=p(5)=25$
+\end_inset
+
+, demonstrating that the equation 
+\begin_inset Formula $f(a)=25$
+\end_inset
+
+ has more than one solution.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:isomorphims-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:isomorphisms-5"
+
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ are onto.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+: The equation 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+, where 
+\begin_inset Formula $b$
+\end_inset
+
+ is any member of the codomain 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, is satisfied as follows, demonstrating that it has at least one solution.
+ 
+\begin_inset Formula $a=-\sqrt[3]{\frac{b}{2}}$
+\end_inset
+
+ is in the domain of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+a=-\sqrt[3]{\frac{b}{2}}\Rightarrow a^{3}=-\frac{b}{2}\Rightarrow-2a^{3}=b.
+\]
+
+\end_inset
+
+
+\begin_inset Formula $h$
+\end_inset
+
+: The equation 
+\begin_inset Formula $h(a)=b$
+\end_inset
+
+, where 
+\begin_inset Formula $b$
+\end_inset
+
+ is any member of the codomain 
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+, can be solved as follows, demonstrating that it has at least one solution.
+ 
+\begin_inset Formula $a=b^{2}$
+\end_inset
+
+ is in the domain of 
+\begin_inset Formula $h$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+a=b^{2}\Rightarrow\sqrt{a}=b.
+\]
+
+\end_inset
+
+To show that a function is not onto, it is enough to provide a counterexample.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $q$
+\end_inset
+
+ is not onto since 
+\begin_inset Formula $0$
+\end_inset
+
+ is in the codomain, but the equation 
+\begin_inset Formula $q(a)=0$
+\end_inset
+
+, which is to say 
+\begin_inset Formula $e^{a}+1=0$
+\end_inset
+
+, has no solution in the domain, 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ is not onto since 
+\begin_inset Formula $-3$
+\end_inset
+
+ is in the codomain, but the equation 
+\begin_inset Formula $p(a)=-3$
+\end_inset
+
+, which is to say 
+\begin_inset Formula $a^{2}=-3$
+\end_inset
+
+, has no solution in the domain, 
+\begin_inset Formula $[0,\infty)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $g$
+\end_inset
+
+ is not onto since 
+\begin_inset Formula $3$
+\end_inset
+
+ is in the codomain, but the equation 
+\begin_inset Formula $g(a)=3$
+\end_inset
+
+, which is to say 
+\begin_inset Formula $\cos(a)=3$
+\end_inset
+
+, has no solution in the domain, 
+\begin_inset Formula $\left[0,\frac{\pi}{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "exc:isomorphims-1"
 plural "false"
 caps "false"
@@ -12103,55 +12408,67 @@ name "sol:isomorphisms-1"
 
 \end_inset
 
-(a) There are multiple elements of the domain with the same image.
+Only (a).
+ First, there are multiple elements of the domain with the same image.
  For example,
 \begin_inset Formula 
 \begin{align*}
-T\left(\left\langle 1,2,3,4,1,2,3,4,\ldots\right\rangle \right) & =\left[\begin{array}{cccc}
-1 & 2 & 3 & 4\end{array}\right]\\
+T\left(\left\langle 1,2,3,4,1,2,3,4,\ldots\right\rangle \right) & =1,2,3,4\\
 \text{and}\\
-T\left(\left\langle 1,2,3,4,5,6,7,8,\ldots\right\rangle \right) & =\left[\begin{array}{cccc}
-1 & 2 & 3 & 4\end{array}\right]
+T\left(\left\langle 1,2,3,4,5,6,7,8,\ldots\right\rangle \right) & =1,2,3,4
 \end{align*}
 
 \end_inset
 
 (and therefore the equation 
-\begin_inset Formula $T(a)=\left[\begin{array}{cccc}
-1 & 2 & 3 & 4\end{array}\right]$
+\begin_inset Formula $T(a)=1,2,3,4$
 \end_inset
 
  has more than one solution, violating the definition of one-to-one).
 \begin_inset Newline newline
 \end_inset
 
-(b) For example,
+Second, for example,
 \begin_inset Formula 
 \[
-T\left(\left\langle s_{1},s_{2},s_{3},s_{4},1,1,1,1,1,\ldots\right\rangle \right)=\left[\begin{array}{cccc}
-s_{1} & s_{2} & s_{3} & s_{4}\end{array}\right]
+T\left(\left\langle s_{1},s_{2},s_{3},s_{4},1,1,1,1,1,\ldots\right\rangle \right)=s_{1},s_{2},s_{3},s_{4}
 \]
 
 \end_inset
 
 for any vector 
-\begin_inset Formula $\left[\begin{array}{cccc}
-s_{1} & s_{2} & s_{3} & s_{4}\end{array}\right]$
+\begin_inset Formula $s_{1},s_{2},s_{3},s_{4}$
 \end_inset
 
  (and therefore the equation 
 \begin_inset Formula $T(a)=b$
 \end_inset
 
- has at least one solution for every element of the codomain).
-\begin_inset Newline newline
-\end_inset
-
-(c) 
+ has at least one solution for every element of the codomain and 
 \begin_inset Formula $T$
 \end_inset
 
- is not an isomorphism because it is not one-to-one.
+ is onto).
+\begin_inset Newline newline
+\end_inset
+
+Third,
+\begin_inset Formula 
+\begin{align*}
+T\left(\left\langle s_{1},s_{2},s_{3},s_{4},s_{5},\ldots\right\rangle \right.+ & \left.c\left\langle r_{1},r_{2},r_{3},r_{4},r_{5},\ldots\right\rangle \right)\\
+= & T\left(\left\langle s_{1}+cr_{1},s_{2}+cr_{2},s_{3}+cr_{3},s_{4}+cr_{4},s_{5}+cr_{5},\ldots\right\rangle \right)\\
+= & s_{1}+cr_{1},s_{2}+cr_{2},s_{3}+cr_{3},s_{4}+cr_{4}\\
+= & s_{1},s_{2},s_{3},s_{4}+cr_{1},cr_{2},cr_{3},cr_{4}\\
+= & s_{1},s_{2},s_{3},s_{4}+c\left(r_{1},r_{2},r_{3},r_{4}\right)
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $T$
+\end_inset
+
+ is linear.
 \end_layout
 
 \begin_layout Description
@@ -12172,6 +12489,12 @@ name "sol:isomorphisms-2"
 \end_inset
 
 (a) Yes.
+ 
+\begin_inset Formula $T(f_{1}+cf_{2})=e^{x}(f_{1}+cf_{2})=e^{x}f_{1}+ce^{x}f_{2}=T(f_{1})+cT(f_{2})$
+\end_inset
+
+.
+ (b) Yes.
  Let 
 \begin_inset Formula $b$
 \end_inset
@@ -12224,7 +12547,7 @@ two solutions
 \begin_inset Newline newline
 \end_inset
 
-(b) Yes.
+(c) Yes.
  Let 
 \begin_inset Formula $b$
 \end_inset
@@ -12250,12 +12573,12 @@ two solutions
 \begin_inset Newline newline
 \end_inset
 
-(c) Yes.
+(d) Yes.
  
 \begin_inset Formula $T$
 \end_inset
 
- is both one-to-one and onto.
+ is one-to-one, onto, and linear.
 \end_layout
 
 \begin_layout Description
