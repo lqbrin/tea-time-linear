@@ -11289,7 +11289,7 @@ noprefix "false"
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:linear-vector-transformation-9"
+reference "exc:linear-vector-transformation-12"
 plural "false"
 caps "false"
 noprefix "false"
@@ -11304,181 +11304,6 @@ name "sol:linear-vector-transformations"
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "sol:linear-vector-transformations-1"
-
-\end_inset
-
-(i) Perhaps the simplest method for obtaining the standard matrix is to
- graph the action of the transformation on the standard basis vectors.
- Their images form the columns on the standard matrix.
- In this case, the following diagram demonstrates this action.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-raisebox{-5
-\backslash
-baselineskip}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename figures/linear-vector-transformations-01.pdf
-	lyxscale 33
-	width 2in
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\begin{array}{c}
-T\\
-\Rightarrow
-\end{array}$
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-raisebox{-5
-\backslash
-baselineskip}{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename figures/linear-vector-transformations-02.pdf
-	lyxscale 33
-	width 2in
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Basis vector 
-\begin_inset Formula $I_{:,1}$
-\end_inset
-
- maps to 
-\begin_inset Formula $\left[\begin{array}{c}
-0\\
-1
-\end{array}\right]$
-\end_inset
-
- and basis vector 
-\begin_inset Formula $I_{:,2}$
-\end_inset
-
- maps to 
-\begin_inset Formula $\left[\begin{array}{c}
--1\\
-0
-\end{array}\right]$
-\end_inset
-
- so the standard matrix is 
-\begin_inset Formula $\left[\begin{array}{cc}
-0 & -1\\
-1 & 0
-\end{array}\right]$
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-(ii) The image of 
-\begin_inset Formula $\left[\begin{array}{c}
-1\\
-1
-\end{array}\right]$
-\end_inset
-
- means 
-\begin_inset Formula $T\left(\left[\begin{array}{c}
-1\\
-1
-\end{array}\right]\right)$
-\end_inset
-
-, which is calculated as
-\begin_inset Formula 
-\[
-T\left(\left[\begin{array}{c}
-1\\
-1
-\end{array}\right]\right)=\left[\begin{array}{cc}
-0 & -1\\
-1 & 0
-\end{array}\right]\left[\begin{array}{c}
-1\\
-1
-\end{array}\right]=\left[\begin{array}{c}
--1\\
-1
-\end{array}\right].
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Description
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:linear-vector-transformation-12"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-: 
 \begin_inset CommandInset label
 LatexCommand label
 name "sol:linear-vector-transformations-2"
@@ -12065,6 +11890,314 @@ A\left[\begin{array}{c}
  as required.
 \end_layout
 
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations-6"
+
+\end_inset
+
+(a) As canbe seen by the following diagram showing a generic rotation, 
+\begin_inset Formula $R_{\theta}(\mathbf{u}+c\mathbf{v})=R_{\theta}(\mathbf{u})+cR_{\theta}(\mathbf{v})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-sol-01.pdf
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) 
+\begin_inset Formula $R_{\theta}(I_{:,1})=\left[\begin{array}{c}
+\cos\theta\\
+\sin\theta
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{\theta}(I_{:,2})=\left[\begin{array}{c}
+-\sin\theta\\
+\cos\theta
+\end{array}\right]$
+\end_inset
+
+ as seen below.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/theory-linear-vector-transformations-sol-02.pdf
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(c) 
+\begin_inset Formula $R_{\theta}\mathbf{u}=\left[\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right]\mathbf{u}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(d) Letting the arbitrary vector 
+\begin_inset Formula $\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+ have magnitude 
+\begin_inset Formula $r$
+\end_inset
+
+ and angle of incidence with the positive 
+\begin_inset Formula $x$
+\end_inset
+
+-axis 
+\begin_inset Formula $\alpha$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right]\left[\begin{array}{c}
+x\\
+y
+\end{array}\right] & =\left[\begin{array}{cc}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{array}\right]\left[\begin{array}{c}
+r\cos\alpha\\
+r\sin\alpha
+\end{array}\right]=\left[\begin{array}{c}
+r\cos\theta\cos\alpha-r\sin\theta\sin\alpha\\
+r\sin\theta\cos\alpha+r\cos\theta\sin\alpha
+\end{array}\right]\\
+ & =\left[\begin{array}{c}
+r\left(\cos\theta\cos\alpha-\sin\theta\sin\alpha\right)\\
+r\left(\sin\theta\cos\alpha+\cos\theta\sin\alpha\right)
+\end{array}\right]=\left[\begin{array}{c}
+r\cos(\alpha+\theta)\\
+r\sin(\alpha+\theta)
+\end{array}\right]=R_{\theta}\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-vector-transformations-1"
+
+\end_inset
+
+(i) Perhaps the simplest method for obtaining the standard matrix is to
+ graph the action of the transformation on the standard basis vectors.
+ Their images form the columns on the standard matrix.
+ In this case, the following diagram demonstrates this action.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-5
+\backslash
+baselineskip}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/linear-vector-transformations-01.pdf
+	lyxscale 33
+	width 2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+T\\
+\Rightarrow
+\end{array}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-5
+\backslash
+baselineskip}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/linear-vector-transformations-02.pdf
+	lyxscale 33
+	width 2in
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Basis vector 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ maps to 
+\begin_inset Formula $\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+ and basis vector 
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ maps to 
+\begin_inset Formula $\left[\begin{array}{c}
+-1\\
+0
+\end{array}\right]$
+\end_inset
+
+ so the standard matrix is 
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & -1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+(ii) The image of 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+ means 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]\right)$
+\end_inset
+
+, which is calculated ass
+\begin_inset Formula 
+\[
+T\left(\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]\right)=\left[\begin{array}{cc}
+0 & -1\\
+1 & 0
+\end{array}\right]\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+-1\\
+1
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Section*
 Section 
 \begin_inset CommandInset ref

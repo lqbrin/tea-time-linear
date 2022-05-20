@@ -2633,7 +2633,19 @@ matrix
 \begin_inset space ~
 \end_inset
 
-(in
+(onto
+\begin_inset space ~
+\end_inset
+
+an
+\begin_inset space ~
+\end_inset
+
+axis
+\begin_inset space ~
+\end_inset
+
+in
 \begin_inset space ~
 \end_inset
 
@@ -2726,58 +2738,6 @@ name "exc:linear-vector-transformation"
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-vector-transformation-9"
-
-\end_inset
-
-
-\begin_inset Formula $T$
-\end_inset
-
- rotates points counterclockwise about the origin by 
-\begin_inset Formula $\frac{\pi}{2}$
-\end_inset
-
- radians.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hasasolution
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "sol:linear-vector-transformations-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $T$
-\end_inset
-
- rotates points clockwise about the origin by 
-\begin_inset Formula $\frac{\pi}{4}$
-\end_inset
-
- radians.
-\end_layout
-
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
@@ -2893,43 +2853,6 @@ noprefix "false"
 -axis.
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-vector-transformation-6"
-
-\end_inset
-
-
-\begin_inset Formula $T$
-\end_inset
-
- rotates points counterclockwise about the origin by 180 degrees.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hasananswer
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "ans:linear-vector-transformations-3"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\end_layout
-
 \end_deeper
 \begin_layout Enumerate
 Argue that even though the transformations in exercises 
@@ -2970,21 +2893,6 @@ Find the standard matrix of
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $T$
-\end_inset
-
- rotates points (counterclockwise) about the origin by 
-\begin_inset Formula $\frac{\pi}{3}$
-\end_inset
-
- radians and then reflects them about the 
-\begin_inset Formula $y$
-\end_inset
-
--axis.
-\end_layout
-
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
@@ -3044,51 +2952,6 @@ noprefix "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-vector-transformation-13"
-
-\end_inset
-
-
-\begin_inset Formula $T$
-\end_inset
-
- rotates points (counterclockwise) about the origin by 
-\begin_inset Formula $\frac{3\pi}{4}$
-\end_inset
-
- radians and then projects them onto the 
-\begin_inset Formula $y$
-\end_inset
-
--axis.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hasananswer
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "ans:linear-vector-transformations-4"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -3211,21 +3074,6 @@ noprefix "false"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $T$
-\end_inset
-
- rotates points clockwise about the origin by 
-\begin_inset Formula $\frac{\pi}{6}$
-\end_inset
-
- radians and then reflects about the line 
-\begin_inset Formula $y=-x$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Enumerate
@@ -3720,8 +3568,8 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
-Find a sequence of elementary matrices whose product is the standard matrix
- of the linear transformation 
+Find a sequence of elementary and/or projection matrices whose product is
+ the standard matrix of the linear transformation 
 \begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
 
@@ -3759,7 +3607,7 @@ name "exc:linear-vector-transformation-21"
 \begin_inset Formula $\frac{11}{7}$
 \end_inset
 
- and then shears them horizontally by a a factor of 
+ and then shears them horizontally by a factor of 
 \begin_inset Formula $1.62$
 \end_inset
 
@@ -3815,7 +3663,7 @@ name "exc:linear-vector-transformation-22"
 \begin_inset Formula $T$
 \end_inset
 
- reflects points abou the 
+ reflects points about the 
 \begin_inset Formula $x$
 \end_inset
 
@@ -4273,88 +4121,7 @@ noprefix "false"
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-vector-transformation-2"
-
-\end_inset
-
-Argue that rotation in the plane is linear and write it algebraically as
- matrix multiplication by the following steps.
- Let 
-\begin_inset Formula $R_{\theta}$
-\end_inset
-
- be rotation through angle 
-\begin_inset Formula $\theta$
-\end_inset
-
- counterclockwise about the origin.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Argue in words that 
-\begin_inset Formula $R_{\theta}$
-\end_inset
-
- is a linear transformation.
- Your argument need not be a proof, just enough reason to believe 
-\begin_inset Formula $R_{\theta}$
-\end_inset
-
- is (likely) linear.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-vector-transformation-8"
-
-\end_inset
-
-Find the images of 
-\begin_inset Formula $I_{:,1}$
-\end_inset
-
- and 
-\begin_inset Formula $I_{:,2}$
-\end_inset
-
- under 
-\begin_inset Formula $R_{\theta}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-vector-transformation-1"
-
-\end_inset
-
-Write 
-\begin_inset Formula $R_{\theta}$
-\end_inset
-
- as a matrix product using the results of 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:linear-vector-transformation-8"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
+\begin_layout Enumerate-Resume
 Argue that the transformation 
 \begin_inset Formula $S:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
@@ -4422,7 +4189,7 @@ Find a vector
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
+\begin_layout Enumerate-Resume
 Argue that the transformation 
 \begin_inset Formula $S:\mathbb{R}^{2}\to\mathbb{R}^{2}$
 \end_inset
@@ -4500,80 +4267,7 @@ Find a vector
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-Demonstrate that the matrix derived in exercise 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:linear-vector-transformation-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- affects rotation through angle 
-\begin_inset Formula $\theta$
-\end_inset
-
- about the origin on an arbitrary vector 
-\begin_inset Formula $\left[\begin{array}{c}
-x\\
-y
-\end{array}\right]$
-\end_inset
-
-.
- This shows that rotation is properly represented by matrix multiplication,
- making it a linear transformation by theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "thm:Standard-Matrix"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-Find a sequence of elementary matrices whose product is the matrix derived
- in exercise 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:linear-vector-transformation-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- Hint: try a product of the form
-\begin_inset Formula 
-\[
-\left[\begin{array}{cc}
-c & 0\\
-0 & 1
-\end{array}\right]\left[\begin{array}{cc}
-1 & 0\\
-s & 1
-\end{array}\right]\left[\begin{array}{cc}
-1 & 0\\
-0 & n
-\end{array}\right]\left[\begin{array}{cc}
-1 & t\\
-0 & 1
-\end{array}\right]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
+\begin_layout Enumerate-Resume
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:linear-vector-transformation-27"
@@ -4634,7 +4328,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Enumerate-Resume
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:linear-vector-transformation-28"
@@ -4678,6 +4372,617 @@ y
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Rotation
+\series default
+.
+ The remaining exercises explore rotation as a composition of elementary
+ matrices and as a linear transformation itself.
+ Each question after number 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ depends on the results of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-2"
+
+\end_inset
+
+Argue that rotation in the plane is linear and write it algebraically as
+ matrix multiplication by the following steps.
+ Let 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ denote rotation through angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ counterclockwise about the origin.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:linear-vector-transformations-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Argue geometrically that 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ is a linear transformation.
+ Your argument need not be a proof, just enough reason to believe 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ is (likely) linear.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-8"
+
+\end_inset
+
+Find the images of 
+\begin_inset Formula $I_{:,1}$
+\end_inset
+
+ and 
+\begin_inset Formula $I_{:,2}$
+\end_inset
+
+ under 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-1"
+
+\end_inset
+
+Write 
+\begin_inset Formula $R_{\theta}$
+\end_inset
+
+ as a matrix product using the results of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-37"
+
+\end_inset
+
+Demonstrate algebraically that the matrix derived in part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ affects rotation through angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ about the origin on an arbitrary vector 
+\begin_inset Formula $\left[\begin{array}{c}
+x\\
+y
+\end{array}\right]$
+\end_inset
+
+.
+ This shows that rotation is properly represented by matrix multiplication,
+ making it a linear transformation by theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:Standard-Matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-29"
+
+\end_inset
+
+(i) Find the standard matrix of 
+\begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+; and (ii) find the image of 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 1\end{array}\right]^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-9"
+
+\end_inset
+
+
+\begin_inset Formula $T$
+\end_inset
+
+ rotates points counterclockwise about the origin by 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ radians.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:linear-vector-transformations-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ rotates points clockwise about the origin by 
+\begin_inset Formula $\frac{\pi}{4}$
+\end_inset
+
+ radians.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-6"
+
+\end_inset
+
+
+\begin_inset Formula $T$
+\end_inset
+
+ rotates points counterclockwise about the origin by 180 degrees.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-30"
+
+\end_inset
+
+Find the standard matrix of 
+\begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ rotates points (counterclockwise) about the origin by 
+\begin_inset Formula $\frac{\pi}{3}$
+\end_inset
+
+ radians and then reflects them about the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-13"
+
+\end_inset
+
+
+\begin_inset Formula $T$
+\end_inset
+
+ rotates points (counterclockwise) about the origin by 
+\begin_inset Formula $\frac{3\pi}{4}$
+\end_inset
+
+ radians and then projects them onto the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:linear-vector-transformations-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ rotates points clockwise about the origin by 
+\begin_inset Formula $\frac{\pi}{6}$
+\end_inset
+
+ radians and then reflects about the line 
+\begin_inset Formula $y=-x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Find a sequence of elementary matrices whose product is the matrix derived
+ in exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Hint: try a product of the form
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+c & 0\\
+0 & 1
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+s & 1
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+0 & n
+\end{array}\right]\left[\begin{array}{cc}
+1 & t\\
+0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate-Resume
+Reflection about lines other than the axes are linear transformations too
+ and can be realized by a composition of rotations and reflection.
+ To demonstrate, derive the standard matrix for reflection about the line
+ 
+\begin_inset Formula ${\displaystyle y=-\frac{36}{77}x}$
+\end_inset
+
+ according to the following steps.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-31"
+
+\end_inset
+
+Pick a point (any point) 
+\begin_inset Formula $P$
+\end_inset
+
+ not on the line.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-32"
+
+\end_inset
+
+Calculate the sine of the angle the line makes with the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis, 
+\begin_inset Formula ${\displaystyle \sin\left(\tan^{-1}\left(\frac{36}{77}\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-33"
+
+\end_inset
+
+Calculate the cosine of the angle the line makes with the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis, 
+\begin_inset Formula ${\displaystyle \cos\left(\tan^{-1}\left(\frac{36}{77}\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-34"
+
+\end_inset
+
+Rotate point 
+\begin_inset Formula $P$
+\end_inset
+
+ counterclockwise about the origin by angle 
+\begin_inset Formula $\tan^{-1}\left(\frac{36}{77}\right)$
+\end_inset
+
+.
+ HINT: the answers to parts 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-33"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are useful here.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-35"
+
+\end_inset
+
+Reflect the point from part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ about the x-axis.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-vector-transformation-36"
+
+\end_inset
+
+Rotate the point from part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-35"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ clockwise about the origin by angle 
+\begin_inset Formula $\tan^{-1}\left(\frac{36}{77}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The product of the matrices (that you hopefully used) in parts 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-34"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-35"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-36"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the standard matrix.
+ Graph the line and point 
+\begin_inset Formula $P$
+\end_inset
+
+ and the point from part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-vector-transformation-36"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ on the same set of axes to see that you have calculated correctly.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open
