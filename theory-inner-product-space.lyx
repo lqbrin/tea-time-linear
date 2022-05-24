@@ -821,7 +821,7 @@ status collapsed
 see exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:distance-between-vectors"
+reference "exc:length-19"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1515,7 +1515,7 @@ name "exc:inner-product-5"
 , 
 \begin_inset Formula 
 \[
-\left\langle f,g\right\rangle =\frac{1}{2\pi}\int_{0}^{2\pi}f(x)g(x)\,dx
+\left\langle f,g\right\rangle =\frac{1}{\pi}\int_{0}^{2\pi}f(x)g(x)\,dx
 \]
 
 \end_inset
@@ -1547,11 +1547,7 @@ name "exc:inner-product-6"
 
 \end_deeper
 \begin_layout Enumerate
-In 
-\begin_inset Formula $\mathbb{R}^{2}$
-\end_inset
-
- with the inner product of question 
+Using the inner product of question 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:inner-product-1"
@@ -1678,11 +1674,7 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
-In 
-\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
-\end_inset
-
- with the inner product of question 
+Using the inner product of question 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:inner-product-3"
@@ -1800,11 +1792,7 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
-In 
-\begin_inset Formula $C([0,2\pi])$
-\end_inset
-
- with the inner product of question 
+Using the inner product of question 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:inner-product-5"
@@ -1922,11 +1910,7 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
-In 
-\begin_inset Formula $\mathcal{M}_{2\times2}(\mathbb{R})$
-\end_inset
-
- with the inner product of question 
+Using the inner product of question 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:inner-product-6"
@@ -3151,36 +3135,6 @@ plural "false"
 caps "false"
 noprefix "false"
 
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $f(x)=1-2x$
-\end_inset
-
- in the subspace 
-\begin_inset Formula $H$
-\end_inset
-
- of 
-\begin_inset Formula $C([0,2\pi])$
-\end_inset
-
- with the inner product of question 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:inner-product-5"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- 
-\begin_inset Formula $H=\text{span}\left\{ \cos(kx):k=1,2,3,\ldots\right\} $
 \end_inset
 
 .

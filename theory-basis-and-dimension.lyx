@@ -197,19 +197,19 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Given any set of vectors (elements of a vector space), we can now imagine
- elements of 
+Given any subset of a vector space, we can represent linear combinations
+ of these vectors by the element of 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- as holding coefficients of a linear combination of these vectors.
- This perspective would not be terribly useful, however, if the columns
- of 
+ holding the coefficients of the linear combination.
+ If there were special subsets where each element of the vector space could
+ be represented by a unique linear combination (as in the example of the
+ columns of 
 \begin_inset Formula $I$
 \end_inset
 
- were the only special collection of vectors (from which each vector could
- be written as a unique linear combination).
+), this perspective would hold promise.
  As it turns out, there are many such sets.
  For example, 
 \begin_inset Formula $T=\{t,t^{2},1+t^{2}\}$
@@ -405,7 +405,7 @@ From the discussion that led to the definition of a basis, we can be sure
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- can be written as a unique linear combination of the basis vectors.
+ can be written as a unique linear combination of the vectors in the basis.
  However, theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -416,7 +416,7 @@ noprefix "false"
 
 \end_inset
 
-, which provided this property does not apply to arbitrary vector spaces.
+, which provided uniqueness does not apply to arbitrary vector spaces.
  We will need to argue that if 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
@@ -1800,8 +1800,8 @@ name "exc:basis-and-dimension-3"
 
 Each set is a subset of a vector space.
  In each set, one vector is the sum of the other two.
- (i) Name a vector space containing the set, and (ii) find a subset with
- the same span.
+ (i) Name a vector space containing the set, and (ii) find a proper subset
+ with the same span.
 \end_layout
 
 \begin_deeper
@@ -2203,7 +2203,7 @@ noprefix "false"
 \end_deeper
 \begin_layout Enumerate
 Justify the claim that 
-\begin_inset Formula $\{1,t,\ldots,t^{n}\}$
+\begin_inset Formula $\{1,t,t^{2},\ldots,t^{n}\}$
 \end_inset
 
  is a basis of 

@@ -3174,6 +3174,38 @@ noprefix "false"
 .
 \end_layout
 
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:matrix-properties-5"
+
+\end_inset
+
+Answers will vary.
+ 
+\begin_inset Formula $(B^{-1}A^{-1})(AB)=((B^{-1}A^{-1})A)B=(B^{-1}(A^{-1}A))B=(B^{-1}I)B=B^{-1}B=I$
+\end_inset
+
+ using the associative property multiple times, the definition of inverse
+ multiple times, and the definition of the multiplicative identity once.
+ The second half of the justification, that 
+\begin_inset Formula $(AB)(B^{-1}A^{-1})=I$
+\end_inset
+
+, can be made by a similar string of equalities.
+ You are encouraged to try it.
+\end_layout
+
 \begin_layout Section*
 Section 
 \begin_inset CommandInset ref

@@ -137,8 +137,8 @@ noprefix "false"
 \end_inset
 
 .
- Parts (i), (ii), (iii), and (vi) of the following theorem can be justified
- through reference to the previous, but parts (iv), (v), and (vii) cannot.
+ Parts (i), (ii), (iii), and (vii) of the following theorem can be justified
+ through reference to the previous, but parts (iv), (v), and (vi) cannot.
 \end_layout
 
 \begin_layout Theorem
@@ -266,13 +266,6 @@ There is a matrix
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
-\end_inset
-
- has no free variables.
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset Formula $M\ensuremath{\mathbf{v}=\mathbf{b}}$
 \end_inset
 
@@ -281,6 +274,13 @@ There is a matrix
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{w}^{T}M=\mathbf{c}^{T}$
+\end_inset
+
+ has no free variables.
 \end_layout
 
 \end_deeper
@@ -294,11 +294,11 @@ The justification for this theorem proceeds by logically connecting the
 \begin_inset Formula 
 \[
 \begin{array}{ccccc}
- &  & \text{(vi)}\\
+ &  & \text{(vii)}\\
  & \Swarrow &  & \Nwarrow\\
 \text{(i)} & \Rightarrow & \text{(ii)} & \Rightarrow & \text{(iii)}\\
 \Downarrow &  &  &  & \Uparrow\\
-\text{(iv)} & \Rightarrow & \text{(vii)} & \Rightarrow & \text{(v)}
+\text{(iv)} & \Rightarrow & \text{(vi)} & \Rightarrow & \text{(v)}
 \end{array}
 \]
 
@@ -409,7 +409,7 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(vi) Since 
+(vii) Since 
 \begin_inset Formula $\mathbf{w}^{T}M=\mathbf{0}^{T}$
 \end_inset
 
@@ -445,7 +445,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Description
-(vi)
+(vii)
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
@@ -521,7 +521,7 @@ noprefix "false"
 \begin_inset Formula $\ \Rightarrow\ $
 \end_inset
 
-(vii) Since 
+(vi) Since 
 \begin_inset Formula $M$
 \end_inset
 
@@ -557,7 +557,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Description
-(vii)
+(vi)
 \begin_inset space ~
 \end_inset
 

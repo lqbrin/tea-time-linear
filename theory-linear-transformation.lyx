@@ -1005,8 +1005,8 @@ This definition is modeled after
 \end_inset
 
  the canonical example of a linear transformation.
- Some of the other transformations mentioned previously are linear transformatio
-ns and some are not.
+ Some of the other transformations mentioned in this section are linear
+ transformations and some are not.
  For example, 
 \begin_inset Formula $R$
 \end_inset
@@ -1208,14 +1208,14 @@ the preimage
 \end_layout
 
 \begin_layout Itemize
-If 
-\begin_inset Formula $B$
-\end_inset
-
- is a vector space, the 
+the 
 \series bold
 kernel
 \series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
  is the preimage of 
 \begin_inset Formula $\mathbf{0}$
 \end_inset
@@ -2014,7 +2014,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\{ \left(a,\frac{1}{2}\right),\left(a,\frac{1}{3}\right),\left(a,\frac{1}{5}\right)\right\} $
+\begin_inset Formula $\left\{ \left(a,\frac{1}{2}\right),\left(a,\frac{1}{3}\right),\left(a,\frac{1}{4}\right),\left(a,\frac{1}{5}\right)\right\} $
 \end_inset
 
 
@@ -2612,7 +2612,7 @@ name "exc:linear-transformation-22"
 
 \end_inset
 
-Find the preimage of 
+Find a preimage of 
 \begin_inset Formula $\left[\begin{array}{cc}
 3 & 1\\
 1 & 3
@@ -2686,7 +2686,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-Find the preimage of 
+Find a preimage of 
 \begin_inset Formula $\left[\begin{array}{cc}
 1 & -2\\
 -2 & 1
@@ -2927,7 +2927,7 @@ name "exc:linear-transformation-9"
 \end_inset
 
 Show that 
-\begin_inset Formula $T:\mathbb{R}^{m}\to\mathbb{R}^{n}$
+\begin_inset Formula $T:\mathbb{R}^{n}\to\mathbb{R}^{m}$
 \end_inset
 
  is a linear transformation.
@@ -3130,7 +3130,7 @@ Show that
 \begin_inset Formula $\text{det}:\mathcal{M}_{2\times2}(\mathbb{R})\to\mathbb{R}$
 \end_inset
 
- is not linear.
+ is not a linear transformation.
 \end_layout
 
 \begin_layout Enumerate

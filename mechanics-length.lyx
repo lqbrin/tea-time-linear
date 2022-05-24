@@ -1533,6 +1533,12 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:length-19"
+
+\end_inset
+
 Calculate 
 \begin_inset Formula $d(\mathbf{u},\mathbf{v})$
 \end_inset

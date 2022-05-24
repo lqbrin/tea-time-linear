@@ -1795,7 +1795,7 @@ noprefix "false"
 
 , does not have a matrix analog.
  Thus it is important to point out, for example, that the distributive property
- for matrices holds for both left (as in theorem 
+ for matrices holds for both left-multiplication (as in theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:matrixproperties-part1"
@@ -1848,7 +1848,11 @@ For all matrices
 \begin_inset Formula $A,B,C$
 \end_inset
 
- 
+ and scalars 
+\begin_inset Formula $r,s$
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1976,7 +1980,11 @@ For all matrices
 \begin_inset Formula $B$
 \end_inset
 
- 
+ and scalars 
+\begin_inset Formula $r$
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2227,7 +2235,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Besides the right distributive property, theorem 
+In addition to the right distributive property, theorem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:matrixproperties-part3"
@@ -2262,10 +2270,10 @@ noprefix "false"
 
 ) the inverse of a product is the product of the inverses in the opposite
  order.
- Can you justify this claim? Answer on page 
+ Justification for this claim is requested in exercise 
 \begin_inset CommandInset ref
-LatexCommand pageref
-reference "ans:inverse-of-a-product"
+LatexCommand ref
+reference "exc:matrix-properties-8"
 plural "false"
 caps "false"
 noprefix "false"
@@ -3404,7 +3412,7 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
-Justify the rule by showing that the 
+Justify the property by showing that the 
 \begin_inset Formula $i,\!j$
 \end_inset
 
@@ -3906,6 +3914,164 @@ Without any further computation, find
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-9"
+
+\end_inset
+
+Let 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+11 & 10 & -6\\
+-3 & 6 & 7
+\end{array}\right]$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $3A+7A$
+\end_inset
+
+ without calculating 
+\begin_inset Formula $3A$
+\end_inset
+
+ or 
+\begin_inset Formula $7A$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:matrix-properties-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+4 & 7 & -10\\
+-3 & -1 & 7
+\end{array}\right]$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $2(3A)$
+\end_inset
+
+ without calculating 
+\begin_inset Formula $3A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+9 & 6\\
+-2 & 7
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+-10 & 3\\
+5 & -8
+\end{array}\right]$
+\end_inset
+
+; and 
+\begin_inset Formula $C=\left[\begin{array}{ccc}
+-1 & 3 & -11\\
+1 & -2 & 9
+\end{array}\right]$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $AC+BC$
+\end_inset
+
+ without calculating 
+\begin_inset Formula $AC$
+\end_inset
+
+ or 
+\begin_inset Formula $BC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+3 & 4\\
+-4 & -5
+\end{array}\right]$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula ${\displaystyle \left(\frac{1}{3}A\right)^{-1}}$
+\end_inset
+
+ without calculating 
+\begin_inset Formula ${\displaystyle \frac{1}{3}A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+9 & 3 & -5\\
+10 & 11 & -2
+\end{array}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+-3 & 5 & -6\\
+-8 & 12 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $(A+B)^{T}$
+\end_inset
+
+ without calculating 
+\begin_inset Formula $A+B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
 Calculate 
 \begin_inset Formula $(AB)^{T}$
 \end_inset
@@ -4208,6 +4374,59 @@ noprefix "false"
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:matrix-properties-8"
+
+\end_inset
+
+Justify theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:inverse-of-a-product"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasananswer
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "ans:matrix-properties-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -4226,40 +4445,6 @@ finishexercises
 
 \begin_layout Subsection*
 Answers
-\end_layout
-
-\begin_layout Description
-inverse
-\begin_inset space ~
-\end_inset
-
-of
-\begin_inset space ~
-\end_inset
-
-a
-\begin_inset space ~
-\end_inset
-
-product 
-\begin_inset CommandInset label
-LatexCommand label
-name "ans:inverse-of-a-product"
-
-\end_inset
-
-
-\begin_inset Formula $(B^{-1}A^{-1})(AB)=((B^{-1}A^{-1})A)B=(B^{-1}(A^{-1}A))B=(B^{-1}I)B=B^{-1}B=I$
-\end_inset
-
- using the associative property multiple times, the definition of inverse
- multiple times, and the definition of the multiplicative identity once.
- The second half of the justification, that 
-\begin_inset Formula $(AB)(B^{-1}A^{-1})=I$
-\end_inset
-
-, can be made by a similar string of equalities.
- You are encouraged to try it.
 \end_layout
 
 \begin_layout Description

@@ -1559,13 +1559,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $GL_{n}(\mathbb{F})=\{M\text{ in }\mathcal{M}_{n\times n}(\mathbb{F}):M^{-1}\text{ exists in }\mathcal{M}_{n\times n}(\mathbb{F})\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula $\mathbb{P}_{n}(\mathbb{F})=\{p:p\text{ is a polynomial of degree }n\text{ or less with coefficients in }\mathbb{F}\}$
 \end_inset
 
@@ -1581,13 +1574,6 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset Formula $C(D)=\{f:f\text{ is a continuous function from }D\text{ to }\mathbb{R}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C^{n}(D)=\{f:f\text{ is a continuous function from }D\text{ to }\mathbb{R}\text{ with }n\text{ continuous derivatives}\}$
 \end_inset
 
 
@@ -1891,7 +1877,7 @@ name "exc:vector-spaces-3"
 \end_inset
 
  as roots 
-\begin_inset Formula $=\{q(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}:a_{0},a_{1},a_{2},a_{3}\text{ in }\mathbb{R}\text{ and }q(3)=q(18)=0\}$
+\begin_inset Formula $=\{q(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}:q(3)=q(18)=0\}$
 \end_inset
 
 ; 
@@ -1928,7 +1914,7 @@ noprefix "false"
 \begin_inset Formula $S=$
 \end_inset
 
- the set of all functions on 
+ the set of functions on 
 \begin_inset Formula $[0,1]$
 \end_inset
 
@@ -1951,7 +1937,7 @@ noprefix "false"
 \begin_inset Formula $S=$
 \end_inset
 
- the set of all real number sequences that converge to zero 
+ the set of real number sequences that converge to zero 
 \begin_inset Formula $=\{r_{1},r_{2},\ldots:\lim_{n\to\infty}r_{n}=0\}$
 \end_inset
 
@@ -1966,7 +1952,7 @@ noprefix "false"
 \begin_inset Formula $S=$
 \end_inset
 
- the set of all real 
+ the set of real 
 \begin_inset Formula $3\times3$
 \end_inset
 
@@ -4144,10 +4130,20 @@ Suppose
 .
  Supply a reason for each line of the string of equalities proving that
  
-\begin_inset Formula $\mathbf{u}_{1}=\mathbf{v}_{1}$
+\begin_inset Formula $\mathbf{u}_{1}=\mathbf{u}_{2}$
 \end_inset
 
-, thus proving that the zero vector is unique.
+, thus proving that the zero vector is unique [and therefore 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is 
+\series bold
+\shape slanted
+the
+\series default
+\shape default
+ additive identity].
 \begin_inset ERT
 status open
 
@@ -4198,7 +4194,11 @@ Prove that for any vector
 \begin_inset Formula $-1\cdot\mathbf{v}$
 \end_inset
 
- is an additive inverse.
+ is an additive inverse of 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
  Use the fact that 
 \begin_inset Formula $0\mathbf{v}=\mathbf{0}$
 \end_inset
@@ -4220,7 +4220,7 @@ Suppose
 \end_inset
 
 .
- That is, for this particular vector 
+ That is, for this arbitrary but particular vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -4235,7 +4235,7 @@ Suppose
 .
  Supply a reason for each line of the string of equalities proving that
  
-\begin_inset Formula $\mathbf{u}_{1}=\mathbf{v}_{1}$
+\begin_inset Formula $\mathbf{u}_{1}=\mathbf{u}_{2}$
 \end_inset
 
 , thus proving that additive inverses are unique [and therefore 
@@ -4243,8 +4243,10 @@ Suppose
 \end_inset
 
  is 
-\shape italic
+\series bold
+\shape slanted
 the
+\series default
 \shape default
  additive inverse of 
 \begin_inset Formula $\mathbf{v}$
@@ -4322,19 +4324,23 @@ Suppose
 \end_inset
 
  is a vector space, 
-\begin_inset Formula $S$
-\end_inset
-
- is a subspace of 
-\begin_inset Formula $V$
-\end_inset
-
-, and 
 \begin_inset Formula $H$
 \end_inset
 
  is a subset of 
+\begin_inset Formula $V$
+\end_inset
+
+, and 
 \begin_inset Formula $S$
+\end_inset
+
+ is any subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+ containing 
+\begin_inset Formula $H$
 \end_inset
 
 .
@@ -4603,19 +4609,18 @@ Proving that
 \begin_inset Formula 
 \[
 \begin{array}{ll}
-\mathbf{0}=0\mathbf{v}+(-0\mathbf{v}) & \text{[existence of additive inverses]}\\
-\phantom{\mathbf{0}}=(0+0)\mathbf{v}+(-0\mathbf{v}) & \text{[substitution of }0+0\text{ for }0\text{]}\\
-\phantom{\mathbf{0}}=(0\mathbf{v}+0\mathbf{v})+(-0\mathbf{v}) & \text{[scalars distribute over vectors]}\\
-\phantom{\mathbf{0}}=0\mathbf{v}+(0\mathbf{v}+(-0\mathbf{v})) & \text{[addition is associative]}\\
-\phantom{\mathbf{0}}=0\mathbf{v}+\mathbf{0} & \text{[property of additive inverses]}\\
-\phantom{\mathbf{0}}=0\mathbf{v} & \text{[}\mathbf{0}\text{ is the additive identity]}
+0\mathbf{v}=0\mathbf{v}+\mathbf{0} & \text{[\ensuremath{\mathbf{0}} is the additive identity]}\\
+\phantom{0\mathbf{v}}=0\mathbf{v}+(0\mathbf{v}+(-0\mathbf{v})) & \text{[property of additive inverses]}\\
+\phantom{0\mathbf{v}}=(0\mathbf{v}+0\mathbf{v})+(-0\mathbf{v}) & \text{[addition is associative]}\\
+\phantom{0\mathbf{v}}=(0+0)\mathbf{v}+(-0\mathbf{v}) & \text{[scalars distribute over vectors]}\\
+\phantom{0\mathbf{v}}=0\mathbf{v}+(-0\mathbf{v}) & \text{[substitution of }0\text{ for }0+0\text{]}\\
+\phantom{0\mathbf{v}}=\mathbf{0} & \text{[property of additive inverses]}
 \end{array}
 \]
 
 \end_inset
 
-Note that this proof could be written in precisely the reverse order and
- it would remain valid.
+
 \end_layout
 
 \begin_layout Description

@@ -868,7 +868,7 @@ Given a transformation
 \end_inset
 
  where 
-\begin_inset Formula $M_{:j}=T(I_{:,j}),\,j=1,2,\ldots,n$
+\begin_inset Formula $M_{:,j}=T(I_{:,j}),\,j=1,2,\ldots,n$
 \end_inset
 
 .
@@ -2027,8 +2027,8 @@ projection
 \begin_layout Standard
 \noindent
 as before.
- The brown line segment indicates the part of the axis in the image that
- is not covered by the vector.
+ The brown line segment in the diagrams below indicates the part of the
+ axis in the image that is not covered by the vector.
 \end_layout
 
 \begin_layout Standard

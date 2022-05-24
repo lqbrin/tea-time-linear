@@ -138,7 +138,21 @@ Subtract 9.
 \begin_layout Standard
 \noindent
 Tell me your latest number, and I'll tell you your starting number.
- It's half of your latest number!
+ It's half of your latest number! Putting the instructions into symbols,
+ you are being asked to calculate 
+\begin_inset Formula $\frac{6(x+6)-9}{3}-9$
+\end_inset
+
+, which simplifies to 
+\begin_inset Formula $2x$
+\end_inset
+
+.
+ Hence the number you start with, 
+\begin_inset Formula $x$
+\end_inset
+
+, will always be half of what you end with!
 \end_layout
 
 \begin_layout Standard
@@ -169,7 +183,7 @@ status open
 
  and you can be the magician.
  I'll pick a matrix.
- Any matrix.
+ Any matrix and tell you what it looks like after some operation.
  After swapping the first two rows, my matrix is
 \begin_inset Formula 
 \[
@@ -4402,7 +4416,7 @@ Suppose
 \end_inset
 
  is a replacement matrix, and 
-\begin_inset Formula $\det(ME)=-\frac{1}{2}$
+\begin_inset Formula $\det(EM)=-\frac{1}{2}$
 \end_inset
 
 .

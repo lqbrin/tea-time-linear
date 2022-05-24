@@ -1271,7 +1271,7 @@ Suppose
 \end_inset
 
 , and 
-\begin_inset Formula $\det MB=48$
+\begin_inset Formula $\det(MB)=48$
 \end_inset
 
 .
@@ -1338,7 +1338,11 @@ Suppose
 \end_layout
 
 \begin_layout Enumerate
-Support the claim that the product of invertible matrices is invertible.
+Support the claim that 
+\shape slanted
+the product of invertible matrices is invertible
+\shape default
+.
 \end_layout
 
 \begin_layout Enumerate

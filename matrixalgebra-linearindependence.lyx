@@ -2296,24 +2296,6 @@ Show that the functions are linearly independent.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-independence-11"
-
-\end_inset
-
-
-\begin_inset Formula $e^{x}$
-\end_inset
-
- and 
-\begin_inset Formula $e^{2x}$
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -2334,6 +2316,24 @@ plural "false"
 caps "false"
 noprefix "false"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-independence-11"
+
+\end_inset
+
+
+\begin_inset Formula $e^{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $e^{2x}$
 \end_inset
 
 
@@ -3031,7 +3031,7 @@ Find a nontrivial solution of
 \end_inset
 
  are identical.
- Do not use row operations.
+ Do not use row reduction.
 \begin_inset Formula 
 \[
 M=\left[\begin{array}{ccc}
@@ -3173,8 +3173,8 @@ noprefix "false"
 
 \end_inset
 
- assume that addition and scalar multiplication are defined on the set and
- that there is a zero object in the set.
+ assume that addition and scalar multiplication are defined on the objects
+ and that there exists an additive identity.
 \end_layout
 
 \begin_layout Enumerate-Resume

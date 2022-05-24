@@ -933,6 +933,60 @@ name "sol:multiplication-6"
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "exc:multiplication-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:multiplication-9"
+
+\end_inset
+
+Matrices or vectors may be used in SageMath.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+print((u.transpose()*v)[0,0])
+\family default
+ 
+\begin_inset space \enskip{}
+\end_inset
+
+produces
+\end_layout
+
+\begin_layout LyX-Code
+35150214
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+print(vector(u)*vector(v))
+\family default
+ 
+\begin_inset space \enskip{}
+\end_inset
+
+produces
+\end_layout
+
+\begin_layout LyX-Code
+35150214
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "exc:multiplication-18"
 plural "false"
 caps "false"
@@ -5637,6 +5691,87 @@ noprefix "false"
 \end_layout
 
 \end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:matrix-properties-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:matrix-properties-4"
+
+\end_inset
+
+According to theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:matrixproperties-part2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ part 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmpart:distribute-scalar-over-matrices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $3A+7A=10A$
+\end_inset
+
+, so the calculation can be done without calculating 
+\begin_inset Formula $3A$
+\end_inset
+
+ or 
+\begin_inset Formula $7A$
+\end_inset
+
+ like so:
+\begin_inset Formula 
+\[
+3A+7A=10A=10\left[\begin{array}{ccc}
+11 & 10 & -6\\
+-3 & 6 & 7
+\end{array}\right]=\left[\begin{array}{ccc}
+110 & 100 & -60\\
+-30 & 60 & 70
+\end{array}\right]
+\]
+
+\end_inset
+
+You can check that 
+\begin_inset Formula $3A+7A=\left[\begin{array}{ccc}
+110 & 100 & -60\\
+-30 & 60 & 70
+\end{array}\right]$
+\end_inset
+
+ by calculating 
+\begin_inset Formula $3A$
+\end_inset
+
+ and 
+\begin_inset Formula $7A$
+\end_inset
+
+ and adding them.
+\end_layout
+
 \begin_layout Section*
 Section 
 \begin_inset CommandInset ref

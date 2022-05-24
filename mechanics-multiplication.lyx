@@ -3165,6 +3165,208 @@ value{enumi}}
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Find the dot product, 
+\begin_inset Formula $\mathbf{u}^{T}\mathbf{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwrVbBVyE0sKcqs0DDRMdSJ1jU2N7HQ0TU2MQOS
+Jsam5kC2maFhrCYvVxm6UlMTS3MdIxOQeiNLSwMgaW5uBFKprBBQWqJQmV9apJCcn5KqkJSak1-uUJKR
+WayQk5mXqgcAqrAe1A==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:multiplication-21"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hasasolution
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sol:multiplication-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-3748\\
+-3468\\
+-4357\\
+-3611
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-5497\\
+2448\\
+-2990\\
+-2772
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdyz0OwjAMQOEdiTtYYgHJteo6ceqBO7AjBn4i
+EaklUkkK3B66Mr3lfRX2MJ7LlN5bh4zHhkmk5YBL1Qw9-VZN0EiD53DarVfznzHqmFWwoz4IGza_Vxw6
+cmrKi9jAoRb45DrBNd8iXOKQX1Du6QlDekT6AnwaIj4=&lang=sage&interacts=eJyLjgUAARUAuQ=
+=}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-1.33017\\
+1.33699\\
+5.50693\\
+9.67517
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+9.21163\\
+2.87319\\
+-9.634\\
+4.46961
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJwrVbBVyE0sKcqs0DDWMdSJ1jUystDRNTUyMNTR
+NTE1jNXk5SpDV2JhYmgJVGNoZqSja2RsAVakrBBQWqJQmV9apJCcn5KqkJSak1-uUJKRWayQk5mXqgcA
+aXgcIw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-228\\
+-5201\\
+-451
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-8419\\
+-5162\\
+-2381
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxdzLsKAjEQheFe8B0GbBQmw-S2mSl8B3ux8BJw
+YTWwJl7e3tjaneL_ToMt3I51Ht_riBb3xtHAVjCSFQ2KjlSDtZjIxeAHNEzKTsJhs1w8_22PVLhvEnWs
+HXnv2aNRCv0uIZPElOIPr2DXKnxKm-FcLhlOeSovqNfxAdN4z_QFxmwl_w==&lang=sage&interacts
+=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbf{u}=\left[\begin{array}{c}
+-2.6018\\
+5.18949\\
+2.99411\\
+7.25436\\
+-0.90284
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-7.29805\\
+1.89209\\
+7.33303\\
+-9.41897\\
+0.85775
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status open

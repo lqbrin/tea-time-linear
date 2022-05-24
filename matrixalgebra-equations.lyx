@@ -627,7 +627,7 @@ addition!property of equality
 \end_inset
 
 We have used associativity and commutativity for addition of matrices as
- well as the distributive property as well.
+ well as the distributive property.
  Now that we have 
 \begin_inset Formula $0=(A+C)-(B+C)$
 \end_inset
@@ -3003,7 +3003,7 @@ Suppose the fifth column of
 \end_inset
 
 .
- What can you say about the second column of 
+ What can you say about the fifth column of 
 \begin_inset Formula $BA$
 \end_inset
 
