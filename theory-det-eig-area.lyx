@@ -2194,8 +2194,8 @@ Use the fact that
 
 .
  Alternatively, justify the claim that the area of the parallelogram determined
- by two vectors (anchored at the origin) is the determinant of the matrix
- whose columns are the two vectors.
+ by two vectors (anchored at the origin) is the absolute value of the determinan
+t of the matrix whose columns are the two vectors.
 \end_layout
 
 \begin_layout Enumerate
@@ -2439,7 +2439,7 @@ The image of the hexagon with adjacent vertices
 \end_inset
 
  matrix is shown.
- What is the determinant of 
+ What is the absolute value of the determinant of 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2508,7 +2508,7 @@ noprefix "false"
 
 \end_inset
 
-?
+ assuming no reflection?
 \begin_inset ERT
 status open
 
@@ -3304,6 +3304,39 @@ Prove that any square matrix
 
  and upper triangular matrix 
 \begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ is invertible.
+ What can you say about the eigenvalues of 
+\begin_inset Formula $M^{T}M$
+\end_inset
+
+? HINT: see exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:inverse-revisited-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:The-Inverse-Revisited"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 .

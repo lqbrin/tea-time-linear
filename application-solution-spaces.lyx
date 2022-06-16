@@ -831,6 +831,15 @@ Thinking of matrix-vector multiplication as taking a linear combination
 \end_inset
 
  is linearly dependent.
+ More precisely, the exact same linear combination of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ that sum to zero, taken of 
+\begin_inset Formula $EM$
+\end_inset
+
+ instead, will also sum to zero.
  Equivalently, a certain set of columns of 
 \begin_inset Formula $M$
 \end_inset
@@ -1069,17 +1078,17 @@ In full detail, if
  vector) form 
 \begin_inset Formula 
 \[
-\mathbf{v}=v_{f_{1}}\left[\begin{array}{c}
+\mathbf{v}=r_{1}\left[\begin{array}{c}
 a_{1,1}\\
 a_{2,1}\\
 \vdots\\
 a_{n,1}
-\end{array}\right]+v_{f_{2}}\left[\begin{array}{c}
+\end{array}\right]+r_{2}\left[\begin{array}{c}
 a_{1,2}\\
 a_{2,2}\\
 \vdots\\
 a_{n,2}
-\end{array}\right]+\cdots+v_{f_{k}}\left[\begin{array}{c}
+\end{array}\right]+\cdots+r_{k}\left[\begin{array}{c}
 a_{1,k}\\
 a_{2,k}\\
 \vdots\\
@@ -2491,6 +2500,14 @@ name "exc:solutions-spaces-9"
 M & \mathbf{b}\end{array}\right]$
 \end_inset
 
+, the matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ augmented by some vector 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
 .
  (i) Is 
 \begin_inset Formula $\mathbf{b}$
@@ -3360,7 +3377,7 @@ Let
 \begin_inset Formula $4\times5$
 \end_inset
 
- matrix with columns 2,3, and 4 representing free variables.
+ coefficient matrix with columns 2,3, and 4 representing free variables.
  Argue that the set containing the fifth column of 
 \begin_inset Formula $M$
 \end_inset
@@ -3514,7 +3531,7 @@ name "exc:solutions-spaces-34"
 
 \end_inset
 
-Solve 
+Find one solution of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -3543,7 +3560,7 @@ Use the fact that
 \begin_inset Formula $M$
 \end_inset
 
- to write down all the solutions of 
+ to help write down all the solutions of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -3726,11 +3743,7 @@ Let
 \end{array}\right]$
 \end_inset
 
- (has a parameter 
-\begin_inset Formula $k$
-\end_inset
-
- in it), 
+, 
 \begin_inset Formula $B=\left[\begin{array}{ccc}
 8 & 0 & 0\\
 0 & 8 & 9\\
@@ -4048,7 +4061,7 @@ Given an
 
  by the following argument.
  Let 
-\begin_inset Formula $S_{M}$
+\begin_inset Formula $C_{M}$
 \end_inset
 
  be the column space of 
@@ -4056,7 +4069,7 @@ Given an
 \end_inset
 
  and 
-\begin_inset Formula $S_{MP}$
+\begin_inset Formula $C_{MP}$
 \end_inset
 
  be the column space of 
@@ -4069,19 +4082,19 @@ Given an
 \begin_deeper
 \begin_layout Enumerate
 Suppose 
-\begin_inset Formula $\mathbf{s}$
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
  is in 
-\begin_inset Formula $S_{M}$
+\begin_inset Formula $C_{M}$
 \end_inset
 
 , and show that 
-\begin_inset Formula $\mathbf{s}$
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
  is in 
-\begin_inset Formula $S_{MP}$
+\begin_inset Formula $C_{MP}$
 \end_inset
 
 .
@@ -4089,19 +4102,19 @@ Suppose
 
 \begin_layout Enumerate
 Suppose 
-\begin_inset Formula $\mathbf{s}$
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
  is in 
-\begin_inset Formula $S_{MP}$
+\begin_inset Formula $C_{MP}$
 \end_inset
 
 , and show that 
-\begin_inset Formula $\mathbf{s}$
+\begin_inset Formula $\mathbf{v}$
 \end_inset
 
  is in 
-\begin_inset Formula $S_{M}$
+\begin_inset Formula $C_{M}$
 \end_inset
 
 .
@@ -4143,11 +4156,11 @@ Given an
 \begin_inset Formula $Q$
 \end_inset
 
-, show that the rank of 
+, show that the nullity of 
 \begin_inset Formula $QM$
 \end_inset
 
- equals the rank of 
+ equals the nullity of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4213,11 +4226,11 @@ Suppose
 \end_layout
 
 \begin_layout Enumerate
-Conclude that the rank of 
+Conclude that the nullity of 
 \begin_inset Formula $M$
 \end_inset
 
- equals the rank of 
+ equals the nullity of 
 \begin_inset Formula $QM$
 \end_inset
 

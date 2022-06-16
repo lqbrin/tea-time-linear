@@ -1153,7 +1153,7 @@ If
 \begin_inset Formula $\mathbf{w}=\text{proj}_{W}\mathbf{v}$
 \end_inset
 
- is the closest point to 
+ is the closest vector to 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
@@ -1307,7 +1307,7 @@ name "thm:best-approximation-linear-system"
 \end_inset
 
 .
- Then the solution of 
+ Then any solution of 
 \begin_inset Formula $M\hat{\mathbf{v}}=\text{proj}_{W}\mathbf{b}$
 \end_inset
 
@@ -1315,7 +1315,7 @@ name "thm:best-approximation-linear-system"
 \begin_inset Formula $\hat{\mathbf{v}}$
 \end_inset
 
- is the best approximation to a solution of 
+ is a best approximation to a solution of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -1852,12 +1852,20 @@ orthogonal!projection|textidxkey
 , is defined by
 \begin_inset Formula 
 \[
-\text{proj}_{W}\mathbf{v}=\text{proj}_{\mathbf{b}_{1}}\mathbf{v}+\text{proj}_{\mathbf{b}_{2}}\mathbf{v}+\cdots+\text{proj}_{\mathbf{b}_{p}}\mathbf{v}.
+\text{proj}_{W}\mathbf{v}=\text{proj}_{\mathbf{b}_{1}}\mathbf{v}+\text{proj}_{\mathbf{b}_{2}}\mathbf{v}+\cdots+\text{proj}_{\mathbf{b}_{p}}\mathbf{v}
 \]
 
 \end_inset
 
+for any orthogonal basis 
+\begin_inset Formula $\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{p}\}$
+\end_inset
 
+ of 
+\begin_inset Formula $W$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -2823,29 +2831,29 @@ noprefix "false"
 
 \begin_layout Enumerate
 \begin_inset Formula $\mathbf{v}=\left[\begin{array}{c}
+-2\\
+-8\\
 8\\
--4\\
-10\\
-9
+8
 \end{array}\right]$
 \end_inset
 
 ; 
 \begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
--7\\
--8\\
-11\\
-5
+-2\\
+-6\\
+-2\\
+4
 \end{array}\right],\left[\begin{array}{c}
-4\\
 12\\
-9\\
-5
+-1\\
+-5\\
+2
 \end{array}\right],\left[\begin{array}{c}
--624\\
-307\\
--362\\
-414
+26\\
+-7\\
+81\\
+43
 \end{array}\right]\right\} $
 \end_inset
 
@@ -2865,12 +2873,12 @@ Find the orthogonal projection of
 \end_inset
 
  onto 
-\begin_inset Formula $\text{span}\mathcal{B}$
+\begin_inset Formula $\text{span}S$
 \end_inset
 
 .
  
-\begin_inset Formula $\mathcal{B}$
+\begin_inset Formula $S$
 \end_inset
 
  is not an orthogonal set.
@@ -2885,7 +2893,7 @@ Find the orthogonal projection of
 \end_inset
 
 ; 
-\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 4\\
 -1
 \end{array}\right],\left[\begin{array}{c}
@@ -2917,7 +2925,7 @@ name "exc:approximation-31"
 \end_inset
 
 
-\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 0\\
 -9\\
 -6
@@ -2971,7 +2979,7 @@ noprefix "false"
 \end_inset
 
 
-\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 -8\\
 -5\\
 12
@@ -3006,7 +3014,7 @@ name "exc:approximation-32"
 \end_inset
 
 ; 
-\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 9\\
 -5\\
 -10\\
@@ -3063,7 +3071,7 @@ noprefix "false"
 \end_inset
 
 
-\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 -5\\
 1\\
 11\\
@@ -3105,7 +3113,7 @@ name "exc:approximation-33"
 \end_inset
 
 
-\begin_inset Formula $\mathcal{B}=\left\{ \left[\begin{array}{c}
+\begin_inset Formula $S=\left\{ \left[\begin{array}{c}
 -5\\
 9\\
 -10\\
@@ -3423,7 +3431,7 @@ name "exc:approximation-6"
 \end_inset
 
 Solve the system.
- If it is inconsistent, find the best approximation of a solution.
+ If it is inconsistent, find a best approximation to a solution.
 \end_layout
 
 \begin_deeper

@@ -2229,7 +2229,7 @@ name "exc:LU-decomposition-1"
 \end_inset
 
 Find a permutation matrix 
-\begin_inset Formula $P$
+\begin_inset Formula $P\neq I$
 \end_inset
 
  and an 
@@ -3130,7 +3130,7 @@ Suppose
 \begin_inset Formula $LU$
 \end_inset
 
- where 
+ and 
 \begin_inset Formula $L$
 \end_inset
 
@@ -3139,7 +3139,7 @@ Suppose
 \end_inset
 
 s on its diagonal.
- Compute precisely the number of arithmetic operations (additions, subtractions,
+ Count precisely the number of arithmetic operations (additions, subtractions,
  multiplications, and divisions) needed to solve the system 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset

@@ -270,7 +270,7 @@ noprefix "false"
 
 \end_inset
 
-which in matrix format is
+which in matrix form is
 \begin_inset Formula 
 \begin{equation}
 \left[\begin{array}{cccc}
@@ -470,7 +470,8 @@ The question then turns to (a) establishing bases within which pairs of
 \end_inset
 
  (the dot product, after which inner products were modeled).
- Can you verify that the inner product of every pair of vectors in 
+ Can you verify that the inner product of every pair of distinct vectors
+ in 
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
@@ -585,7 +586,7 @@ literal "false"
 \end_inset
 
  to generate random examples.
- Can you verify that all pairs of the vectors 
+ Can you verify that all pairs of distinct vectors among 
 \begin_inset Formula 
 \[
 \left[\begin{array}{c}
@@ -810,7 +811,7 @@ orthogonalization
 \end_layout
 
 \begin_layout Standard
-A couple details have thus far been overlooked.
+A few details have thus far been overlooked.
  For one, formula (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -863,10 +864,7 @@ noprefix "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-For two, the discussion at the beginning of the section establishes that
+ For two, the discussion at the beginning of the section establishes that
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -908,7 +906,7 @@ noprefix "false"
 \end_inset
 
 ).
- To help correct this deficiency, can you show that if 
+ To start resolving this issue, can you show that if 
 \begin_inset Formula $\langle\mathbf{w},\mathbf{b}_{1}\rangle=\langle\mathbf{w},\mathbf{b}_{2}\rangle=\cdots=\langle\mathbf{w},\mathbf{b}_{n}\rangle=0$
 \end_inset
 
@@ -933,7 +931,43 @@ noprefix "false"
 .
  This means the zero vector is orthogonal to (has inner product zero with)
  every vector in a basis and in fact is the only such vector.
- this fact will be imporant shortly, but for now we return to showing (
+ This fact plays a prominent role in this discussion.
+ For three, the span of the orthogonalized vectors is the same as the span
+ of the original vectors.
+ This is a particularly important feature of the process if you are orthogonaliz
+ing the basis of a subspace.
+ See crumpet 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dig:orthogonalization-details"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for resolutions of these last two issues.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Details of the Process of Orthogonalization}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "dig:orthogonalization-details"
+
+\end_inset
+
+To show that that (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:coefficients-matrix-format"
@@ -953,8 +987,7 @@ noprefix "false"
 
 \end_inset
 
-).
- Following the steps establishing that (
+), we follow the steps establishing that (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:the-coefficient-problem"
@@ -974,8 +1007,8 @@ noprefix "false"
 
 \end_inset
 
-) backward, the same properties of inner product spaces that gave us that
- (
+) backward.
+ The same properties of inner product spaces that gave us that (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:coefficients-inner-products"
@@ -1116,14 +1149,12 @@ noprefix "false"
 \end_inset
 
 .
+ This settles issue two.
 \end_layout
 
 \begin_layout Standard
-For three, the span of the orthogonalized vectors is the same as the span
- of the original vectors.
- This is a particularly important feature of the process if you are orthogonaliz
-ing the basis of a subspace.
- Even more is true, though: 
+To show that the span of a set of vectors is not changed by orthogonalization,
+ we show something stronger: that 
 \begin_inset Formula $\text{span}\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}=\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
 \end_inset
 
@@ -1219,11 +1250,17 @@ Direct computation shows that a set of nonzero vectors
 
 .
  Then
-\begin_inset Foot
-status collapsed
+\begin_inset Formula 
+\begin{align*}
+0=\left\langle \mathbf{0},\mathbf{v}_{1}\right\rangle  & =\left\langle (c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{p}\mathbf{v}_{p}),\mathbf{v}_{1}\right\rangle \\
+ & =\left\langle c_{1}\mathbf{v}_{1},\mathbf{v}_{1}\right\rangle +\left\langle c_{2}\mathbf{v}_{2},\mathbf{v}_{1}\right\rangle +\cdots+\left\langle c_{p}\mathbf{v}_{p},\mathbf{v}_{1}\right\rangle \\
+ & =c_{1}\left\langle \mathbf{v}_{1},\mathbf{v}_{1}\right\rangle +c_{2}\left\langle \mathbf{v}_{2},\mathbf{v}_{1}\right\rangle +\cdots+c_{p}\left\langle \mathbf{v}_{p},\mathbf{v}_{1}\right\rangle \\
+ & =c_{1}\left\langle \mathbf{v}_{1},\mathbf{v}_{1}\right\rangle 
+\end{align*}
 
-\begin_layout Plain Layout
-see exercise 
+\end_inset
+
+(see exercise 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:inner-product-with-zero"
@@ -1243,23 +1280,7 @@ noprefix "false"
 
 \end_inset
 
-.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-0=\left\langle \mathbf{0},\mathbf{v}_{1}\right\rangle  & =\left\langle (c_{1}\mathbf{v}_{1}+c_{2}\mathbf{v}_{2}+\cdots+c_{p}\mathbf{v}_{p}),\mathbf{v}_{1}\right\rangle \\
- & =\left\langle c_{1}\mathbf{v}_{1},\mathbf{v}_{1}\right\rangle +\left\langle c_{2}\mathbf{v}_{2},\mathbf{v}_{1}\right\rangle +\cdots+\left\langle c_{p}\mathbf{v}_{p},\mathbf{v}_{1}\right\rangle \\
- & =c_{1}\left\langle \mathbf{v}_{1},\mathbf{v}_{1}\right\rangle +c_{2}\left\langle \mathbf{v}_{2},\mathbf{v}_{1}\right\rangle +\cdots+c_{p}\left\langle \mathbf{v}_{p},\mathbf{v}_{1}\right\rangle \\
- & =c_{1}\left\langle \mathbf{v}_{1},\mathbf{v}_{1}\right\rangle 
-\end{align*}
-
-\end_inset
-
-since 
+) since 
 \begin_inset Formula $\left\langle \mathbf{v}_{i},\mathbf{v}_{j}\right\rangle =0$
 \end_inset
 
@@ -1309,7 +1330,7 @@ It remains to show that every pair of distinct vectors in
 \begin_inset Formula $\{\mathbf{w}_{1}\}$
 \end_inset
 
- is orthogonal (vacuously since there are no distinct paris in the set).
+ is orthogonal (vacuously since there are no distinct pairs in the set).
  By (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1374,9 +1395,18 @@ since
 \end_inset
 
  is orthogonal.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 A set of vectors in which every pair of distinct vectors is orthogonal is
  called an 
 \series bold
@@ -1485,6 +1515,19 @@ status open
 
 
 \end_layout
+
+\end_inset
+
+In terms of coordinate vectors,
+\begin_inset Formula 
+\[
+\mathbf{v}=\left[\begin{array}{c}
+\frac{\langle\mathbf{v},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\\
+\frac{\langle\mathbf{v},\mathbf{b}_{2}\rangle}{\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle}\\
+\vdots\\
+\frac{\langle\mathbf{v},\mathbf{b}_{n}\rangle}{\langle\mathbf{b}_{n},\mathbf{b}_{n}\rangle}
+\end{array}\right]_{\mathcal{B}}
+\]
 
 \end_inset
 
@@ -3250,7 +3293,7 @@ name "exc:orthogonalization-17"
 
 \end_inset
 
-Orthogonalize
+Find an orthogonal set with the same span.
 \end_layout
 
 \begin_deeper
@@ -3601,8 +3644,8 @@ noprefix "false"
 
 \end_deeper
 \begin_layout Enumerate
-Orthonormalize (normalize the vectors of the orthogonalization process as
- they are computed).
+Orthonormalize (normalize the vectors resulting from the orthogonalization
+ process as they are computed).
 \end_layout
 
 \begin_deeper
@@ -4030,34 +4073,16 @@ name "exc:orthogonalization-20"
 
 \end_inset
 
-The set 
+The given set 
 \begin_inset Formula $S$
 \end_inset
 
  is linearly dependent so we should not expect orthogonalization to lead
- to the property that, for 
-\begin_inset Formula $j=1,2,\ldots,n$
+ to an orthogonal basis for 
+\begin_inset Formula $\text{span}S$
 \end_inset
 
-, 
-\begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
-\end_inset
-
- is an orthogonal basis for 
-\begin_inset Formula $\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
-\end_inset
-
- (as described on page 
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "key:orthogonalization"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-).
+.
  Orthogonalize anyway and explain what happens.
  For which 
 \begin_inset Formula $j$
@@ -4067,8 +4092,20 @@ noprefix "false"
 \begin_inset Formula $\{\mathbf{w}_{1},\mathbf{w}_{2},\ldots,\mathbf{w}_{j}\}$
 \end_inset
 
- an orthogonal basis for 
-\begin_inset Formula $\text{span}\{\mathbf{b}_{1},\mathbf{b}_{2},\ldots,\mathbf{b}_{j}\}$
+ (the result of orthogonalizing the first 
+\begin_inset Formula $j$
+\end_inset
+
+ elements of 
+\begin_inset Formula $S$
+\end_inset
+
+) an orthogonal basis for the span of the first 
+\begin_inset Formula $j$
+\end_inset
+
+ elements of 
+\begin_inset Formula $S$
 \end_inset
 
 ?
@@ -4139,11 +4176,11 @@ Orthogonalize
 \begin_inset Formula $\left\{ 1,t,t^{2}\right\} $
 \end_inset
 
- relative to the inner product 
-\begin_inset Formula $\langle,\rangle:\mathbb{P}_{n}(\mathbb{R})\times\mathbb{P}_{n}(\mathbb{R})\to\mathbb{R}$
+ in 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
 \end_inset
 
-, 
+ with inner product 
 \begin_inset Formula 
 \[
 \left\langle f,g\right\rangle =\int_{-1}^{1}f(x)g(x)\,dx.
@@ -4151,7 +4188,12 @@ Orthogonalize
 
 \end_inset
 
-These are the first three Legendre polynomials.
+Then scale each one so its graph passes through 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+.
+ The resulting functions are the first three Legendre polynomials.
 \end_layout
 
 \begin_layout Enumerate
@@ -4165,11 +4207,11 @@ Orthogonalize
 \begin_inset Formula $\left\{ 1,t,t^{2}\right\} $
 \end_inset
 
- relative to the inner product 
-\begin_inset Formula $\langle,\rangle:\mathbb{P}_{2}(\mathbb{R})\times\mathbb{P}_{2}(\mathbb{R})\to\mathbb{R}$
+ in 
+\begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
 \end_inset
 
-, 
+ with inner product 
 \begin_inset Formula 
 \[
 \left\langle p,q\right\rangle =p(0)q(0)+p(1)q(1)+p(2)q(2).
@@ -4224,11 +4266,11 @@ name "exc:orthogonalization-15"
 \begin_inset Formula $\mathcal{B}=\left\{ \sin t,\sin2t,\sin3t,\sin4t\right\} $
 \end_inset
 
- is an orthogonal set relative to the inner product 
-\begin_inset Formula $\langle,\rangle:C([-\pi,\pi])\times C([-\pi,\pi])\to\mathbb{R}$
+ is an orthogonal set in 
+\begin_inset Formula $C([-\pi,\pi])$
 \end_inset
 
-, 
+ with inner product
 \begin_inset Formula 
 \[
 \left\langle f,g\right\rangle =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)g(x)\,dx
@@ -4236,37 +4278,21 @@ name "exc:orthogonalization-15"
 
 \end_inset
 
-(and is therefore a basis for its span).
- Even though the function 
-\begin_inset Formula $h(t)=t$
-\end_inset
-
- is not in 
-\begin_inset Formula $\text{span}\mathcal{B}$
-\end_inset
-
-, the projections of 
-\begin_inset Formula $h$
-\end_inset
-
- onto the elements of 
-\begin_inset Formula $\mathcal{B}$
-\end_inset
-
- can still be calculated since 
-\begin_inset Formula $h$
-\end_inset
-
- is in 
-\begin_inset Formula $C([-\pi,\pi])$
+and is therefore a basis for its span, 
+\begin_inset Formula $W$
 \end_inset
 
 .
+ Let 
+\begin_inset Formula $h(t)=t$
+\end_inset
+
+ and
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Calculate 
+calculate 
 \begin_inset Formula $\text{proj}_{\sin kt}h$
 \end_inset
 
@@ -4274,11 +4300,11 @@ Calculate
 \begin_inset Formula $k=1,2,3,4$
 \end_inset
 
-.
+; and
 \end_layout
 
 \begin_layout Enumerate
-Graph 
+graph 
 \begin_inset Formula $h$
 \end_inset
 

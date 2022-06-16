@@ -17857,14 +17857,18 @@ name "sol:power-3"
 
 \end_inset
 
-The most immediate approximation of an eigenvector is 
+The most immediate approximation of an eigenvector is either 
 \begin_inset Formula $\mathbf{v}_{5}$
 \end_inset
 
+ or 
+\begin_inset Formula $\mathbf{v}_{6}$
+\end_inset
+
  itself.
- And the simplest way to get a handle on the associated eigenvalue is to
- multiply 
-\begin_inset Formula $M\mathbf{v}_{5}$
+ The simplest way to get a handle on the associated eigenvalue is to note
+ that 
+\begin_inset Formula $\mathbf{v}_{6}=M\mathbf{v}_{5}$
 \end_inset
 
 , which should be approximately 
@@ -17875,13 +17879,7 @@ The most immediate approximation of an eigenvector is
  
 \begin_inset Formula 
 \[
-M\mathbf{v}_{5}=\left[\begin{array}{cc}
--12 & -5\\
-16 & 6
-\end{array}\right]\left[\begin{array}{c}
--467\\
-742
-\end{array}\right]=\left[\begin{array}{c}
+\mathbf{v}_{6}=\left[\begin{array}{c}
 1894\\
 -3020
 \end{array}\right]\approx\lambda\left[\begin{array}{c}
@@ -17918,11 +17916,7 @@ Matching entries, we see that
 .
  Either one of these estimates will do for our approximation.
  There is no reason to choose one over the other save personal preference.
- As for an approximate eigenvector, note that 
-\begin_inset Formula $M\mathbf{v}_{5}=\mathbf{v}_{6}$
-\end_inset
-
-, and we expect 
+ As for an approximate eigenvector, we expect 
 \begin_inset Formula $\mathbf{v}_{6}$
 \end_inset
 
@@ -17931,11 +17925,6 @@ Matching entries, we see that
 \end_inset
 
 .
- Having gone through the trouble of calculating it, we choose 
-\begin_inset Formula $\mathbf{v}_{6}$
-\end_inset
-
- as the approximate eigenvector.
  In summary, we choose
 \begin_inset Formula 
 \[

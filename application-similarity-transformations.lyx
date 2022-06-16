@@ -200,10 +200,6 @@ noprefix "false"
 \end_inset
 
  illustrates that reflection about an arbitrary line through the origin
- 
-\begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
-\end_inset
-
  is a linear transformation.
  As we saw in section 
 \begin_inset CommandInset ref
@@ -2931,15 +2927,15 @@ noprefix "false"
 
 \begin_layout Enumerate
 \begin_inset Formula $A=\left[\begin{array}{cc}
-11 & 8\\
-k & -3
+-6 & k\\
+-12 & 1
 \end{array}\right]$
 \end_inset
 
 ; 
 \begin_inset Formula $B=\left[\begin{array}{cc}
-4 & k\\
-6 & 9
+3 & -10\\
+k & -8
 \end{array}\right]$
 \end_inset
 
@@ -3093,22 +3089,36 @@ Matrices
 \end_inset
 
 .
-\begin_inset Formula 
-\[
-A=\left[\begin{array}{cc}
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
 j & -70\\
 k & 38
 \end{array}\right];\ B=\left[\begin{array}{cc}
 -3 & -4\\
 1 & -8
-\end{array}\right]
-\]
-
+\end{array}\right]$
 \end_inset
 
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+j & -4\\
+-2 & k
+\end{array}\right];\ B=\left[\begin{array}{cc}
+-9 & 2\\
+-12 & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label

@@ -975,7 +975,7 @@ eigenvalue!dominant
 \end_layout
 
 \begin_layout Enumerate
-the dominant eigenvalue has exactly one associated eigenvector
+the eigenspace of the dominant eigenvalue has dimension one, and
 \end_layout
 
 \begin_layout Enumerate
@@ -999,10 +999,14 @@ The method only determines the eigenvector corresponding to the dominant
 
 \begin_layout Enumerate
 The accuracy of the approximation is proportional to the largest ratio 
-\begin_inset Formula $\left|\frac{\lambda_{j}}{\lambda_{i}}\right|^{k},\ i\neq j$
+\begin_inset Formula $\left|\frac{\lambda_{d}}{\lambda_{i}}\right|^{k},\ i\neq d$
 \end_inset
 
-.
+ where 
+\begin_inset Formula $\lambda_{d}$
+\end_inset
+
+ is the dominant eigenvalue.
 \end_layout
 
 \begin_layout Standard
@@ -1121,7 +1125,15 @@ noprefix "false"
 \begin_inset Formula $M$
 \end_inset
 
- are such that 
+ are such that for some 
+\begin_inset Formula $d$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{d}$
+\end_inset
+
+ is the dominant eigenvalue (
 \begin_inset Formula $|\lambda_{j}|>|\lambda_{i}|$
 \end_inset
 
@@ -1129,8 +1141,8 @@ noprefix "false"
 \begin_inset Formula $i\neq j$
 \end_inset
 
- and the eigenspace of 
-\begin_inset Formula $\lambda_{j}$
+) and the eigenspace of 
+\begin_inset Formula $\lambda_{d}$
 \end_inset
 
  has dimension one.
@@ -1164,7 +1176,7 @@ noprefix "false"
 \end_inset
 
  matrix with zeros everywhere except the 
-\begin_inset Formula $j,\!j$
+\begin_inset Formula $d,\!d$
 \end_inset
 
 -entry where it has a one.
@@ -1189,22 +1201,22 @@ noprefix "false"
 \vdots & \vdots & \ddots & \vdots\\
 0 & 0 & \cdots & \lambda_{n}^{k}
 \end{array}\right]\mathbf{w}\\
- & =\lambda_{j}^{k}P\left[\begin{array}{cccc}
-\frac{\lambda_{1}^{k}}{\lambda_{j}^{k}} & 0 & \cdots & 0\\
-0 & \frac{\lambda_{2}^{k}}{\lambda_{j}^{k}} & \cdots & 0\\
+ & =\lambda_{d}^{k}P\left[\begin{array}{cccc}
+\frac{\lambda_{1}^{k}}{\lambda_{d}^{k}} & 0 & \cdots & 0\\
+0 & \frac{\lambda_{2}^{k}}{\lambda_{d}^{k}} & \cdots & 0\\
 \vdots & \vdots & \ddots & \vdots\\
-0 & 0 & \cdots & \frac{\lambda_{n}^{k}}{\lambda_{j}^{k}}
+0 & 0 & \cdots & \frac{\lambda_{n}^{k}}{\lambda_{d}^{k}}
 \end{array}\right]\mathbf{w}\\
- & \approx\lambda_{j}^{k}PZ\mathbf{w}\\
- & =\lambda_{j}^{k}\left[\begin{array}{ccccccc}
-\mathbf{0} & \cdots & \mathbf{0} & P_{:,j} & \mathbf{0} & \cdots & \mathbf{0}\end{array}\right]\mathbf{w}\\
- & =\lambda_{j}^{k}\mathbf{w}_{j,1}P_{:,j}.
+ & \approx\lambda_{d}^{k}PZ\mathbf{w}\\
+ & =\lambda_{d}^{k}\left[\begin{array}{ccccccc}
+\mathbf{0} & \cdots & \mathbf{0} & P_{:,d} & \mathbf{0} & \cdots & \mathbf{0}\end{array}\right]\mathbf{w}\\
+ & =\lambda_{d}^{k}\mathbf{w}_{d,1}P_{:,d}.
 \end{align*}
 
 \end_inset
 
 But 
-\begin_inset Formula $P_{:,j}$
+\begin_inset Formula $P_{:,d}$
 \end_inset
 
  is an eigenvector of 
@@ -1212,7 +1224,7 @@ But
 \end_inset
 
  corresponding to 
-\begin_inset Formula $\lambda_{j}$
+\begin_inset Formula $\lambda_{d}$
 \end_inset
 
 , so 
@@ -1224,11 +1236,11 @@ But
 \end_inset
 
  corresponding to 
-\begin_inset Formula $\lambda_{j}$
+\begin_inset Formula $\lambda_{d}$
 \end_inset
 
  as long as 
-\begin_inset Formula $\mathbf{w}_{j,1}\neq0$
+\begin_inset Formula $\mathbf{w}_{d,1}\neq0$
 \end_inset
 
 .
@@ -1889,7 +1901,8 @@ name "exc:power-method-2"
 
 \end_inset
 
-The sixth term of the sequence defined by an initial vector, 
+The sixth and seventh terms of the sequence defined by an initial vector,
+ 
 \begin_inset Formula $\mathbf{v}_{0}$
 \end_inset
 
@@ -1897,7 +1910,11 @@ The sixth term of the sequence defined by an initial vector,
 \begin_inset Formula $\mathbf{v}_{k}=M\mathbf{v}_{k-1}$
 \end_inset
 
- is given.
+, where 
+\begin_inset Formula $M$
+\end_inset
+
+ has a dominant eigenvalue, are given.
  Use this information to estimate an eigenpair of 
 \begin_inset Formula $M$
 \end_inset
@@ -1914,16 +1931,16 @@ name "exc:power-method-21"
 \end_inset
 
 
-\begin_inset Formula $M=\left[\begin{array}{cc}
--12 & -5\\
-16 & 6
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+-467\\
+742
 \end{array}\right]$
 \end_inset
 
 ; 
-\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
--467\\
-742
+\begin_inset Formula $\mathbf{v}_{6}=\left[\begin{array}{c}
+1894\\
+-3020
 \end{array}\right]$
 \end_inset
 
@@ -1958,16 +1975,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M=\left[\begin{array}{cc}
-13 & 9\\
--3 & 1
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+9311\\
+-3061
 \end{array}\right]$
 \end_inset
 
 ; 
-\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
-9311\\
--3061
+\begin_inset Formula $\mathbf{v}_{6}=\left[\begin{array}{c}
+93494\\
+-30994
 \end{array}\right]$
 \end_inset
 
@@ -1982,16 +1999,16 @@ name "exc:power-method-22"
 \end_inset
 
 
-\begin_inset Formula $M=\left[\begin{array}{cc}
--11 & 30\\
--5 & 14
+\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
+4099\\
+2049
 \end{array}\right]$
 \end_inset
 
 ; 
-\begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
-4099\\
-2049
+\begin_inset Formula $\mathbf{v}_{6}=\left[\begin{array}{c}
+16381\\
+8191
 \end{array}\right]$
 \end_inset
 
@@ -2022,22 +2039,18 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M=\left[\begin{array}{ccc}
-19 & 3 & -36\\
--57 & 15 & 148\\
-18 & -2 & -42
-\end{array}\right]$
-\end_inset
-
-;
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
 -27787\\
 46793\\
 -18613
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{6}=\left[\begin{array}{c}
+282494\\
+-468970\\
+187994
 \end{array}\right]$
 \end_inset
 
@@ -2052,22 +2065,18 @@ name "exc:power-method-23"
 \end_inset
 
 
-\begin_inset Formula $M=\left[\begin{array}{ccc}
-44 & 27 & -4\\
-0 & 86 & -16\\
-0 & -30 & 90
-\end{array}\right]$
-\end_inset
-
-;
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
 128272\\
 177760\\
 -52800
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{6}=\left[\begin{array}{c}
+10654688\\
+16132160\\
+-10084800
 \end{array}\right]$
 \end_inset
 
@@ -2098,22 +2107,18 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M=\left[\begin{array}{ccc}
--128 & 215 & -40\\
--90 & 177 & -40\\
--400 & 394 & 65
-\end{array}\right]$
-\end_inset
-
-;
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Formula $\mathbf{v}_{5}=\left[\begin{array}{c}
 -9793\\
 -9793\\
 7499
+\end{array}\right]$
+\end_inset
+
+; 
+\begin_inset Formula $\mathbf{v}_{6}=\left[\begin{array}{c}
+-1151951\\
+-1151951\\
+546193
 \end{array}\right]$
 \end_inset
 
@@ -2137,7 +2142,7 @@ Calculate
 \end_inset
 
  of the power method.
- Does it seem that the method will converge?
+ Does it seem the method will converge?
 \end_layout
 
 \begin_deeper
@@ -2848,7 +2853,7 @@ The algebraic multiplicity of an eigenvalue is its multiplicity as a root
 \begin_inset Formula $g$
 \end_inset
 
- of the dominant eigenvalue.
+, of the dominant eigenvalue.
  (i) State the dominant eigenvalue of 
 \begin_inset Formula $M$
 \end_inset
@@ -3136,8 +3141,18 @@ The dominant eigenvalue of
 \begin_inset Formula $M$
 \end_inset
 
- has algebraic multiplicity 2 but only one associated eigenvector.
- 
+ has algebraic multiplicity 2 but geometric multiplicity 1.
+ See exercise 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:power-method-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for an explanation of algebraic and geometric multiplicities.
 \begin_inset Formula 
 \[
 M=\left[\begin{array}{cccc}
@@ -3580,7 +3595,12 @@ biFjtTBO5DfLwFE_&lang=sage&interacts=eJyLjgUAARUAuQ==}
 
 \end_inset
 
-20 is a good estimate of one of the non-dominant eigenvalues of 
+The power method could be used to find approximations of the dominant eigenvalue
+ (approximately 
+\begin_inset Formula $77$
+\end_inset
+
+) and associated eigenvector of 
 \begin_inset Formula 
 \[
 M=\left[\begin{array}{cccc}
@@ -3593,11 +3613,39 @@ M=\left[\begin{array}{cccc}
 
 \end_inset
 
+With some preparation, the power method can be used to approximate non-dominant
+ eigenpairs too! One of its eigenvalues, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, is around 
+\begin_inset Formula $20$
+\end_inset
+
+.
+ In fact 
+\begin_inset Formula $20$
+\end_inset
+
+ is closer to that eigenvalue than any of the others.
+ Thus 
+\begin_inset Formula $\frac{1}{\lambda-20}$
+\end_inset
+
+ is the dominant eigenvalue of 
+\begin_inset Formula $(M-20I)^{-1}$
+\end_inset
+
+.
  Apply the power method to 
 \begin_inset Formula $(M-20I)^{-1}$
 \end_inset
 
- to find approximations of the eigenvalue and an associated eigenvector.
+ to find approximations of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and an associated eigenvector.
 \end_layout
 
 \begin_layout Standard
