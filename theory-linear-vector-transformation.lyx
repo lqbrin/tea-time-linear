@@ -96,7 +96,15 @@ name "sec:Linear-Transformations-on-Vectors"
 
 \end_inset
 
-Linear Transformations of Vectors
+Linear Transformations from 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*

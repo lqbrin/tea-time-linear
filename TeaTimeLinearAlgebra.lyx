@@ -398,155 +398,37 @@ mainmatter
 status open
 
 \begin_layout Plain Layout
-UNIFORMIZATION TODO
+ADDITIONAL SECTIONS?
 \end_layout
 
 \begin_layout Itemize
-????
+Chapter 6
 \end_layout
 
-\begin_layout Plain Layout
-UNIFORMIZATION COMPLETED
+\begin_deeper
+\begin_layout Itemize
+Representation of Complex Numbers (between sections 4 and 5)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Chapter 7
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Networks
 \end_layout
 
 \begin_layout Itemize
-Spell checking (done on 7/25/2021).
- No errors found.
- Do again?
+Splines
 \end_layout
 
 \begin_layout Itemize
-Take 
-\begin_inset Quotes eld
-\end_inset
-
-Answers
-\begin_inset Quotes erd
-\end_inset
-
- sections out of table of contents (make them Section*)
+Computer Graphics
 \end_layout
 
-\begin_layout Itemize
-Change all 
-\begin_inset Quotes eld
-\end_inset
-
-left multiply
-\begin_inset Quotes erd
-\end_inset
-
- to 
-\begin_inset Quotes eld
-\end_inset
-
-left-multiply
-\begin_inset Quotes erd
-\end_inset
-
- and 
-\begin_inset Quotes eld
-\end_inset
-
-right multiply
-\begin_inset Quotes erd
-\end_inset
-
- to 
-\begin_inset Quotes eld
-\end_inset
-
-right-multiply
-\begin_inset Quotes erd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Change 
-\begin_inset Quotes eld
-\end_inset
-
-i,j
-\begin_inset Quotes erd
-\end_inset
-
- in inset formulas to 
-\begin_inset Quotes eld
-\end_inset
-
-i,
-\backslash
-!j
-\begin_inset Quotes erd
-\end_inset
-
- (not needed when 
-\begin_inset Quotes eld
-\end_inset
-
-i,j
-\begin_inset Quotes erd
-\end_inset
-
- is a subscript—use grep -n.)
-\end_layout
-
-\begin_layout Itemize
-Reduce occurences of 
-\begin_inset Quotes eld
-\end_inset
-
-SageMath SageCell
-\begin_inset Quotes erd
-\end_inset
-
- to just 
-\begin_inset Quotes eld
-\end_inset
-
-SageCell
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Use 
-\backslash
-Vert instead of ||
-\end_layout
-
-\begin_layout Itemize
-Use 
-\begin_inset Quotes eld
-\end_inset
-
-denoted
-\begin_inset Quotes erd
-\end_inset
-
- instead of 
-\begin_inset Quotes eld
-\end_inset
-
-denoted by
-\begin_inset Quotes erd
-\end_inset
-
- (remove the 
-\begin_inset Quotes eld
-\end_inset
-
-by
-\begin_inset Quotes erd
-\end_inset
-
-)
-\end_layout
-
+\end_deeper
 \end_inset
 
 

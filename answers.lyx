@@ -1249,26 +1249,6 @@ name "ans:inverses-5"
 
 \end_layout
 
-\begin_layout Description
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:inverses-10"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-: 
-\begin_inset CommandInset label
-LatexCommand label
-name "ans:inverses-6"
-
-\end_inset
-
-(a) false (b) false (c) false (d) false (e) true (f) false (g) true
-\end_layout
-
 \begin_layout Section*
 Section 
 \begin_inset CommandInset ref
@@ -4749,6 +4729,26 @@ noprefix "false"
 \end_inset
 
  part (xi)]
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:square-characterization-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "ans:square-characterization-4"
+
+\end_inset
+
+(a) false (b) false (c) false (d) false (e) true (f) false (g) true
 \end_layout
 
 \begin_layout Section*

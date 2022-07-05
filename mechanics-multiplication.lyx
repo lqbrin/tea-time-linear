@@ -2989,7 +2989,7 @@ True or false? For any column vectors
 \begin_inset Formula $\mathbf{w}$
 \end_inset
 
- with the same number of entries each,
+ with the same number of entries in each,
 \begin_inset ERT
 status open
 

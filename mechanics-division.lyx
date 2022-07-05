@@ -147,10 +147,9 @@ Hello World!
 
 , a system for converting letters and symbols to numbers can be used to
  turn the message into a list of numbers.
- These numbers can then be grouped into column vectors and multiplied by
- an encoding matrix.
- Ungrouping the products gives a new list of numbers, an encoded message!
- The following list of numbers was created this way.
+ These numbers can be further disguised by multiplying by an encoding matrix,
+ giving a new list of numbers, an secret message! The following list of
+ numbers was created this way.
 \end_layout
 
 \begin_layout Standard
@@ -164,7 +163,8 @@ Hello World!
 
 \begin_layout Standard
 \noindent
-Learning how to decode a message like this is the topic of this section.
+Can you decode it? Learning how to decode a message like this is the topic
+ of this section.
 \end_layout
 
 \begin_layout Standard
@@ -2304,77 +2304,6 @@ True or false? If all the entries in a square matrix
  are integers.
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:inverses-10"
-
-\end_inset
-
-When the determinant of an 
-\begin_inset Formula $n\times n$
-\end_inset
-
- matrix is zero, (select all that apply)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hasananswer
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "ans:inverses-6"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-exactly one row is a linear combination of the others.
-\end_layout
-
-\begin_layout Enumerate
-every row is a linear combination of the others.
-\end_layout
-
-\begin_layout Enumerate
-each row after the first one is a linear combination of the rows above it.
-\end_layout
-
-\begin_layout Enumerate
-any linear combination of the 
-\begin_inset Formula $n$
-\end_inset
-
- rows sums to zero.
-\end_layout
-
-\begin_layout Enumerate
-at least one row is a linear combination of the others.
-\end_layout
-
-\begin_layout Enumerate
-its inverse is the zero matrix.
-\end_layout
-
-\begin_layout Enumerate
-it has no inverse.
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
 Explain how the determinant can help determine whether a matrix has an inverse.
 \end_layout

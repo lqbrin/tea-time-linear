@@ -2589,7 +2589,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $d(\mathbf{u}+\mathbf{w},\mathbf{v})=1$
+\begin_inset Formula $d(\mathbf{v}+\mathbf{w},\mathbf{u})=1$
 \end_inset
 
 
@@ -2601,7 +2601,7 @@ HINT: Make a sketch.
 
 \end_deeper
 \begin_layout Enumerate
-What conditions on 
+What conditions on a column vector 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -2617,7 +2617,7 @@ Give an example of a
 \begin_inset Formula $5\times1$
 \end_inset
 
- vector 
+ column vector 
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
@@ -2625,7 +2625,7 @@ Give an example of a
 \begin_inset Formula $2\times1$
 \end_inset
 
- vector 
+ column vector 
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
