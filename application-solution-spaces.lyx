@@ -821,26 +821,7 @@ Thinking of matrix-vector multiplication as taking a linear combination
 \begin_inset Formula $(EM)\mathbf{v}=\mathbf{0}$
 \end_inset
 
-, a given set of columns of 
-\begin_inset Formula $M$
-\end_inset
-
- is linearly dependent if and only if the corresponding set of columns of
- 
-\begin_inset Formula $EM$
-\end_inset
-
- is linearly dependent.
- More precisely, the exact same linear combination of columns of 
-\begin_inset Formula $M$
-\end_inset
-
- that sum to zero, taken of 
-\begin_inset Formula $EM$
-\end_inset
-
- instead, will also sum to zero.
- Equivalently, a certain set of columns of 
+, a certain set of columns of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -850,6 +831,15 @@ Thinking of matrix-vector multiplication as taking a linear combination
 \end_inset
 
  is linearly independent.
+ More precisely, the exact same linear combination of columns of 
+\begin_inset Formula $M$
+\end_inset
+
+ that sums to zero, taken of 
+\begin_inset Formula $EM$
+\end_inset
+
+ instead, will also sum to zero.
  
 \series bold
 Row operations do not affect the linear dependence relationships among the
@@ -4122,11 +4112,11 @@ Suppose
 
 \begin_layout Enumerate
 Conclude that the rank of 
-\begin_inset Formula $M$
+\begin_inset Formula $MP$
 \end_inset
 
  equals the rank of 
-\begin_inset Formula $MP$
+\begin_inset Formula $M$
 \end_inset
 
 .
@@ -4227,11 +4217,11 @@ Suppose
 
 \begin_layout Enumerate
 Conclude that the nullity of 
-\begin_inset Formula $M$
+\begin_inset Formula $QM$
 \end_inset
 
  equals the nullity of 
-\begin_inset Formula $QM$
+\begin_inset Formula $M$
 \end_inset
 
 .

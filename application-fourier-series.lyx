@@ -620,7 +620,7 @@ Vectors in
 \end_inset
 
  are continuous functions, so a basis for any subspace will have to be a
- collection of functions which are continuous on 
+ collection of functions that are continuous on 
 \begin_inset Formula $[0,L]$
 \end_inset
 
@@ -628,7 +628,7 @@ Vectors in
  As suggested by their use earlier, collections of trigonometric functions
  provide convenient bases.
  For all 
-\begin_inset Formula $m=1,2,\ldots$
+\begin_inset Formula $m=0,1,2,\ldots$
 \end_inset
 
  and all 
@@ -750,27 +750,6 @@ plural "false"
 caps "false"
 noprefix "false"
 
-\end_inset
-
-.
- Additionally, when 
-\begin_inset Formula $m=0$
-\end_inset
-
-, the function 
-\begin_inset Formula $\cos\left(\frac{m\pi}{L}t\right)=1$
-\end_inset
-
- for all 
-\begin_inset Formula $t$
-\end_inset
-
- and provides another function orthogonal to all 
-\begin_inset Formula $\cos\left(\frac{m\pi}{L}t\right)$
-\end_inset
-
-, 
-\begin_inset Formula $m>0$
 \end_inset
 
 .
@@ -1538,7 +1517,7 @@ linear algebra rules
 
 \begin_inset Formula 
 \[
-a_{0}+a_{1}\cos\left(\frac{2\pi}{L}x\right)+b_{1}\sin\left(\frac{2\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{2\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{2\pi}{L}x\right)+\cdots
+a_{0}+a_{1}\cos\left(\frac{\pi}{L}x\right)+b_{1}\sin\left(\frac{\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{\pi}{L}x\right)+\cdots
 \]
 
 \end_inset
@@ -1546,7 +1525,7 @@ a_{0}+a_{1}\cos\left(\frac{2\pi}{L}x\right)+b_{1}\sin\left(\frac{2\pi}{L}x\right
 where
 \begin_inset Formula 
 \[
-a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{2\pi}{L}t\right),\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }\quad\text{and}\quad b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{2\pi}{L}t\right),\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }
+a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{\pi}{L}t\right),\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }\quad\text{and}\quad b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }
 \]
 
 \end_inset
@@ -1571,11 +1550,11 @@ Fourier series
 \end_inset
 
  are called  Fourier coefficients and the functions 
-\begin_inset Formula $\sin\left(m\cdot\frac{2\pi}{L}x\right)$
+\begin_inset Formula $\sin\left(m\cdot\frac{\pi}{L}x\right)$
 \end_inset
 
  and 
-\begin_inset Formula $\cos\left(m\cdot\frac{2\pi}{L}x\right)$
+\begin_inset Formula $\cos\left(m\cdot\frac{\pi}{L}x\right)$
 \end_inset
 
  are called the 
@@ -1755,7 +1734,7 @@ literal "false"
  in this section as well as several others, such as boiling water and birds
  chirping.
  The audio corresponding to F1 is a simple computer tone and does not resemble
- the original audio at all except that it catures the overall pitch.
+ the original audio at all except that it captures the overall pitch.
  The sound of F74 is slightly better in that it oscillates, but in no way
  sounds like speech.
  The words can clearly be heard behind a noisy foreground in F637, but it
@@ -1817,7 +1796,7 @@ Fourier!series|textidxkey
 , the series
 \begin_inset Formula 
 \[
-a_{0}+a_{1}\cos\left(\frac{2\pi}{L}x\right)+b_{1}\sin\left(\frac{2\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{2\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{2\pi}{L}x\right)+\cdots
+a_{0}+a_{1}\cos\left(\frac{\pi}{L}x\right)+b_{1}\sin\left(\frac{\pi}{L}x\right)+a_{2}\cos\left(2\cdot\frac{\pi}{L}x\right)+b_{2}\sin\left(2\cdot\frac{\pi}{L}x\right)+\cdots
 \]
 
 \end_inset
@@ -1825,7 +1804,7 @@ a_{0}+a_{1}\cos\left(\frac{2\pi}{L}x\right)+b_{1}\sin\left(\frac{2\pi}{L}x\right
 where
 \begin_inset Formula 
 \[
-a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{2\pi}{L}t\right),\cos\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }\quad\text{and}\quad b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{2\pi}{L}t\right),\sin\left(m\cdot\frac{2\pi}{L}t\right)\right\rangle }.
+a_{m}=\frac{\left\langle f,\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \cos\left(m\cdot\frac{\pi}{L}t\right),\cos\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }\quad\text{and}\quad b_{m}=\frac{\left\langle f,\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }{\left\langle \sin\left(m\cdot\frac{\pi}{L}t\right),\sin\left(m\cdot\frac{\pi}{L}t\right)\right\rangle }.
 \]
 
 \end_inset
@@ -1984,14 +1963,6 @@ harmonic|textidxkey
 \end_inset
 
  the functions 
-\begin_inset Formula $\cos\left(m\cdot\frac{2\pi}{L}t\right)$
-\end_inset
-
-, 
-\begin_inset Formula $\sin\left(m\cdot\frac{2\pi}{L}x\right)$
-\end_inset
-
-, 
 \begin_inset Formula $\cos\left(m\cdot\frac{\pi}{L}t\right)$
 \end_inset
 
@@ -2560,7 +2531,21 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula $f(x)=|x|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $f(x)=e^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle f(x)=\frac{|x|}{x}}$
 \end_inset
 
 
@@ -2603,7 +2588,8 @@ noprefix "false"
 
 \end_inset
 
- with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero terms.
+ with the first (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero
+ terms.
 \begin_inset ERT
 status open
 
@@ -2665,7 +2651,8 @@ noprefix "false"
 
 \end_inset
 
- with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero terms.
+ with the first (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero
+ terms.
 \begin_inset ERT
 status open
 
@@ -2727,7 +2714,8 @@ noprefix "false"
 
 \end_inset
 
- with (i) 1 nonzero term; (ii) 2 nonzero terms; and (iii) 5 nonzero terms.
+ with the first (i) 1 nonzero term; (ii) 3 nonzero terms; and (iii) 5 nonzero
+ terms.
 \begin_inset ERT
 status open
 
@@ -2867,7 +2855,7 @@ on
 \end_inset
 
 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
  
@@ -2888,7 +2876,7 @@ For any function
 \end_inset
 
  in 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
 , 
@@ -3023,7 +3011,7 @@ For any
 \end_inset
 
  in 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
 , 
@@ -3039,7 +3027,7 @@ For any
 \end_inset
 
  in 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
 , 
@@ -3056,7 +3044,7 @@ For any
 \end_inset
 
  in 
-\begin_inset Formula $V_{[0,L]}$
+\begin_inset Formula $C\left([0,L]\right)$
 \end_inset
 
  and any scalar 

@@ -625,6 +625,27 @@ With this in mind, we have to address the questions of (i) how to project
  that projection is always the nearest point/vector within the subspace.
  A lot of this work has already been done, but there is a bit more to do
  now.
+ Question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:orthogonalization-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Orthogonalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ provides a good backdrop for this conversation.
 \end_layout
 
 \begin_layout Standard

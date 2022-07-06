@@ -293,9 +293,9 @@ Let's say the owner of this vehicle is planning a trip from New Haven, CT
 
 \begin_layout Standard
 For this application, that is probably good enough.
- However, we can do (slightly) better using linear regression.
+ However, we can do slightly better using linear regression.
  We know that fuel consumed is (roughly) directly proportional to miles
- driven, so they are (approximately) related by a function of the form 
+ driven, so they are related by a function of the form 
 \begin_inset Formula $y=kx$
 \end_inset
 
@@ -315,11 +315,11 @@ For this application, that is probably good enough.
 \end_inset
 
  is the fuel required.
- The estimate above produces the model 
+ The simple average calculated above produces the model 
 \begin_inset Formula $f(x)=0.0286996x$
 \end_inset
 
-, but what is the best value for 
+, but is this the best value for 
 \begin_inset Formula $k$
 \end_inset
 
@@ -403,7 +403,7 @@ best approximation
 
 \end_inset
 
- (see theorem 
+ (see corollary 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "thm:best-approximation-linear-system"
@@ -666,23 +666,85 @@ The graph of diesel price over time does not indicate a steady decline,
 \end_inset
 
 ) to capture the fluctuation.
- Linear regression only approximates parameters that vary linearly with
- respect to the response, though.
- Since 
+ However, linear regression only approximates parameters that vary linearly
+ with respect to the response and 
+\begin_inset Formula $f(t)=p_{0}+rt+\alpha\sin(\omega t)+\beta\cos(\omega t)$
+\end_inset
+
+ does not vary linearly with respect to its parameters.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{digression}{Linear Variation}
+\end_layout
+
+\end_inset
+
+If the value of a function for each set of fixed inputs is a linear combination
+ of its parameters, we say the function varies linearly with respect to
+ its parameters or is linear in its parameters.
+ Otherwise the function is nonlinear in its parameters.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{digression}
+\end_layout
+
+\end_inset
+
+ For example, 
+\begin_inset Formula $f(1)=p_{0}+r+\alpha\sin(\omega)+\beta\cos(\omega)$
+\end_inset
+
+ is not a linear combination of 
+\begin_inset Formula $p_{0},r,\alpha,\beta$
+\end_inset
+
+, and 
 \begin_inset Formula $\omega$
 \end_inset
 
- and 
-\begin_inset Formula $f$
+.
+ It does not take the form 
+\begin_inset Formula $a_{0}p_{0}+a_{1}r+a_{2}\alpha+a_{3}\beta+a_{4}\omega$
 \end_inset
 
- are not linearly related, the value 
+.
+ However, after fixing 
 \begin_inset Formula $\omega=\frac{2\pi}{5\times365}$
 \end_inset
 
- will be assumed.
- This value of 
+, 
 \begin_inset Formula $\omega$
+\end_inset
+
+ is no longer a parameter and 
+\begin_inset Formula $f(1)=p_{0}+r+\sin\left(\frac{2\pi}{5\times365}\right)\cdot\alpha+\cos\left(\frac{2\pi}{5\times365}\right)\cdot\beta$
+\end_inset
+
+ is a linear combination of its parameters 
+\begin_inset Formula $p_{0},r,\alpha,\beta$
+\end_inset
+
+, and 
+\begin_inset Formula $f$
+\end_inset
+
+ is so for every other value of 
+\begin_inset Formula $t$
+\end_inset
+
+ too.
+ Setting the value 
+\begin_inset Formula $\omega=\frac{2\pi}{5\times365}$
 \end_inset
 
  gives the sine and cosine functions a 
@@ -1101,7 +1163,7 @@ Letting
 \begin_inset Formula $\hat{\mathbf{v}}$
 \end_inset
 
- is a best approximation of 
+ is a best approximation to a solution of 
 \begin_inset Formula $M\mathbf{v}=\mathbf{b}$
 \end_inset
 
@@ -1887,7 +1949,11 @@ noprefix "false"
 \begin_inset Formula $F(m,\theta)=\mu mg\cos\theta$
 \end_inset
 
- [Frictional Force]
+ [Frictional Force] where 
+\begin_inset Formula $g$
+\end_inset
+
+ is a gravitational constant, not a parameter.
 \end_layout
 
 \begin_layout Enumerate
@@ -2248,7 +2314,7 @@ name "exc:linear-regression-2"
 
 \end_inset
 
-Use orthogonal projection to find the best fit of the model to the data.
+Use normal equations to find the best fit of the model to the data.
 \end_layout
 
 \begin_deeper
@@ -5255,7 +5321,7 @@ name "exc:linear-regression-3"
 
 \end_inset
 
-Redo question 
+Redo questions 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "exc:linear-regression-2"
@@ -5265,7 +5331,7 @@ noprefix "false"
 
 \end_inset
 
- using normal equations instead.
+abdef using orthogonal projection instead.
 \begin_inset ERT
 status open
 
@@ -5388,22 +5454,15 @@ name "exc:linear-regression-7"
 \end_inset
 
 Fitting an exponential function.
- Many physical quantities (
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
-) are related exponentially, making 
+ Many physical quantities are related exponentially, making 
 \begin_inset Formula $y(t)=ae^{kt}$
 \end_inset
 
  a common model in science.
  Unfortunately this model is not linear in its parameters, making linear
  regression impossible directly.
- By taking the natural log of both sides of the formula, the model becomes
+ By taking the natural log of both sides of the formula, however, the model
+ becomes
 \begin_inset Formula 
 \[
 \ln(y(t))=\ln(a)+kt

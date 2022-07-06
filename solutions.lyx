@@ -13277,8 +13277,8 @@ By definition, two vectors are orthogonal if their inner product is zero.
  Calculating,
 \begin_inset Formula 
 \begin{align*}
-\left\langle \mathbf{u},\mathbf{v}\right\rangle  & =\frac{1}{2\pi}\int_{0}^{2\pi}\mathbf{u}(x)\mathbf{v}(x)\,dx=\frac{1}{2\pi}\int_{0}^{2\pi}(\sin x)(\cos x)\,dx=-\frac{1}{4\pi}\left[\cos^{2}x\right]_{0}^{2\pi}\\
- & =-\frac{1}{4\pi}\left[\cos^{2}(2\pi)-\cos^{2}(0)\right]=-\frac{1}{4\pi}\left[1-1\right]=0
+\left\langle \mathbf{u},\mathbf{v}\right\rangle  & =\frac{1}{\pi}\int_{0}^{2\pi}\mathbf{u}(x)\mathbf{v}(x)\,dx=\frac{1}{\pi}\int_{0}^{2\pi}(\sin x)(\cos x)\,dx=-\frac{1}{2\pi}\left[\cos^{2}x\right]_{0}^{2\pi}\\
+ & =-\frac{1}{2\pi}\left[\cos^{2}(2\pi)-\cos^{2}(0)\right]=-\frac{1}{2\pi}\left[1-1\right]=0
 \end{align*}
 
 \end_inset
@@ -20278,6 +20278,408 @@ status collapsed
 
 
 \backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxlUstugzAQvEfKP1jpBVeUYswrrXqq1J64tLlF
+qeQQO0UCOzUG-fNr8wohJ8a765mdMRq8gZbmSkhnj9PtM_J9300j1IMgjJMehQjhAUVB1KM4xuOFNBm6
+CAWhRQe4XjE9I0eGwTTcJxz17C6Kk66CUtx9Emz0sIt8vDWHFFuKiyy4cjafRUs5OBFFXjZTVU-IafgK
+emhqD-BDyKrgZ6B-KchF2VS8BoINR8pYkReUK1ARJQvtgmy90nlzpKfZuuoHAyYkUKDgQNtVdP3XELkY
+ChZDgtObvr_oZ6bbyzqpi1wzDj3SnCva-bnCQWtW6Ra8JpKZIEbP2a37d1LmTUnUNYGl5TEMbnIiJaBG
+TBWC12a_nd0w85QkvL6ImjrwMbPl412ZaSv2Lcp2FLqna-2tXTa5MDzQk5IyB3r9wzgh7Mf2rBREORJ2
+iUmbWHuY7H7Rs6R1bVjndurZ39DCfySo2CQ=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ is (with whitespace changes only)
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+[    1     389/1000      151321/1000000        58863869/1000000000]
+\begin_inset Newline newline
+\end_inset
+
+[    1     851/1000      724201/1000000       616295051/1000000000]
+\begin_inset Newline newline
+\end_inset
+
+[    1    2467/1000     6086089/1000000     15014381563/1000000000]
+\begin_inset Newline newline
+\end_inset
+
+[    1    4113/1000    16916769/1000000     69578670897/1000000000]
+\begin_inset Newline newline
+\end_inset
+
+[    1       181/40          32761/1600              5929741/64000]
+\begin_inset Newline newline
+\end_inset
+
+[    1    6639/1000    44076321/1000000    292622695119/1000000000]
+\begin_inset Newline newline
+\end_inset
+
+[    1    8873/1000    78730129/1000000    698572434617/1000000000]
+\begin_inset Newline newline
+\end_inset
+
+[    1       281/25           78961/625             22188041/15625]
+\end_layout
+
+\begin_layout Standard
+The code proceeds to calculate the normal equations 
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
+\end_inset
+
+ and solve for 
+\begin_inset Formula $\hat{\mathbf{v}}$
+\end_inset
+
+, the regression coefficients:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+\beta_{0} & \beta_{1} & \beta_{2} & \beta_{3}\end{array}\right]=\left[\begin{array}{cccc}
+121.697796 & -65.6594829 & 10.8873569 & 0.744289915\end{array}\right]^{T}
+\]
+
+\end_inset
+
+Hence the best fit model is 
+\begin_inset Formula 
+\[
+f(x)=0.744289915x^{3}+10.8873569x^{2}-65.6594829x+121.697796.
+\]
+
+\end_inset
+
+A plot of 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ superimposed on a scatterplot of the data is shown below, demonstrating
+ geometrically the goodness of fit.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/regression-08.pdf
+	lyxscale 33
+	width 5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note: Unlike with the method of projection, it is not critical that the
+ data are entered exactly nor that the computation is done using exact arithmeti
+c.
+ Replacing the first two lines of the code by
+\end_layout
+
+\begin_layout LyX-Code
+x = vector([.389,.851,2.467,4.113,4.525,6.639,8.873,11.24])
+\begin_inset Newline newline
+\end_inset
+
+fx = vector([141.1,-35.51,167.1,18.3,173,243,1039,1783]) 
+\end_layout
+
+\begin_layout Standard
+(leaving the rest untouched) and running the code results in nearly the
+ same solution.
+ It will differ slightly due to roundoff, but it is successful! Besides
+ the simplicity of this method as compared to projection, being able to
+ do the calculation using decimal approximations (floating point) is necessary
+ for efficient computer implementation.
+ Most programming languages do not provide exact computation, and those
+ that do (like SageMath) are much slower.
+ It is impractical to require exact arithmetic.
+ Try it for yourself at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJxlUjlvwyAU3iPlP6B0MRVFwXdadarUTl7ablEq
+EQdSJBtSjC1-fp_jHI6zmMe7vgN79Io6UTpjgzWN8hWhecJISOM0IzFlLIJvEiYkpWm0IjnNs4gwRsN4
+g-cz6UfTLGaUkacoobCApRlcWE6hGybCGM4lLGBZHvWTB6u0CxYfqhMa7bjjz4tL1l8i6fELGkLIPaB3
+Y2ul98j9ClSaqq11g4w8XYWUqlRCO1RzZ5UnqJjPfNluxW7E0v1ESBqLHFIa-Z6Kb_5abidN4aTJaHFT
+X07qBVQH2CAnjEA7przd1-Ko5xqesEaZI8GrIwUYcdZc3Kp_41XZVtxdHZhKPpuhwSdeIQFgThndAL_v
+nmFBneW6OZhGBPix6NPbu7T0PdiXqboz0P26rp_6Li4qYA-m1goZYDo8TBDjoW0tK8NdYPHRMds71m0u
+cj_F3oqmga1jOc3ob-jwPyOg0Iw=&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-regression-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-regression-2"
+
+\end_inset
+
+The coefficient matrix and constant vector for the linear regression problem
+ are
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{ccc}
+x_{1}^{2} & x_{1}t_{1} & t_{1}^{2}\\
+x_{2}^{2} & x_{2}t_{1} & t_{2}^{2}\\
+\vdots & \vdots & \vdots\\
+x_{4}^{2} & x_{4}t_{4} & t_{4}^{2}
+\end{array}\right]\text{ and }\mathbf{b}=\left[\begin{array}{c}
+-1.36\\
+8.17\\
+\vdots\\
+50
+\end{array}\right].
+\]
+
+\end_inset
+
+According to the code at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJx1UrFy2zAM3X3nf-Ali6gwjijJqpxcpty1k5Y2
+m08D61AOXZlMKFinzy9IxpLcpFwAPgAP4AMH8kh6uQNjo23O73iSJCxLiuDw5JtzGN-kztZ0uYBZfpGO
+eTzkrbNgi-yc_weGWcUtz3wJK3lgLtYbb1Pfm5V5gMuy_CByYZaVjJfe4xuWblhe-OyU596EUFawtW_5
+ZpWG6OqH6qUmLwLE_dWIDqMHo4cj0gcSfASvyXdjj0rvCbxKsjPt6ag7YpqPq2watVNSAzkKsGpgpFou
+hu599kp-l9YxL5BrgC9h-E96YyxRRGlihd7LKKf3ywXB4_DDF7g7Sr8gl4rzm8ME4jxbDNQYGbaHOo7T
+WQwuQnirpyBMhS7gCyu8hLdGvGCcITldidP-KJ2gMPlYPMn_FJS6EAoXcRa6upT8SbS7Uytgkv1fnc8b
+0Lgc0RL5fsJsozuc79lNWK0A1eneTCcjGlcO_v0JxlW7br9M2587febrXdlzNT4LiejKWtlEdBW-Q5TR
+kLZtWiMgstSvyLoV9fUowU-5t7LrkHX-nm72HXv6F5qY_9A=&lang=sage&interacts=eJyLjgUAARU
+AuQ==}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ is
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+[1681/1000000 12833/500000 97969/250000]
+\begin_inset Newline newline
+\end_inset
+
+[23409/250000 47889/250000 97969/250000]
+\begin_inset Newline newline
+\end_inset
+
+[ 11449/10000  33491/50000 97969/250000]
+\begin_inset Newline newline
+\end_inset
+
+[    2304/625    3756/3125 97969/250000]
+\begin_inset Newline newline
+\end_inset
+
+[1681/1000000  4141/100000  10201/10000]
+\begin_inset Newline newline
+\end_inset
+
+[23409/250000  15453/50000  10201/10000]
+\begin_inset Newline newline
+\end_inset
+
+[ 11449/10000  10807/10000  10201/10000]
+\begin_inset Newline newline
+\end_inset
+
+[    2304/625     1212/625  10201/10000]
+\begin_inset Newline newline
+\end_inset
+
+[1681/1000000  6273/100000  23409/10000]
+\begin_inset Newline newline
+\end_inset
+
+[23409/250000  23409/50000  23409/10000]
+\begin_inset Newline newline
+\end_inset
+
+[ 11449/10000  16371/10000  23409/10000]
+\begin_inset Newline newline
+\end_inset
+
+[    2304/625     1836/625  23409/10000]
+\begin_inset Newline newline
+\end_inset
+
+[1681/1000000  6683/100000  26569/10000]
+\begin_inset Newline newline
+\end_inset
+
+[23409/250000  24939/50000  26569/10000]
+\begin_inset Newline newline
+\end_inset
+
+[ 11449/10000  17441/10000  26569/10000]
+\begin_inset Newline newline
+\end_inset
+
+[    2304/625     1956/625  26569/10000]
+\end_layout
+
+\begin_layout Standard
+The code proceeds to calculate the normal equations 
+\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
+\end_inset
+
+ and solve for 
+\begin_inset Formula $\hat{\mathbf{v}}$
+\end_inset
+
+, the regression coefficients:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+\beta_{0} & \beta_{1} & \beta_{2}\end{array}\right]=\left[\begin{array}{ccc}
+4.88443881609 & 3.4469959515 & 8.28520093268\end{array}\right]^{T}
+\]
+
+\end_inset
+
+Hence the best fit model is 
+\begin_inset Formula 
+\[
+f(x)=4.88443881609x^{2}+3.4469959515xt+8.28520093268t^{2}.
+\]
+
+\end_inset
+
+Note: Unlike with the method of projection, it is not critical that the
+ data are entered exactly nor that the computation is done using exact arithmeti
+c.
+ Replacing the first three lines of the code by
+\end_layout
+
+\begin_layout LyX-Code
+x = vector([.041,.306,1.07,1.92])
+\begin_inset Newline newline
+\end_inset
+
+t = vector([.626,1.01,1.53,1.63])
+\begin_inset Newline newline
+\end_inset
+
+ktx = vector([-1.36,8.17,6.59,24.1,8.47,8.88,16.9,38,18.9,
+\begin_inset Newline newline
+\end_inset
+
+              19,29,46.1,21.4,28.9,36,50]) 
+\end_layout
+
+\begin_layout Standard
+(leaving the rest untouched) and running the code results in nearly the
+ same solution.
+ It will differ slightly due to roundoff, but it is successful! Besides
+ the simplicity of this method as compared to projection, being able to
+ do the calculation using decimal approximations (floating point) is necessary
+ for efficient computer implementation.
+ Most programming languages do not provide exact computation, and those
+ that do (like SageMath) are much slower.
+ It is impractical to require exact arithmetic.
+ Try it for yourself at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sagecell{https://sagecell.sagemath.org/?z=eJx1UjtTwzAM3nvX_-CDJQ7G1EmaPjgm7mDKAmy9
+DKY4xSW1i6Pm8vORG5qkPDzI0qeHpU9uyB2p1RqsC1Z8kgjG40nKBJ_MUCyinI5HMAxJo6NXoJjGKNLY
+h3xAMwi6FjxO2ZyLGUv5dMGihAs0kxmK-ZyJlC9YjPccb4HuBUtSjIgET1jkQcyeTnzdvdMGgotHXStD
+3iTI5UWHNp0GnYZ90FvS6ghekgfrdtpsCLwrsrblYWcqYotvUxWFXmtlgOwkON0wko1HTfU5GEXcRHko
+UqzVwJ8w_BNeWEc00YY4aTYqSOhyPCJ4PL79A_dHmzespcPkatuD2M8KHTl6mtU2D8No4IMzF1p574Q-
+0TuOiRka7ayBwD0yLE65PGx2yhMKvY7JPf33LVNnROEiTkRn55Tfy3J9KCX0tP_k-bQBg8uRJVGfB4y2
+psL-XnyHGQdkp9rbSgU0zDz8-gvGVfvXnm1Zn176Xa_2aS9ZNxYWotw5VQSUt98hiGkbtipKKyFw9Lgi
+51dU5x0FT2rjVFVh1eE81eA71vQLeAL1ug==&lang=sage&interacts=eJyLjgUAARUAuQ==}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:linear-regression-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a: 
+\begin_inset CommandInset label
+LatexCommand label
+name "sol:linear-regression-3"
+
+\end_inset
+
+The coefficient matrix and constant vector for the linear regression problem
+ are
+\begin_inset Formula 
+\[
+M=\left[\begin{array}{cccc}
+1 & x_{1} & x_{1}^{2} & x_{1}^{3}\\
+1 & x_{2} & x_{2}^{2} & x_{2}^{3}\\
+\vdots & \vdots & \vdots & \vdots\\
+1 & x_{8} & x_{8}^{2} & x_{8}^{3}
+\end{array}\right]\text{ and }\mathbf{b}=\left[\begin{array}{c}
+141.1\\
+-35.51\\
+\vdots\\
+1783
+\end{array}\right].
+\]
+
+\end_inset
+
+According to the code at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
 sagecell{https://sagecell.sagemath.org/?z=eJx9U02P0zAQvVfqfxgtlxiy3ThO2yyIK5wiENfV
 Ipms0w1q7GI7H_DrGcdJ18kiDtaM35u8-ch4gI_QidIqHT2w_P6OJkkS53vqnTQ7HL2XUcomb5_uvXc4
 sPmD_DixlKaZ8x7JdlMNgThFBSTiW7b36jE9HEeE5mw0R4b5WEwTdo-XnDmJi66ljW4-152Q8MQtf39z
@@ -20470,17 +20872,17 @@ acts=eJyLjgUAARUAuQ==}
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "exc:linear-regression-17"
+reference "exc:linear-regression-3"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-: 
+e: 
 \begin_inset CommandInset label
 LatexCommand label
-name "sol:linear-regression-2"
+name "sol:linear-regression-4"
 
 \end_inset
 
@@ -20711,408 +21113,6 @@ jRU7g9EUo2rRRziBJ4h65qTm5DmqeVhxID_u88WQL275_3hF8Iqw4gg9v1qzwysM7RrtzaBnd8g38tL5
 AXlYObyz2xqPF3SQu0PjgMZhxdEJ25Y1OuT_cVu7VzrI3Ya1j63Ym9xHlpzelA1vKrSXkeF1XFpeVRSc
 gVpCeXQetKnR3FcScnC_nZflKUuofchtXkovraNQjUfVSen2XYRshFkri4i0isbkzLrTUJV1Z_0ut1Y6
 F87a-_Nc74euyF-ErFMT&lang=sage&interacts=eJyLjgUAARUAuQ==}
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Description
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:linear-regression-3"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-a: 
-\begin_inset CommandInset label
-LatexCommand label
-name "sol:linear-regression-3"
-
-\end_inset
-
-The coefficient matrix and constant vector for the linear regression problem
- are
-\begin_inset Formula 
-\[
-M=\left[\begin{array}{cccc}
-1 & x_{1} & x_{1}^{2} & x_{1}^{3}\\
-1 & x_{2} & x_{2}^{2} & x_{2}^{3}\\
-\vdots & \vdots & \vdots & \vdots\\
-1 & x_{8} & x_{8}^{2} & x_{8}^{3}
-\end{array}\right]\text{ and }\mathbf{b}=\left[\begin{array}{c}
-141.1\\
--35.51\\
-\vdots\\
-1783
-\end{array}\right].
-\]
-
-\end_inset
-
-According to the code at 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-sagecell{https://sagecell.sagemath.org/?z=eJxlUstugzAQvEfKP1jpBVeUYswrrXqq1J64tLlF
-qeQQO0UCOzUG-fNr8wohJ8a765mdMRq8gZbmSkhnj9PtM_J9300j1IMgjJMehQjhAUVB1KM4xuOFNBm6
-CAWhRQe4XjE9I0eGwTTcJxz17C6Kk66CUtx9Emz0sIt8vDWHFFuKiyy4cjafRUs5OBFFXjZTVU-IafgK
-emhqD-BDyKrgZ6B-KchF2VS8BoINR8pYkReUK1ARJQvtgmy90nlzpKfZuuoHAyYkUKDgQNtVdP3XELkY
-ChZDgtObvr_oZ6bbyzqpi1wzDj3SnCva-bnCQWtW6Ra8JpKZIEbP2a37d1LmTUnUNYGl5TEMbnIiJaBG
-TBWC12a_nd0w85QkvL6ImjrwMbPl412ZaSv2Lcp2FLqna-2tXTa5MDzQk5IyB3r9wzgh7Mf2rBREORJ2
-iUmbWHuY7H7Rs6R1bVjndurZ39DCfySo2CQ=&lang=sage&interacts=eJyLjgUAARUAuQ==}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $M$
-\end_inset
-
- is (with whitespace changes only)
-\end_layout
-
-\begin_deeper
-\begin_layout LyX-Code
-[    1     389/1000      151321/1000000        58863869/1000000000]
-\begin_inset Newline newline
-\end_inset
-
-[    1     851/1000      724201/1000000       616295051/1000000000]
-\begin_inset Newline newline
-\end_inset
-
-[    1    2467/1000     6086089/1000000     15014381563/1000000000]
-\begin_inset Newline newline
-\end_inset
-
-[    1    4113/1000    16916769/1000000     69578670897/1000000000]
-\begin_inset Newline newline
-\end_inset
-
-[    1       181/40          32761/1600              5929741/64000]
-\begin_inset Newline newline
-\end_inset
-
-[    1    6639/1000    44076321/1000000    292622695119/1000000000]
-\begin_inset Newline newline
-\end_inset
-
-[    1    8873/1000    78730129/1000000    698572434617/1000000000]
-\begin_inset Newline newline
-\end_inset
-
-[    1       281/25           78961/625             22188041/15625]
-\end_layout
-
-\begin_layout Standard
-The code proceeds to calculate the normal equations 
-\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
-\end_inset
-
- and solve for 
-\begin_inset Formula $\hat{\mathbf{v}}$
-\end_inset
-
-, the regression coefficients:
-\begin_inset Formula 
-\[
-\left[\begin{array}{cccc}
-\beta_{0} & \beta_{1} & \beta_{2} & \beta_{3}\end{array}\right]=\left[\begin{array}{cccc}
-121.697796 & -65.6594829 & 10.8873569 & 0.744289915\end{array}\right]^{T}
-\]
-
-\end_inset
-
-Hence the best fit model is 
-\begin_inset Formula 
-\[
-f(x)=0.744289915x^{3}+10.8873569x^{2}-65.6594829x+121.697796.
-\]
-
-\end_inset
-
-A plot of 
-\begin_inset Formula $f(x)$
-\end_inset
-
- superimposed on a scatterplot of the data is shown below, demonstrating
- geometrically the goodness of fit.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figures/regression-08.pdf
-	lyxscale 33
-	width 5in
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Note: Unlike with the method of projection, it is not critical that the
- data are entered exactly nor that the computation is done using exact arithmeti
-c.
- Replacing the first two lines of the code by
-\end_layout
-
-\begin_layout LyX-Code
-x = vector([.389,.851,2.467,4.113,4.525,6.639,8.873,11.24])
-\begin_inset Newline newline
-\end_inset
-
-fx = vector([141.1,-35.51,167.1,18.3,173,243,1039,1783]) 
-\end_layout
-
-\begin_layout Standard
-(leaving the rest untouched) and running the code results in nearly the
- same solution.
- It will differ slightly due to roundoff, but it is successful! Besides
- the simplicity of this method as compared to projection, being able to
- do the calculation using decimal approximations (floating point) is necessary
- for efficient computer implementation.
- Most programming languages do not provide exact computation, and those
- that do (like SageMath) are much slower.
- It is impractical to require exact arithmetic.
- Try it for yourself at 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-sagecell{https://sagecell.sagemath.org/?z=eJxlUjlvwyAU3iPlP6B0MRVFwXdadarUTl7ablEq
-EQdSJBtSjC1-fp_jHI6zmMe7vgN79Io6UTpjgzWN8hWhecJISOM0IzFlLIJvEiYkpWm0IjnNs4gwRsN4
-g-cz6UfTLGaUkacoobCApRlcWE6hGybCGM4lLGBZHvWTB6u0CxYfqhMa7bjjz4tL1l8i6fELGkLIPaB3
-Y2ul98j9ClSaqq11g4w8XYWUqlRCO1RzZ5UnqJjPfNluxW7E0v1ESBqLHFIa-Z6Kb_5abidN4aTJaHFT
-X07qBVQH2CAnjEA7przd1-Ko5xqesEaZI8GrIwUYcdZc3Kp_41XZVtxdHZhKPpuhwSdeIQFgThndAL_v
-nmFBneW6OZhGBPix6NPbu7T0PdiXqboz0P26rp_6Li4qYA-m1goZYDo8TBDjoW0tK8NdYPHRMds71m0u
-cj_F3oqmga1jOc3ob-jwPyOg0Iw=&lang=sage&interacts=eJyLjgUAARUAuQ==}
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Description
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "exc:linear-regression-3"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-e: 
-\begin_inset CommandInset label
-LatexCommand label
-name "sol:linear-regression-4"
-
-\end_inset
-
-The coefficient matrix and constant vector for the linear regression problem
- are
-\begin_inset Formula 
-\[
-M=\left[\begin{array}{ccc}
-x_{1}^{2} & x_{1}t_{1} & t_{1}^{2}\\
-x_{2}^{2} & x_{2}t_{1} & t_{2}^{2}\\
-\vdots & \vdots & \vdots\\
-x_{4}^{2} & x_{4}t_{4} & t_{4}^{2}
-\end{array}\right]\text{ and }\mathbf{b}=\left[\begin{array}{c}
--1.36\\
-8.17\\
-\vdots\\
-50
-\end{array}\right].
-\]
-
-\end_inset
-
-According to the code at 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-sagecell{https://sagecell.sagemath.org/?z=eJx1UrFy2zAM3X3nf-Ali6gwjijJqpxcpty1k5Y2
-m08D61AOXZlMKFinzy9IxpLcpFwAPgAP4AMH8kh6uQNjo23O73iSJCxLiuDw5JtzGN-kztZ0uYBZfpGO
-eTzkrbNgi-yc_weGWcUtz3wJK3lgLtYbb1Pfm5V5gMuy_CByYZaVjJfe4xuWblhe-OyU596EUFawtW_5
-ZpWG6OqH6qUmLwLE_dWIDqMHo4cj0gcSfASvyXdjj0rvCbxKsjPt6ag7YpqPq2watVNSAzkKsGpgpFou
-hu599kp-l9YxL5BrgC9h-E96YyxRRGlihd7LKKf3ywXB4_DDF7g7Sr8gl4rzm8ME4jxbDNQYGbaHOo7T
-WQwuQnirpyBMhS7gCyu8hLdGvGCcITldidP-KJ2gMPlYPMn_FJS6EAoXcRa6upT8SbS7Uytgkv1fnc8b
-0Lgc0RL5fsJsozuc79lNWK0A1eneTCcjGlcO_v0JxlW7br9M2587febrXdlzNT4LiejKWtlEdBW-Q5TR
-kLZtWiMgstSvyLoV9fUowU-5t7LrkHX-nm72HXv6F5qY_9A=&lang=sage&interacts=eJyLjgUAARU
-AuQ==}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $M$
-\end_inset
-
- is
-\end_layout
-
-\begin_deeper
-\begin_layout LyX-Code
-[1681/1000000 12833/500000 97969/250000]
-\begin_inset Newline newline
-\end_inset
-
-[23409/250000 47889/250000 97969/250000]
-\begin_inset Newline newline
-\end_inset
-
-[ 11449/10000  33491/50000 97969/250000]
-\begin_inset Newline newline
-\end_inset
-
-[    2304/625    3756/3125 97969/250000]
-\begin_inset Newline newline
-\end_inset
-
-[1681/1000000  4141/100000  10201/10000]
-\begin_inset Newline newline
-\end_inset
-
-[23409/250000  15453/50000  10201/10000]
-\begin_inset Newline newline
-\end_inset
-
-[ 11449/10000  10807/10000  10201/10000]
-\begin_inset Newline newline
-\end_inset
-
-[    2304/625     1212/625  10201/10000]
-\begin_inset Newline newline
-\end_inset
-
-[1681/1000000  6273/100000  23409/10000]
-\begin_inset Newline newline
-\end_inset
-
-[23409/250000  23409/50000  23409/10000]
-\begin_inset Newline newline
-\end_inset
-
-[ 11449/10000  16371/10000  23409/10000]
-\begin_inset Newline newline
-\end_inset
-
-[    2304/625     1836/625  23409/10000]
-\begin_inset Newline newline
-\end_inset
-
-[1681/1000000  6683/100000  26569/10000]
-\begin_inset Newline newline
-\end_inset
-
-[23409/250000  24939/50000  26569/10000]
-\begin_inset Newline newline
-\end_inset
-
-[ 11449/10000  17441/10000  26569/10000]
-\begin_inset Newline newline
-\end_inset
-
-[    2304/625     1956/625  26569/10000]
-\end_layout
-
-\begin_layout Standard
-The code proceeds to calculate the normal equations 
-\begin_inset Formula $M^{T}M\hat{\mathbf{v}}=M^{T}\mathbf{b}$
-\end_inset
-
- and solve for 
-\begin_inset Formula $\hat{\mathbf{v}}$
-\end_inset
-
-, the regression coefficients:
-\begin_inset Formula 
-\[
-\left[\begin{array}{ccc}
-\beta_{0} & \beta_{1} & \beta_{2}\end{array}\right]=\left[\begin{array}{ccc}
-4.88443881609 & 3.4469959515 & 8.28520093268\end{array}\right]^{T}
-\]
-
-\end_inset
-
-Hence the best fit model is 
-\begin_inset Formula 
-\[
-f(x)=4.88443881609x^{2}+3.4469959515xt+8.28520093268t^{2}.
-\]
-
-\end_inset
-
-Note: Unlike with the method of projection, it is not critical that the
- data are entered exactly nor that the computation is done using exact arithmeti
-c.
- Replacing the first three lines of the code by
-\end_layout
-
-\begin_layout LyX-Code
-x = vector([.041,.306,1.07,1.92])
-\begin_inset Newline newline
-\end_inset
-
-t = vector([.626,1.01,1.53,1.63])
-\begin_inset Newline newline
-\end_inset
-
-ktx = vector([-1.36,8.17,6.59,24.1,8.47,8.88,16.9,38,18.9,
-\begin_inset Newline newline
-\end_inset
-
-              19,29,46.1,21.4,28.9,36,50]) 
-\end_layout
-
-\begin_layout Standard
-(leaving the rest untouched) and running the code results in nearly the
- same solution.
- It will differ slightly due to roundoff, but it is successful! Besides
- the simplicity of this method as compared to projection, being able to
- do the calculation using decimal approximations (floating point) is necessary
- for efficient computer implementation.
- Most programming languages do not provide exact computation, and those
- that do (like SageMath) are much slower.
- It is impractical to require exact arithmetic.
- Try it for yourself at 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-sagecell{https://sagecell.sagemath.org/?z=eJx1UjtTwzAM3nvX_-CDJQ7G1EmaPjgm7mDKAmy9
-DKY4xSW1i6Pm8vORG5qkPDzI0qeHpU9uyB2p1RqsC1Z8kgjG40nKBJ_MUCyinI5HMAxJo6NXoJjGKNLY
-h3xAMwi6FjxO2ZyLGUv5dMGihAs0kxmK-ZyJlC9YjPccb4HuBUtSjIgET1jkQcyeTnzdvdMGgotHXStD
-3iTI5UWHNp0GnYZ90FvS6ghekgfrdtpsCLwrsrblYWcqYotvUxWFXmtlgOwkON0wko1HTfU5GEXcRHko
-UqzVwJ8w_BNeWEc00YY4aTYqSOhyPCJ4PL79A_dHmzespcPkatuD2M8KHTl6mtU2D8No4IMzF1p574Q-
-0TuOiRka7ayBwD0yLE65PGx2yhMKvY7JPf33LVNnROEiTkRn55Tfy3J9KCX0tP_k-bQBg8uRJVGfB4y2
-psL-XnyHGQdkp9rbSgU0zDz8-gvGVfvXnm1Zn176Xa_2aS9ZNxYWotw5VQSUt98hiGkbtipKKyFw9Lgi
-51dU5x0FT2rjVFVh1eE81eA71vQLeAL1ug==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_layout
 
 \end_inset

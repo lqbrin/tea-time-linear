@@ -177,13 +177,16 @@ status open
 
 \end_inset
 
- and row operations work in a similar fashion 
+ and row operations work in a similar fashion, and you can be the magician.
+ I'll pick a matrix
 \begin_inset Formula $\ldots$
 \end_inset
 
- and you can be the magician.
- I'll pick a matrix.
- Any matrix and tell you what it looks like after some operation.
+any matrix
+\begin_inset Formula $\ldots$
+\end_inset
+
+and tell you what it looks like after some operation.
  After swapping the first two rows, my matrix is
 \begin_inset Formula 
 \[
@@ -4469,7 +4472,7 @@ Use the fact that if
 \begin_inset Formula $C$
 \end_inset
 
- are identical square matrices except in one column, say the 
+ are identical square matrices except in one column, the 
 \begin_inset Formula $k^{th}$
 \end_inset
 

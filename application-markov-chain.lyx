@@ -2535,12 +2535,12 @@ name "exc:markov-chains-8"
 
 \end_inset
 
-The Leontief model for a closed economy is a Markov chain where each column
- of the transition matrix represents a sector's consumption of each commodity
- in the economy.
+The Leontief model for a closed economy is similar to a Markov chain where
+ each column of the transition matrix represents a sector's consumption
+ of each commodity as a proportion of the economy.
  Consequently the matrix is commonly called a consumption matrix rather
  than a transition matrix.
- Suppose an economy has three industries, farming, building, and clothing.
+ Suppose an economy has three industries: farming, building, and clothing.
  For every dollar of food produced, the farmers use $0.375, the builders
  use $0.35, and the tailors use $0.275.
  For every dollar of building, the builders use $0.286, the farmers use $0.214,
@@ -2574,10 +2574,9 @@ noprefix "false"
 
 \begin_deeper
 \begin_layout Enumerate
-All of the production of these three sectors is consumed by the three sectors
- themselves, thus this is a closed economy (as opposed to an open economy
- where some amount of external demand can be satisfied).
- Thus the consumption matrix has columns that sum to 1.
+Since all of the production of these three industries is consumed by the
+ three industries themselves, the consumption matrix has columns that sum
+ to 1.
  Write down the consumption matrix for this economy.
 \end_layout
 
@@ -2586,7 +2585,7 @@ A production vector
 \begin_inset Formula $\mathbf{v}$
 \end_inset
 
- represents the production of each sector in dollars.
+ represents the production of each industry in dollars.
  What does the vector 
 \begin_inset Formula $M\mathbf{v}$
 \end_inset
@@ -2681,7 +2680,7 @@ F all 12 months of the year.
  Suppose you are visiting Quito and a friend of yours claims it rains there
  one quarter of the time.
  For two months you record the weather.
- Your data suggest empirically that on a rainy day there is a 
+ Your data suggest that on a rainy day there is a 
 \begin_inset Formula $\frac{3}{14}$
 \end_inset
 
@@ -2707,19 +2706,19 @@ In a very simple gambling game, you win one dollar with probability
 \end_inset
 
  and lose one dollar with probability 
-\begin_inset Formula $\frac{4}{5}$
+\begin_inset Formula $\frac{3}{5}$
 \end_inset
 
 .
- You start with one dollar, and the games ends when you either go broke
- or win 3 dollars (have 4 dollars).
+ You start with one dollar, and the game ends when you either go broke or
+ win 3 dollars (have 4 dollars).
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 Model the playing of this game with a Markov chain.
  The states are the numbers of dollars you can have and the transition matrix
- if formed from the probabilities of going from one amount of money to another.
+ is formed from the probabilities of going from one amount of money to another.
  What is the transition matrix, 
 \begin_inset Formula $M$
 \end_inset
@@ -2762,7 +2761,7 @@ Let
 \begin_inset Formula $p$
 \end_inset
 
- be the probability of winning one dollar.
+ be the probability of winning one dollar in a round.
  What value of 
 \begin_inset Formula $p$
 \end_inset
@@ -2805,8 +2804,42 @@ How does
 \begin_inset Formula $p$
 \end_inset
 
- change if the game ends only when you either go broke or win $4 instead?
- Is the necessary probability of winning greater or less than before?
+ change if the game ends only when you either go broke or win $4 instead
+ of $3? Is the value of 
+\begin_inset Formula $p$
+\end_inset
+
+ that gives you a 
+\begin_inset Formula $50$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+%
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ chance of winning $4 within 10 rounds greater or less than before?
 \end_layout
 
 \end_deeper

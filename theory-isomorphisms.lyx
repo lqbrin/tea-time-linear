@@ -563,11 +563,7 @@ If
 \begin_inset Formula $T$
 \end_inset
 
- is an 
-\series bold
-isomorphism
-\series default
- if it is one-to-one, onto, and linear.
+ is an isomorphism if it is one-to-one, onto, and linear.
  Being one-to-one and onto assures 
 \begin_inset Quotes eld
 \end_inset

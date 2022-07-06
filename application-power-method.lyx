@@ -3613,8 +3613,8 @@ M=\left[\begin{array}{cccc}
 
 \end_inset
 
-With some preparation, the power method can be used to approximate non-dominant
- eigenpairs too! One of its eigenvalues, 
+With some preparation, however, the power method can be used to approximate
+ non-dominant eigenpairs too! One of its eigenvalues, 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -3627,7 +3627,7 @@ With some preparation, the power method can be used to approximate non-dominant
 \begin_inset Formula $20$
 \end_inset
 
- is closer to that eigenvalue than any of the others.
+ is closer to this particular eigenvalue than any of the others.
  Thus 
 \begin_inset Formula $\frac{1}{\lambda-20}$
 \end_inset

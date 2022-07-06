@@ -151,30 +151,28 @@ You have just finished chopping, slicing, mixing, blending, marinating,
 \end_layout
 
 \begin_layout Standard
-Next time you bake brownies, you might try this experiment.
- It requires an oven thermometer with a probe that can be inserted into
- the brownie mix, preferably connected to a console that sits outside the
- oven, displaying the inside temperature.
- First, gather the preheating characteristics of the oven.
- Place the probe in the empty oven approximately where you will later put
- the brownies.
+After doing the experiment once, you will know just what to do next time
+ you forget to preheat.
+ For the experiment, place a thermometer probe in the empty oven approximately
+ where you will later put the brownies.
  Note the temperature of the probe (air inside the oven) and begin preheating
  the oven.
- Likely the recipe will require a 
+ Record the thermometer reading every 30 seconds until the oven reaches
+ the target temperature (likely 
 \begin_inset Formula $350^{\circ}$
 \end_inset
 
-F or 
+F/
 \begin_inset Formula $175^{\circ}$
 \end_inset
 
-C oven.
- Record the thermometer reading every 30 seconds until the oven reaches
- the target temperature.
+C for brownies but you may want to coninue to higher temperature if you
+ are baking something else).
+ 
 \end_layout
 
 \begin_layout Standard
-Have a look at the graph of temperature versus time.
+Make a graph of temperature versus time.
  If your oven is like mine, you will get a curve that looks something like
  this.
 \begin_inset Foot
@@ -389,7 +387,23 @@ Hence the temperature of the brownies can reasonably be modeled by
 \end_layout
 
 \begin_layout Standard
-Understanding that Newton's law of cooling only applies for 
+This model looks very good for temperature differennces, 
+\begin_inset Formula $M-T$
+\end_inset
+
+, above 
+\begin_inset Formula $146^{\circ}$
+\end_inset
+
+F, but putting brownies in a cold oven requires a model for much smaller
+ temperature differences.
+ After all, the brownie mix and the unheated oven are essentially the same
+ temperature to begin, 
+\begin_inset Formula $M-T\approx0$
+\end_inset
+
+.
+ Luckily Newton's law of cooling applies for 
 \begin_inset Quotes eld
 \end_inset
 
@@ -397,8 +411,8 @@ small
 \begin_inset Quotes erd
 \end_inset
 
- temperature differences we can only conclude that for our brownies the
- 
+ temperature differences.
+ We can conclude that for our brownies the 
 \begin_inset Formula $350^{\circ}$
 \end_inset
 
@@ -411,8 +425,6 @@ small
 \end_inset
 
 .
- To understand the heating of brownies placed in a cold oven, though, we
- need a model for small temperature differences.
  Without any further data, we will assume that Newton's law of cooling applies
  at temperature differences less than 
 \begin_inset Formula $146^{\circ}$
@@ -744,8 +756,8 @@ F.
 \end_layout
 
 \begin_layout Standard
-This is neither an engineering nor math modeling class, yet the majority
- of the discussion to now has been about the modeling process.
+As fascinating as the brownie heating experiment may be, this is neither
+ an engineering nor math modeling class.
  Not to worry, the reader will not be asked to create their own models.
  Instead, focus on the results of the modeling process, equations (
 \begin_inset CommandInset ref
@@ -769,11 +781,11 @@ noprefix "false"
 
 ).
  These are discrete dynamical systems.
- The rest of the discussion has hopefuly grabbed your attention and motivated
- study.
- In case not, I should mention discrete dynamical systems are used to model
- phenomena in biology, medicine, physics, economics, engineering, and a
- host of other areas.
+ The talk about brownies and ovens has hopefuly grabbed your attention and
+ motivated study, nothing more.
+ In case not even that, I should mention discrete dynamical systems are
+ used to model phenomena in biology, medicine, physics, economics, engineering,
+ and a host of other areas.
  Chances are, if you are studying linear algebra, discrete dynamical systems
  appear in your field of study.
 \end_layout
@@ -781,7 +793,7 @@ noprefix "false"
 \begin_layout Standard
 A 
 \series bold
-first order homogeneous discrete dynamical system
+first order discrete dynamical system
 \series default
  is an equation
 \begin_inset Formula 
@@ -963,12 +975,16 @@ nonlinear discrete dynamical system
 \begin_inset Formula $\mathbf{f}$
 \end_inset
 
- is not linear.
- More precisely in this case, the system is 
+ is not a linear transformation.
+ In this case, the function 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ is 
 \series bold
 affine
 \series default
-.
+, and we would therefore say the system is affine.
  It takes the form 
 \begin_inset Formula 
 \begin{equation}
@@ -981,7 +997,8 @@ affine
 \end_layout
 
 \begin_layout Standard
-As noted in the definition, a discrete dynamical system determines a sequence.
+As noted in the definition, once an initial condition is provided, a discrete
+ dynamical system determines a sequence.
  Our first order of business is to understand how so.
  For each initial condition, the sequence defined by a discrete dynamical
  system can be calculated term-by-term.
@@ -1816,6 +1833,12 @@ It appears there are only 24 iterations (points on the graph), but that
 periodic
 \series default
 .
+ A sequence of iterates that approaches such a repeating sequence is called
+ 
+\series bold
+asymptotically periodic
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -2127,12 +2150,12 @@ spectral radius
 \end_layout
 
 \begin_layout Standard
-Much like a geometric series, which converges when the ratio is less than
- one and diverges when the ratio is greater than one, an affine system will
- approach the fixed point when the spectral radius is less than one and
- will generally tend toward infinity when the spectral radius is greater
- than one.
- The analogy ends there.
+Much like a geometric series, which converges when the ratio between consecutive
+ terms is less than one and diverges when the ratio is greater than one,
+ an affine system will approach the fixed point when the spectral radius
+ is less than one and will tend toward infinity when the spectral radius
+ is greater than one.
+ The analogy ends there however.
  An affine dynamical system whose matrix has spectral radius one can exhibit
  several different behaviors: tendency toward infinity and periodicity as
  seen above, but also convergence to a fixed point, depending on the system
@@ -2167,7 +2190,11 @@ For an affine discrete dynamical system,
 \begin_inset Formula $M$
 \end_inset
 
-, the system has a unique fixed point:
+, the system has a unique fixed point, 
+\begin_inset Formula $\mathbf{x}^{*}$
+\end_inset
+
+:
 \begin_inset Formula 
 \begin{align*}
 M\mathbf{x}^{*}+\mathbf{b} & =\mathbf{x}^{*}\\
@@ -2265,7 +2292,8 @@ for some scalars
 
 \end_inset
 
-This solution is dominated by the eigenvalue(s) with the greatest magnitude.
+This solution is dominated by the nonzero term(s) with the eigenvalue(s)
+ of greatest magnitude.
  If the dominant
 \begin_inset Index idx
 status open
@@ -2284,24 +2312,16 @@ eigenvalue!dominant|textidxdig
 \begin_inset Formula $\mathbf{x}_{k}$
 \end_inset
 
- will tend toward the fixed point.
+ will tend toward 
+\begin_inset Formula $\mathbf{x}^{*}$
+\end_inset
+
+, the fixed point.
  If the dominant magnitude is greater than one, 
 \begin_inset Formula $\mathbf{y}_{k}$
 \end_inset
 
- will tend toward infinity as long as 
-\begin_inset Formula $c_{j}\neq0$
-\end_inset
-
- for some 
-\begin_inset Formula $j$
-\end_inset
-
- with 
-\begin_inset Formula $|\lambda_{j}|>1$
-\end_inset
-
-, in which case 
+ will tend toward infinity, in which case 
 \begin_inset Formula $\mathbf{x}_{k}$
 \end_inset
 
@@ -2376,10 +2396,6 @@ order
 \begin_inset space ~
 \end_inset
 
-homogeneous
-\begin_inset space ~
-\end_inset
-
 discrete
 \begin_inset space ~
 \end_inset
@@ -2418,7 +2434,8 @@ dynamical
 \begin_inset space ~
 \end_inset
 
-system a discrete dynamical system whose recurrence is nonlinear.
+system a discrete dynamical system whose recurrence is a nonlinear transformatio
+n.
 \end_layout
 
 \begin_layout Description
@@ -2458,8 +2475,7 @@ recurrence|textidxkey
 
 \end_inset
 
- a general term for the type of equation appearing in a discrete dynamical
- system.
+ the type of equation appearing in a discrete dynamical system.
 \end_layout
 
 \begin_layout Description
@@ -2594,7 +2610,8 @@ long term behavior|textidxkey
 
 \end_inset
 
- a quantitative or qualitative description of the orbit of a dynamical system.
+ a quantitative or qualitative description of the tail end of the orbit
+ of a dynamical system.
  The phrases 
 \begin_inset Quotes eld
 \end_inset
@@ -2615,7 +2632,7 @@ tending toward infinity
 \begin_inset Quotes eld
 \end_inset
 
-periodic
+asymptotically periodic
 \begin_inset Quotes erd
 \end_inset
 
@@ -2696,7 +2713,7 @@ spectral radius|textidxkey
 
 \end_inset
 
-the greatest magnitude of all eigenvalues of a matrix.
+the greatest magnitude of the eigenvalues of a matrix.
 \end_layout
 
 \begin_layout Standard

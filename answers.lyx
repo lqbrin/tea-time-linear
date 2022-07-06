@@ -7447,7 +7447,7 @@ name "ans:inner-product-spaces-7"
 \end_inset
 
 
-\begin_inset Formula ${\displaystyle \frac{1}{\pi}\left(\pi+10\frac{\ln(10-2\pi)}{\ln10}\right)=1+\frac{10}{\pi}\log(10-2\pi)}$
+\begin_inset Formula ${\displaystyle \frac{1}{\pi}\left(\pi+20\frac{\ln(10-\pi)}{\ln10}\right)=1+\frac{20}{\pi}\log(10-\pi)}$
 \end_inset
 
 

@@ -1521,12 +1521,12 @@ status open
 In terms of coordinate vectors,
 \begin_inset Formula 
 \[
-\mathbf{v}=\left[\begin{array}{c}
+[\mathbf{v}]_{\mathcal{B}}=\left[\begin{array}{c}
 \frac{\langle\mathbf{v},\mathbf{b}_{1}\rangle}{\langle\mathbf{b}_{1},\mathbf{b}_{1}\rangle}\\
 \frac{\langle\mathbf{v},\mathbf{b}_{2}\rangle}{\langle\mathbf{b}_{2},\mathbf{b}_{2}\rangle}\\
 \vdots\\
 \frac{\langle\mathbf{v},\mathbf{b}_{n}\rangle}{\langle\mathbf{b}_{n},\mathbf{b}_{n}\rangle}
-\end{array}\right]_{\mathcal{B}}
+\end{array}\right]
 \]
 
 \end_inset
