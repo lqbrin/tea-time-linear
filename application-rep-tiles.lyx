@@ -36,7 +36,7 @@ enumitem
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize 10
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -74,10 +74,10 @@ enumitem
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2.5cm
-\topmargin 1.9cm
-\rightmargin 1.5cm
-\bottommargin 1.9cm
+\leftmargin 3.1cm
+\topmargin 2.5cm
+\rightmargin 2.1cm
+\bottommargin 2.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -169,8 +169,8 @@ Any set of shapes covering the plane without overlapping is called a tessellatio
 n, and the shapes are said to tessellate the plane.
  Like squares, equilateral triangles and regular hexagons can be fitted
  together to tessellate the plane in a simple pattern.
- In fact these three shapes for the bases for the only three so-called regular
- tessellations, portions of what are shown here.
+ In fact these three shapes form the bases for the only three so-called
+ regular tessellations, portions of which are shown here.
  Only your imagination can extend the patterns indefinitely.
 \end_layout
 
@@ -329,7 +329,7 @@ literal "false"
 
 \end_inset
 
- Certain tiles (shapes that tessllate the plane) are actually doubly tiling.
+ Certain tiles (shapes that tessellate the plane) are actually doubly tiling.
  Not only can they be fitted together to tile the plane—they can also be
  fitted together to tile larger copies of themselves! These shapes are called
  
@@ -3367,14 +3367,14 @@ name "exc:rep-tiles-2"
 
 \end_inset
 
-Find a dissection of the 30-60-90 triangle into three congruent parts, showing
- that the triangle is a rep-tile.
+Find a dissection of the 30-60-90 triangle into three congruent parts, each
+ similar to the whole, showing that the triangle is a rep-tile.
  Equivalently, build a 30-60-90 triangle
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-A 30-60-90 triangle is one whose interior angles measure 30, 50, and 90
+A 30-60-90 triangle is one whose interior angles measure 30, 60, and 90
  degrees.
 \end_layout
 
@@ -3398,7 +3398,8 @@ The right triangle with side lengths
 \begin_inset Formula $\sqrt{5}$
 \end_inset
 
- can be dissected into five congruent parts two different ways.
+ can be dissected into five congruent parts, each similar to the whole,
+ two different ways.
  Find one of them.
 \begin_inset ERT
 status open
@@ -3513,7 +3514,7 @@ name "exc:rep-tiles-6"
 
 \end_inset
 
-Find the IFS of the rep-tile suggested by the dissection.
+Find an IFS of the rep-tile suggested by the dissection.
  Impose your own set of axes where not supplied.
 \end_layout
 
@@ -4578,8 +4579,19 @@ Find an expression for
 \end_inset
 
 .
- HINT: Write down three equations involving the three scale factors of the
+ HINT: Write down five equations involving the three scale factors of the
  IFS suggested by the dissection.
+ Four of them can be used to eliminate the scale factors, leaving a single
+ equation with just 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+.
+ Solve this equation for 
+\begin_inset Formula $c$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -4607,6 +4619,13 @@ status open
 finishexercises 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -4726,7 +4745,7 @@ literal "false"
 \begin_inset Graphics
 	filename figures/application-reptiles-10.pdf
 	lyxscale 20
-	width 1.5in
+	width 1.3in
 
 \end_inset
 
@@ -4742,7 +4761,7 @@ literal "false"
 \begin_inset Graphics
 	filename figures/application-reptiles-11.pdf
 	lyxscale 20
-	width 1.5in
+	width 1.3in
 
 \end_inset
 
@@ -4758,7 +4777,7 @@ literal "false"
 \begin_inset Graphics
 	filename figures/application-reptiles-12.pdf
 	lyxscale 20
-	width 1.5in
+	width 1.3in
 
 \end_inset
 
@@ -4774,7 +4793,7 @@ literal "false"
 \begin_inset Graphics
 	filename figures/application-reptiles-13.pdf
 	lyxscale 20
-	width 1.5in
+	width 1.3in
 
 \end_inset
 

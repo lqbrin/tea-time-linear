@@ -823,7 +823,19 @@ noprefix "false"
 \end_inset
 
 ) only works if the denominators 
-\begin_inset Formula $\langle\mathbf{w}_{1},\mathbf{w}_{1}\rangle,\langle\mathbf{w}_{2},\mathbf{w}_{2}\rangle,\ldots,\langle\mathbf{w}_{n-1},\mathbf{w}_{n-1}\rangle$
+\begin_inset Formula $\langle\mathbf{w}_{1},\mathbf{w}_{1}\rangle$
+\end_inset
+
+, 
+\begin_inset Formula $\langle\mathbf{w}_{2},\mathbf{w}_{2}\rangle$
+\end_inset
+
+, 
+\begin_inset Formula $\ldots$
+\end_inset
+
+, 
+\begin_inset Formula $\langle\mathbf{w}_{n-1},\mathbf{w}_{n-1}\rangle$
 \end_inset
 
  of the projections are all nonzero.

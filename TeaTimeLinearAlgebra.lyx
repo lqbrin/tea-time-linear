@@ -37,7 +37,7 @@ enumitem
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize 10
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -75,10 +75,10 @@ enumitem
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2.5cm
-\topmargin 1.9cm
-\rightmargin 1.5cm
-\bottommargin 1.9cm
+\leftmargin 3.1cm
+\topmargin 2.5cm
+\rightmargin 2.1cm
+\bottommargin 2.5cm
 \secnumdepth 1
 \tocdepth 2
 \paragraph_separation indent

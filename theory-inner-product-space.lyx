@@ -3676,11 +3676,17 @@ For any
 \begin_inset Formula $\mathbb{P}_{2}(\mathbb{R})$
 \end_inset
 
-, 
-\begin_inset Formula $\langle p,p\rangle=\frac{2}{5}p_{2}^{2}+\frac{4}{3}p_{0}p_{2}+\frac{2}{3}p_{1}^{2}+2p_{0}^{2}=\frac{1}{15}\left[6p_{2}^{2}+20p_{0}p_{2}+10p_{1}^{2}+30p_{0}^{2}\right]=\frac{1}{15}\left[(2p_{2}+5p_{0})^{2}+2p_{2}^{2}+5p_{0}^{2}+10p_{1}^{2}\right]$
+,
+\begin_inset Formula 
+\begin{align*}
+\langle p,p\rangle & =\frac{2}{5}p_{2}^{2}+\frac{4}{3}p_{0}p_{2}+\frac{2}{3}p_{1}^{2}+2p_{0}^{2}\\
+ & =\frac{1}{15}\left[6p_{2}^{2}+20p_{0}p_{2}+10p_{1}^{2}+30p_{0}^{2}\right]\\
+ & =\frac{1}{15}\left[(2p_{2}+5p_{0})^{2}+2p_{2}^{2}+5p_{0}^{2}+10p_{1}^{2}\right]
+\end{align*}
+
 \end_inset
 
- which is a sum of squares and therefore greater than or equal to 0.
+which is a sum of squares and therefore greater than or equal to 0.
  
 \end_layout
 

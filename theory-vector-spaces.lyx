@@ -3372,7 +3372,11 @@ AARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 -499 & -288 & 232\\
 -425 & -161 & 125\\
@@ -3406,6 +3410,7 @@ noprefix "false"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status collapsed
@@ -3432,7 +3437,11 @@ AARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $M=\left[\begin{array}{ccc}
 237 & -228 & -234\\
 -440 & -772 & 36\\
@@ -3443,6 +3452,7 @@ AARUAuQ==}
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
@@ -3477,7 +3487,11 @@ wVAsAuE44jhiL5dsuxmnLixpUlOVZPuf1H-I9Y6OM12pC7Q87jSPTaCh_fJteL76MK96OnwAgnorWw==
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $M=\left[\begin{array}{cccc}
 -118 & 35 & -94 & -170\\
 277 & -101 & 496 & -336\\
@@ -3512,6 +3526,7 @@ noprefix "false"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status collapsed
@@ -3539,7 +3554,11 @@ g=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $M=\left[\begin{array}{cccc}
 -133 & -77 & -153 & 209\\
 -69 & 323 & 490 & -98\\
@@ -3551,6 +3570,7 @@ g=sage&interacts=eJyLjgUAARUAuQ==}
 
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Is 
@@ -3598,6 +3618,10 @@ zFMoLkjMqy411Ck10ik1rrUHAFODH8Y=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end_inset
 
 ; 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
 -12\\
 -20\\
@@ -3613,7 +3637,10 @@ zFMoLkjMqy411Ck10ik1rrUHAFODH8Y=&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\mathbf{u}_{3}=\left[\begin{array}{c}
 -8\\
 25\\
@@ -3647,6 +3674,7 @@ noprefix "false"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status collapsed
@@ -3673,6 +3701,10 @@ dYBI10zH0AAobGhmpqNrqmNormNsaQ5UZWoRq8nLVVCUmVeioeSrYKukaQ3h-MIYQGllBc9ihTKFzDyF
 \end_inset
 
 ; 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
 20\\
 11\\
@@ -3699,6 +3731,7 @@ dYBI10zH0AAobGhmpqNrqmNormNsaQ5UZWoRq8nLVVCUmVeioeSrYKukaQ3h-MIYQGllBc9ihTKFzDyF
 ;
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
@@ -3732,7 +3765,11 @@ BYl51aWGOqVGOqXGtfYAnb0eXw==&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
 10\\
 11\\
@@ -3785,6 +3822,7 @@ noprefix "false"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 \begin_inset ERT
 status collapsed
@@ -3811,7 +3849,11 @@ QmaeQnFBYl51qaFOqZFOqXGtPQA21B-Q&lang=sage&interacts=eJyLjgUAARUAuQ==}
 \end{array}\right]$
 \end_inset
 
-; 
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $\mathbf{u}_{1}=\left[\begin{array}{c}
 4\\
 -2\\
@@ -3841,6 +3883,7 @@ QmaeQnFBYl51qaFOqZFOqXGtPQA21B-Q&lang=sage&interacts=eJyLjgUAARUAuQ==}
 ;
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 For each pair 

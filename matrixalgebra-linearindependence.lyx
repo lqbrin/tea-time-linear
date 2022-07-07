@@ -2288,6 +2288,13 @@ Show that the functions are linearly independent.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "exc:linear-independence-11"
+
+\end_inset
+
+
 \begin_inset Formula $\sin^{2}t$
 \end_inset
 
@@ -2322,13 +2329,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset CommandInset label
-LatexCommand label
-name "exc:linear-independence-11"
-
-\end_inset
-
-
 \begin_inset Formula $e^{x}$
 \end_inset
 

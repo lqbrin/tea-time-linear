@@ -7331,7 +7331,7 @@ noprefix "false"
 
 \end_inset
 
- is false.
+ is true.
  The equivalent part (iii) is therefore true, so (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7599,7 +7599,7 @@ Does the matrix have a pivot position in every row?
 \end_inset
 
 At this point it is clear there is a pivot in every row.
- Therefore the system has only the trivial solution.
+ Therefore the rows form a lineraly independent set.
 \end_layout
 
 \begin_layout Description
@@ -11315,6 +11315,11 @@ The only solutions are
 \end_inset
 
 .
+ (e) 
+\begin_inset Formula $p\left(\left\{ 1,2,3\right\} \right)=\left\{ \frac{1}{2},\frac{2}{5},\frac{3}{10}\right\} $
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -11828,7 +11833,11 @@ name "sol:linear-vector-transformations-5"
 
 \end_inset
 
-The columns of the standard matrix are the images of the standard basis
+(
+\series bold
+solution 1
+\series default
+) The columns of the standard matrix are the images of the standard basis
  vectors.
  Writing the standard basis vectors as linear combinations of the given
  preimages will allow computation of the images of the standard basis vectors.
@@ -12025,6 +12034,118 @@ A\left[\begin{array}{c}
  as required.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(
+\series bold
+solution 2
+\series default
+) We can also use the given facts more directly, and the definition of the
+ standard matrix less directly.
+ Given that 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+41\\
+-3\\
+-2
+\end{array}\right]\right)=\left[\begin{array}{c}
+7\\
+-4
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-6\\
+1\\
+0
+\end{array}\right]\right)=\left[\begin{array}{c}
+-13\\
+-3
+\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $T\left(\left[\begin{array}{c}
+-5\\
+-1\\
+1
+\end{array}\right]\right)=\left[\begin{array}{c}
+-9\\
+-13
+\end{array}\right]$
+\end_inset
+
+, this may be rephrased in terms of the standard matrix 
+\begin_inset Formula $A$
+\end_inset
+
+ as 
+\begin_inset Formula $A\cdot\left[\begin{array}{c}
+41\\
+-3\\
+-2
+\end{array}\right]=\left[\begin{array}{c}
+7\\
+-4
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $A\cdot\left[\begin{array}{c}
+-6\\
+1\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+-13\\
+-3
+\end{array}\right]$
+\end_inset
+
+, and 
+\begin_inset Formula $A\cdot\left[\begin{array}{c}
+-5\\
+-1\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+-9\\
+-13
+\end{array}\right]$
+\end_inset
+
+.
+ Combining this information into a single equation,
+\begin_inset Formula 
+\[
+A\cdot\left[\begin{array}{ccc}
+41 & -6 & -5\\
+-3 & 1 & -1\\
+-2 & 0 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+7 & -13 & -9\\
+-4 & -3 & -13
+\end{array}\right].
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+7 & -13 & -9\\
+-4 & -3 & -13
+\end{array}\right]\left[\begin{array}{ccc}
+41 & -6 & -5\\
+-3 & 1 & -1\\
+-2 & 0 & 1
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+-76 & -469 & -858\\
+-45 & -273 & -511
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13139,7 +13260,9 @@ v_{2}
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\langle c\mathbf{u},\mathbf{v}\right\rangle =\left\langle c\left[\begin{array}{c}
+\begin_inset Formula 
+\begin{align*}
+\left\langle c\mathbf{u},\mathbf{v}\right\rangle  & =\left\langle c\left[\begin{array}{c}
 u_{1}\\
 u_{2}
 \end{array}\right],\left[\begin{array}{c}
@@ -13151,13 +13274,16 @@ cu_{2}
 \end{array}\right],\left[\begin{array}{c}
 v_{1}\\
 v_{2}
-\end{array}\right]\right\rangle =2cu_{1}v_{1}+3cu_{2}v_{2}=c\left(2u_{1}v_{1}+3u_{2}v_{2}\right)=c\left\langle \left[\begin{array}{c}
+\end{array}\right]\right\rangle =2cu_{1}v_{1}+3cu_{2}v_{2}=c\left(2u_{1}v_{1}+3u_{2}v_{2}\right)\\
+ & =c\left\langle \left[\begin{array}{c}
 u_{1}\\
 u_{2}
 \end{array}\right],\left[\begin{array}{c}
 v_{1}\\
 v_{2}
-\end{array}\right]\right\rangle =c\left\langle \mathbf{u},\mathbf{v}\right\rangle $
+\end{array}\right]\right\rangle =c\left\langle \mathbf{u},\mathbf{v}\right\rangle 
+\end{align*}
+
 \end_inset
 
 
@@ -14122,7 +14248,7 @@ The eigenspace corresponding to
 \end_inset
 
  is the number of free variables of the system 
-\begin_inset Formula $(M-\lambda I)=\mathbf{0}$
+\begin_inset Formula $(M-\lambda I)\mathbf{v}=\mathbf{0}$
 \end_inset
 
 , which can be found by row reducing 
@@ -15737,8 +15863,12 @@ name "sol:orthogonalization-11"
 
 \end_inset
 
-The first vector of the orthogonal set is the first vector of the given
- set, 
+(
+\series bold
+solution 1
+\series default
+) Following the orthogonalization procedure, the first vector of the orthogonal
+ set is the first vector of the given set, 
 \begin_inset Formula $\left[\begin{array}{c}
 1\\
 -1
@@ -15793,8 +15923,49 @@ The first vector of the orthogonal set is the first vector of the given
 \end_inset
 
 .
+ 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(
+\series bold
+solution 1
+\series default
+) The question did not request a specific orthogonal set.
+ By observation, the span of the given set is 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ so any orthogonal set spanning 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ will suffice.
+ For example, the standard basis 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+1\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+ or 
+\begin_inset Formula $\left\{ \left[\begin{array}{c}
+5\\
+3
+\end{array}\right],\left[\begin{array}{c}
+-6\\
+10
+\end{array}\right]\right\} $
+\end_inset
+
+ or any other set containing a pair of vectors whose dot product is zero.
+\end_layout
+
+\end_deeper
 \begin_layout Description
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -19256,12 +19427,12 @@ The distance between the point and line is then the distance between the
 -\frac{95}{26}\\
 -\frac{19}{26}
 \end{array}\right]\right\Vert =\left\Vert \left[\begin{array}{c}
--\frac{173}{26}\\
--\frac{123}{26}
+\frac{17}{26}\\
+-\frac{85}{26}
 \end{array}\right]\right\Vert =\frac{1}{26}\left\Vert \left[\begin{array}{c}
-173\\
-123
-\end{array}\right]\right\Vert =\frac{\sqrt{173^{2}+123^{2}}}{26}=\frac{\sqrt{45058}}{26}\approx8.164
+17\\
+85
+\end{array}\right]\right\Vert =\frac{\sqrt{17^{2}+85^{2}}}{26}=\frac{\sqrt{7514}}{26}\approx3.334
 \]
 
 \end_inset
@@ -21883,7 +22054,7 @@ noprefix "false"
 
 \end_inset
 
-: 
+a: 
 \begin_inset CommandInset label
 LatexCommand label
 name "sol:discrete-dynamical-2"
@@ -21991,7 +22162,7 @@ noprefix "false"
 
 \end_inset
 
-: 
+a: 
 \begin_inset CommandInset label
 LatexCommand label
 name "sol:discrete-dynamical-3"
@@ -22019,13 +22190,50 @@ name "sol:discrete-dynamical-4"
 
 \end_inset
 
-The dynamical system tends toward infinity.
- With a spectral radius greater than one 
+The solution of question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ indicates the orbit is not constant.
+ The answer to question 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exc:discrete-dynamical-systems-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+a gives eigenvalues of 
+\begin_inset Formula $-\frac{7}{6}$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ so the spectral radius of 
+\begin_inset Formula $\frac{1}{42}\left[\begin{array}{cc}
+16 & 26\\
+65 & -23
+\end{array}\right]$
+\end_inset
+
+ is greater than one 
 \begin_inset Formula $\left(\frac{7}{6}\text{ in this case}\right)$
 \end_inset
 
-, if the orbit is not fixed it will tend toward infinity 
-\begin_inset Formula $\left(\text{at approximately the rate}\left(\frac{7}{6}\right)^{k}\text{ in this case}\right)$
+.
+ With a spectral radius greater than one and an orbit that is not fixed,
+ the dyamical system will tend toward infinity 
+\begin_inset Formula $\left(\text{at approximately the rate}\left(\frac{7}{6}\right)^{k}\right)$
 \end_inset
 
 .
@@ -22041,19 +22249,20 @@ noprefix "false"
 
 \end_inset
 
-e: 
+j: 
 \begin_inset CommandInset label
 LatexCommand label
 name "sol:discrete-dynamical-5"
 
 \end_inset
 
-The dynamical system tends toward the fixed point.
- With a spectral radius less than one 
+With a spectral radius less than one 
 \begin_inset Formula $\left(\frac{1}{2}\text{ in this case}\right)$
 \end_inset
 
-, the fixed point will be an attractor.
+, the fixed point will be an attractor, and the dynamical system will tend
+ toward the fixed point.
+ 
 \end_layout
 
 \begin_layout Section*

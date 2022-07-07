@@ -31,7 +31,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize 10
 \spacing single
 \use_hyperref false
 \papersize default
@@ -60,10 +60,10 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2.5cm
-\topmargin 1.9cm
-\rightmargin 1.5cm
-\bottommargin 1.9cm
+\leftmargin 3.1cm
+\topmargin 2.5cm
+\rightmargin 2.1cm
+\bottommargin 2.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -648,9 +648,9 @@ of the system.
 \begin_inset Tabular
 <lyxtabular version="3" rows="35" columns="3">
 <features islongtable="true" longtabularalignment="center">
-<column alignment="left" valignment="middle" width="2.1in">
-<column alignment="left" valignment="middle" width="2.1in">
-<column alignment="left" valignment="middle" width="2.1in">
+<column alignment="left" valignment="middle" width="1.9in">
+<column alignment="left" valignment="middle" width="1.9in">
+<column alignment="left" valignment="middle" width="1.9in">
 <row>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -681,7 +681,7 @@ of the system.
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -767,7 +767,7 @@ Step 2
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -956,7 +956,7 @@ Step 3
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1050,7 +1050,7 @@ Step 4
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1135,7 +1135,7 @@ Step 2
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1289,7 +1289,7 @@ Step 3
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1378,7 +1378,7 @@ Step 4
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1479,7 +1479,7 @@ Step 1
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1682,7 +1682,7 @@ Step 5
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1790,7 +1790,7 @@ Step 6
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1884,7 +1884,7 @@ Step 7
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2060,7 +2060,7 @@ Step 5
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2165,7 +2165,7 @@ Step 6
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2254,7 +2254,7 @@ Step 7
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2348,7 +2348,7 @@ Step 6
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="6.3in">
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none" width="5.7in">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3984,7 +3984,7 @@ name "ans:column-of-zeros"
 \end_inset
 
  column of that row is still zero.
- The rest of the rows are not involved in the replacment, so if their 
+ The rest of the rows are not involved in the replacement, so if their 
 \begin_inset Formula $j^{th}$
 \end_inset
 

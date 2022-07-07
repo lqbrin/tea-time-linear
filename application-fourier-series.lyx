@@ -1278,10 +1278,14 @@ ding to
 \end_inset
 
 , so the set 
-\begin_inset Formula $\left\{ \sin\left(m\cdot\frac{8820}{121}\pi t\right):m=29,28,33,31,27,32,8,45,30,40,43,35,9,34\right\} $
+\begin_inset Formula 
+\[
+\left\{ \sin\left(m\cdot\frac{8820}{121}\pi t\right):m=29,28,33,31,27,32,8,45,30,40,43,35,9,34\right\} 
+\]
+
 \end_inset
 
-, and subsets, were chosen as bases to create the approximations.
+and subsets were chosen as bases to create the approximations.
  The frequency of any harmonic function, 
 \begin_inset Formula $\sin(\omega x)$
 \end_inset
@@ -3031,11 +3035,15 @@ For any
 \end_inset
 
 , 
-\begin_inset Formula $\langle f+g,h\rangle=\int_{0}^{L}(f(x)+g(x))h(x)\,dx=\int_{0}^{L}\left(f(x)h(x)+g(x)h(x)\right)\,dx=\int_{0}^{L}f(x)h(x)\,dx+\int_{0}^{L}g(x)h(x)\,dx=\langle f,h\rangle+\langle g,h\rangle$
+\begin_inset Formula 
+\begin{align*}
+\langle f+g,h\rangle & =\int_{0}^{L}(f(x)+g(x))h(x)\,dx=\int_{0}^{L}\left(f(x)h(x)+g(x)h(x)\right)\,dx\\
+ & =\int_{0}^{L}f(x)h(x)\,dx+\int_{0}^{L}g(x)h(x)\,dx=\langle f,h\rangle+\langle g,h\rangle
+\end{align*}
+
 \end_inset
 
- by the distributive property for real numbers and a standard result of
- calculus.
+by the distributive property for real numbers and a standard result of calculus.
 \end_layout
 
 \begin_layout Enumerate

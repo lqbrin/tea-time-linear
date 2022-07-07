@@ -326,8 +326,12 @@ for some
 .
  The coefficients of this linear combination, in order, form the unique
  identifier of 
-\begin_inset Formula $\left[\begin{array}{cccc}
-x_{1} & x_{2} & \cdots & x_{n}\end{array}\right]^{T}$
+\begin_inset Formula $\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{array}\right]$
 \end_inset
 
  in the context of the basis 

@@ -1627,7 +1627,7 @@ noprefix "false"
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset Formula $C_{1,1}$
 \end_inset
 
@@ -1641,7 +1641,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset Formula $C_{1,2}$
 \end_inset
 
@@ -1655,7 +1655,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:determinant-1"
@@ -1699,7 +1699,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:determinant-2"
@@ -1743,7 +1743,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:determinant-3"
@@ -1788,7 +1788,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset CommandInset label
 LatexCommand label
 name "exc:determinant-4"
@@ -1833,7 +1833,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset Formula $C_{2,2}$
 \end_inset
 
@@ -1848,7 +1848,7 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset Formula $C_{3,2}$
 \end_inset
 

@@ -2160,6 +2160,10 @@ Much like a geometric series, which converges when the ratio between consecutive
  several different behaviors: tendency toward infinity and periodicity as
  seen above, but also convergence to a fixed point, depending on the system
  and the initial condition.
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2804,12 +2808,38 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{3}{2}\left[\begin{array}{cc}
+2 & 2\\
+1 & 3
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+7\\
+\frac{13}{2}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{2}\left[\begin{array}{cc}
 -7 & -10\\
 4 & 6
 \end{array}\right]\mathbf{x}+\left[\begin{array}{c}
 2\\
 -3
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{4}\left[\begin{array}{cc}
+-6 & 5\\
+-4 & 3
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{5}{2}\\
+\frac{5}{2}
 \end{array}\right]}$
 \end_inset
 
@@ -2864,12 +2894,53 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{3}\left[\begin{array}{cc}
+3 & -4\\
+6 & -7
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+-\frac{8}{3}\\
+-\frac{14}{3}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{6}\left[\begin{array}{cc}
 -3 & 3\\
 3 & 5
 \end{array}\right]\mathbf{x}+\left[\begin{array}{c}
 -1\\
 1/2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\left[\begin{array}{cc}
+3 & 1\\
+2 & 2
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+2\\
+12
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\left[\begin{array}{ccc}
+11 & 10 & 0\\
+-8 & 5 & -12\\
+-8 & -4 & -3
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+-54\\
+-27\\
+19
 \end{array}\right]}$
 \end_inset
 
@@ -2926,6 +2997,21 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{12}\left[\begin{array}{ccc}
+4 & -16 & 8\\
+2 & -22 & 9\\
+4 & -20 & 6
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{26}{3}\\
+\frac{85}{6}\\
+\frac{13}{3}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{18}\left[\begin{array}{ccc}
 82 & 57 & -29\\
 -16 & -3 & 41\\
@@ -2934,6 +3020,21 @@ noprefix "false"
 5/6\\
 7/3\\
 1/18
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=\frac{1}{28}\left[\begin{array}{ccc}
+-26 & 8 & 10\\
+-9 & -1 & 4\\
+-15 & 3 & 2
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+\frac{13}{14}\\
+\frac{15}{14}\\
+\frac{16}{7}
 \end{array}\right]}$
 \end_inset
 
@@ -2984,6 +3085,21 @@ plural "false"
 caps "false"
 noprefix "false"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \mathbf{f}(\mathbf{x})=-\frac{1}{6}\left[\begin{array}{ccc}
+-10 & -69 & 5\\
+0 & 54 & 0\\
+2 & 69 & -13
+\end{array}\right]\mathbf{x}+\left[\begin{array}{c}
+-\frac{569}{6}\\
+80\\
+\frac{583}{6}
+\end{array}\right]}$
 \end_inset
 
 
@@ -3616,11 +3732,11 @@ Let
 \begin_inset Formula $M-I$
 \end_inset
 
- be an invertible matrix and suppose the fixed point of the affine dynamical
+ be an invertible matrix and suppose some fixed point of the affine dynamical
  system
 \begin_inset Formula 
 \[
-\mathbf{x}_{k+1}=M\mathbf{x}+\mathbf{c};\ \mathbf{x}_{0}=\mathbf{v}
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\mathbf{c};\ \mathbf{x}_{0}=\mathbf{v}
 \]
 
 \end_inset
@@ -3642,7 +3758,7 @@ the fixed point is unique; and
 the fixed point of the dynamical system 
 \begin_inset Formula 
 \[
-\mathbf{z}_{k+1}=M^{-1}(\mathbf{z}_{k}-\mathbf{c});\ \mathbf{x}_{0}=\mathbf{v}
+\mathbf{z}_{k+1}=M^{-1}(\mathbf{z}_{k}-\mathbf{c});\ \mathbf{z}_{0}=\mathbf{v}
 \]
 
 \end_inset
@@ -3662,11 +3778,11 @@ Let
 \begin_inset Formula $M-I$
 \end_inset
 
- be an invertible matrix and suppose the fixed point of the affine dynamical
+ be an invertible matrix and suppose some fixed point of the affine dynamical
  system
 \begin_inset Formula 
 \[
-\mathbf{x}_{k+1}=M\mathbf{x}+\mathbf{c};\ \mathbf{x}_{0}=\mathbf{v}
+\mathbf{x}_{k+1}=M\mathbf{x}_{k}+\mathbf{c};\ \mathbf{x}_{0}=\mathbf{v}
 \]
 
 \end_inset
@@ -3688,7 +3804,7 @@ the fixed point is unique; and
 the fixed point of the dynamical system 
 \begin_inset Formula 
 \[
-\mathbf{z}_{k+1}=M^{-1}(\mathbf{z}_{k}-\mathbf{c});\ \mathbf{x}_{0}=\mathbf{v}
+\mathbf{z}_{k+1}=M^{-1}(\mathbf{z}_{k}-\mathbf{c});\ \mathbf{z}_{0}=\mathbf{v}
 \]
 
 \end_inset
@@ -3839,7 +3955,14 @@ literal "false"
 
 \begin_deeper
 \begin_layout Enumerate
-Find the fixed point of (
+Find the fixed point, 
+\begin_inset Formula $\left[\begin{array}{c}
+H^{*}\\
+P^{*}
+\end{array}\right]$
+\end_inset
+
+, of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:host-parasite"
@@ -3894,20 +4017,30 @@ The linear dynamical system
 \begin_inset Formula 
 \begin{equation}
 \left[\begin{array}{c}
-H\\
-P
+\hat{H}\\
+\hat{P}
 \end{array}\right]_{k+1}=\left[\begin{array}{cc}
 1 & \frac{\gamma\ln\gamma}{1-\gamma}\\
 \frac{\gamma-1}{\gamma} & \frac{\ln\gamma}{\gamma-1}
 \end{array}\right]\left[\begin{array}{c}
-H\\
-P
-\end{array}\right]_{k},\label{eq:linearization}
+\hat{H}\\
+\hat{P}
+\end{array}\right]_{k}\label{eq:linearization}
 \end{equation}
 
 \end_inset
 
-called a linearization of (
+where 
+\begin_inset Formula $\left[\begin{array}{c}
+\hat{H}\\
+\hat{P}
+\end{array}\right]=\left[\begin{array}{c}
+H-H^{*}\\
+P-P^{*}
+\end{array}\right]$
+\end_inset
+
+, called a linearization of (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:host-parasite"

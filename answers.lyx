@@ -3129,7 +3129,7 @@ noprefix "false"
 .
  Another demonstration relies on distributivity (theorem 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand ref
 reference "thm:matrixproperties-part2"
 plural "false"
 caps "false"
@@ -3139,7 +3139,7 @@ noprefix "false"
 
  claim 
 \begin_inset CommandInset ref
-LatexCommand pageref
+LatexCommand ref
 reference "thmpart:distributivity-matrix-over-scalars"
 plural "false"
 caps "false"
@@ -4910,7 +4910,11 @@ v_{1}\\
 
 \end_inset
 
-Using generic free variables (and multiplying by 4):
+Using generic free variables (and multiplying by 
+\begin_inset Formula $-4$
+\end_inset
+
+):
 \begin_inset Formula 
 \[
 \mathbf{v}=r\left[\begin{array}{c}
@@ -5203,7 +5207,7 @@ name "ans:vector-spaces-3"
 
 \end_inset
 
-The set of all sequences whose terms are all equal except possibly the second,
+The set of all sequences whose terms are all equal except possibly the third,
  which is twice the others
 \end_layout
 
@@ -7670,8 +7674,15 @@ All functions whose integral over
 \end_inset
 
  is zero.
- Another way to describe them is all functions whose graphs have equal areas
- below the axes and above over the interval 
+ In other words any function whose graph has an area above the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis equal to the area below the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis over the interval 
 \begin_inset Formula $[0,1]$
 \end_inset
 
@@ -7743,7 +7754,8 @@ name "ans:inner-product-spaces-19"
 
 \end_inset
 
-It fails to satisfy inner product property 2.
+HINT: It fails to satisfy inner product property 2.
+ Can you show this?
 \end_layout
 
 \begin_layout Section*
@@ -8918,7 +8930,7 @@ name "ans:orthogonalization-14"
 \begin_inset Formula $4t^{2}-8t+3$
 \end_inset
 
- is not orthogonal fo 
+ is not orthogonal to 
 \begin_inset Formula $t^{2}-2t$
 \end_inset
 
@@ -9292,6 +9304,17 @@ Answers may vary.
 
 .
  Multiples of these vectors also suffice, for example.
+ Actually, 
+\shape italic
+any
+\shape default
+ orthogonal set of two vectors, such as the standard basis, will do since
+ the span of the given set is 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Description
@@ -9364,6 +9387,17 @@ Answers may vary.
 
 .
  Multiples of these vectors also suffice, for example.
+ Actually, 
+\shape italic
+any
+\shape default
+ orthogonal set of two vectors, such as the standard basis, will do since
+ the span of the given set is 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Description
@@ -9430,6 +9464,17 @@ Ks4xj52NKdsVbvIZGfyTt3ej8Y7L_gdaAysS&lang=sage&interacts=eJyLjgUAARUAuQ==}
 
 .
  Multiples of these vectors also suffice, for example.
+ Actually, 
+\shape italic
+any
+\shape default
+ orthogonal set of two vectors, such as the standard basis, will do since
+ the span of the given set is 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Description
@@ -10632,7 +10677,37 @@ name "ans:similarity-14"
 
 \end_inset
 
-Reflection across the 
+Reflection across 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the line 
+\begin_inset Formula $y=\frac{1}{2}x$
+\end_inset
+
+ parallel to 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+the 
 \begin_inset Formula $y$
 \end_inset
 
@@ -10649,11 +10724,7 @@ Reflection across the
 \uwave off
 \noun off
 \color none
--axis parallel to the line 
-\begin_inset Formula $y=\frac{1}{2}x$
-\end_inset
-
-.
+-axis.
 \end_layout
 
 \begin_layout Description
@@ -14516,7 +14587,7 @@ g=sage&interacts=eJyLjgUAARUAuQ==}
 \begin_inset Formula $\frac{55330}{59049}\approx0.937$
 \end_inset
 
- (c) the game will end
+ (c) if the game can be won at all, it will eventually end
 \end_layout
 
 \begin_layout Description
@@ -15545,7 +15616,7 @@ noprefix "false"
 
 \end_inset
 
-c: 
+e: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-4"
@@ -15575,7 +15646,7 @@ noprefix "false"
 
 \end_inset
 
-e: 
+j: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-5"
@@ -15607,7 +15678,7 @@ noprefix "false"
 
 \end_inset
 
-g: 
+n: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-6"
@@ -15655,7 +15726,7 @@ noprefix "false"
 
 \end_inset
 
-c: 
+e: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-9"
@@ -15683,7 +15754,7 @@ noprefix "false"
 
 \end_inset
 
-e: 
+j: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-10"
@@ -15715,7 +15786,7 @@ noprefix "false"
 
 \end_inset
 
-g: 
+n: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-11"
@@ -15747,7 +15818,7 @@ noprefix "false"
 
 \end_inset
 
-c: 
+e: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-12"
@@ -15767,7 +15838,7 @@ noprefix "false"
 
 \end_inset
 
-e: 
+j: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-13"
@@ -15787,7 +15858,7 @@ noprefix "false"
 
 \end_inset
 
-g: 
+n: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-14"
@@ -15807,7 +15878,7 @@ noprefix "false"
 
 \end_inset
 
-c: 
+e: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-15"
@@ -15827,7 +15898,7 @@ noprefix "false"
 
 \end_inset
 
-g: 
+n: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:discrete-dynamical-16"
@@ -16118,7 +16189,7 @@ noprefix "false"
 
 \end_inset
 
-: 
+b: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-4"
@@ -16171,7 +16242,7 @@ noprefix "false"
 
 \end_inset
 
-: 
+f: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-5"
@@ -16223,7 +16294,7 @@ noprefix "false"
 
 \end_inset
 
-: 
+h: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-6"
@@ -16275,7 +16346,7 @@ noprefix "false"
 
 \end_inset
 
-: 
+k: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-7"
