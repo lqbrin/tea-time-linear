@@ -1232,8 +1232,8 @@ Some Properties of Matrices
 \end_layout
 
 \begin_layout Standard
-Table 
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -1446,7 +1446,7 @@ Multiplicative identity
 
 \end_inset
 
- 
+ Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:properties-of-reals"

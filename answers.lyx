@@ -16189,7 +16189,7 @@ noprefix "false"
 
 \end_inset
 
-b: 
+: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-4"
@@ -16242,7 +16242,7 @@ noprefix "false"
 
 \end_inset
 
-f: 
+: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-5"
@@ -16294,7 +16294,7 @@ noprefix "false"
 
 \end_inset
 
-h: 
+: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-6"
@@ -16346,7 +16346,7 @@ noprefix "false"
 
 \end_inset
 
-k: 
+: 
 \begin_inset CommandInset label
 LatexCommand label
 name "ans:rep-tiles-7"
