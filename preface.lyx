@@ -1038,6 +1038,63 @@ Answers and solutions may be followed back to the exercise by clicking the
 \end_layout
 
 \begin_layout Section*
+New in the Second Edition
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{New in the Second Edition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The biggest difference between the first and second editions is the launch
+ of an accompanying MyOpenMath course shell.
+ Instructors can now assign and collect homework perfectly aligned with
+ the textbook online.
+ Create randomly generated questions for assessments.
+ Communicate with the class.
+ Maintain an online gradebook.
+ Post notes to the online calendar.
+ Full course management available.
+ Most of the questions in the text have an online cousin, and most of the
+ cousins contain randomly generated numbers.
+ There are a few questions in the book not available online, and there are
+ a few questions available online that are not in the book.
+\end_layout
+
+\begin_layout Standard
+The online course contains prepopulated assignments for each section including
+ the reading for the section, instructor's notes, and a limited number of
+ links to additional resources, all of which can easily be modified to suit
+ your needs.
+ To get started, request an instructor's account at 
+\begin_inset CommandInset href
+LatexCommand href
+name "MyOpenMath"
+target "https://www.myopenmath.com/"
+literal "false"
+
+\end_inset
+
+ today.
+ It's free to sign up and free to use.
+ No charge ever.
+ Once you have your account, you will find the Tea Time Linear Algebra course
+ in the Course Browser at MyOpenMath.
+\end_layout
+
+\begin_layout Section*
 Acknowledgments
 \end_layout
 
