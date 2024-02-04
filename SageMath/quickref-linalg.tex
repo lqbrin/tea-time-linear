@@ -1,0 +1,336 @@
+% Sage Linear Algebra Quick Reference
+% Accompaniment to Tea Time Linear Algebra
+% (c) 2022 by Leon Q. Brin
+%
+% Licensed with the GNU Free Documentation License (GFDL)
+%      http://www.gnu.org/copyleft/fdl.html
+%
+% Based on work by Robert A. Beezer
+%      http://wiki.sagemath.org/quickref
+%
+\documentclass{article}
+\usepackage{graphicx}  
+\usepackage[landscape]{geometry}
+\usepackage[pdftex]{xcolor}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\ex}{\color{blue}}
+\newcommand{\warn}{\bf\color{red}}
+\newcommand{\xtra}{\color{purple}}
+\pagestyle{empty}
+\advance\topmargin-.7in
+\advance\textheight1.8in
+\advance\textwidth2.9in
+\advance\oddsidemargin-1.45in
+\advance\evensidemargin-1.45in
+\parindent0pt
+\parskip2pt
+% Section break, dictates column widths?
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+% Adjust gap to affect spacing, page count
+\newcommand{\sect}[2]{\hr\par\vspace*{2pt}\textbf{#1} #2\par}
+\newcommand{\sectbreak}[2]{\hr\par\columnbreak\textbf{#1} #2\par}
+% Mandatory indentation on subsidiary lines
+\newcommand{\skipin}{\hspace*{12pt}}
+\begin{document}
+\begin{multicols*}{3}
+\begin{center}
+\textbf{Sage Quick Reference}\\
+\textbf{Accompaniment to Tea Time Linear Algebra}\\
+Sage Version 9.4
+\end{center}
+% backup over center environment gap
+\vspace{-2ex}
+%*********************************************
+\sect{Matrix Constructions}{}
+{\warn Caution}: Row, column numbering begins at 0\\
+{\warn Caution}: \verb!I! = $\sqrt{-1}$, do not overwrite with matrix name\\
+{\ex\verb!A = matrix(3,2,[1,2,3,4,5,6])!} $3\times 2$ over integers\\
+\skipin\skipin or {\ex\verb!matrix([[1,2],[3,4],[5,6]])!}\\
+{\ex\verb!B = matrix(2, [1,2,3,4,5,6])!} 2 rows from list, so $2\times 3$\\
+{\ex\verb!C = matrix([[5*I, 4*I], [I, 6]])!} complex entries\\
+{\ex\verb!D = matrix(4, 4, 8)!} diagonal entries $8$, other entries $0$\\
+{\ex\verb!Z = matrix(4, 4, 0)!} zero matrix\\
+{\ex\verb!II = matrix(5, 5, 1)!} $5\times5$ identity matrix\\
+\skipin\skipin or {\ex\verb!identity_matrix(5)!}\\
+{\ex\verb!A.augment(B)!}  \verb!A! in first columns, matrix \verb!B! to the right\\
+{\ex\verb!A.stack(B)!}  \verb!A! in top rows, \verb!B! below; \verb!B! can be a vector\\
+{\xtra\verb!L = matrix(20, 80, {(5,9):30, (15,77):-6})!}\\
+\skipin $20\times 80$, two non-zero entries, sparse representation
+{\xtra\verb!J = jordan_block(-2,3)!}\\
+\skipin $3\times 3$ matrix, $-2$ on diagonal, $1$'s on super-diagonal
+{\xtra\verb!E = block_matrix([[P,0],[1,R]])!}, very flexible input\\
+{\xtra\verb!A.block_sum(B)!}  Diagonal, \verb!A! upper left, \verb!B! lower right\\
+{\warn Note}: Matrices with symbolic entries are possible
+\par
+%*********************************************
+\sect{Vector Constructions}{}
+{\warn Caution}: First entry of a vector is numbered 0\\
+{\ex\verb!u = vector([1, 3/2, -1])!} length 3 over rationals\\
+{\xtra\verb!v = vector({2:4, 95:4, 210:0})!}\\
+\skipin 211 entries, nonzero in entry 2 and entry 95, sparse
+\par
+%*********************************************
+\sect{Matrix Multiplication}{}
+{\ex\verb!u = vector([1,2,3])!},\quad{\ex\verb!v = vector([1,2])!}\\
+{\ex\verb!A = matrix([[1,2,3],[4,5,6]])!}\\
+{\ex\verb!B = matrix([[1,2],[3,4]])!}\\
+{\ex\verb!u*A!},\quad
+{\ex\verb!A*v!},\quad
+{\ex\verb!B*A!},\quad
+{\ex\verb!B^6!},\quad
+{\ex\verb!B^(-3)!} all possible\\
+{\xtra\verb!B.iterates(v, 6, rows = False)!}\\
+\skipin produces $B^0v, B^1v,\dots, B^5v$\\
+\skipin \verb!rows! not specified defaults to $vB^0, vB^1,\dots, vB^5$\\
+{\xtra\verb!f(x)=x^2+5*x+3!} then {\ex\verb!f(B)!} is possible\\
+{\xtra\verb!B.exp()!} matrix exponential, i.e.\ $\sum_{k=0}^{\infty}\frac{1}{k!}B^k$
+\par
+%*********************************************
+\sect{Matrix Operations}{}
+{\ex\verb!5*A+2*B!} linear combination\\
+{\ex\verb!A.inverse()!}, {\ex\verb!A^(-1)!}, {\ex\verb!~A!}\\
+\skipin when \verb!A! is singular produces \verb!ZeroDivisionError!\\
+{\ex\verb!A.transpose()!}\\
+{\ex\verb!A.adjoint()!}  matrix of cofactors\\
+{\ex\verb!A.gram_schmidt()!} converts the rows of matrix \verb!A!\\
+{\xtra\verb!A.conjugate()!} entry-by-entry complex conjugates\\
+{\xtra\verb!A.conjugate_transpose()!}\\
+{\xtra\verb!A.antitranspose()!} transpose + reverse orderings\\
+{\xtra\verb!A.restrict(V)!} restriction to invariant subspace \verb!V!
+\par
+%*********************************************
+\sect{Eigenvalues and Eigenvectors}{}
+{\warn Note}: Different behavior for exact rings (\verb!QQ!) and inexact rings (\verb!RDF!)\\
+{\ex\verb!A.eigenvalues()!} unsorted list, with mutiplicities\\
+{\ex\verb!A.eigenvectors_left()!} vectors on left, \verb!_right! too\\
+{\ex\verb!A.charpoly('t')!}  no variable specified defaults to \verb!x!\\
+\skipin or {\ex\verb!A.characteristic_polynomial()!}\\
+{\ex\verb!A.fcp('t')!}  factored characteristic polynomial\\
+\skipin Returns, per eigenvalue, a triple:
+\verb!e!: eigenvalue;\\
+\skipin\verb!V!: list of eigenspace basis vectors;
+\verb!n!: multiplicity\\
+{\xtra\verb!A.eigenmatrix_right()!} vectors on right, \verb!_left! too\\
+\skipin Returns pair:\quad \verb!D!: diagonal matrix with eigenvalues\\
+\skipin\verb!P!: eigenvectors as columns (rows for left version)\\
+\skipin\skipin with zero columns if matrix not diagonalizable\\
+{\xtra\verb!A.minimal_polynomial()!}  the minimal polynomial\\
+\skipin or {\xtra\verb!A.minpoly()!}
+\par
+%*********************************************
+\sect{Row Operations}{(change matrix in place)}
+{\warn Caution}: first row is numbered 0\\
+{\ex\verb!A.rescale_row(i,a)!} \verb!a*!(row \verb!i!)\\
+{\ex\verb!A.add_multiple_of_row(i,j,a)!} \verb!a*!(row \verb!j!) + row \verb!i!\\
+{\ex\verb!A.swap_rows(i,j)!}\\
+Each has a column variant, \verb!row!$\rightarrow$\verb!col!\\
+For new matrix, use e.g.\ {\ex\verb!B = A.with_rescaled_row(i,a)!}
+\par
+%*********************************************
+\sect{Echelon Form}{}
+{\ex\verb!A = matrix([[4,2,1],[6,3,2]])!}\\
+\skipin\begin{tabular}{ll}
+{\ex\verb!A.echelon_form()!} & {\ex\verb!A.rref()!}\\
+$\left(\begin{array}{rrr}
+2 & 1 & 0 \\
+0 & 0 & 1
+\end{array}\right)$
+&
+$\left(\begin{array}{rrr}
+1 & \frac{1}{2} & 0 \\
+0 & 0 & 1
+\end{array}\right)$
+\end{tabular}\\
+{\warn Note}: \verb!rref()! promotes matrix to fraction field\\
+{\xtra\verb!A.pivots()!} indices of columns spanning column space\\
+{\xtra\verb!A.pivot_rows()!} indices of rows spanning row space
+\par
+%*********************************************
+\sectbreak{Solutions to Systems}{}
+{\ex\verb!A.solve_right(B)!} \verb!_left! too\\
+\skipin is solution to \verb!A*X = B!, where \verb!X! is a vector {\bf or} matrix\\
+{\ex\verb!A = matrix([[1,2],[3,4]])!}\\
+{\ex\verb!b = vector([3,4])!}, then {\ex\verb!A\b!} is solution {\ex\verb!(-2, 5/2)!}\par
+%*********************************************
+\sect{Pieces of Matrices}{}
+{\warn Caution}: Row, column numbering begins at 0\\
+{\ex\verb!A.nrows()!},\quad {\ex\verb!A.ncols()!}\\
+{\ex\verb!A[i,j]!} entry in row \verb!i! and column \verb!j!\\
+{\ex\verb!A[i,:]!} row \verb!i! as a Sage matrix\\
+{\ex\verb!A.delete_rows([1,5])!},\quad {\ex\verb!A.delete_columns([2,3,7])!}
+{\ex\verb!A[2:4,1:7]!} Python-style list slicing \\
+\skipin or {\ex\verb!A.submatrix(2,1,2,6)!}\\
+{\ex\verb!A.submatrix(i,j,nr,nc)!}\\
+\skipin start at entry \verb!(i,j)!, use \verb!nr! rows, \verb!nc! cols\\
+{\ex\verb!A.row(i)!} row \verb!i! as Sage vector\\
+{\ex\verb!A.column(j)!} column \verb!j! as Sage vector\\
+{\xtra\verb!A.list()!} returns single Python list, row-major order\\
+{\xtra\verb!A.matrix_from_columns([8,2,8])!}\\
+\skipin new matrix from columns in list, repeats OK\\
+{\xtra\verb!A.matrix_from_rows([2,5,1])!}\\
+\skipin new matrix from rows in list, out-of-order OK\\
+{\xtra\verb!A.matrix_from_rows_and_columns([2,4,2],[3,1])!}\\
+\skipin common to the rows and the columns\\
+{\xtra\verb!A.rows()!}  all rows as a list of tuples\\
+{\xtra\verb!A.columns()!}  all columns as a list of tuples
+\par
+%*********************************************
+\sect{Scalar Functions on Matrices}{}
+{\ex\verb!A.rank()!},\quad{\ex\verb!A.nullity()!},\quad{\ex\verb!A.trace()!},\quad{\ex\verb!A.norm()!}\\
+{\ex\verb!A.determinant()!} or {\ex\verb!A.det()!}\\
+{\xtra\verb!A.permanent()!}\\
+{\xtra\verb!A.norm(1)!} largest column sum\\
+{\xtra\verb!A.norm(Infinity)!} largest row sum\\
+{\xtra\verb!A.norm('frob')!} Frobenius norm
+\par
+%*********************************************
+\sect{Vector Operations}{}
+{\ex\verb!2*u - 3*v!} linear combination\\
+{\ex\verb!u * v!} dot product\\
+\skipin or {\ex\verb!u.dot_product(v)!}\\
+{\ex\verb!u.norm()!}\\
+{\xtra\verb!u.cross_product(v)!}  order: \verb!u!$\times$\verb!v!\\
+{\xtra\verb!u.inner_product(v)!}  inner product matrix from parent\\
+{\xtra\verb!u.pairwise_product(v)!} vector as a result\\
+{\xtra\verb!u.norm(1)!} sum of entries\\
+{\xtra\verb!u.norm(Infinity)!} maximum entry
+\par
+%*********************************************
+\sect{Decompositions}{}
+%
+{\warn Note}: availability depends on base ring of matrix,\\
+\skipin try \verb!RDF! or \verb!CDF! for numerical work, \verb!QQ! for exact\\
+\skipin ``unitary'' is ``orthogonal'' in real case\\
+%
+{\ex\verb!A.LU()!} triple with: \verb!P*A == L*U!\\
+\skipin\verb!P!: a permutation matrix\\
+\skipin\verb!L!: lower triangular matrix,\quad\verb!U!: upper triangular matrix\\
+%
+{\ex\verb!A.QR()!} pair with: \verb!A == Q*R!\\
+\skipin\verb!Q!: a unitary matrix,\quad\verb!R!: upper triangular matrix\\
+%
+{\xtra\verb!A.jordan_form(transformation=True)!}\\
+\skipin returns a pair of matrices with: \verb!A == P^(-1)*J*P!\\
+\skipin\skipin\verb!J!: matrix of Jordan blocks for eigenvalues\\
+\skipin\skipin\verb!P!: nonsingular matrix\\
+%
+{\xtra\verb!A.smith_form()!} triple with: \verb!D == U*A*V!\\
+\skipin\verb!D!: elementary divisors on diagonal\\
+\skipin\verb!U, V!: with unit determinant\\
+%
+{\xtra\verb!A.SVD()!} triple with: \verb!A == U*S*(V-conj-transpose)!\\
+\skipin\verb!U!: a unitary matrix\\
+\skipin\verb!S!: zero off the diagonal, dimensions same as \verb!A!\\
+\skipin\verb!V!: a unitary matrix\\
+%
+{\xtra\verb!A.schur()!} pair with: \verb!A == Q*T*(Q-conj-transpose)!\\
+\skipin\verb!Q!: a unitary matrix\\
+\skipin\verb!T!: upper-triangular matrix, maybe $2\times2$ diagonal blocks\\
+%
+{\xtra\verb!A.rational_form()!}, aka Frobenius form
+\par
+%*********************************************
+\sect{Matrix Properties}{}
+% Edit (plus/minus) to make columns fit first page
+%
+{\ex\verb!.is_zero()!};
+{\ex\verb!.is_symmetric()!};
+{\ex\verb!.is_hermitian()!};\\
+%
+{\ex\verb!.is_square()!};
+{\ex\verb!.is_orthogonal()!};
+{\ex\verb!.is_unitary()!};\\
+%
+{\ex\verb!.is_scalar()!};
+{\ex\verb!.is_singular()!};
+{\ex\verb!.is_invertible()!};\\
+%
+{\ex\verb!.is_one()!};
+{\ex\verb!.is_nilpotent()!};
+{\ex\verb!.is_diagonalizable()!}
+\par
+%*********************************************
+\sect{Subspaces}{}
+{\ex\verb!span([v1,v2,v3], RDF)!} span of list of vectors over reals
+\par\vspace*{4pt}
+For a matrix \verb!A!, objects returned are\\
+\skipin vector spaces when base ring is a field\\
+\skipin modules when base ring is just a ring\\
+{\ex\verb!A.kernel()!},\quad {\ex\verb!A.row_space()!},
+\quad {\ex\verb!A.column_space()!}\\
+{\ex\verb!A.eigenspaces_right()!} vectors on right, \verb!_left! too\\
+\skipin Pairs: eigenvalues with their right eigenspaces
+\par\vspace*{4pt}
+If \verb!V! and \verb!W! are subspaces\\
+{\ex\verb!V.subspace([v1,v2,v3])!} specify basis vectors in a list\\
+{\ex\verb!V.intersection(W)!} intersection of \verb!V! and \verb!W!\\
+{\xtra\verb!V.quotient(W)!} quotient of \verb!V! by subspace \verb!W!\\
+{\xtra\verb!V.direct_sum(W)!} direct sum of \verb!V! and \verb!W!
+\par
+%*********************************************
+\sect{Vector Space Properties}{}
+{\ex\verb!V.dimension()!},\quad {\ex\verb!V.basis()!},\quad {\ex\verb!V.echelonized_basis()!}\\
+{\ex\verb!V.is_subspace(W)!} \verb!True! if \verb!W! is a subspace of \verb!V!
+\par
+%*********************************************
+\sect{Rings}{}
+{\ex\verb!R.is_ring()!},\quad{\ex\verb!R.is_field()!},\quad{\ex\verb!R.is_exact()!}
+\par\vspace*{4pt}
+Some common Sage rings and fields\\
+\skipin{\ex\verb!ZZ!}\quad integers, ring\\
+\skipin{\ex\verb!QQ!}\quad rationals, field\\
+\skipin{\ex\verb!RDF!}\quad real double field, inexact\\
+\skipin{\ex\verb!CDF!}\quad complex double field, inexact\\
+\skipin{\ex\verb!RealField(400)!}\quad 400-bit reals, inexact\\
+\skipin{\ex\verb!CC!,\quad\verb!ComplexField(400)!}\quad complexes, too\\
+\skipin{\ex\verb!SR!}\quad ring of symbolic expressions\\
+\skipin{\xtra\verb!GF(2)!}\quad mod 2, field, specialized implementations\\
+\skipin{\xtra\verb!GF(p) == FiniteField(p)!}\quad \verb!p! prime, field\\
+\skipin{\xtra\verb!Integers(6)!}\quad integers mod 6, ring only \\
+\skipin{\xtra\verb!AA!, \verb!QQbar!}\quad algebraic number fields, exact\\
+\skipin{\xtra\verb!RR!}\quad 53-bit reals, inexact, not same as {\ex\verb!RDF!}\\
+\skipin{\xtra\verb!RIF!}\quad real interval field\\
+\skipin{\xtra\verb!CyclotomicField(7)!}\quad rationals with 7$^{\rm th}$ root of unity\\
+\skipin{\xtra\verb!QuadraticField(-5, 'x')!}\quad rationals with \verb!x=!$\sqrt{-5}$\\
+{\warn Note:} Many algorithms depend on the base ring\\
+{\ex\verb!<object>.base_ring(R)!} for vectors, matrices,\dots\\
+\skipin to determine the ring in use\\
+{\ex\verb!<object>.change_ring(R)!} for vectors, matrices,\dots\\
+\skipin to change to the ring (or field), \verb!R!
+\par
+%*********************************************
+\sect{Dense versus Sparse}{}
+{\warn Note:} Algorithms may depend on representation\\
+Vectors and matrices have two representations\\
+\skipin Dense: lists, and lists of lists\\
+\skipin Sparse: Python dictionaries\\
+{\ex\verb!.is_dense()!}, {\ex\verb!.is_sparse()!}  to check\\
+{\ex\verb!A.sparse_matrix()!} returns sparse version of \verb!A!\\
+{\ex\verb!A.dense_rows()!} returns dense row vectors of \verb!A!\\
+Some commands have  boolean \verb!sparse! keyword
+\par
+%*********************************************
+\sectbreak{More Help}{}
+``tab-completion'' on partial commands\\
+``tab-completion'' on \verb!<object.>! for all relevant methods\\
+\verb!<command>?! for summary and examples\\
+\verb!<command>??! for complete source code
+\par
+%*********************************************
+\hr\par
+
+\vfill
+
+\textcopyright 2022 Leon Q. Brin\\
+Licensed with the GNU Free Document License (GFDL)\\
+\url{http://www.gnu.org/copyleft/fdl.html}\\
+Remix for your own use\\
+\\
+Based on Robert A. Beezer's Quick Reference\\
+\url{http://wiki.sagemath.org/quickref}
+\end{multicols*}
+
+\end{document}
